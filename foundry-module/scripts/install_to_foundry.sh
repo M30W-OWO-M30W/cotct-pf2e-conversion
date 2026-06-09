@@ -25,7 +25,8 @@ cp -r "$MODULE_DIR"/module.json "$MODULE_DIR"/README.md "$MODULE_DIR"/CONVERSION
 rm -rf "$DEST/node_modules"
 
 echo "Installed. Checks:"
-[ -f "$DEST/assets/private-source/curse-of-the-crimson-throne.pdf" ] && echo "  ✅ PDF present" || echo "  ⚠ PDF missing (drop your copy into assets/private-source/)"
+n_pdf=$(ls "$DEST/assets/private-source/chapters/"*.pdf 2>/dev/null | wc -l)
+[ "$n_pdf" -gt 0 ] && echo "  ✅ chapter PDFs present ($n_pdf)" || echo "  ⚠ no chapter PDFs (run: python3 scripts/split_pdf_by_chapter.py)"
 for p in adventure journals actors hazards items scenes; do
   ls "$DEST/packs/$p/"*.ldb >/dev/null 2>&1 && echo "  ✅ pack: $p" || echo "  ⚠ pack empty: $p (run: npm run build)"
 done

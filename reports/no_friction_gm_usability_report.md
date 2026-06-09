@@ -30,10 +30,17 @@ Scene pin → converted area page (mechanics, paraphrased read-aloud, linked
 actors/hazards/treasure) → 📖 link → embedded PDF at the cited page (complete
 official text + maps) → back. Reveal the pre-staged hidden tokens to start combat.
 
+## Navigation
+Beyond scene pins, an **Indexes** journal (Original Source · Area · NPC · Encounter
+· Treasure · Hazard) gives direct links to every converted area/actor/item/hazard
+and the chapter source PDF — the GM never browses page-by-page.
+
 ## Caveats (not no-friction failures)
-- **Exact-page jump** on the PDF link needs the free **PDF Pager** module; without
-  it the link opens the PDF and the printed page number (= PDF page) tells the GM
-  where to scroll. Either way the GM stays in Foundry.
+- **Source PDF is chapter-split** (~5–7 MB) so it opens fast; each area's 📖 link
+  targets the chapter PDF at the cited page. **Exact-page jump** needs the free
+  **PDF Pager** module (page offset −9 on the Ch.1 chapter PDF); without it the
+  link opens the chapter PDF and the printed page number tells the GM where. Either
+  way the GM stays in Foundry.
 - **Maps**: none shipped (copyright). Pin/token *positions* are staged
   (`NEEDS GM REVIEW`) until the GM drops in a battlemap (Racooze's free CotCT
   maps). The *links/flow* work without the map; only placement needs the image.

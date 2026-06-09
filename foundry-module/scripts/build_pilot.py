@@ -21,8 +21,9 @@ A = {"gaedren":"RKfT6vJ5guinSBjo","yargin":"7uhbgkK2IOZOlJb3","hookshanks":"qH96
 JID = "aO3z6QTqmYZCZYkw"   # the fat Ch.1 journal entry
 SCN = "PuUGEVunRqjIWFOj"   # Old Fishery scene
 ADV = "OmdAPBg10luB7GUr"   # Adventure doc
-PDFJID = "PDFCoTCTsource01"  # "Original Adventure (PDF)" journal entry
-PDF_SRC = "modules/cotct-pf2e-conversion/assets/private-source/curse-of-the-crimson-throne.pdf"
+PDFJID = "PDFCoTCTsource01"  # Ch.1 chapter-PDF source journal (fast; split from the owned PDF)
+SRCIDX = "SRCidxCoTCT00001"  # navigation Indexes journal
+PDF_SRC = "modules/cotct-pf2e-conversion/assets/private-source/chapters/01-edge-of-anarchy.pdf"
 MC = {"crocodile":"2rMLYkUR47ZCQMUg","guarddog":"KHTYbQgR5hnFZdGL"}
 TOK = lambda slug: f"modules/cotct-pf2e-conversion/assets/tokens/{slug}.webp"
 
@@ -234,7 +235,9 @@ pages.append(newpage("features","Fishery Features & Layout",
   +B.s_gm("<p>A two-floor fishery on pilings over the Jeggare River, on a 13-ft embankment ("+chk("type:athletics|dc:15")+" to climb the slick bank). Doors: "+chk("type:thievery|dc:15")+" to pick; the brass key bypasses all. Standing hazards: "+haz("boardwalk","Slippery Boardwalk")+" (A3) and "+haz("rottendeck","Rotten Ship Deck")+" (A9) — both can dump a PC into "+act("jigsawshark","the shark's")+" water (A12).</p>"),level=2))
 
 # Area pages A1-A14
-def area(code,name,page_html): pages.append(newpage(code,f"{code}. {name}",page_html))
+AREAS_BUILT=[]
+def area(code,name,page_html):
+    AREAS_BUILT.append((code,name)); pages.append(newpage(code,f"{code}. {name}",page_html))
 area("A1","Front Door", SR("A1","18")+B.s_gm("<p>Locked double doors ("+chk("type:thievery|dc:15")+"); a loud pick or a knock brings "+act("yargin","Yargin")+" from A6.</p>"))
 area("A2","Loading Dock", SR("A2","18")+B.s_gm("<p>A 15-ft dock with slurry barrels; riverside stairs. A7 doors open by day; the A8 door is always locked ("+chk("type:thievery|dc:15")+").</p>"))
 area("A3","Back Alley", SR("A3","18-20")+B.s_gm("<p>The "+haz("boardwalk","Slippery Boardwalk")+" hugs the south wall 13 ft above the river. A Step is safe; moving fast or fighting risks a fall into the shark water. The A6 door is locked.</p>"))
@@ -301,22 +304,48 @@ B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)
 # --- Original Source layer: the GM's own PDF embedded as a native Foundry PDF page ---
 # (Contains NO copyrighted text — only a file-path pointer. The PDF itself is in
 #  assets/private-source/, git-ignored; see PRIVATE_USE_ONLY.md.)
-pdf_howto = B.page(nid(), "How to use the original text (private)",
-  B.s_gm("<p>Your own legally-owned PDF, embedded for private play — read the full original adventure "
-    "without leaving Foundry. Every converted area page has a <strong>📖 Open the original text</strong> link "
-    "back here with the printed page (printed page = PDF page, offset 0). For one-click jumps to an exact page, "
-    "install the free <strong>PDF Pager</strong> module. <strong>GM-only; do not share this module</strong> "
-    "(see PRIVATE_USE_ONLY.md).</p>"
-    "<p><strong>Chapter starts:</strong> Intro p.4 · Ch.1 p.10 · Ch.2 p.68 · Ch.3 p.132 · Ch.4 p.190 · "
-    "Ch.5 p.256 · Ch.6 p.332 · Appendices p.392.</p>"), level=1)
-pdf_reader = {"_id": nid(), "name": "Full Adventure (PDF)", "type": "pdf",
+pdf_howto = B.page(nid(), "Using the source PDFs (private)",
+  B.s_gm("<p>Your own legally-owned PDF, <strong>split by chapter</strong> for fast loading and embedded for "
+    "private play (the full 482-page file is sluggish in Foundry's viewer). Each converted area page has a "
+    "<strong>📖 Open the original</strong> link to its chapter PDF at the cited page. For one-click <em>exact-page</em> "
+    "jumps install the free <strong>PDF Pager</strong> module and set this PDF's page offset to <strong>−9</strong> "
+    "(this chapter PDF's page 1 = printed p.10). <strong>GM-only; do not share this module</strong> "
+    "(see PRIVATE_USE_ONLY.md).</p>"), level=1)
+pdf_reader = {"_id": nid(), "name": "Ch.1: Edge of Anarchy — Source (PDF)", "type": "pdf",
   "title": {"show": True, "level": 1}, "src": PDF_SRC,
   "text": {"format": 1, "content": "", "markdown": ""}, "image": {},
   "video": {"controls": True, "volume": 0.5}, "system": {}, "sort": 0,
   "ownership": {"default": -1}, "flags": {}, "category": None}
-pdf_journal = B.journal_entry(PDFJID, "Original Adventure — Full Text (GM · private)",
+pdf_journal = B.journal_entry(PDFJID, "Source — Ch.1: Edge of Anarchy (PDF · GM)",
   [pdf_howto, pdf_reader], folder=F["j_source"])
-B.write("journals", "00-original-adventure-pdf", copy.deepcopy(pdf_journal), embed_pages=True)
+B.write("journals", "00-source-ch1-pdf", copy.deepcopy(pdf_journal), embed_pages=True)
+
+# --- Navigation indexes (one/two-click access; links only, no source text) ---
+def jp(pid, label): return f"@UUID[JournalEntry.{JID}.JournalEntryPage.{pid}]{{{label}}}"
+src_idx = B.page(nid(), "Original Source Index",
+  B.s_gm("<p>Per-chapter source PDFs (split from your owned file for speed). Open one, or use the 📖 link on "
+    "any area page to jump to the right chapter + page.</p><ul>"
+    f"<li><strong>Ch.1 Edge of Anarchy</strong> — @UUID[JournalEntry.{PDFJID}]{{open chapter PDF}} (printed p.10–67)</li>"
+    "<li>Ch.2–6 + Appendices — chapter PDFs are produced by <code>scripts/split_pdf_by_chapter.py</code>; "
+    "linked here as each chapter is converted.</li></ul>"), level=1)
+area_idx = B.page(nid(), "Area Index — Ch.1 (Old Fishery)",
+  B.s_gm("<ul>" + "".join(f"<li>{jp(P[c], f'{c}. {n}')}</li>" for c, n in AREAS_BUILT) + "</ul>"), level=2)
+npc_idx = B.page(nid(), "NPC / Creature Index — Ch.1",
+  B.s_gm("<ul>" + "".join(f"<li>{act(k, k.replace('_',' ').title())}</li>" for k in
+    ["gaedren","yargin","hookshanks","giggles","drainspider","jigsawshark","orphan"]) +
+    f"<li>{mc('crocodile','Gobblegut (Crocodile)')} · {mc('guarddog','Bloo (Guard Dog)')}</li></ul>"), level=2)
+enc_idx = B.page(nid(), "Encounter Index — Ch.1",
+  B.s_gm("<ul>" + "".join(f"<li>{e} — {jp(P[a], a)}</li>" for e, a in
+    [("E1 Bloo","A4"),("E2 Yargin","A6"),("E3 Hookshanks","A7"),("E4 Giggles","A8"),
+     ("E5 Spider","A10"),("E6 Spider nest","A11"),("E7 Shark","A12"),("E8 BOSS Gaedren+Gobblegut","A13")]) + "</ul>"), level=2)
+trs_idx = B.page(nid(), "Treasure Index — Ch.1",
+  B.s_gm("<ul>" + "".join(f"<li>{itm(k, k.replace('_',' ').title())}</li>" for k in
+    ["dagger","brooch","harrowdeck","ledger","garnet","coffer"]) + "</ul>"), level=2)
+haz_idx = B.page(nid(), "Hazard Index — Ch.1",
+  B.s_gm(f"<ul><li>{haz('boardwalk','Slippery Boardwalk (A3)')}</li><li>{haz('rottendeck','Rotten Ship Deck (A9)')}</li></ul>"), level=2)
+idx_journal = B.journal_entry(SRCIDX, "Indexes (Source · Area · NPC · Encounter · Treasure · Hazard)",
+  [src_idx, area_idx, npc_idx, enc_idx, trs_idx, haz_idx], folder=F["j_source"])
+B.write("journals", "00-indexes", copy.deepcopy(idx_journal), embed_pages=True)
 
 # =====================================================================
 # SCENE — Old Fishery placeholder with map-note pins -> area pages + staged tokens
@@ -356,7 +385,7 @@ def strip(doc):
 adv = B.adventure(ADV,"Curse of the Crimson Throne — Ch.1: Edge of Anarchy (pilot)",
   "modules/cotct-pf2e-conversion/assets/art/cover.webp",
   "<p>Phase-2 pilot: the Old Fishery (the hunt for Gaedren Lamm). Imports the chapter journal, the Old Fishery scene (map-note pins + staged tokens), the converted NPCs/hazards, and the treasure — organized into folders. Supply your own maps (Racooze's free CotCT battlemaps).</p>",
-  [strip(f) for f in folders], [strip(journal), strip(pdf_journal)], [strip(sc)],
+  [strip(f) for f in folders], [strip(journal), strip(pdf_journal), strip(idx_journal)], [strip(sc)],
   [strip(a) for a in actors]+[strip(h) for h in hazards], [strip(i) for i in items])
 B.write("adventure","cotct-edge-of-anarchy",copy.deepcopy(adv))
 

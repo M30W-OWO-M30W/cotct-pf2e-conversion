@@ -1,47 +1,44 @@
 # Source Integration Report (private-use layer)
 
 How the original Adventure Path is made accessible **inside Foundry** for this
-private, local table. See `PRIVATE_USE_ONLY.md` for the boundary.
+private, local table — as a **chapter-split PDF source layer** linked one-click
+from the converted play layer. See `PRIVATE_USE_ONLY.md` for the boundary.
 
 > Scope: Chapter 1 pilot (Old Fishery). The mechanism scales unchanged to Ch.2–6.
+
+## Architecture (three linked layers)
+- **Source layer** = the GM's own PDF, **split by chapter** (pypdf) into ~5–7 MB
+  files (the full 50 MB / 482-page file lags in Foundry's PDF.js). Embedded as
+  native Foundry **PDF journal pages**, GM-only.
+- **Play layer** = the PF2e conversion (journals/actors/items/hazards/scenes) —
+  original work; concise, runnable.
+- **Interactive layer** = the Old Fishery scene with map-note pins → area pages →
+  linked actors/hazards/treasure → 📖 chapter-PDF at the cited page.
 
 ## Status
 
 | Item | Status |
 |---|---|
-| PDF found (GM-provided, owned) | **Yes** — `/mnt/c/Users/maman/Downloads/Curse of the Crimson Throne AP.pdf` |
-| PDF copied into local module | **Yes** — `foundry-module/assets/private-source/curse-of-the-crimson-throne.pdf` (50 MB, **git-ignored**) |
-| PDF journal created (native Foundry PDF page) | **Yes** — "Original Adventure — Full Text (GM · private)" (`cotct-journals`), GM-only |
-| Page links available | **Yes (page-numbered)** — every converted area page has a 📖 *Open the original text* link + printed page; **exact-page jump** requires the free **PDF Pager** module (printed page = PDF page, offset 0) |
-| Source text reproduced into journals | **No, by design** — the full text is read from the embedded PDF; the repo contains **no verbatim AP text** (copyright + your own earlier rule). Converted pages carry paraphrased summaries + mechanics + the PDF link |
-| Converted area pages | 14 (A1–A14) + overview/scene/features/NPCs/treasure/conversion = **20 pages** |
-| Converted pages linking to the source PDF | **20 / 20** (via the `SR()` source line on every page) |
-| Scene notes linked to converted pages | **14 / 14** (Old Fishery pins → area pages) |
-| Areas missing source access | **0** (all link to the PDF) |
-| Areas missing PF2e conversion | **0** for the Old Fishery; rest of Ch.1 (All the World's Meat, Eel's End, Dead Warrens, street events) pending Phase 3 |
-| Broken source links | **0** (validate.mjs: 68 links resolve, incl. the PDF-journal links) |
-| Extraction warnings / OCR | **N/A** — no text extraction performed (PDF embedded directly); the PDF is text-based (pdftotext succeeded earlier with no OCR needed) |
-| GM-review flags | Live PDF render check (below); scene pin/token positions (no map shipped) |
+| PDF found (GM-provided, owned) | **Yes** |
+| PDF split into chapter files | **Yes** — 8 files (Intro/Ch.1–6/Appendices), 1.9–22 MB each, in `assets/private-source/chapters/` (**git-ignored**) |
+| Chapter PDF embedded as a Foundry PDF page | **Yes (Ch.1)** — "Source — Ch.1: Edge of Anarchy (PDF · GM)"; Ch.2–6 split & link as converted |
+| Per-area one-click source link | **Yes** — every area page's 📖 link → the Ch.1 chapter PDF at the cited printed page |
+| Exact-page jump | via free **PDF Pager** module (set page offset −9 for the Ch.1 chapter PDF); else opens the chapter PDF + the page number |
+| Navigation indexes | **Yes** — Indexes journal: Original Source · Area · NPC/Creature · Encounter · Treasure · Hazard (all links) |
+| Source text reproduced into journals | **No** — the source is the embedded PDF; the repo contains **no verbatim AP text or art** (copyright). Converted pages carry original summaries + mechanics + the PDF link |
+| Converted area pages | 20 (overview/scene/features + A1–A14 + NPC/treasure/conversion) |
+| Pages linking to source | **20 / 20**; scene pins → area pages **14 / 14** |
+| Broken links | **0** (validate.mjs: 108 links resolve) |
+| GM-review flags | live PDF render check; scene pin/token positions (no map shipped) |
 
-## How it works (the no-flip chain)
-1. Open the **Old Fishery** scene → click a lettered map-note pin (e.g. **A13**).
-2. Foundry opens the **"1. Edge of Anarchy"** journal at that area page (converted
-   mechanics, paraphrased read-aloud, linked actors/treasure/hazards).
-3. The page's 📖 **Open the original text** link opens the embedded **PDF** at the
-   cited page — the complete official text, art, and map, **inside Foundry**.
-4. With **PDF Pager** installed, that link lands on the exact page automatically.
-
-## Why PDF-embed instead of a text dump
-- The embedded PDF is the **complete, authoritative** text — every sidebar, stat
-  block, and map at full fidelity, with **zero OCR/extraction error**.
-- It keeps the repo **free of reproduced copyrighted prose** (your original rule;
-  copyright safety) while still meeting *"never leave Foundry."*
-- It's the GM's **own owned file** — a clean private-use format-shift.
+## Performance
+Chapter PDFs are 1.9–7.5 MB (appendices 22 MB) vs the 50 MB monolith — each opens
+responsively in Foundry's viewer. The full file is no longer embedded.
 
 ## Remaining GM-review items
-- **`NEEDS GM REVIEW` — live render check:** confirm the PDF page renders in your
-  Foundry v14 (native PDF pages work; large 482-page PDFs load fine in PDF.js).
-- **Optional:** install **PDF Pager** for exact-page jumps.
-- **Refresh the install with Foundry closed:** run
-  `bash scripts/install_to_foundry.sh` (Foundry locks pack files while running).
-- Scene pin/token **positions** are staged (no map shipped) — `NEEDS GM REVIEW`.
+- `NEEDS GM REVIEW` — confirm the chapter PDF renders in your Foundry v14.
+- Optional: install **PDF Pager** for exact-page jumps (offset −9 on the Ch.1 PDF).
+- Refresh install with Foundry closed: `bash scripts/install_to_foundry.sh`.
+- Scene pin/token **positions** staged (no map shipped) — `NEEDS GM REVIEW`.
+- Ch.2–6: run `scripts/split_pdf_by_chapter.py` (done) + convert each chapter
+  (Phase 3) to extend the per-area links beyond Ch.1.

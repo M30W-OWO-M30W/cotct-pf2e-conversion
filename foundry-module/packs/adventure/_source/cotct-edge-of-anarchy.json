@@ -851,11 +851,11 @@
     },
     {
       "_id": "PDFCoTCTsource01",
-      "name": "Original Adventure — Full Text (GM · private)",
+      "name": "Source — Ch.1: Edge of Anarchy (PDF · GM)",
       "pages": [
         {
           "_id": "CEuUTWkaC01YQDo5",
-          "name": "How to use the original text (private)",
+          "name": "Using the source PDFs (private)",
           "type": "text",
           "title": {
             "show": true,
@@ -863,7 +863,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<section class=\"gm-notes\"><p>Your own legally-owned PDF, embedded for private play — read the full original adventure without leaving Foundry. Every converted area page has a <strong>📖 Open the original text</strong> link back here with the printed page (printed page = PDF page, offset 0). For one-click jumps to an exact page, install the free <strong>PDF Pager</strong> module. <strong>GM-only; do not share this module</strong> (see PRIVATE_USE_ONLY.md).</p><p><strong>Chapter starts:</strong> Intro p.4 · Ch.1 p.10 · Ch.2 p.68 · Ch.3 p.132 · Ch.4 p.190 · Ch.5 p.256 · Ch.6 p.332 · Appendices p.392.</p></section>",
+            "content": "<section class=\"gm-notes\"><p>Your own legally-owned PDF, <strong>split by chapter</strong> for fast loading and embedded for private play (the full 482-page file is sluggish in Foundry's viewer). Each converted area page has a <strong>📖 Open the original</strong> link to its chapter PDF at the cited page. For one-click <em>exact-page</em> jumps install the free <strong>PDF Pager</strong> module and set this PDF's page offset to <strong>−9</strong> (this chapter PDF's page 1 = printed p.10). <strong>GM-only; do not share this module</strong> (see PRIVATE_USE_ONLY.md).</p></section>",
             "markdown": ""
           },
           "image": {},
@@ -882,13 +882,13 @@
         },
         {
           "_id": "fzEyuJGsUCTisJ3b",
-          "name": "Full Adventure (PDF)",
+          "name": "Ch.1: Edge of Anarchy — Source (PDF)",
           "type": "pdf",
           "title": {
             "show": true,
             "level": 1
           },
-          "src": "modules/cotct-pf2e-conversion/assets/private-source/curse-of-the-crimson-throne.pdf",
+          "src": "modules/cotct-pf2e-conversion/assets/private-source/chapters/01-edge-of-anarchy.pdf",
           "text": {
             "format": 1,
             "content": "",
@@ -901,6 +901,192 @@
           },
           "system": {},
           "sort": 200000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        }
+      ],
+      "folder": "W0WJME4fBRrq8baA",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "categories": []
+    },
+    {
+      "_id": "SRCidxCoTCT00001",
+      "name": "Indexes (Source · Area · NPC · Encounter · Treasure · Hazard)",
+      "pages": [
+        {
+          "_id": "kwszgQHAS37zBd0J",
+          "name": "Original Source Index",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 1
+          },
+          "text": {
+            "format": 1,
+            "content": "<section class=\"gm-notes\"><p>Per-chapter source PDFs (split from your owned file for speed). Open one, or use the 📖 link on any area page to jump to the right chapter + page.</p><ul><li><strong>Ch.1 Edge of Anarchy</strong> — @UUID[JournalEntry.PDFCoTCTsource01]{open chapter PDF} (printed p.10–67)</li><li>Ch.2–6 + Appendices — chapter PDFs are produced by <code>scripts/split_pdf_by_chapter.py</code>; linked here as each chapter is converted.</li></ul></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 100000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        },
+        {
+          "_id": "5dKt5LoEacUDhJAi",
+          "name": "Area Index — Ch.1 (Old Fishery)",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 2
+          },
+          "text": {
+            "format": 1,
+            "content": "<section class=\"gm-notes\"><ul><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.cOufM0El0yKjZYF7]{A1. Front Door}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.fM11W3e5GzqzfJQn]{A2. Loading Dock}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.nbtuy4wuu5ATXEh1]{A3. Back Alley}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.UNkzTXihIylWOZcn]{A4. Front Room — Bloo (E1)}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.AdEtRIsLdlKOnWCQ]{A5. Barracks}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.HP8keHwIIY5gsNtZ]{A6. Yargin's Office (E2)}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.vejNR2kRU9hTjF7z]{A7. Upper Workroom — Hookshanks (E3)}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.e6d3LqdDmDo97pVA]{A8. Fishery Floor — Giggles (E4)}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.Obqhi4FG6wQ0IDZv]{A9. Kraken's Folly}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.CtC18rAERxvB13di]{A10. Spider Nest (E5)}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.hZUJ2WpPj9SJqTVg]{A11. Kraken's Hold (E6)}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.yz5Ao0tTfBxREHWy]{A12. Underpier (E7)}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.zXnbWKFw5vnkEuW5]{A13. Gaedren's Playground — BOSS (E8)}</li><li>@UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.VCUD5FxhhchRv4fr]{A14. Gaedren's Den (treasure & the reveal)}</li></ul></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 200000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        },
+        {
+          "_id": "Rn7RCvRWorI37yxJ",
+          "name": "NPC / Creature Index — Ch.1",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 2
+          },
+          "text": {
+            "format": 1,
+            "content": "<section class=\"gm-notes\"><ul><li>@UUID[Actor.RKfT6vJ5guinSBjo]{Gaedren}</li><li>@UUID[Actor.7uhbgkK2IOZOlJb3]{Yargin}</li><li>@UUID[Actor.qH96VshE6CZqfajv]{Hookshanks}</li><li>@UUID[Actor.mHUhxeaalWkTU1h4]{Giggles}</li><li>@UUID[Actor.1M94tm3wnSRGcTG5]{Drainspider}</li><li>@UUID[Actor.lsdWSvGJ81hDy4it]{Jigsawshark}</li><li>@UUID[Actor.UQr3ApF78GW7eghw]{Orphan}</li><li>@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut (Crocodile)} · @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo (Guard Dog)}</li></ul></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 300000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        },
+        {
+          "_id": "k5IvJ7N4FJxS4dEF",
+          "name": "Encounter Index — Ch.1",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 2
+          },
+          "text": {
+            "format": 1,
+            "content": "<section class=\"gm-notes\"><ul><li>E1 Bloo — @UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.UNkzTXihIylWOZcn]{A4}</li><li>E2 Yargin — @UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.HP8keHwIIY5gsNtZ]{A6}</li><li>E3 Hookshanks — @UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.vejNR2kRU9hTjF7z]{A7}</li><li>E4 Giggles — @UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.e6d3LqdDmDo97pVA]{A8}</li><li>E5 Spider — @UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.CtC18rAERxvB13di]{A10}</li><li>E6 Spider nest — @UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.hZUJ2WpPj9SJqTVg]{A11}</li><li>E7 Shark — @UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.yz5Ao0tTfBxREHWy]{A12}</li><li>E8 BOSS Gaedren+Gobblegut — @UUID[JournalEntry.aO3z6QTqmYZCZYkw.JournalEntryPage.zXnbWKFw5vnkEuW5]{A13}</li></ul></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 400000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        },
+        {
+          "_id": "6w0W28EjTyXhAecG",
+          "name": "Treasure Index — Ch.1",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 2
+          },
+          "text": {
+            "format": 1,
+            "content": "<section class=\"gm-notes\"><ul><li>@UUID[Item.b04PLWVkmm3RM4nm]{Dagger}</li><li>@UUID[Item.iNQaVcbkSM0VPXsa]{Brooch}</li><li>@UUID[Item.DPDen8gco6rznX9Y]{Harrowdeck}</li><li>@UUID[Item.I7HQNtjI9yPvQ4fA]{Ledger}</li><li>@UUID[Item.dK4hnpH7s67RYnNI]{Garnet}</li><li>@UUID[Item.ymuRwMg6WfWIwkne]{Coffer}</li></ul></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 500000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        },
+        {
+          "_id": "IijeNzrXCRaWIKb9",
+          "name": "Hazard Index — Ch.1",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 2
+          },
+          "text": {
+            "format": 1,
+            "content": "<section class=\"gm-notes\"><ul><li>@UUID[Actor.6y55S5DpXqnF40WL]{Slippery Boardwalk (A3)}</li><li>@UUID[Actor.xMhIQZS6GokTsulZ]{Rotten Ship Deck (A9)}</li></ul></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 600000,
           "ownership": {
             "default": -1
           },
@@ -1046,7 +1232,7 @@
       "drawings": [],
       "tokens": [
         {
-          "_id": "tzAHkhWr0fvCuEVj",
+          "_id": "Gk27n1tGBL7K5Xmx",
           "name": "Yargin Balko",
           "actorId": "7uhbgkK2IOZOlJb3",
           "actorLink": false,
@@ -1103,7 +1289,7 @@
           "sort": 0
         },
         {
-          "_id": "io6naHDAKD1ULBcZ",
+          "_id": "2QLYKnWPyPM9p7w9",
           "name": "Hookshanks Gruller",
           "actorId": "qH96VshE6CZqfajv",
           "actorLink": false,
@@ -1160,7 +1346,7 @@
           "sort": 0
         },
         {
-          "_id": "48fVyqsW5eGvSLDg",
+          "_id": "zowi9PLsuUbpgTrm",
           "name": "Giggles",
           "actorId": "mHUhxeaalWkTU1h4",
           "actorLink": false,
@@ -1217,7 +1403,7 @@
           "sort": 0
         },
         {
-          "_id": "p452qsnLn5jawrg5",
+          "_id": "KgbQdiOfqI0MSHpA",
           "name": "Drain Spider",
           "actorId": "1M94tm3wnSRGcTG5",
           "actorLink": false,
@@ -1274,7 +1460,7 @@
           "sort": 0
         },
         {
-          "_id": "xr0zLIeGhCjSNcLF",
+          "_id": "tgQlgvkVAUaxwXjC",
           "name": "Drain Spider",
           "actorId": "1M94tm3wnSRGcTG5",
           "actorLink": false,
@@ -1331,7 +1517,7 @@
           "sort": 0
         },
         {
-          "_id": "tP0HA61DRVvIPecZ",
+          "_id": "9hkKANi9M2U2YlSg",
           "name": "Drain Spider",
           "actorId": "1M94tm3wnSRGcTG5",
           "actorLink": false,
@@ -1388,7 +1574,7 @@
           "sort": 0
         },
         {
-          "_id": "Gk27n1tGBL7K5Xmx",
+          "_id": "jXSPaFssn7RqHxPM",
           "name": "Drain Spider",
           "actorId": "1M94tm3wnSRGcTG5",
           "actorLink": false,
@@ -1445,7 +1631,7 @@
           "sort": 0
         },
         {
-          "_id": "2QLYKnWPyPM9p7w9",
+          "_id": "sJSBqqWXW3jRYFzo",
           "name": "Drain Spider",
           "actorId": "1M94tm3wnSRGcTG5",
           "actorLink": false,
@@ -1502,7 +1688,7 @@
           "sort": 0
         },
         {
-          "_id": "zowi9PLsuUbpgTrm",
+          "_id": "wXyuw4w7LvVdBLTc",
           "name": "Jigsaw Shark",
           "actorId": "lsdWSvGJ81hDy4it",
           "actorLink": false,
@@ -1559,7 +1745,7 @@
           "sort": 0
         },
         {
-          "_id": "KgbQdiOfqI0MSHpA",
+          "_id": "eyWlojX9voDNAtpU",
           "name": "Gaedren Lamm",
           "actorId": "RKfT6vJ5guinSBjo",
           "actorLink": false,
@@ -1621,7 +1807,7 @@
       "templates": [],
       "notes": [
         {
-          "_id": "kwszgQHAS37zBd0J",
+          "_id": "kJ3b4pPQUpk9Lna7",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "cOufM0El0yKjZYF7",
           "text": "A1",
@@ -1651,7 +1837,7 @@
           }
         },
         {
-          "_id": "5dKt5LoEacUDhJAi",
+          "_id": "sNJPLWijX4eA3skC",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "fM11W3e5GzqzfJQn",
           "text": "A2",
@@ -1681,7 +1867,7 @@
           }
         },
         {
-          "_id": "Rn7RCvRWorI37yxJ",
+          "_id": "KIN5PWGVmoNGHz5I",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "nbtuy4wuu5ATXEh1",
           "text": "A3",
@@ -1711,7 +1897,7 @@
           }
         },
         {
-          "_id": "k5IvJ7N4FJxS4dEF",
+          "_id": "A1eYD3f6qKDSU9TA",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "UNkzTXihIylWOZcn",
           "text": "A4",
@@ -1741,7 +1927,7 @@
           }
         },
         {
-          "_id": "6w0W28EjTyXhAecG",
+          "_id": "JBdfg4hLf4tohbHd",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "AdEtRIsLdlKOnWCQ",
           "text": "A5",
@@ -1771,7 +1957,7 @@
           }
         },
         {
-          "_id": "IijeNzrXCRaWIKb9",
+          "_id": "iL00jRstCzlSAiMp",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "HP8keHwIIY5gsNtZ",
           "text": "A6",
@@ -1801,7 +1987,7 @@
           }
         },
         {
-          "_id": "kJ3b4pPQUpk9Lna7",
+          "_id": "EehHQ57Q89SmWDtp",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "vejNR2kRU9hTjF7z",
           "text": "A7",
@@ -1831,7 +2017,7 @@
           }
         },
         {
-          "_id": "sNJPLWijX4eA3skC",
+          "_id": "wHE4R7FjfE0HNKk8",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "e6d3LqdDmDo97pVA",
           "text": "A8",
@@ -1861,7 +2047,7 @@
           }
         },
         {
-          "_id": "KIN5PWGVmoNGHz5I",
+          "_id": "tzAHkhWr0fvCuEVj",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "Obqhi4FG6wQ0IDZv",
           "text": "A9",
@@ -1891,7 +2077,7 @@
           }
         },
         {
-          "_id": "A1eYD3f6qKDSU9TA",
+          "_id": "io6naHDAKD1ULBcZ",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "CtC18rAERxvB13di",
           "text": "A10",
@@ -1921,7 +2107,7 @@
           }
         },
         {
-          "_id": "JBdfg4hLf4tohbHd",
+          "_id": "48fVyqsW5eGvSLDg",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "hZUJ2WpPj9SJqTVg",
           "text": "A11",
@@ -1951,7 +2137,7 @@
           }
         },
         {
-          "_id": "iL00jRstCzlSAiMp",
+          "_id": "p452qsnLn5jawrg5",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "yz5Ao0tTfBxREHWy",
           "text": "A12",
@@ -1981,7 +2167,7 @@
           }
         },
         {
-          "_id": "EehHQ57Q89SmWDtp",
+          "_id": "xr0zLIeGhCjSNcLF",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "zXnbWKFw5vnkEuW5",
           "text": "A13",
@@ -2011,7 +2197,7 @@
           }
         },
         {
-          "_id": "wHE4R7FjfE0HNKk8",
+          "_id": "tP0HA61DRVvIPecZ",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "VCUD5FxhhchRv4fr",
           "text": "A14",
