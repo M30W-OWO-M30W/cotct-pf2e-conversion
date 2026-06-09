@@ -21,6 +21,8 @@ A = {"gaedren":"RKfT6vJ5guinSBjo","yargin":"7uhbgkK2IOZOlJb3","hookshanks":"qH96
 JID = "aO3z6QTqmYZCZYkw"   # the fat Ch.1 journal entry
 SCN = "PuUGEVunRqjIWFOj"   # Old Fishery scene
 ADV = "OmdAPBg10luB7GUr"   # Adventure doc
+PDFJID = "PDFCoTCTsource01"  # "Original Adventure (PDF)" journal entry
+PDF_SRC = "modules/cotct-pf2e-conversion/assets/private-source/curse-of-the-crimson-throne.pdf"
 MC = {"crocodile":"2rMLYkUR47ZCQMUg","guarddog":"KHTYbQgR5hnFZdGL"}
 TOK = lambda slug: f"modules/cotct-pf2e-conversion/assets/tokens/{slug}.webp"
 
@@ -39,7 +41,7 @@ def chk(s): return f"@Check[{s}]"
 # FOLDERS (one tree per document type; Kingmaker palette)
 # =====================================================================
 F = {k: nid() for k in ["a_root","a_ch1","a_creatures","a_hazards","i_root","i_ch1","i_treasure",
-                        "j_root","j_adventure","s_root","s_ch1"]}
+                        "j_root","j_adventure","j_source","s_root","s_ch1"]}
 ROOTC, CHC, SUPC = "#5a0b0b", "#8a1a1a", "#b3541e"   # crimson theme: root / chapter / supplemental
 folders = [
  B.folder(F["a_root"],"Curse of the Crimson Throne","Actor",None,100000,ROOTC),
@@ -51,6 +53,7 @@ folders = [
  B.folder(F["i_treasure"],"Treasure","Item",F["i_ch1"],100000,None,"a"),
  B.folder(F["j_root"],"Curse of the Crimson Throne","JournalEntry",None,100000,ROOTC),
  B.folder(F["j_adventure"],"Adventure","JournalEntry",F["j_root"],100000,SUPC),
+ B.folder(F["j_source"],"Original Source (GM · private)","JournalEntry",F["j_root"],200000,SUPC),
  B.folder(F["s_root"],"Curse of the Crimson Throne","Scene",None,100000,ROOTC),
  B.folder(F["s_ch1"],"1. Edge of Anarchy","Scene",F["s_root"],100000,CHC),
 ]
@@ -207,7 +210,8 @@ IW("plus-one-dagger", {"_id":A["dagger"],"img":"systems/pf2e/icons/equipment/wea
 # =====================================================================
 # JOURNAL — one fat "1. Edge of Anarchy" entry, Kingmaker page model
 # =====================================================================
-SR = lambda area,p: f'<p class="source"><em>Source: CotCT (2016 HC), Ch.1, {area} — p.{p}.</em></p>'
+SR = lambda area,p: (f'<p class="source"><em>Source: CotCT (2016 HC), Ch.1, {area} — p.{p}.</em> '
+                     f'📖 @UUID[JournalEntry.{PDFJID}]{{Open the original text}} (p.{p})</p>')
 PAGE_KEYS=["overview","scene","features","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10",
            "A11","A12","A13","A14","npcs","treasure","conv"]
 P={k:nid() for k in PAGE_KEYS}   # pre-assign so forward relative links resolve
@@ -294,6 +298,26 @@ pages.append(newpage("conv","Conversion Notes (Changes from Original)",
 journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"])
 B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)
 
+# --- Original Source layer: the GM's own PDF embedded as a native Foundry PDF page ---
+# (Contains NO copyrighted text — only a file-path pointer. The PDF itself is in
+#  assets/private-source/, git-ignored; see PRIVATE_USE_ONLY.md.)
+pdf_howto = B.page(nid(), "How to use the original text (private)",
+  B.s_gm("<p>Your own legally-owned PDF, embedded for private play — read the full original adventure "
+    "without leaving Foundry. Every converted area page has a <strong>📖 Open the original text</strong> link "
+    "back here with the printed page (printed page = PDF page, offset 0). For one-click jumps to an exact page, "
+    "install the free <strong>PDF Pager</strong> module. <strong>GM-only; do not share this module</strong> "
+    "(see PRIVATE_USE_ONLY.md).</p>"
+    "<p><strong>Chapter starts:</strong> Intro p.4 · Ch.1 p.10 · Ch.2 p.68 · Ch.3 p.132 · Ch.4 p.190 · "
+    "Ch.5 p.256 · Ch.6 p.332 · Appendices p.392.</p>"), level=1)
+pdf_reader = {"_id": nid(), "name": "Full Adventure (PDF)", "type": "pdf",
+  "title": {"show": True, "level": 1}, "src": PDF_SRC,
+  "text": {"format": 1, "content": "", "markdown": ""}, "image": {},
+  "video": {"controls": True, "volume": 0.5}, "system": {}, "sort": 0,
+  "ownership": {"default": -1}, "flags": {}, "category": None}
+pdf_journal = B.journal_entry(PDFJID, "Original Adventure — Full Text (GM · private)",
+  [pdf_howto, pdf_reader], folder=F["j_source"])
+B.write("journals", "00-original-adventure-pdf", copy.deepcopy(pdf_journal), embed_pages=True)
+
 # =====================================================================
 # SCENE — Old Fishery placeholder with map-note pins -> area pages + staged tokens
 # =====================================================================
@@ -332,7 +356,7 @@ def strip(doc):
 adv = B.adventure(ADV,"Curse of the Crimson Throne — Ch.1: Edge of Anarchy (pilot)",
   "modules/cotct-pf2e-conversion/assets/art/cover.webp",
   "<p>Phase-2 pilot: the Old Fishery (the hunt for Gaedren Lamm). Imports the chapter journal, the Old Fishery scene (map-note pins + staged tokens), the converted NPCs/hazards, and the treasure — organized into folders. Supply your own maps (Racooze's free CotCT battlemaps).</p>",
-  [strip(f) for f in folders], [strip(journal)], [strip(sc)],
+  [strip(f) for f in folders], [strip(journal), strip(pdf_journal)], [strip(sc)],
   [strip(a) for a in actors]+[strip(h) for h in hazards], [strip(i) for i in items])
 B.write("adventure","cotct-edge-of-anarchy",copy.deepcopy(adv))
 

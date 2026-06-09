@@ -14,6 +14,13 @@
 **/extracted_text/
 **/_pdf_dump/
 
+# PRIVATE-USE source layer: full original text + the PDF live ONLY in the local
+# Foundry install, never in git. The build SCRIPTS are committed; their OUTPUT
+# (verbatim copyrighted source) is not. A fresh clone rebuilds these locally from
+# the GM's own legally-owned PDF.
+foundry-module/packs/source-journals/
+foundry-module/assets/private-source/
+
 # Redistributable-art firewall: assets dir holds placeholders only.
 # Commit *.md/.txt notes + .gitkeep; ignore actual image/map binaries.
 foundry-module/assets/**
