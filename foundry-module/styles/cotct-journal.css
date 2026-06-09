@@ -1,19 +1,55 @@
-/* CotCT conversion — journal section-block styling.
-   Mirrors the official pf2e-Kingmaker module's semantic HTML classes so our area
-   pages render polished on the DEFAULT pf2e journal sheet (no custom sheet class
-   shipped). Degrades gracefully: with this CSS absent the content is still plain,
-   readable HTML. Crimson palette to match the AP. */
+/* CotCT conversion — journal styling.
+   Replicates the official pf2e-Kingmaker journal look on the STOCK pf2e journal
+   sheet (no custom sheet class shipped). Theme-agnostic: every block uses a
+   TRANSLUCENT tint over whatever the active theme paints, and never forces a
+   text colour on body copy, so it reads correctly in both light and dark mode.
+   Crimson/rust palette to match the AP. */
 
 :root {
-  --cotct-root: #5a0b0b;
-  --cotct-crimson: #8a1a1a;
-  --cotct-rust: #b3541e;
-  --cotct-gold: #b08400;
-  --cotct-green: #1e6233;
-  --cotct-ink: #2b2b2b;
+  --cotct-crimson: #b3263b;     /* light-enough to read on dark */
+  --cotct-rust:    #cf7d3a;
+  --cotct-gold:    #d6a93b;
+  --cotct-green:   #4faa6b;
+  --cotct-secret:  #d2546a;
 }
 
-/* ---- shared block frame ------------------------------------------------- */
+/* =========================================================================
+   PAGE TITLE → banner  (best-effort: covers the title elements the stock
+   pf2e/Foundry journal sheet emits across v13–v14)
+   ========================================================================= */
+.journal-entry-page.text > h1,
+.journal-entry-page .journal-page-header h1,
+.journal-entry-page .journal-header h1,
+section.journal-page-content > h1:first-child {
+  text-align: center;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  padding: 0.35em 0.6em;
+  margin: 0 0 0.6em;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(179,38,59,0.30), rgba(90,11,11,0.30));
+  box-shadow: inset 0 0 0 1px rgba(179,38,59,0.45);
+}
+
+/* =========================================================================
+   HEADINGS inside page content
+   ========================================================================= */
+.journal-entry-page.text h2 {
+  font-variant: small-caps;
+  border-bottom: 2px solid var(--cotct-crimson);
+  padding-bottom: 0.1em;
+  margin: 0.8em 0 0.4em;
+}
+.journal-entry-page.text h3 {
+  border-bottom: 1px solid rgba(179,38,59,0.55);
+  padding-bottom: 0.08em;
+  margin: 0.7em 0 0.35em;
+}
+
+/* =========================================================================
+   shared block frame
+   ========================================================================= */
 .journal-entry-page.text .description,
 .journal-entry-page.text .gm-notes,
 .journal-entry-page.text .encounter,
@@ -23,155 +59,197 @@
 .journal-entry-page.text .milestone {
   display: block;
   margin: 0.7em 0;
-  padding: 0.5em 0.85em;
+  padding: 0.55em 0.85em;
   border-radius: 4px;
   border-left: 4px solid var(--cotct-crimson);
 }
 .journal-entry-page.text section > *:first-child { margin-top: 0; }
 .journal-entry-page.text section > *:last-child { margin-bottom: 0; }
 
-/* ---- read-aloud / boxed flavor text ------------------------------------- */
-/* The text the GM reads to the table. Boxed like a Paizo read-aloud panel. */
+/* small caps section labels (generated) share one look */
+.journal-entry-page.text .treasure::before,
+.journal-entry-page.text .skill::before,
+.journal-entry-page.text .conversion::before,
+.journal-entry-page.text .milestone.head::before {
+  display: block;
+  font-weight: 700;
+  font-size: 0.7em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.25em;
+}
+
+/* ---- read-aloud / boxed flavour ---------------------------------------- */
+/* What the GM reads at the table. Translucent so it works on dark themes. */
 .journal-entry-page.text .description {
-  background: linear-gradient(0deg, rgba(138,26,26,0.05), rgba(138,26,26,0.05)),
-              #faf6ef;
-  border: 1px solid rgba(90,11,11,0.35);
+  background: rgba(179,38,59,0.12);
+  border: 1px solid rgba(179,38,59,0.40);
   border-left: 4px solid var(--cotct-crimson);
   font-style: italic;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
 }
 .journal-entry-page.text .description p { margin: 0.3em 0; }
 
-/* ---- GM-only at-the-table notes (legacy block; Kingmaker uses bare <p>) -- */
+/* ---- legacy GM-notes block (Kingmaker uses bare <p>) ------------------- */
 .journal-entry-page.text .gm-notes {
-  background: rgba(0,0,0,0.035);
-  border-left-color: #555;
+  background: rgba(127,127,127,0.10);
+  border-left-color: #888;
 }
 
-/* ---- GM secret / hidden reveal ------------------------------------------ */
-/* Foundry core hides section.secret from non-owner players and gives the GM a
-   reveal toggle; we additionally tint it and badge it so it reads as "hidden"
-   at a glance even when the GM is looking at it. */
+/* ---- GM secret / hidden reveal ----------------------------------------- */
+/* Foundry core hides section.secret from non-owner players + gives the GM a
+   reveal toggle; we tint + badge it so it also reads as hidden to the GM. */
 .journal-entry-page.text section.secret {
   position: relative;
   display: block;
   margin: 0.7em 0;
-  padding: 1.5em 0.85em 0.5em;
-  border: 1px dashed rgba(90,11,11,0.55);
+  padding: 1.55em 0.85em 0.55em;
+  border: 1px dashed rgba(210,84,106,0.65);
   border-radius: 4px;
   background: repeating-linear-gradient(
-    45deg, rgba(138,26,26,0.045), rgba(138,26,26,0.045) 10px,
-    rgba(138,26,26,0.085) 10px, rgba(138,26,26,0.085) 20px);
+    45deg, rgba(210,84,106,0.06), rgba(210,84,106,0.06) 11px,
+    rgba(210,84,106,0.13) 11px, rgba(210,84,106,0.13) 22px);
 }
 .journal-entry-page.text section.secret::before {
-  content: "GM ONLY";
+  content: "🔒 GM ONLY";
   position: absolute;
   top: 0; left: 0;
-  padding: 0.1em 0.6em;
+  padding: 0.12em 0.7em;
   font-weight: 700;
-  font-size: 0.68em;
+  font-size: 0.66em;
   letter-spacing: 0.08em;
   color: #fff;
   background: var(--cotct-crimson);
-  border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 5px;
 }
-.journal-entry-page.text section.secret p:first-of-type { margin-top: 0; }
+.journal-entry-page.text section.secret > *:first-child { margin-top: 0; }
 
-/* ---- encounter block ---------------------------------------------------- */
+/* ---- encounter block --------------------------------------------------- */
 .journal-entry-page.text .encounter {
-  background: rgba(120,20,20,0.05);
+  background: rgba(207,125,58,0.10);
   border-left-color: var(--cotct-rust);
-  overflow: hidden; /* contain the floated aside */
+  overflow: hidden;             /* contain the floated aside */
+  padding-top: 0;
 }
+/* header bar: name | XP budget */
 .journal-entry-page.text .encounter header.split {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 0.5em;
-  border-bottom: 1px solid rgba(90,11,11,0.25);
-  margin-bottom: 0.4em;
+  gap: 0.6em;
+  margin: 0 -0.85em 0.5em;      /* full-bleed bar */
+  padding: 0.3em 0.85em;
+  background: rgba(207,125,58,0.22);
+  border-bottom: 1px solid rgba(207,125,58,0.5);
 }
 .journal-entry-page.text .encounter header.split h3 {
-  margin: 0; border: none; color: var(--cotct-root);
+  margin: 0; border: none; padding: 0;
+  font-variant: small-caps; font-weight: 700;
 }
 .journal-entry-page.text .encounter header.split p {
-  margin: 0; font-weight: 700; font-size: 0.85em;
-  text-transform: uppercase; letter-spacing: 0.03em; opacity: 0.85;
-  white-space: nowrap;
+  margin: 0; white-space: nowrap;
+  font-weight: 700; font-size: 0.8em; letter-spacing: 0.04em;
+  text-transform: uppercase; opacity: 0.9;
 }
 
-/* creature aside (token list); porthole = round-framed portrait variant */
+/* creature aside — framed "card"; porthole = round-portrait variant */
 .journal-entry-page.text aside.right.token,
 .journal-entry-page.text aside.right.porthole {
   float: right;
-  width: 38%;
-  max-width: 220px;
+  width: 40%;
+  max-width: 230px;
   margin: 0 0 0.5em 0.9em;
-  padding: 0.4em 0.55em;
-  background: rgba(255,255,255,0.65);
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 4px;
+  padding: 0.45em 0.55em 0.5em;
+  background: rgba(127,127,127,0.12);
+  border: 1px solid rgba(179,38,59,0.35);
+  border-radius: 5px;
   text-align: center;
 }
+.journal-entry-page.text aside.right::before {
+  content: "Creatures";
+  display: block;
+  font-size: 0.62em; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; opacity: 0.7;
+  margin-bottom: 0.3em;
+  border-bottom: 1px solid rgba(179,38,59,0.3);
+  padding-bottom: 0.2em;
+}
 .journal-entry-page.text aside.right ul {
-  margin: 0.3em 0 0; padding: 0; list-style: none;
+  margin: 0; padding: 0; list-style: none;
   font-size: 0.92em; text-align: left;
 }
-.journal-entry-page.text aside.right li { margin: 0.15em 0; }
+.journal-entry-page.text aside.right li { margin: 0.2em 0; }
 .journal-entry-page.text aside.right img {
-  display: block; width: 100%; height: auto; margin: 0 auto;
+  display: block; width: 100%; height: auto; margin: 0 auto 0.35em;
   border-radius: 4px;
 }
 .journal-entry-page.text aside.right.porthole img {
-  width: 96px; height: 96px; border-radius: 50%;
+  width: 92px; height: 92px; border-radius: 50%;
   object-fit: cover; border: 2px solid var(--cotct-crimson);
 }
 .journal-entry-page.text img.flip { transform: scaleX(-1); }
 
-/* ---- skill-check callout ------------------------------------------------ */
+/* ---- skill-check callout ----------------------------------------------- */
 .journal-entry-page.text .skill {
-  background: rgba(30,98,51,0.06);
+  background: rgba(79,170,107,0.12);
   border-left-color: var(--cotct-green);
 }
+.journal-entry-page.text .skill::before {
+  content: "Skill Checks"; color: var(--cotct-green);
+}
 
-/* ---- treasure block ----------------------------------------------------- */
+/* ---- treasure block ---------------------------------------------------- */
 .journal-entry-page.text .treasure {
-  background: rgba(176,132,30,0.08);
+  background: rgba(214,169,59,0.13);
   border-left-color: var(--cotct-gold);
 }
 .journal-entry-page.text .treasure::before {
-  content: "Treasure";
-  display: block; font-weight: 700; text-transform: uppercase;
-  font-size: 0.72em; letter-spacing: 0.05em; color: var(--cotct-gold);
-  margin-bottom: 0.2em;
+  content: "Treasure"; color: var(--cotct-gold);
 }
 
-/* ---- milestone / advancement callout ------------------------------------ */
+/* ---- milestone / advancement callout ----------------------------------- */
 .journal-entry-page.text .milestone {
-  background: rgba(90,11,11,0.06);
-  border-left-color: var(--cotct-root);
+  background: rgba(179,38,59,0.10);
+  border-left-color: var(--cotct-crimson);
   text-align: center;
-  font-weight: 600;
 }
 .journal-entry-page.text .milestone.head::before {
-  content: "★ Milestone";
-  display: block; font-size: 0.72em; letter-spacing: 0.08em;
-  text-transform: uppercase; opacity: 0.7; margin-bottom: 0.15em;
+  content: "★ Milestone"; color: var(--cotct-crimson);
 }
 
-/* ---- conversion-notes block --------------------------------------------- */
+/* ---- conversion-notes block -------------------------------------------- */
 .journal-entry-page.text .conversion {
-  background: rgba(0,0,0,0.04);
-  border-left-color: #444;
+  background: rgba(127,127,127,0.10);
+  border-left-color: #888;
   font-size: 0.95em;
 }
-.journal-entry-page.text .conversion::before {
-  content: "Conversion Notes";
-  display: block; font-weight: 700; text-transform: uppercase;
-  font-size: 0.75em; letter-spacing: 0.05em; opacity: 0.7; margin-bottom: 0.2em;
+.journal-entry-page.text .conversion::before { content: "Conversion Notes"; }
+
+/* ---- trait / tag pills (for any statblock-style tags) ------------------ */
+.journal-entry-page.text .tags,
+.journal-entry-page.text .traits {
+  display: flex; flex-wrap: wrap; gap: 0.25em; margin: 0.3em 0;
+  padding: 0; list-style: none;
+}
+.journal-entry-page.text .tag,
+.journal-entry-page.text .traits > li,
+.journal-entry-page.text .traits > span {
+  display: inline-block;
+  padding: 0.05em 0.5em;
+  font-size: 0.72em; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--cotct-crimson);
+  border-radius: 3px;
 }
 
-/* ---- source citation line ----------------------------------------------- */
+/* ---- source citation line ---------------------------------------------- */
 .journal-entry-page.text p.source {
   font-size: 0.8em; opacity: 0.6; margin: 0 0 0.5em;
+}
+
+/* ---- misc polish ------------------------------------------------------- */
+.journal-entry-page.text hr {
+  border: none; height: 1px; margin: 0.6em 0;
+  background: linear-gradient(90deg, transparent, rgba(179,38,59,0.6), transparent);
 }
