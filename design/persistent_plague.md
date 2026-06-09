@@ -84,8 +84,55 @@ PF2e disease (Player Core) + city-tier (Reputation) systems. No new dice subsyst
   eradicates it (revert to faithful) at any chapter break with zero downstream
   breakage — the overlay is designed to be removable.
 
+## Consequences & GM options (what "too far" costs) — APPROVED ADDENDUM
+
+The clock must **bite**, with the GM steering *how*. Consequences escalate by tier
+and recede when the PCs act. The only **permanent** cure is Ileosa's defeat (Ch.6);
+everything before is suppression.
+
+### Escalation by Epidemic Clock tier
+
+| Clock | State | City tier | What the table feels (GM picks from the menus below) |
+|---|---|---|---|
+| **0–3** | Receding / contained | Unrest→recovering | Flavor only; markets recover; grateful NPCs. The PCs' wins are visible. |
+| **4–6** | Simmering | Plagued looms | Quarantine checkpoints; some goods scarce; a *minor* Reputation/attitude drag; **one personal hook** fires (an NPC the PCs know falls ill). |
+| **7–8** | Spreading | **Plagued active** | Harsher item availability & prices; worse NPC attitudes; a district goes under quarantine; **lose an NPC or a place**; the Korvosan Guard's support capacity drops (soft penalty to later aid). |
+| **9** | Crisis | Plagued + Martial Law | Riots/brutal crackdowns; a district effectively lost; allies pressure the PCs to drop side-goals; a safe haven becomes unusable. |
+| **10** | Catastrophe ("too far") | Anarchy / collapse | **Point-of-no-return:** Ileosa's harvest accelerates — the **Everdawn Pool gains charges early, shortening the Ch.6 ritual timer** — *and/or* a mass-death event permanently darkens the denouement. Not a TPK; the **world** pays. |
+
+### GM options menu (pick what hurts *this* table)
+- **A · PC infection.** If a PC fails enough exposure flat-checks, they contract
+  Blood Veil (the CHG-0011 staged disease: Fort save, drained/enfeebled by stage).
+  Three tones the GM can choose: **Gritty** (real risk, must self-treat with
+  Medicine/magic or worsen), **Heroic** (curable with effort — a fetch for the
+  suppressant), or **Grim** (a PC carries a managed strain as a recurring
+  complication and personal stake). Always give an *out*, never a death spiral.
+- **B · Lose an NPC.** A tiered "who the plague can take" list — throwaway contact
+  (tier 4–6) → named ally/quest-giver (tier 7–9). GM picks by emotional weight; this
+  is the primary stakes lever and the payoff for "the city is dying around you."
+- **C · Lose a place.** A safe house, a favored shop, or a whole district becomes
+  quarantined/unusable — concrete, reversible-by-action loss.
+- **D · Faction cost.** Korvosan Guard / church of Abadar support weakens (ties to
+  the Reputation system), making later-chapter aid thinner — a *soft mechanical*
+  consequence the players can see coming and prevent.
+- **E · Accelerate the villain.** High clock feeds the Everdawn Pool → the Ch.6
+  ritual timer is shorter, the finale tenser. (The mechanical bridge from Ch.2's
+  neglect to Ch.6's stakes.)
+- **F · Moral pressure.** NPCs beg the PCs to prioritize the plague over the
+  political plot; either choice has consequences (no wrong answer, real tension).
+
+### Player agency (so it feels earned, not punitive)
+- **Ignoring it** → clock climbs faster (+1 extra per in-city week; the away-chapter
+  bumps stack). **Fighting it** (downtime actions: distribute the suppressant, burn a
+  cult cell, expose a Blooding site, fund the church) → −1 each and can hold tiers.
+- Every consequence above is **telegraphed one tier early** (NPCs warn, news
+  spreads) so players can choose to spend resources averting it.
+- **Removable:** at any chapter break the GM may rule the suppressant became a true
+  cure (revert to faithful) with zero downstream breakage.
+
 ## Approval
-☐ **Approve** → I implement this in the Ch.2 conversion and thread the status beats
-through Ch.3–6, with Major change-log entries.
-☐ **Adjust** → tell me what to change (e.g. exposure weight, clock pacing).
-☐ **Revert to faithful** → plague resolves in Ch.2.
+☑ **APPROVED as specified (2026-06-09)**, with this consequences/GM-options addendum.
+Implement in the Ch.2 conversion + thread light "plague status" + the clock/
+consequences menu through Ch.3–6, with Major change-log entries and a campaign-state
+journal page to track the clock. Keep per-PC exposure light and consequences
+telegraphed; preserve the removability hatch.

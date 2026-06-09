@@ -149,3 +149,12 @@ All **OFFICIAL**, Remaster (cite **GM Core / Player Core**, not Gamemastery Guid
 
 *(These are tracked in `conversion_change_log.md` and surfaced in the final
 GM-review list. None block the Chapter 1 pilot.)*
+
+### Resolved with GM (2026-06-09)
+- **G-Q1 (level cap):** Native **1→17 preserved** + an optional **post-finale arc** from Appendix 1 hooks (built after the main conversion). *(CHG-0003)*
+- **G-Q2 (which Olliebird artifact):** GM has **neither** — rely on our own conversion + these research notes; cross-reference optional.
+- **G-Q3 (telegraph vs mystery):** **Preserve the mystery** for Blackjack=Vencarlo & Glorio Arkona=rakshasa; journals add earnable GM hints, reveals stay player-discovered.
+- **G-Q4 (plague structure):** **Persistent background threat — APPROVED** with consequences framework. *(CHG-0011b; `design/persistent_plague.md`)*
+- **G-Q5 (maps):** **Reference Racooze's** free battlemaps. *(CHG-0009)*
+- **G-Q6 (Harrow reroll):** **Hero-Point-style suit pool**; ritual optional. *(CHG-0010)*
+- **Pilot boss:** **Severe @ level 1** confirmed. *(CHG-0101)*
