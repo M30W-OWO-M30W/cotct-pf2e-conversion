@@ -24,10 +24,6 @@
           "0": {
             "damage": "1d6+1",
             "damageType": "slashing"
-          },
-          "1": {
-            "damage": "1d6",
-            "damageType": "precision"
           }
         },
         "description": {
@@ -72,10 +68,6 @@
           "0": {
             "damage": "1d4+1",
             "damageType": "piercing"
-          },
-          "1": {
-            "damage": "1d6",
-            "damageType": "precision"
           }
         },
         "description": {
@@ -116,7 +108,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>+1d6 precision vs off-guard.</p>"
+          "value": "<p>Deals 1d6 extra precision damage to off-guard creatures. Toggle <em>Off-Guard</em> on the sheet (or apply the off-guard condition to the target) to fold it into a Strike's damage.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -124,7 +116,25 @@
           "license": "OGL",
           "remaster": true
         },
-        "rules": [],
+        "rules": [
+          {
+            "key": "DamageDice",
+            "selector": "strike-damage",
+            "category": "precision",
+            "diceNumber": 1,
+            "dieSize": "d6",
+            "predicate": [
+              "target:condition:off-guard"
+            ]
+          },
+          {
+            "key": "RollOption",
+            "domain": "all",
+            "option": "target:condition:off-guard",
+            "toggleable": "totm",
+            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
+          }
+        ],
         "slug": null,
         "traits": {
           "rarity": "common",

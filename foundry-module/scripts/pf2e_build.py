@@ -50,13 +50,29 @@ _GLYPH = {None: "systems/pf2e/icons/default-icons/action.svg",
           "1": "systems/pf2e/icons/actions/OneAction.webp", "2": "systems/pf2e/icons/actions/TwoActions.webp",
           "3": "systems/pf2e/icons/actions/ThreeActions.webp", "reaction": "systems/pf2e/icons/actions/Reaction.webp",
           "free": "systems/pf2e/icons/actions/FreeAction.webp", "passive": "systems/pf2e/icons/actions/Passive.webp"}
-def action(eid, name, glyph, desc, traits=None, category="offensive"):
+def action(eid, name, glyph, desc, traits=None, category="offensive", rules=None):
     atype = {"passive": "passive", "reaction": "reaction", "free": "free"}.get(glyph, "action")
     acts = int(glyph) if glyph and glyph not in ("passive", "reaction", "free") else None
     return {"_id": eid, "img": _GLYPH.get(glyph, _GLYPH[None]), "name": name, "sort": 0, "type": "action",
             "system": {"actionType": {"value": atype}, "actions": {"value": acts}, "category": category,
-                       "description": {"value": desc}, "publication": PUB, "rules": [], "slug": None,
+                       "description": {"value": desc}, "publication": PUB, "rules": rules or [], "slug": None,
                        "traits": {"rarity": "common", "value": traits or []}}}
+
+def sneak_attack(eid, dice=1):
+    """Conditional precision damage as a SHEET TOGGLE (not baked into Strikes).
+    A RollOption adds an 'Off-Guard' toggle; a predicated DamageDice adds the
+    precision when it (or the off-guard condition on the target) is active.
+    This is the canonical pf2e pattern — reuse it for any conditional passive."""
+    rules = [
+        {"key": "DamageDice", "selector": "strike-damage", "category": "precision",
+         "diceNumber": dice, "dieSize": "d6", "predicate": ["target:condition:off-guard"]},
+        {"key": "RollOption", "domain": "all", "option": "target:condition:off-guard",
+         "toggleable": "totm", "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"},
+    ]
+    return action(eid, "Sneak Attack", "passive",
+        f"<p>Deals {dice}d6 extra precision damage to off-guard creatures. Toggle "
+        f"<em>Off-Guard</em> on the sheet (or apply the off-guard condition to the target) "
+        f"to fold it into a Strike's damage.</p>", traits=["rogue"], rules=rules)
 
 def lore(eid, name, mod):
     return {"_id": eid, "img": "systems/pf2e/icons/default-icons/lore.svg", "name": name, "sort": 0, "type": "lore",

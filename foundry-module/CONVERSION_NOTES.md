@@ -4,6 +4,10 @@ This file records the **standing decisions** that apply across the whole
 conversion. Per-area changes live in each area journal's *Conversion Notes*
 section and are aggregated in `../conversion_change_log.md`.
 
+> **How to author the module** (compendium linking, stat-block conventions,
+> conditional-passive toggles, verbatim source extraction, build/validate/sync
+> workflow): see [`AUTHORING_SOP.md`](AUTHORING_SOP.md).
+
 ## Versions  *(✅ corrected with GM, 2026-06-09)*
 
 | Target | Value | Status |
