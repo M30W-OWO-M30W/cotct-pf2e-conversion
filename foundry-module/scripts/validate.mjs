@@ -66,6 +66,20 @@ for (const pack of packDirs) {
     const rel = file.replace(PROJECT_ROOT + "/", "");
     if (!doc._id || !ID_RE.test(doc._id)) problems.push(`MISSING/BAD _id  ${rel} (got ${JSON.stringify(doc._id)})`);
     if (!doc.name) problems.push(`MISSING name  ${rel}`);
+    // _key is REQUIRED by the fvtt compiler (docs without it are silently skipped -> empty packs)
+    const COLL = { actors: "actors", hazards: "actors", items: "items", journals: "journal", rolltables: "tables", macros: "macros", scenes: "scenes" };
+    if (doc._id && COLL[pack]) {
+      const expectedKey = `!${COLL[pack]}!${doc._id}`;
+      if (doc._key !== expectedKey) problems.push(`MISSING/BAD _key  ${rel} (got ${JSON.stringify(doc._key)}, expected ${expectedKey}) — pack would compile EMPTY`);
+      // embedded docs (actor items, journal pages) need compound keys or compile throws LEVEL_INVALID_KEY
+      const embChecks = [["items", "items"], ["pages", "pages"]];
+      for (const [field, embColl] of embChecks) {
+        for (const emb of doc[field] || []) {
+          const ek = `!${COLL[pack]}.${embColl}!${doc._id}.${emb._id}`;
+          if (emb._key !== ek) problems.push(`BAD embedded _key  ${rel} ${field}[${emb._id || "?"}] (expected ${ek})`);
+        }
+      }
+    }
     if (doc._id) {
       const key = `cotct-${pack}.${doc._id}`;
       docIndex.set(key, { name: doc.name, type: doc.type, pages: new Set((doc.pages || []).map((pg) => pg._id)) });

@@ -19,6 +19,7 @@ def equipment(idkey, name, level, price_gp, desc, traits=None, bulk=0.1, rarity=
             "traits": {"rarity": rarity, "value": traits or []}, "usage": {"value": "worn"}}}
 
 def write(slug, doc):
+    doc["_key"] = f"!items!{doc['_id']}"
     (SRC / f"{slug}.json").write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"  items/{slug}.json  [{doc['type']}] {doc['name']}")
 

@@ -40,6 +40,10 @@ def journal(idkey, name, pages):
             "sort": 0, "ownership": {"default": 0}, "flags": {}}
 
 def write(slug, doc):
+    doc["_key"] = f"!journal!{doc['_id']}"
+    # embedded pages are stored as separate leveldb entries with compound keys
+    for p in doc.get("pages", []):
+        p["_key"] = f"!journal.pages!{doc['_id']}.{p['_id']}"
     (SRC / f"{slug}.json").write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"  journals/{slug}.json  '{doc['name']}'  ({len(doc['pages'])} pages)")
 

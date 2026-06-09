@@ -136,8 +136,12 @@ def hazard(idkey, name, level, stealth, stealth_note, disable, desc, items,
 def write(pack, slug, doc):
     d = PACKS / pack / "_source"
     d.mkdir(parents=True, exist_ok=True)
+    doc["_key"] = f"!actors!{doc['_id']}"   # actors + hazards are both Actor docs
+    # embedded items are stored as separate leveldb entries with compound keys
+    for it in doc.get("items", []):
+        it["_key"] = f"!actors.items!{doc['_id']}.{it['_id']}"
     (d / f"{slug}.json").write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"  actors/{pack}/{slug}.json  [{doc['type']}] {doc['name']}")
+    print(f"  actors/{pack}/{slug}.json  [{doc['type']}] {doc['name']}  ({len(doc.get('items',[]))} items)")
 
 # =====================================================================
 # ACTORS
