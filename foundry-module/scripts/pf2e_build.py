@@ -171,8 +171,12 @@ def aside_token(items, img=None, porthole=False, flip=False):
     return f'<aside class="{cls}">{im}<ul>{lis}</ul></aside>'
 
 def enc(title, budget, body, aside=""):
-    """Full encounter block: optional aside, then a split header (name | XP budget), then body."""
-    return f'<section class="encounter">{aside}<header class="split"><h3>{title}</h3><p>{budget}</p></header>{body}</section>'
+    """Full encounter block: optional aside, then a split header (name | XP budget), then body.
+    The title is a <span>, NOT a heading — headings (h1-h3) leak into the journal's
+    page navigation; encounters should not appear there (matches Kingmaker)."""
+    return (f'<section class="encounter">{aside}'
+            f'<header class="split"><span class="enc-name">{title}</span><span class="enc-budget">{budget}</span></header>'
+            f'{body}</section>')
 
 def journal_entry(_id, name, pages, folder=None, sort=0, default_own=0):
     for i, p in enumerate(pages, 1):

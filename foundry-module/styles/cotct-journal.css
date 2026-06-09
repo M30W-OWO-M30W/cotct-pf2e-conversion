@@ -142,12 +142,11 @@ section.journal-page-content > h1:first-child {
   background: rgba(207,125,58,0.22);
   border-bottom: 1px solid rgba(207,125,58,0.5);
 }
-.journal-entry-page.text .encounter header.split h3 {
-  margin: 0; border: none; padding: 0;
-  font-variant: small-caps; font-weight: 700;
+.journal-entry-page.text .encounter header.split .enc-name {
+  font-variant: small-caps; font-weight: 700; font-size: 1.15em;
 }
-.journal-entry-page.text .encounter header.split p {
-  margin: 0; white-space: nowrap;
+.journal-entry-page.text .encounter header.split .enc-budget {
+  white-space: nowrap;
   font-weight: 700; font-size: 0.8em; letter-spacing: 0.04em;
   text-transform: uppercase; opacity: 0.9;
 }
