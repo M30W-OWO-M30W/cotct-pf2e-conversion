@@ -338,3 +338,12 @@ B.write("adventure","cotct-edge-of-anarchy",copy.deepcopy(adv))
 
 print(f"Pilot (Kingmaker-style) built: {len(folders)} folders, {len(actors)} actors, {len(hazards)} hazards, "
       f"{len(items)} items, 1 journal ({len(pages)} pages), 1 scene ({len(notes)} notes / {len(tok)} tokens), 1 adventure.")
+
+try:
+    import import_markdown_journals as MDJ
+
+    md_journals = MDJ.populate()
+    md_pages = sum(len(j.get("pages", [])) for j in md_journals)
+    print(f"Markdown journals imported: {len(md_journals)} journals, {md_pages} pages.")
+except FileNotFoundError as exc:
+    print(f"Markdown journal import skipped: {exc}")
