@@ -220,7 +220,7 @@ def newpage(key,name,html,level=3):
 
 pages=[]
 # 1. Overview & Run Sheet ------------------------------------------------------
-pages.append(newpage("overview","Overview & Run Sheet",
+pages.append(newpage("overview","Overview",
   RA("<p>A harrow card finds its way to each of you — and a hand-inked message naming a man you each have cause to hate: <strong>Gaedren Lamm</strong>. The fortune-teller Zellara knows where he dens, and asks you to end him.</p>")
   +"<p>Zellara's reading (see "+pg(P["hook"],"Haunted Fortunes")+") draws the party together and points them at the <strong>Old Fishery</strong>, where crime-lord Gaedren Lamm hides with his thugs, his pet crocodile "+mc("crocodile","Gobblegut")+", and a workforce of enslaved orphans. In his den the PCs recover "+itm("brooch","Queen Ileosa's stolen brooch")+", "+itm("ledger","Gaedren's coded ledger")+", and "+itm("harrowdeck","Zellara's haunted harrow deck")+" — and as they step back into the street, the king dies and Korvosa erupts into the riots of <em>A City Gone Mad</em>.</p>"
   +B.s_milestone("<p><strong>Advancement:</strong> the party should reach <strong>2nd level</strong> after dealing with Gaedren. Milestone leveling (CHG-0007).</p>")
@@ -229,7 +229,7 @@ pages.append(newpage("overview","Overview & Run Sheet",
   +SEC("<p><strong>The twist the players don't have yet:</strong> Zellara is already dead. Gaedren murdered her and fed her to Gobblegut; her spirit haunts her stolen deck. The PCs only learn this when they find her head in "+pg(P["A14"],"A14")+" — so play her in the intro as a warm, desperate ally, not a mystery.</p>"),level=1))
 
 # 2. Haunted Fortunes — the hook ----------------------------------------------
-pages.append(newpage("hook","Haunted Fortunes — Zellara's Harrowing",
+pages.append(newpage("hook","Haunted Fortunes",
   SR("Part 1: Haunted Fortunes","14-16")
   +RA("<p>It arrives where only you would find it — tucked in a spellbook, an altar, a stranger's pocket, the bottom of your tankard: a single harrow card, your card, with a few lines of bold ink on the back. It names Gaedren Lamm, and an address.</p>")
   +"<p>Each PC receives a harrow card matched to their highest ability + outlook, bearing an identical summons (Handout 1-1): come to <strong>3 Lancet Street</strong> at sunset. Asking around, or a "+chk("type:society|dc:12")+", identifies the address as the home of the Varisian fortune-teller <strong>Zellara Esmeranda</strong>.</p>"
@@ -239,13 +239,13 @@ pages.append(newpage("hook","Haunted Fortunes — Zellara's Harrowing",
   ,level=2))
 
 # 3. Scene Setup ---------------------------------------------------------------
-pages.append(newpage("scene","Scene Setup (maps & VTT)",
+pages.append(newpage("scene","Scene Setup",
   "<p><strong>No maps are shipped</strong> (copyright). Open the "+f"@UUID[Scene.{SCN}]{{Old Fishery scene}}"+" — its map-note pins already link to each area page below, and its tokens reference the converted actors.</p>"
   +"<p>Drop in a battlemap (Racooze's free CotCT set, or your own at <code>assets/maps/01-old-fishery.webp</code>), then nudge the pins and tokens onto it — positions are staged in a grid for now (<strong>NEEDS GM REVIEW</strong>); the <em>links</em> are already correct. Drag "+mc("crocodile","Crocodile")+" (rename 'Gobblegut') into "+pg(P["A13"],"A13")+" and "+mc("guarddog","Guard Dog")+" ('Bloo') into "+pg(P["A4"],"A4")+"/"+pg(P["A8"],"A8")+" from the pf2e Monster Core compendium.</p>"
   +SEC("<p>The fishery is two map levels — an upper floor (A1–A9) and the waterline understructure (A10–A14). When you add the real map, split this into two scenes and re-pin; the area pages are already ordered for that split.</p>"),level=2))
 
 # 4. Fishery Features ----------------------------------------------------------
-pages.append(newpage("features","Fishery Features & Layout",
+pages.append(newpage("features","Fishery Features",
   SR("A. Old Fishery","17")
   +RA("<p>A creaking, mold-mottled building of boarded windows and solid old doors, perched on pilings over the Jeggare River. It still renders 'dock-dumpling' slurry from spoiled fish — a cover for the crime-lord who dens beneath it.</p>")
   +"<p>The fishery sits on a 13-ft embankment ("+chk("type:athletics|dc:15")+" to climb the slick bank). Doors are hardness 5 / 10 HP ("+chk("type:thievery|dc:15")+" to pick, or "+chk("type:athletics|dc:15")+" to force); Yargin's brass key opens them all. Standing hazards: the "+haz("boardwalk","Slippery Boardwalk")+" ("+pg(P["A3"],"A3")+") and the "+haz("rottendeck","Rotten Ship Deck")+" ("+pg(P["A9"],"A9")+") — either can dump a PC into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+").</p>"
@@ -269,7 +269,7 @@ area("A3","Back Alley", SR("A3","18-20")
   +"<p>The "+haz("boardwalk","Slippery Boardwalk")+" hazard: a careful pace is safe, but moving fast or fighting on it risks a fall into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+"); the planks also groan and give under heavy loads. The door into "+pg(P["A6"],"A6")+" is locked.</p>"
   +SEC("<p>Despite its state, this boardwalk is Gaedren's own private way in and out of his den ("+pg(P["A13"],"A13")+") — he uses it only a few times a month, spending days or weeks below to avoid being seen.</p>"))
 
-area("A4","Front Room — Bloo", SR("A4","19")
+area("A4","Front Room", SR("A4","19")
   +RA("<p>A single desk and a moldering chair stand in the middle of this disused room. A nest of ratty furs and straw is heaped beneath the desk.</p>")
   +"<p>In theory Yargin meets new customers here — a rarity. Any real noise in this room quickly brings both "+act("yargin","Yargin")+" and "+act("hookshanks","Hookshanks")+" to investigate.</p>"
   +B.enc("Bloo","Trivial · 20 XP",
@@ -281,7 +281,7 @@ area("A5","Barracks", SR("A5","20")
   +RA("<p>Two sets of bunks flank a boarded-over window. Three are slept-in; the fourth stands bare.</p>")
   +"<p>The thugs — Yargin, Hookshanks, and Giggles — share this room. They distrust one another and keep nothing of value here.</p>")
 
-area("A6","Yargin's Office — Yargin", SR("A6","19-21")
+area("A6","Yargin's Office", SR("A6","19-21")
   +RA("<p>A desk wedged into one corner — its bulk blocking the western door — overflows with chalk-scrawled slate boards. A slouching cabinet leans against the east wall.</p>")
   +"<p>The fishery's 'books': slates of transactions and addresses, compiled monthly into scrolls in the cabinet — cover paperwork for any Guard inspection. "+act("yargin","Yargin Balko")+" works here and carries the brass key.</p>"
   +SEC("<p>A floorboard behind the chair is a <strong>hidden, barred trapdoor</strong> ("+chk("type:perception|dc:18")+" to spot; "+chk("type:athletics|dc:17")+" or break to force) dropping straight into the boss's chamber ("+pg(P["A13"],"A13")+"). A meal-pulley rig makes the climb down trivial — a flanking route onto Gaedren that skips the whole lower floor.</p>")
@@ -290,7 +290,7 @@ area("A6","Yargin's Office — Yargin", SR("A6","19-21")
      +SEC("<p><strong>Morale:</strong> at the first melee hit (or once his acid is spent) Yargin panics and flees down the trapdoor to warn Gaedren — and may lead the PCs right onto the boss. If he reaches the den, start the "+pg(P["A13"],"A13")+" fight with Gobblegut already enraged.</p>"),
      B.aside_token([act("yargin","Yargin Balko (1)")], img=TOK("yargin-balko"))))
 
-area("A7","Upper Workroom — Hookshanks", SR("A7","20-22")
+area("A7","Upper Workroom", SR("A7","20-22")
   +RA("<p>The reek of fish and sweat stings the eyes. A great trough of half-rancid fish and brine drains through wooden chutes into a larger room beyond; a desk and a tall cabinet sit opposite.</p>")
   +"<p>Four orphans feed the chutes here. The floor around the trough is slick ("+chk("type:acrobatics|dc:15")+" if moving faster than a Step). The cabinet holds petty cash, locked ("+chk("type:thievery|dc:15")+"; Yargin's key).</p>"
   +"<p>"+act("hookshanks","Hookshanks Gruller")+", a gnome taskmaster, oversees the work — and dresses as one of the orphans, passing for one until a PC beats his Deception with "+chk("type:perception|dc:17")+" (gnome PCs get a bonus).</p>"
@@ -299,7 +299,7 @@ area("A7","Upper Workroom — Hookshanks", SR("A7","20-22")
      +B.s_skill("<p>Rally the kids ("+chk("type:diplomacy|dc:15")+") and an older boy, Kester, blinds Hookshanks with a faceful of rancid fish. Hookshanks surrenders at low HP and tells all — except what lies in the den ("+pg(P["A14"],"A14")+").</p>"),
      B.aside_token([act("hookshanks","Hookshanks Gruller (1)"), "4× "+act("orphan","Lamm's Lamb")+" <em>(non-combatant)</em>"], img=TOK("hookshanks-gruller"))))
 
-area("A8","Fishery Floor — Giggles", SR("A8","21-22")
+area("A8","Fishery Floor", SR("A8","21-22")
   +RA("<p>The main floor is slick with river water, weed, and fish blood. Catwalks ring an eight-foot tar-caulked slurry vat; a wide hole in the south floor opens straight onto the river below. Rows of small hammocks hang beneath the walks.</p>")
   +"<p>The heart of the operation. "+act("giggles","Giggles")+", a half-orc brute, oversees 5 orphans by day; all 26 sleep here at night. The hole drops to the river and "+act("jigsawshark","the jigsaw shark")+" — the thugs toss scraps through it to keep the shark close and the children terrified.</p>"
   +B.enc("Giggles [+ Bloo at night]","Low · 40 XP (60 with Bloo)",
@@ -335,7 +335,7 @@ area("A12","Underpier", SR("A12","24-25")
      +B.s_skill("<p>Stay dry and it stays a hazard, not a fight — though the "+haz("boardwalk","boardwalk")+" and "+haz("rottendeck","rotten deck")+" above exist precisely to feed it victims.</p>"),
      B.aside_token([act("jigsawshark","Jigsaw Shark (1)")], img=TOK("jigsaw-shark"))))
 
-area("A13","Gaedren's Playground — BOSS", SR("A13","24-26")
+area("A13","Gaedren's Playground", SR("A13","24-26")
   +RA("<p>A chill chamber opens over a pit of black river water, crossed by two five-foot walkways. Rusted manacles dangle from mossy ropes above the pool. On the far side, cabinets and lockboxes spill dingy 'treasures' across three cluttered tables. Something heavy shifts in the water below.</p>")
   +"<p>"+mc("crocodile","Gobblegut")+" lurks in the pit; "+act("gaedren","Gaedren Lamm")+" sorts the day's haul at his tables across it. <strong>Reaching him means crossing the gator's water.</strong></p>"
   +SEC("<p>Those manacles are where Gaedren feeds doomed orphans to Gobblegut for sport — the PCs may arrive mid-'feeding,' a child dangling over the snapping jaws. Anyone who names <strong>Zellara</strong> earns a leering reply that 'she's in the next room' — her head waits in "+pg(P["A14"],"A14")+". <strong>Tactics:</strong> Gaedren opens with <em>Spur the Beast</em> to enrage Gobblegut, snipes from across the pool, <em>Nimble Dodges</em> focus fire, and flees to the "+pg(P["A12"],"A12")+" skiffs at &le;8 HP — though the abused gator may take him first.</p>")
@@ -346,14 +346,14 @@ area("A13","Gaedren's Playground — BOSS", SR("A13","24-26")
   +B.s_treasure("<p>On the tables: "+itm("coffer","a darkwood coffer — 20 doses of shiver + 7 applications of vermin repellent")+".</p>")
   +B.s_conv("<p><strong>⚠ Track what the PCs do with the body.</strong> Left here, Gaedren's son Rolth animates it — the PCs meet an undead Gaedren in the Dead Warrens at the chapter's end. See "+pg(P["conv"],"Conversion Notes")+".</p>"))
 
-area("A14","Gaedren's Den — treasure & the reveal", SR("A14","26-28")
+area("A14","Gaedren's Den", SR("A14","26-28")
   +RA("<p>A squalid bedroom-study: a lumpy bed against one wall, a table heaped with rotting food and scuttling roaches, a sagging dresser. At the foot of the bed sits a locked strongbox, a moldy ledger resting on its lid. A fly-blown hatbox sits atop the dresser.</p>")
   +"<p>Gaedren's private quarters. The strongbox opens to the rusty iron key he carries, or "+chk("type:thievery|dc:15")+".</p>"
   +SEC("<p><strong>The reveal.</strong> The hatbox holds <strong>Zellara's severed head</strong>, crudely made up to mimic life ("+chk("type:medicine|dc:14")+": dead for weeks) — confirming the woman who hired the party has been dead all along. Beneath it lies "+itm("harrowdeck","her haunted harrow deck")+", still inhabited by her spirit. Atop the strongbox is "+itm("ledger","Gaedren's coded ledger")+"; inside, "+itm("brooch","Queen Ileosa's Brooch")+" and the hoard. A key-shaped masterwork dagger among the loot is a gift from Gaedren's estranged son <strong>Rolth</strong> — foreshadowing the next chapter ("+chk("type:society|dc:20")+" recognizes the killer's signature blade).</p>")
   +B.s_treasure("<p>Full parcel on the "+pg(P["treasure"],"Treasure")+" page.</p>"))
 
 # NPCs index -------------------------------------------------------------------
-pages.append(newpage("npcs","NPCs & Creatures",
+pages.append(newpage("npcs","NPCs",
   "<p>Click any creature to open its sheet. Build rationale: <code>reports/npc_monster_conversion_report.md</code>.</p>"
   +"<ul>"
    "<li>"+act("gaedren","Gaedren Lamm")+" (L2) — "+pg(P["A13"],"A13")+" boss · "+act("yargin","Yargin Balko")+" (L1) — "+pg(P["A6"],"A6")+" · "+act("hookshanks","Hookshanks Gruller")+" (L1) — "+pg(P["A7"],"A7")+" · "+act("giggles","Giggles")+" (L1) — "+pg(P["A8"],"A8")+"</li>"
@@ -372,7 +372,7 @@ pages.append(newpage("treasure","Treasure",
   +SEC("<p><strong>Story items — do not let players cash these out for level-breaking gold.</strong> "+itm("brooch","Queen Ileosa's Brooch")+" launches the queen's audience and the chapter's main reward; "+itm("harrowdeck","Zellara's Harrow Deck")+" is the Harrow subsystem anchor (CHG-0010). The original PF1e parcel (a 2,000 gp brooch, gold ingot, etc.) is deliberately <em>not</em> restored.</p>"),level=2))
 
 # Conversion Notes -------------------------------------------------------------
-pages.append(newpage("conv","Conversion Notes (Changes from Original)",
+pages.append(newpage("conv","Conversion Notes",
   B.s_conv("<p>Mirrors <code>conversion_change_log.md</code> (CHG-0101…0108). Story, villain, flow, and the closing cliffhanger are all preserved; nothing here is an approval-gated change.</p>"
    "<ul>"
    "<li><strong>Gaedren rebuilt as a credible Severe</strong>, with Gobblegut as the real threat — fixes the 'Lamm is a Lamb' anticlimax and PF2e solo-boss math. Added <em>Spur the Beast</em> / <em>Nimble Dodge</em>; kept <em>Limping Gait</em>. ⚠ Confirm Severe @L1 vs running it @L2.</li>"
