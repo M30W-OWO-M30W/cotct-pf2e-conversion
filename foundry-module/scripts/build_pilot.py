@@ -59,11 +59,18 @@ def verbatim(anchor):
     a = " ".join(anchor.split())
     if not a: return ""
     paras = _paras()
-    for p in paras:
-        if p.startswith(a): return p
-    for p in paras:
-        if a in p: return p
-    return ""
+    si = next((k for k, p in enumerate(paras) if p.startswith(a)), None)
+    if si is None:
+        si = next((k for k, p in enumerate(paras) if a in p), None)
+    if si is None: return ""
+    text, k = paras[si], si + 1
+    # re-flow a box the two-column OCR split mid-sentence (text doesn't end on
+    # sentence punctuation) by appending following paragraphs until it completes
+    while text and text[-1] not in '.!?:"”)' and k < len(paras):
+        nxt = paras[k]
+        if not nxt or nxt.startswith(("<!--", "#")): break
+        text, k = text + " " + nxt, k + 1
+    return text
 # start-anchors (short identifying snippets) for each area's boxed read-aloud
 RABOX = {
  "A1":"The reek of brine and the stink of week-dead fish",
@@ -101,6 +108,14 @@ def dcfix(html):
         html = re.sub(pat, rep, html)
     return html
 
+# Player-handout sidebar text the two-column OCR fused into the GM narrative
+# (start-phrase, end-phrase). Pulled out of the prose so it stops splitting
+# sentences, then re-emitted as its own read-aloud block.
+_HANDOUTS = [
+    ("I know what Gaedren has done to you", "justice must be done."),
+    ("Thank you for coming. I had to step out", "drink for you."),
+]
+
 def apspan(start, stop):
     """Verbatim MULTI-paragraph extract from the GM's AP source: from the paragraph
     containing `start` up to (not including) the one containing `stop`. Cleans the
@@ -121,19 +136,36 @@ def apspan(start, stop):
         if p.isupper() and len(p.split()) <= 4: continue     # captions ("QUEEN ILEOSA")
         p = re.sub(r"^([A-Z]) ([a-z])", r"\1\2", p)          # drop-cap "T he" -> "The"
         items.append(("body", p))
-    # Re-flow paragraphs the two-column OCR split mid-sentence: if the previous
-    # body block doesn't end on sentence punctuation, the next body block is its
-    # continuation — join them.
-    merged = []
+    # Pull handout sidebar text the OCR fused into the GM narrative, so it stops
+    # splitting sentences; collect it to re-emit as its own block afterwards.
+    handouts, cleaned = [], []
     for kind, txt in items:
+        if kind != "body":
+            cleaned.append((kind, txt)); continue
+        for hs, he in _HANDOUTS:
+            i = txt.find(hs)
+            if i >= 0:
+                j = txt.find(he, i)
+                j = j + len(he) if j >= 0 else len(txt)
+                handouts.append(txt[i:j].strip())
+                txt = (txt[:i] + " " + txt[j:]).strip()
+        if txt:
+            cleaned.append(("body", txt))
+    # Re-flow paragraphs the two-column OCR split: join the next body block when
+    # the previous doesn't end on sentence punctuation OR the next starts lower-case
+    # (a clear continuation of the prior sentence).
+    merged = []
+    for kind, txt in cleaned:
         if (kind == "body" and merged and merged[-1][0] == "body"
-                and merged[-1][1][-1] not in '.!?:"”)'):
+                and (merged[-1][1][-1] not in '.!?:"”)' or txt[:1].islower())):
             merged[-1] = ("body", merged[-1][1] + " " + txt)
         else:
             merged.append((kind, txt))
     out = []
     for kind, txt in merged:
         out.append(f'<p class="subhead"><strong>{txt}</strong></p>' if kind == "sub" else f"<p>{dcfix(txt)}</p>")
+    for h in handouts:                                    # handouts as read-aloud boxes
+        out.append(B.s_read(f'<p class="subhead"><strong>Player Handout</strong></p><p>{dcfix(h)}</p>'))
     return "".join(out)
 
 # =====================================================================
