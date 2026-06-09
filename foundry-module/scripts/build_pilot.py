@@ -9,7 +9,7 @@ an Adventure bundle that imports the whole tree in one click.
 Run: python3 scripts/build_pilot.py   (deterministic; safe to re-run)
 """
 from __future__ import annotations
-import copy, json
+import copy, json, os, re
 import pf2e_build as B
 
 # ---- stable IDs (pilot registry; keep links stable) ----
@@ -36,6 +36,55 @@ def itm(k,label): return f"@UUID[Item.{A[k]}]{{{label}}}"
 def mc(k,label): return f"@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.{MC[k]}]{{{label}}}"
 def pg(pid,label): return f"@UUID[.{pid}]{{{label}}}"          # same-entry page jump
 def chk(s): return f"@Check[{s}]"
+
+# ---------------------------------------------------------------------------
+# Verbatim read-aloud: the GM reads the boxed text exactly as written. We do NOT
+# hardcode that text here (it's the GM's own legally-owned source); instead the
+# build reads the AP markdown the GM supplies locally and pulls each area's
+# read-aloud paragraph by a short start-anchor. If the file is absent, each
+# box() falls back to an original paraphrase, so the build still works anywhere.
+# Whitespace is normalised per paragraph to absorb OCR quirks.
+# ---------------------------------------------------------------------------
+SRC_MD = os.environ.get("COTCT_AP_MD",
+    "/mnt/c/Users/maman/Downloads/Curse of the Crimson Throne AP.md")
+_PARAS = None
+def _paras():
+    global _PARAS
+    if _PARAS is None:
+        try: raw = open(SRC_MD, encoding="utf-8").read()
+        except OSError: raw = ""
+        _PARAS = [" ".join(p.split()) for p in re.split(r"\n\s*\n", raw)]
+    return _PARAS
+def verbatim(anchor):
+    a = " ".join(anchor.split())
+    if not a: return ""
+    paras = _paras()
+    for p in paras:
+        if p.startswith(a): return p
+    for p in paras:
+        if a in p: return p
+    return ""
+# start-anchors (short identifying snippets) for each area's boxed read-aloud
+RABOX = {
+ "A1":"The reek of brine and the stink of week-dead fish",
+ "A2":"A fifteen-foot-wide loading dock abuts",
+ "A3":"A slippery boardwalk clings to the side of the fishery",
+ "A4":"A single desk sits in the middle of this room",
+ "A5":"A pair of bunk beds sit against the far wall",
+ "A6":"A wooden desk sits in one corner of this room",
+ "A7":"The stink in this room, a mixture of fish and sweat",
+ "A8":"The floor here is slick with river water",
+ "A9":"The rotten deck of this ancient sailing ship",
+ "A10":"The air in this room is thick and musty",
+ "A11":"Dark and dank, the ship's hold smells of mildew",
+ "A12":"A narrow space exists under the fishery",
+ "A13":"The air in this large room is chilly and stinks of the river",
+ "A14":"This foul-smelling room seems to be a combination",
+}
+def box(code, fallback_html):
+    """Read-aloud section: exact AP text if the source file is present, else paraphrase."""
+    t = verbatim(RABOX.get(code, ""))
+    return B.s_read(f"<p>{t}</p>") if t else B.s_read(fallback_html)
 
 # =====================================================================
 # FOLDERS (one tree per document type; Kingmaker palette)
@@ -212,13 +261,21 @@ IW("plus-one-dagger", {"_id":A["dagger"],"img":"systems/pf2e/icons/equipment/wea
 SR = lambda area,p: f'<p class="source"><em>Source: CotCT (2016 HC), Ch.1, {area} — p.{p}.</em></p>'
 def RA(html): return B.s_read(html)                      # read-aloud / boxed text
 def SEC(html): return B.s_secret(html, sid())            # GM-hidden reveal block
-PAGE_KEYS=["overview","hook","scene","features","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10",
+PAGE_KEYS=["background","overview","hook","scene","features","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10",
            "A11","A12","A13","A14","npcs","treasure","conv"]
 P={k:nid() for k in PAGE_KEYS}   # pre-assign so forward relative links resolve
 def newpage(key,name,html,level=3):
     return B.page(P[key],name,html,level=level)
 
 pages=[]
+# 0. Chapter Background --------------------------------------------------------
+pages.append(newpage("background","Chapter Background",
+  "<p><strong>For the GM.</strong> Three centuries ago Korvosa was raised on the Varisian coast atop a site the native Shoanti had long guarded — for buried beneath what became <strong>Castle Korvosa</strong> lie the <strong>fangs of Kazavon</strong>, a relic of a long-dead dragon-tyrant whose slow, patient evil the city never suspected.</p>"
+  +"<p>Today the city is ruled by the aging King <strong>Eodred II</strong>, who has produced no heir — the latest in a line of rulers dogged by the so-called <em>curse of the Crimson Throne</em>. His young wife, Queen <strong>Ileosa</strong>, is widely written off as a beauty who married for luxury. Korvosa is about to learn how wrong that assessment is.</p>"
+  +SEC("<p><strong>The hidden plot — the campaign's central secret.</strong> Ileosa found the fangs in a sealed vault beneath the castle and was infused with a shard of Kazavon's cruelty: ambition with every restraint stripped away. To seize the throne she engineered the king's death — a Red Mantis poison (<em>fool's leprosy</em>) fed to him through his estranged half-brother <strong>Venster</strong>, designed to mimic a disease so curative magic fails. She then murdered Venster, and when the seneschal <strong>Neolandus</strong> grew suspicious she set the Red Mantis on him — he barely survived and has gone into hiding. She is quietly allied with the <strong>Red Mantis assassins</strong> and the <strong>cult of Urgathoa</strong>. As this chapter opens, the king is days from death and the city teeters on the edge of anarchy.</p>")
+  +"<p><strong>The party's hook.</strong> Every PC has been wronged by the petty crime-lord <strong>Gaedren Lamm</strong> — the shared grievance the fortune-teller Zellara uses to draw them together (see "+pg(P["hook"],"Haunted Fortunes")+"). They hunt Gaedren to his lair in the Old Fishery; as they emerge with his spoils, King Eodred II dies and Korvosa erupts into the riots of <em>A City Gone Mad</em>.</p>"
+  +B.s_milestone("<p><strong>Advancement (milestone — CHG-0007):</strong> begin at 1st level · reach <strong>2nd</strong> after the Old Fishery · 3rd before Eel's End · 4th before the Dead Warrens · well into 4th by the chapter's end.</p>"),
+  level=1))
 # 1. Overview & Run Sheet ------------------------------------------------------
 pages.append(newpage("overview","Overview",
   RA("<p>A harrow card finds its way to each of you — and a hand-inked message naming a man you each have cause to hate: <strong>Gaedren Lamm</strong>. The fortune-teller Zellara knows where he dens, and asks you to end him.</p>")
@@ -257,20 +314,20 @@ pages.append(newpage("features","Fishery Features",
 def area(code,name,page_html): pages.append(newpage(code,f"{code}. {name}",page_html))
 
 area("A1","Front Door", SR("A1","18")
-  +RA("<p>Weathered double doors stand shut in the fishery's flank, a broken signboard swinging from a length of rusted chain above them. Brine and the stink of week-dead fish hang thick in the air.</p>")
+  +box("A1","<p>Weathered double doors stand shut in the fishery's flank, a broken signboard swinging from a length of rusted chain above them. Brine and the stink of week-dead fish hang thick in the air.</p>")
   +"<p>The main doors are locked ("+chk("type:thievery|dc:15")+"). Most business runs through "+pg(P["A7"],"A7")+", so a knock — or a noisy attempt on the lock — brings "+act("yargin","Yargin")+" up from "+pg(P["A6"],"A6")+" to answer.</p>")
 
 area("A2","Loading Dock", SR("A2","18")
-  +RA("<p>A fifteen-foot loading dock juts from the building. Carts wait half-laden with tar-caked barrels, each daubed with a red, fish-shaped splotch. A rickety stair drops to a second door barely three feet above the river.</p>")
+  +box("A2","<p>A fifteen-foot loading dock juts from the building. Carts wait half-laden with tar-caked barrels, each daubed with a red, fish-shaped splotch. A rickety stair drops to a second door barely three feet above the river.</p>")
   +"<p>By day the doors into "+pg(P["A7"],"A7")+" stand open for the daily slurry shipment; the door to "+pg(P["A8"],"A8")+" is always locked ("+chk("type:thievery|dc:15")+"). The orphans do the heavy hauling under Hookshanks' eye.</p>")
 
 area("A3","Back Alley", SR("A3","18-20")
-  +RA("<p>A slippery boardwalk clings to the south wall on barnacle-eaten pilings, worn thin below the waterline. It runs about thirteen feet above the river, sloping down toward the derelict ship to the east.</p>")
+  +box("A3","<p>A slippery boardwalk clings to the south wall on barnacle-eaten pilings, worn thin below the waterline. It runs about thirteen feet above the river, sloping down toward the derelict ship to the east.</p>")
   +"<p>The "+haz("boardwalk","Slippery Boardwalk")+" hazard: a careful pace is safe, but moving fast or fighting on it risks a fall into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+"); the planks also groan and give under heavy loads. The door into "+pg(P["A6"],"A6")+" is locked.</p>"
   +SEC("<p>Despite its state, this boardwalk is Gaedren's own private way in and out of his den ("+pg(P["A13"],"A13")+") — he uses it only a few times a month, spending days or weeks below to avoid being seen.</p>"))
 
 area("A4","Front Room", SR("A4","19")
-  +RA("<p>A single desk and a moldering chair stand in the middle of this disused room. A nest of ratty furs and straw is heaped beneath the desk.</p>")
+  +box("A4","<p>A single desk and a moldering chair stand in the middle of this disused room. A nest of ratty furs and straw is heaped beneath the desk.</p>")
   +"<p>In theory Yargin meets new customers here — a rarity. Any real noise in this room quickly brings both "+act("yargin","Yargin")+" and "+act("hookshanks","Hookshanks")+" to investigate.</p>"
   +B.enc("Bloo","Trivial · 20 XP",
      "<p>"+mc("guarddog","Bloo")+", Yargin's foul-tempered cur, sleeps under the desk and attacks any unfamiliar scent on sight. While he lives, a thug gets a circumstance bonus to bully the orphans into fighting.</p>"
@@ -278,11 +335,11 @@ area("A4","Front Room", SR("A4","19")
      B.aside_token([mc("guarddog","Bloo — Guard Dog (−1)")])))
 
 area("A5","Barracks", SR("A5","20")
-  +RA("<p>Two sets of bunks flank a boarded-over window. Three are slept-in; the fourth stands bare.</p>")
+  +box("A5","<p>Two sets of bunks flank a boarded-over window. Three are slept-in; the fourth stands bare.</p>")
   +"<p>The thugs — Yargin, Hookshanks, and Giggles — share this room. They distrust one another and keep nothing of value here.</p>")
 
 area("A6","Yargin's Office", SR("A6","19-21")
-  +RA("<p>A desk wedged into one corner — its bulk blocking the western door — overflows with chalk-scrawled slate boards. A slouching cabinet leans against the east wall.</p>")
+  +box("A6","<p>A desk wedged into one corner — its bulk blocking the western door — overflows with chalk-scrawled slate boards. A slouching cabinet leans against the east wall.</p>")
   +"<p>The fishery's 'books': slates of transactions and addresses, compiled monthly into scrolls in the cabinet — cover paperwork for any Guard inspection. "+act("yargin","Yargin Balko")+" works here and carries the brass key.</p>"
   +SEC("<p>A floorboard behind the chair is a <strong>hidden, barred trapdoor</strong> ("+chk("type:perception|dc:18")+" to spot; "+chk("type:athletics|dc:17")+" or break to force) dropping straight into the boss's chamber ("+pg(P["A13"],"A13")+"). A meal-pulley rig makes the climb down trivial — a flanking route onto Gaedren that skips the whole lower floor.</p>")
   +B.enc("Yargin Balko","Low · 40 XP",
@@ -291,7 +348,7 @@ area("A6","Yargin's Office", SR("A6","19-21")
      B.aside_token([act("yargin","Yargin Balko (1)")], img=TOK("yargin-balko"))))
 
 area("A7","Upper Workroom", SR("A7","20-22")
-  +RA("<p>The reek of fish and sweat stings the eyes. A great trough of half-rancid fish and brine drains through wooden chutes into a larger room beyond; a desk and a tall cabinet sit opposite.</p>")
+  +box("A7","<p>The reek of fish and sweat stings the eyes. A great trough of half-rancid fish and brine drains through wooden chutes into a larger room beyond; a desk and a tall cabinet sit opposite.</p>")
   +"<p>Four orphans feed the chutes here. The floor around the trough is slick ("+chk("type:acrobatics|dc:15")+" if moving faster than a Step). The cabinet holds petty cash, locked ("+chk("type:thievery|dc:15")+"; Yargin's key).</p>"
   +"<p>"+act("hookshanks","Hookshanks Gruller")+", a gnome taskmaster, oversees the work — and dresses as one of the orphans, passing for one until a PC beats his Deception with "+chk("type:perception|dc:17")+" (gnome PCs get a bonus).</p>"
   +B.enc("Hookshanks + 4 orphans","Low · 40 XP",
@@ -300,7 +357,7 @@ area("A7","Upper Workroom", SR("A7","20-22")
      B.aside_token([act("hookshanks","Hookshanks Gruller (1)"), "4× "+act("orphan","Lamm's Lamb")+" <em>(non-combatant)</em>"], img=TOK("hookshanks-gruller"))))
 
 area("A8","Fishery Floor", SR("A8","21-22")
-  +RA("<p>The main floor is slick with river water, weed, and fish blood. Catwalks ring an eight-foot tar-caulked slurry vat; a wide hole in the south floor opens straight onto the river below. Rows of small hammocks hang beneath the walks.</p>")
+  +box("A8","<p>The main floor is slick with river water, weed, and fish blood. Catwalks ring an eight-foot tar-caulked slurry vat; a wide hole in the south floor opens straight onto the river below. Rows of small hammocks hang beneath the walks.</p>")
   +"<p>The heart of the operation. "+act("giggles","Giggles")+", a half-orc brute, oversees 5 orphans by day; all 26 sleep here at night. The hole drops to the river and "+act("jigsawshark","the jigsaw shark")+" — the thugs toss scraps through it to keep the shark close and the children terrified.</p>"
   +B.enc("Giggles [+ Bloo at night]","Low · 40 XP (60 with Bloo)",
      "<p>Giggles uses Bludgeoner to <strong>capture</strong> PCs nonlethally for Gaedren, switching to lethal below half HP and quaffing healing potions; then he fights to the death (Orc Ferocity).</p>"
@@ -308,11 +365,11 @@ area("A8","Fishery Floor", SR("A8","21-22")
      B.aside_token([act("giggles","Giggles (1)"), "5× "+act("orphan","orphans")+" <em>(non-combatant)</em>"], img=TOK("giggles"))))
 
 area("A9","Kraken's Folly", SR("A9","23-24")
-  +RA("<p>A derelict ship lies lashed to the pilings by layers of rotting rope, its hull furred with weed and barnacles. A narrow walkway runs along the starboard rail to an aft-cabin door marked with a daubed red fish.</p>")
+  +box("A9","<p>A derelict ship lies lashed to the pilings by layers of rotting rope, its hull furred with weed and barnacles. A narrow walkway runs along the starboard rail to an aft-cabin door marked with a daubed red fish.</p>")
   +"<p>No longer seaworthy — Gaedren's route to the den. The "+haz("rottendeck","Rotten Ship Deck")+" hazard: everything but the stern is rotten, and a Medium+ creature moving toward the bow crashes through into the hold ("+pg(P["A11"],"A11")+"). Stairs in the cabin lead down to the spider nest.</p>")
 
 area("A10","Spider Nest", SR("A10","24")
-  +RA("<p>The air is thick and musty. Sheets of cobweb drape the walls; mounds of blanket, cushion, and straw clutter the floor. A narrow stair drops into the ship's hold.</p>")
+  +box("A10","<p>The air is thick and musty. Sheets of cobweb drape the walls; mounds of blanket, cushion, and straw clutter the floor. A narrow stair drops into the ship's hold.</p>")
   +"<p>The cabin is the lair of a single cat-sized "+act("drainspider","drain spider")+" that lunges at the first creature through the door.</p>"
   +B.enc("Drain Spider","Trivial · 20 XP",
      "<p>One drain spider, off-guard against the surprised intruder it lunges at.</p>"
@@ -320,7 +377,7 @@ area("A10","Spider Nest", SR("A10","24")
      B.aside_token([act("drainspider","Drain Spider (−1)")], img=TOK("drain-spider"))))
 
 area("A11","Kraken's Hold", SR("A11","24")
-  +RA("<p>Dark and dank, the hold smells of mildew. Crates and barrels lie stacked among puddles of standing river water.</p>")
+  +box("A11","<p>Dark and dank, the hold smells of mildew. Crates and barrels lie stacked among puddles of standing river water.</p>")
   +"<p>Four more "+act("drainspider","drain spiders")+" infest the hold.</p>"
   +SEC("<p>Gaedren built a <strong>secret door into the hull</strong> ("+chk("type:perception|dc:17")+") opening to the underpier ("+pg(P["A12"],"A12")+") and the boss. Spotting his tracks in the filth ("+chk("type:survival|dc:15")+") grants a circumstance bonus to find it.</p>")
   +B.enc("Drain Spider nest","Moderate · 80 XP (trivial with repellent)",
@@ -328,7 +385,7 @@ area("A11","Kraken's Hold", SR("A11","24")
      B.aside_token(["4× "+act("drainspider","Drain Spider (−1)")], img=TOK("drain-spider"))))
 
 area("A12","Underpier", SR("A12","24-25")
-  +RA("<p>A narrow space runs beneath the fishery, three feet of headroom above the foamy river. Moss and rusted chain hang between the pilings, and a floating walkway threads west to a tiny two-and-a-half-foot door.</p>")
+  +box("A12","<p>A narrow space runs beneath the fishery, three feet of headroom above the foamy river. Moss and rusted chain hang between the pilings, and a floating walkway threads west to a tiny two-and-a-half-foot door.</p>")
   +"<p>Gaedren's escape skiffs are tied along the walkway. The squat door ("+chk("type:thievery|dc:17")+") leads into the den ("+pg(P["A13"],"A13")+"); a Medium creature must stoop to squeeze through.</p>"
   +B.enc("Jigsaw Shark","Low · 40 XP · avoidable",
      "<p>The shark scavenges scraps drifting from above. It attacks anything that falls into the water, but only leaps onto the walkway if it is first attacked and damaged.</p>"
@@ -336,7 +393,7 @@ area("A12","Underpier", SR("A12","24-25")
      B.aside_token([act("jigsawshark","Jigsaw Shark (1)")], img=TOK("jigsaw-shark"))))
 
 area("A13","Gaedren's Playground", SR("A13","24-26")
-  +RA("<p>A chill chamber opens over a pit of black river water, crossed by two five-foot walkways. Rusted manacles dangle from mossy ropes above the pool. On the far side, cabinets and lockboxes spill dingy 'treasures' across three cluttered tables. Something heavy shifts in the water below.</p>")
+  +box("A13","<p>A chill chamber opens over a pit of black river water, crossed by two five-foot walkways. Rusted manacles dangle from mossy ropes above the pool. On the far side, cabinets and lockboxes spill dingy 'treasures' across three cluttered tables. Something heavy shifts in the water below.</p>")
   +"<p>"+mc("crocodile","Gobblegut")+" lurks in the pit; "+act("gaedren","Gaedren Lamm")+" sorts the day's haul at his tables across it. <strong>Reaching him means crossing the gator's water.</strong></p>"
   +SEC("<p>Those manacles are where Gaedren feeds doomed orphans to Gobblegut for sport — the PCs may arrive mid-'feeding,' a child dangling over the snapping jaws. Anyone who names <strong>Zellara</strong> earns a leering reply that 'she's in the next room' — her head waits in "+pg(P["A14"],"A14")+". <strong>Tactics:</strong> Gaedren opens with <em>Spur the Beast</em> to enrage Gobblegut, snipes from across the pool, <em>Nimble Dodges</em> focus fire, and flees to the "+pg(P["A12"],"A12")+" skiffs at &le;8 HP — though the abused gator may take him first.</p>")
   +B.enc("BOSS — Gaedren + Gobblegut","SEVERE · 120 XP @ level 1 (Moderate @ level 2)",
@@ -347,7 +404,7 @@ area("A13","Gaedren's Playground", SR("A13","24-26")
   +B.s_conv("<p><strong>⚠ Track what the PCs do with the body.</strong> Left here, Gaedren's son Rolth animates it — the PCs meet an undead Gaedren in the Dead Warrens at the chapter's end. See "+pg(P["conv"],"Conversion Notes")+".</p>"))
 
 area("A14","Gaedren's Den", SR("A14","26-28")
-  +RA("<p>A squalid bedroom-study: a lumpy bed against one wall, a table heaped with rotting food and scuttling roaches, a sagging dresser. At the foot of the bed sits a locked strongbox, a moldy ledger resting on its lid. A fly-blown hatbox sits atop the dresser.</p>")
+  +box("A14","<p>A squalid bedroom-study: a lumpy bed against one wall, a table heaped with rotting food and scuttling roaches, a sagging dresser. At the foot of the bed sits a locked strongbox, a moldy ledger resting on its lid. A fly-blown hatbox sits atop the dresser.</p>")
   +"<p>Gaedren's private quarters. The strongbox opens to the rusty iron key he carries, or "+chk("type:thievery|dc:15")+".</p>"
   +SEC("<p><strong>The reveal.</strong> The hatbox holds <strong>Zellara's severed head</strong>, crudely made up to mimic life ("+chk("type:medicine|dc:14")+": dead for weeks) — confirming the woman who hired the party has been dead all along. Beneath it lies "+itm("harrowdeck","her haunted harrow deck")+", still inhabited by her spirit. Atop the strongbox is "+itm("ledger","Gaedren's coded ledger")+"; inside, "+itm("brooch","Queen Ileosa's Brooch")+" and the hoard. A key-shaped masterwork dagger among the loot is a gift from Gaedren's estranged son <strong>Rolth</strong> — foreshadowing the next chapter ("+chk("type:society|dc:20")+" recognizes the killer's signature blade).</p>")
   +B.s_treasure("<p>Full parcel on the "+pg(P["treasure"],"Treasure")+" page.</p>"))
