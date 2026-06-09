@@ -45,5 +45,7 @@ fi
 ver=$(grep -oE '"version": *"[^"]*"' module.json | head -1)
 echo
 echo "==> Done. Module synced ($ver)."
-echo "    Reopen Foundry and re-import 'CotCT: Adventure (import this)'"
-echo "    to refresh the journal/actors in your world."
+echo "    Reopen Foundry and open the journal from the COMPENDIUM"
+echo "    (CotCT: Journals) — it is now up to date. No import needed."
+echo "    (Only if you've imported the Adventure into a world do you"
+echo "     also need to re-import to refresh that copy.)"
