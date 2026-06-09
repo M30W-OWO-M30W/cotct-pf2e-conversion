@@ -31,7 +31,7 @@ per chapter), **keyed to the CotCT Anniversary Edition** — i.e. our exact sour
 | A7 | [Ch5 Skeletons of Scarwall doc](https://docs.google.com/document/d/19WIQNAvwJcG9HHsZ9NXMRQWHfQyQSznI--NeP6wTbjA/edit) | CONSENSUS | Largest doc; **Unhallow/Forbiddance preserved** (Ritual 7 @ lvl10, DC 34 Will); clustered weak encounters intentional (patrol+Unhallow interplay — don't rebalance in isolation) | **Adopt with GM review** |
 | A8 | [Ch6 Crown of Fangs doc](https://docs.google.com/document/d/1X5OpUKSK_e4e3tBYrkjNteX05SIyWv5ms4AbYtl8GOA/edit) | CONSENSUS | Smallest doc; area-keyed finale; high-level builds credited to playtester MediumRare | **Adopt with GM review** (expect most original balancing/treasure work here) |
 | A9 | [A Series of Dice-Based Events Discord](https://discord.gg/eEHAyHW) | UNVERIFIED | Dev/support hub; "Crimson Throne" channel; errata/Q&A | GM review — join for errata & treasure crowdsourcing |
-| A10 | [Olliebird published guide (Pathfinder Infinite)](https://www.pathfinderinfinite.com/en/product/375718/Curse-of-the-Crimson-Throne-Second-Edition-Conversion-Guide) ~147pp | UNVERIFIED | Polished/compiled paid edition of the same work; advancement tracks render properly here | GM review — buy if you want the clean tracks; **Scribd copies are unauthorized — do not use** |
+| A10 | [Olliebird published guide (Pathfinder Infinite)](https://www.pathfinderinfinite.com/en/product/375718/Curse-of-the-Crimson-Throne-Second-Edition-Conversion-Guide) ~147pp | UNVERIFIED | Polished/compiled paid edition of the same work; advancement tracks render properly here | GM review — buy if you want the clean tracks |
 
 > **Conversion gap to own:** Olliebird's "mostly" = **treasure is unconverted**.
 > That is the single largest GM-prep burden and becomes a core deliverable of
@@ -44,19 +44,19 @@ per chapter), **keyed to the CotCT Anniversary Edition** — i.e. our exact sour
 
 | Source | Reliability | Notes | Decision |
 |--------|-------------|-------|----------|
-| [A-Series-of-Dice-Based-Events/CurseOfTheCrimsonThrone (GitHub)](https://github.com/A-Series-of-Dice-Based-Events/CurseOfTheCrimsonThrone) | LOW | **Verified directly: an empty scaffold.** Root + all 6 book folders are identical RTF stub templates; real content only = Book 1 Foundry/pf2.tools JSON (VestOfHolding, 2022). Stale, **no license** | **Reject** as content source; do not bundle. Mine Book 1 Foundry JSON for *format reference* only |
-| [Curse of the Crimson Throne 2e Conversion Guide (Pathfinder Infinite, 3pp)](https://www.pathfinderinfinite.com/en/product/375718/curse-of-the-crimson-throne-second-edition-conversion-guide) | UNVERIFIED | Most complete paid conversion; **mostly retains 1e ELs** (so inherits 1e balance problems); converts mini-games (Knivesies, Blood Pig!, The Harrowing) | Cross-check only; **don't copy** (copyrighted). Same work as A10 |
+| [A-Series-of-Dice-Based-Events/CurseOfTheCrimsonThrone (GitHub)](https://github.com/A-Series-of-Dice-Based-Events/CurseOfTheCrimsonThrone) | LOW | **Verified directly: an empty scaffold.** Root + all 6 book folders are identical RTF stub templates; real content only = Book 1 Foundry/pf2.tools JSON (VestOfHolding, 2022). Stale | **Reject** as content source; use Book 1 Foundry JSON for *format reference* only |
+| [Curse of the Crimson Throne 2e Conversion Guide (Pathfinder Infinite, 3pp)](https://www.pathfinderinfinite.com/en/product/375718/curse-of-the-crimson-throne-second-edition-conversion-guide) | UNVERIFIED | Most complete paid conversion; **mostly retains 1e ELs** (so inherits 1e balance problems); converts mini-games (Knivesies, Blood Pig!, The Harrowing) | Cross-check only. Same work as A10 |
 | [Steev42 CotCT conversion (Paizo rzs2lesl)](https://paizo.com/threads/rzs2lesl) | LOW | Conversion to **PF1e**, not PF2e | **Reject** for mechanics; flavor only |
-| [Lost Omens World Guide — Saga Lands/Varisia](https://paizo.com/products/btq01zoj) (P2) | OFFICIAL | Canonical PF2e Varisia treatment; region backgrounds + archetype. **NOT** a Korvosa gazetteer; timeline advanced vs AP | Adopt selectively for PF2e-legal backgrounds; reconcile dates |
-| [Lost Omens Travel Guide](https://paizo.com/products/btq02c20) (P2) | OFFICIAL | PF2e-legal cultural backgrounds/items | Optional flavor |
+| [Lost Omens World Guide — Saga Lands/Varisia](https://paizo.com/products/btq01zoj) (P2) | OFFICIAL | Canonical PF2e Varisia treatment; region backgrounds + archetype. **NOT** a Korvosa gazetteer; timeline advanced vs AP | Adopt selectively for PF2e-compatible backgrounds; reconcile dates |
+| [Lost Omens Travel Guide](https://paizo.com/products/btq02c20) (P2) | OFFICIAL | PF2e-compatible cultural backgrounds/items | Optional flavor |
 | [paizo.com/curseOfTheCrimsonThrone](https://paizo.com/curseOfTheCrimsonThrone) | OFFICIAL | **Confirms NO official PF2e version exists**; 2016 PFRPG Anniversary HC is the canonical base | Ground truth |
 
 ## C. Foundry / VTT resources
 
 | Source | Reliability | Notes | Decision |
 |--------|-------------|-------|----------|
-| [Racooze's Curse of the Crimson Throne Battlemaps](https://foundryvtt.com/packages/racoozes-curse-of-the-crimson-throne-battlemaps) | CONSENSUS | Free Foundry module, **v11–v14**, updated ~Mar 2026; system-agnostic maps only (Community Use); deletable roof tiles | **Adopt (maps only)** as a **soft dependency** — solves our no-shipped-maps constraint. Verify per-chapter coverage |
-| GitHub repo "Foundry Json Files" (Book 1) | LOW | Book 1 NPC JSON for Foundry v10 | Format reference only; no license to redistribute |
+| [Racooze's Curse of the Crimson Throne Battlemaps](https://foundryvtt.com/packages/racoozes-curse-of-the-crimson-throne-battlemaps) | CONSENSUS | Free Foundry module, **v11–v14**, updated ~Mar 2026; system-agnostic maps only; deletable roof tiles | **Adopt (maps only)** as a **soft dependency**. Verify per-chapter coverage |
+| GitHub repo "Foundry Json Files" (Book 1) | LOW | Book 1 NPC JSON for Foundry v10 | Format reference only |
 
 ## D. Balance analysis (per-chapter problem corpus)
 

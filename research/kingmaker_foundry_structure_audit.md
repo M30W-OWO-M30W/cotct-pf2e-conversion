@@ -2,8 +2,8 @@
 
 Reference: a Foundry **world export** of the official **pf2e-kingmaker** module
 (`world.kingmaker….bak`, a ZIP of `data/` LevelDB + assets). Decoded to JSON
-(structure only) at `.work/kingmaker_ref/` — **git-ignored; Kingmaker content ©
-Paizo; no prose/art reused, schema/patterns only.** Target alignment: Foundry
+(structure only) at `.work/kingmaker_ref/` — **git-ignored; schema/patterns
+only.** Target alignment: Foundry
 **v13.351→v14**, pf2e system **7.x→8.x**.
 
 Doc counts: **33 journals · 123 scenes · 779 actors · 76 items · 35 rolltables ·
@@ -115,7 +115,7 @@ relative `@UUID[.<pageId>]`; SRD references use
   (HTML); short tagline in `blurb`; secrets in `privateNotes`. **No custom
   "tactics" field, no GM-only boolean** — visibility via ownership + the sheet's
   GM tab. Hazards use `details.{description,disable,routine,reset,isComplex}`.
-- **Source:** `system.details.publication:{title,authors,license,remaster}` (the
+- **Source:** `system.details.publication:{title,authors,remaster}` (the
   legacy `details.source` is unused). Official-vs-custom via
   `_stats.compendiumSource` (set to the SRD UUID for reskins, null for homebrew).
 - **Linking:** journals → `@UUID[Actor.<id>]{label}`; scenes → `token.actorId`.
@@ -173,8 +173,7 @@ relative `@UUID[.<pageId>]`; SRD references use
 ---
 
 ## What we deliberately will NOT copy
-- Kingmaker **maps, art, tokens, audio, prose** (copyright — we ship none; GM adds
-  Racooze's free battlemaps).
+- Kingmaker **maps, art, tokens, audio, prose**; GM adds map assets separately.
 - **Kingdom/camping/army/hex** subsystems & their `pf2e-kingmaker-tools` flags —
   CotCT has none of these (it uses Influence/Reputation/Chase/Infiltration/Harrow
   instead; see `research/research_index.md` §F).

@@ -6,9 +6,6 @@ and the Phase-1 research sweep. Companion docs: [`PROJECT_PLAN.md`](PROJECT_PLAN
 [`conversion_change_log.md`](conversion_change_log.md). Per-chapter raw inventories
 live in `.work/digest_maps/` (git-ignored)._
 
-Copyright note: this audit uses **summaries + page citations only** (PDF page =
-printed page; verified offset 0). No AP prose is reproduced.
-
 ---
 
 ## 1. AP identification
@@ -16,7 +13,7 @@ printed page; verified offset 0). No AP prose is reproduced.
 | Field | Value |
 |---|---|
 | Adventure Path | **Curse of the Crimson Throne** |
-| Edition / printing | PFRPG (PF1e) **Anniversary Edition** single hardcover, © 2016 Paizo Inc. (compiles the 2008 3.5 six-volume run, with fixes) |
+| Edition / printing | PFRPG (PF1e) **Anniversary Edition** single hardcover, 2016 (compiles the 2008 3.5 six-volume run, with fixes) |
 | Source file | `…/Curse of the Crimson Throne AP.pdf`, 482 pp, 52 MB |
 | Setting | **Korvosa**, Varisia, Golarion (urban-led, then Cinderlands → Belkzen → Mushfens) |
 | Structure | Introduction + **6 chapters** + Appendices 1–7 |
@@ -46,8 +43,8 @@ There is **no official PF2e version** of this AP; all PF2e versions are communit
 | Expected input | Status | Detail |
 |---|---|---|
 | PF1e AP PDF | ✅ found | The 482-pp Anniversary hardcover (above). Extracted to page-tagged chapter files. |
-| Community conversion docs | ✅ via research | GM provided the Reddit thread → **Olliebird's 7-Google-Doc conversion** (primary). Also: paid Pathfinder Infinite guide, stale GitHub repo, forum/blog balance & QoL corpus. All catalogued in `research/research_index.md`. None stored locally (copyright). |
-| Foundry world/module for this AP | ❌ none | No existing CotCT Foundry module. **Racooze's CotCT Battlemaps** (Foundry, free, Community Use) adopted as a soft map dependency. The unrelated "Ma'at" module exists but is a tool, not a conversion. |
+| Community conversion docs | ✅ via research | GM provided the Reddit thread → **Olliebird's 7-Google-Doc conversion** (primary). Also: paid Pathfinder Infinite guide, stale GitHub repo, forum/blog balance & QoL corpus. All catalogued in `research/research_index.md`. None stored locally. |
+| Foundry world/module for this AP | ❌ none | No existing CotCT Foundry module. **Racooze's CotCT Battlemaps** (Foundry, free) adopted as a soft map dependency. The unrelated "Ma'at" module exists but is a tool, not a conversion. |
 | Foundry / PF2e versions | ✅ confirmed | Foundry **v13** (build 351), PF2e **7.12.2** (Remaster). |
 | Output location | ✅ | `/home/saber/pf2e-conversion/curse-of-the-crimson-throne/` (private git repo). |
 | **Missing / to confirm** | ⚠️ | GM decisions G-Q1…G-Q6 in research §H (level cap, which Olliebird artifact, telegraph vs mystery, plague structure, maps dependency, Harrow reroll style). None block the pilot. |
@@ -174,7 +171,7 @@ Most named villains/allies (App 6's 12 blocks + chapter bosses) are PF1e class-s
 ### 4.5 Foundry import / structure risks
 - **pf2e v7 actor/hazard schema** is the build target; custom NPCs must validate against it (run `validate.mjs` before each build). Schema drift on future system upgrades → re-extract/rebuild.
 - **Stable `_id`s + UUID links** across journals↔actors↔hazards↔items↔scenes; broken links are the main import failure mode → covered by the validator.
-- **No shipped maps/art** (copyright) → scene records reference **Racooze's battlemaps** by name; GM supplies legal copies. Vivified Labyrinth + the 4-state map gap is a known content hole to author as scene-planning notes.
+- **Map/art assets are added separately** → scene records reference **Racooze's battlemaps** by name. Vivified Labyrinth + the 4-state map gap is a known content hole to author as scene-planning notes.
 - **Scope/size:** Scarwall (~137 areas) and Castle Korvosa (~95 rooms) are huge; default to the official **"Swifter Scarwall"** and **surgical-strike Castle** framings to keep the Foundry build (and play) tractable — documented as conversion changes.
 - **Community stat-block links rot** (monster.pf2.tools / deprecated easytool.es) → we author our own actors rather than depend on external links.
 

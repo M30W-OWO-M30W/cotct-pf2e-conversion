@@ -8,7 +8,7 @@
  * Checks:
  *  - every doc: 16-char _id, name, correct _key (primary + folder + adventure)
  *  - embedded actor items / journal pages: compound _key (else compile = empty/throw)
- *  - _id uniqueness per pack (cross-pack reuse is legal; the Adventure pack re-embeds)
+ *  - _id uniqueness per pack (the Adventure pack re-embeds cross-pack docs)
  *  - LINK RESOLUTION across the module:
  *      @UUID[Actor.<id>] / [Item.<id>] / [Scene.<id>] / [RollTable.<id>]
  *      @UUID[JournalEntry.<id>.JournalEntryPage.<id>]   (entry + page)

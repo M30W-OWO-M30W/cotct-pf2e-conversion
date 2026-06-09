@@ -223,7 +223,7 @@ pages.append(newpage("overview","Overview & Run Sheet",
    "<p><strong>First Harrowing (CHG-0010):</strong> run Zellara's reading as foreshadowing (coming unrest; the PCs are fated heroes), then grant each PC a small pool of hero-point-style suit boons via "+itm("harrowdeck","her harrow deck")+".</p>"),level=1))
 # 2. Scene Setup
 pages.append(newpage("scene","Scene Setup (maps & VTT)",
-  B.s_gm("<p><strong>No maps shipped</strong> (copyright). Open the "+f"@UUID[Scene.{SCN}]{{Old Fishery scene}}"+" — its map-note pins already link to each area page below and its tokens reference the converted actors. Drop in a map (Racooze's free CotCT battlemaps, or your own at <code>assets/maps/01-old-fishery.webp</code>), then confirm pin/token positions (currently staged — <strong>NEEDS GM REVIEW</strong>). Drag "+mc("crocodile","Crocodile")+" (rename 'Gobblegut') into A13 and "+mc("guarddog","Guard Dog")+" ('Bloo') into A4/A8 from the pf2e compendium.</p>"),level=2))
+  B.s_gm("<p><strong>Map setup.</strong> Open the "+f"@UUID[Scene.{SCN}]{{Old Fishery scene}}"+" — its map-note pins already link to each area page below and its tokens reference the converted actors. Drop in a map (Racooze's CotCT battlemaps, or your own at <code>assets/maps/01-old-fishery.webp</code>), then confirm pin/token positions (currently staged — <strong>NEEDS GM REVIEW</strong>). Drag "+mc("crocodile","Crocodile")+" (rename 'Gobblegut') into A13 and "+mc("guarddog","Guard Dog")+" ('Bloo') into A4/A8 from the pf2e compendium.</p>"),level=2))
 # 3. Fishery Features
 pages.append(newpage("features","Fishery Features & Layout",
   SR("A. Old Fishery","17")

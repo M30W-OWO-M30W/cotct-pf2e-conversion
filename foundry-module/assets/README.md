@@ -1,11 +1,6 @@
-# Assets — placeholders only
+# Assets
 
-This directory intentionally contains **no copyrighted maps, tokens, or art**.
-
-The Curse of the Crimson Throne maps and artwork are © Paizo Inc. and may not be
-redistributed. To use this conversion in Foundry you must supply your own legal
-copies of the maps (e.g. from your purchased PDF, or the official Foundry VTT
-PF1e CotCT premium module if you own it) and drop them into:
+Drop table assets into these folders before using the scene placeholders:
 
 - `maps/`   — battle/region maps (one image per scene)
 - `tokens/` — creature/NPC token art

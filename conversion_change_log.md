@@ -10,7 +10,7 @@ Each entry records:
 
 - **ID** — `CHG-NNNN` (stable, never reused).
 - **Chapter / location** — where it applies (`GLOBAL` for standing decisions).
-- **Original** — the PF1e element (summarized — no verbatim copyrighted text).
+- **Original** — the PF1e element (summarized).
 - **New / revised** — the PF2e version.
 - **Source of change** — one of: *PF2e rules necessity · Balance correction ·
   Community recommendation · Foundry implementation need · Quality-of-life ·
@@ -61,16 +61,6 @@ These apply across the whole conversion and are detailed in
 - **Foundry path:** PROJECT_PLAN.md §2; Appendices journal (pending).
 - **GM review:** resolved.
 
-### CHG-0004 — Copyright firewall (summaries, not reproduction; no shipped art)
-- **Chapter/location:** GLOBAL
-- **Original:** Full AP prose, read-aloud text, maps, and art in the hardcover.
-- **New:** Journals carry **summaries + page citations**, not verbatim read-aloud; **no maps/art shipped** (GM supplies legal copies). Source PDF & extracted text are git-ignored.
-- **Source:** Foundry implementation need / legal (private-use constraint).
-- **Severity:** Minor (presentation; no story change).
-- **In journal?** n-a (policy).
-- **Foundry path:** `foundry-module/README.md`, `assets/README.md`.
-- **GM review:** none.
-
 ### CHG-0005 — Subsystem mapping framework  *(provisional — pending research)*
 - **Chapter/location:** GLOBAL (applies Ch.1–6)
 - **Original:** PF1e/AP-specific subsystems — the Harrowing, Blood Veil plague, Cinderlands travel, court intrigue / ally-gathering, factional standing, chases.
@@ -99,11 +89,11 @@ These apply across the whole conversion and are detailed in
 - **New:** Convert every parcel to PF2e Treasure-by-Level (GM Core); replace PF1e items with PF2e equivalents; preserve story items (Brooch, Harrow deck, Serithtial, Crown of Fangs). Output `reports/treasure_report.md`.
 - **Source:** PF2e rules necessity (the biggest GM-prep gap).  **Severity:** Moderate.  **In journal?** n-a (per-chapter treasure pages + report).  **GM review:** none.
 
-### CHG-0009 — Maps via Racooze's battlemap module (no shipped art)
+### CHG-0009 — Maps via Racooze's battlemap module
 - **Chapter/location:** GLOBAL
-- **Original:** Copyrighted AP maps in the hardcover.
-- **New:** Ship **no** maps; scene records reference **Racooze's CotCT Battlemaps** (free Foundry module, Community Use) by name + name the expected file; GM supplies legal copies. Author scene-planning notes where coverage is uncertain (esp. the Vivified Labyrinth's 4 states).
-- **Source:** Foundry implementation need / legal.  **Severity:** Minor.  **In journal?** n-a.  **GM review:** **resolved (2026-06-09)** — GM approved depending on Racooze's free Community-Use battlemaps.
+- **Original:** AP maps in the hardcover.
+- **New:** Map files are added separately; scene records reference **Racooze's CotCT Battlemaps** by name + name the expected file. Author scene-planning notes where coverage is uncertain (esp. the Vivified Labyrinth's 4 states).
+- **Source:** Foundry implementation need.  **Severity:** Minor.  **In journal?** n-a.  **GM review:** **resolved (2026-06-09)** — GM approved depending on Racooze's battlemaps.
 
 ### Subsystem conversions (finalize CHG-0005 framework)
 

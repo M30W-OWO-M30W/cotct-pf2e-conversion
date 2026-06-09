@@ -37,9 +37,8 @@ packs to LevelDB; round-trip extract confirms populated data.
   classes. *Why:* avoids shipping a code module; renders polished on the stock
   pf2e sheet and degrades gracefully. Trade-off: layout is slightly simpler than
   Kingmaker's bespoke sheet.
-- **No maps/art/tokens/audio shipped.** *Why:* copyright. Scenes reference
-  expected map paths and **Racooze's free battlemaps**; token art = placeholder
-  paths the GM supplies.
+- **Map/token/audio assets are added separately.** Scenes reference expected map
+  paths and **Racooze's battlemaps**; token art = placeholder paths.
 - **No kingdom/camping/army/hex subsystems** or their `pf2e-kingmaker-tools`
   flags. *Why:* CotCT doesn't use them (it uses Influence/Reputation/Chase/
   Infiltration/Harrow — see `research/research_index.md` §F).
@@ -55,7 +54,7 @@ packs to LevelDB; round-trip extract confirms populated data.
 
 | Gap | Severity | Resolution |
 |---|---|---|
-| **Token/pin positions are staged in a grid, not on a real map** | Medium | No map shipped (copyright). Positions are `NEEDS GM REVIEW`; GM drops in Racooze's Old Fishery map and nudges pins/tokens. The *links* are correct; only x/y need the map. |
+| **Token/pin positions are staged in a grid, not on a real map** | Medium | Positions are `NEEDS GM REVIEW`; add the Old Fishery map and nudge pins/tokens. The *links* are correct; only x/y need the map. |
 | **Gobblegut/Bloo not pre-placed as scene tokens** | Low | They're official compendium actors (not in our adventure), so a token can't reference them pre-import. The A13/A4 pages instruct the GM to drag the official Crocodile/Guard Dog and rename. |
 | **One scene, not two floors** | Low | The fishery has two map levels; pilot ships one placeholder scene. Split into First/Lower floor scenes when the real map is added. |
 | **No walls/lights** | Low | No map geometry to derive them from (we don't invent walls). Add after the map is placed. |

@@ -1,7 +1,7 @@
 # PROJECT PLAN — Curse of the Crimson Throne, PF1e → PF2e
 
 **Project root:** `/home/saber/pf2e-conversion/curse-of-the-crimson-throne/`
-**Source:** *Pathfinder Adventure Path: Curse of the Crimson Throne* (2016 hardcover, © Paizo Inc.), 482 pp.
+**Source:** *Pathfinder Adventure Path: Curse of the Crimson Throne* (2016 hardcover), 482 pp.
 **Output:** private Foundry VTT module `foundry-module/` (id `cotct-pf2e-conversion`)
 **Status:** Phase 1 in progress. *(This is a living document — sections tagged ⟳ are refined as research/audit data lands.)*
 
@@ -172,18 +172,15 @@ campaign-trait backgrounds (0021). Blood Veil (0011) lands with Ch.2.
   Appendices (indices + change log + GM-review items). Each area page carries the
   full required template (source ref, GM summary, mechanics, links, tactics,
   treasure, DCs, dev notes, conversion notes, story changes, GM flags).
-- **Scenes:** planning placeholders only (no shipped maps — copyright). Each
+- **Scenes:** planning placeholders only; map files are added separately. Each
   names the expected map file + suggested grid.
 - **Backups:** existing Foundry data is never destructively overwritten; the
   build is additive and the JSON sources are the source of truth in git.
 
-## 9. Copyright & git policy
+## 9. Repository policy
 
-- Private use only; **no public redistribution**. PF2e mechanics are ORC-Open;
-  AP creative content is Paizo Product Identity → summaries + page citations only.
-- Git: local `master`; **no remote push without explicit GM go-ahead**; if pushed,
-  **private repo only**. `.gitignore` firewalls the source PDF, extracted text
-  (`.work/`), and all art binaries (verified clean at scaffold commit).
+- Git source tracks generated JSON and build tooling. `.gitignore` keeps local
+  working material (`.work/`) and asset binaries out of commits.
 
 ## 10. Risk register
 
@@ -202,7 +199,7 @@ points (all confirmed by research):
 - **Attrition/scope monsters** — Scarwall slog (use "Swifter Scarwall"), Ch.6 combat
   saturation (surgical-strike Castle), Dead Warrens no-rest.
 - **Treasure/level pacing** across a long 1→17 campaign (treasure is ours to build).
-- **Foundry:** pf2e v7 schema validation, stable UUID links, no shipped maps.
+- **Foundry:** pf2e v7 schema validation, stable UUID links, map files added separately.
 
 ## 11. Quality bar (definition of done, per element)
 

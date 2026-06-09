@@ -15,8 +15,8 @@ import json, pathlib
 MOD = "cotct-pf2e-conversion"
 ROOT = pathlib.Path(__file__).resolve().parents[1]            # foundry-module/
 PACKS = ROOT / "packs"
-PUB = {"title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-       "authors": "", "license": "OGL", "remaster": True}
+PUB = {"title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion)",
+       "authors": "", "remaster": True}
 STATS = {"systemId": "pf2e", "systemVersion": "8.2.0", "coreVersion": "14.363",
          "compendiumSource": None, "duplicateSource": None, "exportSource": None,
          "createdTime": 0, "modifiedTime": 0, "lastModifiedBy": None}
