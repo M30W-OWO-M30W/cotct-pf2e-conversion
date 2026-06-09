@@ -1,0 +1,51 @@
+{
+  "id": "cotct-pf2e-conversion",
+  "title": "Curse of the Crimson Throne — PF2e Conversion (Private)",
+  "description": "Private-use Pathfinder 2e conversion of the Pathfinder 1e Adventure Path 'Curse of the Crimson Throne'. GM-facing journals, converted actors/hazards/items, encounter records, and conversion notes. NOT for redistribution — contains derivative references to copyrighted Paizo material.",
+  "version": "0.0.1",
+  "authors": [
+    { "name": "M30W-OWO-M30W", "url": "https://github.com/M30W-OWO-M30W" }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": { "minimum": "6.0.0" }
+      }
+    ]
+  },
+  "packs": [
+    { "name": "cotct-journals",   "label": "CotCT: Journals",   "path": "packs/journals",   "type": "JournalEntry", "system": "pf2e", "ownership": { "PLAYER": "NONE", "ASSISTANT": "OBSERVER", "GAMEMASTER": "OWNER" } },
+    { "name": "cotct-actors",     "label": "CotCT: Actors",     "path": "packs/actors",     "type": "Actor",        "system": "pf2e" },
+    { "name": "cotct-hazards",    "label": "CotCT: Hazards",    "path": "packs/hazards",    "type": "Actor",        "system": "pf2e" },
+    { "name": "cotct-items",      "label": "CotCT: Items",      "path": "packs/items",      "type": "Item",         "system": "pf2e" },
+    { "name": "cotct-rolltables", "label": "CotCT: Roll Tables","path": "packs/rolltables", "type": "RollTable",    "system": "pf2e" },
+    { "name": "cotct-macros",     "label": "CotCT: Macros",     "path": "packs/macros",     "type": "Macro",        "system": "pf2e" },
+    { "name": "cotct-scenes",     "label": "CotCT: Scenes",     "path": "packs/scenes",     "type": "Scene",        "system": "pf2e" }
+  ],
+  "packFolders": [
+    {
+      "name": "Curse of the Crimson Throne (PF2e)",
+      "sorting": "m",
+      "packs": [
+        "cotct-journals",
+        "cotct-actors",
+        "cotct-hazards",
+        "cotct-items",
+        "cotct-rolltables",
+        "cotct-scenes",
+        "cotct-macros"
+      ]
+    }
+  ],
+  "license": "Private use only. See README.md. Paizo Community Use Policy applies to creative content; PF2e game mechanics are Open under the ORC License.",
+  "url": "PRIVATE",
+  "manifest": "",
+  "download": ""
+}

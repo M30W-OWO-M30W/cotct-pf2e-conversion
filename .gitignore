@@ -1,0 +1,41 @@
+# ============================================================================
+# COPYRIGHT FIREWALL — never commit copyrighted source material.
+# This repo holds the CONVERSION (summaries, references, converted PF2e
+# mechanics, scripts). It must NOT contain Paizo's original AP text or art.
+# NOTE: git .gitignore does NOT support inline comments after a pattern;
+# every comment must be on its own line.
+# ============================================================================
+
+# Source PDFs and any extracted text/images from copyrighted books
+*.pdf
+
+# Extracted AP text & scratch analysis (derived from the copyrighted PDF)
+.work/
+**/extracted_text/
+**/_pdf_dump/
+
+# Redistributable-art firewall: assets dir holds placeholders only.
+# Commit *.md/.txt notes + .gitkeep; ignore actual image/map binaries.
+foundry-module/assets/**
+!foundry-module/assets/**/
+!foundry-module/assets/**/*.md
+!foundry-module/assets/**/*.txt
+!foundry-module/assets/**/.gitkeep
+
+# Compiled Foundry LevelDB packs (built from packs/*/_source/*.json).
+# We version the JSON sources, not the binary leveldb.
+foundry-module/packs/**/*.ldb
+foundry-module/packs/**/LOG*
+foundry-module/packs/**/CURRENT
+foundry-module/packs/**/LOCK
+foundry-module/packs/**/MANIFEST-*
+foundry-module/packs/**/*.log
+
+# Tooling cruft
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db
+*.bak
