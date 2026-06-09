@@ -46,6 +46,15 @@ section.journal-page-content > h1:first-child {
   padding-bottom: 0.08em;
   margin: 0.7em 0 0.35em;
 }
+/* sub-heads emitted inside pulled source prose (e.g. "Zellara's Home") */
+.journal-entry-page.text p.subhead {
+  font-variant: small-caps;
+  font-weight: 700;
+  margin: 0.9em 0 0.2em;
+  border-bottom: 1px solid rgba(179,38,59,0.4);
+  padding-bottom: 0.1em;
+}
+.journal-entry-page.text p.subhead strong { font-weight: 700; }
 
 /* =========================================================================
    shared block frame

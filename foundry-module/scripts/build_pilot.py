@@ -89,6 +89,18 @@ def box(code, fallback_html):
 def _tc(s):  # title-case that respects apostrophes ("ZELLARA'S HOME" -> "Zellara's Home")
     return re.sub(r"[A-Za-z][A-Za-z']*", lambda m: m.group(0)[0].upper()+m.group(0)[1:].lower(), s)
 
+# Convert PF1e DC references that appear inside the verbatim source prose into
+# PF2e @Check enrichers (clickable). PF1e skills/saves -> PF2e equivalents; DCs
+# re-judged to PF2e, not transliterated. Extend as new chapters surface more.
+_DCFIX = [
+    (r"a successful DC\s*12\s*Knowledge \(local\) check", "a successful @Check[type:society|dc:12] check"),
+    (r"a DC\s*25\s*Will save",                            "a @Check[type:will|dc:18|basic:false] save"),
+]
+def dcfix(html):
+    for pat, rep in _DCFIX:
+        html = re.sub(pat, rep, html)
+    return html
+
 def apspan(start, stop):
     """Verbatim MULTI-paragraph extract from the GM's AP source: from the paragraph
     containing `start` up to (not including) the one containing `stop`. Cleans the
@@ -98,17 +110,30 @@ def apspan(start, stop):
     si = next((k for k, p in enumerate(paras) if start in p), None)
     if si is None: return ""
     ei = next((k for k, p in enumerate(paras) if k > si and stop in p), len(paras))
-    out = []
+    items = []  # ("sub"|"body", text)
     for p in paras[si:ei]:
-        if not p or p.startswith("<!--"): continue          # image / page markers
+        if not p or p.startswith("<!--"): continue           # image / page markers
         if p.startswith("#"):                                # surviving heading -> bold lead
             t = p.lstrip("# ").strip()
-            if t: out.append(f'<p class="subhead"><strong>{_tc(t)}</strong></p>')
+            if t: items.append(("sub", _tc(t)))
             continue
         if re.fullmatch(r"\d+", p): continue                 # stray page numbers
         if p.isupper() and len(p.split()) <= 4: continue     # captions ("QUEEN ILEOSA")
         p = re.sub(r"^([A-Z]) ([a-z])", r"\1\2", p)          # drop-cap "T he" -> "The"
-        out.append(f"<p>{p}</p>")
+        items.append(("body", p))
+    # Re-flow paragraphs the two-column OCR split mid-sentence: if the previous
+    # body block doesn't end on sentence punctuation, the next body block is its
+    # continuation — join them.
+    merged = []
+    for kind, txt in items:
+        if (kind == "body" and merged and merged[-1][0] == "body"
+                and merged[-1][1][-1] not in '.!?:"”)'):
+            merged[-1] = ("body", merged[-1][1] + " " + txt)
+        else:
+            merged.append((kind, txt))
+    out = []
+    for kind, txt in merged:
+        out.append(f'<p class="subhead"><strong>{txt}</strong></p>' if kind == "sub" else f"<p>{dcfix(txt)}</p>")
     return "".join(out)
 
 # =====================================================================
