@@ -130,6 +130,16 @@ These apply across the whole conversion and are detailed in
 - **New:** Kazavon is canonically a **blue** dragon (per PathfinderWiki / AP text); the "Rise of the Dragon" Kazavon is an explicit **fail-state**, not a standard balanced fight. Build accordingly.
 - **Source:** Continuity fix.  **Severity:** Cosmetic (fact).  **In journal?** n-a.  **GM review:** none.
 
+### CHG-0024 — Foundry output restructured to Kingmaker-style Adventure module
+- **Chapter/location:** GLOBAL (Foundry implementation)
+- **Original:** (pilot v1) flat per-type compendium packs; many small journal entries.
+- **New:** Emulate the official **pf2e-kingmaker** module UX — a one-click **Adventure pack** (`cotct-adventure`) bundling per-type **folders** + a **fat chapter journal** (one entry, one page per area, `title.level` outline, styled `section.*` blocks via shipped **CSS**, `@Check`/`@UUID` enrichers) + a **scene** with **map-note pins → journal pages** and **pre-staged hidden hostile tokens** + actors carrying **prototype tokens**/`publication`. Verified vs the GM-provided Kingmaker world export.
+- **Source:** Foundry implementation need (GM requirement) / quality-of-life.
+- **Severity:** Moderate (presentation/packaging; no story change).
+- **In journal?** n-a (it *is* the journal structure).
+- **Foundry path:** whole `foundry-module/`; audit `research/kingmaker_foundry_structure_audit.md` + `research/kingmaker_schema_notes.md`; conformance `reports/kingmaker_style_comparison_report.md`.
+- **GM review:** **pending** — one live Adventure-import smoke test in Foundry v14 (the only step not self-verifiable headlessly).
+
 ---
 
 ## Per-area changes

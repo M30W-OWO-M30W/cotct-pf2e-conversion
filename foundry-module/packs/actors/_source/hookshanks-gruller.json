@@ -1,14 +1,15 @@
 {
   "_id": "qH96VshE6CZqfajv",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
   "name": "Hookshanks Gruller",
   "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "08S4EaoF9tCUATLQ",
+      "_id": "A2hNHBlyY65FYXy3",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Kukri",
       "sort": 0,
+      "type": "melee",
       "system": {
         "attack": {
           "value": ""
@@ -33,9 +34,10 @@
           "value": ""
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -48,14 +50,14 @@
           ]
         }
       },
-      "type": "melee",
-      "_key": "!actors.items!qH96VshE6CZqfajv.08S4EaoF9tCUATLQ"
+      "_key": "!actors.items!qH96VshE6CZqfajv.A2hNHBlyY65FYXy3"
     },
     {
-      "_id": "lWBt6PwypcqRTPdV",
+      "_id": "Pzw1geUcwungeGcE",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Dagger",
       "sort": 0,
+      "type": "melee",
       "system": {
         "attack": {
           "value": ""
@@ -80,9 +82,10 @@
           "value": ""
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -96,14 +99,14 @@
           ]
         }
       },
-      "type": "melee",
-      "_key": "!actors.items!qH96VshE6CZqfajv.lWBt6PwypcqRTPdV"
+      "_key": "!actors.items!qH96VshE6CZqfajv.Pzw1geUcwungeGcE"
     },
     {
-      "_id": "4IvzUl3CcJJnNgqA",
+      "_id": "h4gkpagPi6TbUN6l",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Sneak Attack",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "passive"
@@ -113,12 +116,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>+1d6 precision damage vs off-guard creatures (included in Strikes when applicable).</p>"
+          "value": "<p>+1d6 precision vs off-guard.</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -129,14 +133,14 @@
           ]
         }
       },
-      "type": "action",
-      "_key": "!actors.items!qH96VshE6CZqfajv.4IvzUl3CcJJnNgqA"
+      "_key": "!actors.items!qH96VshE6CZqfajv.h4gkpagPi6TbUN6l"
     },
     {
-      "_id": "D0Fmh162eHV2dxkE",
+      "_id": "1lscjgsHRPtAh1u5",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Disguised as an Orphan",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "passive"
@@ -146,12 +150,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>Hookshanks (a gnome) passes himself off as one of Lamm's Lambs at a glance. A PC actively studying the 'children' notices the imposter with a successful Perception check (DC 17) against his Deception. He uses this to set up a Sneak Attack or to slip away.</p>"
+          "value": "<p>Passes as one of Lamm's Lambs; @Check[type:perception|dc:17] vs his Deception to spot him before he Sneak Attacks.</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -160,14 +165,14 @@
           "value": []
         }
       },
-      "type": "action",
-      "_key": "!actors.items!qH96VshE6CZqfajv.D0Fmh162eHV2dxkE"
+      "_key": "!actors.items!qH96VshE6CZqfajv.1lscjgsHRPtAh1u5"
     },
     {
-      "_id": "6C2t30fwYRHENDUg",
+      "_id": "4uhpf6u6GbUF5Zrv",
       "img": "systems/pf2e/icons/actions/FreeAction.webp",
       "name": "Surrender & Inform",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "free"
@@ -177,12 +182,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>If reduced to fewer than half his HP or clearly losing, Hookshanks throws down his kukri and talks. He knows everything about the fishery and Gaedren's routine <em>except</em> the location of Gaedren's private den (A14). A captured, cooperative Hookshanks can shortcut the rest of the dungeon.</p>"
+          "value": "<p>At &lt;half HP he talks; knows the fishery and Gaedren's routine except the den (A14).</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -191,14 +197,14 @@
           "value": []
         }
       },
-      "type": "action",
-      "_key": "!actors.items!qH96VshE6CZqfajv.6C2t30fwYRHENDUg"
+      "_key": "!actors.items!qH96VshE6CZqfajv.4uhpf6u6GbUF5Zrv"
     },
     {
-      "_id": "Kqvy5hroZYWXGZGi",
+      "_id": "xE1IgLu9Q5hnpwbV",
       "img": "systems/pf2e/icons/default-icons/lore.svg",
       "name": "Streetwise Lore",
       "sort": 0,
+      "type": "lore",
       "system": {
         "description": {
           "value": ""
@@ -210,15 +216,15 @@
           "value": 0
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null
       },
-      "type": "lore",
-      "_key": "!actors.items!qH96VshE6CZqfajv.Kqvy5hroZYWXGZGi"
+      "_key": "!actors.items!qH96VshE6CZqfajv.xE1IgLu9Q5hnpwbV"
     }
   ],
   "system": {
@@ -274,11 +280,12 @@
         "value": 1
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role</strong> Cruel taskmaster overseeing the orphans in the Upper Workroom (A7). Hides among the children. Can surrender and become an information source.</p>",
+      "publicNotes": "<p><strong>Role:</strong> taskmaster over the orphans in A7; hides among them; can surrender and inform.</p>",
       "publication": {
-        "license": "ORC",
-        "remaster": true,
-        "title": "CotCT PF2e Conversion (private)"
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
       }
     },
     "initiative": {
@@ -333,6 +340,95 @@
         "humanoid",
         "gnome"
       ]
+    }
+  },
+  "folder": "rBcjiaGq99bkJyYK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Hookshanks Gruller",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "modules/cotct-pf2e-conversion/assets/tokens/hookshanks-gruller.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
     }
   },
   "_key": "!actors!qH96VshE6CZqfajv"

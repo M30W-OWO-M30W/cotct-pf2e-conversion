@@ -1,14 +1,15 @@
 {
   "_id": "lsdWSvGJ81hDy4it",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
   "name": "Jigsaw Shark",
   "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "8eYZrtP4g9eLOuIQ",
+      "_id": "51V5pqZyTPWU9Je6",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Jaws",
       "sort": 0,
+      "type": "melee",
       "system": {
         "attack": {
           "value": ""
@@ -29,9 +30,10 @@
           "value": ""
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -42,14 +44,14 @@
           ]
         }
       },
-      "type": "melee",
-      "_key": "!actors.items!lsdWSvGJ81hDy4it.8eYZrtP4g9eLOuIQ"
+      "_key": "!actors.items!lsdWSvGJ81hDy4it.51V5pqZyTPWU9Je6"
     },
     {
-      "_id": "MTcGAMb0LMrC41hw",
+      "_id": "PS0cKvVYfNPtgOfN",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "Aquatic Ambush",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "action"
@@ -59,12 +61,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p><strong>Requirements</strong> The shark is hidden and in water. <strong>Effect</strong> It Swims up to its Speed toward a creature in the water and makes a Jaws Strike; the target is off-guard against it.</p>"
+          "value": "<p>While hidden in water, Swim up to Speed and Strike; target off-guard.</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -73,14 +76,14 @@
           "value": []
         }
       },
-      "type": "action",
-      "_key": "!actors.items!lsdWSvGJ81hDy4it.MTcGAMb0LMrC41hw"
+      "_key": "!actors.items!lsdWSvGJ81hDy4it.PS0cKvVYfNPtgOfN"
     },
     {
-      "_id": "b8Rmu1ajRBPBjlgG",
+      "_id": "Ld8oDLUDiLPUyWzN",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Reluctant Leaper",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "passive"
@@ -90,12 +93,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>The shark attacks anything that falls into the water beneath the fishery, but only leaps onto the floating underpier (A12) to attack a creature there if it has already been attacked and damaged.</p>"
+          "value": "<p>Attacks anything that falls in the water, but only leaps onto the underpier (A12) if attacked and damaged first.</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -104,8 +108,7 @@
           "value": []
         }
       },
-      "type": "action",
-      "_key": "!actors.items!lsdWSvGJ81hDy4it.b8Rmu1ajRBPBjlgG"
+      "_key": "!actors.items!lsdWSvGJ81hDy4it.Ld8oDLUDiLPUyWzN"
     }
   ],
   "system": {
@@ -163,11 +166,12 @@
         "value": 1
       },
       "privateNotes": "",
-      "publicNotes": "<p>Scavenger lurking in the river under the fishery. The hazards (slippery boardwalk A3, rotten deck A9, hole in A8) all feed creatures into its water. Avoidable if the PCs stay dry; a real threat if they fall in. Standard PF2e drowning/aquatic-combat rules apply to PCs in the water.</p>",
+      "publicNotes": "<p>Scavenger under the fishery. Avoidable if the PCs stay dry; the hazards feed creatures to it.</p>",
       "publication": {
-        "license": "ORC",
-        "remaster": true,
-        "title": "CotCT PF2e Conversion (private)"
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
       }
     },
     "initiative": {
@@ -213,6 +217,95 @@
         "animal",
         "aquatic"
       ]
+    }
+  },
+  "folder": "rBcjiaGq99bkJyYK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Jigsaw Shark",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "modules/cotct-pf2e-conversion/assets/tokens/jigsaw-shark.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
     }
   },
   "_key": "!actors!lsdWSvGJ81hDy4it"

@@ -1,19 +1,21 @@
 #!/usr/bin/env node
 /**
- * Validate the JSON pack sources for the CotCT PF2e conversion module.
+ * Validate the CotCT conversion pack sources (Kingmaker-style structure).
  *
  *   node scripts/validate.mjs            # console report
- *   node scripts/validate.mjs --report   # also write ../../reports/foundry_validation_report.md
+ *   node scripts/validate.mjs --report   # also write ../reports/foundry_validation_report.md
  *
  * Checks:
- *  - every document has a 16-char alphanumeric _id and a name
- *  - _id uniqueness within each pack AND globally
- *  - declared module/packs in module.json match the packs on disk
- *  - every @UUID[...] and Compendium.<...> link that points INTO this module
- *    resolves to a document/page that exists
- *  - reports external compendium refs (pf2e.* etc.) as informational
- *
- * Pure read-only; deterministic ordering.
+ *  - every doc: 16-char _id, name, correct _key (primary + folder + adventure)
+ *  - embedded actor items / journal pages: compound _key (else compile = empty/throw)
+ *  - _id uniqueness per pack (cross-pack reuse is legal; the Adventure pack re-embeds)
+ *  - LINK RESOLUTION across the module:
+ *      @UUID[Actor.<id>] / [Item.<id>] / [Scene.<id>] / [RollTable.<id>]
+ *      @UUID[JournalEntry.<id>.JournalEntryPage.<id>]   (entry + page)
+ *      @UUID[.<pageId>]                                 (relative, same-entry page)
+ *      scene note.entryId + note.pageId
+ *      scene token.actorId
+ *    Compendium.pf2e.* and Compendium.cotct-* are resolved/listed.
  */
 import { readdirSync, existsSync, statSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -26,105 +28,133 @@ const PACKS_DIR = join(MODULE_ROOT, "packs");
 const MODULE_ID = "cotct-pf2e-conversion";
 const writeReport = process.argv.includes("--report");
 
-const moduleJson = JSON.parse(readFileSync(join(MODULE_ROOT, "module.json"), "utf8"));
-const declaredPacks = new Map(moduleJson.packs.map((p) => [p.name, p]));
-
 const ID_RE = /^[A-Za-z0-9]{16}$/;
-const problems = [];
-const info = [];
-const docIndex = new Map(); // "<packName>.<_id>" -> {name, type, pages:Set}
-const globalIds = new Map(); // _id -> packName (first seen)
-const stats = { packs: 0, docs: 0, pages: 0 };
+const COLL = { actors: "actors", hazards: "actors", items: "items", journals: "journal",
+  scenes: "scenes", rolltables: "tables", macros: "macros", adventure: "adventures" };
 
-function walkJson(dir) {
+const problems = [], info = [], stats = { packs: 0, docs: 0, pages: 0, links: 0 };
+const idx = { Actor: new Set(), Item: new Set(), Scene: new Set(), JournalEntry: new Set(),
+  RollTable: new Set(), Macro: new Set() };
+const pagesByEntry = new Map();   // entryId -> Set(pageId)
+const allPages = new Set();       // every page id (for relative links)
+const COLL_TO_TYPE = { actors: "Actor", hazards: "Actor", items: "Item", journals: "JournalEntry",
+  scenes: "Scene", rolltables: "RollTable", macros: "Macro" };
+
+function walk(dir) {
   const out = [];
   for (const e of readdirSync(dir, { withFileTypes: true })) {
-    const full = join(dir, e.name);
-    if (e.isDirectory()) out.push(...walkJson(full));
-    else if (e.name.endsWith(".json")) out.push(full);
+    const f = join(dir, e.name);
+    if (e.isDirectory()) out.push(...walk(f));
+    else if (e.name.endsWith(".json")) out.push(f);
   }
   return out;
 }
 
-// ---- index pass ----
 const packDirs = existsSync(PACKS_DIR)
-  ? readdirSync(PACKS_DIR).filter((p) => existsSync(join(PACKS_DIR, p, "_source")) && statSync(join(PACKS_DIR, p, "_source")).isDirectory())
+  ? readdirSync(PACKS_DIR).filter(p => existsSync(join(PACKS_DIR, p, "_source")) && statSync(join(PACKS_DIR, p, "_source")).isDirectory())
   : [];
 
+// ---- index pass ----
 for (const pack of packDirs) {
   stats.packs++;
-  if (!declaredPacks.has(`${MODULE_ID === MODULE_ID ? "" : ""}cotct-${pack}`) && !declaredPacks.has(`cotct-${pack}`)) {
-    // pack dirs are named e.g. "journals" -> declared name "cotct-journals"
-    if (!declaredPacks.has(`cotct-${pack}`)) info.push(`pack dir '${pack}' not declared in module.json (expected name 'cotct-${pack}')`);
-  }
-  const files = walkJson(join(PACKS_DIR, pack, "_source"));
-  for (const file of files) {
+  const seen = new Set();
+  for (const file of walk(join(PACKS_DIR, pack, "_source"))) {
     let doc;
     try { doc = JSON.parse(readFileSync(file, "utf8")); }
     catch (err) { problems.push(`BAD JSON  ${file}: ${err.message}`); continue; }
     stats.docs++;
     const rel = file.replace(PROJECT_ROOT + "/", "");
-    if (!doc._id || !ID_RE.test(doc._id)) problems.push(`MISSING/BAD _id  ${rel} (got ${JSON.stringify(doc._id)})`);
+    if (!doc._id || !ID_RE.test(doc._id)) problems.push(`MISSING/BAD _id  ${rel}`);
     if (!doc.name) problems.push(`MISSING name  ${rel}`);
-    // _key is REQUIRED by the fvtt compiler (docs without it are silently skipped -> empty packs)
-    const COLL = { actors: "actors", hazards: "actors", items: "items", journals: "journal", rolltables: "tables", macros: "macros", scenes: "scenes" };
-    if (doc._id && COLL[pack]) {
-      const expectedKey = `!${COLL[pack]}!${doc._id}`;
-      if (doc._key !== expectedKey) problems.push(`MISSING/BAD _key  ${rel} (got ${JSON.stringify(doc._key)}, expected ${expectedKey}) — pack would compile EMPTY`);
-      // embedded docs (actor items, journal pages) need compound keys or compile throws LEVEL_INVALID_KEY
-      const embChecks = [["items", "items"], ["pages", "pages"]];
-      for (const [field, embColl] of embChecks) {
-        for (const emb of doc[field] || []) {
-          const ek = `!${COLL[pack]}.${embColl}!${doc._id}.${emb._id}`;
-          if (emb._key !== ek) problems.push(`BAD embedded _key  ${rel} ${field}[${emb._id || "?"}] (expected ${ek})`);
+    const isFolder = (doc._key || "").startsWith("!folders!");
+    if (doc._id) {
+      if (seen.has(doc._id)) problems.push(`DUPLICATE _id within ${pack}: ${doc._id}`);
+      seen.add(doc._id);
+      if (isFolder) {
+        if (doc._key !== `!folders!${doc._id}`) problems.push(`BAD folder _key ${rel}`);
+      } else if (COLL[pack]) {
+        const ek = `!${COLL[pack]}!${doc._id}`;
+        if (doc._key !== ek) problems.push(`MISSING/BAD _key ${rel} (got ${JSON.stringify(doc._key)}, expected ${ek}) — would compile EMPTY`);
+        // embedded keys (NOT for the Adventure pack — its embeds are inline, no separate _key)
+        if (pack !== "adventure") {
+          for (const [field, ec] of [["items", "items"], ["pages", "pages"]]) {
+            for (const emb of doc[field] || []) {
+              const k = `!${COLL[pack]}.${ec}!${doc._id}.${emb._id}`;
+              if (emb._key !== k) problems.push(`BAD embedded _key ${rel} ${field}[${emb._id}] (expected ${k})`);
+            }
+          }
+        }
+        // populate index
+        const t = COLL_TO_TYPE[pack];
+        if (t && idx[t]) idx[t].add(doc._id);
+        if (pack === "journals") {
+          const set = new Set((doc.pages || []).map(p => p._id));
+          pagesByEntry.set(doc._id, set);
+          for (const p of set) allPages.add(p);
+          stats.pages += set.size;
         }
       }
-    }
-    if (doc._id) {
-      const key = `cotct-${pack}.${doc._id}`;
-      docIndex.set(key, { name: doc.name, type: doc.type, pages: new Set((doc.pages || []).map((pg) => pg._id)) });
-      stats.pages += (doc.pages || []).length;
-      if (globalIds.has(doc._id)) problems.push(`DUPLICATE _id  ${doc._id}  in cotct-${pack} and ${globalIds.get(doc._id)}`);
-      else globalIds.set(doc._id, `cotct-${pack}`);
     }
   }
 }
 
-// ---- link pass ----
-const UUID_RE = /(?:@UUID\[)?Compendium\.([\w-]+)\.([\w-]+)\.(?:(\w+)\.)?([A-Za-z0-9]{16})(?:\.JournalEntryPage\.([A-Za-z0-9]{16}))?/g;
+// ---- link resolution pass ----
+const UUID_RE = /@UUID\[([^\]]+)\]/g;
+function resolveUuid(target, rel) {
+  stats.links++;
+  if (target.startsWith(".")) {                       // relative same-entry page
+    const pid = target.slice(1).split("#")[0];
+    if (!allPages.has(pid)) problems.push(`BROKEN relative page link ${rel}: @UUID[${target}]`);
+    return;
+  }
+  if (target.startsWith("Compendium.")) {
+    if (!target.startsWith(`Compendium.${MODULE_ID}.`)) info.push(`external ${target.split(".").slice(0,3).join(".")}  (${rel})`);
+    return;
+  }
+  const parts = target.split(".");
+  const [type, id] = parts;
+  if (type === "JournalEntry" && parts[2] === "JournalEntryPage") {
+    if (!idx.JournalEntry.has(id)) problems.push(`BROKEN ${rel}: JournalEntry.${id} not found`);
+    else if (!(pagesByEntry.get(id) || new Set()).has(parts[3])) problems.push(`BROKEN ${rel}: page ${parts[3]} not in entry ${id}`);
+    return;
+  }
+  if (idx[type]) {
+    if (!idx[type].has(id)) problems.push(`BROKEN ${rel}: ${type}.${id} not found`);
+  } // unknown types (Actor.Item nested etc.) skipped
+}
+
 for (const pack of packDirs) {
-  for (const file of walkJson(join(PACKS_DIR, pack, "_source"))) {
-    let raw;
-    try { raw = readFileSync(file, "utf8"); } catch { continue; }
+  for (const file of walk(join(PACKS_DIR, pack, "_source"))) {
+    let raw, doc;
+    try { raw = readFileSync(file, "utf8"); doc = JSON.parse(raw); } catch { continue; }
     const rel = file.replace(PROJECT_ROOT + "/", "");
-    let m;
-    while ((m = UUID_RE.exec(raw)) !== null) {
-      const [, mod, packName, , docId, pageId] = m;
-      if (mod !== MODULE_ID) { info.push(`external ref ${mod}.${packName} in ${rel}`); continue; }
-      const key = `${packName}.${docId}`;
-      const target = docIndex.get(key);
-      if (!target) { problems.push(`BROKEN LINK  ${rel} -> Compendium.${mod}.${packName}.*.${docId} (not found)`); continue; }
-      if (pageId && !target.pages.has(pageId)) problems.push(`BROKEN PAGE LINK  ${rel} -> page ${pageId} in ${target.name}`);
+    if (pack === "adventure") continue; // embedded copies; canonical checked in their own packs
+    let m; while ((m = UUID_RE.exec(raw)) !== null) resolveUuid(m[1], rel);
+    // scene note + token links
+    for (const n of doc.notes || []) {
+      if (n.entryId && !idx.JournalEntry.has(n.entryId)) problems.push(`BROKEN note ${rel}: entryId ${n.entryId} not found`);
+      if (n.entryId && n.pageId && !(pagesByEntry.get(n.entryId) || new Set()).has(n.pageId)) problems.push(`BROKEN note ${rel}: pageId ${n.pageId} not in entry ${n.entryId}`);
+    }
+    for (const t of doc.tokens || []) {
+      if (t.actorId && !idx.Actor.has(t.actorId)) problems.push(`BROKEN token ${rel}: actorId ${t.actorId} not found`);
     }
   }
 }
 
 // ---- report ----
-const lines = [];
-const log = (s) => { lines.push(s); console.log(s); };
+const lines = [], log = s => { lines.push(s); console.log(s); };
 log(`# Foundry validation`);
-log(`packs(dirs)=${stats.packs} docs=${stats.docs} pages=${stats.pages} problems=${problems.length} info=${info.length}`);
+log(`packs=${stats.packs} docs=${stats.docs} pages=${stats.pages} links=${stats.links} problems=${problems.length}`);
 log("");
-if (problems.length) { log("## Problems"); for (const p of problems) log(`- ${p}`); }
-else log("## Problems\n- none ✅");
-const extRefs = [...new Set(info.filter((i) => i.startsWith("external ref")))];
-if (extRefs.length) { log("\n## External compendium refs (informational)"); for (const e of extRefs.slice(0, 200)) log(`- ${e}`); }
+log("## Problems");
+if (problems.length) for (const p of problems) log(`- ${p}`); else log("- none ✅");
+const ext = [...new Set(info)];
+if (ext.length) { log(`\n## External compendium refs (${ext.length} unique)`); for (const e of ext.slice(0, 60)) log(`- ${e}`); }
 
 if (writeReport) {
-  const reportsDir = join(PROJECT_ROOT, "reports");
-  mkdirSync(reportsDir, { recursive: true });
-  writeFileSync(join(reportsDir, "foundry_validation_report.md"),
+  const dir = join(PROJECT_ROOT, "reports"); mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, "foundry_validation_report.md"),
     `# Foundry Validation Report\n\n_Generated by scripts/validate.mjs (deterministic)._\n\n` + lines.join("\n") + "\n");
-  console.log(`\nwrote reports/foundry_validation_report.md`);
+  console.log("\nwrote reports/foundry_validation_report.md");
 }
 process.exit(problems.length ? 1 : 0);

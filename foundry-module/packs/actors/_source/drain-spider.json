@@ -1,14 +1,15 @@
 {
   "_id": "1M94tm3wnSRGcTG5",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
   "name": "Drain Spider",
   "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "NtOmInkK92Hhb3Xy",
+      "_id": "98Vhz3Uz3kzF0bWW",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Fangs",
       "sort": 0,
+      "type": "melee",
       "system": {
         "attack": {
           "value": ""
@@ -33,9 +34,10 @@
           "value": ""
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -46,14 +48,14 @@
           ]
         }
       },
-      "type": "melee",
-      "_key": "!actors.items!1M94tm3wnSRGcTG5.NtOmInkK92Hhb3Xy"
+      "_key": "!actors.items!1M94tm3wnSRGcTG5.98Vhz3Uz3kzF0bWW"
     },
     {
-      "_id": "MSEwelGcRqYipKWR",
+      "_id": "QhZrSV8QbpiC4XcT",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Drain Spider Venom",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "passive"
@@ -63,12 +65,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p><strong>Saving Throw</strong> Fortitude DC 15; <strong>Maximum Duration</strong> 4 rounds; <strong>Stage 1</strong> 1d4 poison damage and enfeebled 1 (1 round).</p><p><em>Vermin repellent:</em> a drain spider that smells Gaedren's alchemical repellent (sold by the vial in his den) is sickened 1 and will not approach a creature coated in it — model as an automatic failure to close, no attack.</p>"
+          "value": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15]; <strong>Stage 1</strong> 1d4 poison + enfeebled 1 (1 round). A spider that smells Gaedren's vermin repellent (looted in A13) is sickened and won't approach a coated creature.</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -79,14 +82,14 @@
           ]
         }
       },
-      "type": "action",
-      "_key": "!actors.items!1M94tm3wnSRGcTG5.MSEwelGcRqYipKWR"
+      "_key": "!actors.items!1M94tm3wnSRGcTG5.QhZrSV8QbpiC4XcT"
     },
     {
-      "_id": "PIsDQTNnDUhhiPJ4",
+      "_id": "LmLIyiqYUu2maybI",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Lunge",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "passive"
@@ -96,12 +99,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>The aggressive spider attacks the first creature to enter its lair, gaining the benefits of being off-guard against a surprised target.</p>"
+          "value": "<p>Attacks the first creature to enter its lair, off-guard to the surprised target.</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -110,8 +114,7 @@
           "value": []
         }
       },
-      "type": "action",
-      "_key": "!actors.items!1M94tm3wnSRGcTG5.PIsDQTNnDUhhiPJ4"
+      "_key": "!actors.items!1M94tm3wnSRGcTG5.LmLIyiqYUu2maybI"
     }
   ],
   "system": {
@@ -160,7 +163,7 @@
       }
     },
     "details": {
-      "blurb": "Aggressive cat-sized venomous spider",
+      "blurb": "Aggressive venomous spider",
       "languages": {
         "details": "",
         "value": []
@@ -169,11 +172,12 @@
         "value": -1
       },
       "privateNotes": "",
-      "publicNotes": "<p>Cat-sized sewer spiders nesting in the wrecked ship (A10 = 1; A11 = 4). Aggressive but trivially repelled by the vermin repellent the PCs can loot from A13. Treat the A11 nest as a single Low/Moderate encounter of four.</p>",
+      "publicNotes": "<p>Cat-sized vermin nesting in the wreck (A10 = 1; A11 = 4). Trivially repelled by vermin repellent.</p>",
       "publication": {
-        "license": "ORC",
-        "remaster": true,
-        "title": "CotCT PF2e Conversion (private)"
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
       }
     },
     "initiative": {
@@ -224,6 +228,95 @@
       "value": [
         "animal"
       ]
+    }
+  },
+  "folder": "rBcjiaGq99bkJyYK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Drain Spider",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "modules/cotct-pf2e-conversion/assets/tokens/drain-spider.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
     }
   },
   "_key": "!actors!1M94tm3wnSRGcTG5"

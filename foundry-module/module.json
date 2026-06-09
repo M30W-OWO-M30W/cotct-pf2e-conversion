@@ -19,7 +19,9 @@
       }
     ]
   },
+  "styles": [ "styles/cotct-journal.css" ],
   "packs": [
+    { "name": "cotct-adventure",  "label": "CotCT: Adventure (import this)", "path": "packs/adventure", "type": "Adventure", "system": "pf2e" },
     { "name": "cotct-journals",   "label": "CotCT: Journals",   "path": "packs/journals",   "type": "JournalEntry", "system": "pf2e", "ownership": { "PLAYER": "NONE", "ASSISTANT": "OBSERVER", "GAMEMASTER": "OWNER" } },
     { "name": "cotct-actors",     "label": "CotCT: Actors",     "path": "packs/actors",     "type": "Actor",        "system": "pf2e" },
     { "name": "cotct-hazards",    "label": "CotCT: Hazards",    "path": "packs/hazards",    "type": "Actor",        "system": "pf2e" },
@@ -33,6 +35,7 @@
       "name": "Curse of the Crimson Throne (PF2e)",
       "sorting": "m",
       "packs": [
+        "cotct-adventure",
         "cotct-journals",
         "cotct-actors",
         "cotct-hazards",

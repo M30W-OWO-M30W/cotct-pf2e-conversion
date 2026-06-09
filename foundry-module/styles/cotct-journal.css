@@ -1,0 +1,86 @@
+/* CotCT conversion — journal section-block styling.
+   Mirrors the Kingmaker module's semantic classes so area pages render polished
+   on the DEFAULT pf2e journal sheet (no custom sheet class shipped). Degrades
+   gracefully: if this CSS is absent the content is still readable plain HTML. */
+
+.journal-entry-page.text .description,
+.journal-entry-page.text .gm-notes,
+.journal-entry-page.text .encounter,
+.journal-entry-page.text .skill,
+.journal-entry-page.text .treasure,
+.journal-entry-page.text .conversion {
+  display: block;
+  margin: 0.6em 0;
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
+  border-left: 4px solid #8a1a1a;
+}
+
+/* Boxed read-aloud / player-facing text */
+.journal-entry-page.text .description {
+  background: rgba(138, 26, 26, 0.06);
+  border-left-color: #8a1a1a;
+  font-style: italic;
+}
+
+/* GM-only at-the-table notes */
+.journal-entry-page.text .gm-notes {
+  background: rgba(0, 0, 0, 0.035);
+  border-left-color: #555;
+}
+
+/* Encounter block — token aside + creature list + difficulty header */
+.journal-entry-page.text .encounter {
+  background: rgba(120, 20, 20, 0.05);
+  border-left-color: #b3541e;
+}
+.journal-entry-page.text .encounter header.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  margin-bottom: 0.3em;
+}
+.journal-entry-page.text .encounter header.split h3 { margin: 0; border: none; }
+.journal-entry-page.text .encounter header.split p { margin: 0; font-weight: 600; opacity: 0.8; }
+.journal-entry-page.text .encounter aside.right.token,
+.journal-entry-page.text aside.right.porthole {
+  float: right;
+  max-width: 40%;
+  margin: 0 0 0.4em 0.8em;
+  padding: 0.3em 0.5em;
+  background: rgba(0,0,0,0.04);
+  border-radius: 4px;
+}
+.journal-entry-page.text aside.right.token ul { margin: 0; padding-left: 1.1em; }
+
+/* Skill-check callout */
+.journal-entry-page.text .skill {
+  background: rgba(30, 98, 51, 0.06);
+  border-left-color: #1e6233;
+}
+
+/* Treasure block */
+.journal-entry-page.text .treasure {
+  background: rgba(176, 132, 30, 0.08);
+  border-left-color: #b08400;
+}
+
+/* Conversion-notes block */
+.journal-entry-page.text .conversion {
+  background: rgba(0, 0, 0, 0.04);
+  border-left-color: #444;
+  font-size: 0.95em;
+}
+.journal-entry-page.text .conversion::before {
+  content: "Conversion Notes";
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  margin-bottom: 0.2em;
+}
+
+.journal-entry-page.text p.source { font-size: 0.8em; opacity: 0.6; margin: 0 0 0.4em; }

@@ -45,11 +45,21 @@ npm run build               # _source/*.json  ->  packs/<pack> (leveldb)
    (or symlink it), so `module.json` sits at
    `Data/modules/cotct-pf2e-conversion/module.json`.
 3. Launch your PF2e world → **Manage Modules** → enable
-   *"Curse of the Crimson Throne — PF2e Conversion (Private)"*.
-4. Open the **Compendium Packs** sidebar → the *"Curse of the Crimson Throne
-   (PF2e)"* folder. Start with **GM Overview** in `cotct-journals`.
-5. Drag the maps you legally own into `assets/maps/` using the names each
-   scene-planning journal lists, then build the scenes.
+   *"Curse of the Crimson Throne — PF2e Conversion (Private)"* (restart the
+   server first so Foundry detects a newly-added module folder).
+4. **One-click import (recommended):** open the **Compendium Packs** sidebar →
+   *"Curse of the Crimson Throne (PF2e)"* folder → **`CotCT: Adventure (import
+   this)`** → open the **Adventure** document → **Import**. This recreates the
+   whole organized tree (folders, the chapter journal, the Old Fishery scene with
+   map-note pins + staged tokens, the NPCs/hazards, and the treasure) with all
+   internal links intact — the Kingmaker import model.
+   *Piecemeal alternative:* browse the per-type packs (`cotct-journals`,
+   `cotct-actors`, …) and drag individual documents.
+5. **Maps:** none ship (copyright). Install **Racooze's free CotCT battlemaps**
+   (or drop your own at `assets/maps/01-old-fishery.webp`), open the **Old
+   Fishery** scene, set the background, and nudge the pins/tokens onto the map
+   (they're staged + flagged `NEEDS GM REVIEW`). Then click a pin → it opens that
+   area's journal page; reveal the hidden tokens to start the fight.
 
 ## How to read the conversion
 

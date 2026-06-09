@@ -1,14 +1,15 @@
 {
   "_id": "UQr3ApF78GW7eghw",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
   "name": "Lamm's Lamb (Orphan)",
   "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "GaDSPHFyVSjyutRT",
+      "_id": "zgRJJ9CuqDK5vXTC",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Pitchfork (improvised)",
       "sort": 0,
+      "type": "melee",
       "system": {
         "attack": {
           "value": ""
@@ -29,9 +30,10 @@
           "value": ""
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -43,56 +45,14 @@
           ]
         }
       },
-      "type": "melee",
-      "_key": "!actors.items!UQr3ApF78GW7eghw.GaDSPHFyVSjyutRT"
+      "_key": "!actors.items!UQr3ApF78GW7eghw.zgRJJ9CuqDK5vXTC"
     },
     {
-      "_id": "Pl0jGy4iH3WIm06t",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Dagger",
-      "sort": 0,
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 5
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d4-1",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "finesse"
-          ]
-        }
-      },
-      "type": "melee",
-      "_key": "!actors.items!UQr3ApF78GW7eghw.Pl0jGy4iH3WIm06t"
-    },
-    {
-      "_id": "f16b6MRu4nQHYo4R",
+      "_id": "F7XuVemc38d7fcxk",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Cower",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "passive"
@@ -102,12 +62,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>An orphan who takes any damage flees toward the main floor (A8); if all the thugs are dead or out of sight, it flees the fishery entirely. Orphans invaded at night are too frightened to fight at all.</p>"
+          "value": "<p>An orphan that takes damage flees to A8, or out of the fishery if the thugs are down. Orphans invaded at night are too frightened to fight.</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -116,14 +77,14 @@
           "value": []
         }
       },
-      "type": "action",
-      "_key": "!actors.items!UQr3ApF78GW7eghw.f16b6MRu4nQHYo4R"
+      "_key": "!actors.items!UQr3ApF78GW7eghw.F7XuVemc38d7fcxk"
     },
     {
-      "_id": "acshVw94XQa9eUIt",
+      "_id": "59DhJ6Q6UYWziw9B",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Rally to the Heroes",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "passive"
@@ -133,12 +94,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>A PC can rally an orphan with a successful Diplomacy check (DC 15; Intimidation does not work). A rallied orphan can use the Aid reaction to help a PC's attack or skill check, or reveal what it knows about the fishery and Gaedren. <strong>Story:</strong> rescuing the orphans is the heart of this dungeon (see the Treasure/XP notes); one orphan is the payoff for a PC with the 'Missing Child' background hook.</p>"
+          "value": "<p>A PC can rally an orphan (@Check[type:diplomacy|dc:15]; Intimidation fails) to Aid or reveal info. <strong>Non-combatants — not an XP source for killing.</strong> Rescuing them is the dungeon's heart (a 'Missing Child' background payoff).</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -147,8 +109,7 @@
           "value": []
         }
       },
-      "type": "action",
-      "_key": "!actors.items!UQr3ApF78GW7eghw.acshVw94XQa9eUIt"
+      "_key": "!actors.items!UQr3ApF78GW7eghw.59DhJ6Q6UYWziw9B"
     }
   ],
   "system": {
@@ -203,11 +164,12 @@
         "value": -1
       },
       "privateNotes": "",
-      "publicNotes": "<p>Enslaved child pickpockets. <strong>Non-combatants and a deliberate moral pressure point — not an XP source for killing.</strong> 9 are present by day (spread through A7/A8); 26 sleep in A8 at night. They can be rallied to the PCs' side (Diplomacy DC 15) or, if ignored, may be forced to fight for the thugs. See the Conversion Notes journal for the rescue framing.</p>",
+      "publicNotes": "<p>Enslaved child pickpockets: 9 by day across A7/A8, 26 asleep in A8 at night. The moral core of the dungeon.</p>",
       "publication": {
-        "license": "ORC",
-        "remaster": true,
-        "title": "CotCT PF2e Conversion (private)"
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
       }
     },
     "initiative": {
@@ -253,6 +215,95 @@
         "humanoid",
         "human"
       ]
+    }
+  },
+  "folder": "rBcjiaGq99bkJyYK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Lamm's Lamb (Orphan)",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "modules/cotct-pf2e-conversion/assets/tokens/orphan.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
     }
   },
   "_key": "!actors!UQr3ApF78GW7eghw"

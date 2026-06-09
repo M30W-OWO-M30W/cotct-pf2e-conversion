@@ -1,14 +1,15 @@
 {
   "_id": "6y55S5DpXqnF40WL",
-  "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "name": "Slippery Boardwalk",
   "type": "hazard",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "pHMoFU5LMyCDZ8dm",
+      "_id": "AAvQAu4u8fUFX6dM",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Slip",
       "sort": 0,
+      "type": "action",
       "system": {
         "actionType": {
           "value": "reaction"
@@ -18,12 +19,13 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p><strong>Trigger</strong> A creature Strides more than 5 feet, Steps onto, or fights while on the slick boardwalk.</p><hr /><p><strong>Effect</strong> The creature must succeed at a DC 15 Reflex save (or Acrobatics check to Balance) or fall prone; on a critical failure it slides off and falls 13 feet into the river (@Damage[1[bludgeoning]] from the short fall into deep water) and into the hunting grounds of the Jigsaw Shark (A12). A creature that Steps (5 ft) or moves carefully is not affected.</p>"
+          "value": "<p><strong>Trigger</strong> A creature Strides &gt;5 ft or fights on it.</p><hr /><p><strong>Effect</strong> @Check[type:reflex|dc:15|basic:true] or fall prone; on a critical failure, slide off and fall 13 ft into the river (@Damage[1[bludgeoning]]) and the Jigsaw Shark's water (A12).</p>"
         },
         "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "CotCT PF2e Conversion (private)"
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
         },
         "rules": [],
         "slug": null,
@@ -32,31 +34,115 @@
           "value": []
         }
       },
-      "type": "action",
-      "_key": "!actors.items!6y55S5DpXqnF40WL.pHMoFU5LMyCDZ8dm"
+      "_key": "!actors.items!6y55S5DpXqnF40WL.AAvQAu4u8fUFX6dM"
     }
   ],
+  "folder": "hf850cPYquAhv4Nz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Slippery Boardwalk",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {}
+  },
   "system": {
     "attributes": {
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>Obvious — no check needed to notice the danger.</p>",
+        "details": "<p>Obvious — no check needed to notice.</p>",
         "value": 0
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>A barnacle-slick boardwalk (A3) clings to the fishery 13 feet above shark-infested water; the old planks also groan under heavy loads (a creature heavier than Medium, or two creatures within 5 feet, may collapse a stretch — treat as the Rotten Ship Deck reaction).</p>",
-      "disable": "<p>@Check[acrobatics|dc:15|name:Cross Carefully] to move along it without risk, or shore up a stretch with rope/planks (Crafting or Survival, DC 15).</p>",
+      "description": "<p>A barnacle-slick boardwalk (A3) 13 ft above shark water; the planks also groan under heavy loads.</p>",
+      "disable": "<p>@Check[type:acrobatics|dc:15] to cross carefully, or brace a stretch (@Check[type:crafting|dc:15]).</p>",
       "isComplex": false,
       "level": {
         "value": 1
       },
       "publication": {
-        "license": "ORC",
-        "remaster": true,
-        "title": "CotCT PF2e Conversion (private)"
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
       },
       "reset": "<p>Persistent terrain.</p>",
       "routine": ""
