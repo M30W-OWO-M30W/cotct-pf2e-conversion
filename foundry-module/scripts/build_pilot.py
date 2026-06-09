@@ -30,9 +30,13 @@ sids = B._idgen(987654)          # GM-secret block ids (separate stream; doesn't
 def sid(): return next(sids)
 
 # UUID link helpers (bare world-UUIDs intra-adventure; Compendium for SRD)
-def act(k,label): return f"@UUID[Actor.{A[k]}]{{{label}}}"
-def haz(k,label): return f"@UUID[Actor.{A[k]}]{{{label}}}"
-def itm(k,label): return f"@UUID[Item.{A[k]}]{{{label}}}"
+MODID = "cotct-pf2e-conversion"
+# Compendium UUIDs (resolve when the journal is read straight from the compendium,
+# AND after an Adventure import — bare world-UUIDs only resolve post-import).
+def act(k,label): return f"@UUID[Compendium.{MODID}.cotct-actors.Actor.{A[k]}]{{{label}}}"
+def haz(k,label): return f"@UUID[Compendium.{MODID}.cotct-hazards.Actor.{A[k]}]{{{label}}}"
+def itm(k,label): return f"@UUID[Compendium.{MODID}.cotct-items.Item.{A[k]}]{{{label}}}"
+def scn(sid,label): return f"@UUID[Compendium.{MODID}.cotct-scenes.Scene.{sid}]{{{label}}}"
 def mc(k,label): return f"@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.{MC[k]}]{{{label}}}"
 def pg(pid,label): return f"@UUID[.{pid}]{{{label}}}"          # same-entry page jump
 def chk(s): return f"@Check[{s}]"
@@ -207,12 +211,13 @@ AW("gaedren-lamm", B.npc(A["gaedren"],"Gaedren Lamm",2,17,30,3,9,8,8,
   ["humanoid","human"],["Common","Varisian"],
   [B.strike(nid(),"Fine Dagger",9,"1d4+1","piercing",["agile","finesse","versatile-s"],[("1d6","precision")]),
    B.strike(nid(),"Hand Crossbow",9,"1d6","piercing",["range-increment-60","reload-1"],[("1d6","precision")]),
-   B.action(nid(),"Sneak Attack","passive","<p>+1d6 precision damage vs off-guard creatures (already in his Strikes when applicable).</p>",["rogue"]),
-   B.action(nid(),"Limping Gait","passive","<p>An old leg wound caps his Speed at 15 ft; he snipes from across the gator pool rather than kiting.</p>"),
-   B.action(nid(),"Nimble Dodge","reaction","<p><strong>Trigger</strong> A creature he can see attacks him.</p><hr /><p><strong>Effect</strong> +2 circumstance bonus to AC vs that attack.</p>",["mental"],"defensive"),
-   B.action(nid(),"Spur the Beast","1","<p>Gaedren makes a Hand Crossbow Strike against Gobblegut; on a hit the enraged crocodile gains a +2 status bonus to attack/damage and must Strike the nearest creature other than Gaedren next turn. His signature: turn his pet into a weapon, then snipe from cover.</p>",["concentrate"]),
+   B.action(nid(),"Sneak Attack","passive","<p>+1d6 precision damage against off-guard creatures.</p>",["rogue"]),
+   B.action(nid(),"Nimble Dodge","reaction","<p><strong>Trigger</strong> A creature he can see attacks him.</p><hr /><p><strong>Effect</strong> +2 circumstance bonus to AC against that attack.</p>",["mental"],"defensive"),
+   B.action(nid(),"Spur the Beast","1","<p>Gaedren makes a Hand Crossbow Strike against Gobblegut; on a hit the enraged crocodile gains a +2 status bonus to attack and damage rolls and must Strike the nearest creature other than Gaedren on its next turn.</p>",["concentrate"]),
    B.lore(nid(),"Underworld Lore",8)],
-  notes="<p><strong>Role:</strong> the AP's first villain and every PC's revenge payoff — but a frail catalyst, not a tank. The threat is the crocodile; Gaedren weaponizes it. <strong>Tactics:</strong> R1 Spur the Beast, then snipe across the pool; Nimble Dodge when focus-fired; flees to the A12 skiffs at &le;8 HP. <strong>If killed and left in A14,</strong> his son Rolth animates the body in the Dead Warrens (D13) — track it.</p>",
+  notes="<p><strong>Role:</strong> the AP's first villain and every PC's revenge payoff — a frail catalyst, not a tank. The real threat is the crocodile; Gaedren weaponizes it.</p>"
+        "<p><strong>Tactics:</strong> an old leg wound caps his Speed at 15 ft, so he holds the far side of the gator pool and snipes rather than kiting. Round 1 <em>Spur the Beast</em> to enrage Gobblegut, then Strikes from cover; <em>Nimble Dodge</em> when focus-fired; flees to the A12 skiffs at &le;8 HP.</p>"
+        "<p><strong>If killed and left in A14,</strong> his son Rolth animates the body in the Dead Warrens at the chapter's end — track it.</p>",
   folder=F["a_creatures"], blurb="Decrepit crime lord; first villain of the AP", token_src=TOK("gaedren-lamm"), actor_link=True))
 
 AW("yargin-balko", B.npc(A["yargin"],"Yargin Balko",1,16,20,5,5,7,6,
@@ -234,10 +239,10 @@ AW("hookshanks-gruller", B.npc(A["hookshanks"],"Hookshanks Gruller",1,16,18,4,7,
   [B.strike(nid(),"Kukri",7,"1d6+1","slashing",["agile","finesse","trip"],[("1d6","precision")]),
    B.strike(nid(),"Dagger",7,"1d4+1","piercing",["agile","finesse","thrown-10","versatile-s"],[("1d6","precision")]),
    B.action(nid(),"Sneak Attack","passive","<p>+1d6 precision vs off-guard.</p>",["rogue"]),
-   B.action(nid(),"Disguised as an Orphan","passive","<p>Passes as one of Lamm's Lambs; "+chk("type:perception|dc:17")+" vs his Deception to spot him before he Sneak Attacks.</p>"),
-   B.action(nid(),"Surrender & Inform","free","<p>At &lt;half HP he talks; knows the fishery and Gaedren's routine except the den (A14).</p>"),
+   B.action(nid(),"Disguised as an Orphan","passive","<p>Passes as one of Lamm's Lambs; "+chk("type:perception|dc:17")+" against his Deception DC to spot him before he Sneak Attacks.</p>"),
    B.lore(nid(),"Streetwise Lore",6)],
-  notes="<p><strong>Role:</strong> taskmaster over the orphans in A7; hides among them; can surrender and inform.</p>",
+  notes="<p><strong>Role:</strong> gnome taskmaster over the orphans in A7; dresses as one of them and hides in their midst.</p>"
+        "<p><strong>Behavior:</strong> orders the orphans to attack and opens the A4 door to loose Bloo. At less than half HP he surrenders and tells the PCs everything he knows about the fishery and Gaedren's routine — except what lies in the den (A14).</p>",
   folder=F["a_creatures"], size="sml", blurb="Gnome taskmaster who hides among the orphans", token_src=TOK("hookshanks-gruller")))
 
 AW("giggles", B.npc(A["giggles"],"Giggles",1,16,24,7,5,3,5,
@@ -256,9 +261,9 @@ AW("drain-spider", B.npc(A["drainspider"],"Drain Spider",-1,15,8,3,6,2,5,
   {"str":-2,"dex":4,"con":1,"int":-5,"wis":1,"cha":-4},25,
   {"stealth":6,"athletics":3},["animal"],[],
   [B.strike(nid(),"Fangs",7,"1d4","piercing",["finesse"],[("1d4","poison")]),
-   B.action(nid(),"Drain Spider Venom","passive","<p><strong>Saving Throw</strong> "+chk("type:fortitude|dc:15")+"; <strong>Stage 1</strong> 1d4 poison + enfeebled 1 (1 round). A spider that smells Gaedren's vermin repellent (looted in A13) is sickened and won't approach a coated creature.</p>",["poison"]),
-   B.action(nid(),"Lunge","passive","<p>Attacks the first creature to enter its lair, off-guard to the surprised target.</p>")],
-  notes="<p>Cat-sized vermin nesting in the wreck (A10 = 1; A11 = 4). Trivially repelled by vermin repellent.</p>",
+   B.action(nid(),"Drain Spider Venom","passive","<p><strong>Saving Throw</strong> "+chk("type:fortitude|dc:15")+"; <strong>Stage 1</strong> 1d4 poison damage and enfeebled 1 (1 round).</p>",["poison"])],
+  notes="<p>Cat-sized vermin nesting in the wreck — 1 in A10, 4 in A11. It lunges at the first creature to enter its lair (off-guard to the surprised target).</p>"
+        "<p>A creature smelling of the vermin repellent looted in A13 auto-repels them, trivializing the A11 nest.</p>",
   folder=F["a_creatures"], senses=[{"type":"darkvision"},{"acuity":"imprecise","type":"tremorsense","range":30}],
   other_speeds=[{"type":"climb","value":25}], size="tiny", blurb="Aggressive venomous spider", token_src=TOK("drain-spider")))
 
@@ -266,19 +271,17 @@ AW("jigsaw-shark", B.npc(A["jigsawshark"],"Jigsaw Shark",1,16,20,7,6,3,7,
   {"str":3,"dex":2,"con":2,"int":-4,"wis":2,"cha":-2},5,
   {"athletics":8},["animal","aquatic"],[],
   [B.strike(nid(),"Jaws",8,"1d8+3","piercing",["deadly-d8"]),
-   B.action(nid(),"Aquatic Ambush","1","<p>While hidden in water, Swim up to Speed and Strike; target off-guard.</p>"),
-   B.action(nid(),"Reluctant Leaper","passive","<p>Attacks anything that falls in the water, but only leaps onto the underpier (A12) if attacked and damaged first.</p>")],
-  notes="<p>Scavenger under the fishery. Avoidable if the PCs stay dry; the hazards feed creatures to it.</p>",
+   B.action(nid(),"Aquatic Ambush","1","<p>While hidden in water, Swim up to its Speed and make a Jaws Strike; the target is off-guard.</p>")],
+  notes="<p>Scavenger beneath the fishery; avoidable if the PCs stay dry. It attacks anything that falls into the water, but only leaps onto the underpier (A12) if it is first attacked and damaged. The boardwalk and rotten-deck hazards exist to feed it.</p>",
   folder=F["a_creatures"], senses=[{"acuity":"imprecise","type":"scent","range":30}],
   other_speeds=[{"type":"swim","value":35}], blurb="River shark beneath the fishery", token_src=TOK("jigsaw-shark")))
 
 AW("lamms-lamb", B.npc(A["orphan"],"Lamm's Lamb (Orphan)",-1,15,6,2,6,3,5,
   {"str":-2,"dex":3,"con":0,"int":0,"wis":-1,"cha":0},25,
   {"acrobatics":7,"thievery":7,"stealth":6},["humanoid","human"],["Common"],
-  [B.strike(nid(),"Pitchfork (improvised)",5,"1d6-1","piercing",["reach","improvised"]),
-   B.action(nid(),"Cower","passive","<p>An orphan that takes damage flees to A8, or out of the fishery if the thugs are down. Orphans invaded at night are too frightened to fight.</p>"),
-   B.action(nid(),"Rally to the Heroes","passive","<p>A PC can rally an orphan ("+chk("type:diplomacy|dc:15")+"; Intimidation fails) to Aid or reveal info. <strong>Non-combatants — not an XP source for killing.</strong> Rescuing them is the dungeon's heart (a 'Missing Child' background payoff).</p>")],
-  notes="<p>Enslaved child pickpockets: 9 by day across A7/A8, 26 asleep in A8 at night. The moral core of the dungeon.</p>",
+  [B.strike(nid(),"Pitchfork (improvised)",5,"1d6-1","piercing",["reach","improvised"])],
+  notes="<p>Enslaved child pickpockets — 9 toiling by day across A7/A8, all 26 asleep in A8 at night. <strong>The moral core of the dungeon, and never an XP-for-kill source.</strong></p>"
+        "<p><strong>Behavior:</strong> an orphan that takes damage flees to A8, or out into the slums once the thugs are down; those invaded at night are too frightened to fight. A PC can rally one with "+chk("type:diplomacy|dc:15")+" (Intimidation fails) to Aid or reveal information. Rescuing them pays off a 'Missing Child' background.</p>",
   folder=F["a_creatures"], size="sml", blurb="Enslaved orphan ('Lamm's Lamb')", token_src=TOK("orphan")))
 
 # =====================================================================
@@ -377,7 +380,7 @@ pages.append(newpage("hook","Haunted Fortunes",
 
 # 3. Scene Setup ---------------------------------------------------------------
 pages.append(newpage("scene","Scene Setup",
-  "<p><strong>No maps are shipped</strong> (copyright). Open the "+f"@UUID[Scene.{SCN}]{{Old Fishery scene}}"+" — its map-note pins already link to each area page below, and its tokens reference the converted actors.</p>"
+  "<p><strong>No maps are shipped</strong> (copyright). Open the "+scn(SCN,"Old Fishery scene")+" — its map-note pins already link to each area page below, and its tokens reference the converted actors.</p>"
   +"<p>Drop in a battlemap (Racooze's free CotCT set, or your own at <code>assets/maps/01-old-fishery.webp</code>), then nudge the pins and tokens onto it — positions are staged in a grid for now (<strong>NEEDS GM REVIEW</strong>); the <em>links</em> are already correct. Drag "+mc("crocodile","Crocodile")+" (rename 'Gobblegut') into "+pg(P["A13"],"A13")+" and "+mc("guarddog","Guard Dog")+" ('Bloo') into "+pg(P["A4"],"A4")+"/"+pg(P["A8"],"A8")+" from the pf2e Monster Core compendium.</p>"
   +SEC("<p>The fishery is two map levels — an upper floor (A1–A9) and the waterline understructure (A10–A14). When you add the real map, split this into two scenes and re-pin; the area pages are already ordered for that split.</p>"),level=2))
 

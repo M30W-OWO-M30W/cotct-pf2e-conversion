@@ -108,7 +108,13 @@ function resolveUuid(target, rel) {
     return;
   }
   if (target.startsWith("Compendium.")) {
-    if (!target.startsWith(`Compendium.${MODULE_ID}.`)) info.push(`external ${target.split(".").slice(0,3).join(".")}  (${rel})`);
+    const parts = target.split(".");
+    if (parts[1] === MODULE_ID) {                 // our own compendium link — verify it resolves
+      const type = parts[3], id = parts[4];
+      if (idx[type] && !idx[type].has(id)) problems.push(`BROKEN ${rel}: ${target} not found in module compendium`);
+    } else {
+      info.push(`external ${parts.slice(0, 3).join(".")}  (${rel})`);
+    }
     return;
   }
   const parts = target.split(".");
