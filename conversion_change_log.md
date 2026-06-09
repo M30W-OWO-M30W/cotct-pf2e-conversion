@@ -54,12 +54,12 @@ These apply across the whole conversion and are detailed in
 ### CHG-0003 — Per-chapter PF2e level targets (default 1:1 mapping)
 - **Chapter/location:** GLOBAL
 - **Original:** PF1e levels — Ch1 1–4, Ch2 4–7, Ch3 7–9, Ch4 9–11, Ch5 11–14, Ch6 14–16.
-- **New (provisional):** Same span in PF2e (1 → 16/17). To be frozen after Phase-1 research cross-check; PF2e's flatter math may allow trimming a few redundant encounters without changing each chapter's ending level.
-- **Source:** PF2e rules necessity / Balance correction.
-- **Severity:** Minor (becomes Moderate if any chapter's level span is changed — separate entry will be filed).
-- **In journal?** n-a.
-- **Foundry path:** PROJECT_PLAN.md §2; Conversion Guide (pending).
-- **GM review:** pending (after research).
+- **New (CONFIRMED 2026-06-09):** Preserve the native **1 → 17** story unchanged, and additionally **stub an optional post-finale arc** from Appendix 1's "Continuing the Campaign" hooks (Kazavon Rises / Sorshen's Legacy / Rulers of Korvosa) that players can push into beyond the ending for higher-level play. Main conversion is **not** stretched to 20.
+- **Source:** PF2e rules necessity + GM choice (story sanctity).
+- **Severity:** Minor (main story); the post-game arc is new optional content (built after the main conversion).
+- **In journal?** n-a (post-game arc → its own journal in a later phase).
+- **Foundry path:** PROJECT_PLAN.md §2; Appendices journal (pending).
+- **GM review:** resolved.
 
 ### CHG-0004 — Copyright firewall (summaries, not reproduction; no shipped art)
 - **Chapter/location:** GLOBAL
@@ -103,14 +103,15 @@ These apply across the whole conversion and are detailed in
 - **Chapter/location:** GLOBAL
 - **Original:** Copyrighted AP maps in the hardcover.
 - **New:** Ship **no** maps; scene records reference **Racooze's CotCT Battlemaps** (free Foundry module, Community Use) by name + name the expected file; GM supplies legal copies. Author scene-planning notes where coverage is uncertain (esp. the Vivified Labyrinth's 4 states).
-- **Source:** Foundry implementation need / legal.  **Severity:** Minor.  **In journal?** n-a.  **GM review:** **pending** — confirm OK to depend on Racooze (G-Q5).
+- **Source:** Foundry implementation need / legal.  **Severity:** Minor.  **In journal?** n-a.  **GM review:** **resolved (2026-06-09)** — GM approved depending on Racooze's free Community-Use battlemaps.
 
 ### Subsystem conversions (finalize CHG-0005 framework)
 
 > All map to official PF2e **Remaster** subsystems per `research/research_index.md` §F. Each is built once and reused; full rules live in the Conversion-Guide journal + a helper macro/rolltable where useful. Severity Moderate unless noted; GM review *pending* until the relevant chapter is playtested.
 
-- **CHG-0010 — Harrowing → Harrow Deck item + narrative reading**, reroll pool as hero-point-style suit boons (default) or the Stolen Fate *Harrowing* ritual (GM choice, G-Q6). Harrow Deck of Many Things = bespoke high-level item translating the 54 results. *Original:* PF1e 54-card Harrow + Harrow Points (App 3).
-- **CHG-0011 — Blood Veil → virulent PF2e disease** (Fort DC scaled to party level ~18–20; substitute drained/enfeebled/clumsy + HP for the PF1e Con+Cha damage) + an **epidemic clock/Victory-Point** tracker replacing "Survivor Count," with a per-PC daily flat-check exposure. *Original:* PF1e fixed-DC Fort disease + % daily-exposure subsystem (Ch2/App 4). **Severity Moderate; GM review pending (G-Q4 plague structure).**
+- **CHG-0010 — Harrowing → Harrow Deck item + narrative reading**, reroll pool as **hero-point-style suit boons (CONFIRMED 2026-06-09)**; the Stolen Fate *Harrowing* ritual offered as an optional swap. Harrow Deck of Many Things = bespoke high-level item translating the 54 results. *Original:* PF1e 54-card Harrow + Harrow Points (App 3). *Review:* resolved.
+- **CHG-0011 — Blood Veil → virulent PF2e disease** (Fort DC scaled to party level ~18–20; substitute drained/enfeebled/clumsy + HP for the PF1e Con+Cha damage). *Original:* PF1e fixed-DC Fort disease + % daily-exposure subsystem (Ch2/App 4). *Base disease build:* Severity Moderate; review none. **→ EXTENDED by CHG-0011b below.**
+- **CHG-0011b — PERSISTENT plague overlay (Major).** GM chose (2026-06-09) to run Blood Veil as a **persistent background threat across Ch.2–6** (not resolved in Ch.2): an Epidemic Clock tied to city tiers + the canon "Blooding"/Everdawn Pool blood-harvest, with the Ch.2 cure reframed as a *suppressant*. *Source:* GM design choice / QoL. **Severity: MAJOR — `REQUIRES GM APPROVAL`.** Full design + chapter impact: [`design/persistent_plague.md`](design/persistent_plague.md). *In journal?* no (not until approved). *GM review:* **pending approval.**
 - **CHG-0012 — Korvosa settlement stat blocks (×5) → leveled item-availability table + city-state tiers** driven by Reputation; **Rumor Mill → rolltables**. *Original:* PF1e settlement stats (Base Value/Purchase Limit/etc., App 2).
 - **CHG-0013 — Respect Points / Rebellion Points / faction standing → Reputation + Victory Points.** *Original:* bespoke PF1e point trackers (Ch4/Ch6).
 - **CHG-0014 — Court/social influence → Influence subsystem** (per-NPC Influence blocks, DCs from level-based table). *Original:* PF1e Diplomacy ladders (Devargo, doctors' soiree, Emperor research, war council).
