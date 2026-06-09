@@ -51,7 +51,7 @@ ends on; any such change is logged per-encounter.
 
 See `foundry-module/CONVERSION_NOTES.md` for the authoritative copy. In brief:
 
-- **Foundry** v13 Stable (build 351), **PF2e system** 7.12.2 — ✅ confirmed 2026-06-09.
+- **Foundry** v14 (build 363), **PF2e system** 8.2.0 — ✅ confirmed 2026-06-09. (Schema authored against pf2e `master` = 8.2.0, so it matches the target exactly.)
 - **Ruleset: Remaster** (Player Core / GM Core / Monster Core). Off-guard, holy/unholy, no alignment, no spell schools.
 - **Party: 4 PCs**, no Free Archetype / ABP (default). Encounter records also give 3/5/6-PC adjustments.
 

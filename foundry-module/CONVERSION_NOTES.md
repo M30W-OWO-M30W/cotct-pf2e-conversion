@@ -4,17 +4,20 @@ This file records the **standing decisions** that apply across the whole
 conversion. Per-area changes live in each area journal's *Conversion Notes*
 section and are aggregated in `../conversion_change_log.md`.
 
-## Versions  *(✅ confirmed with GM, 2026-06-09)*
+## Versions  *(✅ corrected with GM, 2026-06-09)*
 
 | Target | Value | Status |
 |--------|-------|--------|
-| Foundry VTT | **v13 Stable (build 351)** | ✅ confirmed |
-| PF2e system | **7.12.2** | ✅ confirmed |
-| Ruleset | PF2e **Remaster** (Player Core / GM Core / Monster Core) | ✅ correct — pf2e 7.x is fully Remaster-era |
+| Foundry VTT | **v14 (build 363)** | ✅ confirmed |
+| PF2e system | **8.2.0** | ✅ confirmed |
+| Ruleset | PF2e **Remaster** (Player Core / GM Core / Monster Core) | ✅ correct — pf2e 8.x is Remaster-era |
 
-Actor/item/hazard JSON is authored against the **pf2e v7 schema**. If the system
-is later upgraded across a major version, re-run `npm run validate` and rebuild;
-the system's own migrations handle most field changes on import.
+Actor/item/hazard/journal JSON is authored against the **pf2e v8 schema** — the
+templates in `.work/schema_ref/` were pulled from the pf2e repo's `master`, which
+is itself version **8.2.0** (Foundry 14.360–14.363), so the schema matches the
+target exactly. `module.json` declares Foundry `verified: 14` and pf2e
+`verified: 8.2.0`. If the system later jumps a major version, re-run
+`npm run validate` and rebuild; the system migrates most field changes on import.
 
 ## Ruleset: Remaster
 
