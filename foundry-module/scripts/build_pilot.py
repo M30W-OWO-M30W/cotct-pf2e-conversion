@@ -86,6 +86,31 @@ def box(code, fallback_html):
     t = verbatim(RABOX.get(code, ""))
     return B.s_read(f"<p>{t}</p>") if t else B.s_read(fallback_html)
 
+def _tc(s):  # title-case that respects apostrophes ("ZELLARA'S HOME" -> "Zellara's Home")
+    return re.sub(r"[A-Za-z][A-Za-z']*", lambda m: m.group(0)[0].upper()+m.group(0)[1:].lower(), s)
+
+def apspan(start, stop):
+    """Verbatim MULTI-paragraph extract from the GM's AP source: from the paragraph
+    containing `start` up to (not including) the one containing `stop`. Cleans the
+    OCR/layout noise (image & page markers, stray page numbers, all-caps captions,
+    leading drop-caps), keeps sub-headings as bold leads. Empty if the file is absent."""
+    paras = _paras()
+    si = next((k for k, p in enumerate(paras) if start in p), None)
+    if si is None: return ""
+    ei = next((k for k, p in enumerate(paras) if k > si and stop in p), len(paras))
+    out = []
+    for p in paras[si:ei]:
+        if not p or p.startswith("<!--"): continue          # image / page markers
+        if p.startswith("#"):                                # surviving heading -> bold lead
+            t = p.lstrip("# ").strip()
+            if t: out.append(f'<p class="subhead"><strong>{_tc(t)}</strong></p>')
+            continue
+        if re.fullmatch(r"\d+", p): continue                 # stray page numbers
+        if p.isupper() and len(p.split()) <= 4: continue     # captions ("QUEEN ILEOSA")
+        p = re.sub(r"^([A-Z]) ([a-z])", r"\1\2", p)          # drop-cap "T he" -> "The"
+        out.append(f"<p>{p}</p>")
+    return "".join(out)
+
 # =====================================================================
 # FOLDERS (one tree per document type; Kingmaker palette)
 # =====================================================================
@@ -269,11 +294,10 @@ def newpage(key,name,html,level=3):
 
 pages=[]
 # 0. Chapter Background --------------------------------------------------------
+_bg = apspan("he city of Korvosa was founded in 4407", "HAUNTED FORTUNES")
+_bg_fallback = "<p><strong>For the GM.</strong> Korvosa was raised atop a site the Shoanti guarded — beneath Castle Korvosa lie the fangs of Kazavon, a long-dead dragon-tyrant whose evil the city never suspected. Aging King Eodred II rules without an heir; his young queen Ileosa was corrupted by the fangs and has secretly engineered his murder (a Red Mantis poison via his half-brother Venster), silenced the seneschal Neolandus, and allied with the Red Mantis and the cult of Urgathoa. As the chapter opens the king is days from death and the city teeters on anarchy.</p>"
 pages.append(newpage("background","Chapter Background",
-  "<p><strong>For the GM.</strong> Three centuries ago Korvosa was raised on the Varisian coast atop a site the native Shoanti had long guarded — for buried beneath what became <strong>Castle Korvosa</strong> lie the <strong>fangs of Kazavon</strong>, a relic of a long-dead dragon-tyrant whose slow, patient evil the city never suspected.</p>"
-  +"<p>Today the city is ruled by the aging King <strong>Eodred II</strong>, who has produced no heir — the latest in a line of rulers dogged by the so-called <em>curse of the Crimson Throne</em>. His young wife, Queen <strong>Ileosa</strong>, is widely written off as a beauty who married for luxury. Korvosa is about to learn how wrong that assessment is.</p>"
-  +SEC("<p><strong>The hidden plot — the campaign's central secret.</strong> Ileosa found the fangs in a sealed vault beneath the castle and was infused with a shard of Kazavon's cruelty: ambition with every restraint stripped away. To seize the throne she engineered the king's death — a Red Mantis poison (<em>fool's leprosy</em>) fed to him through his estranged half-brother <strong>Venster</strong>, designed to mimic a disease so curative magic fails. She then murdered Venster, and when the seneschal <strong>Neolandus</strong> grew suspicious she set the Red Mantis on him — he barely survived and has gone into hiding. She is quietly allied with the <strong>Red Mantis assassins</strong> and the <strong>cult of Urgathoa</strong>. As this chapter opens, the king is days from death and the city teeters on the edge of anarchy.</p>")
-  +"<p><strong>The party's hook.</strong> Every PC has been wronged by the petty crime-lord <strong>Gaedren Lamm</strong> — the shared grievance the fortune-teller Zellara uses to draw them together (see "+pg(P["hook"],"Haunted Fortunes")+"). They hunt Gaedren to his lair in the Old Fishery; as they emerge with his spoils, King Eodred II dies and Korvosa erupts into the riots of <em>A City Gone Mad</em>.</p>"
+  (_bg or _bg_fallback)
   +B.s_milestone("<p><strong>Advancement (milestone — CHG-0007):</strong> begin at 1st level · reach <strong>2nd</strong> after the Old Fishery · 3rd before Eel's End · 4th before the Dead Warrens · well into 4th by the chapter's end.</p>"),
   level=1))
 # 1. Overview & Run Sheet ------------------------------------------------------
@@ -286,13 +310,12 @@ pages.append(newpage("overview","Overview",
   +SEC("<p><strong>The twist the players don't have yet:</strong> Zellara is already dead. Gaedren murdered her and fed her to Gobblegut; her spirit haunts her stolen deck. The PCs only learn this when they find her head in "+pg(P["A14"],"A14")+" — so play her in the intro as a warm, desperate ally, not a mystery.</p>"),level=1))
 
 # 2. Haunted Fortunes — the hook ----------------------------------------------
+_hf = apspan("Curse of the Crimson Throne provides the PCs with a shared nemesis", "OLD FISHERY")
+_hf_fallback = "<p>A harrow card reaches each PC, naming Gaedren Lamm and an address — 3 Lancet Street. There the fortune-teller Zellara gathers them, recounts how Gaedren's thugs murdered her son over her stolen harrow deck, and asks them to bring him to justice; she performs a harrowing to prepare them. Zellara is in fact a haunt — already dead — though the PCs need not learn this until they find her head in Gaedren's den.</p>"
 pages.append(newpage("hook","Haunted Fortunes",
   SR("Part 1: Haunted Fortunes","14-16")
-  +RA("<p>It arrives where only you would find it — tucked in a spellbook, an altar, a stranger's pocket, the bottom of your tankard: a single harrow card, your card, with a few lines of bold ink on the back. It names Gaedren Lamm, and an address.</p>")
-  +"<p>Each PC receives a harrow card matched to their highest ability + outlook, bearing an identical summons (Handout 1-1): come to <strong>3 Lancet Street</strong> at sunset. Asking around, or a "+chk("type:society|dc:12")+", identifies the address as the home of the Varisian fortune-teller <strong>Zellara Esmeranda</strong>.</p>"
-  +"<p>At her home the PCs meet, compare cards, and Zellara tells her tale: Gaedren's pickpockets stole her heirloom harrow deck; her son Eran recovered it and was murdered for it; the Guard did nothing. She has tracked Gaedren to the Old Fishery at Westpier 17 and asks the PCs to bring him to justice. She then performs a <strong>harrowing</strong> to prepare them.</p>"
-  +B.s_skill("<p><strong>First Harrowing (CHG-0010).</strong> Run the reading as foreshadowing — a coming time of unrest and violence, and that the PCs are fated to become heroes of Korvosa. Mechanically, grant each PC a small pool of <strong>hero-point-style suit boons</strong> drawn from "+itm("harrowdeck","Zellara's deck")+". This is the campaign's recurring subsystem; it returns at the start of every chapter.</p>")
-  +SEC("<p>Zellara is a haunt, not a living woman — her presence is split between this home and her stolen deck in Gaedren's lair, and her food, furnishings, and the welcome note are half-illusion ("+chk("type:will|dc:18")+" to see through; success only makes them ghostly, not absent). If players guess early, roll with it — her purpose is simply to unite the party and aim them at Gaedren. After the fishery, a return visit finds the home long-abandoned and dust-choked; thereafter she manifests only through the deck.</p>")
+  +(_hf or _hf_fallback)
+  +B.s_skill("<p><strong>First Harrowing → PF2e (CHG-0010).</strong> Run the reading as foreshadowing (a coming time of unrest; the PCs are fated heroes), then grant each PC a small pool of <strong>hero-point-style suit boons</strong> via "+itm("harrowdeck","Zellara's deck")+" — the recurring subsystem from here on. The illusions in her home are "+chk("type:will|dc:18")+" to disbelieve.</p>")
   ,level=2))
 
 # 3. Scene Setup ---------------------------------------------------------------
@@ -446,6 +469,21 @@ journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"]
 B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)
 
 # =====================================================================
+# INTRODUCTION — detached top-level journal (root, like Kingmaker's "Introduction")
+# =====================================================================
+INTRO_JID = "cotctIntro000001"
+_premise  = apspan("Korvosa, the Jewel of Varisia, has long sparkled", "USING THIS BOOK")
+_synopsis = apspan("Curse of the Crimson Throne begins as a group of diverse characters", "CAMPAIGN TRAITS")
+intro_pages = [
+  B.page(nid(), "Long Live the Queen!", _premise or
+    "<p>Korvosa, the Jewel of Varisia, lies under the shadow of the Curse of the Crimson Throne — no monarch has died of old age or produced an heir while ruling. King Eodred II's grip is firm but tenuous, and the city waits for the curse to claim him.</p>", level=1),
+  B.page(nid(), "Campaign Synopsis", _synopsis or
+    "<p>The PCs are drawn together to take revenge on the crime-lord Gaedren Lamm; as they do, the king dies and Queen Ileosa seizes Korvosa. Recruited to restore order, they uncover her hand behind a plague and worse — she has taken on the mantle of the dragon Kazavon via the Crown of Fangs. Only the blade that slew Kazavon, recovered from haunted Castle Scarwall, can end her, in a final reckoning at the Sunken Queen.</p>", level=1),
+]
+intro_journal = B.journal_entry(INTRO_JID, "Introduction", intro_pages, folder=None)
+B.write("journals", "00-introduction", copy.deepcopy(intro_journal), embed_pages=True)
+
+# =====================================================================
 # SCENE — Old Fishery placeholder with map-note pins -> area pages + staged tokens
 # =====================================================================
 GRID=100; W=2400; H=1800
@@ -483,7 +521,7 @@ def strip(doc):
 adv = B.adventure(ADV,"Curse of the Crimson Throne — Ch.1: Edge of Anarchy (pilot)",
   "modules/cotct-pf2e-conversion/assets/art/cover.webp",
   "<p>Phase-2 pilot: the Old Fishery (the hunt for Gaedren Lamm). Imports the chapter journal, the Old Fishery scene (map-note pins + staged tokens), the converted NPCs/hazards, and the treasure — organized into folders. Supply your own maps (Racooze's free CotCT battlemaps).</p>",
-  [strip(f) for f in folders], [strip(journal)], [strip(sc)],
+  [strip(f) for f in folders], [strip(intro_journal), strip(journal)], [strip(sc)],
   [strip(a) for a in actors]+[strip(h) for h in hazards], [strip(i) for i in items])
 B.write("adventure","cotct-edge-of-anarchy",copy.deepcopy(adv))
 
