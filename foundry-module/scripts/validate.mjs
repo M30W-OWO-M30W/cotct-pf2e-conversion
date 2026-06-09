@@ -141,6 +141,29 @@ for (const pack of packDirs) {
   }
 }
 
+// ---- content quality (journals): catch OCR splits + un-enriched DCs at build ----
+// Non-fatal: these are heuristics (legit prose can trip them), so they warn rather
+// than fail. Runs on the built _source — no Foundry needed.
+const warnings = [];
+for (const pack of packDirs) {
+  if (pack !== "journals") continue;
+  for (const file of walk(join(PACKS_DIR, pack, "_source"))) {
+    let doc; try { doc = JSON.parse(readFileSync(file, "utf8")); } catch { continue; }
+    for (const p of doc.pages || []) {
+      const html = p.text?.content || "";
+      for (const m of html.matchAll(/<p>(.*?)<\/p>/gs)) {            // bare <p> only (skips .subhead etc.)
+        const txt = m[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+        if (!txt || txt === "Player Handout") continue;
+        if (/[a-z]/.test(txt[0]) || !/[.!?:"”)]$/.test(txt))
+          warnings.push(`split? [${doc.name} › ${p.name}] "${txt.split(" ").slice(0, 5).join(" ")}…"`);
+      }
+      const text = html.replace(/@Check\[[^\]]*\]/g, "").replace(/<[^>]+>/g, "");
+      const dc = text.match(/DC\s*\d+/);
+      if (dc) warnings.push(`raw DC not @Check [${doc.name} › ${p.name}]: "${dc[0]}"`);
+    }
+  }
+}
+
 // ---- report ----
 const lines = [], log = s => { lines.push(s); console.log(s); };
 log(`# Foundry validation`);
@@ -148,6 +171,9 @@ log(`packs=${stats.packs} docs=${stats.docs} pages=${stats.pages} links=${stats.
 log("");
 log("## Problems");
 if (problems.length) for (const p of problems) log(`- ${p}`); else log("- none ✅");
+log(`\n## Content warnings (${warnings.length})${warnings.length ? " — review (non-fatal)" : " ✅"}`);
+for (const w of warnings.slice(0, 50)) log(`- ${w}`);
+if (warnings.length > 50) log(`- …and ${warnings.length - 50} more`);
 const ext = [...new Set(info)];
 if (ext.length) { log(`\n## External compendium refs (${ext.length} unique)`); for (const e of ext.slice(0, 60)) log(`- ${e}`); }
 

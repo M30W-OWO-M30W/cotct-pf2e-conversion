@@ -16,12 +16,15 @@ cd "$REPO" || { echo "!! repo not found: $REPO"; exit 1; }
 echo "==> Building pilot (build_pilot.py)..."
 python3 scripts/build_pilot.py || { echo "!! build_pilot.py failed"; exit 1; }
 
-echo "==> Validating links/ids..."
-if ! npm run --silent validate | grep -q "problems=0"; then
+echo "==> Validating links/ids + content..."
+vout=$(npm run --silent validate)
+if ! printf '%s' "$vout" | grep -q "problems=0"; then
   echo "!! validation reported problems — aborting sync:"
-  npm run --silent validate | sed -n '/# Foundry/,/Problems/p'
+  printf '%s\n' "$vout" | sed -n '/# Foundry/,/Problems/p'
   exit 1
 fi
+# surface the non-fatal content warnings (OCR splits / un-enriched DCs)
+printf '%s\n' "$vout" | sed -n '/## Content warnings/,/## External/p' | sed '/## External/d'
 
 echo "==> Compiling packs to LevelDB..."
 npm run --silent build >/dev/null || { echo "!! npm run build failed"; exit 1; }
