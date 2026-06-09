@@ -4,18 +4,17 @@ This file records the **standing decisions** that apply across the whole
 conversion. Per-area changes live in each area journal's *Conversion Notes*
 section and are aggregated in `../conversion_change_log.md`.
 
-## Versions  *(⚠️ confirm against your install)*
+## Versions  *(✅ confirmed with GM, 2026-06-09)*
 
-| Target | Value used | Status |
-|--------|-----------|--------|
-| Foundry VTT | v12–v13 (module.json `verified: 13`) | **NEEDS GM CONFIRM** — set to match the install |
-| PF2e system | ≥ 6.0.0 | **NEEDS GM CONFIRM** — affects pack schema; rebuild if newer |
-| Ruleset | PF2e **Remaster** (Player Core / GM Core / Monster Core) | Default chosen |
+| Target | Value | Status |
+|--------|-------|--------|
+| Foundry VTT | **v13 Stable (build 351)** | ✅ confirmed |
+| PF2e system | **7.12.2** | ✅ confirmed |
+| Ruleset | PF2e **Remaster** (Player Core / GM Core / Monster Core) | ✅ correct — pf2e 7.x is fully Remaster-era |
 
-These defaults mirror the GM's existing "Ma'at" PF2e module
-(`compatibility: 12–13`, `pf2e ≥ 6.0.0`). If your PF2e system version differs,
-the actor/item JSON schema may need a field migration before `npm run build`;
-re-run `npm run validate` after any version bump.
+Actor/item/hazard JSON is authored against the **pf2e v7 schema**. If the system
+is later upgraded across a major version, re-run `npm run validate` and rebuild;
+the system's own migrations handle most field changes on import.
 
 ## Ruleset: Remaster
 
