@@ -150,6 +150,11 @@ section.journal-page-content > h1:first-child {
   font-weight: 700; font-size: 0.8em; letter-spacing: 0.04em;
   text-transform: uppercase; opacity: 0.9;
 }
+/* nested sub-blocks (skill / secret / treasure) drop to full width BELOW the
+   floated Creatures card instead of being squeezed into the column beside it */
+.journal-entry-page.text .encounter > .skill,
+.journal-entry-page.text .encounter > .secret,
+.journal-entry-page.text .encounter > .treasure { clear: both; }
 
 /* creature aside — framed "card"; porthole = round-portrait variant */
 .journal-entry-page.text aside.right.token,
@@ -178,14 +183,10 @@ section.journal-page-content > h1:first-child {
   font-size: 0.92em; text-align: left;
 }
 .journal-entry-page.text aside.right li { margin: 0.2em 0; }
-.journal-entry-page.text aside.right img {
-  display: block; width: 100%; height: auto; margin: 0 auto 0.35em;
-  border-radius: 4px;
-}
-.journal-entry-page.text aside.right.porthole img {
-  width: 92px; height: 92px; border-radius: 50%;
-  object-fit: cover; border: 2px solid var(--cotct-crimson);
-}
+/* This module ships NO token art (copyright), so the journal-aside token
+   thumbnails would always be broken images — hide them. The creature @UUID
+   links below are what matter; full art lives on the actor/token. */
+.journal-entry-page.text aside.right img { display: none; }
 .journal-entry-page.text img.flip { transform: scaleX(-1); }
 
 /* ---- skill-check callout ----------------------------------------------- */
