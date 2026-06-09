@@ -26,6 +26,8 @@ TOK = lambda slug: f"modules/cotct-pf2e-conversion/assets/tokens/{slug}.webp"
 
 ids = B._idgen(424242)           # folders, pages, notes, tokens
 def nid(): return next(ids)
+sids = B._idgen(987654)          # GM-secret block ids (separate stream; doesn't perturb the pool)
+def sid(): return next(sids)
 
 # UUID link helpers (bare world-UUIDs intra-adventure; Compendium for SRD)
 def act(k,label): return f"@UUID[Actor.{A[k]}]{{{label}}}"
@@ -208,88 +210,180 @@ IW("plus-one-dagger", {"_id":A["dagger"],"img":"systems/pf2e/icons/equipment/wea
 # JOURNAL — one fat "1. Edge of Anarchy" entry, Kingmaker page model
 # =====================================================================
 SR = lambda area,p: f'<p class="source"><em>Source: CotCT (2016 HC), Ch.1, {area} — p.{p}.</em></p>'
-PAGE_KEYS=["overview","scene","features","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10",
+def RA(html): return B.s_read(html)                      # read-aloud / boxed text
+def SEC(html): return B.s_secret(html, sid())            # GM-hidden reveal block
+PAGE_KEYS=["overview","hook","scene","features","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10",
            "A11","A12","A13","A14","npcs","treasure","conv"]
 P={k:nid() for k in PAGE_KEYS}   # pre-assign so forward relative links resolve
 def newpage(key,name,html,level=3):
     return B.page(P[key],name,html,level=level)
 
 pages=[]
-# 1. Overview & Run Sheet
+# 1. Overview & Run Sheet ------------------------------------------------------
 pages.append(newpage("overview","Overview & Run Sheet",
-  B.s_desc("<p>The ghost-spirit Zellara draws the PCs together with a harrow reading and sends them to kill crime-lord <strong>Gaedren Lamm</strong>, who hides in the <strong>Old Fishery</strong> with his thugs, his pet crocodile <strong>Gobblegut</strong>, and his enslaved orphans. The PCs recover Queen Ileosa's stolen brooch, Gaedren's ledger, and Zellara's haunted harrow deck — and as they leave, the king dies and Korvosa erupts.</p>")
-  +B.s_gm("<p><strong>Party:</strong> 4 PCs, level 1 → 2 (milestone on clearing the fishery). <strong>System:</strong> PF2e Remaster (Foundry v14 / pf2e 8.2.0).</p>"
-   "<p><strong>Run it like Gotham.</strong> Tell players up front that Gaedren is a <em>connector</em>, not a final boss — this avoids the classic 'Lamm is a Lamb' let-down. Day: 9 orphans toil, thugs patrol, A7 open. Night: doors lock, 26 orphans sleep in A8, "+mc("guarddog","Bloo")+" roams (alarm). The orphans are non-combatants; rescuing them is the point.</p>"
-   "<p><strong>First Harrowing (CHG-0010):</strong> run Zellara's reading as foreshadowing (coming unrest; the PCs are fated heroes), then grant each PC a small pool of hero-point-style suit boons via "+itm("harrowdeck","her harrow deck")+".</p>"),level=1))
-# 2. Scene Setup
+  RA("<p>A harrow card finds its way to each of you — and a hand-inked message naming a man you each have cause to hate: <strong>Gaedren Lamm</strong>. The fortune-teller Zellara knows where he dens, and asks you to end him.</p>")
+  +"<p>Zellara's reading (see "+pg(P["hook"],"Haunted Fortunes")+") draws the party together and points them at the <strong>Old Fishery</strong>, where crime-lord Gaedren Lamm hides with his thugs, his pet crocodile "+mc("crocodile","Gobblegut")+", and a workforce of enslaved orphans. In his den the PCs recover "+itm("brooch","Queen Ileosa's stolen brooch")+", "+itm("ledger","Gaedren's coded ledger")+", and "+itm("harrowdeck","Zellara's haunted harrow deck")+" — and as they step back into the street, the king dies and Korvosa erupts into the riots of <em>A City Gone Mad</em>.</p>"
+  +B.s_milestone("<p><strong>Advancement:</strong> the party should reach <strong>2nd level</strong> after dealing with Gaedren. Milestone leveling (CHG-0007).</p>")
+  +"<p><strong>Party:</strong> 4 PCs, level 1 → 2. <strong>System:</strong> PF2e Remaster (Foundry v14 / pf2e 8.2.0).</p>"
+  +"<p><strong>Run it like Gotham.</strong> Tell players up front that Gaedren is a <em>connector</em>, not a campaign villain — this defuses the classic 'Lamm is a Lamb' let-down. By <strong>day</strong> 9 orphans toil, the thugs patrol, and the A7 doors stand open; by <strong>night</strong> every door locks, 26 orphans sleep in "+pg(P["A8"],"A8")+", and "+mc("guarddog","Bloo")+" prowls as a living alarm. The orphans are non-combatants — rescuing them is the heart of the dungeon.</p>"
+  +SEC("<p><strong>The twist the players don't have yet:</strong> Zellara is already dead. Gaedren murdered her and fed her to Gobblegut; her spirit haunts her stolen deck. The PCs only learn this when they find her head in "+pg(P["A14"],"A14")+" — so play her in the intro as a warm, desperate ally, not a mystery.</p>"),level=1))
+
+# 2. Haunted Fortunes — the hook ----------------------------------------------
+pages.append(newpage("hook","Haunted Fortunes — Zellara's Harrowing",
+  SR("Part 1: Haunted Fortunes","14-16")
+  +RA("<p>It arrives where only you would find it — tucked in a spellbook, an altar, a stranger's pocket, the bottom of your tankard: a single harrow card, your card, with a few lines of bold ink on the back. It names Gaedren Lamm, and an address.</p>")
+  +"<p>Each PC receives a harrow card matched to their highest ability + outlook, bearing an identical summons (Handout 1-1): come to <strong>3 Lancet Street</strong> at sunset. Asking around, or a "+chk("type:society|dc:12")+", identifies the address as the home of the Varisian fortune-teller <strong>Zellara Esmeranda</strong>.</p>"
+  +"<p>At her home the PCs meet, compare cards, and Zellara tells her tale: Gaedren's pickpockets stole her heirloom harrow deck; her son Eran recovered it and was murdered for it; the Guard did nothing. She has tracked Gaedren to the Old Fishery at Westpier 17 and asks the PCs to bring him to justice. She then performs a <strong>harrowing</strong> to prepare them.</p>"
+  +B.s_skill("<p><strong>First Harrowing (CHG-0010).</strong> Run the reading as foreshadowing — a coming time of unrest and violence, and that the PCs are fated to become heroes of Korvosa. Mechanically, grant each PC a small pool of <strong>hero-point-style suit boons</strong> drawn from "+itm("harrowdeck","Zellara's deck")+". This is the campaign's recurring subsystem; it returns at the start of every chapter.</p>")
+  +SEC("<p>Zellara is a haunt, not a living woman — her presence is split between this home and her stolen deck in Gaedren's lair, and her food, furnishings, and the welcome note are half-illusion ("+chk("type:will|dc:18")+" to see through; success only makes them ghostly, not absent). If players guess early, roll with it — her purpose is simply to unite the party and aim them at Gaedren. After the fishery, a return visit finds the home long-abandoned and dust-choked; thereafter she manifests only through the deck.</p>")
+  ,level=2))
+
+# 3. Scene Setup ---------------------------------------------------------------
 pages.append(newpage("scene","Scene Setup (maps & VTT)",
-  B.s_gm("<p><strong>Map setup.</strong> Open the "+f"@UUID[Scene.{SCN}]{{Old Fishery scene}}"+" — its map-note pins already link to each area page below and its tokens reference the converted actors. Drop in a map (Racooze's CotCT battlemaps, or your own at <code>assets/maps/01-old-fishery.webp</code>), then confirm pin/token positions (currently staged — <strong>NEEDS GM REVIEW</strong>). Drag "+mc("crocodile","Crocodile")+" (rename 'Gobblegut') into A13 and "+mc("guarddog","Guard Dog")+" ('Bloo') into A4/A8 from the pf2e compendium.</p>"),level=2))
-# 3. Fishery Features
+  "<p><strong>No maps are shipped</strong> (copyright). Open the "+f"@UUID[Scene.{SCN}]{{Old Fishery scene}}"+" — its map-note pins already link to each area page below, and its tokens reference the converted actors.</p>"
+  +"<p>Drop in a battlemap (Racooze's free CotCT set, or your own at <code>assets/maps/01-old-fishery.webp</code>), then nudge the pins and tokens onto it — positions are staged in a grid for now (<strong>NEEDS GM REVIEW</strong>); the <em>links</em> are already correct. Drag "+mc("crocodile","Crocodile")+" (rename 'Gobblegut') into "+pg(P["A13"],"A13")+" and "+mc("guarddog","Guard Dog")+" ('Bloo') into "+pg(P["A4"],"A4")+"/"+pg(P["A8"],"A8")+" from the pf2e Monster Core compendium.</p>"
+  +SEC("<p>The fishery is two map levels — an upper floor (A1–A9) and the waterline understructure (A10–A14). When you add the real map, split this into two scenes and re-pin; the area pages are already ordered for that split.</p>"),level=2))
+
+# 4. Fishery Features ----------------------------------------------------------
 pages.append(newpage("features","Fishery Features & Layout",
   SR("A. Old Fishery","17")
-  +B.s_gm("<p>A two-floor fishery on pilings over the Jeggare River, on a 13-ft embankment ("+chk("type:athletics|dc:15")+" to climb the slick bank). Doors: "+chk("type:thievery|dc:15")+" to pick; the brass key bypasses all. Standing hazards: "+haz("boardwalk","Slippery Boardwalk")+" (A3) and "+haz("rottendeck","Rotten Ship Deck")+" (A9) — both can dump a PC into "+act("jigsawshark","the shark's")+" water (A12).</p>"),level=2))
+  +RA("<p>A creaking, mold-mottled building of boarded windows and solid old doors, perched on pilings over the Jeggare River. It still renders 'dock-dumpling' slurry from spoiled fish — a cover for the crime-lord who dens beneath it.</p>")
+  +"<p>The fishery sits on a 13-ft embankment ("+chk("type:athletics|dc:15")+" to climb the slick bank). Doors are hardness 5 / 10 HP ("+chk("type:thievery|dc:15")+" to pick, or "+chk("type:athletics|dc:15")+" to force); Yargin's brass key opens them all. Standing hazards: the "+haz("boardwalk","Slippery Boardwalk")+" ("+pg(P["A3"],"A3")+") and the "+haz("rottendeck","Rotten Ship Deck")+" ("+pg(P["A9"],"A9")+") — either can dump a PC into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+").</p>"
+  +"<p><strong>Day vs. night.</strong> The encounters assume a daytime raid (9 orphans working, thugs at their posts). At night every door is locked, Yargin sleeps in "+pg(P["A5"],"A5")+", Giggles and Hookshanks run roving patrols (≈9pm / midnight / 3am), and "+mc("guarddog","Bloo")+" wanders "+pg(P["A8"],"A8")+" — his bark wakes the whole building.</p>"
+  +B.s_skill("<p><strong>The orphans ('Lamm's Lambs').</strong> 9 work the fishery by day; all 26 sleep in "+pg(P["A8"],"A8")+" at night. Rally them with "+chk("type:diplomacy|dc:15")+" (Intimidation fails — they're inured to it); won over, they feed information or lend a hand. They know nothing past "+pg(P["A9"],"A9")+" — those sent below never return.</p>")
+  +SEC("<p>They are <strong>non-combatants and never an XP-for-kill source</strong> (CHG-0107). Invaded at night they're too frightened to fight and flee into the slums once the thugs fall. Treat a rescued orphan as a 'Missing Child' background payoff, not a stat block.</p>"),level=2))
 
-# Area pages A1-A14
+# Area pages A1-A14 ------------------------------------------------------------
 def area(code,name,page_html): pages.append(newpage(code,f"{code}. {name}",page_html))
-area("A1","Front Door", SR("A1","18")+B.s_gm("<p>Locked double doors ("+chk("type:thievery|dc:15")+"); a loud pick or a knock brings "+act("yargin","Yargin")+" from A6.</p>"))
-area("A2","Loading Dock", SR("A2","18")+B.s_gm("<p>A 15-ft dock with slurry barrels; riverside stairs. A7 doors open by day; the A8 door is always locked ("+chk("type:thievery|dc:15")+").</p>"))
-area("A3","Back Alley", SR("A3","18-20")+B.s_gm("<p>The "+haz("boardwalk","Slippery Boardwalk")+" hugs the south wall 13 ft above the river. A Step is safe; moving fast or fighting risks a fall into the shark water. The A6 door is locked.</p>"))
+
+area("A1","Front Door", SR("A1","18")
+  +RA("<p>Weathered double doors stand shut in the fishery's flank, a broken signboard swinging from a length of rusted chain above them. Brine and the stink of week-dead fish hang thick in the air.</p>")
+  +"<p>The main doors are locked ("+chk("type:thievery|dc:15")+"). Most business runs through "+pg(P["A7"],"A7")+", so a knock — or a noisy attempt on the lock — brings "+act("yargin","Yargin")+" up from "+pg(P["A6"],"A6")+" to answer.</p>")
+
+area("A2","Loading Dock", SR("A2","18")
+  +RA("<p>A fifteen-foot loading dock juts from the building. Carts wait half-laden with tar-caked barrels, each daubed with a red, fish-shaped splotch. A rickety stair drops to a second door barely three feet above the river.</p>")
+  +"<p>By day the doors into "+pg(P["A7"],"A7")+" stand open for the daily slurry shipment; the door to "+pg(P["A8"],"A8")+" is always locked ("+chk("type:thievery|dc:15")+"). The orphans do the heavy hauling under Hookshanks' eye.</p>")
+
+area("A3","Back Alley", SR("A3","18-20")
+  +RA("<p>A slippery boardwalk clings to the south wall on barnacle-eaten pilings, worn thin below the waterline. It runs about thirteen feet above the river, sloping down toward the derelict ship to the east.</p>")
+  +"<p>The "+haz("boardwalk","Slippery Boardwalk")+" hazard: a careful pace is safe, but moving fast or fighting on it risks a fall into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+"); the planks also groan and give under heavy loads. The door into "+pg(P["A6"],"A6")+" is locked.</p>"
+  +SEC("<p>Despite its state, this boardwalk is Gaedren's own private way in and out of his den ("+pg(P["A13"],"A13")+") — he uses it only a few times a month, spending days or weeks below to avoid being seen.</p>"))
+
 area("A4","Front Room — Bloo (E1)", SR("A4","19")
-  +B.s_gm("<p>Under the desk sleeps "+mc("guarddog","Bloo")+", Yargin's cur (use <strong>Guard Dog</strong>; rename the token). He attacks strangers on sight and his barks rouse the fishery.</p>")
-  +B.s_encounter('<header class="split"><h3>E1 · Bloo</h3><p>Trivial · 20 XP</p></header>'+f'<aside class="right token"><ul><li>@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.{MC["guarddog"]}]{{Bloo (Guard Dog −1)}}</li></ul></aside>'+"<p>Silence him fast (Stealth/Diplomacy to avoid, or a quick kill) before the barks alert the others.</p>"))
-area("A5","Barracks", SR("A5","20")+B.s_gm("<p>The thugs' bunkroom; they distrust each other and keep no valuables here.</p>"))
-area("A6","Yargin's Office (E2)", SR("A6","19-21")
-  +B.s_gm("<p>"+act("yargin","Yargin Balko")+" works here. A <strong>hidden trapdoor</strong> ("+chk("type:perception|dc:18")+" to spot; barred — "+chk("type:athletics|dc:17")+" to force) drops to A13, a flanking route onto the boss. Yargin holds the brass key.</p>")
-  +B.s_encounter('<header class="split"><h3>E2 · Yargin</h3><p>Low · 40 XP</p></header><aside class="right token"><ul><li>'+act("yargin","Yargin Balko (1)")+"</li></ul></aside><p>Opens with thrown Acid Flasks, then light crossbow. <strong>Flees down the trapdoor to warn Gaedren</strong> if losing.</p>"))
+  +RA("<p>A single desk and a moldering chair stand in the middle of this disused room. A nest of ratty furs and straw is heaped beneath the desk.</p>")
+  +"<p>In theory Yargin meets new customers here — a rarity. Any real noise in this room quickly brings both "+act("yargin","Yargin")+" and "+act("hookshanks","Hookshanks")+" to investigate.</p>"
+  +B.enc("E1 · Bloo","Trivial · 20 XP",
+     "<p>"+mc("guarddog","Bloo")+", Yargin's foul-tempered cur, sleeps under the desk and attacks any unfamiliar scent on sight. While he lives, a thug gets a circumstance bonus to bully the orphans into fighting.</p>"
+     +B.s_skill("<p>Silence him fast — "+chk("type:stealth|dc:15")+" to slip past, "+chk("type:nature|dc:15")+" to calm, or a quick kill — before the barking rouses the fishery.</p>"),
+     B.aside_token([mc("guarddog","Bloo — Guard Dog (−1)")])))
+
+area("A5","Barracks", SR("A5","20")
+  +RA("<p>Two sets of bunks flank a boarded-over window. Three are slept-in; the fourth stands bare.</p>")
+  +"<p>The thugs — Yargin, Hookshanks, and Giggles — share this room. They distrust one another and keep nothing of value here.</p>")
+
+area("A6","Yargin's Office — Yargin (E2)", SR("A6","19-21")
+  +RA("<p>A desk wedged into one corner — its bulk blocking the western door — overflows with chalk-scrawled slate boards. A slouching cabinet leans against the east wall.</p>")
+  +"<p>The fishery's 'books': slates of transactions and addresses, compiled monthly into scrolls in the cabinet — cover paperwork for any Guard inspection. "+act("yargin","Yargin Balko")+" works here and carries the brass key.</p>"
+  +SEC("<p>A floorboard behind the chair is a <strong>hidden, barred trapdoor</strong> ("+chk("type:perception|dc:18")+" to spot; "+chk("type:athletics|dc:17")+" or break to force) dropping straight into the boss's chamber ("+pg(P["A13"],"A13")+"). A meal-pulley rig makes the climb down trivial — a flanking route onto Gaedren that skips the whole lower floor.</p>")
+  +B.enc("E2 · Yargin Balko","Low · 40 XP",
+     "<p>Opens with thrown <strong>Acid Flasks</strong>, then falls back to his crossbow; he's terrified of melee.</p>"
+     +SEC("<p><strong>Morale:</strong> at the first melee hit (or once his acid is spent) Yargin panics and flees down the trapdoor to warn Gaedren — and may lead the PCs right onto the boss. If he reaches the den, start the "+pg(P["A13"],"A13")+" fight with Gobblegut already enraged.</p>"),
+     B.aside_token([act("yargin","Yargin Balko (1)")], img=TOK("yargin-balko"))))
+
 area("A7","Upper Workroom — Hookshanks (E3)", SR("A7","20-22")
-  +B.s_gm("<p>4 orphans toil under "+act("hookshanks","Hookshanks")+", who hides among them ("+chk("type:perception|dc:17")+" to pick out). Slippery floor ("+chk("type:acrobatics|dc:15")+" if moving fast). Locked cash cabinet ("+chk("type:thievery|dc:15")+").</p>")
-  +B.s_encounter('<header class="split"><h3>E3 · Hookshanks + orphans</h3><p>Low · 40 XP</p></header><aside class="right token"><ul><li>'+act("hookshanks","Hookshanks Gruller (1)")+"</li><li>4× "+act("orphan","Lamm's Lamb")+" (non-combatant)</li></ul></aside><p>Rally the orphans ("+chk("type:diplomacy|dc:15")+"); Hookshanks can surrender and inform.</p>"))
+  +RA("<p>The reek of fish and sweat stings the eyes. A great trough of half-rancid fish and brine drains through wooden chutes into a larger room beyond; a desk and a tall cabinet sit opposite.</p>")
+  +"<p>Four orphans feed the chutes here. The floor around the trough is slick ("+chk("type:acrobatics|dc:15")+" if moving faster than a Step). The cabinet holds petty cash, locked ("+chk("type:thievery|dc:15")+"; Yargin's key).</p>"
+  +"<p>"+act("hookshanks","Hookshanks Gruller")+", a gnome taskmaster, oversees the work — and dresses as one of the orphans, passing for one until a PC beats his Deception with "+chk("type:perception|dc:17")+" (gnome PCs get a bonus).</p>"
+  +B.enc("E3 · Hookshanks + 4 orphans","Low · 40 XP",
+     "<p>Hookshanks orders the orphans to attack, then opens the "+pg(P["A4"],"A4")+" door to loose "+mc("guarddog","Bloo")+" and raise the alarm; he fights with a kukri.</p>"
+     +B.s_skill("<p>Rally the kids ("+chk("type:diplomacy|dc:15")+") and an older boy, Kester, blinds Hookshanks with a faceful of rancid fish. Hookshanks surrenders at low HP and tells all — except what lies in the den ("+pg(P["A14"],"A14")+").</p>"),
+     B.aside_token([act("hookshanks","Hookshanks Gruller (1)"), "4× "+act("orphan","Lamm's Lamb")+" <em>(non-combatant)</em>"], img=TOK("hookshanks-gruller"))))
+
 area("A8","Fishery Floor — Giggles (E4)", SR("A8","21-22")
-  +B.s_gm("<p>Main slurry floor (8-ft vat, catwalks, a hole to the river). "+act("giggles","Giggles")+" oversees 5 orphans by day (26 sleep here at night). Beware feeding PCs through the hole to "+act("jigsawshark","the shark")+".</p>")
-  +B.s_encounter('<header class="split"><h3>E4 · Giggles [+Bloo at night]</h3><p>Low · 40–60 XP</p></header><aside class="right token"><ul><li>'+act("giggles","Giggles (1)")+"</li><li>5× "+act("orphan","orphans")+" (non-combatant)</li></ul></aside><p>Giggles tries to <strong>capture</strong> PCs nonlethally, then fights to the death (Orc Ferocity).</p>"))
-area("A9","Kraken's Folly", SR("A9","23-24")+B.s_gm("<p>A derelict ship; the "+haz("rottendeck","Rotten Ship Deck")+" foredeck collapses under Medium+ weight (drop to A11). Stairs to the spider nest.</p>"))
+  +RA("<p>The main floor is slick with river water, weed, and fish blood. Catwalks ring an eight-foot tar-caulked slurry vat; a wide hole in the south floor opens straight onto the river below. Rows of small hammocks hang beneath the walks.</p>")
+  +"<p>The heart of the operation. "+act("giggles","Giggles")+", a half-orc brute, oversees 5 orphans by day; all 26 sleep here at night. The hole drops to the river and "+act("jigsawshark","the jigsaw shark")+" — the thugs toss scraps through it to keep the shark close and the children terrified.</p>"
+  +B.enc("E4 · Giggles [+ Bloo at night]","Low · 40 XP (60 with Bloo)",
+     "<p>Giggles uses Bludgeoner to <strong>capture</strong> PCs nonlethally for Gaedren, switching to lethal below half HP and quaffing healing potions; then he fights to the death (Orc Ferocity).</p>"
+     +SEC("<p><strong>Night raid:</strong> this floor is wall-to-wall sleeping children — a fight here endangers them. The river-hole is also the quiet route down to the underpier ("+pg(P["A12"],"A12")+") and the den, bypassing the front rooms entirely.</p>"),
+     B.aside_token([act("giggles","Giggles (1)"), "5× "+act("orphan","orphans")+" <em>(non-combatant)</em>"], img=TOK("giggles"))))
+
+area("A9","Kraken's Folly", SR("A9","23-24")
+  +RA("<p>A derelict ship lies lashed to the pilings by layers of rotting rope, its hull furred with weed and barnacles. A narrow walkway runs along the starboard rail to an aft-cabin door marked with a daubed red fish.</p>")
+  +"<p>No longer seaworthy — Gaedren's route to the den. The "+haz("rottendeck","Rotten Ship Deck")+" hazard: everything but the stern is rotten, and a Medium+ creature moving toward the bow crashes through into the hold ("+pg(P["A11"],"A11")+"). Stairs in the cabin lead down to the spider nest.</p>")
+
 area("A10","Spider Nest (E5)", SR("A10","24")
-  +B.s_gm("<p>Aft cabin lair of a single "+act("drainspider","drain spider")+" that lunges at the first to enter.</p>")
-  +B.s_encounter('<header class="split"><h3>E5 · Drain Spider</h3><p>Trivial · 20 XP</p></header><aside class="right token"><ul><li>'+act("drainspider","Drain Spider (−1)")+"</li></ul></aside><p>Repelled by the vermin repellent looted in A13.</p>"))
+  +RA("<p>The air is thick and musty. Sheets of cobweb drape the walls; mounds of blanket, cushion, and straw clutter the floor. A narrow stair drops into the ship's hold.</p>")
+  +"<p>The cabin is the lair of a single cat-sized "+act("drainspider","drain spider")+" that lunges at the first creature through the door.</p>"
+  +B.enc("E5 · Drain Spider","Trivial · 20 XP",
+     "<p>One drain spider, off-guard against the surprised intruder it lunges at.</p>"
+     +B.s_skill("<p>The spiders can't abide the <strong>vermin repellent</strong> looted from "+itm("coffer","Gaedren's coffer")+" ("+pg(P["A13"],"A13")+") — a coated creature auto-repels them.</p>"),
+     B.aside_token([act("drainspider","Drain Spider (−1)")], img=TOK("drain-spider"))))
+
 area("A11","Kraken's Hold (E6)", SR("A11","24")
-  +B.s_gm("<p>Four more "+act("drainspider","drain spiders")+" infest the hold. Hull secret door ("+chk("type:perception|dc:17")+"; +2 if "+chk("type:survival|dc:15")+" tracked Gaedren) leads to A12 and the boss.</p>")
-  +B.s_encounter('<header class="split"><h3>E6 · Drain Spider nest</h3><p>Moderate · 80 XP (trivialized by vermin repellent)</p></header><aside class="right token"><ul><li>4× '+act("drainspider","Drain Spider (−1)")+"</li></ul></aside><p>Combine with the Rotten Deck hazard above (A9).</p>"))
+  +RA("<p>Dark and dank, the hold smells of mildew. Crates and barrels lie stacked among puddles of standing river water.</p>")
+  +"<p>Four more "+act("drainspider","drain spiders")+" infest the hold.</p>"
+  +SEC("<p>Gaedren built a <strong>secret door into the hull</strong> ("+chk("type:perception|dc:17")+") opening to the underpier ("+pg(P["A12"],"A12")+") and the boss. Spotting his tracks in the filth ("+chk("type:survival|dc:15")+") grants a circumstance bonus to find it.</p>")
+  +B.enc("E6 · Drain Spider nest","Moderate · 80 XP (trivial with repellent)",
+     "<p>Four drain spiders swarm anything that enters. Pair this with the "+haz("rottendeck","Rotten Deck")+" collapse from "+pg(P["A9"],"A9")+" for a single nasty moment.</p>",
+     B.aside_token(["4× "+act("drainspider","Drain Spider (−1)")], img=TOK("drain-spider"))))
+
 area("A12","Underpier (E7)", SR("A12","24-25")
-  +B.s_gm("<p>A floating walkway under the fishery; Gaedren's escape skiffs are tied here. The small (2½-ft) door ("+chk("type:thievery|dc:17")+") leads to A13.</p>")
-  +B.s_encounter('<header class="split"><h3>E7 · Jigsaw Shark</h3><p>Low · 40 XP · avoidable</p></header><aside class="right token"><ul><li>'+act("jigsawshark","Jigsaw Shark (1)")+"</li></ul></aside><p>Attacks anyone in the water; only leaps onto the walkway if attacked first.</p>"))
+  +RA("<p>A narrow space runs beneath the fishery, three feet of headroom above the foamy river. Moss and rusted chain hang between the pilings, and a floating walkway threads west to a tiny two-and-a-half-foot door.</p>")
+  +"<p>Gaedren's escape skiffs are tied along the walkway. The squat door ("+chk("type:thievery|dc:17")+") leads into the den ("+pg(P["A13"],"A13")+"); a Medium creature must stoop to squeeze through.</p>"
+  +B.enc("E7 · Jigsaw Shark","Low · 40 XP · avoidable",
+     "<p>The shark scavenges scraps drifting from above. It attacks anything that falls into the water, but only leaps onto the walkway if it is first attacked and damaged.</p>"
+     +B.s_skill("<p>Stay dry and it stays a hazard, not a fight — though the "+haz("boardwalk","boardwalk")+" and "+haz("rottendeck","rotten deck")+" above exist precisely to feed it victims.</p>"),
+     B.aside_token([act("jigsawshark","Jigsaw Shark (1)")], img=TOK("jigsaw-shark"))))
+
 area("A13","Gaedren's Playground — BOSS (E8)", SR("A13","24-26")
-  +B.s_desc("<p>A chilly chamber over a water pit; two 5-ft walkways cross it. Loot tables line the far side. Something large stirs in the dark water below.</p>")
-  +B.s_gm("<p>"+mc("crocodile","Gobblegut")+" (use <strong>Crocodile</strong>) lurks in the pit; "+act("gaedren","Gaedren Lamm")+" sorts loot across it. <strong>Reaching him means crossing the gator's water.</strong> He opens with <em>Spur the Beast</em> (enrage Gobblegut), snipes, Nimble Dodges, and flees to the A12 skiffs at &le;8 HP.</p>")
-  +B.s_encounter('<header class="split"><h3>E8 · BOSS — Gaedren + Gobblegut</h3><p>SEVERE · 120 XP @ level 1 (Moderate @ level 2)</p></header><aside class="right token"><ul><li>'+act("gaedren","Gaedren Lamm (2)")+"</li><li>"+mc("crocodile","Gobblegut (Crocodile 2)")+"</li></ul></aside><p><strong>Scaling:</strong> 3 PCs → Weak Crocodile; 5–6 PCs → Elite Crocodile and/or add a Drain Spider from the pool. If Yargin reached Gaedren, start with Gobblegut pre-enraged.</p>")
-  +B.s_treasure("<p>On the tables: "+itm("coffer","darkwood coffer + 20 shiver + 7 vermin repellent")+".</p>")
-  +B.s_conv("<p><strong>⚠ Track:</strong> leaving Gaedren's body here → Rolth animates it in the Dead Warrens (D13). See "+pg(P["conv"],"Conversion Notes")+".</p>"))
-area("A14","Gaedren's Den (treasure & the reveal)", SR("A14","26-28")
-  +B.s_gm("<p>Gaedren's filthy quarters. Strongbox (rusty iron key, or "+chk("type:thievery|dc:15")+") holds "+itm("brooch","Queen Ileosa's Brooch")+". A hatbox holds Zellara's severed head ("+chk("type:medicine|dc:14")+": dead for weeks — the reveal) and "+itm("harrowdeck","her harrow deck")+". Atop the strongbox: "+itm("ledger","Gaedren's coded ledger")+".</p>")
+  +RA("<p>A chill chamber opens over a pit of black river water, crossed by two five-foot walkways. Rusted manacles dangle from mossy ropes above the pool. On the far side, cabinets and lockboxes spill dingy 'treasures' across three cluttered tables. Something heavy shifts in the water below.</p>")
+  +"<p>"+mc("crocodile","Gobblegut")+" lurks in the pit; "+act("gaedren","Gaedren Lamm")+" sorts the day's haul at his tables across it. <strong>Reaching him means crossing the gator's water.</strong></p>"
+  +SEC("<p>Those manacles are where Gaedren feeds doomed orphans to Gobblegut for sport — the PCs may arrive mid-'feeding,' a child dangling over the snapping jaws. Anyone who names <strong>Zellara</strong> earns a leering reply that 'she's in the next room' — her head waits in "+pg(P["A14"],"A14")+". <strong>Tactics:</strong> Gaedren opens with <em>Spur the Beast</em> to enrage Gobblegut, snipes from across the pool, <em>Nimble Dodges</em> focus fire, and flees to the "+pg(P["A12"],"A12")+" skiffs at &le;8 HP — though the abused gator may take him first.</p>")
+  +B.enc("E8 · BOSS — Gaedren + Gobblegut","SEVERE · 120 XP @ level 1 (Moderate @ level 2)",
+     "<p>The crocodile is the real threat; Gaedren is a frail catalyst who weaponizes it and snipes from cover.</p>"
+     +"<p><strong>Scaling:</strong> 3 PCs → Weak Crocodile · 5–6 PCs → Elite Crocodile and/or pull a drain spider from the pool · if Yargin reached Gaedren first, Gobblegut starts pre-enraged.</p>",
+     B.aside_token([act("gaedren","Gaedren Lamm (2)"), mc("crocodile","Gobblegut — Crocodile (2)")], img=TOK("gaedren-lamm")))
+  +B.s_treasure("<p>On the tables: "+itm("coffer","a darkwood coffer — 20 doses of shiver + 7 applications of vermin repellent")+".</p>")
+  +B.s_conv("<p><strong>⚠ Track what the PCs do with the body.</strong> Left here, Gaedren's son Rolth animates it — the PCs meet an undead Gaedren in the Dead Warrens at the chapter's end. See "+pg(P["conv"],"Conversion Notes")+".</p>"))
+
+area("A14","Gaedren's Den — treasure & the reveal", SR("A14","26-28")
+  +RA("<p>A squalid bedroom-study: a lumpy bed against one wall, a table heaped with rotting food and scuttling roaches, a sagging dresser. At the foot of the bed sits a locked strongbox, a moldy ledger resting on its lid. A fly-blown hatbox sits atop the dresser.</p>")
+  +"<p>Gaedren's private quarters. The strongbox opens to the rusty iron key he carries, or "+chk("type:thievery|dc:15")+".</p>"
+  +SEC("<p><strong>The reveal.</strong> The hatbox holds <strong>Zellara's severed head</strong>, crudely made up to mimic life ("+chk("type:medicine|dc:14")+": dead for weeks) — confirming the woman who hired the party has been dead all along. Beneath it lies "+itm("harrowdeck","her haunted harrow deck")+", still inhabited by her spirit. Atop the strongbox is "+itm("ledger","Gaedren's coded ledger")+"; inside, "+itm("brooch","Queen Ileosa's Brooch")+" and the hoard. A key-shaped masterwork dagger among the loot is a gift from Gaedren's estranged son <strong>Rolth</strong> — foreshadowing the next chapter ("+chk("type:society|dc:20")+" recognizes the killer's signature blade).</p>")
   +B.s_treasure("<p>Full parcel on the "+pg(P["treasure"],"Treasure")+" page.</p>"))
-# NPCs index
+
+# NPCs index -------------------------------------------------------------------
 pages.append(newpage("npcs","NPCs & Creatures",
-  B.s_gm("<ul><li>"+act("gaedren","Gaedren Lamm")+" (L2) — A13 boss · "+act("yargin","Yargin Balko")+" (L1) — A6 · "+act("hookshanks","Hookshanks Gruller")+" (L1) — A7 · "+act("giggles","Giggles")+" (L1) — A8</li>"
-   "<li>"+mc("crocodile","Gobblegut")+" = Crocodile (L2) · "+mc("guarddog","Bloo")+" = Guard Dog (L−1) · "+act("drainspider","Drain Spider")+" (L−1) · "+act("jigsawshark","Jigsaw Shark")+" (L1) · "+act("orphan","Lamm's Lambs")+" (non-combatant)</li>"
-   "<li><strong>Zellara</strong> — the harrow-spirit guide, bound to "+itm("harrowdeck","her deck")+" (story NPC, no stat block).</li></ul>"
-   "<p>Build rationale: <code>reports/npc_monster_conversion_report.md</code>.</p>"),level=2))
-# Treasure
+  "<p>Click any creature to open its sheet. Build rationale: <code>reports/npc_monster_conversion_report.md</code>.</p>"
+  +"<ul>"
+   "<li>"+act("gaedren","Gaedren Lamm")+" (L2) — "+pg(P["A13"],"A13")+" boss · "+act("yargin","Yargin Balko")+" (L1) — "+pg(P["A6"],"A6")+" · "+act("hookshanks","Hookshanks Gruller")+" (L1) — "+pg(P["A7"],"A7")+" · "+act("giggles","Giggles")+" (L1) — "+pg(P["A8"],"A8")+"</li>"
+   "<li>"+mc("crocodile","Gobblegut")+" = Crocodile (L2) · "+mc("guarddog","Bloo")+" = Guard Dog (L−1) · "+act("drainspider","Drain Spider")+" (L−1) · "+act("jigsawshark","Jigsaw Shark")+" (L1) · "+act("orphan","Lamm's Lambs")+" <em>(non-combatant)</em></li>"
+   "<li><strong>Zellara</strong> — the harrow-spirit guide, bound to "+itm("harrowdeck","her deck")+" (story NPC, no stat block).</li>"
+   "</ul>",level=2))
+
+# Treasure ---------------------------------------------------------------------
 pages.append(newpage("treasure","Treasure",
-  B.s_treasure("<p>Rebuilt to PF2e level 1→2 (PF1e gp discarded; CHG-0008). Full table: <code>reports/treasure_report.md</code>.</p>"
-   "<ul><li>"+itm("dagger","+1 Dagger (Gaedren's)")+" — boss loot · +1 armor potency (Gaedren's padded) · A14 hoard → 1st-rank scroll + ~50 gp gems.</li>"
-   "<li>"+itm("garnet","Garnet")+" (~8 gp) · "+itm("coffer","Coffer + vermin repellent")+" (~12 gp) · 2× Acid Flask + Thunderstone (Yargin) · 3× minor Healing Potion (Giggles) · ~30 gp coin.</li>"
-   "<li>"+itm("ledger","Coded ledger")+" → Guard bounty 15 gp (30 w/ cipher key).</li></ul>")
-  +B.s_gm("<p><strong>Story items:</strong> "+itm("brooch","Queen's Brooch")+" (launches the queen's audience + reward), "+itm("harrowdeck","Zellara's Harrow Deck")+" (the Harrow subsystem). Don't restore PF1e gp.</p>"),level=2))
-# Conversion Notes
+  "<p>Rebuilt to PF2e level 1→2 (the PF1e gp hoard is discarded; CHG-0008). Full table: <code>reports/treasure_report.md</code>.</p>"
+  +B.s_treasure("<ul>"
+   "<li>"+itm("dagger","+1 Dagger (Gaedren's)")+" — boss loot, a fitting first permanent magic weapon · +1 armor potency (his padded armor) · A14 hoard → a 1st-rank scroll + ~50 gp gems.</li>"
+   "<li>"+itm("garnet","Garnet amulet")+" (~8 gp) · "+itm("coffer","Coffer + vermin repellent")+" (~12 gp) · 2× Acid Flask + Thunderstone (Yargin) · 3× minor Healing Potion (Giggles) · ~30 gp coin.</li>"
+   "<li>"+itm("ledger","Coded ledger")+" → Korvosan Guard bounty 15 gp (30 gp with the cipher key).</li>"
+   "</ul>")
+  +SEC("<p><strong>Story items — do not let players cash these out for level-breaking gold.</strong> "+itm("brooch","Queen Ileosa's Brooch")+" launches the queen's audience and the chapter's main reward; "+itm("harrowdeck","Zellara's Harrow Deck")+" is the Harrow subsystem anchor (CHG-0010). The original PF1e parcel (a 2,000 gp brooch, gold ingot, etc.) is deliberately <em>not</em> restored.</p>"),level=2))
+
+# Conversion Notes -------------------------------------------------------------
 pages.append(newpage("conv","Conversion Notes (Changes from Original)",
-  B.s_conv("<p>Mirrors <code>conversion_change_log.md</code> (CHG-0101..0108). Story preserved; no approval-gated changes here.</p>"
-   "<ul><li><strong>Gaedren rebuilt as a credible Severe</strong> (with Gobblegut as the real threat) — fixes the 'Lamm is a Lamb' anticlimax + PF2e solo math. Added Spur the Beast / Nimble Dodge; kept Limping Gait. ⚠ Confirm Severe @L1 vs run @L2.</li>"
-   "<li><strong>Gobblegut/Bloo referenced</strong> as official Crocodile/Guard Dog.</li>"
-   "<li><strong>DCs re-derived</strong> to PF2e level-based/simple (locked-door spam collapsed).</li>"
+  B.s_conv("<p>Mirrors <code>conversion_change_log.md</code> (CHG-0101…0108). Story, villain, flow, and the closing cliffhanger are all preserved; nothing here is an approval-gated change.</p>"
+   "<ul>"
+   "<li><strong>Gaedren rebuilt as a credible Severe</strong>, with Gobblegut as the real threat — fixes the 'Lamm is a Lamb' anticlimax and PF2e solo-boss math. Added <em>Spur the Beast</em> / <em>Nimble Dodge</em>; kept <em>Limping Gait</em>. ⚠ Confirm Severe @L1 vs running it @L2.</li>"
+   "<li><strong>Gobblegut & Bloo</strong> referenced as the official Crocodile / Guard Dog (no rebuild).</li>"
+   "<li><strong>DCs re-derived</strong> to PF2e level-based / simple values (the PF1e locked-door spam collapsed to a single 'pick = 15' line).</li>"
    "<li><strong>Treasure rebuilt</strong> to PF2e level 1→2 (CHG-0008).</li>"
    "<li><strong>Drain Spider Venom</strong>: PF1e Con-drain → PF2e 1-stage poison + enfeebled.</li>"
    "<li><strong>Harrowing</strong> → hero-point-style suit pool (CHG-0010).</li>"
-   "<li><strong>Orphans</strong> = explicit non-combatants (Rally/Cower); never an XP-for-kill source.</li>"
-   "<li><strong>Forward hooks:</strong> leave Gaedren's body → Rolth zombie (D13); Brooch → queen's audience; deck → recurring Harrowings.</li></ul>"),level=2))
+   "<li><strong>Orphans</strong> = explicit non-combatants (Rally / Cower); never an XP-for-kill source (CHG-0107).</li>"
+   "<li><strong>Forward hooks:</strong> leaving Gaedren's body → undead Gaedren in the Dead Warrens; the Brooch → the queen's audience; the deck → recurring Harrowings.</li>"
+   "</ul>"),level=2))
 
 journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"])
 B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)
@@ -338,12 +432,3 @@ B.write("adventure","cotct-edge-of-anarchy",copy.deepcopy(adv))
 
 print(f"Pilot (Kingmaker-style) built: {len(folders)} folders, {len(actors)} actors, {len(hazards)} hazards, "
       f"{len(items)} items, 1 journal ({len(pages)} pages), 1 scene ({len(notes)} notes / {len(tok)} tokens), 1 adventure.")
-
-try:
-    import import_markdown_journals as MDJ
-
-    md_journals = MDJ.populate()
-    md_pages = sum(len(j.get("pages", [])) for j in md_journals)
-    print(f"Markdown journals imported: {len(md_journals)} journals, {md_pages} pages.")
-except FileNotFoundError as exc:
-    print(f"Markdown journal import skipped: {exc}")

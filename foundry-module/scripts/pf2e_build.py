@@ -15,8 +15,8 @@ import json, pathlib
 MOD = "cotct-pf2e-conversion"
 ROOT = pathlib.Path(__file__).resolve().parents[1]            # foundry-module/
 PACKS = ROOT / "packs"
-PUB = {"title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion)",
-       "authors": "", "remaster": True}
+PUB = {"title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+       "authors": "", "license": "OGL", "remaster": True}
 STATS = {"systemId": "pf2e", "systemVersion": "8.2.0", "coreVersion": "14.363",
          "compendiumSource": None, "duplicateSource": None, "exportSource": None,
          "createdTime": 0, "modifiedTime": 0, "lastModifiedBy": None}
@@ -147,12 +147,32 @@ def page(_id, name, html, level=1, show=True, sort=0, ownership=None):
             "video": {"controls": True, "volume": 0.5}, "src": None, "system": {}, "sort": sort,
             "ownership": ownership or {"default": -1}, "flags": {}, "category": None}
 
-def s_desc(html): return f'<section class="description">{html}</section>'
+def s_desc(html): return f'<section class="description">{html}</section>'   # read-aloud / boxed text
+s_read = s_desc                                                            # semantic alias
 def s_gm(html): return f'<section class="gm-notes">{html}</section>'
 def s_encounter(inner): return f'<section class="encounter">{inner}</section>'
 def s_skill(html): return f'<section class="skill">{html}</section>'
 def s_treasure(html): return f'<section class="treasure">{html}</section>'
 def s_conv(html): return f'<section class="conversion">{html}</section>'
+
+def s_secret(html, sid):
+    """GM-hidden block. Foundry core hides section.secret from non-owners; our CSS
+    tints it + badges it 'GM ONLY' so it also reads as hidden when the GM views it."""
+    return f'<section class="secret" id="secret-{sid}">{html}</section>'
+
+def s_milestone(html): return f'<section class="milestone head">{html}</section>'
+
+def aside_token(items, img=None, porthole=False, flip=False):
+    """Kingmaker-style creature sidebar: <aside class="right token|porthole"> with an
+    optional token image and a <ul> of @UUID actor links. `items` = list of HTML <li> bodies."""
+    cls = "right porthole" if porthole else "right token"
+    im = f'<img class="{"flip" if flip else "token"}" src="{img}" />' if img else ""
+    lis = "".join(f"<li>{it}</li>" for it in items)
+    return f'<aside class="{cls}">{im}<ul>{lis}</ul></aside>'
+
+def enc(title, budget, body, aside=""):
+    """Full encounter block: optional aside, then a split header (name | XP budget), then body."""
+    return f'<section class="encounter">{aside}<header class="split"><h3>{title}</h3><p>{budget}</p></header>{body}</section>'
 
 def journal_entry(_id, name, pages, folder=None, sort=0, default_own=0):
     for i, p in enumerate(pages, 1):
