@@ -1,0 +1,254 @@
+{
+  "_id": "UQr3ApF78GW7eghw",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "name": "Lamm's Lamb (Orphan)",
+  "type": "npc",
+  "items": [
+    {
+      "_id": "GaDSPHFyVSjyutRT",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Pitchfork (improvised)",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d6-1",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "reach",
+            "improvised"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "Pl0jGy4iH3WIm06t",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Dagger",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4-1",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "f16b6MRu4nQHYo4R",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Cower",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>An orphan who takes any damage flees toward the main floor (A8); if all the thugs are dead or out of sight, it flees the fishery entirely. Orphans invaded at night are too frightened to fight at all.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "acshVw94XQa9eUIt",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Rally to the Heroes",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A PC can rally an orphan with a successful Diplomacy check (DC 15; Intimidation does not work). A rallied orphan can use the Aid reaction to help a PC's attack or skill check, or reveal what it knows about the fishery and Gaedren. <strong>Story:</strong> rescuing the orphans is the heart of this dungeon (see the Treasure/XP notes); one orphan is the payoff for a PC with the 'Missing Child' background hook.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": -2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": -1
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 6,
+        "temp": 0,
+        "value": 6
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Enslaved orphan ('Lamm's Lamb')",
+      "languages": {
+        "details": "",
+        "value": [
+          "Common"
+        ]
+      },
+      "level": {
+        "value": -1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>Enslaved child pickpockets. <strong>Non-combatants and a deliberate moral pressure point — not an XP source for killing.</strong> 9 are present by day (spread through A7/A8); 26 sleep in A8 at night. They can be rallied to the PCs' side (Diplomacy DC 15) or, if ignored, may be forced to fight for the thugs. See the Conversion Notes journal for the rescue framing.</p>",
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "CotCT PF2e Conversion (private)"
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 5,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 2
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 7
+      },
+      "thievery": {
+        "base": 7
+      },
+      "stealth": {
+        "base": 6
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "sml"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  }
+}

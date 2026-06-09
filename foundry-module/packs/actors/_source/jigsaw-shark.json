@@ -1,0 +1,215 @@
+{
+  "_id": "lsdWSvGJ81hDy4it",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "name": "Jigsaw Shark",
+  "type": "npc",
+  "items": [
+    {
+      "_id": "8eYZrtP4g9eLOuIQ",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Jaws",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 8
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d8+3",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d8"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "MTcGAMb0LMrC41hw",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Aquatic Ambush",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Requirements</strong> The shark is hidden and in water. <strong>Effect</strong> It Swims up to its Speed toward a creature in the water and makes a Jaws Strike; the target is off-guard against it.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "b8Rmu1ajRBPBjlgG",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Reluctant Leaper",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>The shark attacks anything that falls into the water beneath the fishery, but only leaps onto the floating underpier (A12) to attack a creature there if it has already been attacked and damaged.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 16
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 20,
+        "temp": 0,
+        "value": 20
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "swim",
+            "value": 35
+          }
+        ],
+        "value": 5
+      }
+    },
+    "details": {
+      "blurb": "River shark beneath the fishery",
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>Scavenger lurking in the river under the fishery. The hazards (slippery boardwalk A3, rotten deck A9, hole in A8) all feed creatures into its water. Avoidable if the PCs stay dry; a real threat if they fall in. Standard PF2e drowning/aquatic-combat rules apply to PCs in the water.</p>",
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "CotCT PF2e Conversion (private)"
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 7,
+      "senses": [
+        {
+          "acuity": "imprecise",
+          "type": "scent",
+          "range": 30
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 8
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "animal",
+        "aquatic"
+      ]
+    }
+  }
+}

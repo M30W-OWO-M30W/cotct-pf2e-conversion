@@ -1,0 +1,226 @@
+{
+  "_id": "1M94tm3wnSRGcTG5",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "name": "Drain Spider",
+  "type": "npc",
+  "items": [
+    {
+      "_id": "NtOmInkK92Hhb3Xy",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Fangs",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 7
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "1d4",
+            "damageType": "poison"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "MSEwelGcRqYipKWR",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Drain Spider Venom",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Saving Throw</strong> Fortitude DC 15; <strong>Maximum Duration</strong> 4 rounds; <strong>Stage 1</strong> 1d4 poison damage and enfeebled 1 (1 round).</p><p><em>Vermin repellent:</em> a drain spider that smells Gaedren's alchemical repellent (sold by the vial in his den) is sickened 1 and will not approach a creature coated in it — model as an automatic failure to close, no attack.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "poison"
+          ]
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "PIsDQTNnDUhhiPJ4",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Lunge",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>The aggressive spider attacks the first creature to enter its lair, gaining the benefits of being off-guard against a surprised target.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": -2
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": -5
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -4
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 8,
+        "temp": 0,
+        "value": 8
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "climb",
+            "value": 25
+          }
+        ],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Aggressive cat-sized venomous spider",
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": -1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>Cat-sized sewer spiders nesting in the wrecked ship (A10 = 1; A11 = 4). Aggressive but trivially repelled by the vermin repellent the PCs can loot from A13. Treat the A11 nest as a single Low/Moderate encounter of four.</p>",
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "CotCT PF2e Conversion (private)"
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 5,
+      "senses": [
+        {
+          "type": "darkvision"
+        },
+        {
+          "acuity": "imprecise",
+          "type": "tremorsense",
+          "range": 30
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 3
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 2
+      }
+    },
+    "skills": {
+      "stealth": {
+        "base": 6
+      },
+      "athletics": {
+        "base": 3
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "tiny"
+      },
+      "value": [
+        "animal"
+      ]
+    }
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "_id": "RKfT6vJ5guinSBjo",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "name": "Gaedren Lamm",
+  "type": "npc",
+  "items": [
+    {
+      "_id": "imb6bFpeZx6SDdnE",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Fine Dagger",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 9
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4+1",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "1d6",
+            "damageType": "precision"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse",
+            "versatile-s"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "jUAfT5lYds26rvLH",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Hand Crossbow",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 9
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d6",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "1d6",
+            "damageType": "precision"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "range-increment-60",
+            "reload-1"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "4f18kaZPNF2BiCyz",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sneak Attack",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Gaedren deals an extra 1d6 precision damage to any creature that is off-guard to him (already included in his Strikes' damage when applicable).</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "rogue"
+          ]
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "VIGFiF2D6AuHE8fb",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Limping Gait",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>An old leg wound has crippled Gaedren; his Speed is only 15 feet and he can't take the Stride-heavy tactics a younger rogue would. He compensates with ranged sniping from across the gator pool.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "TUH3tMGetdqEeZz9",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Nimble Dodge",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature targets Gaedren with an attack and he can see the attacker.</p><hr /><p><strong>Effect</strong> Gaedren gains a +2 circumstance bonus to AC against the triggering attack.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "mental"
+          ]
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "8hHsiHErihsqOllX",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Spur the Beast",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Gaedren makes a Hand Crossbow Strike against Gobblegut (his pet crocodile). If it hits, the enraged crocodile gains a +2 status bonus to attack and damage rolls and must spend its next turn Striking the nearest creature other than Gaedren (Gaedren is immune to this forced target). This is his signature opening: he turns his own pet into a weapon, then snipes from cover.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate"
+          ]
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "RTiU83EnMqrIW50A",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Underworld Lore",
+      "sort": 0,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 8
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null
+      },
+      "type": "lore"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": -1
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 17
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 30,
+        "temp": 0,
+        "value": 30
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 15
+      }
+    },
+    "details": {
+      "blurb": "Decrepit crime lord; first villain of the AP",
+      "languages": {
+        "details": "",
+        "value": [
+          "Common",
+          "Varisian"
+        ]
+      },
+      "level": {
+        "value": 2
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role</strong> The campaign's first villain and the emotional payoff of every PC's background hook — but deliberately <em>not</em> a tank. Build him as a frail, slippery sniper who weaponizes his crocodile, Gobblegut, rather than as a tough boss. The threat in this fight is the <em>gator</em>; Gaedren is the catalyst.</p><p><strong>Tactics</strong> Round 1: Spur the Beast (shoot Gobblegut to enrage it), then snipe from across the pool where the walkways and the gator force the PCs to choose between reaching him and avoiding the water. Uses Nimble Dodge when focus-fired. <strong>Morale:</strong> at &le; 8 HP he tries to reach a skiff at the underpier (A12) and flee. <strong>If he escapes,</strong> he can recur via his son Rolth (Ch.2). <strong>If killed and the body is left here,</strong> Rolth animates it as a zombie in the Dead Warrens (D13) — track this.</p>",
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "CotCT PF2e Conversion (private)"
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 8,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 3
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 9
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 8
+      }
+    },
+    "skills": {
+      "deception": {
+        "base": 10
+      },
+      "stealth": {
+        "base": 9
+      },
+      "thievery": {
+        "base": 9
+      },
+      "intimidation": {
+        "base": 8
+      },
+      "society": {
+        "base": 6
+      },
+      "acrobatics": {
+        "base": 9
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  }
+}

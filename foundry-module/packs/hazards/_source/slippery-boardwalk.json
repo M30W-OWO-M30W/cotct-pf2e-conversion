@@ -1,0 +1,88 @@
+{
+  "_id": "6y55S5DpXqnF40WL",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "name": "Slippery Boardwalk",
+  "type": "hazard",
+  "items": [
+    {
+      "_id": "pHMoFU5LMyCDZ8dm",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Slip",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature Strides more than 5 feet, Steps onto, or fights while on the slick boardwalk.</p><hr /><p><strong>Effect</strong> The creature must succeed at a DC 15 Reflex save (or Acrobatics check to Balance) or fall prone; on a critical failure it slides off and falls 13 feet into the river (@Damage[1[bludgeoning]] from the short fall into deep water) and into the hunting grounds of the Jigsaw Shark (A12). A creature that Steps (5 ft) or moves carefully is not affected.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "system": {
+    "attributes": {
+      "emitsSound": "encounter",
+      "hardness": 0,
+      "stealth": {
+        "details": "<p>Obvious — no check needed to notice the danger.</p>",
+        "value": 0
+      }
+    },
+    "creatureType": "",
+    "details": {
+      "description": "<p>A barnacle-slick boardwalk (A3) clings to the fishery 13 feet above shark-infested water; the old planks also groan under heavy loads (a creature heavier than Medium, or two creatures within 5 feet, may collapse a stretch — treat as the Rotten Ship Deck reaction).</p>",
+      "disable": "<p>@Check[acrobatics|dc:15|name:Cross Carefully] to move along it without risk, or shore up a stretch with rope/planks (Crafting or Survival, DC 15).</p>",
+      "isComplex": false,
+      "level": {
+        "value": 1
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "CotCT PF2e Conversion (private)"
+      },
+      "reset": "<p>Persistent terrain.</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "environmental"
+      ]
+    }
+  }
+}

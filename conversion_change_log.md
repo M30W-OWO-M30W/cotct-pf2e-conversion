@@ -138,6 +138,21 @@ per change, grouped by chapter. Major narrative changes are added here with
 `REQUIRES GM APPROVAL` before any journal implementation.)*
 
 <!-- CH1 — Edge of Anarchy -->
+
+### CH1 · Old Fishery (Phase-2 pilot)
+
+Per-area changes for the pilot. Mirrored in the journal *Old Fishery — Conversion
+Notes*. Foundry path: `cotct-journals` → "Old Fishery — …". No major
+(approval-gated) story changes; plot/villain/flow/cliffhanger preserved.
+
+- **CHG-0101 — Gaedren boss rebuilt as a credible Severe.** *Original:* CR-2 frail old man, anticlimactic solo ("Lamm is a Lamb"). *New:* L2 frail sniper + **Spur the Beast**/**Nimble Dodge**, paired with Gobblegut (Crocodile L2) for a **Severe (120 XP @L1)** fight where the gator is the threat. *Source:* Balance correction + community consensus + PF2e solo math. *Severity:* **Moderate.** *Journal:* yes (Areas A13, Encounters). *GM review:* **pending** (Severe @L1 vs run @L2).
+- **CHG-0102 — Gobblegut & Bloo referenced as official Crocodile / Guard Dog** (not rebuilt). *Source:* Foundry/use-official-actor. *Severity:* Cosmetic. *Journal:* yes. *Review:* none.
+- **CHG-0103 — All DCs re-derived** to PF2e level-based/simple (locked-door spam collapsed; Will 25→18, Perc 25→18, etc.). *Source:* PF2e rules necessity. *Severity:* Minor. *Journal:* yes (DCs noted per area; full table in `reports/dc_skill_report.md`). *Review:* none.
+- **CHG-0104 — Treasure fully rebuilt** to PF2e level 1→2 (PF1e gp discarded; brooch/deck as story items). *Source:* PF2e rules necessity (CHG-0008). *Severity:* Moderate. *Journal:* yes (Treasure). *Review:* none.
+- **CHG-0105 — Drain Spider Venom** PF1e Con-drain → PF2e 1-stage poison (Fort DC 15 + enfeebled); vermin-repellent auto-repel preserved. *Source:* PF2e rules necessity. *Severity:* Minor. *Journal:* yes (NPCs). *Review:* none.
+- **CHG-0106 — Harrowing pilot stub** (Hero-Point-style suit boons via Zellara's deck; CHG-0010). *Source:* PF2e rules necessity. *Severity:* Moderate. *Journal:* yes (Overview). *Review:* pending (G-Q6 reroll style).
+- **CHG-0107 — Orphans = explicit non-combatants** with Rally/Aid + Cower; never an XP-for-kill source. *Source:* QoL / safety. *Severity:* Cosmetic. *Journal:* yes (NPCs, Run Sheet). *Review:* none.
+- **CHG-0108 — QoL run-framing surfaced** ("Gaedren is a connector", day/night alarm, rescue-the-orphans focus). *Source:* Community QoL consensus. *Severity:* Cosmetic. *Journal:* yes (Run Sheet). *Review:* none.
 <!-- CH2 — Seven Days to the Grave -->
 <!-- CH3 — Escape from Old Korvosa -->
 <!-- CH4 — A History of Ashes -->

@@ -1,0 +1,88 @@
+{
+  "_id": "xMhIQZS6GokTsulZ",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "name": "Rotten Ship Deck",
+  "type": "hazard",
+  "items": [
+    {
+      "_id": "LftCcvU2yoJrajMM",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Collapse",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Trigger</strong> A Medium or larger creature moves onto the rotten foredeck of the Kraken's Folly (A9) toward the bow.</p><hr /><p><strong>Effect</strong> The creature must succeed at a DC 16 Reflex save or crash through to the hold (A11), taking @Damage[1d6[bludgeoning]] falling/debris damage and landing prone among the drain-spider nest. The stern (within 10 feet) is sound.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "system": {
+    "attributes": {
+      "emitsSound": "encounter",
+      "hardness": 0,
+      "stealth": {
+        "details": "<p>@Check[perception|dc:16|name:Spot the Rot] to notice the foredeck is unsafe before stepping on it.</p>",
+        "value": 16
+      }
+    },
+    "creatureType": "",
+    "details": {
+      "description": "<p>The derelict ship Kraken's Folly (A9) has a rotten foredeck; only the stern holds weight.</p>",
+      "disable": "<p>@Check[crafting|dc:16|name:Shore Up the Planks] to brace a path across, or simply avoid the bow and keep to the stern.</p>",
+      "isComplex": false,
+      "level": {
+        "value": 1
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "CotCT PF2e Conversion (private)"
+      },
+      "reset": "<p>Once collapsed, that stretch is gone.</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "environmental"
+      ]
+    }
+  }
+}

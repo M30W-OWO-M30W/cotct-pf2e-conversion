@@ -1,0 +1,310 @@
+{
+  "_id": "7uhbgkK2IOZOlJb3",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "name": "Yargin Balko",
+  "type": "npc",
+  "items": [
+    {
+      "_id": "6PuxBmLScqxay0Hq",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Acid Flask",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 7
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d6",
+            "damageType": "acid"
+          },
+          "1": {
+            "damage": "1",
+            "damageType": "persistent-acid"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "range-increment-20",
+            "splash",
+            "alchemical",
+            "bomb"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "pfnOQH3FMchkduas",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Light Crossbow",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d8",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "range-increment-60",
+            "reload-1"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "YHHOLB9Lpw1BQBLA",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Dagger",
+      "sort": 0,
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4+1",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse",
+            "versatile-s"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "JToxyXFb1usrIxgL",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Quick Acid",
+      "sort": 0,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Yargin draws and throws an Acid Flask in a single action (he keeps several looped on his belt). He carries 3 flasks.</p>"
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "alchemical"
+          ]
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "xLikseaXiETYHEHG",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Alchemy Lore",
+      "sort": 0,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 7
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "CotCT PF2e Conversion (private)"
+        },
+        "rules": [],
+        "slug": null
+      },
+      "type": "lore"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 16
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 20,
+        "temp": 0,
+        "value": 20
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Bitter alchemist-fence; Gaedren's right hand",
+      "languages": {
+        "details": "",
+        "value": [
+          "Common",
+          "Gnomish",
+          "Varisian"
+        ]
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role</strong> Gaedren's accountant/fence; the fishery's public face. Answers the front door (A1) and fights from A6. <strong>Tactics:</strong> opens with thrown Acid Flasks, falls back to the light crossbow. <strong>Morale:</strong> flees down the hidden trapdoor (A6) to warn Gaedren the moment the fight turns against him — if he reaches Gaedren, the boss fight begins forewarned. Carries the brass key (opens all fishery doors).</p>",
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "CotCT PF2e Conversion (private)"
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 6,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 7
+      }
+    },
+    "skills": {
+      "crafting": {
+        "base": 7
+      },
+      "society": {
+        "base": 6
+      },
+      "deception": {
+        "base": 5
+      },
+      "thievery": {
+        "base": 5
+      },
+      "intimidation": {
+        "base": 6
+      },
+      "arcana": {
+        "base": 6
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  }
+}
