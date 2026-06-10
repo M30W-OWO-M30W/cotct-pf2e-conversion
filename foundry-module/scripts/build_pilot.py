@@ -22,7 +22,9 @@ A = {"gaedren":"RKfT6vJ5guinSBjo","yargin":"7uhbgkK2IOZOlJb3","hookshanks":"qH96
      "bg_lovelost":"bgLoveLost000001","bg_missingchild":"bgMissingChild01","bg_unhappy":"bgUnhappyChild01",
      # Part Two — A City Gone Mad (custom NPCs)
      "mad_prophet":"madProphet000001","rioter":"korvosanRioter01","amin":"aminJalento00001",
-     "grau":"grauSoldado00001","trinia":"triniaSabor00001","trinia_wand":"triniaWand000001"}
+     "grau":"grauSoldado00001","trinia":"triniaSabor00001","trinia_wand":"triniaWand000001",
+     # Part Three — Blood and Bones, area B (All the World's Meat)
+     "cowhammer":"cowHammerBoy0001","verik":"verikVancask0001","verik_bow":"verikLongbow0001"}
 JID = "aO3z6QTqmYZCZYkw"   # the fat Ch.1 journal entry
 SCN = "PuUGEVunRqjIWFOj"   # Old Fishery scene
 ADV = "OmdAPBg10luB7GUr"   # Adventure doc
@@ -104,6 +106,14 @@ RABOX = {
  # Part Two read-aloud (mid-phrase anchors dodge OCR drop-caps)
  "CGM":"sight of smoke rising on the horizon",
  "E12FLAT":"one-room flat combines all the amenities",
+ # Part Three, area B — All the World's Meat
+ "B1":"sign bearing the image of a fat, smiling cow",
+ "B3":"air in this room is stale, stinking of day-old meat",
+ "B4":"floor of this grim chamber is strewn",
+ "B5":"foul-smelling animal pens take up the majority",
+ "B6":"large cattle pen is open to the air",
+ "B7":"round table sits in this room, surrounded by four wooden chairs",
+ "B8":"single large desk stands in the eastern part",
 }
 def box(code, fallback_html):
     """Read-aloud section: exact AP text if the source file is present, else paraphrase."""
@@ -375,6 +385,35 @@ AW("trinia-sabor", B.npc(A["trinia"],"Trinia Sabor",3,18,36,6,11,9,7,
         "<p><strong>In the chase:</strong> she moves one obstacle at a time while she holds a lead, uses her wand on the closest PC, favors Acrobatics, and takes risks to gain ground when a PC closes. Cornered, she uses <em>Fit of Laughter</em> and weeps that she has been set up.</p>",
   folder=F["a_creatures"], blurb="Framed artist; recurring ally", token_src=TOK("trinia-sabor"), actor_link=True))
 
+# ---- Part Three: area B — All the World's Meat (custom NPCs) ----
+AW("cow-hammer-boy", B.npc(A["cowhammer"],"Cow Hammer Boy",2,18,30,8,6,4,6,
+  {"str":3,"dex":3,"con":2,"int":0,"wis":0,"cha":1},25,
+  {"athletics":7,"intimidation":6,"stealth":6},
+  ["humanoid","human"],["common"],
+  [B.strike(nid(),"Composite Longbow",9,"1d8+3","piercing",["deadly-d10","propulsive","range-increment-100","reload-0","volley-30"]),
+   B.strike(nid(),"Club",8,"1d6+3","bludgeoning",[]),
+   B.gear("composite-longbow",nid()), B.gear("club",nid()), B.gear("studded-leather",nid())],
+  notes="<p><strong>Role:</strong> a deserter-guard thug (one of Verik's four 'Cow Hammer Boys'), reusable as a Northgate brigand. Opens with the longbow, closes to the club only if forced.</p>"
+        "<p><strong>Tactics &amp; morale:</strong> two guard the front (B1), two work the killing floor (B4). A boy at low HP flees into the city; once two are dead, the rest abandon Verik and run. They do <strong>not</strong> let anyone up to Verik — they hide their murder-for-hire side business from him.</p>",
+  folder=F["a_creatures"], blurb="Deserter-guard thug ('Cow Hammer Boy')", token_src=TOK("cow-hammer-boy")))
+
+AW("verik-vancaskerkin", B.npc(A["verik"],"Verik Vancaskerkin",4,21,60,11,11,8,8,
+  {"str":4,"dex":4,"con":2,"int":0,"wis":0,"cha":2},25,
+  {"athletics":10,"intimidation":10,"acrobatics":10,"nature":6},
+  ["humanoid","human"],["common"],
+  [{"_id":A["verik_bow"],"img":"systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
+    "name":"+1 Striking Composite Longbow","type":"weapon","sort":0,"ownership":{"default":0},"flags":{},"_stats":dict(B.STATS),
+    "system":{"baseItem":"composite-longbow","bonus":{"value":1},"bonusDamage":{"value":0},"bulk":{"value":1},"category":"martial","containerId":None,"damage":{"damageType":"piercing","dice":2,"die":"d8"},"description":{"value":"<p>Verik's prized Korvosan Guard composite longbow, etched with a +1 potency rune and a striking rune — the AP's area-B permanent magic reward.</p>"},"equipped":{"carryType":"held","handsHeld":2},"group":"bow","hardness":0,"hp":{"max":0,"value":0},"level":{"value":4},"material":{"grade":None,"type":None},"price":{"value":{"gp":160}},"publication":B.PUB,"quantity":1,"range":100,"reload":{"value":"0"},"runes":{"potency":1,"property":[],"striking":1},"size":"med","slug":None,"splashDamage":{"value":0},"traits":{"rarity":"common","value":["deadly-d10","magical","propulsive","volley-30"]},"usage":{"value":"held-in-two-hands"}}},
+   B.strike(nid(),"+1 Striking Composite Longbow",14,"2d8+4","piercing",["deadly-d10","magical","propulsive","range-increment-100","reload-0","volley-30"],slug="verik-bow-strike"),
+   B.strike(nid(),"Spear",12,"1d6+4","piercing",["thrown-20"]),
+   B.action(nid(),"Precise Shot","passive","<p>Verik ignores the lesser cover and "+B.cond("off-guard","Off-Guard")+" circumstance that ranged attackers normally suffer in melee, and never takes the −2 for shooting into a crowd.</p>",category="offensive"),
+   B.lore(nid(),"Korvosan Guard Lore",8),
+   B.gear("chain-mail",nid()), B.gear("spear",nid()), B.gear("healing-potion-minor",nid(),3)],
+  notes="<p><strong>Role:</strong> deserter watch sergeant fronting the slaughterhouse — a recurring NPC, not a die-hard villain. He believes his Vudrani lover 'Meliya' (secretly the rakshasa Vimanda) is just feeding the poor; he has no idea his men murder for hire.</p>"
+        "<p><strong>Tactics:</strong> fights from range with the longbow, switching to the spear only if engaged in melee. He hesitates several rounds before joining a fight below (fearing the Guard has come for him), often arriving as it ends.</p>"
+        "<p><strong>Surrender:</strong> he gives up if dropped below ~1/4 HP, or instantly if shown hard evidence of the murders (the severed finger, the buried stash, or a thug's confession). "+chk("type:intimidation|dc:18")+" cows him (he then flees if unbound); a near-impossible Diplomacy makes him helpful. <strong>Story award</strong> for taking him alive without combat. His silver dagger is the "+B.mon("raktavarna","raktavarna")+" spy.</p>",
+  folder=F["a_creatures"], blurb="Deserter watch sergeant; Arkona dupe", token_src=TOK("verik-vancaskerkin"), actor_link=True))
+
 # =====================================================================
 # HAZARDS (Actor type=hazard; in the hazards pack, Hazards folder)
 # =====================================================================
@@ -440,7 +479,9 @@ def SEC(html): return B.s_secret(html, sid())            # GM-hidden reveal bloc
 PAGE_KEYS=["background","overview","hook","scene","features","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10",
            "A11","A12","A13","A14","npcs","treasure","conv",
            # Part Two — A City Gone Mad
-           "cgm","e1","e2","e3","e4","e5","e6","e7","e8","e9","e10","e11","e12","e13","e14"]
+           "cgm","e1","e2","e3","e4","e5","e6","e7","e8","e9","e10","e11","e12","e13","e14",
+           # Part Three — Blood and Bones: B. All the World's Meat
+           "bmeat","B1","B2","B3","B4","B5","B6","B7","B8"]
 P={k:nid() for k in PAGE_KEYS}   # pre-assign so forward relative links resolve
 def newpage(key,name,html,level=3):
     return B.page(P[key],name,html,level=level)
@@ -727,6 +768,63 @@ ev("e14","Event 14. A Lovely Day for an Execution",
   "<p>The chapter's climax: once all other plots resolve, the queen stages the public execution of her scapegoat (Trinia, or another). Set the date so the PCs can finish Part Three (the Dead Warrens) first — there is wiggle room.</p>"
   +SEC("<p>Whether the PCs disrupt the execution, attend it, or let it proceed, this is the hand-off to the <strong>Chapter Conclusion</strong> and Chapter 2. As the chapter ends, the first cases of <strong>Blood Veil</strong> appear in the gutters — see the Conversion Guide journal → <em>Blood Veil &amp; the Epidemic Clock</em>.</p>")
   +B.s_conv("<p>This is the natural seam to begin the persistent-plague overlay: the Epidemic Clock starts in Chapter 2, seeded by how the city fared here.</p>"))
+
+# =====================================================================
+# PART THREE — BLOOD AND BONES: B. All the World's Meat (22 Stirge St.)
+# Party ~L3. Cow Hammer Boys L2 · Verik L4 · Reefclaw/Raktavarna official L1.
+# =====================================================================
+ev("bmeat","B. All the World's Meat",
+  B.s_milestone("<p><strong>Part Three.</strong> The chapter's three investigation sites — a butcher's shop (B), Eel's End (C), and the Dead Warrens (D). <strong>All the World's Meat</strong> is an abandoned butcher's shop at 22 Stirge Street, seized by deserter sergeant "+act("verik","Verik Vancaskerkin")+" and four "+act("cowhammer","Cow Hammer Boys")+" who front 'free meat for the hungry' while secretly murdering marks-for-hire and butchering the bodies into the next day's handouts.</p>")
+  +B.s_skill("<p>"+chk("type:diplomacy|dc:15")+" (gather information) on the street learns the gang calls itself the Cow Hammer Boys and hires out as muscle — ask for 'the night's special cuts' (50 gp per beating).</p>")
+  +SEC("<p><strong>GM:</strong> Verik is a dupe. His 'Vudrani lover Meliya Arkona' is the rakshasa <strong>Vimanda</strong>, infiltrating Korvosa for the Arkona family (who scheme to topple Ileosa with a puppet prince). The silver dagger in "+pg(P["B8"],"B8")+" is her "+B.mon("raktavarna","raktavarna")+" spy. Taking Verik alive and chasing 'Meliya' seeds the Arkona arc of Chapter 3 — Glorio/Bahor begins watching the PCs.</p>"))
+
+area("B1","Shop Front", SR("B1","46")
+  +box("B1","<p>A sign bearing the image of a fat, smiling cow hangs above the entrance. A long counter runs over half the room; beyond it a door stands ajar. A low bench sits against the east wall, and a marble-topped table to the north displays cuts of meat before a grimy window, flies circling above.</p>")
+  +"<p>Two "+act("cowhammer","Cow Hammer Boys")+" — Baldrago and Malder — hand out meat by day. Unless the PCs pose as needy locals they are gruffly told to 'kick off'; 'the night's special cuts' ends the hostility and opens the mercenary pitch. They never let anyone up to Verik. Push past them and they raise longbows and shout to "+pg(P["B4"],"B4")+" for help.</p>"
+  +B.enc("Cow Hammer Boys (front)",xpb([2,2],3),
+     "<p>2 "+act("cowhammer","Cow Hammer Boys")+" open with longbows, closing to clubs only if forced. Reinforced by the two in "+pg(P["B4"],"B4")+" if the alarm goes up.</p>",
+     B.aside_token(["2× "+act("cowhammer","Cow Hammer Boy (2)")], img=TOK("cow-hammer-boy"))))
+
+area("B2","Hall", SR("B2","46")
+  +"<p>A short hall; the stairs lead up to the "+pg(P["B7"],"break room (B7)")+".</p>")
+
+area("B3","Meat Locker", SR("B3","46")
+  +box("B3","<p>The air is stale, stinking of day-old meat and blood. Straw litters the floor beneath meat hooks affixed to walls and ceiling. A blood-stained table and two salt barrels stand to the north; double doors to the south are barred by an iron bar that runs along the ceiling to a floor-to-ceiling pole.</p>")
+  +SEC("<p><strong>The horror.</strong> Salted meat hangs overnight here. Among the pork and beef, "+chk("type:medicine|dc:20")+" or "+chk("type:nature|dc:20")+" confirms at least a half-dozen cuts are not from animals at all — they are <strong>humanoid</strong>. Hard proof of the murders that breaks Verik (see "+pg(P["B8"],"B8")+").</p>"))
+
+area("B4","Killing Floor", SR("B4","47")
+  +box("B4","<p>The floor of this grim chamber is strewn with blood-stained straw, and the reek of slaughter is overpowering. Meat hooks ride a ceiling track; a great hammer rests on a permanent bloodstain in the northwest corner. A bloodstained grate covers a hole in the floor to the south, flanked by two vats of water — one boiling, one cold — with butcher blocks and a reeking cast-off vat beyond.</p>")
+  +"<p>By day there is a 75% chance the other two "+act("cowhammer","Cow Hammer Boys")+" — Parns (a sadistic ex-butcher) and jittery Karralo — are here; otherwise they tend livestock in "+pg(P["B5"],"B5")+"/"+pg(P["B6"],"B6")+". The rusty grate (Hardness 10, HP 15; "+chk("type:athletics|dc:22")+" to pry/break) drops into a half-flooded sewer tunnel running east to the river.</p>"
+  +B.enc("Cow Hammer Boys (killing floor)",xpb([2,2],3),
+     "<p>2 "+act("cowhammer","Cow Hammer Boys")+" at work. They flee at low HP; once two of the four are dead, the rest abandon Verik.</p>",
+     B.aside_token(["2× "+act("cowhammer","Cow Hammer Boy (2)")], img=TOK("cow-hammer-boy")))
+  +B.enc("Reefclaws (sewer below)",xpb([B.mon_lvl("reefclaw")]*3,3),
+     "<p>3 "+B.mon("reefclaw","reefclaws")+" scavenge the grisly leftovers in the tunnel. Well-fed, they attack only intruders who disturb the remains (e.g. searching for the finger). Beware a reefclaw's death-frenzy and venom.</p>",
+     B.aside_token(["3× "+B.mon("reefclaw","Reefclaw (1)")]))
+  +B.s_treasure("<p>"+chk("type:perception|dc:20")+" in the sewer finds a severed human finger wedged above the waterline, still wearing a fine silver-and-obsidian ring (~25 gp re-scaled) — and damning evidence of the murders.</p>"))
+
+area("B5","Holding Pens", SR("B5","47")
+  +box("B5","<p>Two foul-smelling animal pens take up most of the room, each a fenced gate around a long water trough and heaps of filthy hay. The floor is hard-packed earth.</p>")
+  +B.s_treasure("<p>"+chk("type:perception|dc:20")+" finds the gang's buried mercenary stash under the southern trough: re-scaled to PF2e, about <strong>40 gp</strong> in mixed coin plus a small clutch of jewelry and gems (~30 gp). The stash itself is evidence that breaks Verik.</p>"))
+
+area("B6","Cattle Pen", SR("B6","47")
+  +box("B6","<p>This large open-air cattle pen reeks of manure and animal despite the breeze through the stockade fence. A roofed shed to the south holds a straw-filled wagon.</p>")
+  +"<p>Each morning 1d6−3 cows and 1d4−2 pigs arrive (sometimes none). The skittish animals are harmless.</p>")
+
+area("B7","Break Room", SR("B7","47")
+  +box("B7","<p>A round table sits in this room, surrounded by four wooden chairs, a deck of cards on its top. An open cabinet to the southwest spills dirty clothes and blankets; four thin bedrolls lie rolled against the north wall. Stairs descend to "+pg(P["B2"],"B2")+".</p>")
+  +"<p>The Cow Hammer Boys relax and sleep here. By night they play cards before flopping down where they can.</p>")
+
+area("B8","Slaughterhouse Office", SR("B8","48")
+  +box("B8","<p>A single large desk stands in the eastern part of this office, made over into a bed with a bedroll, blankets, and pillows; a chamber pot beneath it. A table and three chairs sit to the west, papers strewn across the table — one pinned down by an exquisite silver dagger.</p>")
+  +"<p>Verik's quarters. He drinks and sleeps here, paranoid the Guard will come for him. He still wears his Korvosan Guard armor. If he hears fighting below he dithers for several rounds before joining — often arriving as it ends.</p>"
+  +SEC("<p><strong>Verik surrenders</strong> if dropped below ~1/4 HP, "+chk("type:intimidation|dc:18")+", or — instantly — if shown the "+pg(P["B3"],"humanoid cuts")+", "+pg(P["B4"],"severed finger")+", or "+pg(P["B5"],"stash")+". Broken, he lets himself be arrested and (if made helpful) admits 'Meliya' put him up to it, though he can't say why an Arkona would care.</p>"
+       "<p><strong>The silver dagger is alive.</strong> It is a "+B.mon("raktavarna","raktavarna rakshasa")+", Vimanda's shapeshifted spy. It plays dead as a normal (non-magical, non-silver) dagger, hoping a PC loots it so it can later report on them. Exposed for what it is, it reverts and fights for 1d3 rounds before Vimanda severs the link and abandons it to die.</p>")
+  +B.enc("Verik Vancaskerkin + the dagger-spy",xpb([4,B.mon_lvl("raktavarna")],3),
+     "<p>"+act("verik","Verik")+" fights from range with his longbow, switching to the spear only in melee. The "+B.mon("raktavarna","raktavarna")+" joins only if discovered. <strong>This fight is often skipped entirely</strong> — bring evidence and Verik folds.</p>",
+     B.aside_token([act("verik","Verik Vancaskerkin (4)"), B.mon("raktavarna","Raktavarna (1, hidden)")], img=TOK("verik-vancaskerkin")))
+  +B.s_treasure("<p>Loot: "+act("verik","Verik's")+" +1 striking composite longbow (the area-B permanent magic reward), chain mail, spear, and 3 minor healing potions. The silver 'dagger' is the raktavarna — do not let it travel with the party unnoticed.</p>")
+  +B.s_conv("<p><strong>Story award</strong> for taking Verik alive without combat. Spared and turned, Verik can resurface as an ally; his brother <strong>Orik</strong> appears in Chapter 3. Pursuing 'Meliya' opens the Arkona thread (Ch.3).</p>"))
 
 journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"])
 B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)
