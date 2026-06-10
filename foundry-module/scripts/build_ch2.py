@@ -22,7 +22,8 @@ ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cot
 JID2 = "ch2SevenDaysJrn1"          # the fat Ch.2 journal
 A2 = {"graymaiden": "grayMaidenFoot01", "ishani": "ishaniDhatri0001",
       "physician": "queensPhysician1", "silteel": "siltEel000000001", "yvicca": "yviccaSeaHag0001",
-      "girrigz": "girrigzRipper001", "vendra": "vendraLoaggri001", "lavthug": "lavenderThug0001"}
+      "girrigz": "girrigzRipper001", "vendra": "vendraLoaggri001", "lavthug": "lavenderThug0001",
+      "jolistina": "jolistinaSusp001"}
 F2 = {"a_ch2": "ch2ActorFolder01", "a_creatures": "ch2CreaturesFld1"}
 
 ids = B._idgen(220002)             # Ch.2 folders/pages/notes (distinct seed)
@@ -157,6 +158,22 @@ AW("lavender-thug", B.npc(A2["lavthug"], "Lavender Thug", 3, 20, 45, 9, 9, 5, 8,
    B.gear("studded-leather", nid()), B.gear("steel-shield", nid()), B.gear("rapier", nid()), B.gear("hand-crossbow", nid())],
   notes="<p><strong>Role:</strong> Vendra's purple-cravat'd bodyguards (sap-carrying in the shop, lethal in a real fight). They crossbow foes already in melee, then close with the rapier, keeping themselves between the PCs and Vendra. <strong>Morale:</strong> a thug drops his weapon and flees at low HP and does not return.</p>",
   folder=F2["a_creatures"], blurb="Vendra's rapier-armed bodyguard", token_src=None, actor_link=False))
+
+AW("jolistina-susperio", B.npc(A2["jolistina"], "Jolistina Susperio", 8, 26, 130, 14, 18, 14, 16,
+  {"str": 2, "dex": 6, "con": 3, "int": 1, "wis": -1, "cha": 2}, 25,
+  {"acrobatics": 18, "stealth": 18, "deception": 14, "thievery": 16, "occultism": 14}, ["humanoid", "elf"], ["common", "elven", "necril"],
+  [B.strike(nid(), "Hand Crossbow", 18, "1d6", "piercing", ["range-increment-60", "reload-1"]),
+   B.strike(nid(), "Dagger", 16, "1d4+2", "piercing", ["agile", "finesse", "thrown-10", "versatile-s"]),
+   B.sneak_attack(nid(), 4, "Jolistina"),
+   B.action(nid(), "Screaming Bolt", "1", "<p>Jolistina fires a shrieking bolt (a Hand Crossbow Strike); on a hit the target and each creature within 10 feet must succeed at a "+chk("type:will|dc:25")+" or be "+B.cond("frightened", "Frightened 1")+" (Frightened 2 on a critical failure).</p>", ["auditory", "emotion", "fear", "mental"]),
+   B.action(nid(), "Ray of Enfeeblement", "2", "<p>A spell attack (+16) against one creature within 30 feet; on a hit it is "+B.cond("enfeebled", "Enfeebled 2")+" for 1 minute ("+chk("type:fortitude|dc:24")+" reduces to Enfeebled 1).</p>", ["concentrate", "manipulate", "occult", "void"]),
+   B.action(nid(), "Command Undead", "1", "<p>Jolistina directs her animated nobles (her wand of <em>animate dead</em> made 21 zombies; 7 are uncontrolled) to Stride, Strike, or screen her — she fights from behind them and flanks for Sneak Attacks.</p>", ["auditory", "concentrate"]),
+   B.action(nid(), "Vanish", "1", "<p>Jolistina drinks a potion of invisibility and melts into the manor, resetting to ambush from a new room (her signature cat-and-mouse).</p>", ["manipulate"]),
+   B.lore(nid(), "Pesh & Poisons Lore", 14),
+   B.gear("studded-leather", nid()), B.gear("hand-crossbow", nid()), B.gear("dagger", nid())],
+  notes="<p><strong>Role:</strong> a pesh-addicted, self-destructive forsaken elf and the necromancer <strong>Rolth Lamm's</strong> lover (Gaedren's son, from the Ch.1 Dead Warrens). Sent to murder Ileosa's noble hit-list at Carowyn Manor, she slaughtered the whole party and posed 21 zombies into a 'masquerade of the dead,' then disguised every corpse as a blood-veil death with her wand of <em>sculpt corpse</em>.</p>"
+        "<p><strong>Tactics:</strong> a stealth-skirmisher who plays cat-and-mouse — sniping from hiding for bleeding Sneak Attacks, screaming-bolting clusters, then Vanishing room to room. She fights melee only from behind her zombies. Cornered alone, she flees to ambush again. <strong>The 'plague deaths' here are fakes</strong> ("+chk("type:medicine|dc:20")+" or "+chk("type:will|dc:11")+" to tell).</p>",
+  folder=F2["a_creatures"], senses=[{"type": "low-light-vision"}], blurb="Forsaken elf killer; Rolth's lover", token_src=None, actor_link=True))
 
 # =====================================================================
 # JOURNAL — "2. Seven Days to the Grave"
@@ -350,6 +367,33 @@ area2("D3", "Giotorri's Toys", SR("D3", 101)
   + "<p>The dusty, locked showroom above ("+chk("type:thievery|dc:30")+", or Giotorri's key from D2). The spawn left the cheap, defective toys alone.</p>"
   + B.s_treasure("<p>"+chk("type:perception|dc:14")+": a jingling lockbox ("+chk("type:thievery|dc:20")+") with a few coins and an <strong>Abadaran deposit-box key</strong> (No. 261; "+chk("type:society|dc:16")+" or "+chk("type:religion|dc:16")+" to place it). Redeemed at the Grand Vault, it yields Giotorri's savings (~68 gp), masterwork thieves' tools, and <strong>boots of striding and springing</strong>.</p>")
   + B.s_conv("<p>Clearing Racker's Alley removes one of Ramoska's loose ends — and quietly establishes the vampire's presence ahead of the Temple finale.</p>"))
+
+PG("Mission 5: The Case of the Vanishing Virtuoso", SR("Mission 5 — Carowyn Manor", 104)
+  + "<p>Deyanira Mirukova begs the PCs (or Kroft refers her) to find her brother <strong>Ruan</strong>, a Varisian ocarina prodigy who went to perform at a masquerade at <strong>Carowyn Manor</strong> and never returned. The estate now sits locked, curtained, and reeking. "+chk("type:society|dc:16")+" recognizes Ruan as a genuine virtuoso. (Her reward is meager — heirlooms under 100 gp and Marbledome passes — but the trail matters.)</p>"
+  + SEC("<p><strong>GM:</strong> Ileosa added <em>rich</em> undesirables to the plague's toll; Davaulus farmed the hit-list to the necromancer <strong>Rolth Lamm</strong> (Gaedren's son, the absent master of the Ch.1 Dead Warrens), who — absorbed in studying Varisian plague-immunity — handed it to his lover "+act(A2["jolistina"], "Jolistina Susperio")+". She murdered the entire party, raised 21 of the guests as zombies, and disguised every corpse as a blood-veil death. <strong>The 'plague' here is staged.</strong></p>")
+  + B.s_skill("<p><strong>Getting in:</strong> the mahogany front doors are locked ("+chk("type:athletics|dc:26")+" / "+chk("type:thievery|dc:30")+"); the balcony banisters take "+chk("type:athletics|dc:15")+" to climb; the spiked garden hedge "+chk("type:athletics|dc:12")+" (fail by 5+ → @Damage[1d6[piercing]]). Jolistina jammed the side doors and shutters ("+chk("type:athletics|dc:25")+"/"+chk("type:thievery|dc:22")+" doors; shutters easier).</p>"))
+
+area2("E1", "Carowyn Manor — First Floor", SR("E1", 108)
+  + box("every papier-mache mask and sequined gown hides a blister-covered corpse",
+        "<p>The masquerade is long over: every papier-mâché mask and sequined gown hides a blister-covered corpse. Save for one murderess and one captive host, everyone in Carowyn Manor is dead — and many of them are still dancing.</p>")
+  + "<p><strong>The whole manor is one complex encounter.</strong> "+act(A2["jolistina"], "Jolistina")+" hides and plays cat-and-mouse, ordering her posed zombies to defend her while she snipes and Vanishes. Of her 21 "+B.mon("zombie-shambler", "zombies")+", 7 are uncontrolled (they attack anyone).</p>"
+  + B.enc("E1a Great Hall — dancing dead", encx([-1] * 6, 6),
+     "<p>6 "+B.mon("zombie-shambler", "human zombies")+" posed as dancing noble couples; they turn and attack 1 round after the PCs enter.</p>",
+     B.aside_token(["6× "+B.mon("zombie-shambler", "Human Zombie (−1)")]))
+  + B.enc("E1b Den — uncontrolled trio", encx([-1] * 3, 6),
+     "<p>3 uncontrolled "+B.mon("zombie-shambler", "zombies")+" (lion/lioness/peacock masks); Jolistina avoids this room.</p>",
+     B.aside_token(["3× "+B.mon("zombie-shambler", "Human Zombie (−1)")]))
+  + B.enc("E1c Dining Room — diners", encx([-1] * 4, 6),
+     "<p>4 "+B.mon("zombie-shambler", "zombies")+" mechanically 'dining' among real corpses.</p>",
+     B.aside_token(["4× "+B.mon("zombie-shambler", "Human Zombie (−1)")])))
+
+area2("E2", "Carowyn Manor — Second Floor", SR("E2", 110)
+  + "<p>More posed "+B.mon("zombie-shambler", "zombies")+" (the remaining ~8) drift through the bedrooms and salon. Here too is the surviving host, <strong>Ausio Carowyn</strong> — broken and captive, kept alive as Jolistina's plaything — and, among the masquerade dead, Deyanira's brother <strong>Ruan</strong>.</p>"
+  + B.enc("BOSS — Jolistina Susperio", encx([8], 6),
+     "<p>"+act(A2["jolistina"], "Jolistina")+" makes her stand (or her endless retreat) here, fighting from behind whatever zombies remain. Run her as the manor-spanning skirmish she is, not a stand-up fight.</p>",
+     B.aside_token([act(A2["jolistina"], "Jolistina Susperio (8)"), "+ remaining "+B.mon("zombie-shambler", "zombies")]))
+  + B.s_treasure("<p>Jolistina carries 2 potions of invisibility, a potion of <em>remove disease</em>, wands of <em>animate dead</em> / <em>sculpt corpse</em> / <em>cat's grace</em>, <strong>+1 glamered studded leather</strong>, a hand crossbow with 3 <strong>screaming bolts</strong>, and ~150 gp + stolen jewelry. The manor itself holds a noble household's worth of re-scaled valuables.</p>")
+  + B.s_conv("<p><strong>The reveal:</strong> exposing the staged deaths proves the nobles were murdered, not plagued — and the wand of <em>sculpt corpse</em> + Jolistina's link to <strong>Rolth</strong> ties the plague to the necromancer and the cult of Urgathoa, pointing toward the Hospice. Save Ausio; recover Ruan's body for Deyanira.</p>"))
 
 journal = B.journal_entry(JID2, "2. Seven Days to the Grave", pages, folder=ADV_FOLDER)
 B.write("journals", "02-seven-days-to-the-grave", copy.deepcopy(journal), embed_pages=True)

@@ -211,6 +211,8 @@ Notes*. Foundry path: `cotct-journals` → "Old Fishery — …". No major
 
 - **CHG-0141 — Ch.2 Mission 4: The Hungry Dead.** 4 pages (overview + D1 Racker's Alley / D2 workshop / D3 Giotorri's Toys): the corpse-dump lair of four vampire spawn (Tiriac's, sent to watch the nosferatu Ramoska — seeding the Temple villain). Official link: **Vampire Servitor** (L4, Remaster's vampire-spawn). Blood Veil exposure from the plague-dead; Survivor-Count payoff; treasure (ring of jumping, pipes of haunting, boots of striding and springing via an Abadar deposit-box key). Difficulty @L6: D1 Moderate-solo, D2 (4 spawn) Moderate→Severe. *Source:* faithful. *Severity:* n/a. *Journal:* yes. *Review:* none.
 
+- **CHG-0142 — Ch.2 Mission 5: The Vanishing Virtuoso (Carowyn Manor).** 3 pages (overview + E1 first floor / E2 second floor): the masquerade-massacre horror — one manor-spanning encounter of 21 posed zombies + a hidden skirmisher boss. New boss **Jolistina Susperio** (L8 elf rogue-sorcerer — Sneak Attack 4d6, Screaming Bolt, Ray of Enfeeblement, Command Undead, Vanish), ties the plague to **Rolth Lamm** (Gaedren's son) and the cult. Official link: Zombie Shambler (×21). Staged 'plague deaths' (Medicine/Will to detect). *Source:* faithful. *Severity:* n/a. *Journal:* yes. *Review:* none.
+
 <!-- CH3 — Escape from Old Korvosa -->
 <!-- CH4 — A History of Ashes -->
 <!-- CH5 — Skeletons of Scarwall -->
