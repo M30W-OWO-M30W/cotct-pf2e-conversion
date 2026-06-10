@@ -231,8 +231,9 @@ AW("yargin-balko", B.npc(A["yargin"],"Yargin Balko",1,16,20,5,5,7,6,
    B.strike(nid(),"Dagger",5,"1d4+1","piercing",["agile","finesse","versatile-s"]),
    B.action(nid(),"Quick Acid","1","<p>Yargin Interacts to draw an "+B.isrd("acid-flask-lesser","Acid Flask (Lesser)")+", then Strikes with it.</p>",["alchemical"]),
    B.lore(nid(),"Alchemy Lore",7),
-   B.gear("acid-flask-lesser",nid(),2), B.gear("thunderstone-lesser",nid(),1),
-   B.gear("crossbow",nid()), B.gear("dagger",nid()), B.gear("leather-armor",nid())],
+   B.gear("acid-flask-lesser",nid(),3), B.gear("thunderstone-lesser",nid(),1),
+   B.gear("crossbow",nid()), B.gear("dagger",nid()), B.gear("leather-armor",nid()),
+   B.equipment(nid(),"Scroll of Acidic Burst",1,4,"<p>A spell scroll holding a 1st-rank burst of acid (his PF1e wand of acid splash, re-cast as a scroll). Yargin is no spellcaster, so he must Trick the scroll ("+chk("type:arcana|dc:15")+", Trick Magic Item); on a success he spends 2 actions to Cast it, dealing @Damage[2d6[acid]] in a 10-foot burst ("+chk("type:reflex|dc:18|basic:true")+").</p>",traits=["scroll","magical","acid","consumable"])],
   notes="<p><strong>Role:</strong> Gaedren's fence; answers the front door, fights from A6. Opens with thrown Acid Flasks, falls back to crossbow. <strong>Flees down the hidden trapdoor to warn Gaedren if losing.</strong> Carries the brass key (all fishery doors).</p>",
   folder=F["a_creatures"], blurb="Bitter alchemist-fence; Gaedren's right hand", token_src=TOK("yargin-balko")))
 
