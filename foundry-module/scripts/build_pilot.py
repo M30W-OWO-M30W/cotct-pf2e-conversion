@@ -231,6 +231,19 @@ def dcfix(html):
 #   Derro (community offers a Strangler/Elite-Stalker choice), Mad Prophet (community used a
 #   generic GMG Beggar), Lamm's Lambs (community models them as a hazard; CHG-0107 keeps
 #   them non-combatant NPCs here) — Beggar/Dero docs still ship via build_community.py.
+# MISSING-CHECK SWEEP (2026-06-10): badged gated interactions the prose left checkless —
+#   Cbelow intro: standing below-decks pick rule, Thievery 20 (olliebird silent; GM Core
+#   simple lock per the community's own 15/20/30 convention, party L4) · C9 brewery door:
+#   pick 20 inline (key-only, but Devargo's key ring is obtainable loot) · D6: secret door
+#   to D2, Perception 21 inline (mirrors D2's existing badge / olliebird ruling) · A13:
+#   rusted manacles Thievery 17 (GM Core poor manacles) for the mid-'feeding' child rescue ·
+#   B3: barred south double doors, Athletics 22 to Force Open from outside (matches
+#   olliebird's B4 grate Force Open 22 at the same site). No existing DC changed. Judged
+#   narrative/no-check: Ch.Background treasury secret door (Ileosa backstory) · E8 Castle
+#   Korvosa 'locked tight' (figurative; entry is the audience) · Conclusion's Blackjack
+#   climb/leap (cut-scene) · C17 shark, A5 boarded window, A12 rusted chains, A13 lockbox
+#   clutter (set dressing) · conv-note "'pick = 15' line" (meta-commentary; NB the features
+#   page's actual standing rule is pick 18 — text left untouched per no-DC-changes rule).
 
 # Player-handout sidebar text the two-column OCR fused into the GM narrative
 # (start-phrase, end-phrase, label). Pulled out of the prose so it stops
@@ -906,7 +919,7 @@ area("A12","Underpier", SR("A12","24-25")
 area("A13","Gaedren's Playground", SR("A13","24-26")
   +box("A13","<p>A chill chamber opens over a pit of black river water, crossed by two five-foot walkways. Rusted manacles dangle from mossy ropes above the pool. On the far side, cabinets and lockboxes spill dingy 'treasures' across three cluttered tables. Something heavy shifts in the water below.</p>")
   +"<p>"+B.cmon("Gobblegut")+" lurks in the pit; "+act("gaedren","Gaedren Lamm")+" sorts the day's haul at his tables across it. <strong>Reaching him means crossing the gator's water.</strong></p>"
-  +SEC("<p>Those manacles are where Gaedren feeds doomed orphans to Gobblegut for sport — the PCs may arrive mid-'feeding,' a child dangling over the snapping jaws. Anyone who names <strong>Zellara</strong> earns a leering reply that 'she's in the next room' — her head waits in "+pg(P["A14"],"A14")+". <strong>Tactics:</strong> Gaedren opens with <em>Spur the Beast</em> to enrage Gobblegut, snipes from across the pool, <em>Nimble Dodges</em> focus fire, and flees to the "+pg(P["A12"],"A12")+" skiffs at &le;8 HP — though the abused gator may take him first.</p>")
+  +SEC("<p>Those manacles are where Gaedren feeds doomed orphans to Gobblegut for sport — the PCs may arrive mid-'feeding,' a child dangling over the snapping jaws ("+chk("type:thievery|dc:17")+" to pick the rusted manacles free, or simply cut the rope). Anyone who names <strong>Zellara</strong> earns a leering reply that 'she's in the next room' — her head waits in "+pg(P["A14"],"A14")+". <strong>Tactics:</strong> Gaedren opens with <em>Spur the Beast</em> to enrage Gobblegut, snipes from across the pool, <em>Nimble Dodges</em> focus fire, and flees to the "+pg(P["A12"],"A12")+" skiffs at &le;8 HP — though the abused gator may take him first.</p>")
   +B.enc("BOSS — Gaedren + Gobblegut","SEVERE · 120 XP @ level 1 (Moderate @ level 2)",
      "<p>The crocodile is the real threat; Gaedren is a frail catalyst who weaponizes it and snipes from cover.</p>"
      +"<p><strong>Scaling:</strong> 3 PCs → Weak Crocodile · 5–6 PCs → Elite Crocodile and/or pull a drain spider from the pool · if Yargin reached Gaedren first, Gobblegut starts pre-enraged.</p>",
@@ -953,7 +966,7 @@ pages.append(newpage("conv","Conversion Notes",
    "<ul>"
    "<li><strong>Gaedren rebuilt as a credible Severe</strong>, with Gobblegut as the real threat — fixes the 'Lamm is a Lamb' anticlimax and PF2e solo-boss math. Added <em>Spur the Beast</em> / <em>Nimble Dodge</em>; kept <em>Limping Gait</em>. ⚠ Confirm Severe @L1 vs running it @L2.</li>"
    "<li><strong>Gobblegut & Bloo</strong> ship as the community conversion's named statblocks (a Crocodile / Guard Dog re-skin; no rebuild of ours).</li>"
-   "<li><strong>DCs re-derived</strong> to PF2e level-based / simple values (the PF1e locked-door spam collapsed to a single 'pick = 15' line).</li>"
+   "<li><strong>DCs aligned</strong> to the community conversion where it rules, PF2e level-based / simple values where it is silent (the PF1e locked-door spam collapsed to a single 'pick = 18' standing line).</li>"
    "<li><strong>Treasure rebuilt</strong> to PF2e level 1→2 (CHG-0008).</li>"
    "<li><strong>Drain Spider Venom</strong>: PF1e Con-drain → PF2e 1-stage poison + enfeebled.</li>"
    "<li><strong>Harrowing</strong> → hero-point-style suit pool (CHG-0010).</li>"
@@ -1171,6 +1184,7 @@ area("B2","Hall", SR("B2","46")
 
 area("B3","Meat Locker", SR("B3","46")
   +box("B3","<p>The air is stale, stinking of day-old meat and blood. Straw litters the floor beneath meat hooks affixed to walls and ceiling. A blood-stained table and two salt barrels stand to the north; double doors to the south are barred by an iron bar that runs along the ceiling to a floor-to-ceiling pole.</p>")
+  +"<p>The barred southern double doors open freely from inside (lift the bar via the pole); from outside they take "+chk("type:athletics|dc:22")+" to Force Open.</p>"
   +SEC("<p><strong>The horror.</strong> Salted meat hangs overnight here. Among the pork and beef, "+chk("type:medicine|dc:19")+" or "+chk("type:nature|dc:19")+" confirms at least a half-dozen cuts are not from animals at all — they are <strong>humanoid</strong>. Hard proof of the murders that breaks Verik (see "+pg(P["B8"],"B8")+").</p>"))
 
 area("B4","Killing Floor", SR("B4","47")
@@ -1263,7 +1277,7 @@ area("C7","Throne of Spiders", SR("C7","52-54")
   +B.s_conv("<p>Releasing Majenko earns a story award and a loyal, information-gathering house-drake ally. The real goal remains the letters — turn them over to Cressida (Event 10 reward). <strong>Loot if he falls:</strong> his runed armor, gauntlets, venom, potions — and his key ring and 79 gp purse (see his sheet); the keys open the brewery ("+pg(P["C9"],"C9")+") and the sea chest ("+pg(P["C14"],"C14")+").</p>"))
 
 pages.append(newpage("Cbelow","C8-C12 & C16. Below Decks", SR("C8-C12, C16","54")
-  +"<p>The stairs behind the throne room ("+pg(P["C7"],"C7")+") drop into the old warship's working guts. Everything here is locked or guarded by habit rather than men — Devargo's people rarely come below except to brew ("+pg(P["C9"],"C9")+") or to dump a body to Chittersnap ("+pg(P["C15"],"C15")+").</p>"
+  +"<p>The stairs behind the throne room ("+pg(P["C7"],"C7")+") drop into the old warship's working guts. Everything here is locked or guarded by habit rather than men (a locked below-decks door is "+chk("type:thievery|dc:20")+" to pick; Devargo's key ring opens them all) — Devargo's people rarely come below except to brew ("+pg(P["C9"],"C9")+") or to dump a body to Chittersnap ("+pg(P["C15"],"C15")+").</p>"
   +'<p class="subhead"><strong>C8. Privies</strong></p>'
   +"<p>Three narrow privies line the wall, their befouled chutes opening straight into the river below. The chutes are an entrance of last resort: nothing larger than <strong>Tiny</strong> fits, and even a Tiny creature must Squeeze through with a successful "+chk("type:acrobatics|dc:28")+".</p>"
   +'<p class="subhead"><strong>C10. Brig</strong></p>'
@@ -1280,7 +1294,7 @@ pages.append(newpage("Cbelow","C8-C12 & C16. Below Decks", SR("C8-C12, C16","54"
 
 area("C9","Shiver Brewery", SR("C9","54")
   +box("C9","<p>Two big wood stoves are set into the curve of the hull, iron bars across each hung with cauldrons; firewood is mounded to the north, and dozens of empty glass vials crowd the stove mantles.</p>")
-  +"<p>The locked door answers to Devargo's key. A strange, bitter smell: the cauldrons boil alcohol, water, and dream-spider venom down into <strong>shiver</strong> for the Arkonas — a few hours' work a week (with Chittersnap's 'help') that keeps Devargo's vice taxes paid.</p>"
+  +"<p>The locked door answers to Devargo's key (or "+chk("type:thievery|dc:20")+" to pick). A strange, bitter smell: the cauldrons boil alcohol, water, and dream-spider venom down into <strong>shiver</strong> for the Arkonas — a few hours' work a week (with Chittersnap's 'help') that keeps Devargo's vice taxes paid.</p>"
   +B.s_treasure("<p>Among the empty vials sit six doses of shiver (~25 gp each in 1e; story contraband, not loot — destroying it pays off a 'Drug Addict' background hook).</p>"))
 
 area("C13","Meeting Room", SR("C13","54")
@@ -1361,7 +1375,7 @@ area("D5","Exsanguination Chamber", SR("D5","57")
 area("D6","Necrophidius Corridor", SR("D6","57")
   +box("D6","<p>The walls and ceiling of this tall hallway are encrusted with dozens of yawning skulls, their mouths opening into dark holes in the walls.</p>")
   +"<p>Two of the skulls are the heads of "+B.mon("necrophidius","necrophidiuses")+" — silent skeletal serpents Rolth crafted from the skulls of two old Key-Lock Killer victims — housed motionless in the walls, one at each far end, until the room's trap springs; they then slither out and strike with surprise unless a PC hears the telltale rattle of ribs against stone.</p>"
-  +"<p>The "+haz("acidskulls","Acid-Spraying Skulls")+" trap fires two rounds after a creature enters; Rolth and the derros dart through before it triggers (door to "+pg(P["D7"],"D7")+" ↔ secret door to "+pg(P["D2"],"D2")+").</p>"
+  +"<p>The "+haz("acidskulls","Acid-Spraying Skulls")+" trap fires two rounds after a creature enters; Rolth and the derros dart through before it triggers (door to "+pg(P["D7"],"D7")+" ↔ secret door to "+pg(P["D2"],"D2")+", "+chk("type:perception|dc:21")+" to find).</p>"
   +B.enc("Necrophidiuses (+ acid trap)",xpb([B.mon_lvl("necrophidius"),B.mon_lvl("necrophidius")],4),
      "<p>2 "+B.mon("necrophidius","necrophidiuses")+" (their dance can stun) plus the "+haz("acidskulls","acid-skull")+" trap raking the whole hall.</p>",
      B.aside_token(["2× "+B.mon("necrophidius","Necrophidius (3)"), haz("acidskulls","Acid-Spraying Skulls (1)")])))

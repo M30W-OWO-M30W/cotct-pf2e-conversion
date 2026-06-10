@@ -81,6 +81,16 @@ MA = {"stirge": "stirgeFeeder0001", "drainspider": "1M94tm3wnSRGcTG5", "jigsaw":
 #   otyugh / rat swarm / reefclaw / wererat / bulette / erinys / specter / barbed+bone devils /
 #   wyvern — the community exports are the same plain creatures (bespoke ones already link
 #   module ids) · Kazavon npc() fallback statline left at 25 (swapped at write either way)
+# MISSING-CHECK SWEEP (gated-interaction audit): ADDED gazetteer Vaults strata — the barred
+#   walls joining brick sewers to older works now badge Athletics DC 30 to Force Open
+#   (community ch6 convention: Iron Portcullis A26 / Brick Wall A11 both Force DC 30; = GMC
+#   master simple DC for an iron barrier). Judged narrative, no badge: the Acadamae's barred
+#   gates (deliberate campaign-long design boundary, gazetteer + rumor row) · Harrow draws
+#   (Locksmith/Avalanche are card effects, not obstacles) · V5 Avenue of Arms dig (automatic
+#   consequence) · Posh and Turtle glass floor (decor). Already badged nearby: Death's Head
+#   Coffer pick DC 30 (same sentence) · Akaruzug Soul Engine wrench-free Athletics DC 36 ·
+#   Soul Jar shows Hardness 1/HP 10 · Blackjack kit discovery lives on ch3's A8 page
+#   (Perception DC 29 panel + Thievery DC 40 lockbox) — our subsystem page only points there.
 
 # community-only item docs build_community ships into our folders (original 16-char ids)
 CIT = {"thirdeye": B.community_doc("item", "Rakshasan Third Eye")["_id"],
@@ -759,7 +769,7 @@ PG(PID["gazetteer"], "Korvosa & Beyond (Gazetteer Reference)",
   + "<p><strong>The city</strong> (84 keyed locations, summarized for play): the Heights (Castle Korvosa, the Acadamae — Lorthact's secret), Old Korvosa (Endrin Isle, Old Dock, Fort Korvosa — the Arkonas), North Point (the Bank of Abadar, Citadel Volshyenek, the Longacre Building), Midland (the Shingles, Eel's End), Gray District (the Dead Warrens, the rebel ossuary), South Shore (Carowyn Manor, the noble estates), East Shore (Hellknight Citadel Vraid beyond).</p>"
   + '<p class="subhead"><strong>The Shingles & The Vaults</strong></p>'
   + "<p><strong>The Shingles:</strong> the rooftop shanty-ward — a criminal highway above the Guard's sightline, nested with "+B.mon("imp", "imps")+", the "+B.mon("house-drake", "house drakes")+" that hunt them (and cause nearly as much trouble), stirges in the gutters, and chokers no purge has ever cleared (locals in overshadowed blocks sleep below the second floor for a reason). Random table: "+tbl(TBL["shingles"], "The Shingles")+".</p>"
-  + "<p><strong>The Vaults:</strong> Korvosa's underground has three strata — repurposed <em>Shoanti burial mounds</em> (the mainland's twisting dead-end 'sewers' were tombs first; the Skoan-Quah have not forgotten), purpose-built <em>brick sewage tunnels</em> (the newest, often joining older works behind barred walls), and the <em>Thassilonian deeps</em> — Eurythnia's bones, oldest and worst, with surviving Darklands links. Random table: "+tbl(TBL["sewers"], "The Vaults")+".</p>"
+  + "<p><strong>The Vaults:</strong> Korvosa's underground has three strata — repurposed <em>Shoanti burial mounds</em> (the mainland's twisting dead-end 'sewers' were tombs first; the Skoan-Quah have not forgotten), purpose-built <em>brick sewage tunnels</em> (the newest, often joining older works behind barred walls — "+chk("type:athletics|dc:30")+" to Force Open a barrier), and the <em>Thassilonian deeps</em> — Eurythnia's bones, oldest and worst, with surviving Darklands links. Random table: "+tbl(TBL["sewers"], "The Vaults")+".</p>"
   + '<p class="subhead"><strong>Sites of Interest (V1–V13)</strong></p>'
   + "<ul>"
     "<li><strong>V1 Old City Hall</strong> ('the Charcoal Palace') — mostly abandoned; a caretaker skeleton crew.</li>"

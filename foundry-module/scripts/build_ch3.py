@@ -20,6 +20,18 @@ B.SCOPE = (5514, 8160)   # AP.md line range for this chapter (anchor scoping)
 #       Researching-the-Emperor table (Society, per community) and the audience socials use the
 #       community's area-keyed DC 26 Diplomacy / DC 22 Intimidation ruling.
 
+# MISSING-CHECK SWEEP (gated actions with no badge): added 3 —
+#   C12 cell-door pick Thievery 20 (AP p.158: simple wooden door, lock + heavy bar, key with Pilts;
+#       community silent -> simple-lock convention 15/20 judged at party L8-9);
+#   E16 sphere-oubliette + E21 southern cells: cell locks Thievery 30 (community silent -> good-lock
+#       convention 30; matches the Labyrinth's lever-override/manacle DC 30s at L10).
+#   Judged no-check: D4 'secret trap door' (Perception 28 badge already on the same page, per
+#       community [D4]); D11 'feed in true form behind locked doors' (NPC dining custom — the area's
+#       grounds doors carry the Thievery 30 badge in the same paragraph); E23 'gears unlock'
+#       (machine narration, no player action gated); D20 Cat's Cradle rope bridges ('sturdy...easy
+#       access' per AP); B3 shuttered windows / C4 pig-cage trapdoors / Jeggare barricade (narrative
+#       or already governed by game-rule text).
+
 # OLLIEBIRD STATBLOCK RESYNC (community statblock = stat authority; npc()/hazard() literals are
 # swapped in place by B.write, so only encounter() args + "(L)" text labels are re-synced here):
 #   Levels: Emperor's Thug 5->6 (mob/guardroom/court/blood-pig encs), Red Mantis Assassin 9->8,
@@ -630,7 +642,7 @@ area3("C11", "The Emperor's Chambers", SR("C11", 157)
 area3("C12", "Salvator's Cell", SR("C12", 158)
   + box("The air in this room is an unpleasant mix",
         "<p>The air is an unpleasant mix of paint, sweat, and despair: a barred room of easels and half-finished horrors, its single occupant flinching at the sound of the bolt.</p>")
-  + "<p>"+act(A3["salvator"], "Salvator Scream")+" paints here under lock, bar, and beating. He begs rescue of any visitor who isn't the Emperor — but says <em>nothing</em> of Neolandus while Pilts lives. His price: <strong>the Emperor's death, and escort to the mainland</strong> ("+chk("type:diplomacy|dc:19")+" with a credible rescue promise; Intimidation or magic also work — "+act(A3["laori"], "Laori")+" cheerfully recommends both). Even then he won't finish the story until he's somewhere he <em>can't be overheard</em>.</p>"
+  + "<p>"+act(A3["salvator"], "Salvator Scream")+" paints here under lock, bar, and beating (the heavy bar lifts from the C11 side; "+chk("type:thievery|dc:20")+" picks the lock without Pilts's key). He begs rescue of any visitor who isn't the Emperor — but says <em>nothing</em> of Neolandus while Pilts lives. His price: <strong>the Emperor's death, and escort to the mainland</strong> ("+chk("type:diplomacy|dc:19")+" with a credible rescue promise; Intimidation or magic also work — "+act(A3["laori"], "Laori")+" cheerfully recommends both). Even then he won't finish the story until he's somewhere he <em>can't be overheard</em>.</p>"
   + SEC("<p><strong>Wards &amp; what becomes of him:</strong> every morning Pilts re-casts an <em>alarm</em> on this cell's door — a mental ping warns the Emperor the instant anyone but him opens it (on top of the warded C10 door). And mind the artist's nerve: below half HP he bolts for any small dark hole, and if he slips away on his own he eventually creeps home to 140 Wave Street — <strong>where the sinkhole otyughs (B5) eat him</strong>, unless the PCs already cleared them.</p>")
   + SEC("<p><strong>Laori's payoff.</strong> She has questions she'd rather ask Salvator privately: <em>where do the ideas come from?</em> Learning that his muse spoke in vivid dreams — and that the dreams have stopped — excites, then deflates her. She means him no harm (a living artist's muse might someday return), and she <strong>volunteers to escort Salvator to the mainland</strong> — a promise this priestess of the god of pain genuinely keeps. Errand done, she takes her leave to report to her superiors, enigmatically predicting the PCs haven't seen the last of her (true — Chapter 5), and slips into the lengthening shadows.</p>")
   + B.s_treasure("<p><strong>Story award:</strong> learning what Salvator knows — the Neolandus/Arkona revelation below — is worth a Moderate encounter's XP (PF1e 4,800).</p>")
@@ -797,7 +809,7 @@ area3("E13-E17", "The Maze's Heart", SR("E13-E17", 180)
   + "<p><strong>E13, Meditation Chamber:</strong> a humming black-marble <strong>sonorous stone</strong> ("+chk("type:occultism|dc:28")+" while reading auras): a minute within 5 feet grants <em>calm emotions</em>; touching it casts <em>restoration</em> AND restores up to 3 expended spell slots — four uses a month (it dies if removed). Vimanda's patrol starts here. <strong>E14:</strong> a bone-strewn room hiding a lever behind a secret door ("+chk("type:perception|dc:30")+"). <strong>E15:</strong> murals that paint the viewer among the prey — pure dread. <strong>E17:</strong> Sivit's body-dump (the Arkonas carry the remains to table).</p>"
   + box("Four alcoves in the walls of this",
         "<p><strong>E16:</strong> four wall alcoves each hold a sphere of mist hovering three feet off the floor — a foot across, one each of black, white, green, and gold. Just north of the spheres, two levers jut from opposite walls.</p>")
-  + SEC("<p><strong>E16, Transport Room:</strong> the mist-spheres teleport a toucher (thrown objects too) — white→E2, black→E13, green→E20, gold→E5 — <em>if</em> the western lever is up. It starts <strong>down</strong>: every sphere instead dumps the toucher into a random unoccupied locked cell in E21 (no cells free → the spheres simply go dead). Superb mobility for those who know the pattern; a one-way oubliette for those who don't. The eastern lever is another rotation pull.</p>"))
+  + SEC("<p><strong>E16, Transport Room:</strong> the mist-spheres teleport a toucher (thrown objects too) — white→E2, black→E13, green→E20, gold→E5 — <em>if</em> the western lever is up. It starts <strong>down</strong>: every sphere instead dumps the toucher into a random unoccupied locked cell in E21 (a good lock — "+chk("type:thievery|dc:30")+" to pick from within; no cells free → the spheres simply go dead). Superb mobility for those who know the pattern; a one-way oubliette for those who don't. The eastern lever is another rotation pull.</p>"))
 
 area3("E18-E19", "The Throne Approaches", SR("E18-E19", 181)
   + "<p>The two rooms that rotate open onto Sivit's chamber: the Hall of Slumber with its "+haz(A3["symsleep"], "Symbol of Sleep")+", and the crooked Hall of Stunning with the "+haz(A3["symstun"], "Symbol of Stunning")+". She times her entrances for the glyphs' harvest.</p>")
@@ -815,7 +827,7 @@ area3("E20", "Sivit's Throne — the Vencarlo Rescue", SR("E20", 182)
 area3("E21-E22", "The Torture Chamber — the Neolandus Rescue", SR("E21", 184)
   + box_stitch("This large room is lit by a heartily", "hooks in the", "ceiling, while racks, strappados, gibbets",
         "<p>A firepit burns merrily at the room's center; caged silhouettes sway on chains hooked to the ceiling, and racks, strappados, gibbets, and subtler instruments crowd the floor between them. Immense wooden doors fill the north wall; along the south waits a row of narrow, very clean cells.</p>")
-  + "<p>"+act(A3["senshiir"], "Senshiir")+", the four-armed asura who tortures for the Arkonas by contract, has just strapped a sobbing man to the rack — <strong>"+act(A3["neolandus"], "Neolandus Kalepopolis")+"</strong> ("+chk("type:society|dc:15")+" to recognize him; he claims to be 'Velak' otherwise, and begs the PCs to rescue 'a friend' before they leave). The E16 teleporters dump victims into the southern cells. E22 is the dead torturer's old room, where Senshiir sometimes meditates.</p>"
+  + "<p>"+act(A3["senshiir"], "Senshiir")+", the four-armed asura who tortures for the Arkonas by contract, has just strapped a sobbing man to the rack — <strong>"+act(A3["neolandus"], "Neolandus Kalepopolis")+"</strong> ("+chk("type:society|dc:15")+" to recognize him; he claims to be 'Velak' otherwise, and begs the PCs to rescue 'a friend' before they leave). The E16 teleporters dump victims into the southern cells (good locks — "+chk("type:thievery|dc:30")+"). E22 is the dead torturer's old room, where Senshiir sometimes meditates.</p>"
   + B.enc("Senshiir (+ Vimanda, if unalerted)", encx([9, 12], 10),
      "<p>"+act(A3["senshiir"], "Senshiir")+" alone is a light fight — but if the PCs reached here without alarms or Bahor's deal, "+act(A3["vimanda"], "Vimanda")+" is here trading torture-craft with her, and the room is <strong>Moderate-to-Severe</strong>.</p>",
      B.aside_token([act(A3["senshiir"], "Senshiir (9)"), act(A3["vimanda"], "Vimanda (12, perhaps)")]))

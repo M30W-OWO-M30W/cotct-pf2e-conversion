@@ -53,6 +53,21 @@ B.SCOPE = (2695, 5514)   # AP.md line range for this chapter (anchor scoping)
 #   Kept-and-flagged: Yvicca + Ramoska armor (stat-support, no community counterpart),
 #   thug steel shield/rapier/hand crossbow + Physician club (AP gear community omitted).
 
+# MISSING-CHECK SWEEP: badged gated player actions whose prose showed no check in the
+# compiled journal.
+# added = G8 catwalk door up to G11: Thievery 29 to pick (prose says key-only, but Ramoska's
+#   key is obtainable in play; DC per the community's temple-wide 'Doors ... Thievery 29 to
+#   unlock' ruling, already this file's standing temple-door rule) · B3 + B6 squeeze-hole:
+#   Acrobatics 20 for a Medium creature to Squeeze (community silent; AP gates the gap to
+#   Small creatures — level-based DC at the mission's party level 5).
+# judged-no-check = D2 trap door (announced in the read-aloud, unlocked — open access to the
+#   crawl space) · G4 display glass / G8 vats / G13 daemon prisons (object Hardness-HP stats
+#   inline; smashing resolves as damage, not a check) · G5 bed manacles+straps (unbuckled or
+#   cut freely, no time pressure) · B1 rusty grate (it IS B4's west grate — Hardness/HP and
+#   lift Athletics 26 live in the B4 entry the sentence points at) · Mission 5 'estate sits
+#   locked' (the same page's Getting-in skill block carries every entry DC) · G12 'locked
+#   trunk' treasure line (Thievery 29 / Athletics 28 badged one sentence earlier on the page).
+
 MODID = "cotct-pf2e-conversion"
 # ---- shared cross-chapter root folder ids (must match build_pilot.py) ----
 ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cotctAdvFolder01"
@@ -572,7 +587,7 @@ area2("B2", "Guard Den", SR("B2", 92)
 area2("B3", "Communal Dens", SR("B3", 93)
   + box("Several pieces of broken furniture, dried hay, and fragments",
         "<p>Broken furniture and lumber burn in a small central fire; alcoves hold oversized rats' nests, black condensation drips, and sewage seeps across the western edge.</p>")
-  + "<p>The wererats' fire-lit warren of nests. The floor is slippery in the sewage flow (as B2). "+chk("type:perception|dc:21")+" finds a squeeze-hole to B6; "+chk("type:crafting|dc:19")+" or "+chk("type:perception|dc:21")+" notes the subsiding south wall — chipping it (Hardness 8, 40 HP) lets the trapped "+B.mon("otyugh", "otyugh")+" rampage through.</p>"
+  + "<p>The wererats' fire-lit warren of nests. The floor is slippery in the sewage flow (as B2). "+chk("type:perception|dc:21")+" finds a squeeze-hole to B6 (Small creatures slip through; "+chk("type:acrobatics|dc:20")+" for a Medium creature to Squeeze); "+chk("type:crafting|dc:19")+" or "+chk("type:perception|dc:21")+" notes the subsiding south wall — chipping it (Hardness 8, 40 HP) lets the trapped "+B.mon("otyugh", "otyugh")+" rampage through.</p>"
   + B.enc("Wererat den (Girrigz reinforces)", encx([2, 2, 2, 2], 5),
      "<p>4 "+B.mon("wererat", "wererats")+". If fighting erupts here, "+act(A2["girrigz"], "Girrigz")+" comes through the east wall from B6 in his dire-rat form.</p>",
      B.aside_token(["4× "+B.mon("wererat", "Wererat (2)"), act(A2["girrigz"], "Girrigz (6, reinforces)")]))
@@ -602,7 +617,7 @@ area2("B6", "Girrigz's Den", SR("B6", 94)
   + B.enc("BOSS — Girrigz Ripperclaws", encx([6], 5),
      "<p>"+act(A2["girrigz"], "Girrigz")+" — pre-buffed if warned, striking from stealth with his runed rapier and Vital Strike. He cannot be reasoned with and fights to the death.</p>",
      B.aside_token([act(A2["girrigz"], "Girrigz Ripperclaws (6)")]))
-  + B.s_treasure("<p>"+chk("type:perception|dc:19")+": an arms cache (22 daggers, 12 short swords, 3 crossbows, 4 chain shirts, 12 alchemist's fire, a masterwork longsword + chainmail). "+chk("type:perception|dc:21")+" in the nest: 4 potions of healing, a bottle of air, and a <strong>pearl of power</strong> (2nd-rank) — plus the squeeze-crack to B3. Girrigz carries ~23 gp re-scaled besides his runed mithral rapier.</p>"))
+  + B.s_treasure("<p>"+chk("type:perception|dc:19")+": an arms cache (22 daggers, 12 short swords, 3 crossbows, 4 chain shirts, 12 alchemist's fire, a masterwork longsword + chainmail). "+chk("type:perception|dc:21")+" in the nest: 4 potions of healing, a bottle of air, and a <strong>pearl of power</strong> (2nd-rank) — plus the squeeze-crack to B3 ("+chk("type:acrobatics|dc:20")+" for a Medium creature to Squeeze through). Girrigz carries ~23 gp re-scaled besides his runed mithral rapier.</p>"))
 
 PG("Mission 3: The Color of Death", SR("Mission 3 — The Color of Death", 96)
   + "<p>The Lavender perfumery off Summoning Street, owned by the Chelish con-artist "+act(A2["vendra"], "Vendra Loaggri")+", is selling 'Lavender's Luxuriant Liniment' — a 2-gp 'plague cure' that is sugar, cheap scent, and river water. By day a queue stretches four blocks; the mission is to <strong>expose the fraud</strong>, not to fight.</p>"
@@ -869,7 +884,7 @@ area2("G8", "The Blood Vats", SR("G8", 122)
   + box("The stinging scent of harsh chemicals chokes this high-ceilinged chamber",
         "<p>Three six-foot metal vats bubble under a web of catwalks ten feet up, venting a foul green-brown mist; circling the upper walls, a mosaic of white, black, and green stone shows a giant half-skeletal woman in black veils dancing through fields of the dead, undead, and dying.</p>",
         patch=[("ground 2 stretches", "ground stretches")])
-  + "<p><strong>This room is the source of the plague.</strong> The three vats hold ~1,000 gallons each of viscous, concentrated liquid blood veil; <strong>any contact</strong> forces a "+chk("type:fortitude|dc:24")+" against infection. A cultist on the catwalk can dip her scythe as a single action — her next 1d4 hits expose their targets to blood veil. The door up to G11 opens off the catwalk (locked; Ramoska's key).</p>"
+  + "<p><strong>This room is the source of the plague.</strong> The three vats hold ~1,000 gallons each of viscous, concentrated liquid blood veil; <strong>any contact</strong> forces a "+chk("type:fortitude|dc:24")+" against infection. A cultist on the catwalk can dip her scythe as a single action — her next 1d4 hits expose their targets to blood veil. The door up to G11 opens off the catwalk (locked — Ramoska's key, or "+chk("type:thievery|dc:29")+" to pick, as the temple's other doors).</p>"
   + B.enc("Vat-tenders", encx([2, 2, 2, 2, 2, 2], 7),
      "<p>6 "+act(A2["cultist"], "cultists")+" tend the brew — on sighting intruders one hammers on G11's door (Ramoska ignores it), one runs to warn Andaisin (G14), one frees the G9 zombies, and the rest hold to the death. <strong>Under alert</strong> add "+act(A2["davaulus"], "Davaulus")+", "+act(A2["rolth"], "Rolth")+" on the catwalk, and all 5 "+act(A2["physician"], "physicians")+" — a brutal massed defense; thin the temple before it can muster here.</p>",
      B.aside_token(["6× "+act(A2["cultist"], "Cultist of Urgathoa (2)"), "alert: + "+act(A2["davaulus"], "Davaulus (9)"), "+ "+act(A2["rolth"], "Rolth (8)"), "+ 5× "+act(A2["physician"], "Physician (2)")]))

@@ -43,6 +43,17 @@ B.SCOPE = (10823, 14400)   # AP.md line range for this chapter (anchor scoping)
 #     baykok (C19) · hamatula (D12) · osyluth (D18) · imp · iron golem (C4) · nightmare (C9) ·
 #     gug (H1/H3) · greater hell hound = remastered Nessian Warhound, Elite L10 x2 (E5) ·
 #     zombie-brute juju zombies (B6; community says Elite — L2 vs L3 contributes 0 XP either way).
+#
+# MISSING-CHECK SWEEP (gated interactions that displayed no badge; community doc silent on both,
+#   so PF2e level-based DCs per GM Core):
+#   added A10 barred door — Athletics DC 27 to Force Open (level-based for the L10 Ury encounter;
+#     the barbican runs under-leveled vs. PL13 — cf. community A4 curtain-wall climb 29);
+#   added G3 adamantine manacles — Athletics DC 32 to wrench a set free (level-based at PL14;
+#     AP calls removal 'a difficult task' with no DC).
+#   judged no-check: B35 ceiling trapdoor (AP: 'opens easily' — the gate is the B34 curse, already
+#     badged Will 22); B25 guest-room outside-locks + manacle mounts (past-tense design prose; the
+#     C3 key ring covers all B/C locks); B9/B11/C3/C12/etc. phantasms (community: 'No conversion');
+#     D14 floor-set manacles + fire grate (read-aloud furnishing); B20 'sealed set' (loot value).
 
 MODID = "cotct-pf2e-conversion"
 ACTOR_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctAdvFolder01"
@@ -510,7 +521,7 @@ PG("The Lords of Scarwall",
 
 area5("A", "The Barbican (A1-A12)", SR("A — Barbican", 262)
   + box("A cleared area sprawls before the barbican gate", "<p>A cleared forecourt spreads before the barbican gate, its thin soil littered with bone fragments and broken weapons of ancient battles.</p>")
-  + "<p>The <strong>Deadwatchers</strong> hold the gate — mission: <em>nothing goes in, nothing comes out</em>. <strong>Six warriors + the chief:</strong> 1 "+act(A5["deadwatcher"], "sentry")+" in the entryway (A2), 4 in the barracks lean-to (A6), 1 at the watch post (A11), and "+act(A5["ury"], "Ury Sevenskulls")+" in his chamber (A10, door barred from inside). <strong>On an alarm</strong> they spread out and ready poisoned bows — 2 to the defense room (A7), 3 to the parapets (A8, where Ury joins before leaping down), 1 to the upper parapet (A12) — and focus shadow-essence arrows on heavy armor. They have no interest in diplomacy <em>as a tribe</em>, but Ury can be talked past (his entry); and they never pursue anyone toward the castle.</p>"
+  + "<p>The <strong>Deadwatchers</strong> hold the gate — mission: <em>nothing goes in, nothing comes out</em>. <strong>Six warriors + the chief:</strong> 1 "+act(A5["deadwatcher"], "sentry")+" in the entryway (A2), 4 in the barracks lean-to (A6), 1 at the watch post (A11), and "+act(A5["ury"], "Ury Sevenskulls")+" in his chamber (A10, door barred from inside — "+chk("type:athletics|dc:27")+" to Force Open). <strong>On an alarm</strong> they spread out and ready poisoned bows — 2 to the defense room (A7), 3 to the parapets (A8, where Ury joins before leaping down), 1 to the upper parapet (A12) — and focus shadow-essence arrows on heavy armor. They have no interest in diplomacy <em>as a tribe</em>, but Ury can be talked past (his entry); and they never pursue anyone toward the castle.</p>"
   + B.s_skill("<p><strong>Ruined floors (A11/A12):</strong> more than one Medium creature = collapse into A10 — @Damage[2d6[bludgeoning]], "+chk("type:reflex|dc:15|basic:true")+"; "+chk("type:crafting|dc:26")+" or "+chk("type:perception|dc:31")+" spots the danger (the A11 sentry knows the safe footing and withdraws to A12 rather than trigger it). Curtain wall "+chk("type:athletics|dc:29")+" to climb; A9's cracked floor only <em>looks</em> unstable.</p>")
   + B.s_treasure("<p><strong>A10:</strong> Ury's gear — <em>Akeraum</em> (+1 striking greatsword), the seven-skull necklace (~105 gp), 10 pp + 6 gp. <strong>A7:</strong> mundane stores, inedible.</p>")
   + B.enc("Barbican in arms", encx([9]*6 + [10], 13),
@@ -652,7 +663,7 @@ area5("G-H", "The Star Tower & the Sacred Lake", SR("G-H", 320)
   + "<p><strong>The Star Tower is not Kazavon's.</strong> It predates Thassilon ("+chk("type:crafting|dc:20")+" — the engineering is wrong by millennia): one of the megaliths <strong>Zon-Kuthon drove into Golarion to reinforce Rovagug's prison</strong>, blocking the prayers of the Rough Beast's faithful ("+chk("type:religion|dc:40")+" to know its true nature). It rises 110 ft over the tarn and plunges <em>hundreds of feet</em> to the dead volcano's lava tunnels; the material is near-indestructible (a 5-ft section: Hardness 20, HP 2,400, and it shrugs at magic). <strong>Three ways in:</strong> the roof (G1), the F10 secret door (→G2), and the Darklands shaft (H2→G8). The donjon's forbiddance wards (F page) cover the tower too.</p>"
   + "<ul>"
     "<li><strong>G1 — Roof Entrance:</strong> the 10-ft skull-and-chains carving is a permanent <strong>phase door</strong> — opened only by the touch of a 9th-rank+ Kuthite divine caster, or "+chk("type:arcana|dc:38")+" or "+chk("type:religion|dc:38")+" (Trick Magic Item). <strong>While the curse holds, a dimensional-anchor effect seals it completely</strong> — there is no roof entry until Mithrodar falls. Inside: only a 5-ft stair down to G4.</li>"
-    "<li><strong>G2 — Antechamber:</strong> the curate's old floor; secret doors to F10 ("+chk("type:perception|dc:41")+"), and to G4/G5 ("+chk("type:perception|dc:35")+" each); one cell door locked beyond its lost key ("+chk("type:thievery|dc:42")+"). <strong>G3 — Prisons:</strong> two pairs of <strong>adamantine manacles</strong> per cell (~100 gp a set) bolted to near-indestructible stone.</li>"
+    "<li><strong>G2 — Antechamber:</strong> the curate's old floor; secret doors to F10 ("+chk("type:perception|dc:41")+"), and to G4/G5 ("+chk("type:perception|dc:35")+" each); one cell door locked beyond its lost key ("+chk("type:thievery|dc:42")+"). <strong>G3 — Prisons:</strong> two pairs of <strong>adamantine manacles</strong> per cell (~100 gp a set) bolted to near-indestructible stone ("+chk("type:athletics|dc:32")+" to wrench a set free of its mounts).</li>"
     "<li><strong>G5 — Curate's Chamber:</strong> the bloodstained quarters of the hermit-prophet who kept the tower — Kazavon murdered and ate him almost immediately after moving in. The vacancy is the whole problem. <strong>G4/G6:</strong> stairwells.</li>"
     "<li><strong>G8 — Deep Chamber:</strong> the foundation, ~1,500 ft down; the blue mist in the ceiling returns climbers/fliers to the G7 rim. A heavy stone door ("+chk("type:athletics|dc:16")+") opens on what time and lava left of an ancient Zon-Kuthon temple: twisting caverns and a black lake.</li>"
    "</ul>"

@@ -41,6 +41,19 @@ B.SCOPE = (8160, 10823)   # AP.md line range for this chapter (anchor scoping)
 # white dose link the community per-color items; the generic '5 pots' string
 # in Thousand Bones's gifts is untouched (build_appendix.py string-patches it).
 
+# MISSING-CHECK SWEEP: badged gated interactions that had no @Check. Added:
+# E1 sewer gate lock — Thievery 41 (community silent; matched its ruling for
+# the identical Boule-keyed PF1e-DD-40 lock at E2) + Force Open Athletics 30
+# (GM Core iron-gate simple DC; PF1e break 28; Hardness 10/HP 60 per AP) ·
+# E4 ceiling-opening barracks climb — Athletics 26 (community's E3 ruling for
+# the same cavern complex's walls) · E15 NW Longacre door + E18 watch-post
+# gate — Thievery 40 each (the AP's E10-E21 standing lock rule, already DC 40
+# on the Part 3 page; restated on the area page where the doors appear).
+# Judged no-check: A10 plug (Hardness/HP shown, gaseous-form bypass explicit),
+# Bolt Rock haul (winding ledges + drag-capacity per AP, no climb gate), E10
+# disarmed calm-emotions walls, E21 coffer (unlocked in AP). 'Sewer secret
+# door still works' (Part 3 page) is covered at E1 (Perception 41, +15 Boule).
+
 MODID = "cotct-pf2e-conversion"
 ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cotctAdvFolder01"
 
@@ -587,7 +600,7 @@ area4("E1-E4", "The Red Mantis Caverns", SR("E1-E4", 237)
   + box("A ten-foot-wide trough of murky water fills",
         "<p>A ten-foot-wide trough of murky water fills the sewer's heart; the 'rust' on the great gate is paint, and something vast and pale stirs in the dark beyond.</p>")
   + B.enc("E1 — Snagglebreath", encx([12], 12),
-     "<p>An albino "+B.mon("catoblepas", "catoblepas")+" — Cinnabar's imported pet ("+chk("type:perception|dc:26")+" spots the painted rust; its mithral-spiked collar, engraved 'Snagglebreath,' ~100 gp re-scaled). It loves Red Mantis colors and savages everyone else. The secret door beyond: "+chk("type:perception|dc:41")+" (+15 with Boule's directions).</p>",
+     "<p>An albino "+B.mon("catoblepas", "catoblepas")+" — Cinnabar's imported pet ("+chk("type:perception|dc:26")+" spots the painted rust; its mithral-spiked collar, engraved 'Snagglebreath,' ~100 gp re-scaled). It loves Red Mantis colors and savages everyone else. The gate is locked: Boule's key, "+chk("type:thievery|dc:41")+" to pick (the same lock-work as E2's north door), or Force Open "+chk("type:athletics|dc:30")+" (Hardness 10, HP 60). The secret door beyond: "+chk("type:perception|dc:41")+" (+15 with Boule's directions).</p>",
      B.aside_token([B.mon("catoblepas", "Catoblepas (12)")]))
   + box("The air in this room smells strongly of",
         "<p>E2: frankincense haze from wall-mounted burners almost — almost — hides the sewer stink. Two rickety chairs with moldy cushions face a flat absurdity: a wooden tavern bar, shelved bottles and tankards and all, with a door tucked behind it in the northeast corner.</p>")
@@ -603,7 +616,7 @@ area4("E1-E4", "The Red Mantis Caverns", SR("E1-E4", 237)
   + box("The arched ceiling of this vast, crescent-shaped,",
         "<p>E4: a vast crescent cavern arches to forty feet on four natural columns caked in the glowing brain-fungus. Nine dark openings near the ceiling can be reached only by climb or flight; southeast, eight stone benches face a pulpit and a stair rising to a worked façade — an immense carved mantis, arms arched over double doors.</p>")
   + B.enc("E4 — the Temple of Achaekek", encx([ERMA_L, ERMA_L, 8], 12),
-     "<p>The mantis façade is fresh <em>stone shape</em> ("+chk("type:arcana|dc:28")+"); "+chk("type:religion|dc:26")+" names <strong>Achaekek</strong>. Most of Korvosa's assassins rotate through here a few nights a week (cytillesh caps each stay under 20 hours) — but with the bulk out hunting the PCs, only 2 resting "+erma("assassins")+" + the mercy-bought "+act(A4["cytillipede"], "cytillipede")+" (flash timed for maximum coverage, sneak attacks on the stunned) are present. If the alarm is up they hide among the benches, everything that fled converges here, and "+act(A4["cinnabar"], "Cinnabar")+" and "+act(A4["koriantu"], "Koriantu")+" stand behind them ("+encx([13, 13, ERMA_L, ERMA_L, ERMA_L, 8], 12)+" — the vault's worst case).</p>"
+     "<p>The mantis façade is fresh <em>stone shape</em> ("+chk("type:arcana|dc:28")+"); "+chk("type:religion|dc:26")+" names <strong>Achaekek</strong>. Most of Korvosa's assassins rotate through here a few nights a week (cytillesh caps each stay under 20 hours) — but with the bulk out hunting the PCs, only 2 resting "+erma("assassins")+" (bunked in two of the nine ceiling-height openings — "+chk("type:athletics|dc:26")+" to climb the cavern walls, as at E3) + the mercy-bought "+act(A4["cytillipede"], "cytillipede")+" (flash timed for maximum coverage, sneak attacks on the stunned) are present. If the alarm is up they hide among the benches, everything that fled converges here, and "+act(A4["cinnabar"], "Cinnabar")+" and "+act(A4["koriantu"], "Koriantu")+" stand behind them ("+encx([13, 13, ERMA_L, ERMA_L, ERMA_L, 8], 12)+" — the vault's worst case).</p>"
      "<p><strong>E4a:</strong> the north tunnel once wound down to deeper derro warrens and, beyond, to <strong>Nar-Voth in the Darklands</strong> — the Gray Maidens collapsed it after the derro purge. What lies past the rubble is beyond this chapter; if the PCs dig, stock it with Darklands material of your own.</p>",
      B.aside_token(["2× "+erma("Elite Red Mantis Assassin (9)"), act(A4["cytillipede"], "Cytillipede (8)")])))
 
@@ -650,7 +663,7 @@ area4("E12-E21", "The Gray Maiden Dungeons", SR("E12-E21", 248)
   + "<p><strong>E13 — Deathhead Cells:</strong> cot-and-chamber-pot cells holding <strong>12 imprisoned "+act(A4["gmrecruit"], "recruits")+"</strong> who refused the Maidens — beaten to 1d4 HP, no condition to aid anyone (Boule's or Kordaitra's keys, or "+chk("type:thievery|dc:40")+" on the iron gates) — <strong>story award per woman freed</strong> (15 total with E18). <strong>E14 — The secret cell:</strong> "+act(A4["endrin"], "Marcus Endrin")+" (see his entry; Boule's advice does <em>not</em> help find this door — the E20 records reveal it, +15 circumstance).</p>"
   + box("The western wall of this tiled",
         "<p>E15: the west wall of this tiled hall is a run of floor-to-ceiling bars caging a smaller room — desk, filing cabinet, table — entered by a heavy iron gate, with a pass-through window in the bars.</p>")
-  + "<p><strong>E15 — Indoctrination chamber:</strong> the old prisoner-processing room, now processing recruits. 4 "+act(A4["gmguard"], "Gray Maiden Guards")+" — two caged (firing through the bars with cover; <strong>one shouts the alarm</strong> before fighting) and two in the hall. <strong>The locked northwest door climbs to the Longacre Building's ground floor</strong>, where a few dozen lower-ranking Maidens are quartered — but they are <em>forbidden the vault</em>: avoid the upper floors and <strong>no reinforcements ever come down</strong> (the floors above are beyond this chapter's scope).</p>"
+  + "<p><strong>E15 — Indoctrination chamber:</strong> the old prisoner-processing room, now processing recruits. 4 "+act(A4["gmguard"], "Gray Maiden Guards")+" — two caged (firing through the bars with cover; <strong>one shouts the alarm</strong> before fighting) and two in the hall. <strong>The locked northwest door</strong> ("+chk("type:thievery|dc:40")+" or carried keys — the vault standard) <strong>climbs to the Longacre Building's ground floor</strong>, where a few dozen lower-ranking Maidens are quartered — but they are <em>forbidden the vault</em>: avoid the upper floors and <strong>no reinforcements ever come down</strong> (the floors above are beyond this chapter's scope).</p>"
   + box("Each of these identical rooms features",
         "<p>E16: identical cells of a different kind — a single bed, an armor stand, a weapon rack.</p>")
   + "<p><strong>E16 — Guard quarters:</strong> 4 resting "+act(A4["gmguard"], "guards")+"; on an alarm they pile into one room to buckle each other in — <strong>~5 minutes</strong> before they can join a fight in E15.</p>"
@@ -666,7 +679,7 @@ area4("E12-E21", "The Gray Maiden Dungeons", SR("E12-E21", 248)
   + box("This grim chamber is outfitted with",
         "<p>E18: rack, cages, a spiked stockade, shelves of thumbscrews and iron boots — and a caged-off guard post to the west. On the table, a young woman mid-'lesson,' her tutor's head floating free of its body on a fan of glistening entrails.</p>")
   + B.enc("E18 — the Maiden's Nursery (climax)", encx([13, 11, 11, 10, 8, 8, 8, 8, 8], 12),
-     "<p>"+act(A4["zenobia"], "Zenobia")+" mid-indoctrination of one of <strong>3 caged "+act(A4["gmrecruit"], "recruits")+"</strong> behind a 5-"+act(A4["gmguard"], "guard")+" watch post (locked gate) — alone, a mild fight for L12 PCs ("+encx([11, 8, 8, 8, 8, 8], 12)+"). <strong>The label above is the alarm-stacked worst case:</strong> prisoners caged, guards out front, "+act(A4["kordaitra"], "Kordaitra")+" relocating from E21 with her Shield Wall plan pre-briefed (round 1 her order gives Zenobia a double-cast; <em>divine power</em> comes back round 3) — plus "+act(A4["motherthorns"], "the Mother of Thorns")+" and/or "+act(A4["vyloth"], "Vyloth")+" fallen back per their morale. <strong>Thin the pile before it stacks.</strong> Zenobia flees at ~40 HP (her <em>sending</em> warns Vavana; re-encounter her in Castle Korvosa); Kordaitra below ~40 HP bolts for her hidden room and escapes to the castle on <em>dust of disappearance</em> + <em>gaseous form</em>.</p>",
+     "<p>"+act(A4["zenobia"], "Zenobia")+" mid-indoctrination of one of <strong>3 caged "+act(A4["gmrecruit"], "recruits")+"</strong> behind a 5-"+act(A4["gmguard"], "guard")+" watch post (locked gate — keys or "+chk("type:thievery|dc:40")+", the vault standard) — alone, a mild fight for L12 PCs ("+encx([11, 8, 8, 8, 8, 8], 12)+"). <strong>The label above is the alarm-stacked worst case:</strong> prisoners caged, guards out front, "+act(A4["kordaitra"], "Kordaitra")+" relocating from E21 with her Shield Wall plan pre-briefed (round 1 her order gives Zenobia a double-cast; <em>divine power</em> comes back round 3) — plus "+act(A4["motherthorns"], "the Mother of Thorns")+" and/or "+act(A4["vyloth"], "Vyloth")+" fallen back per their morale. <strong>Thin the pile before it stacks.</strong> Zenobia flees at ~40 HP (her <em>sending</em> warns Vavana; re-encounter her in Castle Korvosa); Kordaitra below ~40 HP bolts for her hidden room and escapes to the castle on <em>dust of disappearance</em> + <em>gaseous form</em>.</p>",
      B.aside_token([act(A4["zenobia"], "Zenobia (11)"), act(A4["kordaitra"], "Kordaitra (10)"), "5× "+act(A4["gmguard"], "Gray Maiden Guard (8)"), "+ "+act(A4["motherthorns"], "Mother of Thorns (13)")+" / "+act(A4["vyloth"], "Vyloth (11)")+" fallbacks"]))
   + box("This bedroom's decor reveals little about",
         "<p>E21: a bedroom that confesses almost nothing — blocky monochrome furniture, military order, and one extravagance: a large, lovely landscape of Korvosa.</p>")
