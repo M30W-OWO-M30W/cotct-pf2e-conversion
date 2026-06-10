@@ -27,7 +27,10 @@ A = {"gaedren":"RKfT6vJ5guinSBjo","yargin":"7uhbgkK2IOZOlJb3","hookshanks":"qH96
      "cowhammer":"cowHammerBoy0001","verik":"verikVancask0001","verik_bow":"verikLongbow0001",
      # Part Three — area C (Eel's End)
      "enforcer":"eelsEndEnforce01","devargo":"devargoBarvasi01","devargo_armor":"devargoArmor0001",
-     "chittersnap":"chittersnap00001"}
+     "chittersnap":"chittersnap00001",
+     # Part Three — area D (The Dead Warrens)
+     "skelowlbear":"skeletalOwlbr001","derro":"derroMinion00001","stirge":"stirgeFeeder0001",
+     "cabbagehead":"cabbageheadOgr01","vreeg":"vreegDerroNec001","acidskulls":"acidSkullTrap001"}
 JID = "aO3z6QTqmYZCZYkw"   # the fat Ch.1 journal entry
 SCN = "PuUGEVunRqjIWFOj"   # Old Fishery scene
 ADV = "OmdAPBg10luB7GUr"   # Adventure doc
@@ -127,6 +130,15 @@ RABOX = {
  "C13":"single low desk sits against the wall of this room",
  "C15":"dark chamber is riddled with dizzying tunnels",
  "C17":"old cargo bay is partially collapsed",
+ # Part Three, area D — The Dead Warrens
+ "D1":"large room is supported by four wide pillars of stone",
+ "D4":"majority of this room contains a nasty-looking stretch of mud",
+ "D5":"Three wooden tables stand in the middle of this room",
+ "D7":"wooden tables here are stacked with vials, beakers",
+ "D9":"foul-smelling cavern is bordered on three sides",
+ "D10":"Two wide, freestanding bookshelves furnish this room",
+ "D11":"nauseating mixture of decay and strange chemicals",
+ "D12":"chamber holds a large four-poster bed and a simple writing desk",
 }
 def box(code, fallback_html):
     """Read-aloud section: exact AP text if the source file is present, else paraphrase."""
@@ -474,6 +486,68 @@ AW("chittersnap", B.npc(A["chittersnap"],"Chittersnap",4,21,70,12,10,8,12,
   folder=F["a_creatures"], senses=[{"type":"darkvision"},{"acuity":"imprecise","type":"tremorsense","range":30}],
   blurb="Bloated ettercap; the real King of Spiders", token_src=TOK("chittersnap")))
 
+# ---- Part Three: area D — The Dead Warrens (custom NPCs) ----
+AW("skeletal-owlbear", B.npc(A["skelowlbear"],"Skeletal Owlbear",3,18,40,9,7,5,7,
+  {"str":5,"dex":2,"con":3,"int":-5,"wis":0,"cha":0},25,
+  {"athletics":11},
+  ["undead","skeleton","mindless"],[],
+  [B.strike(nid(),"Beak",12,"1d8+5","piercing",[]),
+   B.strike(nid(),"Claw",12,"1d6+5","slashing",["agile"])],
+  notes="<p><strong>Role:</strong> one of Rolth's animated guardians in "+"the ossuary. <strong>Undead:</strong> negative healing; immune to death effects, disease, paralysis, poison, and unconscious; mindless (immune to mental). It clatters up from the bone pit to attack and pursues throughout the warrens, but never up into Potter's Ward above.</p>",
+  folder=F["a_creatures"], senses=[{"type":"darkvision"}], size="lg",
+  blurb="Rolth's animated owlbear skeleton", token_src=TOK("skeletal-owlbear")))
+
+AW("derro", B.npc(A["derro"],"Derro",2,18,30,6,8,4,6,
+  {"str":1,"dex":3,"con":2,"int":0,"wis":-1,"cha":2},25,
+  {"acrobatics":8,"stealth":8,"intimidation":6},
+  ["humanoid","dwarf"],["common","undercommon"],
+  [B.strike(nid(),"Hooked Hammer",8,"1d6+1","bludgeoning",["trip","versatile-p"]),
+   B.strike(nid(),"Repeating Crossbow",9,"1d6","piercing",["range-increment-60","reload-0"]),
+   B.action(nid(),"Insane Shriek","1","<p>The derro looses a burst of mad gibbering; one creature within 30 feet must succeed at a "+chk("type:will|dc:16")+" or be "+B.cond("sickened","Sickened 1")+" by the psychic noise.</p>",["auditory","emotion","mental"]),
+   B.gear("crossbow",nid())],
+  notes="<p><strong>Role:</strong> one of Vreeg's insane subterranean kin guarding the warrens for Rolth (who took Vreeg on as an apprentice). <strong>Tactics:</strong> attacks on sight, then flees through the secret crawl-tunnels ("+chk("type:perception|dc:20")+" to find) to warn the others.</p>",
+  folder=F["a_creatures"], senses=[{"type":"darkvision"}], size="sml",
+  blurb="Insane derro minion of Vreeg", token_src=TOK("derro")))
+
+AW("stirge", B.npc(A["stirge"],"Stirge",-1,16,6,3,9,3,6,
+  {"str":-3,"dex":5,"con":1,"int":-5,"wis":1,"cha":-3},10,
+  {"acrobatics":9,"stealth":7},
+  ["animal"],[],
+  [B.strike(nid(),"Proboscis",9,"1d6","piercing",["finesse"]),
+   B.action(nid(),"Blood Drain","1","<p><strong>Requirement</strong> The stirge's last action was a Proboscis hit.</p><hr /><p><strong>Effect</strong> The stirge attaches and drains blood, dealing @Damage[1d4[bleed]] and gaining that many temporary Hit Points. While attached it moves with its victim; a creature can pull it off with an "+chk("type:athletics|dc:14")+".</p>",["manipulate"])],
+  notes="<p><strong>Role:</strong> a blood-feeder from Rolth's draining hutch. Darts in, attaches, and gorges. Fragile — a single hit usually drops it.</p>",
+  folder=F["a_creatures"], senses=[{"type":"darkvision"},{"type":"low-light-vision"}],
+  other_speeds=[{"type":"fly","value":40}], size="sml", blurb="Blood-draining vermin", token_src=TOK("stirge")))
+
+AW("cabbagehead", B.npc(A["cabbagehead"],"Cabbagehead",3,19,55,11,6,9,9,
+  {"str":5,"dex":1,"con":4,"int":-1,"wis":2,"cha":-2},25,
+  {"athletics":11,"intimidation":7},
+  ["humanoid","human","giant"],["common"],
+  [B.strike(nid(),"Powerful Fist",12,"1d8+5","bludgeoning",["agile","nonlethal"]),
+   B.action(nid(),"Pummel","2","<p>Cabbagehead makes two Powerful Fist Strikes against the same target; if both hit, the target is also pushed 5 feet and must succeed at a "+chk("type:fortitude|dc:20")+" or be "+B.cond("clumsy","Clumsy 1")+" until the end of its next turn.</p>",["flourish"])],
+  notes="<p><strong>Role:</strong> a deformed ogrekin jailer, charmed long ago by Rolth and now doglike-loyal, who tends and torments the prisoners in the pits. He fights bare-fisted, shrieking taunts. <strong>Morale:</strong> fights to the death.</p>",
+  folder=F["a_creatures"], senses=[{"type":"low-light-vision"}],
+  blurb="Deformed ogrekin jailer", token_src=TOK("cabbagehead"), actor_link=True))
+
+AW("vreeg", B.npc(A["vreeg"],"Vreeg",7,24,105,13,16,17,14,
+  {"str":0,"dex":4,"con":2,"int":5,"wis":1,"cha":3},25,
+  {"arcana":18,"occultism":16,"deception":15,"intimidation":13,"stealth":14},
+  ["humanoid","dwarf"],["common","undercommon","necril"],
+  [B.strike(nid(),"Dagger",13,"1d4","piercing",["agile","finesse","thrown-10","versatile-s"]),
+   B.sneak_attack(nid(),1,"Vreeg"),
+   B.action(nid(),"Searing Ray","2","<p>Vreeg looses a ray of fire, making a spell attack (+16) against one creature within 60 feet for @Damage[4d6[fire]] (double on a critical hit).</p>",["concentrate","fire","manipulate"]),
+   B.action(nid(),"Vampiric Touch","2","<p>Vreeg's touch (or a 30-foot spectral hand) drains life: "+chk("type:fortitude|dc:24|basic:true")+" against @Damage[3d6[void]]; Vreeg gains temporary Hit Points equal to half the damage dealt.</p>",["concentrate","manipulate","void"]),
+   B.action(nid(),"Blindness","2","<p>One creature within 30 feet must succeed at a "+chk("type:fortitude|dc:24")+" or be "+B.cond("blinded","Blinded")+" for 1 minute (permanently on a critical failure, until restored).</p>",["concentrate","manipulate","necromancy"]),
+   B.action(nid(),"Force Missiles","2","<p>Three darts of force unerringly strike up to three creatures Vreeg can see, dealing @Damage[1d4+1[force]] each (no save, no attack roll).</p>",["concentrate","force","manipulate"]),
+   B.action(nid(),"Grave Touch","1","<p>One creature within 30 feet must succeed at a "+chk("type:fortitude|dc:24")+" or be "+B.cond("enfeebled","Enfeebled 2")+" for 1 round (1 minute on a critical failure).</p>",["concentrate","manipulate","void"]),
+   B.action(nid(),"Conjure Shield","1","<p>A shimmering force shield wards Vreeg, granting a +2 circumstance bonus to AC until the start of his next turn; he can Shield Block with it (Hardness 10).</p>",["concentrate","manipulate"],"defensive"),
+   B.lore(nid(),"Necromancy Lore",16),
+   B.gear("dagger",nid())],
+  notes="<p><strong>Role:</strong> the boss of the Dead Warrens — Rolth's gifted, insane derro apprentice, scheming to one day replace his master. <strong>Rolth himself is absent</strong> (away securing a scroll; he returns <em>after</em> the PCs leave, to find his lair in ruins — see Chapter 2).</p>"
+        "<p><strong>Tactics:</strong> opens with Conjure Shield and False Life (his HP already includes it), then kites with Searing Ray, Force Missiles, and Vampiric Touch, saving Blindness for a martial threat. <strong>Weakness:</strong> dazzled in bright light (derro sunlight vulnerability). His attendant zombie covers his retreat.</p>",
+  folder=F["a_creatures"], senses=[{"type":"darkvision"}], other_speeds=[{"type":"fly","value":30}], size="sml",
+  blurb="Derro necromancer; the warrens' master", token_src=TOK("vreeg"), actor_link=True))
+
 # =====================================================================
 # HAZARDS (Actor type=hazard; in the hazards pack, Hazards folder)
 # =====================================================================
@@ -494,6 +568,13 @@ HW("rotten-ship-deck", B.hazard(A["rottendeck"],"Rotten Ship Deck",1,16,
   "<p>The derelict Kraken's Folly (A9) has a rotten foredeck; only the stern holds weight.</p>",
   [B.action(nid(),"Collapse","reaction","<p><strong>Trigger</strong> A Medium+ creature moves onto the foredeck toward the bow.</p><hr /><p><strong>Effect</strong> "+chk("type:reflex|dc:16|basic:true")+" or crash to the hold (A11) for @Damage[1d6[bludgeoning]] and land "+B.cond("prone","Prone")+" among the drain spiders.</p>")],
   folder=F["a_hazards"], traits=["environmental"], reset="<p>Once collapsed, that stretch is gone.</p>"))
+
+HW("acid-spraying-skulls", B.hazard(A["acidskulls"],"Acid-Spraying Skulls",3,25,
+  "<p>"+chk("type:perception|dc:25")+" to notice the faint magical aura on the wall-mounted skulls before they fire.</p>",
+  "<p>"+chk("type:thievery|dc:25")+" to disarm a skull (or <em>dispel magic</em> vs. a 3rd-rank effect).</p>",
+  "<p>Several skulls set into the walls of the necrophidius corridor (D6) are a magical trap. Rolth and the derros slip through before it triggers.</p>",
+  [B.action(nid(),"Acid Spray","reaction","<p><strong>Trigger</strong> A creature has been in the corridor for 2 rounds.</p><hr /><p><strong>Effect</strong> Every creature in the hall is sprayed with acid, taking @Damage[3d6[acid]] ("+chk("type:reflex|dc:22|basic:true")+"). The trap resets automatically after 10 minutes.</p>")],
+  folder=F["a_hazards"], traits=["magical","trap"], reset="<p>Automatic, after 10 minutes.</p>", complex_=False))
 
 # =====================================================================
 # ITEMS (Treasure folder)
@@ -543,7 +624,9 @@ PAGE_KEYS=["background","overview","hook","scene","features","A1","A2","A3","A4"
            # Part Three — Blood and Bones: B. All the World's Meat
            "bmeat","B1","B2","B3","B4","B5","B6","B7","B8",
            # Part Three — C. Eel's End
-           "cend","C1","C2","C3","C4","C5","C6","C7","C9","C13","C14","C15","C17"]
+           "cend","C1","C2","C3","C4","C5","C6","C7","C9","C13","C14","C15","C17",
+           # Part Three — D. The Dead Warrens + Chapter Conclusion
+           "dwarrens","D1","D2","D3","D4","D5","D6","D7","D8","D9","D10","D11","D12","D13","dconc"]
 P={k:nid() for k in PAGE_KEYS}   # pre-assign so forward relative links resolve
 def newpage(key,name,html,level=3):
     return B.page(P[key],name,html,level=level)
@@ -963,6 +1046,108 @@ area("C17","Sodden Hold", SR("C17","55")
   +B.enc("Jigsaw Shark",xpb([1],4),
      "<p>A "+act("jigsawshark","jigsaw shark")+" (the same river-scavenger species from the Old Fishery) prowls the flooded hold — a hazard for anyone dumped through the "+pg(P["C7"],"trap door")+" who drifts down here.</p>",
      B.aside_token([act("jigsawshark","Jigsaw Shark (1)")], img=TOK("jigsaw-shark"))))
+
+# =====================================================================
+# PART THREE — D. THE DEAD WARRENS (Rolth's lab, run by Vreeg). Party ~L4.
+# Derro L2 · Skeletal Owlbear L3 · Cabbagehead L3 · Vreeg L6 · Stirge L-1.
+# Official: Otyugh L4, Skeleton Guard L-1, Necrophidius L3, Carrion Golem L4,
+# Zombie Shambler L-1.
+# =====================================================================
+ev("dwarrens","D. The Dead Warrens",
+  B.s_milestone("<p><strong>D. The Dead Warrens</strong> — a derro-infested undercity laboratory beneath Potter's Field, the last chapter site (the PCs recover the murdered Shoanti boy Gaekhen's body here for Event 13). Tracks at the surface ("+chk("type:perception|dc:15")+", "+chk("type:nature|dc:20")+" to read them as derro) lead to a trap-door in a mausoleum.</p>")
+  +SEC("<p><strong>GM:</strong> This is one of several labs kept by the necromancer <strong>Rolth</strong> (Gaedren Lamm's estranged son, the 'Key-Lock Killer'). <strong>Rolth is absent</strong> — away securing a scroll — and is <em>not</em> scheduled to appear; he returns after the PCs leave to find his lair wrecked, and hunts them in Chapter 2. In his stead the warrens are run by his derro apprentice "+act("vreeg","Vreeg")+".</p>")
+  +SEC("<p><strong>Gaekhen's body is in four parts</strong> (Rolth harvested only the head): the legs in the corpse dump ("+pg(P["D4"],"D4")+"), the torso + right arm animated in the stitchery ("+pg(P["D11"],"D11")+"), the left arm clutched by the carrion golem ("+pg(P["D8"],"D8")+"), and the head stitched to the flesh-golem in "+pg(P["D11"],"D11")+". Thousand Bones needs all four parts, not a whole body.</p>")
+  +B.s_conv("<p><strong>Running the difficulty.</strong> In PF2e a lone at-level creature reads as <em>Trivial–Low</em> for four PCs, so most warren rooms are individually easy — the dungeon is an <strong>attrition gauntlet</strong>, not a string of set-piece fights. Lean into the design's own reinforcement: a "+act("derro","derro")+" who spots the party flees the "+pg(P["D2"],"crawl-spaces")+" to pull its kin (combine "+pg(P["D3"],"D3")+"/"+pg(P["D5"],"D5")+"/"+pg(P["D7"],"D7")+" derros into one Low–Moderate fight), and the "+pg(P["D1"],"ossuary")+" skeletons <em>pursue</em> — add them to a later room. The climax — "+act("vreeg","Vreeg")+" in "+pg(P["D13"],"D13")+" — is a true <strong>Severe</strong> boss.</p>"))
+
+area("D1","Ossuary", SR("D1","56")
+  +box("D1","<p>This large room is supported by four wide pillars of stone beneath a twenty-foot dome. The walls are caked with skeletons set in mud — mostly adult human bones, with smaller ones here and there. Fifteen-foot-square bone-pits sit east and west; a crude hole gouged in the south wall opens a tunnel.</p>")
+  +"<p>An abandoned ossuary. Rolth animated guardians in the bone pits — four "+B.mon("skeleton-guard","human skeletons")+" (west) and a "+act("skelowlbear","skeletal owlbear")+" (east), spotted before they rise with "+chk("type:perception|dc:15")+". The skeletons pursue throughout the warrens but never up into Potter's Ward.</p>"
+  +B.enc("Animated guardians",xpb([3,-1,-1,-1,-1],4),
+     "<p>The "+act("skelowlbear","skeletal owlbear")+" and 4 "+B.mon("skeleton-guard","human skeletons")+" clatter up to attack.</p>",
+     B.aside_token([act("skelowlbear","Skeletal Owlbear (3)"), "4× "+B.mon("skeleton-guard","Human Skeleton (−1)")], img=TOK("skeletal-owlbear"))))
+
+area("D2","Crawl Spaces", SR("D2","56")
+  +"<p>Cramped secret tunnels the derros use to flit between rooms. Each concealed door is found with "+chk("type:perception|dc:20")+". They let the derros flank, ambush, and flee to raise the alarm.</p>")
+
+area("D3","Derro Cave", SR("D3","56")
+  +"<p>The derros' filthy rest-and-mess room. Two "+act("derro","derros")+" are usually here, playing a cruel game of 'Rat Squish.' They snatch up weapons and attack the instant they notice intruders.</p>"
+  +B.enc("Derros at rest",xpb([2,2],4),
+     "<p>2 "+act("derro","derros")+". Others may arrive via "+pg(P["D2"],"the crawl spaces")+" if the alarm goes up.</p>",
+     B.aside_token(["2× "+act("derro","Derro (2)")], img=TOK("derro"))))
+
+area("D4","Corpse Dump", SR("D4","56-57")
+  +box("D4","<p>The majority of this room contains a nasty-looking stretch of mud — a partially collapsed sinkhole kept damp by seeping water. A patch of solid ground forms an island heaped with a reeking pile of body parts. A rickety wheelbarrow lies on its side to the north.</p>")
+  +"<p>An "+B.mon("otyugh","otyugh")+" Rolth lured here to dispose of the derros' grisly discards wallows in the mud. It cries 'Warm food!' and lumbers out to attack.</p>"
+  +B.enc("Otyugh",xpb([B.mon_lvl("otyugh")],4),
+     "<p>One "+B.mon("otyugh","otyugh")+" — grab-and-drag, plus its filth-borne disease.</p>",
+     B.aside_token([B.mon("otyugh","Otyugh (4)")]))
+  +B.s_treasure("<p>Among the body parts: <strong>Gaekhen's tattooed legs and hips</strong> (one of four body parts). "+chk("type:perception|dc:25")+" sifting the mud also turns up trinkets — an amber necklace (~35 gp re-scaled), a silver dagger, a sealed <strong>elixir of vision</strong>, a <strong>wand of spiritual weapon</strong>, and a <strong>ring of swimming</strong>.</p>"))
+
+area("D5","Exsanguination Chamber", SR("D5","57")
+  +box("D5","<p>Three wooden tables stand in the middle of this room, their surfaces stained red. To the east, a ten-foot-wide hutch with wicker doors opens onto a straw-lined cage.</p>")
+  +"<p>A lone "+act("derro","derro")+" drains a fresh corpse with Rolth's blood-tools — a hutch of "+act("stirge","stirges")+". She shrieks, flings open the hutch, and flees through "+pg(P["D2"],"the crawl spaces")+" to warn "+pg(P["D3"],"D3")+". Four gorged stirges on the body ignore the PCs; two hungry ones attack.</p>"
+  +B.enc("Derro + stirges",xpb([2,-1,-1],4),
+     "<p>1 "+act("derro","derro")+" (flees to raise the alarm) + 2 hungry "+act("stirge","stirges")+".</p>",
+     B.aside_token([act("derro","Derro (2)"), "2× "+act("stirge","Stirge (−1)")], img=TOK("stirge"))))
+
+area("D6","Necrophidius Corridor", SR("D6","57")
+  +"<p>A corridor lined with skulls. Two of them are the heads of "+B.mon("necrophidius","necrophidiuses")+" — silent skeletal serpents Rolth crafted from old victims — coiled motionless in the walls until the room's trap springs, then striking with surprise.</p>"
+  +"<p>The "+haz("acidskulls","Acid-Spraying Skulls")+" trap fires two rounds after a creature enters; Rolth and the derros dart through before it triggers (door to "+pg(P["D7"],"D7")+" ↔ secret door to "+pg(P["D2"],"D2")+").</p>"
+  +B.enc("Necrophidiuses (+ acid trap)",xpb([B.mon_lvl("necrophidius"),B.mon_lvl("necrophidius")],4),
+     "<p>2 "+B.mon("necrophidius","necrophidiuses")+" (their dance can stun) plus the "+haz("acidskulls","acid-skull")+" trap raking the whole hall.</p>",
+     B.aside_token(["2× "+B.mon("necrophidius","Necrophidius (3)"), haz("acidskulls","Acid-Spraying Skulls (3)")])))
+
+area("D7","Alchemy Lab", SR("D7","58")
+  +box("D7","<p>The wooden tables here are stacked with vials, beakers, and alchemical gear; the southern one is heaped with broken glass and leans on a hastily repaired leg. Three cauldrons sit against the east wall, one upended, its rancid rendered-fat contents spilled across the floor.</p>")
+  +"<p>The fourth "+act("derro","derro")+" minion cleans up after a "+pg(P["D8"],"carrion golem")+" smashed through earlier. He dithers in confusion for a round, unsure whether to fight or run for help.</p>"
+  +B.enc("Lone derro",xpb([2],4),
+     "<p>1 "+act("derro","derro")+", caught off balance.</p>",
+     B.aside_token([act("derro","Derro (2)")], img=TOK("derro")))
+  +B.s_treasure("<p>"+chk("type:perception|dc:20")+" (10 minutes' search) recovers usable salvage: an alchemist's lab, 3 doses of <strong>vermin repellent</strong> (Rolth is Gaedren's source for it), 2 tanglefoot bags, 4 doses of black adder venom, a hybridization funnel, 2 doses of silversheen, and a <strong>handy haversack</strong> holding 3 potions of healing, a lesser restoration potion, a potion of invisibility, 2 scrolls of <em>false life</em>, and a scroll of <em>dispel magic</em>.</p>"))
+
+area("D8","Store Room", SR("D8","58")
+  +"<p>A locked store room. Early this morning Rolth's newest "+B.mon("carrion-golem","carrion golem")+" went berserk, tore from its table, and rampaged through "+pg(P["D7"],"D7")+" before he trapped it in here — the delay is why he is absent today. Open the door and it attacks at once, still clutching a tattooed severed arm.</p>"
+  +B.enc("Carrion Golem",xpb([B.mon_lvl("carrion-golem")],4),
+     "<p>One berserk "+B.mon("carrion-golem","carrion golem")+" — a patchwork construct of rotting parts.</p>",
+     B.aside_token([B.mon("carrion-golem","Carrion Golem (4)")]))
+  +B.s_treasure("<p>The arm the golem clutches is <strong>Gaekhen's left arm</strong> (a third body part), marked with Shoanti tattoos.</p>"))
+
+area("D9","Prisoner Pits", SR("D9","58-59")
+  +box("D9","<p>This foul-smelling cavern is bordered on three sides by ten-foot-deep pits reeking of excrement and decay. Each holds moldy straw, a trough of filthy water, rotting body parts — and a couple of still-living prisoners.</p>")
+  +"<p>Six malnourished captives await Rolth's experiments. Their jailer is the ogrekin "+act("cabbagehead","Cabbagehead")+", who torments them to please his 'father' Rolth and fights to the death.</p>"
+  +B.enc("Cabbagehead",xpb([3],4),
+     "<p>The ogrekin "+act("cabbagehead","Cabbagehead")+" — a bare-fisted brute.</p>",
+     B.aside_token([act("cabbagehead","Cabbagehead (3)")], img=TOK("cabbagehead")))
+  +B.s_treasure("<p>Among the freed prisoners is the cutpurse <strong>Tiora</strong>; within a day she seeks out the PCs and gratefully gives them a <strong>wand of cure moderate wounds</strong> (34 charges).</p>"))
+
+area("D10","Library", SR("D10","59")
+  +box("D10","<p>Two wide, freestanding bookshelves furnish this room, filled with carefully arranged tomes and scrolls.</p>")
+  +B.s_treasure("<p>Mostly necromancy and golem-craft treatises — plus a surprising number of books on <strong>disease and plague</strong> (a +2 circumstance bonus to relevant Recall Knowledge while using them; ominous foreshadowing of Chapter 2). The collection is worth ~30 gp re-scaled; tucked in an anatomy folio are a scroll of <em>identify</em> and a scroll of <em>command undead</em>.</p>"))
+
+area("D11","Stitchery", SR("D11","59")
+  +box("D11","<p>The nauseating mixture of decay and strange chemicals fills this room. Saws, pliers, long needles, and surgical tools line the shelves. On a sturdy central table lies a patchwork humanoid stitched from dozens of bodies — nearly seven feet tall.</p>")
+  +SEC("<p>Rolth's workshop. The strapped-down flesh golem is unfinished; the small head stitched to it — brown hair, a scar on the left cheek — is <strong>Gaekhen's head</strong> (the fourth and last body part). The torso + right arm Vreeg claimed and crudely animated (2 HP, +0 unarmed for 1d3 nonlethal, 50% miss from blindness; harmed by vitality) — it thrashes if handled.</p>")
+  +B.s_treasure("<p>On the desk: a broken <strong>key-shaped dagger</strong> — Rolth's signature blade, twin to the one in "+pg(P["A14"],"Gaedren's den (A14)")+", confirming the connection. The PCs may not grasp its meaning until they meet Rolth in Chapter 2.</p>"))
+
+area("D12","Rolth's Room", SR("D12","59")
+  +box("D12","<p>This chamber holds a large four-poster bed and a simple writing desk, with a full-length mirror propped against an earthen wall.</p>")
+  +SEC("<p>Rolth keeps little here. "+chk("type:perception|dc:20")+" (automatic if a PC looks behind the mirror) reveals a hidden niche: masterwork thieves' tools, a pearl-and-silver snuffbox (~25 gp re-scaled) holding a dose of <strong>dust of disappearance</strong>, and a <strong>sustaining spoon</strong>. His spellbooks are not here — he carries them.</p>"))
+
+area("D13","Vreeg's Chamber", SR("D13","59-61")
+  +box("D13","<p>This chamber is part cluttered study, part nest — borrowed library books, half-finished necromantic tinkering, and the lingering chill of worked death magic.</p>")
+  +"<p>"+act("vreeg","Vreeg")+" the derro necromancer lairs here, attended by a single "+B.mon("zombie-shambler","human zombie")+" bodyguard left by Rolth. He kites with rays and force missiles and saves Blindness for the front line.</p>"
+  +SEC("<p><strong>The gut-punch.</strong> If the PCs left "+act("gaedren","Gaedren Lamm's")+" body in the fishery, this zombie <em>is</em> Gaedren — recovered and animated by his son Rolth. Mindless, it won't know them, but its appearance should unsettle the party and raise the question of <em>who</em> wanted the old man back in undeath.</p>")
+  +B.enc("BOSS — Vreeg + zombie",xpb([6,B.mon_lvl("zombie-shambler")],4),
+     "<p>"+act("vreeg","Vreeg")+" (the warrens' master) and his "+B.mon("zombie-shambler","zombie")+" guard. Bright light leaves Vreeg dazzled (derro sunlight vulnerability) — a real lever for the PCs.</p>",
+     B.aside_token([act("vreeg","Vreeg (6)"), B.mon("zombie-shambler","Human Zombie / undead Gaedren (−1)")], img=TOK("vreeg")))
+  +B.s_conv("<p>With Vreeg down and the four body parts gathered, the warrens are cleared. Rolth returns later to the ruin and becomes a Chapter 2 antagonist (CHG: his vendetta).</p>"))
+
+ev("dconc","Chapter Conclusion",
+  B.s_milestone("<p><strong>Chapter Conclusion.</strong> With the Dead Warrens cleared and the scapegoat's fate resolved, 'Edge of Anarchy' ends. The PCs should be well into 4th level.</p>")
+  +"<p><strong>Returning Gaekhen.</strong> Deliver Gaekhen's four body parts to "+pg(P["e13"],"Thousand Bones")+" (Event 13). The grateful Shoanti elder's goodwill becomes important in Chapter 4 (A History of Ashes). Cressida pays the recovery reward (folding in Trinia's deferred coin if applicable).</p>"
+  +"<p><strong>The execution.</strong> Queen Ileosa's public execution of her scapegoat ("+pg(P["e14"],"Event 14")+") is the chapter's final beat — disrupt it, attend it, or let it stand. Either way the city quiets, and the PCs are now known to the queen.</p>"
+  +SEC("<p><strong>Into Chapter 2 — and the Blood Veil.</strong> As order returns, the first cases of a new plague appear in the gutters. This is where the persistent-plague overlay begins: start the <strong>Epidemic Clock</strong> (Conversion Guide journal → <em>Blood Veil &amp; the Epidemic Clock</em>) seeded by how the city fared here. Rolth, returning to his ruined lair, becomes a recurring hunter (Chapter 2).</p>")
+  +B.s_conv("<p><strong>Threads carried forward:</strong> Rolth's vendetta · the Arkona/Vimanda watch (from "+pg(P["B8"],"Verik")+") · Trinia &amp; Vencarlo/Blackjack · Grau and the Korvosan Guard · the Shoanti debt · and the queen, who now has the PCs' measure.</p>"))
 
 journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"])
 B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)

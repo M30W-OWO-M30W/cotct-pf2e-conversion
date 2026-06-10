@@ -1,13 +1,13 @@
 {
-  "_id": "6y55S5DpXqnF40WL",
-  "name": "Slippery Boardwalk",
+  "_id": "acidSkullTrap001",
+  "name": "Acid-Spraying Skulls",
   "type": "hazard",
   "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "HUZeT8khp1ceyG8p",
+      "_id": "KY8fNOGp0oSvdx6K",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Slip",
+      "name": "Acid Spray",
       "sort": 0,
       "type": "action",
       "system": {
@@ -19,7 +19,7 @@
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Trigger</strong> A creature Strides &gt;5 ft or fights on it.</p><hr /><p><strong>Effect</strong> @Check[type:reflex|dc:15] or fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}; on a critical failure, slide off and fall 13 ft into the river and the Jigsaw Shark's water (A12) — the water is deep enough and the fall short enough that the creature takes no falling damage.</p>"
+          "value": "<p><strong>Trigger</strong> A creature has been in the corridor for 2 rounds.</p><hr /><p><strong>Effect</strong> Every creature in the hall is sprayed with acid, taking @Damage[3d6[acid]] (@Check[type:reflex|dc:22|basic:true]). The trap resets automatically after 10 minutes.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -34,7 +34,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!6y55S5DpXqnF40WL.HUZeT8khp1ceyG8p"
+      "_key": "!actors.items!acidSkullTrap001.KY8fNOGp0oSvdx6K"
     }
   ],
   "folder": "hf850cPYquAhv4Nz",
@@ -55,7 +55,7 @@
     "lastModifiedBy": null
   },
   "prototypeToken": {
-    "name": "Slippery Boardwalk",
+    "name": "Acid-Spraying Skulls",
     "displayName": 20,
     "displayBars": 20,
     "disposition": -1,
@@ -126,17 +126,17 @@
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>Obvious — no check needed to notice.</p>",
-        "value": 0
+        "details": "<p>@Check[type:perception|dc:25] to notice the faint magical aura on the wall-mounted skulls before they fire.</p>",
+        "value": 25
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>A barnacle-slick boardwalk (A3) 13 ft above shark water; the planks also groan under heavy loads.</p>",
-      "disable": "<p>@Check[type:acrobatics|dc:15] to cross carefully, or brace a stretch (@Check[type:crafting|dc:15]).</p>",
+      "description": "<p>Several skulls set into the walls of the necrophidius corridor (D6) are a magical trap. Rolth and the derros slip through before it triggers.</p>",
+      "disable": "<p>@Check[type:thievery|dc:25] to disarm a skull (or <em>dispel magic</em> vs. a 3rd-rank effect).</p>",
       "isComplex": false,
       "level": {
-        "value": 1
+        "value": 3
       },
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -144,7 +144,7 @@
         "license": "OGL",
         "remaster": true
       },
-      "reset": "<p>Persistent terrain.</p>",
+      "reset": "<p>Automatic, after 10 minutes.</p>",
       "routine": ""
     },
     "saves": {
@@ -168,9 +168,10 @@
         "value": "med"
       },
       "value": [
-        "environmental"
+        "magical",
+        "trap"
       ]
     }
   },
-  "_key": "!actors!6y55S5DpXqnF40WL"
+  "_key": "!actors!acidSkullTrap001"
 }
