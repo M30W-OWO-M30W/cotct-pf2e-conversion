@@ -271,7 +271,7 @@ area6("A26-A44", "Second Floor — the Seneschal's Wing", SR("A26-A44", 356)
 
 area6("A45-A66", "Third Floor — Throne & Court", SR("A45-A66", 362)
   + "<ul>"
-    "<li><strong>A45 — Main Entrance Landing:</strong> the castle's hardest set-piece if forced ("+encx([15, 8, 8, 8, 8, 8, 8], 15)+" — "+act(A6["kayltanya"], "Kayltanya")+" + the gate-garrison; <em>do not knock</em>).</li>"
+    "<li><strong>A45 — Main Entrance Landing:</strong> the castle's hardest set-piece if forced ("+encx([15, 8, 8, 8, 8, 8, 8], 15)+" — "+act(A6["kayltanya"], "Kayltanya")+" + the gate-garrison; CR-18-equivalent — <em>do not knock</em>).</li>"
     "<li><strong>A52 — The Throne Room:</strong> "+act(A6["sermignatto"], "Sermignatto")+" holds false court ("+encx([15], 15)+" — or a contract negotiation worth more than the fight).</li>"
     "<li><strong>A54/A65:</strong> gatehouse galleries. <strong>A56:</strong> the arbiters' last honest chambers.</li>"
     "<li><strong>A59 — The Royal Bedroom:</strong> a "+act(A6["falseileosa"], "False Ileosa")+" 'discovered' among traps ("+encx([9, 9], 16)+" with her twin — the queen's first decoy lesson).</li>"
