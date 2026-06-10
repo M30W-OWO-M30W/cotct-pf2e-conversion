@@ -41,6 +41,20 @@ def parafy(text, target=550):
         out.append(cur)
     return "".join("<p>" + x + "</p>" for x in out)
 
+
+def _scrub_ocr(text):
+    """Remove two-column OCR interleave artifacts from verbatim text: stranded
+    stat tokens, running-header fragments, and ligature junk that the PDF's
+    column layout injected mid-paragraph."""
+    text = re.sub(r"\s*\b(?:CR|XP|hp)\s+[\d,/]+\b\s*", " ", text)
+    text = re.sub(r"\s*\b(?:rff|ftfl|fffi|flff|ffft|flffft|fl|fi)\b\s*(?=[a-z]*\s*[A-Z])", " ", text)
+    text = re.sub(r"\s*\bHANDOUT\s*#?[\d-]*\b.*$", "", text)        # cut at handout captions
+    text = re.sub(r"\s*\b(?:CHAPTER BACKGROUND|PART \d:?|CHAPTER CONCLUSION)\b\s*", " ", text)
+    text = re.sub(r"  +", " ", text).strip()
+    if text and text[-1].isalpha():
+        text += "."
+    return text
+
 def verbatim(anchor):
     """Return the AP paragraph that starts with (or contains) `anchor`, re-flowed
     across mid-sentence image/page markers, with leading OCR drop-caps repaired.
@@ -55,11 +69,15 @@ def verbatim(anchor):
     text, k = paras[si], si + 1
     while text and text[-1] not in '.!?:"”\'’)' and k < len(paras):
         nxt = paras[k]
-        if nxt.startswith("#"): break
+        if nxt.startswith("#") or nxt.startswith("HANDOUT"): break
+        # two-column OCR junk INSIDE a sentence: skip it and keep merging so the
+        # sentence completes from the paragraph beyond the interleave
+        if re.fullmatch(r"(?:CR|XP|hp)\s+[\d,/]+(?:\s+each)?", nxt) or (nxt.isupper() and len(nxt.split()) <= 6):
+            k += 1; continue
         if (not nxt) or nxt.startswith("<!--"):
             k += 1; continue
         text, k = text + " " + nxt, k + 1
-    return re.sub(r'^([B-HJ-Z]) ([a-z])', r'\1\2', text)
+    return _scrub_ocr(re.sub(r'^([B-HJ-Z]) ([a-z])', r'\1\2', text))
 
 MOD = "cotct-pf2e-conversion"
 ROOT = pathlib.Path(__file__).resolve().parents[1]            # foundry-module/

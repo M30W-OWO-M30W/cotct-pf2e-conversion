@@ -28,6 +28,9 @@ python3 scripts/build_ch6.py || { echo "!! build_ch6.py failed"; exit 1; }
 echo "==> Building Appendices (build_appendix.py)..."
 python3 scripts/build_appendix.py || { echo "!! build_appendix.py failed"; exit 1; }
 
+echo "==> Checking read-aloud for OCR interleave..."
+python3 scripts/check_readaloud.py || { echo "!! read-aloud OCR symptoms found"; exit 1; }
+
 echo "==> Validating links/ids + content..."
 vout=$(npm run --silent validate)
 if ! printf '%s' "$vout" | grep -q "problems=0"; then

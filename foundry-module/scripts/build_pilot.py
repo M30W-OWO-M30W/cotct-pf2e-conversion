@@ -85,14 +85,16 @@ def verbatim(anchor):
     # sentence punctuation) by appending following paragraphs until it completes
     while text and text[-1] not in '.!?:"”\'’)' and k < len(paras):
         nxt = paras[k]
-        if nxt.startswith("#"): break                 # real section header = stop
+        if nxt.startswith("#") or nxt.startswith("HANDOUT"): break   # header / handout = stop
         if (not nxt) or nxt.startswith("<!--"):        # blank / image / page marker
             k += 1; continue                           # skip — read-aloud often spans these
+        if re.fullmatch(r"(?:CR|XP|hp)\s+[\d,/]+(?:\s+each)?", nxt) or (nxt.isupper() and len(nxt.split()) <= 6):
+            k += 1; continue                           # skip two-column OCR junk mid-sentence
         text, k = text + " " + nxt, k + 1
     # repair OCR drop-caps at the start ("T he"->"The", "S lippery"->"Slippery");
     # exclude the real one-letter words A / I so "A fifteen-foot" is left alone.
     text = re.sub(r'^([B-HJ-Z]) ([a-z])', r'\1\2', text)
-    return text
+    return B._scrub_ocr(text)
 # start-anchors (short identifying snippets) for each area's boxed read-aloud
 RABOX = {
  "A1":"The reek of brine and the stink of week-dead fish",
