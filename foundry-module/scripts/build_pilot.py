@@ -19,7 +19,10 @@ A = {"gaedren":"RKfT6vJ5guinSBjo","yargin":"7uhbgkK2IOZOlJb3","hookshanks":"qH96
      "brooch":"iNQaVcbkSM0VPXsa","harrowdeck":"DPDen8gco6rznX9Y","ledger":"I7HQNtjI9yPvQ4fA",
      "garnet":"dK4hnpH7s67RYnNI","coffer":"ymuRwMg6WfWIwkne","dagger":"b04PLWVkmm3RM4nm",
      "bg_betrayed":"bgBetrayed000001","bg_drugaddict":"bgDrugAddict0001","bg_framed":"bgFramed00000001",
-     "bg_lovelost":"bgLoveLost000001","bg_missingchild":"bgMissingChild01","bg_unhappy":"bgUnhappyChild01"}
+     "bg_lovelost":"bgLoveLost000001","bg_missingchild":"bgMissingChild01","bg_unhappy":"bgUnhappyChild01",
+     # Part Two — A City Gone Mad (custom NPCs)
+     "mad_prophet":"madProphet000001","rioter":"korvosanRioter01","amin":"aminJalento00001",
+     "grau":"grauSoldado00001","trinia":"triniaSabor00001","trinia_wand":"triniaWand000001"}
 JID = "aO3z6QTqmYZCZYkw"   # the fat Ch.1 journal entry
 SCN = "PuUGEVunRqjIWFOj"   # Old Fishery scene
 ADV = "OmdAPBg10luB7GUr"   # Adventure doc
@@ -74,8 +77,13 @@ def verbatim(anchor):
     # sentence punctuation) by appending following paragraphs until it completes
     while text and text[-1] not in '.!?:"”)' and k < len(paras):
         nxt = paras[k]
-        if not nxt or nxt.startswith(("<!--", "#")): break
+        if nxt.startswith("#"): break                 # real section header = stop
+        if (not nxt) or nxt.startswith("<!--"):        # blank / image / page marker
+            k += 1; continue                           # skip — read-aloud often spans these
         text, k = text + " " + nxt, k + 1
+    # repair OCR drop-caps at the start ("T he"->"The", "S lippery"->"Slippery");
+    # exclude the real one-letter words A / I so "A fifteen-foot" is left alone.
+    text = re.sub(r'^([B-HJ-Z]) ([a-z])', r'\1\2', text)
     return text
 # start-anchors (short identifying snippets) for each area's boxed read-aloud
 RABOX = {
@@ -93,6 +101,9 @@ RABOX = {
  "A12":"A narrow space exists under the fishery",
  "A13":"The air in this large room is chilly and stinks of the river",
  "A14":"This foul-smelling room seems to be a combination",
+ # Part Two read-aloud (mid-phrase anchors dodge OCR drop-caps)
+ "CGM":"sight of smoke rising on the horizon",
+ "E12FLAT":"one-room flat combines all the amenities",
 }
 def box(code, fallback_html):
     """Read-aloud section: exact AP text if the source file is present, else paraphrase."""
@@ -300,6 +311,70 @@ AW("lamms-lamb", B.npc(A["orphan"],"Lamm's Lamb (Orphan)",-1,15,6,2,6,3,5,
         "<p><strong>Behavior:</strong> an orphan that takes damage flees to A8, or out into the slums once the thugs are down; those invaded at night are too frightened to fight. A PC can rally one with "+chk("type:diplomacy|dc:15")+" (Intimidation fails) to Aid or reveal information. Rescuing them pays off a 'Missing Child' background.</p>",
   folder=F["a_creatures"], size="sml", blurb="Enslaved orphan ('Lamm's Lamb')", token_src=TOK("orphan")))
 
+# ---- Part Two: A City Gone Mad (custom NPCs) ----
+AW("mad-prophet", B.npc(A["mad_prophet"],"Mad Prophet",-1,14,12,5,3,7,5,
+  {"str":1,"dex":1,"con":2,"int":-1,"wis":3,"cha":0},25,
+  {"athletics":5,"intimidation":5,"religion":5,"society":3},
+  ["humanoid","human"],["common"],
+  [B.strike(nid(),"Filthy Grasp",5,"1d4+1","bludgeoning",["agile"]),
+   B.action(nid(),"Diseased Grab","1","<p>The prophet makes an Athletics check to Grab a creature he is touching. A creature he "+B.cond("grabbed","Grabs")+" is exposed to <strong>Filth Fever</strong> ("+chk("type:fortitude|dc:16")+"): on a failure it is "+B.cond("sickened","Sickened 1")+" (Sickened 2 and "+B.cond("enfeebled","Enfeebled 1")+" on a critical failure); the disease advances daily until cured.</p>",["disease","manipulate"]),
+   B.action(nid(),"Doomsaying","1","<p>The prophet shrieks a prophecy at one creature, who must succeed at a "+chk("type:will|dc:14")+" or be "+B.cond("frightened","Frightened 1")+" (Frightened 2 on a critical failure).</p>",["auditory","emotion","fear","mental"])],
+  notes="<p><strong>Role:</strong> a doomsayer, not a real fight — the danger is the <strong>Filth Fever</strong> he carries, contracted if he Grabs a PC. Most prophets are harmless street-corner prognosticators; this one has fixated on a PC.</p>"
+        "<p><strong>Behavior:</strong> raves and reaches for the PC he is obsessed with; flees or collapses once struck. Curing his disease (or his madness) is a Good deed, not an XP-for-kill.</p>",
+  folder=F["a_creatures"], blurb="Plague-touched doomsayer", token_src=TOK("mad-prophet")))
+
+AW("korvosan-rioter", B.npc(A["rioter"],"Korvosan Rioter",-1,15,14,5,2,2,3,
+  {"str":3,"dex":1,"con":2,"int":-1,"wis":0,"cha":0},25,
+  {"athletics":6,"intimidation":5},
+  ["humanoid","human"],["common"],
+  [B.strike(nid(),"Club",6,"1d6+3","bludgeoning",[]),
+   B.strike(nid(),"Improvised Thrown",6,"1d6+3","bludgeoning",["range-increment-10"]),
+   B.gear("club",nid())],
+  notes="<p><strong>Role:</strong> a fragile mob mook — a laborer with a chair-leg, not a soldier. Reuse this stat block for any riot in the AP.</p>"
+        "<p><strong>Tactics:</strong> swarms the nearest target, or focuses any obviously well-to-do socialite. <strong>Morale:</strong> a rioter flees as soon as it takes any damage — a mob this size routs fast once blooded.</p>",
+  folder=F["a_creatures"], blurb="Angry laborer in the riots", token_src=TOK("korvosan-rioter")))
+
+AW("amin-jalento", B.npc(A["amin"],"Amin Jalento",1,16,18,4,6,7,5,
+  {"str":1,"dex":3,"con":1,"int":0,"wis":1,"cha":2},25,
+  {"diplomacy":6,"society":6,"deception":4,"acrobatics":6},
+  ["humanoid","human"],["common"],
+  [B.strike(nid(),"Rapier",7,"1d6+1","piercing",["deadly-d8","disarm","finesse"]),
+   B.action(nid(),"Fight Defensively","1","<p>Amin focuses entirely on defense, gaining a +1 circumstance bonus to AC until the start of his next turn. He has never been in a real fight and avoids attacking if he can flee instead.</p>",["concentrate"]),
+   B.gear("leather-armor",nid()), B.gear("healing-potion-minor",nid(),2),
+   B.equipment(nid(),"Signet Ring & 12 pp",0,12,"<p>A young nobleman's signet ring and purse — about 12 pp.</p>",traits=["art-object"])],
+  notes="<p><strong>Role:</strong> a beardless young noble cornered by the mob in Event 5 — a quest-giver, not a combatant. If the PCs disperse the mob ("+chk("type:diplomacy|dc:18")+" or "+chk("type:intimidation|dc:18")+") or fight it off, Amin escapes.</p>"
+        "<p><strong>Behavior:</strong> fights defensively only if cornered; flees at the first chance. <strong>Reward:</strong> if saved, he gratefully gives the party a gold ring worth 250 gp (award XP as if defeated).</p>",
+  folder=F["a_creatures"], blurb="Rescued young nobleman (Event 5)", token_src=TOK("amin-jalento")))
+
+AW("grau-soldado", B.npc(A["grau"],"Grau Soldado",4,21,62,11,11,5,9,
+  {"str":3,"dex":3,"con":4,"int":0,"wis":0,"cha":1},25,
+  {"athletics":10,"acrobatics":12,"intimidation":9,"deception":8},
+  ["humanoid","human"],["common"],
+  [B.strike(nid(),"+1 Striking Mithral Longsword",13,"2d8+6","slashing",["magical","versatile-p"],slug="grau-longsword"),
+   B.sneak_attack(nid(),1,"Grau"),
+   B.action(nid(),"Power Attack","2","<p>Grau makes a Longsword Strike that deals an extra @Damage[1d8[slashing]] on a hit (he always uses this while drunk and belligerent). On a failure he is "+B.cond("off-guard","Off-Guard")+" until the start of his next turn.</p>",["flourish"]),
+   B.action(nid(),"Drunk","passive","<p>Grau fights "+B.cond("sickened","Sickened 1")+" while intoxicated; this −1 penalty is already included in his statistics. He makes poor tactical choices, ignoring openings for Sneak Attack and provoking reactions as he stumbles between foes.</p>",category="defensive"),
+   B.lore(nid(),"Korvosa Lore",6),
+   B.gear("chain-mail",nid()), B.gear("steel-shield",nid())],
+  notes="<p><strong>Role:</strong> a recurring NPC — a well-liked Korvosan Guard watch sergeant (Vencarlo Orisini's expelled student) drowning his despair in drink. This 'fight' is meant to be survived and <strong>defused</strong>, not a kill.</p>"
+        "<p><strong>Defusing him:</strong> commiserate ("+chk("type:diplomacy|dc:20")+", or a Deception vs. his Perception) and he sobers up; "+chk("type:society|dc:18")+" recognizes the sergeant he was. A lesser restoration sobers him instantly. Escorted to Citadel Volshyenek, his fellow guards clean him up and he becomes a grateful ally.</p>"
+        "<p><strong>If he duels:</strong> he limits attacks to the PC who accepted the duel; if another PC strikes him he cries 'Foul!' and flails at random foes. <strong>Morale:</strong> surrenders rather than dies. Award XP as if defeated whether he is beaten or talked down.</p>",
+  folder=F["a_creatures"], blurb="Drunken watch sergeant; future ally", token_src=TOK("grau-soldado"), actor_link=True))
+
+AW("trinia-sabor", B.npc(A["trinia"],"Trinia Sabor",3,18,36,6,11,9,7,
+  {"str":0,"dex":3,"con":1,"int":2,"wis":1,"cha":3},25,
+  {"acrobatics":11,"crafting":8,"deception":9,"stealth":11,"society":6,"arcana":7},
+  ["humanoid","human"],["common","varisian"],
+  [B.strike(nid(),"Dagger",9,"1d4","piercing",["agile","finesse","thrown-10","versatile-s"]),
+   B.action(nid(),"Wand of Daze Monster","1","<p>Trinia Activates her <strong>wand of daze monster</strong> against the closest pursuer, who must succeed at a "+chk("type:will|dc:17")+" or be "+B.cond("stunned","Stunned 1")+" (Stunned 3 on a critical failure) — she uses it to break up a chase.</p>",["concentrate","magical"]),
+   B.action(nid(),"Figment","2","<p>Trinia conjures a minor illusion — most often an image of herself asleep in her bed, which she abandons (the figment lingers ~2 rounds) as she slips out the window. A creature that Seeks against it disbelieves with a "+chk("type:will|dc:17")+".</p>",["concentrate","illusion","manipulate"]),
+   B.action(nid(),"Fit of Laughter","2","<p>One creature on Trinia's space must succeed at a "+chk("type:will|dc:17")+" or be overcome with laughter — "+B.cond("slowed","Slowed 1")+" and unable to act usefully for 1 round (it falls "+B.cond("prone","Prone")+" on a critical failure).</p>",["emotion","incapacitation","mental"]),
+   {"_id":A["trinia_wand"],"img":"systems/pf2e/icons/default-icons/consumable.svg","name":"Wand of Daze Monster","type":"weapon","sort":0,"ownership":{"default":0},"flags":{},"_stats":dict(B.STATS),
+    "system":{"baseItem":None,"bonus":{"value":0},"bonusDamage":{"value":0},"bulk":{"value":0.1},"category":"simple","containerId":None,"damage":{"damageType":"mental","dice":0,"die":""},"description":{"value":"<p>A slim birch wand. Once per day it can stun a target ("+chk("type:will|dc:17")+"); Trinia uses it to slow pursuit in the Shingles chase.</p>"},"equipped":{"carryType":"held","handsHeld":1},"group":None,"hardness":0,"hp":{"max":0,"value":0},"level":{"value":1},"material":{"grade":None,"type":None},"price":{"value":{"gp":60}},"publication":B.PUB,"quantity":1,"range":None,"reload":{"value":None},"rules":[],"runes":{"potency":0,"property":[],"striking":0},"size":"med","slug":None,"splashDamage":{"value":0},"traits":{"rarity":"common","value":["magical","wand"]},"usage":{"value":"held-in-one-hand"}}}],
+  notes="<p><strong>Role:</strong> the innocent young painter Queen Ileosa frames for the king's murder — a recurring NPC, <strong>not</strong> an enemy. She avoids combat entirely, fleeing through the Shingles (Event 12). She is telling the truth: she did not kill the king.</p>"
+        "<p><strong>In the chase:</strong> she moves one obstacle at a time while she holds a lead, uses her wand on the closest PC, favors Acrobatics, and takes risks to gain ground when a PC closes. Cornered, she uses <em>Fit of Laughter</em> and weeps that she has been set up.</p>",
+  folder=F["a_creatures"], blurb="Framed artist; recurring ally", token_src=TOK("trinia-sabor"), actor_link=True))
+
 # =====================================================================
 # HAZARDS (Actor type=hazard; in the hazards pack, Hazards folder)
 # =====================================================================
@@ -363,7 +438,9 @@ SR = lambda area,p: f'<p class="source"><em>Source: CotCT (2016 HC), Ch.1, {area
 def RA(html): return B.s_read(html)                      # read-aloud / boxed text
 def SEC(html): return B.s_secret(html, sid())            # GM-hidden reveal block
 PAGE_KEYS=["background","overview","hook","scene","features","A1","A2","A3","A4","A5","A6","A7","A8","A9","A10",
-           "A11","A12","A13","A14","npcs","treasure","conv"]
+           "A11","A12","A13","A14","npcs","treasure","conv",
+           # Part Two — A City Gone Mad
+           "cgm","e1","e2","e3","e4","e5","e6","e7","e8","e9","e10","e11","e12","e13","e14"]
 P={k:nid() for k in PAGE_KEYS}   # pre-assign so forward relative links resolve
 def newpage(key,name,html,level=3):
     return B.page(P[key],name,html,level=level)
@@ -540,6 +617,116 @@ pages.append(newpage("conv","Conversion Notes",
    "<li><strong>Orphans</strong> = explicit non-combatants (Rally / Cower); never an XP-for-kill source (CHG-0107).</li>"
    "<li><strong>Forward hooks:</strong> leaving Gaedren's body → undead Gaedren in the Dead Warrens; the Brooch → the queen's audience; the deck → recurring Harrowings.</li>"
    "</ul>"),level=2))
+
+# =====================================================================
+# PART TWO — A CITY GONE MAD (street events, run in any order)
+# =====================================================================
+def xpb(levels, pl):
+    e = B.encounter(levels, party_level=pl); return f"{e['band']} · {e['xp']} XP @ L{pl}"
+def ev(key, title, html): pages.append(newpage(key, title, html))
+
+ev("cgm","A City Gone Mad",
+  B.s_milestone("<p><strong>Part Two.</strong> The PCs emerge from the fishery to find King Eodred II dead and Korvosa in flames. Run these events in any order, across the ~month the chapter spans — there is no fixed schedule. No maps are provided: each event happens wherever the party is.</p>")
+  +box("CGM","<p>Smoke rises on the horizon (or, by night, the flicker of fires); alarm bells clang over screams, the clash of steel, and the periodic detonation of arcane power. A wing of Sable Company hippogriff riders sweeps toward Castle Korvosa; one wounded mount crashes into a statue. A herald cries 'The king is dead! Long live the queen!' — answered by 'Hang the queen!' The city has gone mad.</p>")
+  +"<p>Use the <strong>Korvosa (Anarchy)</strong> city statistics now — see the Conversion Guide journal → <em>Korvosa: Reputation &amp; City Tiers</em>. Korvosa stays in turmoil until the PCs begin Part Three.</p>"
+  +SEC("<p><strong>How the king really died (GM only).</strong> Ileosa had her stepbrother-in-law Venster coat the king's playing cards with <em>fool's leprosy</em>, a Red Mantis poison that mimics a fast leprosy and so <strong>resists</strong> <em>remove disease</em>. No one realized it was poison, not sickness; a <em>neutralize poison</em> would have saved him. The body is sealed in the royal crypt and crumbles too fast for <em>speak with dead</em>; by the time anyone could attempt <em>resurrection</em>, his soul is judged and beyond mortal magic. These stay mysteries for now.</p>")
+  +B.s_skill("<p><strong>Investigating the Queen.</strong> "+chk("type:society|dc:15")+" or "+chk("type:diplomacy|dc:20")+" (gather information) recalls common knowledge: Ileosa Arvanxi, born in Chelish Westcrown, scandalized her family to marry the aging Eodred II after a short courtship, and openly disdains Korvosa as 'a backwater colonial village.' Her true feelings — and her crimes — stay hidden this early. See the rumor table in your AP book (Appendix 2).</p>")
+  +B.s_conv("<p>Before Event 11, make sure the PCs have heard rumors that the king was murdered — these rile the city and set up the Queen's Scapegoat.</p>"))
+
+ev("e1","Event 1. A Return to Zellara's Home",
+  "<p>If the PCs return to Zellara's home, they find it abandoned for weeks — furniture in dust-covered pieces, no sign of the woman or her belongings. (They already found her severed head in "+pg(P["A14"],"A14")+".)</p>"
+  +SEC("<p>If the PCs carry "+itm("harrowdeck","Zellara's harrow deck")+", now is the moment for her spirit to manifest via the deck's <em>major image</em>, explain the truth of her death, and reveal the deck's powers — the recurring <strong>Harrowing</strong> (Conversion Guide journal → <em>The Harrowing</em>). If they lack the deck, she manifests one last image to steer them back to the fishery to recover it. Going forward she speaks only through the deck.</p>"))
+
+ev("e2","Event 2. The Mysterious Brooch",
+  "<p>When the PCs investigate "+itm("brooch","the brooch")+" from Gaedren's stash, "+chk("type:society|dc:15")+" recognizes it as the queen's. Any merchant they approach knows it instantly — it is registered with the Korvosan Guard as stolen, and the queen has offered a reward. The merchant advises returning it to Castle Korvosa to claim <strong>1,200 gp</strong>.</p>"
+  +B.s_conv("<p>Following this up triggers "+pg(P["e8"],"Event 8: Long Live the Queen!")+" — the PCs' first audience with their future archenemy.</p>"))
+
+ev("e3","Event 3. The Mad Prophet",
+  "<p>A wild-haired, sick-looking lunatic fixates on one PC, screaming that the character will 'near death during a time of great sickness' in Korvosa's darkest hour. His ravings are nonsense — but the disease he carries is not.</p>"
+  +B.enc("The Mad Prophet",xpb([-1],2),
+     "<p>One "+act("mad_prophet","mad prophet")+". If he Grabs the PC he is obsessed with, that PC is exposed to <strong>Filth Fever</strong> ("+chk("type:fortitude|dc:16")+"). This is a disease vector, not a real fight.</p>",
+     B.aside_token([act("mad_prophet","Mad Prophet (−1)")], img=TOK("mad-prophet"))))
+
+ev("e4","Event 4. Imps and Dragons",
+  "<p>Imps loosed by failed Acadamae summonings are a constant Korvosan menace, kept in check by the native house drakes. In the chaos, a pair of "+B.mon("imp","imps")+" swoops down to rob and savage the PCs. On the second round, four "+B.mon("house-drake","house drakes")+" arrive to attack the imps — likely saving the party.</p>"
+  +B.enc("Imps (house drakes intervene)",xpb([B.mon_lvl("imp"),B.mon_lvl("imp")],2),
+     "<p>2 "+B.mon("imp","imps")+" attack; the 4 "+B.mon("house-drake","house drakes")+" are <strong>allies</strong> that arrive round 2 and rarely linger. A saved drake may heal a PC as thanks.</p>"
+     +"<p><strong>Scaling:</strong> repeat freely — add imps or delay the drakes for a harder fight (3–4 imps → "+xpb([B.mon_lvl("imp")]*3,2)+" to "+xpb([B.mon_lvl("imp")]*4,2)+").</p>",
+     B.aside_token(["2× "+B.mon("imp","Imp (1)"), "4× "+B.mon("house-drake","House Drake (1)")+" (allied)"])))
+
+ev("e5","Event 5. Meet the Mob",
+  "<p>Rioting laborers roam in mobs, battering anyone in finery with cries of 'Die, dandy!' and 'Death to the false queen!' The PCs come on a mob surrounding "+act("amin","Amin Jalento")+", a young nobleman. A burly woman jeers about her brother's dock-crushed arm — 'Wanna know what it feels like?' If the PCs do not intervene, the mob attacks Amin.</p>"
+  +B.s_skill("<p>"+chk("type:diplomacy|dc:18")+" or "+chk("type:intimidation|dc:18")+" disperses the mob long enough for Amin to escape — otherwise it is a fight against six rioters.</p>")
+  +B.enc("Riot mob + Amin Jalento",xpb([-1]*6,2),
+     "<p>6 "+act("rioter","rioters")+" (fragile mooks — each flees the instant it takes damage; the mob routs fast). "+act("amin","Amin")+" is a non-combatant who fights only defensively and flees when he can.</p>"
+     +B.s_treasure("<p><strong>Reward:</strong> save Amin and he gives the party a gold ring worth <strong>250 gp</strong> (award XP as if the mob were defeated).</p>"),
+     B.aside_token(["6× "+act("rioter","Rioter (−1)"), act("amin","Amin Jalento (1, non-combatant)")], img=TOK("korvosan-rioter"))))
+
+ev("e6","Event 6. The Drunken Guard",
+  "<p>The PCs run across "+act("grau","Grau Soldado")+" — a Korvosan Guard watch sergeant, once Vencarlo Orisini's prize student, now drunk and despondent in a tavern or staggering the streets. He bemoans the end of Korvosa; the king's death hit him hard, the riots harder.</p>"
+  +B.s_skill("<p>"+chk("type:society|dc:18")+" recognizes the well-liked sergeant he was. Commiserate ("+chk("type:diplomacy|dc:20")+", or Deception vs. his Perception) and he sobers; a <em>lesser restoration</em> does it instantly. The right move is to escort him to Citadel Volshyenek, where the Guard cleans him up. If the PCs mock him, he challenges them to a duel (he relocates to a back alley if asked; the Guard breaks up a public fight in 3d6 rounds).</p>")
+  +B.enc("Grau Soldado (duel — defuse, don't kill)",xpb([4],3),
+     "<p>A single, skilled but "+B.cond("sickened","Sickened")+"-drunk duelist. He limits attacks to the PC who accepted the duel; if another PC strikes him he cries 'Foul!' and flails at random foes, provoking reactions. <strong>Morale:</strong> surrenders rather than dies.</p>"
+     +B.s_treasure("<p><strong>Reward:</strong> get him back to the Guard intact and he becomes a grateful recurring ally (award XP as if defeated). His +1 striking mithral longsword is the only thing of value he still owns.</p>"),
+     B.aside_token([act("grau","Grau Soldado (4)")], img=TOK("grau-soldado"))))
+
+ev("e7","Event 7. Otyugh Uprising",
+  "<p>Something has driven a filth-feeder up from the sewers into an alley, thoroughfare, or shop basement where the PCs happen to be.</p>"
+  +B.enc("Otyugh",xpb([B.mon_lvl("otyugh")],2),
+     "<p>A single "+B.mon("otyugh","otyugh")+" lashes out with its tentacles, grabbing and dragging prey toward its filthy maw (beware its disease).</p>",
+     B.aside_token([B.mon("otyugh","Otyugh (4)")])))
+
+ev("e8","Event 8. Long Live the Queen!",
+  "<p>Returning "+itm("brooch","the brooch")+" (or otherwise seeking an audience) brings the PCs to Castle Korvosa, locked tight and bristling with crossbows. "+chk("type:diplomacy|dc:18")+" smooths their approach; mentioning the queen's missing brooch speeds things along.</p>"
+  +"<p>The PCs are granted a brief audience with <strong>Queen Ileosa</strong> and her bodyguard <strong>Sabina Merrin</strong> — the party's first look at their future archenemy. Ileosa is gracious in public.</p>"
+  +B.s_treasure("<p><strong>Reward:</strong> Sabina hands over a silver chest (worth 50 gp) holding 12 gold ingots stamped with the royal seal — 100 gp each (<strong>1,200 gp</strong> total). Grant <strong>800 XP</strong> for meeting the queen and returning the brooch.</p>")
+  +B.s_conv("<p>This audience is the linchpin: the queen now knows the PCs by face. Everything from "+pg(P["e9"],"Event 9")+" onward flows from the Korvosan Guard noticing capable heroes.</p>"))
+
+ev("e9","Event 9. Welcome to the Guard",
+  "<p>As the PCs prove themselves on the streets, <strong>Field Marshal Cressida Kroft</strong> of the Korvosan Guard summons them to <strong>Citadel Volshyenek</strong>. Overstretched and cut off from her scattered officers, she enlists the party as trusted free agents — the relationship that drives the rest of the chapter.</p>"
+  +B.s_conv("<p>Cressida is the PCs' patron and quest-giver for "+pg(P["e10"],"Event 10")+", "+pg(P["e11"],"Event 11")+", and "+pg(P["e13"],"Event 13")+". Establish her as sympathetic, principled, and stretched thin.</p>"))
+
+ev("e10","Event 10. The Ambassador's Secret",
+  "<p>Cressida needs leverage: scandalous letters held by <strong>Devargo Barvasi</strong>, the 'King of Spiders,' at his floating den <strong>Eel's End</strong>. She hands the PCs a pouch of <strong>1,000 gp</strong> to buy them; "+chk("type:diplomacy|dc:24")+" talks her up to 1,500 gp. Vencarlo Orisini offers to escort the party as far as Old Korvosa.</p>"
+  +B.s_treasure("<p><strong>Reward:</strong> deliver the letters and Cressida adds <strong>500 gp</strong>. If the King of Spiders is dead, she can't legally pay more — instead she awards each PC the <em>drake's mark</em>, a medal worth 400 gp that grants a <strong>+2 circumstance bonus to Diplomacy</strong> with citizens of Korvosa when worn openly.</p>")
+  +B.s_conv("<p>This is the hook into Part Three's Eel's End (area C). The bribe money matters — it is the PCs' lever on Devargo.</p>"))
+
+ev("e11","Event 11. The Queen's Scapegoat",
+  "<p>To bury the regicide rumors, Ileosa picks a scapegoat: "+act("trinia","Trinia Sabor")+", a young artist who painted the king's portrait weeks before his death. A tortured guard's false confession (and the guard's subsequent 'suicide,' propelled by Sabina) sets a city-wide hunt and fresh riots — this time crying for the 'assassin's' death.</p>"
+  +SEC("<p><strong>GM:</strong> Trinia is innocent; Ileosa's jealousy (amplified by Kazavon's wrath) chose her. This is also the seed of the <strong>Gray Maidens</strong>, Ileosa's coming order of warrior-women.</p>")
+  +"<p>Cressida, alone among the officers doubting the confession, begs the PCs to reach Trinia <em>first</em> — before the mob, the Hellknights of the Order of the Nail, or the queen's guards — and bring her in safely for a fair, magical interrogation. Her last known address: a flat in <strong>Midland, 42 Moon Street</strong>, in the slum-tangle of the Shingles. Reward: <strong>1,000 gp</strong>.</p>"
+  +B.s_conv("<p>Proceed to "+pg(P["e12"],"Event 12: Into the Shingles")+".</p>"))
+
+# --- Event 12: the Shingles chase (PF2e Chase subsystem) ---
+_OBST = [
+ ("Cluttered rooftop","acrobatics",15,"athletics",18),("Crumbling rooftop","athletics",18,"acrobatics",20),
+ ("Gap in the wall","acrobatics",18,"athletics",20),("Hidden shortcut","perception",18,"acrobatics",20),
+ ("Narrow hole in a wall","athletics",20,"acrobatics",23),("Narrow rooftop leap","acrobatics",18,"athletics",20),
+ ("Burst of stirges","intimidation",18,"perception",20),("Tightrope shortcut","acrobatics",20,"athletics",23),
+ ("Very hidden shortcut","perception",23,"athletics",25),("Very steep roof","athletics",15,"acrobatics",18),
+ ("Avoid a drain-spider nest","survival",18,"nature",20),("Surly rooftop vagrant","intimidation",15,"deception",18),
+ ("Jagged nails","perception",15,"acrobatics",18),("Cranky rooftop tomcat","nature",15,"diplomacy",18),
+ ("Tangle of debris","thievery",15,"athletics",18)]
+_obst_rows = "".join(f"<tr><td>{i}</td><td>{n}</td><td>{chk(f'type:{s1}|dc:{d1}')} or {chk(f'type:{s2}|dc:{d2}')}</td></tr>"
+                     for i,(n,s1,d1,s2,d2) in enumerate(_OBST,1))
+ev("e12","Event 12. Into the Shingles",
+  "<p>The PCs slip into Midland and reach 42 Moon Street. Trinia's neighbors shelter her and send up an alarm when the party is spotted (each of 2d6 neighbors can be won over with Deception vs. their Perception +3). Her third-floor flat is barricaded: "+chk("type:athletics|dc:18")+" forces the door — every round of delay is a head start.</p>"
+  +box("E12FLAT","<p>A one-room flat — bedroom, kitchen, and painter's studio in one. Bread and cheese sit by full waterskins; an easel holds a half-finished painting of an imp and a house drake fighting atop a church steeple. A single window looks out over the tangled rooftops, a low bed beneath it.</p>")
+  +SEC("<p>Warned, "+act("trinia","Trinia")+" casts a <em>Figment</em> of herself asleep in bed and creeps out the window — "+chk("type:perception|dc:17")+" to notice her slipping away (+2 circumstance if looking out the window); 4 unnoticed rounds and she escapes outright. Caught unbarricaded but warned, "+chk("type:perception|dc:13")+" spots her grabbing her dagger and wand before she leaps. Surprised in her sleep, she flees empty-handed.</p>")
+  +"<p><strong>The Shingles Chase</strong> (PF2e Chase subsystem). Run 15 obstacles; each PC attempts the listed skill on their turn to advance a chase point. "+act("trinia","Trinia")+" starts with a 0/3/5-obstacle lead depending on how thoroughly she was warned. A PC who fails badly <strong>falls to the street</strong>: take @Damage[2d6[bludgeoning]] and either "+chk("type:athletics|dc:16")+" to climb back, or "+chk("type:athletics|dc:16")+" / "+chk("type:reflex|dc:16")+" through the alleys to advance one obstacle. Catch her on the same obstacle and Grapple to end the chase; she escapes if she clears obstacle 15.</p>"
+  +"<table><thead><tr><th>#</th><th>Obstacle</th><th>Overcome</th></tr></thead><tbody>"+_obst_rows+"</tbody></table>"
+  +B.s_treasure("<p><strong>Rewards:</strong> catching Trinia earns XP as if defeated, however the PCs then choose to handle her. Turn her over to Cressida → <strong>1,000 gp</strong>; hide her or let her go (Cressida quietly approves) → <strong>2,000 gp</strong> paid later, folded into the "+pg(P["e13"],"Event 13")+" reward to hide the money trail; hand her to the queen → 200 pp and an invitation to her execution.</p>")
+  +B.s_conv("<p>Trinia is innocent and a recurring ally. If she is hidden (Cressida calls in Vencarlo to spirit her to Old Korvosa), she is safe for the rest of the chapter, and the queen simply announces that another 'captured assassin' has been apprehended instead.</p>"))
+
+ev("e13","Event 13. A Missing Body",
+  "<p>With the scapegoat in hand, the city calms — but a group of racist thugs murdered a young Shoanti during the unrest. Their elder, the visionary <strong>Thousand Bones</strong>, comes to Citadel Volshyenek to demand his grandson Gaekhen's body be recovered and returned, or Shoanti–Korvosan tensions will boil over.</p>"
+  +B.s_treasure("<p><strong>Reward:</strong> 1,000 gp (Cressida folds Trinia's deferred 2,000 gp in here too, if applicable). Recovering the body is a gesture of good will that pays off across the campaign.</p>")
+  +B.s_conv("<p>Thousand Bones and the Shoanti debt seeded here pay off in Chapter 4 (A History of Ashes). Build the relationship now.</p>"))
+
+ev("e14","Event 14. A Lovely Day for an Execution",
+  "<p>The chapter's climax: once all other plots resolve, the queen stages the public execution of her scapegoat (Trinia, or another). Set the date so the PCs can finish Part Three (the Dead Warrens) first — there is wiggle room.</p>"
+  +SEC("<p>Whether the PCs disrupt the execution, attend it, or let it proceed, this is the hand-off to the <strong>Chapter Conclusion</strong> and Chapter 2. As the chapter ends, the first cases of <strong>Blood Veil</strong> appear in the gutters — see the Conversion Guide journal → <em>Blood Veil &amp; the Epidemic Clock</em>.</p>")
+  +B.s_conv("<p>This is the natural seam to begin the persistent-plague overlay: the Epidemic Clock starts in Chapter 2, seeded by how the city fared here.</p>"))
 
 journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"])
 B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)

@@ -57,6 +57,44 @@ def gear(key, _id, qty=1):
     it["system"]["quantity"] = qty
     return it
 
+# Official pf2e Bestiary index (slug -> {pack,id,level,name}), extracted from the
+# installed system by scripts/extract_bestiary.mjs. Official monsters get @UUID
+# links to the Bestiary instead of being rebuilt — higher fidelity + scalable.
+_BEST_PATH = ROOT / "scripts" / "bestiary_index.json"
+MONSTERS = _json.loads(_BEST_PATH.read_text(encoding="utf-8")) if _BEST_PATH.exists() else {}
+def mon(slug, label=None):
+    """@UUID link to an official Bestiary creature. Raises if the slug is unknown
+    (so a typo is a build error, not a silently-broken link)."""
+    m = MONSTERS[slug]
+    return f"@UUID[Compendium.pf2e.{m['pack']}.Actor.{m['id']}]{{{label or m['name']}}}"
+def mon_lvl(slug):
+    """Official creature level, for encounter XP-budget math."""
+    return MONSTERS[slug]["level"]
+
+# ---- PF2e encounter difficulty (GMC budget) — sanity-check every encounter ----
+# Creature XP by (creature level - party level). Below -4 contributes ~0.
+_XP_BY_DELTA = {-4: 10, -3: 15, -2: 20, -1: 30, 0: 40, 1: 60, 2: 80, 3: 120, 4: 160}
+# Threshold budgets and per-extra-player adjustment, for a baseline 4-player party.
+_BANDS = [("Trivial", 40, 10), ("Low", 60, 20), ("Moderate", 80, 20),
+          ("Severe", 120, 30), ("Extreme", 160, 40)]
+def creature_xp(creature_level, party_level=1):
+    d = creature_level - party_level
+    if d < -4: return 0
+    return _XP_BY_DELTA[min(4, d)]
+def encounter(creature_levels, party_level=1, players=4):
+    """Return {'xp':int,'band':str,'budget':int,'detail':str} for a fight.
+    Budgets scale by player count per the GMC adjustment column."""
+    xp = sum(creature_xp(cl, party_level) for cl in creature_levels)
+    extra = players - 4
+    band, budget = "Trivial", _BANDS[0][1] + _BANDS[0][2] * extra
+    for name, base, per in _BANDS:
+        thr = base + per * extra
+        if xp >= thr:
+            band, budget = name, thr
+    # PF2e has no band below Trivial — a handful of mooks is simply Trivial.
+    return {"xp": xp, "band": band, "budget": budget,
+            "detail": f"{len(creature_levels)} creatures, levels {sorted(creature_levels)} vs party L{party_level}×{players} → {xp} XP = {band}"}
+
 # ---- deterministic ID pool (separate seed from the pilot registry) ----
 def _idgen(seed: int):
     import random
