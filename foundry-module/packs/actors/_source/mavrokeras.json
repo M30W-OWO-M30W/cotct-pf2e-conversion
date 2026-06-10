@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "0Drw5EddkcDFKnh7",
+      "_id": "1NIDbMyHHe75Ug4q",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Jaws",
+      "name": "Flesh Shredder (spiked chain)",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -18,16 +18,16 @@
           "value": []
         },
         "bonus": {
-          "value": 32
+          "value": 33
         },
         "damageRolls": {
           "0": {
-            "damage": "3d12+14",
-            "damageType": "piercing"
+            "damage": "3d8+15",
+            "damageType": "slashing"
           },
           "1": {
-            "damage": "3d6",
-            "damageType": "acid"
+            "damage": "1d6",
+            "damageType": "spirit"
           }
         },
         "description": {
@@ -44,16 +44,19 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "reach-15"
+            "magical",
+            "reach-10",
+            "trip",
+            "unholy"
           ]
         }
       },
-      "_key": "!actors.items!mavrokerasDrak01.0Drw5EddkcDFKnh7"
+      "_key": "!actors.items!mavrokerasDrak01.1NIDbMyHHe75Ug4q"
     },
     {
-      "_id": "6CixaKKbi03u2SpT",
+      "_id": "WIVqfH2l5zaytGTs",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Claw",
+      "name": "Stinger",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -64,12 +67,17 @@
           "value": []
         },
         "bonus": {
-          "value": 32
+          "value": 31
         },
         "damageRolls": {
           "0": {
-            "damage": "3d10+14",
-            "damageType": "slashing"
+            "damage": "3d6+13",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "bleed",
+            "category": "persistent"
           }
         },
         "description": {
@@ -91,24 +99,32 @@
           ]
         }
       },
-      "_key": "!actors.items!mavrokerasDrak01.6CixaKKbi03u2SpT"
+      "_key": "!actors.items!mavrokerasDrak01.WIVqfH2l5zaytGTs"
     },
     {
-      "_id": "it3V5cgVHrDLuNql",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Caustic Breath",
+      "_id": "mIHH2rYmE6QK2hgO",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Tail",
       "sort": 0,
-      "type": "action",
+      "type": "melee",
       "system": {
-        "actionType": {
-          "value": "action"
+        "attack": {
+          "value": ""
         },
-        "actions": {
-          "value": 2
+        "attackEffects": {
+          "value": []
         },
-        "category": "offensive",
+        "bonus": {
+          "value": 31
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d6+13",
+            "damageType": "bludgeoning"
+          }
+        },
         "description": {
-          "value": "<p><strong>Frequency</strong> once per 1d4 rounds. A 60-ft line of black acid: @Damage[16d6[acid]] (@Check[type:reflex|dc:38|basic:true]).</p>"
+          "value": ""
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -121,17 +137,16 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "acid",
-            "arcane"
+            "reach-15"
           ]
         }
       },
-      "_key": "!actors.items!mavrokerasDrak01.it3V5cgVHrDLuNql"
+      "_key": "!actors.items!mavrokerasDrak01.mIHH2rYmE6QK2hgO"
     },
     {
-      "_id": "zZJogLEqb8oisE0i",
+      "_id": "Xi9aRRueZNkSRQ1Y",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Frightful Presence",
+      "name": "Stunning Chain",
       "sort": 0,
       "type": "action",
       "system": {
@@ -143,7 +158,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>90 ft, @Check[type:will|dc:34].</p>"
+          "value": "<p>A creature critically hit by Flesh Shredder: @Check[type:fortitude|dc:36] or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}. He declaims florid praise to the chain — an artist's tool — as he works.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -158,12 +173,12 @@
           "value": []
         }
       },
-      "_key": "!actors.items!mavrokerasDrak01.zZJogLEqb8oisE0i"
+      "_key": "!actors.items!mavrokerasDrak01.Xi9aRRueZNkSRQ1Y"
     },
     {
-      "_id": "I8EKUMzddktDkZa2",
+      "_id": "KBWeBPpbJmfOoKVv",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Sea-Tower Ambush",
+      "name": "Infernal Wound",
       "sort": 0,
       "type": "action",
       "system": {
@@ -175,7 +190,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>He laired in Seawatch Tower (A94) as Ileosa's door-ward: +4 initiative when attacking from the tower's dark, and the first Strike against a surprised creature deals +2d6 precision.</p>"
+          "value": "<p>His stinger's persistent bleed resists mortal medicine: the DC to stop it is +5, and healing it magically requires a @Check[type:religion|dc:36] counteract-style check or the wound reopens.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -190,7 +205,297 @@
           "value": []
         }
       },
-      "_key": "!actors.items!mavrokerasDrak01.I8EKUMzddktDkZa2"
+      "_key": "!actors.items!mavrokerasDrak01.KBWeBPpbJmfOoKVv"
+    },
+    {
+      "_id": "9lkIK1vZZ57snnah",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "name": "Devils From Nowhere",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 3
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Once per day: three @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.tCJEjNDUxyV1GzE3]{hamatulas} answer, dropped <em>into melee among the PCs</em>; on later rounds he layers persistent images of ever-stronger devil 'reinforcements' joining the fight (disbelieve @Check[type:will|dc:36]).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "conjuration",
+            "divine"
+          ]
+        }
+      },
+      "_key": "!actors.items!mavrokerasDrak01.9lkIK1vZZ57snnah"
+    },
+    {
+      "_id": "uhjv6QgxXvFBGyoS",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Held Artillery",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>He hoards his <em>fireball</em>/<em>lightning bolt</em> (DC 36, @Damage[12d6[fire]] or @Damage[12d6[electricity]]) to <strong>finish a wounded PC</strong>, never to open.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "evocation"
+          ]
+        }
+      },
+      "_key": "!actors.items!mavrokerasDrak01.uhjv6QgxXvFBGyoS"
+    },
+    {
+      "_id": "Xw0EbMZmI7OfJHBo",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Ring of Invisibility",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>He re-invisibles between strikes (his ring: 4th-rank <em>invisibility</em> at will) and avoids melee until discovered and cornered.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate"
+          ]
+        }
+      },
+      "_key": "!actors.items!mavrokerasDrak01.Xw0EbMZmI7OfJHBo"
+    },
+    {
+      "_id": "8JJh6SQunJPnl6rO",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Devil's Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Fire immunity; resistance physical 15 (except holy silver); regeneration 15 (deactivated by holy); fly 50; <em>greater teleport</em> at will. <strong>Morale:</strong> below ~30 HP he teleports to A94 to regenerate, then circles invisibly above the castle, watching for telepathic calls.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!mavrokerasDrak01.8JJh6SQunJPnl6rO"
+    },
+    {
+      "_id": "Lgfpn25oQ6xxmg0i",
+      "img": "systems/pf2e/icons/default-icons/equipment.svg",
+      "name": "Flesh Shredder",
+      "type": "equipment",
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+          "value": "<p><strong>+2 greater striking unholy adamantine spiked chain</strong> — Mavrokeras's beloved 'artist's tool'; he composes praise to it mid-battle.</p>"
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 16
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 1300
+          }
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "unholy",
+            "adamantine"
+          ]
+        },
+        "usage": {
+          "value": "worn"
+        }
+      },
+      "_key": "!actors.items!mavrokerasDrak01.Lgfpn25oQ6xxmg0i"
+    },
+    {
+      "_id": "tL1zg6huMVqzjWWN",
+      "img": "systems/pf2e/icons/default-icons/equipment.svg",
+      "name": "Ring of Invisibility",
+      "type": "equipment",
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+          "value": "<p>Invested ring: cast 4th-rank <em>invisibility</em> on yourself at will.</p>"
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 14
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 900
+          }
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "invested",
+            "illusion"
+          ]
+        },
+        "usage": {
+          "value": "worn"
+        }
+      },
+      "_key": "!actors.items!mavrokerasDrak01.tL1zg6huMVqzjWWN"
     }
   ],
   "system": {
@@ -205,19 +510,19 @@
         "mod": 6
       },
       "int": {
-        "mod": 1
+        "mod": 3
       },
       "wis": {
         "mod": 3
       },
       "cha": {
-        "mod": 4
+        "mod": 5
       }
     },
     "attributes": {
       "ac": {
         "details": "",
-        "value": 38
+        "value": 39
       },
       "allSaves": {
         "value": ""
@@ -232,30 +537,28 @@
         "otherSpeeds": [
           {
             "type": "fly",
-            "value": 120
-          },
-          {
-            "type": "swim",
-            "value": 60
+            "value": 50
           }
         ],
-        "value": 40
+        "value": 25
       }
     },
     "details": {
-      "blurb": "Bought black dragon of Seawatch (A94)",
+      "blurb": "Horned devil of Seawatch Tower (A94)",
       "languages": {
         "details": "",
         "value": [
           "common",
-          "draconic"
+          "celestial",
+          "draconic",
+          "infernal"
         ]
       },
       "level": {
         "value": 16
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role (A94):</strong> the second black dragon — Zarmangarof's broodmate, bought with the castle's emptied treasury to ward the Seawatch approach. Less charmed than <em>paid</em>: @Check[type:diplomacy|dc:38] with a better offer (or proof the treasury is spent) can simply make him leave.</p>",
+      "publicNotes": "<p><strong>Role (A94 / A67 / A45):</strong> the <strong>horned devil</strong> warding the castle's towers and air — roosting atop Seawatch Tower (A94), patrolling invisibly (20% chance per balcony transit he spots non-stealthy PCs), winding the Epochal clock monthly, and ambushing the main-stair approach from A67. He serves Ileosa to repay an ancient debt to @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.sermignattoDvl01]{Sermignatto}; a 'Needlehearted' pain-philosopher and patron of Ustalav's Black Horn cult. His gear — Flesh Shredder and the ring — is the A94 treasure.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -279,36 +582,42 @@
     "saves": {
       "fortitude": {
         "saveDetail": "",
-        "value": 28
+        "value": 30
       },
       "reflex": {
         "saveDetail": "",
-        "value": 25
+        "value": 26
       },
       "will": {
         "saveDetail": "",
-        "value": 26
+        "value": 27
       }
     },
     "skills": {
       "athletics": {
         "base": 32
       },
-      "stealth": {
-        "base": 26
+      "deception": {
+        "base": 28
       },
       "intimidation": {
+        "base": 30
+      },
+      "religion": {
+        "base": 26
+      },
+      "stealth": {
         "base": 28
       }
     },
     "traits": {
       "rarity": "common",
       "size": {
-        "value": "grg"
+        "value": "lg"
       },
       "value": [
-        "dragon",
-        "amphibious"
+        "fiend",
+        "devil"
       ]
     }
   },

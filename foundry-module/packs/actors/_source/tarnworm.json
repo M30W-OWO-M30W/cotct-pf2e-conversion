@@ -1,0 +1,359 @@
+{
+  "_id": "ch5Tarnworm00001",
+  "name": "Tarnworm",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "pYCYld2DkI99AYD9",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Bite",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 28
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d12+14",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "reach-15"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.pYCYld2DkI99AYD9"
+    },
+    {
+      "_id": "OL8jeReCyBTDn2HN",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Stinger",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 28
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d8+14",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "poison"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "reach-15"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.OL8jeReCyBTDn2HN"
+    },
+    {
+      "_id": "Te8gecq7pFKbDx23",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Improved Grab + Fast Swallow",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>After a Bite hit the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (Escape DC 33); as a follow-up it Swallows Whole — @Damage[2d12+14[bludgeoning]] per round inside (Rupture 30).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.Te8gecq7pFKbDx23"
+    },
+    {
+      "_id": "lo8I3ZpIfAytPwoA",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Dweller Below",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Stinger venom: @Check[type:fortitude|dc:31] or @Damage[3d6[poison]] and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}. It hunts by wake and splash in 40°F water with 10-ft visibility.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.lo8I3ZpIfAytPwoA"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 8
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 7
+      },
+      "int": {
+        "mod": -5
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 34
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 275,
+        "temp": 0,
+        "value": 275
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "swim",
+            "value": 40
+          }
+        ],
+        "value": 20
+      }
+    },
+    "details": {
+      "blurb": "Lake-worm of the black tarn",
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": 13
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the crater lake's apex horrors — <em>several</em> of these Gargantuan swimming worms haunt the 800-ft black depths. Any creature entering the water (or boating it) without stealth quickly draws one; another lurks off the ruined quay at the hidden mooring (B37), surging at anything within 20 feet of the shore. <strong>Morale:</strong> the B37 worm retreats to the depths below ~60 HP. They cannot leave the lake — and their meat is too foul even for Belshallam.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 22,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 27
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 21
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 20
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 28
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "grg"
+      },
+      "value": [
+        "animal",
+        "aquatic"
+      ]
+    }
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Tarnworm",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!ch5Tarnworm00001"
+}

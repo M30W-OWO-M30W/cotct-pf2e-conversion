@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "CbA2I0OC3IZpG9Ga",
+      "_id": "idvKTZNqHdO9EeO7",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Roaring Ovens",
       "sort": 0,
@@ -19,7 +19,7 @@
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Trigger</strong> A living creature crosses the kitchens' midline.</p><hr /><p><strong>Effect</strong> Fire floods the room: @Damage[10d6[fire]] (@Check[type:reflex|dc:29|basic:true]) — and the @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.cinderGhoul00001]{cinder ghouls} attack out of the smoke.</p>"
+          "value": "<p><strong>Trigger</strong> A creature comes within 20 feet of the oven fronts.</p><hr /><p><strong>Effect</strong> An <em>illusory</em> sheet of flame and shrieking fire-spirits floods the room: @Check[type:will|dc:20] disbelieves (no damage); failure = @Damage[10d6[fire]]. Only the burned look burned — the room is unscorched. Next round, the four scorched outlines peel off the wall as @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.cinderGhoul00001]{cinder ghouls}.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -34,7 +34,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!crematoryBlast01.CbA2I0OC3IZpG9Ga"
+      "_key": "!actors.items!crematoryBlast01.idvKTZNqHdO9EeO7"
     }
   ],
   "folder": "ch5HazardsFld001",
@@ -126,14 +126,14 @@
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>@Check[type:perception|dc:28] to feel the ovens' heat rising before they roar.</p>",
-        "value": 28
+        "details": "<p>@Check[type:perception|dc:25] to spot smoke tendrils rising from each of the three huge ovens.</p>",
+        "value": 25
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>The kitchen ovens remember the night they were fed people.</p>",
-      "disable": "<p>@Check[type:religion|dc:28] (cast vitality into the ovens) or douse all four fireboxes.</p>",
+      "description": "<p>The ovens where Kazavon slow-roasted victims — and where Mandraivus's men threw the villainous cooks. Four humanoid outlines are burned into the brick; the ovens are still faintly warm.</p>",
+      "disable": "<p>@Check[type:religion|dc:28] (cast vitality into the ovens); it fades for good only when the curse lifts.</p>",
       "isComplex": false,
       "level": {
         "value": 10
@@ -169,7 +169,8 @@
       },
       "value": [
         "haunt",
-        "fire"
+        "fire",
+        "illusion"
       ]
     }
   },

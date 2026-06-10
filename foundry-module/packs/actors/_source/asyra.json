@@ -1,0 +1,441 @@
+{
+  "_id": "appAsyraKyton001",
+  "name": "Asyra",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "1vOXaEeiNqfUKlrF",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+2 Spiked Chain",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 25
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+12",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "disarm",
+            "magical",
+            "reach-10",
+            "trip"
+          ]
+        }
+      },
+      "_key": "!actors.items!appAsyraKyton001.1vOXaEeiNqfUKlrF"
+    },
+    {
+      "_id": "F8aF48jKr99SYyhZ",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Animated Chain",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 23
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d6+9",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "reach-10"
+          ]
+        }
+      },
+      "_key": "!actors.items!appAsyraKyton001.F8aF48jKr99SYyhZ"
+    },
+    {
+      "_id": "WVM8O50fd5YAOCHH",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 23
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d6+9",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile"
+          ]
+        }
+      },
+      "_key": "!actors.items!appAsyraKyton001.WVM8O50fd5YAOCHH"
+    },
+    {
+      "_id": "PfanJvXRJr0HayYv",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Chain Dance",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>One Spiked Chain Strike and one Animated Chain Strike (different targets allowed) — her body-chains fight beside her hands.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "flourish"
+          ]
+        }
+      },
+      "_key": "!actors.items!appAsyraKyton001.PfanJvXRJr0HayYv"
+    },
+    {
+      "_id": "ThFREpBeJC0ExYJR",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Unnerving Gaze",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>One creature within 30 feet: @Check[type:will|dc:29] or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} as well on a critical failure). Sial is immune; so are other kytons.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "emotion",
+            "fear",
+            "mental",
+            "visual"
+          ]
+        }
+      },
+      "_key": "!actors.items!appAsyraKyton001.ThFREpBeJC0ExYJR"
+    },
+    {
+      "_id": "laj9rNB9LqluRDni",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Eidolon Bond",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Bound to @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.shadowcountSial1]{Shadowcount Sial} (his casket is her door): when Sial would take damage, she can absorb it instead (his life link). At 0 HP she is <strong>banished to the Plane of Shadow, not slain</strong> — Sial cannot call her back for a day. Resistance 10 cold; resistance 5 physical (except holy).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!appAsyraKyton001.laj9rNB9LqluRDni"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 6
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": -2
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 31
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 200,
+        "temp": 0,
+        "value": 200
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 30
+      }
+    },
+    "details": {
+      "blurb": "Sial's chain-eidolon — fights to the death for him",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 11
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Sial's kyton eidolon</strong> (Appendix 4's kyton subtype, made flesh): a woman-shaped lattice of pale skin and living chains. She manifests from the bone-house casket Sial carries, speaks rarely, and regards Laori with something like professional disappointment.</p><p><strong>Morale: she fights to the death defending Sial — every time, without hesitation.</strong> Her 'death' is a banishment; her loyalty is structural.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 20,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 22
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 20
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 19
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 22
+      },
+      "intimidation": {
+        "base": 19
+      },
+      "medicine": {
+        "base": 17
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "fiend",
+        "kyton",
+        "eidolon"
+      ]
+    }
+  },
+  "folder": "appCreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Asyra",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!appAsyraKyton001"
+}

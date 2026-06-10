@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "7vqenS0iRL6KekID",
+      "_id": "X82VsvkABhKESFxX",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Glamered Rapier",
       "sort": 0,
@@ -46,10 +46,47 @@
           ]
         }
       },
-      "_key": "!actors.items!falseIleosa00001.7vqenS0iRL6KekID"
+      "_key": "!actors.items!falseIleosa00001.X82VsvkABhKESFxX"
     },
     {
-      "_id": "6zU5XyNEzSwbn6v7",
+      "_id": "Hry3tdr3nsLuVo7J",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Queen's Oration",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Bardic performance (DC 27): <em>inspire courage</em> for her court, or a <em>suggestion</em> woven into her speech at the party's strongest fighter — drop your weapons and leave Korvosa (@Check[type:will|dc:27]).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "auditory",
+            "emotion",
+            "linguistic",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!falseIleosa00001.Hry3tdr3nsLuVo7J"
+    },
+    {
+      "_id": "q5iWgKhiJX0Gauks",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "Queen's Mockery",
       "sort": 0,
@@ -63,7 +100,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>The simulacrum performs its template's scorn: one creature within 30 feet, @Check[type:will|dc:27] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} and −1 to attacks against any Ileosa (true or false) for 1 round.</p>"
+          "value": "<p>One creature within 30 feet, @Check[type:will|dc:27] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} and −1 to attacks against any Ileosa (true or false) for 1 round.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -82,12 +119,12 @@
           ]
         }
       },
-      "_key": "!actors.items!falseIleosa00001.6zU5XyNEzSwbn6v7"
+      "_key": "!actors.items!falseIleosa00001.q5iWgKhiJX0Gauks"
     },
     {
-      "_id": "F3rNeTnf7jSBHHXE",
+      "_id": "KRLFHyDAihygaeS4",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Snow and Spite",
+      "name": "Redirection",
       "sort": 0,
       "type": "action",
       "system": {
@@ -99,7 +136,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p>A simulacrum: half the queen's memories, none of her power; melts to slush at 0 HP. Telling true from false: @Check[type:perception|dc:34], or any damage (the queen bleeds; these <em>seep</em>).</p>"
+          "value": "<p>While any simulacrum exists, divinations aimed at the <em>real</em> Ileosa silently target a simulacrum instead (@Check[type:arcana|dc:40] as the spell is cast to notice — not where it went). This also catches <em>dream</em>-, <em>nightmare</em>-, and <em>sending</em>-type spells, but not telepathy.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -114,7 +151,39 @@
           "value": []
         }
       },
-      "_key": "!actors.items!falseIleosa00001.F3rNeTnf7jSBHHXE"
+      "_key": "!actors.items!falseIleosa00001.KRLFHyDAihygaeS4"
+    },
+    {
+      "_id": "ptlPoD3pj1vUhS60",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Blood and Spite",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>A blood-simulacrum: half the queen's memories, none of her power; at 0 HP she goes rigid and <strong>melts into a pool of blood</strong> (@Check[type:arcana|dc:27] to read a variant simulacrum; full answers only at the Everdawn Pool). Seated on the Crimson Throne: +10 AC and immunity to illusions and mental effects.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!falseIleosa00001.ptlPoD3pj1vUhS60"
     }
   ],
   "system": {
@@ -158,19 +227,18 @@
       }
     },
     "details": {
-      "blurb": "Simulacrum decoy of the queen",
+      "blurb": "Blood-simulacrum decoy of the queen",
       "languages": {
         "details": "",
         "value": [
-          "common",
-          "infernal"
+          "common"
         ]
       },
       "level": {
         "value": 9
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> six snow-and-blood simulacrums — decoys seeded through the castle and the Sunken Queen, and released as a screaming chorus at the Everdawn Pool. Six queens, one truth.</p>",
+      "publicNotes": "<p><strong>Role:</strong> simulacrums conjured from Ileosa's own blood and the Everdawn Pool — one holding false court in the castle (A52, retreating there from the royal suite when the alarm sounds), and <strong>six more stored inside the Pool itself</strong>, released as a screaming chorus at B20. Each wears a <strong>replica, nonmagical Crown of Fangs</strong> (PF1e 5,000 gp — re-scale ~500 gp). Seven queens, one truth.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

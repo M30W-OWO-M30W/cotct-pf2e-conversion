@@ -49,7 +49,7 @@
     {
       "_id": "M8k2i2kdzAQdjRib",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Javelin",
+      "name": "Composite Longbow",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -60,11 +60,11 @@
           "value": []
         },
         "bonus": {
-          "value": 15
+          "value": 16
         },
         "damageRolls": {
           "0": {
-            "damage": "1d6+8",
+            "damage": "2d8+4",
             "damageType": "piercing"
           }
         },
@@ -82,7 +82,9 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "thrown-30"
+            "deadly-d10",
+            "propulsive",
+            "range-increment-100"
           ]
         }
       },
@@ -90,6 +92,38 @@
     },
     {
       "_id": "hQXfK36bnSYbXXbW",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Shadow-Essence Arrows",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Each orc has poisoned 3 arrows: a hit forces @Check[type:fortitude|dc:25] or @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (Enfeebled 2 on a critical failure) for 1 hour — they focus these on the heaviest armor, hoping to bog it down.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!deadwatcherOrc01.hQXfK36bnSYbXXbW"
+    },
+    {
+      "_id": "NdW1EVF3HWpDmOXY",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Death-Inured",
       "sort": 0,
@@ -118,10 +152,10 @@
           "value": []
         }
       },
-      "_key": "!actors.items!deadwatcherOrc01.hQXfK36bnSYbXXbW"
+      "_key": "!actors.items!deadwatcherOrc01.NdW1EVF3HWpDmOXY"
     },
     {
-      "_id": "NdW1EVF3HWpDmOXY",
+      "_id": "UA9icugn9xHTxDnO",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Ferocity",
       "sort": 0,
@@ -150,7 +184,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!deadwatcherOrc01.NdW1EVF3HWpDmOXY"
+      "_key": "!actors.items!deadwatcherOrc01.UA9icugn9xHTxDnO"
     }
   ],
   "system": {
@@ -205,7 +239,7 @@
         "value": 7
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the Deadwatchers — the orc tribe squatting in Scarwall's barbican, the only Belkzen clan hard enough to live beside the curse. They hold the gate under @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.urySevenskulls01]{Ury Sevenskulls} and want no part of the castle proper.</p>",
+      "publicNotes": "<p><strong>Role:</strong> the Deadwatchers — the orc tribe squatting in Scarwall's barbican, the only Belkzen clan hard enough to live beside the curse (they whiten their faces for the ancestor whose flesh blanched fleeing the castle). <strong>Headcount: six warriors</strong> — 1 sentry at A2, 4 in the barracks (A6), 1 at the watch post (A11) — plus @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.urySevenskulls01]{Ury Sevenskulls} (A10). On an alarm they spread to ready bows: 2 to A7, 3 to A8, 1 to A12. <strong>Morale:</strong> to the death while Ury lives; with him dead, each flees below ~15 HP. They never pursue anyone <em>into</em> Scarwall.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -249,6 +283,9 @@
       },
       "survival": {
         "base": 13
+      },
+      "stealth": {
+        "base": 14
       }
     },
     "traits": {

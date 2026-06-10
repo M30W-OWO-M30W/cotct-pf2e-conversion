@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "vBXbKLyKGq44Y0GB",
+      "_id": "niNJKr7BMYbPhWnZ",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Blood Pseudopod",
       "sort": 0,
@@ -44,10 +44,10 @@
           ]
         }
       },
-      "_key": "!actors.items!immortalIchor001.vBXbKLyKGq44Y0GB"
+      "_key": "!actors.items!immortalIchor001.niNJKr7BMYbPhWnZ"
     },
     {
-      "_id": "PwCEjNDypKERcBnP",
+      "_id": "upIDJcWetnZKd77E",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "Engulf in Blood",
       "sort": 0,
@@ -78,12 +78,12 @@
           ]
         }
       },
-      "_key": "!actors.items!immortalIchor001.PwCEjNDypKERcBnP"
+      "_key": "!actors.items!immortalIchor001.upIDJcWetnZKd77E"
     },
     {
-      "_id": "Nr15IOLFMwPnYKEI",
+      "_id": "0UyEtCT29409kAhW",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Ooze Resilience",
+      "name": "Sorshen's Residue",
       "sort": 0,
       "type": "action",
       "system": {
@@ -93,9 +93,9 @@
         "actions": {
           "value": null
         },
-        "category": "defensive",
+        "category": "offensive",
         "description": {
-          "value": "<p>Mindless; immune to critical hits, precision, mental; resistance physical 15 (except force). It IS the repository: destroy it and the pool loses 5 charges.</p>"
+          "value": "<p>It rises into a vague semi-human silhouette when it senses prey — @Check[type:arcana|dc:35] or @Check[type:society|dc:35] recognizes <strong>Runelord Sorshen</strong>. It understands Thassilonian (nothing else) and cannot speak. It knows which PC the room's trap is named for: a <em>charmed</em> target is ordered to pick up the gem.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -110,7 +110,39 @@
           "value": []
         }
       },
-      "_key": "!actors.items!immortalIchor001.Nr15IOLFMwPnYKEI"
+      "_key": "!actors.items!immortalIchor001.0UyEtCT29409kAhW"
+    },
+    {
+      "_id": "sU72FWmhDe80DS9q",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Ooze Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Mindless; immune to critical hits, precision, mental; resistance physical 15 (except force). If the gem captures a soul while the ichor lives, it seizes the stone (telekinetically if needed) and bears it up to Ileosa in B20.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!immortalIchor001.sU72FWmhDe80DS9q"
     }
   ],
   "system": {
@@ -163,7 +195,7 @@
         "value": 17
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role (B19):</strong> the Blood Repository — the harvested blood of Korvosa's dead, alive and jealous, guarding the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.soultrapGem00001]{Soultrapping Gem}. Every gallon the PCs burn here is youth Ileosa never gets.</p>",
+      "publicNotes": "<p><strong>Role (B19):</strong> the Blood Repository's tenant — overflow blood that was once the Pool's emergency reserve, kept warm and unclotted by faint necromancy, grown <em>sentient</em> over the ages around the psychic residue of <strong>Sorshen herself</strong>. It can no longer recharge the Everdawn Pool; Ileosa keeps it anyway, hoping one day to absorb this fragment of the Runelord of Lust. It guards the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.soultrapGem00001]{Soultrapping Gem}.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

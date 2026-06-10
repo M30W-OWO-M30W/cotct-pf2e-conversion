@@ -73,29 +73,46 @@ def _paras():
         except OSError: raw = ""
         _PARAS = [" ".join(p.split()) for p in re.split(r"\n\s*\n", raw)]
     return _PARAS
+# Hyphen/em-dash drops the two-column OCR fused at line breaks ("tar-caked" ->
+# "tarcaked", "mud — adult" -> "mudadult"); applied to every verbatim pull.
+_OCRFIX = [("tarcaked","tar-caked"),("bargethe","barge — the"),("mudadult","mud — adult"),
+           ("Fifteenfoot-square","Fifteen-foot-square"),("strawlined","straw-lined"),
+           ("tenfoot-deep","ten-foot-deep"),("resultsyet","results — yet"),
+           ("Acharacter","A character")]
+def _ocrfix(text):
+    for bad, good in _OCRFIX:
+        text = text.replace(bad, good)
+    return text
+
 def verbatim(anchor):
+    """Chapter-scoped verbatim pull (B.SCOPE) + local OCR hyphen repairs."""
+    return _ocrfix(B.verbatim(anchor))
+
+def rawpara(anchor):
+    """ONE source paragraph, normalized, chapter-scoped, with drop-cap repair but
+    NO reflow merging and NO trailing-period synthesis — for stitching the
+    two-column interleave back together by hand. '' if absent/unmatched."""
     a = " ".join(anchor.split())
     if not a: return ""
-    paras = _paras()
-    si = next((k for k, p in enumerate(paras) if p.startswith(a)), None)
-    if si is None:
-        si = next((k for k, p in enumerate(paras) if a in p), None)
-    if si is None: return ""
-    text, k = paras[si], si + 1
-    # re-flow a box the two-column OCR split mid-sentence (text doesn't end on
-    # sentence punctuation) by appending following paragraphs until it completes
-    while text and text[-1] not in '.!?:"”\'’)' and k < len(paras):
-        nxt = paras[k]
-        if nxt.startswith("#") or nxt.startswith("HANDOUT"): break   # header / handout = stop
-        if (not nxt) or nxt.startswith("<!--"):        # blank / image / page marker
-            k += 1; continue                           # skip — read-aloud often spans these
-        if re.fullmatch(r"(?:CR|XP|hp)\s+[\d,/]+(?:\s+each)?", nxt) or (nxt.isupper() and len(nxt.split()) <= 6):
-            k += 1; continue                           # skip two-column OCR junk mid-sentence
-        text, k = text + " " + nxt, k + 1
-    # repair OCR drop-caps at the start ("T he"->"The", "S lippery"->"Slippery");
-    # exclude the real one-letter words A / I so "A fifteen-foot" is left alone.
-    text = re.sub(r'^([B-HJ-Z]) ([a-z])', r'\1\2', text)
-    return B._scrub_ocr(text)
+    paras = B._paras()
+    hit = next((p for p, ln in paras if p.startswith(a) and B._in_scope(ln)), None)
+    if hit is None:
+        hit = next((p for p, ln in paras if a in p and B._in_scope(ln)), None)
+    if hit is None:
+        if B.SCOPE is not None and any(a in p for p, ln in paras):
+            print(f"  [verbatim] anchor matches only OUTSIDE chapter scope {B.SCOPE}: {a[:50]!r} -> fallback used")
+        return ""
+    return _ocrfix(re.sub(r'^([B-HJ-Z]) ([a-z])', r'\1\2', hit))
+
+def vbox(anchors, fallback_html, label=None):
+    """Multi-paragraph speech/read-aloud box: each anchor pulls one verbatim
+    paragraph (reflow-merged); falls back to an original paraphrase if any is
+    missing. `label` renders as a bold lead inside the box."""
+    parts = [verbatim(a) for a in anchors]
+    head = f'<p class="subhead"><strong>{label}</strong></p>' if label else ""
+    if all(parts):
+        return B.s_read(head + "".join(B.parafy(dcfix(p)) for p in parts))
+    return B.s_read(head + fallback_html)
 # start-anchors (short identifying snippets) for each area's boxed read-aloud
 RABOX = {
  "A1":"The reek of brine and the stink of week-dead fish",
@@ -130,18 +147,27 @@ RABOX = {
  "C5":"single long structure sits atop the main deck",
  "C6":"once-proud vessel, the Dragon's Breath",
  "C7":"large room, once a captain's cabin, has been converted into a throne room",
+ "C9":"Two large wood-burning stoves are built into",
+ "C10":"foul-smelling room is empty, save for a mound",
+ "C12":"Crates and barrels, and furniture in need",
  "C13":"single low desk sits against the wall of this room",
+ "C14":"wooden chamber is clean and dry",
  "C15":"dark chamber is riddled with dizzying tunnels",
+ "C16":"water floods this filthy bilge",
  "C17":"old cargo bay is partially collapsed",
  # Part Three, area D — The Dead Warrens
  "D1":"large room is supported by four wide pillars of stone",
+ "D3":"Rank with the stink of sweat and mud",
  "D4":"majority of this room contains a nasty-looking stretch of mud",
  "D5":"Three wooden tables stand in the middle of this room",
+ "D6":"walls and ceiling of this tall hallway",
  "D7":"wooden tables here are stacked with vials, beakers",
+ "D8":"room, once a pantry, is in shambles",
  "D9":"foul-smelling cavern is bordered on three sides",
  "D10":"Two wide, freestanding bookshelves furnish this room",
  "D11":"nauseating mixture of decay and strange chemicals",
  "D12":"chamber holds a large four-poster bed and a simple writing desk",
+ "D13":"dry, well-kept chamber contains a narrow bed",
 }
 def box(code, fallback_html):
     """Read-aloud section: exact AP text if the source file is present, else paraphrase."""
@@ -157,18 +183,33 @@ def _tc(s):  # title-case that respects apostrophes ("ZELLARA'S HOME" -> "Zellar
 _DCFIX = [
     (r"a successful DC\s*12\s*Knowledge \(local\) check", "a successful @Check[type:society|dc:12] check"),
     (r"a DC\s*25\s*Will save",                            "a @Check[type:will|dc:18|basic:false] save"),
+    (r"a successful DC 20 Diplomacy check",               "a successful @Check[type:diplomacy|dc:20] check"),
+    # PF1e-isms / alignment-isms surfaced by the audit (patterns match source text;
+    # replacements are ours) — keep each matched run ≤ 8 source words.
+    (r"spends 1d3 hours asking around",                   "spends a few hours Gathering Information"),
+    (r"54 possible combinations of ability score and alignment",
+     "54 cards, each tied to an ability score and a temperament (PF2e drops alignment)"),
+    (r"that PCs' alignment and highest ability score",    "that PC's outlook and highest ability score"),
+    (r"As Zellara was neutral in life[^.<]*\.",
+     "Zellara's spirit is benign — no PF2e divination here reads as malevolent."),
+    (r"see Handout #1-1 on page 15",                      "see the Player Handout #1-1 box below"),
+    (r"appear in Handout #1-2",                           "appear in the Player Handout #1-2 box below"),
 ]
 def dcfix(html):
+    html = _ocrfix(html)
     for pat, rep in _DCFIX:
         html = re.sub(pat, rep, html)
     return html
 
 # Player-handout sidebar text the two-column OCR fused into the GM narrative
-# (start-phrase, end-phrase). Pulled out of the prose so it stops splitting
-# sentences, then re-emitted as its own read-aloud block.
+# (start-phrase, end-phrase, label). Pulled out of the prose so it stops
+# splitting sentences, then re-emitted as its own read-aloud block. Handouts are
+# verbatim BY DESIGN — exempted exactly like read-aloud boxes (see the
+# Conversion Guide journal -> "Source Text, Read-Alouds & Handouts"): the text is
+# injected at build time from the GM's local AP.md, never hardcoded here.
 _HANDOUTS = [
-    ("I know what Gaedren has done to you", "justice must be done."),
-    ("Thank you for coming. I had to step out", "drink for you."),
+    ("I know what Gaedren has done to you", "justice must be done.", "Player Handout #1-1 — The Harrow Card"),
+    ("Thank you for coming. I had to step", "drink for you.", "Player Handout #1-2 — The Note on the Table"),
 ]
 
 def apspan(start, stop):
@@ -197,12 +238,12 @@ def apspan(start, stop):
     for kind, txt in items:
         if kind != "body":
             cleaned.append((kind, txt)); continue
-        for hs, he in _HANDOUTS:
+        for hs, he, hl in _HANDOUTS:
             i = txt.find(hs)
             if i >= 0:
                 j = txt.find(he, i)
                 j = j + len(he) if j >= 0 else len(txt)
-                handouts.append(txt[i:j].strip())
+                handouts.append((hl, txt[i:j].strip()))
                 txt = (txt[:i] + " " + txt[j:]).strip()
         if txt:
             cleaned.append(("body", txt))
@@ -219,8 +260,8 @@ def apspan(start, stop):
     out = []
     for kind, txt in merged:
         out.append(f'<p class="subhead"><strong>{txt}</strong></p>' if kind == "sub" else B.parafy(dcfix(txt)))
-    for h in handouts:                                    # handouts as read-aloud boxes
-        out.append(B.s_read(f'<p class="subhead"><strong>Player Handout</strong></p><p>{dcfix(h)}</p>'))
+    for hl, h in handouts:                                # handouts as read-aloud boxes
+        out.append(B.s_read(f'<p class="subhead"><strong>{hl}</strong></p><p>{dcfix(h)}</p>'))
     return "".join(out)
 
 # =====================================================================
@@ -266,17 +307,38 @@ actors = []
 def AW(slug, doc):
     actors.append(copy.deepcopy(doc)); B.write("actors", slug, doc, embed_items=True)
 
+def runed(key, _id, name, desc, potency=1, striking=0, price_gp=0, level=0):
+    """Clone an SRD gear template and etch runes onto it — for the named magic
+    arms the page text promises (+1 dagger, +1 striking mithral longsword, …)."""
+    it = B.gear(key, _id)
+    it["name"] = name
+    it["system"]["description"] = {"value": desc}
+    rs = it["system"]["runes"]; rs["potency"] = potency
+    if "striking" in rs: rs["striking"] = striking
+    if striking: it["system"]["damage"]["dice"] = 1 + striking
+    it["system"]["price"] = {"value": {"gp": price_gp}}
+    it["system"]["level"] = {"value": level}
+    tv = it["system"]["traits"]["value"]
+    if "magical" not in tv: tv.append("magical")
+    return it
+
 AW("gaedren-lamm", B.npc(A["gaedren"],"Gaedren Lamm",2,17,30,3,9,8,8,
   {"str":-1,"dex":4,"con":0,"int":3,"wis":2,"cha":3},15,
   {"deception":10,"stealth":9,"thievery":9,"intimidation":8,"society":6,"acrobatics":9},
   ["humanoid","human"],["Common","Dwarven","Gnomish","Goblin","Halfling","Infernal","Orcish","Shoanti","Varisian"],
-  [B.strike(nid(),"Fine Dagger",9,"1d4+1","piercing",["agile","finesse","versatile-s"]),
+  [B.strike(nid(),"+1 Dagger",10,"1d4+1","piercing",["agile","finesse","magical","versatile-s"]),
    B.strike(nid(),"Hand Crossbow",9,"1d6","piercing",["range-increment-60","reload-1"]),
    B.sneak_attack(nid(),1,"Gaedren"),
    B.action(nid(),"Nimble Dodge","reaction","<p><strong>Trigger</strong> A creature he can see attacks him.</p><hr /><p><strong>Effect</strong> +2 circumstance bonus to AC against that attack.</p>",["mental"],"defensive"),
    B.action(nid(),"Spur the Beast","1","<p>Gaedren makes a Hand Crossbow Strike against Gobblegut; on a hit, the enraged crocodile gains a +2 status bonus to attack and damage rolls until the end of its next turn and must use a single action to Strike the nearest creature other than Gaedren on its next turn.</p>",["concentrate"]),
    B.lore(nid(),"Underworld Lore",8),
-   B.gear("hand-crossbow",nid()), B.gear("dagger",nid()), B.gear("padded-armor",nid())],
+   B.gear("hand-crossbow",nid()),
+   runed("dagger","ch1GaedrenDag001","+1 Dagger",
+     "<p>Gaedren's prized magical dagger — the boss's signature loot and a fitting first permanent magic weapon (world copy in the Treasure folder).</p>",
+     potency=1, price_gp=35, level=2),
+   runed("padded-armor","ch1GaedrenPad001","+1 Padded Armor",
+     "<p>Gaedren's grimy padded armor carries a +1 armor potency rune — his PF1e '+1 padded armor', kept as the minor armor reward the Treasure page promises. His AC already includes it.</p>",
+     potency=1, price_gp=160, level=5)],
   notes="<p><strong>Role:</strong> the AP's first villain and every PC's revenge payoff — a frail catalyst, not a tank. The real threat is the crocodile; Gaedren weaponizes it.</p>"
         "<p><strong>Tactics:</strong> an old leg wound caps his Speed at 15 ft, so he holds the far side of the gator pool and snipes rather than kiting. Round 1 <em>Spur the Beast</em> to enrage Gobblegut, then Strikes from cover; <em>Nimble Dodge</em> when focus-fired; flees to the A12 skiffs at &le;8 HP.</p>"
         "<p><strong>If killed and left in A14,</strong> his son Rolth animates the body in the Dead Warrens at the chapter's end — track it.</p>",
@@ -402,6 +464,9 @@ AW("grau-soldado", B.npc(A["grau"],"Grau Soldado",4,21,62,11,11,5,9,
    B.action(nid(),"Power Attack","2","<p>Grau makes a Longsword Strike that deals an extra @Damage[1d8[slashing]] on a hit (he always uses this while drunk and belligerent). On a failure he is "+B.cond("off-guard","Off-Guard")+" until the start of his next turn.</p>",["flourish"]),
    B.action(nid(),"Drunk","passive","<p>Grau fights "+B.cond("sickened","Sickened 1")+" while intoxicated; this −1 penalty is already included in his statistics. He makes poor tactical choices, ignoring openings for Sneak Attack and provoking reactions as he stumbles between foes.</p>",category="defensive"),
    B.lore(nid(),"Korvosa Lore",6),
+   runed("longsword","ch1GrauSword0001","+1 Striking Mithral Longsword",
+     "<p>Grau's Orisini-school dueling blade, mithral (dawnsilver)-light and etched with +1 potency and striking runes — the last thing of value he owns, and the Event 6 page's named loot. Light for its kind (Bulk reduced by the mithral).</p>",
+     potency=1, striking=1, price_gp=160, level=4),
    B.gear("chain-mail",nid()), B.gear("steel-shield",nid())],
   notes="<p><strong>Role:</strong> a recurring NPC — a well-liked Korvosan Guard watch sergeant (Vencarlo Orisini's expelled student) drowning his despair in drink. This 'fight' is meant to be survived and <strong>defused</strong>, not a kill.</p>"
         "<p><strong>Defusing him:</strong> commiserate ("+chk("type:diplomacy|dc:20")+", or a Deception vs. his Perception) and he sobers up; "+chk("type:society|dc:18")+" recognizes the sergeant he was. A lesser restoration sobers him instantly. Escorted to Citadel Volshyenek, his fellow guards clean him up and he becomes a grateful ally.</p>"
@@ -476,7 +541,13 @@ AW("devargo-barvasi", B.npc(A["devargo"],"Devargo Barvasi",6,23,100,12,16,12,14,
    B.action(nid(),"Prepare Spider Venom","passive","<p>Before a fight Devargo coats both gauntlets with spider venom. A creature he hits with a gauntlet is exposed to it: "+chk("type:fortitude|dc:24")+", a 1-stage poison inflicting "+B.cond("clumsy","Clumsy 2")+" and "+B.cond("enfeebled","Enfeebled 1")+" for 1 round (Clumsy 2 + Enfeebled 2 for 4 rounds on a critical failure).</p>",category="offensive"),
    B.action(nid(),"Spring the Throne","free","<p><strong>Trigger</strong> Devargo's turn begins.</p><hr /><p><strong>Effect</strong> He flips the hidden switch in his throne, opening the trap door beneath the petitioner's spot. A creature on it must succeed at a "+chk("type:reflex|dc:25")+" or fall into the Spider's Web (C15) — and Chittersnap.</p>",["manipulate"]),
    B.lore(nid(),"Underworld Lore",14),
-   B.gear("studded-leather",nid()), B.gear("hand-crossbow",nid()), B.gear("healing-potion-minor",nid(),1),
+   B.gear("spiked-gauntlet",nid(),2), B.gear("hand-crossbow",nid()), B.gear("healing-potion-minor",nid(),1),
+   B.equipment("ch1DevargoVenom1","Spider Venom (4 Doses)",1,4,
+     "<p>4 doses, milked from Chittersnap's brood. <strong>Poison (injury):</strong> a creature hit by a coated weapon attempts a "+chk("type:fortitude|dc:24")+"; on a failure it is "+B.cond("clumsy","Clumsy 2")+" and "+B.cond("enfeebled","Enfeebled 1")+" for 1 round (Clumsy 2 and Enfeebled 2 for 4 rounds on a critical failure). Devargo's <em>Prepare Spider Venom</em> assumes both gauntlets are coated.</p>",
+     traits=["alchemical","consumable","injury","poison"]),
+   B.equipment("ch1DevargoKeys01","Devargo's Keys & Purse",0,79,
+     "<p>An iron ring with two keys — the shiver brewery (C9) and the sea chest in his quarters (C14) — plus a belt purse of 79 gp.</p>",
+     traits=["evidence"]),
    B.equipment(nid(),"Potion of Invisibility",4,12,"<p>Devargo quaffs this to flee when reduced below ~10% HP, vanishing down to his quarters (C14).</p>",traits=["potion","magical","consumable","illusion"])],
   notes="<p><strong>Role:</strong> the self-styled <strong>King of Spiders</strong> — a poisoner-rogue and blackmailer, <strong>not</strong> a forced boss fight. The PCs only need the ambassador's letters; the intended path is social (Diplomacy + bribes / a game of knivesies), and the Guard won't prosecute if he <em>is</em> killed.</p>"
         "<p><strong>Tactics:</strong> opens by springing the throne trap door, then wades in with poisoned gauntlets and Sneak Attacks; his enforcers don't respond until he raises the alarm or a thug flees. <strong>Morale:</strong> below ~10 HP he calls for help, drinks his potion of invisibility, and flees to C14.</p>"
@@ -553,10 +624,21 @@ AW("vreeg", B.npc(A["vreeg"],"Vreeg",7,24,105,13,16,17,14,
    B.action(nid(),"Force Missiles","2","<p>Three darts of force unerringly strike up to three creatures Vreeg can see, dealing @Damage[1d4+1[force]] each (no save, no attack roll).</p>",["concentrate","force","manipulate"]),
    B.action(nid(),"Grave Touch","1","<p>One creature within 30 feet must succeed at a "+chk("type:fortitude|dc:24")+" or be "+B.cond("enfeebled","Enfeebled 2")+" for 1 round (1 minute on a critical failure).</p>",["concentrate","manipulate","void"]),
    B.action(nid(),"Conjure Shield","1","<p>A shimmering force shield wards Vreeg, granting a +2 circumstance bonus to AC until the start of his next turn; he can Shield Block with it (Hardness 10).</p>",["concentrate","manipulate"],"defensive"),
+   B.action(nid(),"Robe of Bones","2","<p><strong>Frequency</strong> 4 fetishes remain.</p><hr /><p><strong>Effect</strong> Vreeg plucks an animated-bone fetish from his robe and hurls it to an empty square within 20 feet, where it springs up as a "+B.mon("skeleton-guard","human skeleton")+" under his command. It acts on his initiative and crumbles after 1 minute. (His PF1e <em>robe of bones</em>.)</p>",["magical","manipulate","void"]),
+   B.action(nid(),"Wand of Ghoulish Touch","2","<p>Vreeg Activates his bone wand and makes a melee spell attack (+16) against one creature. On a hit, the target takes @Damage[2d6[void]] and must succeed at a "+chk("type:fortitude|dc:24")+" or be "+B.cond("paralyzed","Paralyzed")+" for 1 round (on a critical failure, 1 minute — new save at the end of each of its turns). He saves this for foes who corner him in melee. (His PF1e <em>wand of ghoul touch</em>.)</p>",["magical","manipulate","void"]),
    B.lore(nid(),"Necromancy Lore",16),
+   B.equipment("ch1VreegRobe0001","Robe of Bones",5,55,
+     "<p>A grave-dust robe sewn with tiny bone fetishes (4 remain), each of which Vreeg can hurl to raise a temporary skeleton (see his <em>Robe of Bones</em> activity). In a PC's hands, each fetish can be expended once the wearer learns the command word ("+chk("type:occultism|dc:22")+" to puzzle it out); the skeleton is uncontrolled unless commanded.</p>",
+     traits=["invested","magical","necromancy"]),
+   B.equipment("ch1VreegWand0001","Wand of Ghoulish Touch",6,250,
+     "<p>A carved knucklebone wand, Vreeg's arcane bond. Activates the paralyzing touch in his stat block; many charges remain (treat as a 2nd-rank wand for PC use, 1/day).</p>",
+     traits=["magical","wand","void"]),
+   B.equipment("ch1VreegRing0001","Ring of Protection (+1)",6,100,
+     "<p>A tarnished silver band that wards its wearer (his PF1e <em>ring of protection +1</em> — Vreeg's AC already includes it). Rings don't grant AC in PF2e: let a PC pry the warding rune free and transfer it to armor as a <strong>+1 armor potency rune</strong>, or sell the ring (~100 gp).</p>",
+     traits=["invested","magical"]),
    B.gear("dagger",nid())],
   notes="<p><strong>Role:</strong> the boss of the Dead Warrens — Rolth's gifted, insane derro apprentice, scheming to one day replace his master. <strong>Rolth himself is absent</strong> (away securing a scroll; he returns <em>after</em> the PCs leave, to find his lair in ruins — see Chapter 2).</p>"
-        "<p><strong>Tactics:</strong> opens with Conjure Shield and False Life (his HP already includes it), then kites with Searing Ray, Force Missiles, and Vampiric Touch, saving Blindness for a martial threat. <strong>Weakness:</strong> dazzled in bright light (derro sunlight vulnerability). His attendant zombie covers his retreat.</p>",
+        "<p><strong>Tactics:</strong> opens with Conjure Shield and False Life (his HP already includes it), then flies out of reach, kiting with Searing Ray, Force Missiles, and Vampiric Touch and hurling skeletons from his <em>Robe of Bones</em>; he saves Blindness for a martial threat and the <em>Wand of Ghoulish Touch</em> for anyone who corners him. <strong>Morale:</strong> fights to the death. <strong>Weakness:</strong> dazzled in bright light (derro sunlight vulnerability). His attendant zombie covers his retreat.</p>",
   folder=F["a_creatures"], senses=[{"type":"darkvision"}], other_speeds=[{"type":"fly","value":30}], size="sml",
   blurb="Derro necromancer; the warrens' master", token_src=TOK("vreeg"), actor_link=True))
 
@@ -638,7 +720,10 @@ PAGE_KEYS=["background","overview","hook","scene","features","A1","A2","A3","A4"
            # Part Three — C. Eel's End
            "cend","C1","C2","C3","C4","C5","C6","C7","C9","C13","C14","C15","C17",
            # Part Three — D. The Dead Warrens + Chapter Conclusion
-           "dwarrens","D1","D2","D3","D4","D5","D6","D7","D8","D9","D10","D11","D12","D13","dconc"]
+           "dwarrens","D1","D2","D3","D4","D5","D6","D7","D8","D9","D10","D11","D12","D13","dconc",
+           # late additions live at the END of this list so the ids of every page
+           # declared before them stay stable (display order = pages-list order):
+           "Cbelow"]
 P={k:nid() for k in PAGE_KEYS}   # pre-assign so forward relative links resolve
 def newpage(key,name,html,level=3):
     return B.page(P[key],name,html,level=level)
@@ -661,11 +746,28 @@ pages.append(newpage("overview","Overview",
   +SEC("<p><strong>The twist the players don't have yet:</strong> Zellara is already dead. Gaedren murdered her and fed her to Gobblegut; her spirit haunts her stolen deck. The PCs only learn this when they find her head in "+pg(P["A14"],"A14")+" — so play her in the intro as a warm, desperate ally, not a mystery.</p>"),level=1))
 
 # 2. Haunted Fortunes — the hook ----------------------------------------------
-_hf = apspan("Curse of the Crimson Throne provides the PCs with a shared nemesis", "OLD FISHERY")
+# (restructured per audit: sectioned, home read-aloud + Zellara's tale boxed,
+#  PF1e-isms and OCR fusions repaired via dcfix)
+def _sub(t): return f'<p class="subhead"><strong>{t}</strong></p>'
 _hf_fallback = "<p>A harrow card reaches each PC, naming Gaedren Lamm and an address — 3 Lancet Street. There the fortune-teller Zellara gathers them, recounts how Gaedren's thugs murdered her son over her stolen harrow deck, and asks them to bring him to justice; she performs a harrowing to prepare them. Zellara is in fact a haunt — already dead — though the PCs need not learn this until they find her head in Gaedren's den.</p>"
+_hf1 = apspan("Curse of the Crimson Throne provides the PCs with a shared nemesis", "ZELLARA'S HOME")
+_hf2 = apspan("The first PC to arrive at Zellara's home", "Zellara appears as she did in life")
+_hf3 = apspan("Zellara appears as she did in life", "'Thank you for coming, my friends")
+_hf4 = apspan("Once her tale is done, Zellara tells", "OLD FISHERY")
+_hf_home_box = vbox(["interior of this small, humble home"],
+  "<p>A single cozy chamber hazed with incense; brocaded tapestries of harrow imagery drape the walls, bright rugs cover the floor, and a red-clothed table waits with exactly enough tall-backed chairs. A cloth-covered basket sits beneath the table.</p>")
+_hf_speech_box = vbox(["'Thank you for coming, my friends",
+                       "'I sought help from the Korvosan Guard",
+                       "'But I need your help. I cannot hope"],
+  "<p>Zellara thanks the PCs for indulging her secretive summons, names Gaedren Lamm as the man who wronged them all, and tells her own story: his pickpockets stole her heirloom harrow deck; her son Eran got it back and was murdered for it. The Guard turned her away, so she bribed and divined until she found where Gaedren dens — an old fishery north of here at Westpier 17, where he trains stolen children as pickpockets. She cannot face him herself; it is time for him to pay.</p>",
+  label="Zellara's Tale")
+_hf_body = ((_hf1 + _sub("Zellara's Home") + _hf_home_box + _hf2
+             + _sub("Zellara Manifests") + _hf3 + _hf_speech_box
+             + _sub("The First Harrowing") + _hf4)
+            if _hf1 else (_hf_fallback + _hf_home_box + _hf_speech_box))
 pages.append(newpage("hook","Haunted Fortunes",
   SR("Part 1: Haunted Fortunes","14-16")
-  +(_hf or _hf_fallback)
+  +_hf_body
   +B.s_skill("<p><strong>First Harrowing → PF2e (CHG-0010).</strong> Run the reading as foreshadowing (a coming time of unrest; the PCs are fated heroes), then grant each PC a small pool of <strong>hero-point-style suit boons</strong> via "+itm("harrowdeck","Zellara's deck")+" — the recurring subsystem from here on. The illusions in her home are "+chk("type:will|dc:18")+" to disbelieve.</p>")
   ,level=2))
 
@@ -775,13 +877,21 @@ area("A13","Gaedren's Playground", SR("A13","24-26")
      +"<p><strong>Scaling:</strong> 3 PCs → Weak Crocodile · 5–6 PCs → Elite Crocodile and/or pull a drain spider from the pool · if Yargin reached Gaedren first, Gobblegut starts pre-enraged.</p>",
      B.aside_token([act("gaedren","Gaedren Lamm (2)"), mc("crocodile","Gobblegut — Crocodile (2)")], img=TOK("gaedren-lamm")))
   +B.s_treasure("<p>On the tables: "+itm("coffer","a darkwood coffer — 20 doses of shiver + 7 applications of vermin repellent")+".</p>")
-  +B.s_conv("<p><strong>⚠ Track what the PCs do with the body.</strong> Left here, Gaedren's son Rolth animates it — the PCs meet an undead Gaedren in the Dead Warrens at the chapter's end. See "+pg(P["conv"],"Conversion Notes")+".</p>"))
+  +B.s_conv("<p><strong>⚠ Track what the PCs do with the body.</strong> Left here, Gaedren's son Rolth animates it — the PCs meet an undead Gaedren in the Dead Warrens at the chapter's end. See "+pg(P["conv"],"Conversion Notes")+".</p>")
+  +SEC("<p><strong>What if Gaedren escapes?</strong> Unlikely — his ruined leg is slow and his own abused gator may take him — but if surviving minions slow pursuit and he slips away, he lies low in Korvosa's back alleys. Options to bring him back:</p>"
+   "<ul><li><strong>Gaedren's son:</strong> he seeks out Rolth. Either Rolth takes the old man in — the PCs face Gaedren again <em>at Rolth's side in Chapter 2</em> — or Rolth simply murders him and hands the body to his derro ally Vreeg (the zombie in "+pg(P["D13"],"D13")+" is then Gaedren after all).</li>"
+   "<li><strong>Into Old Korvosa:</strong> he calls in old favors — perhaps sheltering at Eel's End with Devargo Barvasi, a fellow shiver peddler — or lies low until Chapter 3, resurfacing as an <em>advisor to the Emperor of Old Korvosa</em>.</li></ul>"))
 
 area("A14","Gaedren's Den", SR("A14","26-28")
   +box("A14","<p>A squalid bedroom-study: a lumpy bed against one wall, a table heaped with rotting food and scuttling roaches, a sagging dresser. At the foot of the bed sits a locked strongbox, a moldy ledger resting on its lid. A fly-blown hatbox sits atop the dresser.</p>")
   +"<p>Gaedren's private quarters. The strongbox opens to the rusty iron key he carries, or "+chk("type:thievery|dc:15")+".</p>"
   +SEC("<p><strong>The reveal.</strong> The hatbox holds <strong>Zellara's severed head</strong>, crudely made up to mimic life ("+chk("type:medicine|dc:14")+": dead for weeks) — confirming the woman who hired the party has been dead all along. Beneath it lies "+itm("harrowdeck","her haunted harrow deck")+", still inhabited by her spirit. Atop the strongbox is "+itm("ledger","Gaedren's coded ledger")+"; inside, "+itm("brooch","Queen Ileosa's Brooch")+" and the hoard. A key-shaped masterwork dagger among the loot is a gift from Gaedren's estranged son <strong>Rolth</strong> — foreshadowing the next chapter ("+chk("type:society|dc:20")+" recognizes the killer's signature blade).</p>")
-  +B.s_treasure("<p>Full parcel on the "+pg(P["treasure"],"Treasure")+" page.</p>"))
+  +B.s_treasure("<p>Full parcel on the "+pg(P["treasure"],"Treasure")+" page.</p>")
+  +B.s_milestone("<p><strong>Campaign-background closure (story awards — milestone credit, CHG-0021):</strong></p>"
+   "<ul><li><strong>Framed:</strong> decoding "+itm("ledger","the ledger")+" surfaces written proof that Gaedren orchestrated the crime the PC was framed for — their name can finally be cleared.</li>"
+   "<li><strong>Betrayed, Love Lost, Unhappy Childhood:</strong> bringing Gaedren to justice (death or arrest) at last gives these PCs a measure of closure — mark the beat at the table.</li>"
+   "<li><strong>Drug Addict:</strong> destroying the shiver from "+pg(P["A13"],"A13")+" (or turning it over to the Guard, who destroy it and pay a 50 gp bounty) closes that wound.</li>"
+   "<li><strong>Missing Child:</strong> a rescued orphan pays off this hook (see "+pg(P["features"],"Fishery Features")+").</li></ul>"))
 
 # NPCs index -------------------------------------------------------------------
 pages.append(newpage("npcs","NPCs",
@@ -824,7 +934,8 @@ def xpb(levels, pl):
 def ev(key, title, html): pages.append(newpage(key, title, html))
 
 ev("cgm","A City Gone Mad",
-  B.s_milestone("<p><strong>Part Two.</strong> The PCs emerge from the fishery to find King Eodred II dead and Korvosa in flames. Run these events in any order, across the ~month the chapter spans — there is no fixed schedule. No maps are provided: each event happens wherever the party is.</p>")
+  SR("Part 2: A City Gone Mad","29-30")
+  +B.s_milestone("<p><strong>Part Two.</strong> The PCs emerge from the fishery to find King Eodred II dead and Korvosa in flames. Run these events in any order, across the ~month the chapter spans — there is no fixed schedule. No maps are provided: each event happens wherever the party is.</p>")
   +box("CGM","<p>Smoke rises on the horizon (or, by night, the flicker of fires); alarm bells clang over screams, the clash of steel, and the periodic detonation of arcane power. A wing of Sable Company hippogriff riders sweeps toward Castle Korvosa; one wounded mount crashes into a statue. A herald cries 'The king is dead! Long live the queen!' — answered by 'Hang the queen!' The city has gone mad.</p>")
   +"<p>Use the <strong>Korvosa (Anarchy)</strong> city statistics now — see the Conversion Guide journal → <em>Korvosa: Reputation &amp; City Tiers</em>. Korvosa stays in turmoil until the PCs begin Part Three.</p>"
   +SEC("<p><strong>How the king really died (GM only).</strong> Ileosa had her stepbrother-in-law Venster coat the king's playing cards with <em>fool's leprosy</em>, a Red Mantis poison that mimics a fast leprosy and so <strong>resists</strong> <em>remove disease</em>. No one realized it was poison, not sickness; a <em>neutralize poison</em> would have saved him. The body is sealed in the royal crypt and crumbles too fast for <em>speak with dead</em>; by the time anyone could attempt <em>resurrection</em>, his soul is judged and beyond mortal magic. These stay mysteries for now.</p>")
@@ -832,28 +943,33 @@ ev("cgm","A City Gone Mad",
   +B.s_conv("<p>Before Event 11, make sure the PCs have heard rumors that the king was murdered — these rile the city and set up the Queen's Scapegoat.</p>"))
 
 ev("e1","Event 1. A Return to Zellara's Home",
-  "<p>If the PCs return to Zellara's home, they find it abandoned for weeks — furniture in dust-covered pieces, no sign of the woman or her belongings. (They already found her severed head in "+pg(P["A14"],"A14")+".)</p>"
+  SR("Event 1","31")
+  +"<p>If the PCs return to Zellara's home, they find it abandoned for weeks — furniture in dust-covered pieces, no sign of the woman or her belongings. (They already found her severed head in "+pg(P["A14"],"A14")+".)</p>"
   +SEC("<p>If the PCs carry "+itm("harrowdeck","Zellara's harrow deck")+", now is the moment for her spirit to manifest via the deck's <em>major image</em>, explain the truth of her death, and reveal the deck's powers — the recurring <strong>Harrowing</strong> (Conversion Guide journal → <em>The Harrowing</em>). If they lack the deck, she manifests one last image to steer them back to the fishery to recover it. Going forward she speaks only through the deck.</p>"))
 
 ev("e2","Event 2. The Mysterious Brooch",
-  "<p>When the PCs investigate "+itm("brooch","the brooch")+" from Gaedren's stash, "+chk("type:society|dc:15")+" recognizes it as the queen's. Any merchant they approach knows it instantly — it is registered with the Korvosan Guard as stolen, and the queen has offered a reward. The merchant advises returning it to Castle Korvosa to claim <strong>1,200 gp</strong>.</p>"
+  SR("Event 2","31")
+  +"<p>When the PCs investigate "+itm("brooch","the brooch")+" from Gaedren's stash, "+chk("type:society|dc:15")+" recognizes it as the queen's. Any merchant they approach knows it instantly — it is registered with the Korvosan Guard as stolen, and the queen has offered a reward. The merchant advises returning it to Castle Korvosa to claim <strong>1,200 gp</strong>.</p>"
   +B.s_conv("<p>Following this up triggers "+pg(P["e8"],"Event 8: Long Live the Queen!")+" — the PCs' first audience with their future archenemy.</p>"))
 
 ev("e3","Event 3. The Mad Prophet",
-  "<p>A wild-haired, sick-looking lunatic fixates on one PC, screaming that the character will 'near death during a time of great sickness' in Korvosa's darkest hour. His ravings are nonsense — but the disease he carries is not.</p>"
+  SR("Event 3","31-32")
+  +"<p>A wild-haired, sick-looking lunatic fixates on one PC, screaming that the character will 'near death during a time of great sickness' in Korvosa's darkest hour. His ravings are nonsense — but the disease he carries is not.</p>"
   +B.enc("The Mad Prophet",xpb([-1],2),
      "<p>One "+act("mad_prophet","mad prophet")+". If he Grabs the PC he is obsessed with, that PC is exposed to <strong>Filth Fever</strong> ("+chk("type:fortitude|dc:16")+"). This is a disease vector, not a real fight.</p>",
      B.aside_token([act("mad_prophet","Mad Prophet (−1)")], img=TOK("mad-prophet"))))
 
 ev("e4","Event 4. Imps and Dragons",
-  "<p>Imps loosed by failed Acadamae summonings are a constant Korvosan menace, kept in check by the native house drakes. In the chaos, a pair of "+B.mon("imp","imps")+" swoops down to rob and savage the PCs. On the second round, four "+B.mon("house-drake","house drakes")+" arrive to attack the imps — likely saving the party.</p>"
+  SR("Event 4","32")
+  +"<p>Imps loosed by failed Acadamae summonings are a constant Korvosan menace, kept in check by the native house drakes. In the chaos, a pair of "+B.mon("imp","imps")+" swoops down to rob and savage the PCs. On the second round, four "+B.mon("house-drake","house drakes")+" arrive to attack the imps — likely saving the party.</p>"
   +B.enc("Imps (house drakes intervene)",xpb([B.mon_lvl("imp"),B.mon_lvl("imp")],2),
      "<p>2 "+B.mon("imp","imps")+" attack; the 4 "+B.mon("house-drake","house drakes")+" are <strong>allies</strong> that arrive round 2 and rarely linger. A saved drake may heal a PC as thanks.</p>"
      +"<p><strong>Scaling:</strong> repeat freely — add imps or delay the drakes for a harder fight (3–4 imps → "+xpb([B.mon_lvl("imp")]*3,2)+" to "+xpb([B.mon_lvl("imp")]*4,2)+").</p>",
      B.aside_token(["2× "+B.mon("imp","Imp (1)"), "4× "+B.mon("house-drake","House Drake (1)")+" (allied)"])))
 
 ev("e5","Event 5. Meet the Mob",
-  "<p>Rioting laborers roam in mobs, battering anyone in finery with cries of 'Die, dandy!' and 'Death to the false queen!' The PCs come on a mob surrounding "+act("amin","Amin Jalento")+", a young nobleman. A burly woman jeers about her brother's dock-crushed arm — 'Wanna know what it feels like?' If the PCs do not intervene, the mob attacks Amin.</p>"
+  SR("Event 5","32-35")
+  +"<p>Rioting laborers roam in mobs, battering anyone in finery with cries of 'Die, dandy!' and 'Death to the false queen!' The PCs come on a mob surrounding "+act("amin","Amin Jalento")+", a young nobleman. A burly woman jeers about her brother's dock-crushed arm — 'Wanna know what it feels like?' If the PCs do not intervene, the mob attacks Amin.</p>"
   +B.s_skill("<p>"+chk("type:diplomacy|dc:18")+" or "+chk("type:intimidation|dc:18")+" disperses the mob long enough for Amin to escape — otherwise it is a fight against six rioters.</p>")
   +B.enc("Riot mob + Amin Jalento",xpb([-1]*6,2),
      "<p>6 "+act("rioter","rioters")+" (fragile mooks — each flees the instant it takes damage; the mob routs fast). "+act("amin","Amin")+" is a non-combatant who fights only defensively and flees when he can.</p>"
@@ -861,7 +977,8 @@ ev("e5","Event 5. Meet the Mob",
      B.aside_token(["6× "+act("rioter","Rioter (−1)"), act("amin","Amin Jalento (1, non-combatant)")], img=TOK("korvosan-rioter"))))
 
 ev("e6","Event 6. The Drunken Guard",
-  "<p>The PCs run across "+act("grau","Grau Soldado")+" — a Korvosan Guard watch sergeant, once Vencarlo Orisini's prize student, now drunk and despondent in a tavern or staggering the streets. He bemoans the end of Korvosa; the king's death hit him hard, the riots harder.</p>"
+  SR("Event 6","35-37")
+  +"<p>The PCs run across "+act("grau","Grau Soldado")+" — a Korvosan Guard watch sergeant, once Vencarlo Orisini's prize student, now drunk and despondent in a tavern or staggering the streets. He bemoans the end of Korvosa; the king's death hit him hard, the riots harder.</p>"
   +B.s_skill("<p>"+chk("type:society|dc:18")+" recognizes the well-liked sergeant he was. Commiserate ("+chk("type:diplomacy|dc:20")+", or Deception vs. his Perception) and he sobers; a <em>lesser restoration</em> does it instantly. The right move is to escort him to Citadel Volshyenek, where the Guard cleans him up. If the PCs mock him, he challenges them to a duel (he relocates to a back alley if asked; the Guard breaks up a public fight in 3d6 rounds).</p>")
   +B.enc("Grau Soldado (duel — defuse, don't kill)",xpb([4],3),
      "<p>A single, skilled but "+B.cond("sickened","Sickened")+"-drunk duelist. He limits attacks to the PC who accepted the duel; if another PC strikes him he cries 'Foul!' and flails at random foes, provoking reactions. <strong>Morale:</strong> surrenders rather than dies.</p>"
@@ -869,30 +986,81 @@ ev("e6","Event 6. The Drunken Guard",
      B.aside_token([act("grau","Grau Soldado (4)")], img=TOK("grau-soldado"))))
 
 ev("e7","Event 7. Otyugh Uprising",
-  "<p>Something has driven a filth-feeder up from the sewers into an alley, thoroughfare, or shop basement where the PCs happen to be.</p>"
+  SR("Event 7","37")
+  +"<p>Something has driven a filth-feeder up from the sewers into an alley, thoroughfare, or shop basement where the PCs happen to be.</p>"
   +B.enc("Otyugh",xpb([B.mon_lvl("otyugh")],2),
      "<p>A single "+B.mon("otyugh","otyugh")+" lashes out with its tentacles, grabbing and dragging prey toward its filthy maw (beware its disease).</p>",
      B.aside_token([B.mon("otyugh","Otyugh (4)")])))
 
 ev("e8","Event 8. Long Live the Queen!",
-  "<p>Returning "+itm("brooch","the brooch")+" (or otherwise seeking an audience) brings the PCs to Castle Korvosa, locked tight and bristling with crossbows. "+chk("type:diplomacy|dc:18")+" smooths their approach; mentioning the queen's missing brooch speeds things along.</p>"
-  +"<p>The PCs are granted a brief audience with <strong>Queen Ileosa</strong> and her bodyguard <strong>Sabina Merrin</strong> — the party's first look at their future archenemy. Ileosa is gracious in public.</p>"
-  +B.s_treasure("<p><strong>Reward:</strong> Sabina hands over a silver chest (worth 50 gp) holding 12 gold ingots stamped with the royal seal — 100 gp each (<strong>1,200 gp</strong> total). Grant <strong>800 XP</strong> for meeting the queen and returning the brooch.</p>")
-  +B.s_conv("<p>This audience is the linchpin: the queen now knows the PCs by face. Everything from "+pg(P["e9"],"Event 9")+" onward flows from the Korvosan Guard noticing capable heroes.</p>"))
+  SR("Event 8","37-39")
+  +"<p>Returning "+itm("brooch","the brooch")+" (or otherwise seeking an audience) brings the PCs to Castle Korvosa, locked tight atop its ancient Thassilonian pyramid and bristling with swords and crossbows. Nervous guards demand their business; any reasonable answer keeps them from being chased off, and mentioning the queen's missing brooch — or "+chk("type:diplomacy|dc:20")+" — gets things moving faster.</p>"
+  +"<p><strong>Weapons stay at the stairs.</strong> Before the PCs may ascend, all obvious weapons must be left with the guards at the base of the stairs — no one armed enters the queen's company. A PC who refuses is simply not admitted; those who comply get everything back the moment their business is done. A crossbow-armed escort then walks them up to the third floor, where the Crimson Throne waits.</p>"
+  +SEC("<p><strong>Why so easy?</strong> The invitation isn't courtesy: Ileosa has ordered that any trustworthy-seeming adventurers asking for work be admitted to introduce themselves. The Korvosan Guard thinks this unwise — but the queen's orders are orders.</p>")
+  +"<p>At the top of the stairs waits <strong>Sabina Merrin</strong> — the queen's handmaiden, bodyguard, and closest companion, stern in magnificent full plate. She asks whether they truly carry something of the queen's; shown the brooch, she smiles, dismisses the escort ('These heroes pose no threat to the queen.'), asks how the PCs wish to be introduced, and announces them into the throne room.</p>"
+  +vbox(["Queen Ileosa sits upon the Crimson Throne"],
+     "<p>Ileosa — a vision of beauty in black mourning dress and veil, a small silver coffer in her lap — receives them in a strangely empty, vaulted throne room: stained-glass kings and queens along the east wall, crimson tapestries, an immense fireplace, a silk carpet arching to the throne. Sabina takes the brooch, presents it to her queen with a flourish, and takes up her post at the throne's left side.</p>",
+     label="The Throne Room")
+  +vbox(["'This brooch was stolen from me some",
+         "'I love Korvosa, as my husband did",
+         "'The Korvosan Guard is stretched thin"],
+     "<p>Ileosa calls the brooch's return more than an honorable deed — inspiration and hope on her darkest day. She mourns her husband, vows not to see his legacy or her city destroyed by riots, and offers the heroes more: an escort to Citadel Volshyenek, and word sent ahead to Field Marshal Cressida Kroft that they are coming. Then, pleading grief, she withdraws.</p>",
+     label="Queen Ileosa's Address")
+  +B.s_treasure("<p><strong>Reward:</strong> Sabina hands over the small silver chest (itself worth 50 gp): inside, on red velvet, lie 12 gold ingots stamped with the royal seal — 100 gp each (<strong>1,200 gp</strong> total). <strong>Story award</strong> (milestone credit; the AP's 800 XP) for meeting the queen and returning the brooch.</p>")
+  +SEC("<p><strong>GM only — the misdirection.</strong> Ileosa is playing the PCs; her only honest emotion is delight at the brooch's return. She stands under a standing <em>misdirection</em> effect: <strong>any attempt to read her aura instead reads Sabina's</strong> — the readings of an honorable, lawful-minded human bodyguard, nothing amiss. This is the real reason Sabina is never allowed far from the queen's side in public: she is the shield against prying divinations. The PCs should leave with no reason to suspect a thing.</p>")
+  +B.s_conv("<p><strong>City state:</strong> from this event until Event 11, the first riots are quelled — switch Korvosa from <em>Anarchy</em> to <em>Unrest</em> (Conversion Guide journal → city tiers). This audience is the linchpin: the queen now knows the PCs by face, and everything from "+pg(P["e9"],"Event 9")+" onward flows from it.</p>"))
 
+# Event 9's two boxed briefings: the two-column OCR interleaved them, so they are
+# re-stitched from raw source paragraphs at the documented fusion points.
+def _e9_boxes():
+    p1 = rawpara("'Ah, yes-you are the ones sent by")        # box1 head + box2 tail, fused
+    f1 = rawpara("you helps. If you're willing")              # box1 tail (stranded fragment)
+    f2 = rawpara("'Korvosa's got enough troubles as it is")   # box2 head (stranded fragment)
+    p2 = rawpara("'Vancaskerkin and his followers have holed up")
+    if p1 and f1 and f2 and p2 and "citizens like" in p1 and "now, we've got" in p1:
+        cut = p1.index("citizens like") + len("citizens like")
+        b1 = B._scrub_ocr(p1[:cut] + " " + f1)
+        b2 = B._scrub_ocr(f2 + " " + p1[p1.index("now, we've got"):])
+        return (B.s_read("<p class=\"subhead\"><strong>Cressida's Greeting</strong></p>"+B.parafy(b1)),
+                B.s_read("<p class=\"subhead\"><strong>The Vancaskerkin Briefing</strong></p>"+B.parafy(b2)+B.parafy(B._scrub_ocr(p2))))
+    return (B.s_read("<p class=\"subhead\"><strong>Cressida's Greeting</strong></p><p>Cressida greets the PCs as the heroes the queen sent word of — exactly what Korvosa needs. They have walked the streets and know how bad it is; every bit of aid from upstanding citizens helps, and she would like to retain them as well-paid agents of the Guard.</p>"),
+            B.s_read("<p class=\"subhead\"><strong>The Vancaskerkin Briefing</strong></p><p>Many guards have deserted — most for family, some for profit. One, <strong>Verik Vancaskerkin</strong>, has convinced a knot of fellow guards that the queen will ruin the city; with a crisis on her hands Cressida can spare no patrols, wants no further guards exposed to his secessionist talk, and no patriot killing him outright. She needs impartial, skilled talent.</p><p>Vancaskerkin and his followers hold an abandoned Northgate butcher's shop called 'All the World's Meat.' Avoid killing the deserters if possible; capture Verik <strong>alive</strong> for interrogation (his body will do if he makes that impossible) — and find out <em>why</em> he deserted. If there is more to it than personal politics, she must know immediately. <strong>Bounty: 500 gp alive, 250 gp dead.</strong></p>"))
+_e9b1, _e9b2 = _e9_boxes()
 ev("e9","Event 9. Welcome to the Guard",
-  "<p>As the PCs prove themselves on the streets, <strong>Field Marshal Cressida Kroft</strong> of the Korvosan Guard summons them to <strong>Citadel Volshyenek</strong>. Overstretched and cut off from her scattered officers, she enlists the party as trusted free agents — the relationship that drives the rest of the chapter.</p>"
-  +B.s_conv("<p>Cressida is the PCs' patron and quest-giver for "+pg(P["e10"],"Event 10")+", "+pg(P["e11"],"Event 11")+", and "+pg(P["e13"],"Event 13")+". Establish her as sympathetic, principled, and stretched thin.</p>"))
+  SR("Event 9","39")
+  +"<p><strong>Citadel Volshyenek</strong> (Midland, overlooking Jeggare Harbor) runs on a skeleton crew — every able guard is out holding the city together. The PCs are expected: the two nervous gate guards wave them through, and an escort leads them into the central keep, where a harried, exhausted woman in red armor rises from her desk — <strong>Field Marshal Cressida Kroft</strong>. She hasn't slept since the king died (a priest of Abadar's <em>lesser restoration</em> keeps her on her feet), but she bears it well. She bids the PCs sit.</p>"
+  +_e9b1
+  +"<p>Assuming the PCs agree to hear her out, she lays out the job:</p>"
+  +_e9b2
+  +B.s_skill("<p><strong>The fine print:</strong> capture Verik <strong>alive</strong> if at all possible (<strong>500 gp</strong>; half that for his body), avoid killing the deserters, and above all <strong>learn why he deserted</strong> — that thread (see "+pg(P["B8"],"B8")+") is what seeds the Arkona arc.</p>")
+  +B.s_treasure("<p><strong>The Citadel barracks:</strong> Cressida offers the party room and board at the Citadel for as long as they serve the Guard — a free, safe place to sleep, eat, and retreat to between adventures. She has worked with adventurers before and treats them well.</p>")
+  +B.s_conv("<p>Cressida is the PCs' patron and quest-giver for "+pg(P["e10"],"Event 10")+", "+pg(P["e11"],"Event 11")+", and "+pg(P["e13"],"Event 13")+", and one of their strongest allies for the whole campaign. Establish her as sympathetic, principled, and stretched thin. Once the PCs head out, continue with "+pg(P["bmeat"],"B. All the World's Meat")+".</p>"))
 
 ev("e10","Event 10. The Ambassador's Secret",
-  "<p>Cressida needs leverage: scandalous letters held by <strong>Devargo Barvasi</strong>, the 'King of Spiders,' at his floating den <strong>Eel's End</strong>. She hands the PCs a pouch of <strong>1,000 gp</strong> to buy them; "+chk("type:diplomacy|dc:24")+" talks her up to 1,500 gp. Vencarlo Orisini offers to escort the party as far as Old Korvosa.</p>"
-  +B.s_treasure("<p><strong>Reward:</strong> deliver the letters and Cressida adds <strong>500 gp</strong>. If the King of Spiders is dead, she can't legally pay more — instead she awards each PC the <em>drake's mark</em>, a medal worth 400 gp that grants a <strong>+2 circumstance bonus to Diplomacy</strong> with citizens of Korvosa when worn openly.</p>")
-  +B.s_conv("<p>This is the hook into Part Three's Eel's End (area C). The bribe money matters — it is the PCs' lever on Devargo.</p>"))
+  SR("Event 10","39-40")
+  +"<p>Once Verik is behind bars (or in a coffin) and the bounty paid, Cressida invites the PCs back — and this time she isn't alone. A handsome man rises and bows: <strong>Vencarlo Orisini</strong>, one of Korvosa's most respected fencing masters ("+chk("type:society|dc:15")+" to recognize him). An outspoken critic of the government, he is nonetheless Cressida's old friend and trusted ear on the city's mood. He's gallant and gregarious — kissing hands, offering his chair, congratulating the PCs ('If Korvosa had more fine folk like you…') — until Cressida gently cuts him off:</p>"
+  +vbox(["'As much as I would enjoy continuing",
+         "'Fortunately, the ambassador has his foibles"],
+     "<p>Vencarlo has learned of something that could spiral into sanctions, embargo, or even war with Cheliax: Ambassador <strong>Darvayne Gios Amprei</strong>, whose contempt for Korvosa is well documented, means to recommend trade sanctions — <em>deliberately</em>. His real scheme is to strangle Korvosa's economy until desperate landholders sell him huge tracts of the city cheap, then have his Chelish allies lift the sanctions once he is positioned in power. Killing him would only make a martyr; leverage is needed. Fortunately the ambassador has foibles: he has been making regular visits to <strong>Eel's End</strong>, the vice den of Devargo Barvasi — the 'King of Spiders' — who pays his vice taxes, keeps his business on his five moored ships, and may be the one man holding proof.</p>",
+     label="Cressida — The Embargo Scheme")
+  +vbox(["'Devargo would never let someone he recognizes"],
+     "<p>Devargo would never admit a known ally of the Guard — but the PCs are unknowns. Visit Eel's End, win an audience, learn what Devargo knows of Amprei, and bring back proof of any illicit dealings; Cressida will use it to spike any embargo push. Devargo won't part with information cheaply — she supplies bribe gold, and whatever is left over the PCs keep. He is dangerous; if things turn violent, she won't mourn him.</p>",
+     label="Cressida — The Mission")
+  +B.s_treasure("<p>Cressida hands over a pouch of <strong>1,000 gp</strong> in bribe money ("+chk("type:diplomacy|dc:24")+" talks her up to 1,500 gp) — whatever isn't spent on Devargo, the PCs keep. As she gives the address, Vencarlo offers to escort the party as far as Old Korvosa — he was headed to his academy anyway.</p>")
+  +SEC("<p><strong>Development:</strong> when the PCs deliver the letters, Cressida blushes as she reads them — they are <em>quite</em> salacious love letters to Amprei from <strong>Verania Tvastiox</strong>, young wife of one of his superiors in Cheliax (see "+pg(P["C14"],"C14")+") — then passes them to a clerk: perfect leverage. She pays a further <strong>500 gp</strong>. If word reached her that the King of Spiders is dead, she is quietly pleased but can't legally pay for it — instead she awards each PC the <em>drake's mark</em>, a medal worth 400 gp granting a <strong>+2 circumstance bonus to Diplomacy</strong> with citizens of Korvosa when worn openly.</p>")
+  +B.s_conv("<p>This is the hook into Part Three's "+pg(P["cend"],"Eel's End (area C)")+". The bribe money matters — it is the PCs' lever on Devargo — and the walk with Vencarlo is the campaign's first long look at the man who is secretly Blackjack.</p>"))
 
 ev("e11","Event 11. The Queen's Scapegoat",
-  "<p>To bury the regicide rumors, Ileosa picks a scapegoat: "+act("trinia","Trinia Sabor")+", a young artist who painted the king's portrait weeks before his death. A tortured guard's false confession (and the guard's subsequent 'suicide,' propelled by Sabina) sets a city-wide hunt and fresh riots — this time crying for the 'assassin's' death.</p>"
+  SR("Event 11","40-41")
+  +"<p>To bury the regicide rumors, Ileosa picks a scapegoat: "+act("trinia","Trinia Sabor")+", a young artist who painted the king's portrait weeks before his death. A tortured guard's false confession (and the guard's subsequent 'suicide,' propelled by Sabina) sets a city-wide hunt and fresh riots — this time crying for the 'assassin's' death. Use the Korvosa (Anarchy) city state again.</p>"
   +SEC("<p><strong>GM:</strong> Trinia is innocent; Ileosa's jealousy (amplified by Kazavon's wrath) chose her. This is also the seed of the <strong>Gray Maidens</strong>, Ileosa's coming order of warrior-women.</p>")
-  +"<p>Cressida, alone among the officers doubting the confession, begs the PCs to reach Trinia <em>first</em> — before the mob, the Hellknights of the Order of the Nail, or the queen's guards — and bring her in safely for a fair, magical interrogation. Her last known address: a flat in <strong>Midland, 42 Moon Street</strong>, in the slum-tangle of the Shingles. Reward: <strong>1,000 gp</strong>.</p>"
+  +"<p>Cressida — alone among the officers in doubting the confession — takes the PCs into the privacy of her office, away from prying ears, with a third mission:</p>"
+  +vbox(["'You've doubtless heard the stories that",
+         "'Before Trinia is captured and executed",
+         "'I'm sure you can see where this"],
+     "<p>The way the queen broadcast Trinia's name looks to Cressida like she <em>wants</em> the riots back; the girl will be lynched long before any trial, and if she's innocent the real killer walks free behind the distraction. Cressida has Trinia's last known address — a flat in Midland at 42 Moon Street — but the rest of the Guard, the mob, and Hellknights of the Order of the Nail will have it soon too; word is the queen, unsatisfied with the Guard, is even readying a new order of specialized guards and may disband the Sable Company. The PCs must get in quietly, catch Trinia, and deliver her safe to Cressida's loyal agents for a magical interrogation — before anyone else reaches her.</p>",
+     label="Cressida — The Trinia Brief")
+  +B.s_treasure("<p><strong>Reward: 1,000 gp</strong> for delivering Trinia safe and sound to a member of the Korvosan Guard. Every minute of delay is another minute for the Midland mob to grow.</p>")
   +B.s_conv("<p>Proceed to "+pg(P["e12"],"Event 12: Into the Shingles")+".</p>"))
 
 # --- Event 12: the Shingles chase (PF2e Chase subsystem) ---
@@ -908,7 +1076,8 @@ _OBST = [
 _obst_rows = "".join(f"<tr><td>{i}</td><td>{n}</td><td>{chk(f'type:{s1}|dc:{d1}')} or {chk(f'type:{s2}|dc:{d2}')}</td></tr>"
                      for i,(n,s1,d1,s2,d2) in enumerate(_OBST,1))
 ev("e12","Event 12. Into the Shingles",
-  "<p>The PCs slip into Midland and reach 42 Moon Street. Trinia's neighbors shelter her and send up an alarm when the party is spotted (each of 2d6 neighbors can be won over with Deception vs. their Perception +3). Her third-floor flat is barricaded: "+chk("type:athletics|dc:18")+" forces the door — every round of delay is a head start.</p>"
+  SR("Event 12","41-43")
+  +"<p>The PCs slip into Midland and reach 42 Moon Street. Trinia's neighbors shelter her and send up an alarm when the party is spotted (each of 2d6 neighbors can be won over with Deception vs. their Perception +3). Her third-floor flat is barricaded: "+chk("type:athletics|dc:18")+" forces the door — every round of delay is a head start.</p>"
   +box("E12FLAT","<p>A one-room flat — bedroom, kitchen, and painter's studio in one. Bread and cheese sit by full waterskins; an easel holds a half-finished painting of an imp and a house drake fighting atop a church steeple. A single window looks out over the tangled rooftops, a low bed beneath it.</p>")
   +SEC("<p>Warned, "+act("trinia","Trinia")+" casts a <em>Figment</em> of herself asleep in bed and creeps out the window — "+chk("type:perception|dc:17")+" to notice her slipping away (+2 circumstance if looking out the window); 4 unnoticed rounds and she escapes outright. Caught unbarricaded but warned, "+chk("type:perception|dc:13")+" spots her grabbing her dagger and wand before she leaps. Surprised in her sleep, she flees empty-handed.</p>")
   +"<p><strong>The Shingles Chase</strong> (PF2e Chase subsystem). Run 15 obstacles; each PC attempts the listed skill on their turn to advance a chase point. "+act("trinia","Trinia")+" starts with a 0/3/5-obstacle lead depending on how thoroughly she was warned. A PC who fails badly <strong>falls to the street</strong>: take @Damage[2d6[bludgeoning]] and either "+chk("type:athletics|dc:16")+" to climb back, or "+chk("type:athletics|dc:16")+" / "+chk("type:reflex|dc:16")+" through the alleys to advance one obstacle. Catch her on the same obstacle and Grapple to end the chase; she escapes if she clears obstacle 15.</p>"
@@ -917,13 +1086,32 @@ ev("e12","Event 12. Into the Shingles",
   +B.s_conv("<p>Trinia is innocent and a recurring ally. If she is hidden (Cressida calls in Vencarlo to spirit her to Old Korvosa), she is safe for the rest of the chapter, and the queen simply announces that another 'captured assassin' has been apprehended instead.</p>"))
 
 ev("e13","Event 13. A Missing Body",
-  "<p>With the scapegoat in hand, the city calms — but a group of racist thugs murdered a young Shoanti during the unrest. Their elder, the visionary <strong>Thousand Bones</strong>, comes to Citadel Volshyenek to demand his grandson Gaekhen's body be recovered and returned, or Shoanti–Korvosan tensions will boil over.</p>"
-  +B.s_treasure("<p><strong>Reward:</strong> 1,000 gp (Cressida folds Trinia's deferred 2,000 gp in here too, if applicable). Recovering the body is a gesture of good will that pays off across the campaign.</p>")
-  +B.s_conv("<p>Thousand Bones and the Shoanti debt seeded here pay off in Chapter 4 (A History of Ashes). Build the relationship now.</p>"))
+  SR("Event 13","43")
+  +"<p>With the scapegoat in hand (or 'in hand'), the city calms — but during the riots a band of racist thugs used the unrest as cover to beat a young Shoanti to death. When the PCs next visit Citadel Volshyenek, the guards are jumpy: 'One of those Shoanti kids went and got himself killed' — and the Field Marshal is in her office with the Shoanti ambassador, asking for the PCs by name.</p>"
+  +"<p>With Cressida sits an elderly Shoanti of 60 winters: <strong>Thousand Bones</strong>, visionary shaman of the Skoan-Quah — the Clan of the Skull — who has spent years brokering coexistence between his people and a city that mostly despises them. He regards the PCs sternly as Cressida explains the mob killing, then speaks, deep-voiced, his words carefully chosen and his anger barely held:</p>"
+  +vbox(["'My people have worked hard to understand",
+         "'Our ways are not as yours",
+         "'With this knowledge, I could surely lead"],
+     "<p>His grandson <strong>Gaekhen</strong> is dead, beaten by cowards in a Korvosan street — and his son and kin are not as forgiving as he: they would return to the Cinderlands and rally the Sklar-Quah to war. Only sending Gaekhen whole to the fires of the ancestors will stay their wrath — but the body was stolen from where he fell, sold by a corpse-peddler to the necromancer <strong>Rolth</strong>, and carried to a place beneath the graveyard the spirits name the <strong>Dead Warrens</strong>. Shoanti warriors retrieving it themselves would read as an act of aggression; it falls to the PCs to make amends — or his people will come for the body, and they will not be gentle.</p>",
+     label="Thousand Bones Speaks")
+  +"<p>Thousand Bones then rises, nods curtly to Cressida, and leaves to await his grandson's body. Cressida apologizes for his brusqueness but agrees with every word: someone tied to Korvosa must recover the dead Shoanti and return him as a gesture of good will. She can answer questions before the PCs set out:</p>"
+  +vbox(["Who is Rolth? ' Ahh... Rolth Lamm"],
+     "<p><strong>Who is Rolth?</strong> A failed Acadamae student — expelled, quietly and without charges, when the school discovered he was butchering vagrants and strays to stitch a golem from the parts — and trouble ever since; Cressida suspects him in a decade of mutilation-murders but has never pinned evidence on him. He is also <strong>Gaedren Lamm's only surviving son</strong>. If the PCs admit their history with Gaedren, she congratulates them (off the record — the Guard can't condone vigilantism) and warns them: Rolth may well know what hand they had in his father's fate. Anything found below that could lead to his arrest is welcome.</p>")
+  +vbox(["What are the Dead Warrens? 'Korvosa's graveyards"],
+     "<p><strong>What are the Dead Warrens?</strong> The Gray District's burial grounds are riddled with tunnels — ghoul-dug, monster-made, or remnants of ancient Shoanti burial vaults. The church of Pharasma patrols what it can, but for every necromancer rooted out two spring up, worst of all under <strong>Potter's Ward</strong>, where the poor are buried. Thousand Bones says the Dead Warrens were one of his people's burial vaults; they lie beneath Potter's Ward.</p>")
+  +vbox(["How do we enter the Dead Warrens?"],
+     "<p><strong>How do we enter?</strong> The corpse-peddler who sold Gaekhen's body — a simpleton named <strong>Elkaris</strong>, now in custody, who spilled everything — wheelbarrowed it to a <strong>partially collapsed mausoleum</strong> deep in Potter's Ward near its southern edge, marked by a <strong>toppled, headless statue of a sword-wielding gargoyle</strong>; he was told to leave the body behind the gargoyle. That matches where Thousand Bones places the old burial vaults: start there.</p>")
+  +vbox(["How will we recognize Gaekhen's body? 'Thousand"],
+     "<p><strong>How will we recognize Gaekhen?</strong> About <strong>18 years old</strong>, short brown hair, a distinctive <strong>firepelt-claw scar on his left cheek</strong>, and large Shoanti tribal <strong>tattoos across his arms and torso</strong>. No other freshly dead Shoanti should be down there — a dead giveaway.</p>")
+  +B.s_treasure("<p><strong>Reward:</strong> 1,000 gp (Cressida folds Trinia's deferred 2,000 gp in here too, if applicable). <strong>Story award</strong> (milestone credit) for returning the body to Thousand Bones — a gesture of good will that pays off across the campaign.</p>")
+  +B.s_conv("<p>Thousand Bones and the Shoanti debt seeded here pay off in Chapter 4 (A History of Ashes). Build the relationship now. Proceed to "+pg(P["dwarrens"],"D. The Dead Warrens")+".</p>"))
 
 ev("e14","Event 14. A Lovely Day for an Execution",
-  "<p>The chapter's climax: once all other plots resolve, the queen stages the public execution of her scapegoat (Trinia, or another). Set the date so the PCs can finish Part Three (the Dead Warrens) first — there is wiggle room.</p>"
-  +SEC("<p>Whether the PCs disrupt the execution, attend it, or let it proceed, this is the hand-off to the <strong>Chapter Conclusion</strong> and Chapter 2. As the chapter ends, the first cases of <strong>Blood Veil</strong> appear in the gutters — see the Conversion Guide journal → <em>Blood Veil &amp; the Epidemic Clock</em>.</p>")
+  SR("Event 14","43-44")
+  +"<p>The chapter's climax: once all other plots resolve, the queen stages the public execution of her scapegoat (Trinia — or, if the PCs hid her, an equally innocent look-alike). <strong>Set the date yourself</strong> so the PCs can finish Part Three (the Dead Warrens) first; if the execution lands before they're done, that's fine too — there is plenty of wiggle room between chapters before the plague begins to spread.</p>"
+  +"<p><strong>The announcement.</strong> As the PCs emerge from the Dead Warrens, the news racing through the city is that Trinia Sabor's 'trial' has concluded: the assassin dies <strong>at sunset</strong>, and Queen Ileosa has invited Korvosa's nobles, military officers, and anyone of any import to Castle Korvosa's public courtyard to witness it. <strong>Cressida wants the PCs there</strong> — the whole affair sits wrong with her, and she fears it could spark another riot.</p>"
+  +"<p><strong>Run the full set-piece</strong> — guillotine, procession, Ileosa's address, and Blackjack's rescue — from the "+pg(P["dconc"],"Chapter Conclusion")+" page: it is an interactive cut-scene, not a combat encounter.</p>"
+  +SEC("<p>Whether the PCs disrupt the execution, aid the rescue, or let events run, this is the hand-off to the <strong>Chapter Conclusion</strong> and Chapter 2. As the chapter ends, the first cases of <strong>Blood Veil</strong> appear in the gutters — see the Conversion Guide journal → <em>Blood Veil &amp; the Epidemic Clock</em>.</p>")
   +B.s_conv("<p>This is the natural seam to begin the persistent-plague overlay: the Epidemic Clock starts in Chapter 2, seeded by how the city fared here.</p>"))
 
 # =====================================================================
@@ -1012,7 +1200,8 @@ area("C3","The Goldenhawk", SR("C3","51")
 
 area("C4","The Twin Tigers", SR("C4","51")
   +box("C4","<p>Two hut-like structures sit atop this barge; raucous laughter and periodic roars of victory sound from within.</p>")
-  +"<p>A gambling barge of dice and card games. A fine place to win (or lose) the bribe money, or to overhear rumors.</p>")
+  +"<p>A gambling barge — packed tables of dice, cards, and spinning wheels, with <strong>knivesies</strong> (see "+pg(P["C6"],"C6")+") a house favorite. A fine place to win (or lose) the bribe money, or to overhear rumors. Fights break out here more than anywhere else on Eel's End, so one of the four pier "+act("enforcer","enforcers")+" is always posted inside; brawlers go over the side — and on lucky nights the jigsaw sharks and reefclaws aren't waiting.</p>"
+  +"<p><strong>The masters:</strong> twin Vudrani brothers wrapped in red veils. <strong>Anpugit</strong>, garrulous, does the talking; <strong>Rajeek</strong> hangs back, quietly watching for cheaters — and for chances to tilt a game the house's way. Both are always hunting new games for their floor (a PC with an exotic gambling game can earn real goodwill here).</p>")
 
 area("C5","The House of Clouds", SR("C5","51")
   +box("C5","<p>A single long structure sits atop the main deck, double doors open onto a room of throw rugs and pillows, the air thick with incense and red lantern-light. Braziers shaped as serpents and hunting birds breathe anise, rosewater, and cinnamon. Scantily clad men and women loiter on deck.</p>")
@@ -1022,27 +1211,50 @@ area("C6","Dragon's Breath Corridor", SR("C6","52")
   +box("C6","<p>This once-proud vessel, the <em>Dragon's Breath</em>, has been painted gaudy red. A sign at the aft entrance reads simply, 'Pass into the Dreams of the Dragon.'</p>")
   +"<p>A dream-spider-smoke den run by <strong>Bezzeraty</strong> (5 gp entry), and the home of <strong>knivesies</strong> — Devargo's favorite blood-sport.</p>"
   +B.s_skill("<p><strong>The smoke:</strong> a minute in the haze forces a "+chk("type:fortitude|dc:18")+" or the fumes leave you "+B.cond("clumsy","Clumsy 1")+" and "+B.cond("stupefied","Stupefied 1")+" for 1 hour (no further effect for 24 hours). Bezzeraty robs anyone who passes out.</p>")
-  +B.s_skill("<p><strong>Knivesies.</strong> Two players, right hands strapped down, a dagger stuck in the table between them; on a 10-count (bettors toss gold) both roll initiative and lunge. Run it as a quick contest of "+chk("type:athletics")+" or unarmed Strikes for the blade, then a Strike — first to draw blood or disarm wins. Winning games for Devargo raises your standing in "+pg(P["C7"],"C7")+".</p>"))
+  +B.s_skill("<p><strong>Knivesies</strong> — Riddleport's blood-sport, beloved of Devargo. Two contestants stand on opposite ends of a long table, <strong>right hands strapped to their sides</strong> with boiled leather, a belt pouch at each waist and a dagger stuck in the tabletop between them. During a count of ten, bettors toss gold onto the table — roll [[/r 3d6+20]]{3d6+20 gp} for the pot — and stand at the end held by their chosen fighter. Then both contestants roll initiative.</p>"
+   "<p><strong>Playing it in PF2e.</strong> Each turn a contestant can (one free hand only!): <strong>Snatch coins</strong> — a single Interact action that grabs [[/r 1d10]]{1d10 coins} but lets the opponent make a Ready-style Strike or Trip against you; <strong>grab the dagger</strong> (Interact — the round-1 lunge); Strike; or Shove/Trip ("+chk("type:athletics")+") to force the opponent off the table. Falling, touching the ground, or going unconscious loses instantly; otherwise the game ends when no coins remain on the table (or one is knocked off), and whoever pouched more coins wins. <strong>Payout:</strong> the winner takes half the pot; the rest is split among the bettors at the winner's end.</p>"
+   "<p>Winning games for Devargo's amusement raises your standing in "+pg(P["C7"],"C7")+" — each win is a big step toward the letters.</p>"))
 
 area("C7","Throne of Spiders", SR("C7","52-54")
   +box("C7","<p>This converted captain's cabin is a throne room, its walls thick with webs in which scuttle dozens of spiders that never leave their silk. Two oaken tables and chairs fill the floor; aft, a cobwebbed leather chair sits on a low stage. A narrow door to port hangs ajar over stairs leading below. An iron birdcage hangs from the ceiling like a chandelier.</p>")
-  +"<p>"+act("devargo","Devargo Barvasi")+" holds court here from noon to a few hours past dusk, evaluating six hopeful thugs over a feast. The caged "+B.mon("house-drake","house drake")+" <strong>Majenko</strong> is his tormented plaything (he will sell it for an absurd 5,000 gp; freed — cage "+chk("type:athletics|dc:22")+" or "+chk("type:thievery|dc:25")+" — it serves its rescuer for a year). A hidden trap door before the throne ("+chk("type:perception|dc:20")+" to spot, again to find the throne-arm switch) drops a petitioner into "+pg(P["C15"],"C15")+".</p>"
+  +"<p>"+act("devargo","Devargo Barvasi")+" holds court here from noon to a few hours past dusk, evaluating six hopeful thugs over a feast — a tall, muscular man with shaggy black hair and a fierce glare, black leather accented by a steel spider-shaped baldric, blade-knuckled gauntlets glistening with poison, and live spiders wandering his skin unremarked. (After midnight he retires below to "+pg(P["C14"],"C14")+" — the best hours to infiltrate.) The caged "+B.mon("house-drake","house drake")+" <strong>Majenko</strong> is his tormented plaything (he will sell it for an absurd 5,000 gp; freed — cage "+chk("type:athletics|dc:22")+" or "+chk("type:thievery|dc:25")+" — it serves its rescuer for a year). A hidden trap door before the throne ("+chk("type:perception|dc:20")+" to spot, again to find the throne-arm switch) drops a petitioner into "+pg(P["C15"],"C15")+".</p>"
   +SEC("<p><strong>Winning the letters (social).</strong> Have one PC plead the case (standing — note — on the trap door) and roll "+chk("type:diplomacy|dc:24")+"; others may Aid ("+chk("type:diplomacy|dc:18")+"). Devargo despises Intimidation (it starts a fight). Outcomes: <strong>fail badly</strong> → he springs the trap and attacks; <strong>partial</strong> → he wants gold/entertainment (bribes raise his attitude ~+1 per 10 gp; each knivesies win is worth a big step); <strong>success</strong> → he sells the last two letters for ~150 gp (a second "+chk("type:diplomacy|dc:24")+" knocks it to ~100 gp); <strong>critical</strong> → delighted, he hands them over and wishes the PCs well. <strong>Story award</strong> for getting the letters without combat.</p>")
   +B.enc("Devargo + hopeful thugs (if it turns violent)",xpb([6]+[-1]*6,4),
      "<p>"+act("devargo","Devargo")+" springs the trap door, then fights with poisoned gauntlets and Sneak Attack; he flees (invisible) below ~10 HP. The 6 hopeful "+act("rioter","thugs")+" are cowards who flee at the first damage and trip over each other. Enforcers from "+pg(P["C2"],"C2")+" arrive one per round once the alarm sounds.</p>",
      B.aside_token([act("devargo","Devargo Barvasi (6)"), "6× "+act("rioter","Hopeful Thug (−1)"), B.mon("house-drake","Majenko — caged")], img=TOK("devargo-barvasi")))
-  +B.s_conv("<p>Releasing Majenko earns a story award and a loyal, information-gathering house-drake ally. The real goal remains the letters — turn them over to Cressida (Event 10 reward).</p>"))
+  +SEC("<p><strong>Critical success — Devargo's confession.</strong> Delighted (a critical "+chk("type:diplomacy|dc:24")+", or enough bribes and knivesies wins to charm him outright), Devargo claps his hands, calls four enforcers to mind the PCs, fetches the letters himself from below, and gleefully tells the whole story: hearing rumors of <strong>Amprei's affair</strong> with the wife of an important Chelish noble, he paid the ambassador a 'friendly' visit — a gift of shiver vials and an offer of a Cheliax trade line. Amprei had him thrown out, so Devargo <strong>pickpocketed the man's house key on the way</strong>, returned that night to put the key back — and left with a sheaf of the ambassador's love letters. Since then he has been <strong>selling them back one every few weeks</strong>, savoring Amprei's squirming on each visit; that the ambassador buys quietly instead of going to the Guard says everything about how ruinous the contents are. He hands over the last two letters — 'Pleasure doing business with you!' — and expects the PCs gone before he gets bored.</p>")
+  +B.s_conv("<p>Releasing Majenko earns a story award and a loyal, information-gathering house-drake ally. The real goal remains the letters — turn them over to Cressida (Event 10 reward). <strong>Loot if he falls:</strong> his runed armor, gauntlets, venom, potions — and his key ring and 79 gp purse (see his sheet); the keys open the brewery ("+pg(P["C9"],"C9")+") and the sea chest ("+pg(P["C14"],"C14")+").</p>"))
+
+pages.append(newpage("Cbelow","C8-C12 & C16. Below Decks", SR("C8-C12, C16","54")
+  +"<p>The stairs behind the throne room ("+pg(P["C7"],"C7")+") drop into the old warship's working guts. Everything here is locked or guarded by habit rather than men — Devargo's people rarely come below except to brew ("+pg(P["C9"],"C9")+") or to dump a body to Chittersnap ("+pg(P["C15"],"C15")+").</p>"
+  +'<p class="subhead"><strong>C8. Privies</strong></p>'
+  +"<p>Three narrow privies line the wall, their befouled chutes opening straight into the river below. The chutes are an entrance of last resort: nothing larger than <strong>Tiny</strong> fits, and even a Tiny creature must Squeeze through with a successful "+chk("type:acrobatics|dc:30")+".</p>"
+  +'<p class="subhead"><strong>C10. Brig</strong></p>'
+  +box("C10","<p>The room is empty and foul-smelling save for a mound of filthy straw seething with vermin.</p>")
+  +"<p>Most troublemakers go straight down the trap door to Chittersnap — but when Devargo needs someone kept <em>alive</em>, they're stashed in this brig. It is currently empty (a ready-made cell if the GM needs one, or a place for captured PCs to wake).</p>"
+  +'<p class="subhead"><strong>C11. Bilge Access</strong></p>'
+  +"<p>A hatch-opening drops 7 feet into the flooded bilge ("+'C16'+" below). A slimy knotted rope dangles over the lip — clammy but climbable without a check at a careful pace ("+chk("type:athletics|dc:5")+" if rushing or encumbered).</p>"
+  +'<p class="subhead"><strong>C12. Hold</strong></p>'
+  +box("C12","<p>Crates, barrels, and broken furniture awaiting repair crowd this cramped hold.</p>")
+  +"<p>Food, water, and firewood — little of actual value, but plenty of cover for sneaking PCs.</p>"
+  +'<p class="subhead"><strong>C16. Bilge</strong></p>'
+  +box("C16","<p>Murky water floods the filthy bilge, its surface dark and calm.</p>")
+  +"<p>The bilge leaks terribly — only the old pier pilings propping the hull from below keep <em>Eel's End</em> afloat. The water stands <strong>2 feet deep</strong> (difficult terrain); Devargo stores nothing down here anymore. It connects the knotted rope ("+'C11'+") with the web-choked den ("+pg(P["C15"],"C15")+") and the sodden hold ("+pg(P["C17"],"C17")+") — a dark, wet backdoor through the ship.</p>"))
 
 area("C9","Shiver Brewery", SR("C9","54")
-  +"<p>Cauldrons boil alcohol, water, and dream-spider venom down into <strong>shiver</strong> for the Arkonas — Devargo's standing arrangement that keeps his vice taxes paid.</p>"
+  +box("C9","<p>Two big wood stoves are set into the curve of the hull, iron bars across each hung with cauldrons; firewood is mounded to the north, and dozens of empty glass vials crowd the stove mantles.</p>")
+  +"<p>The locked door answers to Devargo's key. A strange, bitter smell: the cauldrons boil alcohol, water, and dream-spider venom down into <strong>shiver</strong> for the Arkonas — a few hours' work a week (with Chittersnap's 'help') that keeps Devargo's vice taxes paid.</p>"
   +B.s_treasure("<p>Among the empty vials sit six doses of shiver (~25 gp each in 1e; story contraband, not loot — destroying it pays off a 'Drug Addict' background hook).</p>"))
 
 area("C13","Meeting Room", SR("C13","54")
   +box("C13","<p>A single low desk sits against the wall of this room. A large wooden door marked with a painting of a spider stands in the southern wall.</p>")
-  +B.s_treasure("<p>Devargo's sea chest (his key, or "+chk("type:thievery|dc:30")+") holds his favourite treasures, re-scaled to PF2e: a jasper-studded amulet and an emerald gold necklace (art objects, ~120 gp the pair), a <strong>ring of feather fall</strong> with a jade-dragonfly cameo, a <strong>scroll of <em>blur</em></strong>, an <strong>elixir of love</strong>, two doses of <strong>dust of appearance</strong>, a mother-of-pearl horn (~10 gp), and ~60 gp in coin.</p>"))
+  +"<p>Where Devargo receives his rare <em>important</em> guests — so rarely that he has moved both chairs up to the throne room ("+pg(P["C7"],"C7")+") to seat more sycophants. The spider-painted door leads to his quarters ("+pg(P["C14"],"C14")+"); his sea chest and treasures are in there, not here.</p>")
 
 area("C14","Devargo's Quarters", SR("C14","54")
-  +"<p>Devargo retires here after midnight to read the day's slate reports and sleep — the <strong>best time to infiltrate</strong> Eel's End. <strong>The ambassador's blackmail letters are here</strong> (in his footlocker), the entire object of the mission. A stealth route avoids the throne-room confrontation entirely.</p>"
+  +box("C14","<p>A clean, dry wooden chamber: a four-poster bed with carved posts and gauzy drapes against the far wall, a dresser, a round table and chair — and a wooden sea chest at the foot of the bed.</p>")
+  +"<p>Devargo retires here after midnight to read the day's slate reports and sleep — the <strong>best time to infiltrate</strong> Eel's End — and flees here if the throne room ("+pg(P["C7"],"C7")+") goes badly for him.</p>"
+  +B.s_treasure("<p><strong>The sea chest</strong> opens to the key Devargo carries or "+chk("type:thievery|dc:30")+". His favourite treasures, re-scaled to PF2e: a jasper-studded amulet and an emerald-set gold necklace (art objects, ~120 gp the pair), a <strong>ring of feather fall</strong> with a jade-dragonfly cameo, a <strong>scroll of <em>blur</em></strong>, an <strong>elixir of love</strong>, two pouches of <strong>dust of appearance</strong>, a mother-of-pearl horn (~10 gp), and ~60 gp in coin.</p>")
+  +SEC("<p><strong>And the prize:</strong> the chest also holds <strong>the last two scandalous letters</strong> to Ambassador Amprei from <strong>Verania Tvastiox</strong> — the young wife of one of Amprei's superiors back in Cheliax. The details are salacious and <em>exacting</em>, leaving no room for misinterpretation; made public, they would end the ambassador. This is the entire object of the mission — a stealth route to this chest skips the throne-room confrontation completely.</p>")
   +B.s_conv("<p>However the PCs obtain them, the two letters go to Cressida Kroft for the Event 10 reward (and her leverage over Ambassador Amprei).</p>"))
 
 area("C15","The Spider's Web", SR("C15","54-55")
@@ -1066,9 +1278,9 @@ area("C17","Sodden Hold", SR("C17","55")
 # Zombie Shambler L-1.
 # =====================================================================
 ev("dwarrens","D. The Dead Warrens",
-  B.s_milestone("<p><strong>D. The Dead Warrens</strong> — a derro-infested undercity laboratory beneath Potter's Field, the last chapter site (the PCs recover the murdered Shoanti boy Gaekhen's body here for Event 13). Tracks at the surface ("+chk("type:perception|dc:15")+", "+chk("type:nature|dc:20")+" to read them as derro) lead to a trap-door in a mausoleum.</p>")
+  B.s_milestone("<p><strong>D. The Dead Warrens</strong> — a derro-infested undercity laboratory beneath Potter's Ward, the last chapter site (the PCs recover the murdered Shoanti boy Gaekhen's body here for Event 13). <strong>The entrance</strong> matches Elkaris's testimony ("+pg(P["e13"],"Event 13")+"): a partially collapsed mausoleum near the ward's southern edge, a toppled, headless sword-wielding gargoyle statue in the dirt before it. Wheelbarrow tracks at the surface ("+chk("type:perception|dc:15")+", "+chk("type:nature|dc:20")+" to read the small bare footprints around them as derro) lead behind the gargoyle to a trap-door inside.</p>")
   +SEC("<p><strong>GM:</strong> This is one of several labs kept by the necromancer <strong>Rolth</strong> (Gaedren Lamm's estranged son, the 'Key-Lock Killer'). <strong>Rolth is absent</strong> — away securing a scroll — and is <em>not</em> scheduled to appear; he returns after the PCs leave to find his lair wrecked, and hunts them in Chapter 2. In his stead the warrens are run by his derro apprentice "+act("vreeg","Vreeg")+".</p>")
-  +SEC("<p><strong>Gaekhen's body is in four parts</strong> (Rolth harvested only the head): the legs in the corpse dump ("+pg(P["D4"],"D4")+"), the torso + right arm animated in the stitchery ("+pg(P["D11"],"D11")+"), the left arm clutched by the carrion golem ("+pg(P["D8"],"D8")+"), and the head stitched to the flesh-golem in "+pg(P["D11"],"D11")+". Thousand Bones needs all four parts, not a whole body.</p>")
+  +SEC("<p><strong>Gaekhen's body is in four parts</strong> (Rolth harvested only the head): the <strong>legs</strong> in the corpse dump ("+pg(P["D4"],"D4")+"), the <strong>left arm</strong> clutched by the carrion golem ("+pg(P["D8"],"D8")+"), the <strong>head</strong> stitched to the flesh golem in the stitchery ("+pg(P["D11"],"D11")+"), and the <strong>torso + right arm</strong> — crudely animated by Vreeg — twitching on the bench in his chamber ("+pg(P["D13"],"D13")+"). Thousand Bones needs all four parts, not a whole body.</p>")
   +B.s_conv("<p><strong>Running the difficulty.</strong> In PF2e a lone at-level creature reads as <em>Trivial–Low</em> for four PCs, so most warren rooms are individually easy — the dungeon is an <strong>attrition gauntlet</strong>, not a string of set-piece fights.</p>"
    "<ul>"
    "<li>A "+act("derro","derro")+" who spots the party flees the "+pg(P["D2"],"crawl-spaces")+" to pull its kin — combine "+pg(P["D3"],"D3")+"/"+pg(P["D5"],"D5")+"/"+pg(P["D7"],"D7")+" into one Low–Moderate fight.</li>"
@@ -1080,14 +1292,16 @@ area("D1","Ossuary", SR("D1","56")
   +box("D1","<p>This large room is supported by four wide pillars of stone beneath a twenty-foot dome. The walls are caked with skeletons set in mud — mostly adult human bones, with smaller ones here and there. Fifteen-foot-square bone-pits sit east and west; a crude hole gouged in the south wall opens a tunnel.</p>")
   +"<p>An abandoned ossuary. Rolth animated guardians in the bone pits — four "+B.mon("skeleton-guard","human skeletons")+" (west) and a "+act("skelowlbear","skeletal owlbear")+" (east), spotted before they rise with "+chk("type:perception|dc:15")+". The skeletons pursue throughout the warrens but never up into Potter's Ward.</p>"
   +B.enc("Animated guardians",xpb([3,-1,-1,-1,-1],4),
-     "<p>The "+act("skelowlbear","skeletal owlbear")+" and 4 "+B.mon("skeleton-guard","human skeletons")+" clatter up to attack.</p>",
-     B.aside_token([act("skelowlbear","Skeletal Owlbear (3)"), "4× "+B.mon("skeleton-guard","Human Skeleton (−1)")], img=TOK("skeletal-owlbear"))))
+     "<p>The "+act("skelowlbear","skeletal owlbear")+" and 4 "+B.mon("skeleton-guard","human skeletons")+" clatter up to attack. (The owlbear squeezes between the pillars and treats the narrow stairs as difficult terrain; unlike the skeletons it never leaves this room.)</p>",
+     B.aside_token([act("skelowlbear","Skeletal Owlbear (3)"), "4× "+B.mon("skeleton-guard","Human Skeleton (−1)")], img=TOK("skeletal-owlbear")))
+  +SEC("<p><strong>Foreshadowing (campaign):</strong> the ossuary was abandoned when the church of Pharasma moved its primary ossuary beneath the new cathedral. <strong>Later in the campaign the Pharasmins secretly ally with the growing rebellion against Queen Ileosa</strong> and offer the Dead Warrens — this room in particular — as a safe place for the rebellion to meet and plan. Clearing it now literally clears the rebellion's future war room; remind the players of this place when it returns.</p>"))
 
 area("D2","Crawl Spaces", SR("D2","56")
   +"<p>Cramped secret tunnels the derros use to flit between rooms. Each concealed door is found with "+chk("type:perception|dc:20")+". They let the derros flank, ambush, and flee to raise the alarm.</p>")
 
 area("D3","Derro Cave", SR("D3","56")
-  +"<p>The derros' filthy rest-and-mess room. Two "+act("derro","derros")+" are usually here, playing a cruel game of 'Rat Squish.' They snatch up weapons and attack the instant they notice intruders.</p>"
+  +box("D3","<p>Rank with sweat and mud, the cavern holds four filthy straw pallets and a low table littered with dice and a miniature maze of carved clay.</p>")
+  +"<p>The derros' filthy rest-and-mess room. Two of Vreeg's four "+act("derro","derros")+" are here at any time, playing <strong>Rat Squish</strong> — a complex, cruel game involving a live rat, the clay maze, numbered stones, a hammer, and a pair of pliers. They snatch up weapons and attack the instant they notice intruders.</p>"
   +B.enc("Derros at rest",xpb([2,2],4),
      "<p>2 "+act("derro","derros")+". Others may arrive via "+pg(P["D2"],"the crawl spaces")+" if the alarm goes up.</p>",
      B.aside_token(["2× "+act("derro","Derro (2)")], img=TOK("derro"))))
@@ -1108,7 +1322,8 @@ area("D5","Exsanguination Chamber", SR("D5","57")
      B.aside_token([act("derro","Derro (2)"), "2× "+act("stirge","Stirge (−1)")], img=TOK("stirge"))))
 
 area("D6","Necrophidius Corridor", SR("D6","57")
-  +"<p>A corridor lined with skulls. Two of them are the heads of "+B.mon("necrophidius","necrophidiuses")+" — silent skeletal serpents Rolth crafted from old victims — coiled motionless in the walls until the room's trap springs, then striking with surprise.</p>"
+  +box("D6","<p>The walls and ceiling of this tall hallway are encrusted with dozens of yawning skulls, their mouths opening into dark holes in the walls.</p>")
+  +"<p>Two of the skulls are the heads of "+B.mon("necrophidius","necrophidiuses")+" — silent skeletal serpents Rolth crafted from the skulls of two old Key-Lock Killer victims — housed motionless in the walls, one at each far end, until the room's trap springs; they then slither out and strike with surprise unless a PC hears the telltale rattle of ribs against stone.</p>"
   +"<p>The "+haz("acidskulls","Acid-Spraying Skulls")+" trap fires two rounds after a creature enters; Rolth and the derros dart through before it triggers (door to "+pg(P["D7"],"D7")+" ↔ secret door to "+pg(P["D2"],"D2")+").</p>"
   +B.enc("Necrophidiuses (+ acid trap)",xpb([B.mon_lvl("necrophidius"),B.mon_lvl("necrophidius")],4),
      "<p>2 "+B.mon("necrophidius","necrophidiuses")+" (their dance can stun) plus the "+haz("acidskulls","acid-skull")+" trap raking the whole hall.</p>",
@@ -1123,7 +1338,9 @@ area("D7","Alchemy Lab", SR("D7","58")
   +B.s_treasure("<p>"+chk("type:perception|dc:20")+" (10 minutes' search) recovers usable salvage: an alchemist's lab, 3 doses of <strong>vermin repellent</strong> (Rolth is Gaedren's source for it), 2 tanglefoot bags, 4 doses of black adder venom, a hybridization funnel, 2 doses of silversheen, and a <strong>handy haversack</strong> holding 3 potions of healing, a lesser restoration potion, a potion of invisibility, 2 scrolls of <em>false life</em>, and a scroll of <em>dispel magic</em>.</p>"))
 
 area("D8","Store Room", SR("D8","58")
-  +"<p>A locked store room. Early this morning Rolth's newest "+B.mon("carrion-golem","carrion golem")+" went berserk, tore from its table, and rampaged through "+pg(P["D7"],"D7")+" before he trapped it in here — the delay is why he is absent today. Open the door and it attacks at once, still clutching a tattooed severed arm.</p>"
+  +"<p><strong>The door is boarded over:</strong> break it down ("+chk("type:athletics|dc:22")+") or pry the boards off — easy, but a noisy few minutes of work that announces the party to anything listening.</p>"
+  +box("D8","<p>The one-time pantry is in shambles — broken crates and shelves strewn about, foodstuffs, firewood, and other supplies scattered across the floor.</p>")
+  +"<p>Early this morning Rolth's newest "+B.mon("carrion-golem","carrion golem")+" went berserk, tore from its table in "+pg(P["D11"],"D11")+", and rampaged through "+pg(P["D7"],"D7")+" before he trapped it in here to 'simmer' — the delay (and the shopping list of smashed glassware) is why Rolth is absent today, and why he doesn't return until the PCs are gone. Open the door and the golem attacks at once, still clutching a tattooed severed arm.</p>"
   +B.enc("Carrion Golem",xpb([B.mon_lvl("carrion-golem")],4),
      "<p>One berserk "+B.mon("carrion-golem","carrion golem")+" — a patchwork construct of rotting parts.</p>",
      B.aside_token([B.mon("carrion-golem","Carrion Golem (4)")]))
@@ -1143,7 +1360,7 @@ area("D10","Library", SR("D10","59")
 
 area("D11","Stitchery", SR("D11","59")
   +box("D11","<p>The nauseating mixture of decay and strange chemicals fills this room. Saws, pliers, long needles, and surgical tools line the shelves. On a sturdy central table lies a patchwork humanoid stitched from dozens of bodies — nearly seven feet tall.</p>")
-  +SEC("<p>Rolth's workshop. The strapped-down flesh golem is unfinished; the small head stitched to it — brown hair, a scar on the left cheek — is <strong>Gaekhen's head</strong> (the fourth and last body part). The torso + right arm Vreeg claimed and crudely animated (2 HP, +0 unarmed for 1d3 nonlethal, 50% miss from blindness; harmed by vitality) — it thrashes if handled.</p>")
+  +SEC("<p>Rolth's workshop. The strapped-down flesh golem is unfinished; the small head stitched to it — short brown hair, a firepelt scar on the left cheek — is <strong>Gaekhen's head</strong> (one of the four body parts; the others lie in "+pg(P["D4"],"D4")+", "+pg(P["D8"],"D8")+", and "+pg(P["D13"],"D13")+"). Removing it without further indignity takes a careful "+chk("type:medicine|dc:15")+" or a steady hand and ten minutes.</p>")
   +B.s_treasure("<p>On the desk: a broken <strong>key-shaped dagger</strong> — Rolth's signature blade, twin to the one in "+pg(P["A14"],"Gaedren's den (A14)")+", confirming the connection. The PCs may not grasp its meaning until they meet Rolth in Chapter 2.</p>"))
 
 area("D12","Rolth's Room", SR("D12","59")
@@ -1151,19 +1368,48 @@ area("D12","Rolth's Room", SR("D12","59")
   +SEC("<p>Rolth keeps little here. "+chk("type:perception|dc:20")+" (automatic if a PC looks behind the mirror) reveals a hidden niche: masterwork thieves' tools, a pearl-and-silver snuffbox (~25 gp re-scaled) holding a dose of <strong>dust of disappearance</strong>, and a <strong>sustaining spoon</strong>. His spellbooks are not here — he carries them.</p>"))
 
 area("D13","Vreeg's Chamber", SR("D13","59-61")
-  +box("D13","<p>This chamber is part cluttered study, part nest — borrowed library books, half-finished necromantic tinkering, and the lingering chill of worked death magic.</p>")
-  +"<p>"+act("vreeg","Vreeg")+" the derro necromancer lairs here, attended by a single "+B.mon("zombie-shambler","human zombie")+" bodyguard left by Rolth. He kites with rays and force missiles and saves Blindness for the front line.</p>"
+  +box("D13","<p>A dry, well-kept chamber: a narrow bed, a half-bare shelf of books, bones, and skulls, and a long bench — on which lies a man's tattooed torso, right arm still attached, periodically thrashing and clutching at the air as if alive.</p>")
+  +SEC("<p><strong>The torso on the bench is Gaekhen's</strong> — torso and right arm, the last of the four body parts. Vreeg claimed them before Rolth could discard them with the legs ("+pg(P["D4"],"D4")+"), and though the derro can't yet truly animate the dead, he infused the flesh with enough void energy to give it horrible, twitching half-life. <strong>If handled it thrashes and claws:</strong> one unarmed Strike per round, +0 melee for @Damage[1d3[bludgeoning]] (nonlethal), with a 50% miss chance from blindness. The animating spark is fragile — 2 HP, and vitality energy harms it as if it were undead. Putting it to rest is trivial; doing so <em>respectfully</em> matters to Thousand Bones.</p>")
+  +"<p>"+act("vreeg","Vreeg")+" the derro necromancer lairs here, living simply — Rolth's lapdog when the master is present; lazy and cruel when he is not, spending 2-3 hours a day tormenting Cabbagehead and the other derros and the rest tinkering with necromancy or reading books borrowed from the library ("+pg(P["D10"],"D10")+"). He is attended by a single "+B.mon("zombie-shambler","human zombie")+" bodyguard left by Rolth. In a fight he flies out of reach, kites with rays and force missiles, hurls skeletons from his robe of bones, and saves Blindness for the front line.</p>"
   +SEC("<p><strong>The gut-punch.</strong> If the PCs left "+act("gaedren","Gaedren Lamm's")+" body in the fishery, this zombie <em>is</em> Gaedren — recovered and animated by his son Rolth. Mindless, it won't know them, but its appearance should unsettle the party and raise the question of <em>who</em> wanted the old man back in undeath.</p>")
   +B.enc("BOSS — Vreeg + zombie",xpb([6,B.mon_lvl("zombie-shambler")],4),
      "<p>"+act("vreeg","Vreeg")+" (the warrens' master) and his "+B.mon("zombie-shambler","zombie")+" guard. Bright light leaves Vreeg dazzled (derro sunlight vulnerability) — a real lever for the PCs.</p>",
      B.aside_token([act("vreeg","Vreeg (6)"), B.mon("zombie-shambler","Human Zombie / undead Gaedren (−1)")], img=TOK("vreeg")))
-  +B.s_conv("<p>With Vreeg down and the four body parts gathered, the warrens are cleared. Rolth returns later to the ruin and becomes a Chapter 2 antagonist (CHG: his vendetta).</p>"))
+  +B.s_treasure("<p><strong>Vreeg's spellbook</strong> sits on the shelf: every spell he has prepared, plus a necromancer's cantrips (no conjuration or illusion) and a second tier of utility — animate/command-undead rites, <em>darkness</em>, a fall-arresting charm, a corpse-preserving rite, <em>fear</em>, <em>sleep</em>, and a water-breathing spell. Re-key each to the nearest PF2e common spell when a PC scribes or sells it (worth ~50 gp to an Acadamae buyer — or leverage with the Pharasmins).</p>"
+   "<p><strong>His stash</strong>, stripped from the dead he has handled (re-scaled to PF2e): two silver rings (~10 gp each), a gold-and-pearl bracelet (~15 gp), a mithral hip flask etched with a house drake (~40 gp), and a <strong>traveler's any-tool</strong> — an uncommon magic implement that reshapes into any simple hand tool (counts as the relevant basic tool kit). His robe of bones, wand, ring, and dagger are on his sheet.</p>")
+  +B.s_conv("<p>With Vreeg down and the four body parts gathered, the warrens are cleared — see "+pg(P["dconc"],"Chapter Conclusion")+" for returning Gaekhen. Rolth returns later to the ruin and becomes a Chapter 2 antagonist (CHG: his vendetta). <em>Faithful note:</em> the torso + right arm are kept here in D13 per the source (an earlier draft had them in "+pg(P["D11"],"D11")+").</p>"))
 
 ev("dconc","Chapter Conclusion",
-  B.s_milestone("<p><strong>Chapter Conclusion.</strong> With the Dead Warrens cleared and the scapegoat's fate resolved, 'Edge of Anarchy' ends. The PCs should be well into 4th level.</p>")
-  +"<p><strong>Returning Gaekhen.</strong> Deliver Gaekhen's four body parts to "+pg(P["e13"],"Thousand Bones")+" (Event 13). The grateful Shoanti elder's goodwill becomes important in Chapter 4 (A History of Ashes). Cressida pays the recovery reward (folding in Trinia's deferred coin if applicable).</p>"
-  +"<p><strong>The execution.</strong> Queen Ileosa's public execution of her scapegoat ("+pg(P["e14"],"Event 14")+") is the chapter's final beat — disrupt it, attend it, or let it stand. Either way the city quiets, and the PCs are now known to the queen.</p>"
-  +SEC("<p><strong>Into Chapter 2 — and the Blood Veil.</strong> As order returns, the first cases of a new plague appear in the gutters. This is where the persistent-plague overlay begins: start the <strong>Epidemic Clock</strong> (Conversion Guide journal → <em>Blood Veil &amp; the Epidemic Clock</em>) seeded by how the city fared here. Rolth, returning to his ruined lair, becomes a recurring hunter (Chapter 2).</p>")
+  SR("Chapter Conclusion","66-67")
+  +B.s_milestone("<p><strong>Chapter Conclusion.</strong> With the Dead Warrens cleared and the scapegoat's fate resolved, 'Edge of Anarchy' ends on the attempted execution of an innocent — the PCs' first chance to stand directly against Ileosa's growing power. Run it as an interactive <strong>cut-scene</strong>, not a standard encounter. The PCs should be well into 4th level.</p>")
+  +"<p><strong>Returning Gaekhen.</strong> The PCs need only deliver Gaekhen's four body parts to Cressida — she handles the delicate work of seeing the body de-animated, made whole, and returned to "+pg(P["e13"],"Thousand Bones")+" with dignity. She pays the recovery reward (folding in Trinia's deferred coin if applicable), and the Shoanti elder's goodwill becomes important in Chapter 4 (A History of Ashes). She also passes on the news of the sunset execution ("+pg(P["e14"],"Event 14")+") — and asks the PCs to attend.</p>"
+  +vbox(["execution it is not an affair to be"],
+     "<p>The execution is the social event of the season: Korvosa's gentry attend in garish gowns, fine capes, and blinding jewels. The whole affair feels like a grand ball, not the public death of an assassin.</p>",
+     label="The Courtyard at Sunset")
+  +"<p><strong>Staging.</strong> Heralds announce <strong>Queen Ileosa</strong> with drums and fanfare; she has fully taken up the mantle of sole monarch — poised, graceful, in a green-and-white silk dress worth thousands — attended by a small army of striking guards. Chief among them, all but unrecognizable in a brand-new suit of full plate with a closed helm and flowing crimson plume, is <strong>Sabina</strong> (the Gray Maidens' look, before the name exists). Ileosa takes a high throne-like chair at one end of the public courtyard; at the other stands a <strong>guillotine</strong>, beside it a towering hooded <strong>executioner</strong> idly holding an immense axe. Gossip ripples through the crowd — the queen's attire, how the traitor will comport herself, the identity of the armored guardian… even the PCs' own exploits, if you like.</p>"
+  +"<p><strong>The procession.</strong> An ominous drumbeat silences the gawkers and paces <strong>Trinia's</strong> walk to the block. At the guillotine her shackles and hood are removed — a very frightened young woman bravely holding back tears, arms bound behind her with a leather cord — as the queen rises to address the crowd.</p>"
+  +SEC("<p><strong>If the PCs hid Trinia,</strong> the prisoner revealed is a <em>secondary scapegoat</em> — superficially similar, equally innocent. Everything below plays out the same: Blackjack has no intention of letting <em>anyone</em> be falsely executed by the queen.</p>")
+  +vbox(["'Fellow Korvosans! You have suffered greatly these",
+         "'And so, without further delay, let us usher"],
+     "<p>Ileosa tells the crowd their suffering — burned homes, dead kin, lost fortunes — ends today; she shares it, having lost a husband. Before them stands the source of their anguish: no timid girl but a black-hearted assassin, whose death she offers as a salve for all they've endured — and she calls for the new dawn to be ushered in with justice, ending on a shriek: off with her head!</p>",
+     label="Queen Ileosa's Address")
+  +"<p><strong>The rescue.</strong> Just before the executioner forces Trinia into the guillotine, he howls — a thrown dagger stands in the back of his hand — and a cry goes up: <em>'By the gods! It's Blackjack!'</em> A man in hooded cloak and black mask springs to Trinia's side, cuts her bonds, and hurls the same dagger down through the executioner's boot, pinning his foot to the platform. Then he turns to the stunned crowd:</p>"
+  +vbox(["'Yes indeed, my queen! Let us usher"],
+     "<p>Blackjack flings the queen's words back at her: justice indeed — justice for Korvosa, not for the shambles she calls a monarchy — and ends with the cry that will echo through the campaign: long live Korvosa; down with the queen!</p>",
+     label="Blackjack's Declaration")
+  +"<p><strong>Chaos.</strong> The crowd erupts — some scream for the assassin's head, others for the queen's resignation. Ileosa stands frozen a moment, whispers something to Sabina, and flees into Castle Korvosa with Sabina and a dozen guards covering her retreat. The remaining guards push toward Blackjack through blood-thirsty nobles — while the executioner wrenches free and raises his axe over the vigilante, who, delighting in having routed the queen, hasn't noticed.</p>"
+  +'<p class="subhead"><strong>Involving the PCs</strong></p>'
+  +"<p>Don't run this as a battle — go around the table and ask each player what their character does.</p>"
+  +"<ul>"
+   "<li><strong>If the PCs stay out of it</strong> (or their actions change little): Blackjack notices the axe in time, ducks away dragging Trinia with him, clambers up a hanging banner to a nearby wall, hauls her up, drinks a <em>potion of feather fall</em>, bows to the crowd backlit by the setting sun — and the two leap from the wall and vanish into the city.</li>"
+   "<li><strong>If the PCs help Blackjack:</strong> narrate how their actions save his life (the axe-blow turned, a guard tripped, the crowd parted). When he reaches the wall, his bow is to <em>the PCs</em> in particular, rapier raised in salute, before he and Trinia leap to freedom.</li>"
+   "<li><strong>If the PCs hinder him:</strong> let them roll attacks as needed. On low rolls, Blackjack and Trinia escape despite their efforts. <strong>On high rolls, let the dice stand:</strong> Blackjack is captured and unmasked as <strong>Vencarlo Orisini</strong> before being thrown into Castle Korvosa's deepest dungeons, and Trinia is executed after all — this time in a private chamber in the dungeons below. The remaining chapters assume both escaped; if not, things get harder for the PCs in the chapters to come, as you see fit (Chapter 3's Vencarlo thread in particular needs re-rigging).</li>"
+   "</ul>"
+  +SEC("<p><strong>Aftermath.</strong> Escaping the chaos is easy, and even PCs who visibly helped Blackjack face no Guard retribution — partly the confusion, mostly a shift in the city's heart: Blackjack has always been Korvosa's folk hero, and his open stand against the queen plants the first real doubts among her supporters. Ileosa stays ensconced in Castle Korvosa for several weeks, and the city finally gets room to breathe and rebuild.</p>")
+  +vbox(["Yet however safe the city might seem"],
+     "<p>But Korvosa sits in the eye of the storm. Greater wheels turn — and not far offshore, a black three-masted ship flying the orange lanterns of a plague vessel drifts ever closer. Death follows it.</p>",
+     label="Closing — Read Aloud")
+  +SEC("<p><strong>Into Chapter 2 — and the Blood Veil.</strong> That plague ship is the <em>Direption</em>, Chapter 2's opening. This is where the persistent-plague overlay begins: start the <strong>Epidemic Clock</strong> (Conversion Guide journal → <em>Blood Veil &amp; the Epidemic Clock</em>) seeded by how the city fared here. Rolth, returning to his ruined lair, becomes a recurring hunter (Chapter 2).</p>")
   +B.s_conv("<p><strong>Threads carried forward:</strong> Rolth's vendetta · the Arkona/Vimanda watch (from "+pg(P["B8"],"Verik")+") · Trinia &amp; Vencarlo/Blackjack · Grau and the Korvosan Guard · the Shoanti debt · and the queen, who now has the PCs' measure.</p>"))
 
 journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"])
@@ -1285,7 +1531,12 @@ cg_pages=[B.page(nid(),"The Harrowing",
   +B.s_skill("<p><strong>GM options menu</strong> (pick what hurts <em>this</em> table; telegraph one tier early): <strong>A</strong> PC infection (the disease below; Gritty/Heroic/Grim tones — always an out) · <strong>B</strong> lose an NPC (throwaway→named by tier) · <strong>C</strong> lose a place (safe house/shop/district, reversible) · <strong>D</strong> faction cost (Korvosan Guard / Abadar aid thins — ties to Reputation) · <strong>E</strong> accelerate the villain (shorter Ch.6 timer) · <strong>F</strong> moral pressure (plague vs. politics — no wrong answer).</p>")
   +"<p><strong>Blood Veil (disease).</strong> "+chk("type:fortitude|dc:20")+" (scale the DC to the chapter's level; ~20 in Ch.2). <strong>Onset</strong> 1 day. <strong>Stage 1</strong> "+B.cond("enfeebled","Enfeebled 1")+" (1 day); <strong>Stage 2</strong> "+B.cond("enfeebled","Enfeebled 2")+" and "+B.cond("drained","Drained 1")+" (1 day); <strong>Stage 3</strong> "+B.cond("enfeebled","Enfeebled 2")+" and "+B.cond("drained","Drained 2")+" (1 day); <strong>Stage 4</strong> "+B.cond("drained","Drained 3")+" and "+B.cond("enfeebled","Enfeebled 3")+". The PF1e Con+Cha damage becomes drained/enfeebled; the suppressant halts progression and steps the stage down rather than curing outright.</p>"
   +"<p><strong>Persistent in-city exposure</strong> (atmosphere, not attrition): while in Plagued-tier Korvosa, a character attempts a flat check each downtime week — "+chk("type:flat|dc:5")+" at a low clock, up to "+chk("type:flat|dc:11")+" at a high clock — on a failure, save against Blood Veil at a reduced DC. Keep it light; make the clock respond to player action.</p>"
-  +B.s_conv("<p>Track the clock + city tier on this page across chapters. <strong>Removability hatch:</strong> at any chapter break the GM may rule the suppressant became a true cure (revert to faithful) with zero downstream breakage. Full design: <code>design/persistent_plague.md</code>.</p>"),level=1)]
+  +B.s_conv("<p>Track the clock + city tier on this page across chapters. <strong>Removability hatch:</strong> at any chapter break the GM may rule the suppressant became a true cure (revert to faithful) with zero downstream breakage. Full design: <code>design/persistent_plague.md</code>.</p>"),level=1),
+ B.page(nid(),"Source Text, Read-Alouds & Handouts (Policy)",
+  B.s_desc("<p>How this conversion handles the adventure's original prose — and why the journals you're reading may differ from another GM's build.</p>")
+  +"<p><strong>Injection, not inclusion.</strong> The build scripts never hardcode the adventure's prose (anchors of at most 8 words excepted). At build time, each read-aloud box, NPC speech, briefing, and player handout is pulled <em>verbatim</em> from the GM's own locally supplied AP text (the <code>COTCT_AP_MD</code> file). If that file is absent, every box falls back to an original paraphrase, so the module still works — it just reads in our words instead of Paizo's.</p>"
+  +"<p><strong>Player Handouts are explicitly exempt</strong> from the paraphrase rule, exactly like boxed read-aloud text: a handout's entire purpose is to be shown to players as written (Handouts #1-1/#1-2 in Chapter 1, #2-1/#2-2 in Chapter 2, and so on). They are injected from the GM's local source on the same terms as read-aloud boxes and are never shipped beyond the GM's own private build.</p>"
+  +B.s_conv("<p><strong>House rules of the build:</strong> every PF1e DC is re-judged to a PF2e @Check (never transliterated); valuables convert at roughly PF1e gp ÷ 10 while named magic items keep their identity as PF2e equivalents; XP story awards become milestone credit (CHG-0007). OCR artifacts in the source (dropped hyphens, two-column interleave) are repaired during injection — report any survivors as bugs.</p>"),level=1)]
 cg_journal=B.journal_entry(CG_JID,"Conversion Guide",cg_pages,folder=None)
 B.write("journals","00-conversion-guide",copy.deepcopy(cg_journal),embed_pages=True)
 

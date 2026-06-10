@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "9lkIK1vZZ57snnah",
+      "_id": "FheKawIQp6ORgfaD",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Caress of Chains",
+      "name": "Stiletto Claw",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -26,8 +26,9 @@
             "damageType": "slashing"
           },
           "1": {
-            "damage": "2d6",
-            "damageType": "void"
+            "damage": "1d6",
+            "damageType": "bleed",
+            "category": "persistent"
           }
         },
         "description": {
@@ -46,29 +47,36 @@
           "value": [
             "agile",
             "magical",
-            "reach-10",
-            "unholy"
+            "reach-25"
           ]
         }
       },
-      "_key": "!actors.items!ithierGylou00001.9lkIK1vZZ57snnah"
+      "_key": "!actors.items!ithierGylou00001.FheKawIQp6ORgfaD"
     },
     {
-      "_id": "uhjv6QgxXvFBGyoS",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Nursemaid's Embrace",
+      "_id": "ni1SKDxnF7b1Y3I8",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Pale Tentacle",
       "sort": 0,
-      "type": "action",
+      "type": "melee",
       "system": {
-        "actionType": {
-          "value": "action"
+        "attack": {
+          "value": ""
         },
-        "actions": {
-          "value": 2
+        "attackEffects": {
+          "value": []
         },
-        "category": "offensive",
+        "bonus": {
+          "value": 31
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d6+10",
+            "damageType": "bludgeoning"
+          }
+        },
         "description": {
-          "value": "<p>One adjacent creature: @Check[type:reflex|dc:38] or swept beneath her skirts — @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (Escape DC 38), @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}, and @Damage[4d6[void]] per round held.</p>"
+          "value": ""
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -81,53 +89,17 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "attack",
-            "incapacitation"
+            "magical",
+            "reach-25"
           ]
         }
       },
-      "_key": "!actors.items!ithierGylou00001.uhjv6QgxXvFBGyoS"
+      "_key": "!actors.items!ithierGylou00001.ni1SKDxnF7b1Y3I8"
     },
     {
-      "_id": "Xw0EbMZmI7OfJHBo",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Handmaiden's Litany",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>30-ft burst within 120 feet: @Damage[10d6[mental]] (@Check[type:will|dc:38|basic:true]; failures @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "auditory",
-            "divine",
-            "mental"
-          ]
-        }
-      },
-      "_key": "!actors.items!ithierGylou00001.Xw0EbMZmI7OfJHBo"
-    },
-    {
-      "_id": "8JJh6SQunJPnl6rO",
+      "_id": "js5KpgGtefy36xuI",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Devil's Resilience",
+      "name": "Paralytic Lash",
       "sort": 0,
       "type": "action",
       "system": {
@@ -137,9 +109,9 @@
         "actions": {
           "value": null
         },
-        "category": "defensive",
+        "category": "offensive",
         "description": {
-          "value": "<p>Fire immunity; resistance physical 15 (except holy silver); teleport at will (bound to the Sunken Queen's halls by contract); regeneration 10 (suppressed by holy).</p>"
+          "value": "<p>Tentacle hit: @Check[type:fortitude|dc:38] or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} 1 round (incapacitation).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -154,7 +126,142 @@
           "value": []
         }
       },
-      "_key": "!actors.items!ithierGylou00001.8JJh6SQunJPnl6rO"
+      "_key": "!actors.items!ithierGylou00001.js5KpgGtefy36xuI"
+    },
+    {
+      "_id": "PAw9gplpOGh5UreA",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Blood-Draining Gaze",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>20-ft emanation: @Check[type:fortitude|dc:38] or blood streams from the victims' eyes into the pits of its face — @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}; creatures already bleeding take −2 on the save.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "necromancy",
+            "visual"
+          ]
+        }
+      },
+      "_key": "!actors.items!ithierGylou00001.PAw9gplpOGh5UreA"
+    },
+    {
+      "_id": "mxiLhUbeQEwzxJDv",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Walker's Wiles",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Occult arsenal (DC 40): <em>mind fog</em> round 1 (−2 status Will, 20-ft cloud), a <strong>quickened confusion</strong> (1 action) thrown at a martial <em>every</em> round, <em>greater invisibility</em> round 2, then <strong>dominate</strong> (@Check[type:will|dc:40], incapacitation) — a dominated PC is sent to B19 to pick up the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.soultrapGem00001]{Soultrapping Gem}.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "occult",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!ithierGylou00001.mxiLhUbeQEwzxJDv"
+    },
+    {
+      "_id": "f9AjNWjf3lOTMXCo",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Bloodsense",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Senses blooded living creatures (and blood-drinking undead) as blindsight 60 ft. Telepathy 300 ft — it reports every move of the battle to Ileosa as it fights.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ithierGylou00001.f9AjNWjf3lOTMXCo"
+    },
+    {
+      "_id": "YexEYIg1NjaMds4S",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Leng's Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Fast healing 10; immune acid, cold, poison; weakness electricity 15; resistance precision 15 (unusual anatomy); <em>air walk</em>; climb 40. It pursues anywhere except the flooded levels, and fights to the death.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ithierGylou00001.YexEYIg1NjaMds4S"
     }
   ],
   "system": {
@@ -163,7 +270,7 @@
         "mod": 7
       },
       "dex": {
-        "mod": 6
+        "mod": 8
       },
       "con": {
         "mod": 5
@@ -193,25 +300,30 @@
         "value": 340
       },
       "speed": {
-        "otherSpeeds": [],
-        "value": 35
+        "otherSpeeds": [
+          {
+            "type": "climb",
+            "value": 40
+          }
+        ],
+        "value": 40
       }
     },
     "details": {
-      "blurb": "Gylou seneschal of the Sunken Queen (B15)",
+      "blurb": "Scarlet walker of Leng — Sorshen's bound guardian (B15)",
       "languages": {
         "details": "",
         "value": [
-          "common",
+          "aklo",
           "infernal",
-          "celestial"
+          "thassilonian"
         ]
       },
       "level": {
         "value": 17
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role (B15):</strong> the gylou 'handmaiden devil' who serves as Ileosa's seneschal-below — mistress of the Great Hall, keeper of the false Ileosas' wardrobe, and the contract's chaperone. She joins the Everdawn fight from below if she still lives. <strong>Negotiation interests her</strong> exactly as long as it amuses.</p>",
+      "publicNotes": "<p><strong>Role (B15):</strong> a <strong>scarlet walker</strong> — last of the spindle-legged horrors Sorshen drew from the nightmare realm of <strong>Leng</strong> eleven thousand years ago as advisors on the Everdawn Pool, bound to the Sunken Queen as an immortal guardian. It resented Ileosa until she proved her skill with the Pool and <strong>promised to release it home to Leng</strong> when her ritual ends. It holds the Great Hall (B15), and climbs to the Pool (B20) to join the final battle if it still lives.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -224,13 +336,10 @@
     },
     "perception": {
       "details": "",
-      "mod": 30,
+      "mod": 31,
       "senses": [
         {
           "type": "darkvision"
-        },
-        {
-          "type": "true-seeing"
         }
       ]
     },
@@ -242,7 +351,7 @@
       },
       "reflex": {
         "saveDetail": "",
-        "value": 28
+        "value": 32
       },
       "will": {
         "saveDetail": "",
@@ -250,14 +359,14 @@
       }
     },
     "skills": {
-      "deception": {
+      "acrobatics": {
         "base": 33
-      },
-      "religion": {
-        "base": 31
       },
       "intimidation": {
         "base": 31
+      },
+      "occultism": {
+        "base": 29
       },
       "stealth": {
         "base": 29
@@ -266,11 +375,11 @@
     "traits": {
       "rarity": "common",
       "size": {
-        "value": "lg"
+        "value": "huge"
       },
       "value": [
-        "fiend",
-        "devil"
+        "aberration",
+        "unholy"
       ]
     }
   },

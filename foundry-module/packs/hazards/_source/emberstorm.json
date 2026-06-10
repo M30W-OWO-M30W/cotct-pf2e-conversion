@@ -1,0 +1,178 @@
+{
+  "_id": "appEmberstorm001",
+  "name": "Emberstorm",
+  "type": "hazard",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "items": [
+    {
+      "_id": "5up3bK6tAuICbAZB",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "The Burning Heart",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": null,
+        "description": {
+          "value": "<p><strong>Routine (heart only)</strong> Each round, every creature in the storm's heart takes @Damage[2d6[fire]] and @Damage[2d6[bludgeoning]] (@Check[type:fortitude|dc:30|basic:true]); a creature that fails also breathes ash and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}. Eyes and lungs: while in the heart, creatures without sealed protection are @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!appEmberstorm001.5up3bK6tAuICbAZB"
+    }
+  ],
+  "folder": "appHazardsFld001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Emberstorm",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {}
+  },
+  "system": {
+    "attributes": {
+      "emitsSound": "encounter",
+      "hardness": 0,
+      "stealth": {
+        "details": "<p>It announces itself: a wall of black ash on the horizon. @Check[type:survival|dc:30] (expert) to predict its path an hour ahead.</p>",
+        "value": 20
+      }
+    },
+    "creatureType": "",
+    "details": {
+      "description": "<p>The Cinderlands' burning dust storms. The <strong>edge</strong> (outermost 100 feet) is a severe windstorm: difficult terrain, everything is concealed beyond 30 feet, ranged attacks take −4. The <strong>heart</strong> is on fire.</p>",
+      "disable": "<p>@Check[type:survival|dc:30] (expert) to lead the group out of the heart to the storm's edge (one check per 10 minutes); reaching real shelter — a gorge, a lotra grove, a tent buried in ash — ends exposure.</p>",
+      "isComplex": true,
+      "level": {
+        "value": 11
+      },
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      },
+      "reset": "<p>A storm runs 1d4 hours, then collapses into drifting ash.</p>",
+      "routine": "<p>(1 action) The storm advances 60 feet in a direction of the wind's choosing; everything in the heart takes the Burning Heart damage.</p>"
+    },
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "environmental",
+        "fire",
+        "complex"
+      ]
+    }
+  },
+  "_key": "!actors!appEmberstorm001"
+}

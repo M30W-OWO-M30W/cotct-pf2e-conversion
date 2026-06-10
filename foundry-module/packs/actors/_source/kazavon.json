@@ -1,0 +1,564 @@
+{
+  "_id": "appKazavon000001",
+  "name": "Kazavon",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "IB9kIwWUks3uXl4M",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Fang of Midnight (Jaws)",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 42
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "4d12+20",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "electricity"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "reach-30"
+          ]
+        }
+      },
+      "_key": "!actors.items!appKazavon000001.IB9kIwWUks3uXl4M"
+    },
+    {
+      "_id": "02BfJVnCafKfZGjb",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 42
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "4d8+20",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "magical",
+            "reach-20"
+          ]
+        }
+      },
+      "_key": "!actors.items!appKazavon000001.02BfJVnCafKfZGjb"
+    },
+    {
+      "_id": "oIWS5NDQqQzvrcz0",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Tail",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 40
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "4d8+20",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "reach-25"
+          ]
+        }
+      },
+      "_key": "!actors.items!appKazavon000001.oIWS5NDQqQzvrcz0"
+    },
+    {
+      "_id": "bdKCTeYfNbvlDK9B",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Breath Weapon",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Frequency</strong> once per 1d4 rounds. A 140-foot line of lightning: @Damage[24d6[electricity]] (@Check[type:reflex|dc:47|basic:true]).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "arcane",
+            "electricity"
+          ]
+        }
+      },
+      "_key": "!actors.items!appKazavon000001.bdKCTeYfNbvlDK9B"
+    },
+    {
+      "_id": "tb6OXNGpCSUOSB2Q",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Frightful Presence",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>360 feet, @Check[type:will|dc:45]. Storm-aura: creatures adjacent at the start of his turn take @Damage[2d6[electricity]].</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!appKazavon000001.tb6OXNGpCSUOSB2Q"
+    },
+    {
+      "_id": "Wkg7E3yjKRoGTcGV",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Warlord's Sorcery",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Arcane DC 47: <em>freeze time</em> (1/day, the classic opener) · <em>maze</em> · <em>wall of force</em> (his battlefield architecture) · <em>chain lightning</em> @Damage[8d12[electricity]] · <em>invisibility (4th)</em> · <em>teleport</em>/<em>gate</em> (his exits). He spends his first stolen round walling the battlefield into a killing floor.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "arcane",
+            "concentrate"
+          ]
+        }
+      },
+      "_key": "!actors.items!appKazavon000001.Wkg7E3yjKRoGTcGV"
+    },
+    {
+      "_id": "J2NeT68ap4maPJ1I",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Human Form",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Zon-Kuthon's gift: a fixed human shape — the pale warlord (AC 47; <em>+3 greater striking unholy spiked chain</em> +44, @Damage[3d8+22[slashing]] plus @Damage[1d6[bleed]]). <strong>Death Transformation:</strong> at 0 HP in human form he erupts back into the dragon at full HP, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 2d4 rounds, his armor destroyed. In human form he fights to the death — because death is a costume change.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "arcane",
+            "polymorph"
+          ]
+        }
+      },
+      "_key": "!actors.items!appKazavon000001.J2NeT68ap4maPJ1I"
+    },
+    {
+      "_id": "gmTN35xxsRORB1Qn",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Rejuvenation",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>While any of his seven relics exist, he can always manifest again</strong> (GM's timetable — months or years). Defeated or driven off, he takes <strong>2d6 weeks</strong> to secure his human-form gear before acting openly. <strong>If he was restored via the Everdawn Pool</strong> (Ch.6's fail-state), destroying him leaves <em>only his fangs</em> in the dust — the Crown's seeds, again.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!appKazavon000001.gmTN35xxsRORB1Qn"
+    },
+    {
+      "_id": "S8t0A5fXNZXmtutH",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Scarwall Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 44
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!appKazavon000001.S8t0A5fXNZXmtutH"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 10
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 8
+      },
+      "int": {
+        "mod": 7
+      },
+      "wis": {
+        "mod": 6
+      },
+      "cha": {
+        "mod": 8
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 50
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 600,
+        "temp": 0,
+        "value": 600
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 100
+          },
+          {
+            "type": "burrow",
+            "value": 20
+          }
+        ],
+        "value": 40
+      }
+    },
+    "details": {
+      "blurb": "THE DRAGON — CR 25 contingency (Arc III / fail-state)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "draconic",
+          "infernal",
+          "necril",
+          "orcish",
+          "shoanti"
+        ]
+      },
+      "level": {
+        "value": 25
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>THE CONTINGENCY (CR 25 → L25).</strong> Kazavon — blue great wyrm, champion of Zon-Kuthon, the warlord whose fangs crown a queen — only walks if the campaign fails: the Crown unsundered, the ritual finished, or the seven relics allowed to converge (Continuing the Campaign, Arc III). First contact is always the dragon; the human warlord comes later, with armies.</p><p><strong>Tactics (dragon):</strong> opens with <em>freeze time</em>, walls the field, goes invisible on the stolen round's end, then fights mobile and airborne — breath and sorcery, never landing. <strong>Morale (dragon):</strong> below ~100 HP he teleports out or gates to the Shadow Plane, returns in days. <strong>Morale (human):</strong> to the death — see Death Transformation.</p><p><strong>His goal on returning:</strong> reclaim Scarwall, rebuild the warlord state that once broke Belkzen — a years-long shadow over any post-campaign play.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 38,
+      "senses": [
+        {
+          "type": "darkvision"
+        },
+        {
+          "type": "scent"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 40
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 35
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 38
+      }
+    },
+    "skills": {
+      "deception": {
+        "base": 44
+      },
+      "diplomacy": {
+        "base": 44
+      },
+      "intimidation": {
+        "base": 46
+      },
+      "arcana": {
+        "base": 42
+      },
+      "religion": {
+        "base": 42
+      },
+      "society": {
+        "base": 40
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "grg"
+      },
+      "value": [
+        "dragon",
+        "earth",
+        "unholy"
+      ]
+    }
+  },
+  "folder": "appCreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Kazavon",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!appKazavon000001"
+}

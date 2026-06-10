@@ -1,0 +1,176 @@
+{
+  "_id": "appCinderHeat001",
+  "name": "Cinderlands Heat & Thirst",
+  "type": "hazard",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "items": [
+    {
+      "_id": "aCvgZUeRnfuaa0FY",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Scorching Day",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": null,
+        "description": {
+          "value": "<p><strong>Each day</strong> traveled without shade and double water: @Check[type:fortitude|dc:25] or take @Damage[4d6[fire]] (heat exhaustion; this damage can't be healed until the creature drinks and rests in shade) and become @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}; critical failure also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!appCinderHeat001.aCvgZUeRnfuaa0FY"
+    }
+  ],
+  "folder": "appHazardsFld001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Cinderlands Heat & Thirst",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {}
+  },
+  "system": {
+    "attributes": {
+      "emitsSound": "encounter",
+      "hardness": 0,
+      "stealth": {
+        "details": "<p>No surprise — the land itself. @Check[type:survival|dc:24] to recognize the day's heat will turn lethal by noon.</p>",
+        "value": 24
+      }
+    },
+    "creatureType": "",
+    "details": {
+      "description": "<p>The region-wide pressure Ch.4 travels under: water is ash-fouled and scarce — <strong>Subsist checks in the Cinderlands take a −2 circumstance penalty</strong>, and each travel day costs double water.</p>",
+      "disable": "<p>@Check[type:survival|dc:24] to find a flask tree, a shaded gorge, or a Shoanti cache (negates the day's exposure for the group). Carrying <strong>double water rations</strong> negates it outright.</p>",
+      "isComplex": false,
+      "level": {
+        "value": 7
+      },
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      },
+      "reset": "<p>Daily, until the party leaves the badlands.</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "environmental"
+      ]
+    }
+  },
+  "_key": "!actors!appCinderHeat001"
+}

@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "5dgbSMCwmKLDDzuN",
+      "_id": "wuYcBoxzsFdB41Lv",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+2 Striking Greatsword",
+      "name": "+2 Striking Thundering Warhammer",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -23,7 +23,11 @@
         "damageRolls": {
           "0": {
             "damage": "2d12+13",
-            "damageType": "slashing"
+            "damageType": "bludgeoning"
+          },
+          "1": {
+            "damage": "1d6",
+            "damageType": "sonic"
           }
         },
         "description": {
@@ -41,14 +45,14 @@
           "rarity": "common",
           "value": [
             "magical",
-            "versatile-p"
+            "shove"
           ]
         }
       },
-      "_key": "!actors.items!gorstavJuju00001.5dgbSMCwmKLDDzuN"
+      "_key": "!actors.items!gorstavJuju00001.wuYcBoxzsFdB41Lv"
     },
     {
-      "_id": "bKInZ3bMpQX9T9Ge",
+      "_id": "sSIGHQEaOn2ngEe8",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "General's Order",
       "sort": 0,
@@ -79,12 +83,12 @@
           ]
         }
       },
-      "_key": "!actors.items!gorstavJuju00001.bKInZ3bMpQX9T9Ge"
+      "_key": "!actors.items!gorstavJuju00001.sSIGHQEaOn2ngEe8"
     },
     {
-      "_id": "wYvdefaztw8AxWkJ",
+      "_id": "g4gLqHlyeYxemD3j",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Executioner's Memory",
+      "name": "Construct-Cold Precision",
       "sort": 0,
       "type": "action",
       "system": {
@@ -94,9 +98,9 @@
         "actions": {
           "value": null
         },
-        "category": "offensive",
+        "category": "defensive",
         "description": {
-          "value": "<p>Kazavon beheaded him for failing to stop Mandraivus; the juju zombie remembers. Against anyone carrying <em>Serithtial</em> (or naming Mandraivus): +2 status to attack and damage, and he fights past destruction for 1 round.</p>"
+          "value": "<p>He fights without emotion, like a programmed thing mimicking a master fighter's skill — immune to fear and to attempts to feint or demoralize.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -111,10 +115,10 @@
           "value": []
         }
       },
-      "_key": "!actors.items!gorstavJuju00001.wYvdefaztw8AxWkJ"
+      "_key": "!actors.items!gorstavJuju00001.g4gLqHlyeYxemD3j"
     },
     {
-      "_id": "8DfM2G3Cgm4Fpiqh",
+      "_id": "mROKgqsV1sXX4mHx",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Juju Resilience",
       "sort": 0,
@@ -128,7 +132,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p>Zombie immunities; resistance physical 10 (except slashing), cold 10, electricity 10; not slowed (juju).</p>"
+          "value": "<p>Zombie immunities; resistance physical 10 (except slashing), cold 10, electricity 10; immune to <em>force barrage</em>-style effects; not slowed (juju).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -143,7 +147,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!gorstavJuju00001.8DfM2G3Cgm4Fpiqh"
+      "_key": "!actors.items!gorstavJuju00001.mROKgqsV1sXX4mHx"
     }
   ],
   "system": {
@@ -192,14 +196,14 @@
         "details": "",
         "value": [
           "common",
-          "infernal"
+          "orcish"
         ]
       },
       "level": {
         "value": 13
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> general of Kazavon's armies, executed minutes before the Star Tower fell — risen as a juju zombie in the War Room (E11) beside the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.curseOfTheWorm01]{Curse of the Worm} haunt. The sayona <strong>Risibeth</strong> (E7 — his old war-commander, run as an Elite @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.aerilayaBanshe01]{Aerilaya}-style spirit) trades castle-intelligence for a disturbing taste of living blood: she names three anchors and points to the chapel for the fourth.</p>",
+      "publicNotes": "<p><strong>Role:</strong> general of Kazavon's armies — half-orc, executed by Kazavon for failing to stop Mandraivus's invasion <em>minutes</em> before the Star Tower fell. For centuries his spirit served as one of Mithrodar's anchors, until @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.belshallamUmbr01]{Belshallam} destroyed him; the curse dragged him back <strong>diminished</strong> — a mere juju zombie with hate-lit eyes, refighting his lost day at the war room's sand table (E11). He carries <strong>the only key to the War Tower's door</strong> (C17/E1) and never leaves the war room. Fights until destroyed.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

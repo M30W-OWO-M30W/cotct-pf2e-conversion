@@ -5,9 +5,55 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "Lgfpn25oQ6xxmg0i",
+      "_id": "BtjQH531APc7jmzY",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Striking Longbow of Flame",
+      "name": "+1 Striking Flaming Returning Trident",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 27
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+10",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "1d6",
+            "damageType": "fire"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical"
+          ]
+        }
+      },
+      "_key": "!actors.items!ileosasFury00001.BtjQH531APc7jmzY"
+    },
+    {
+      "_id": "LUXdZdBsMYP8Xi0N",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Trident (thrown)",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -26,7 +72,7 @@
             "damageType": "piercing"
           },
           "1": {
-            "damage": "2d6",
+            "damage": "1d6",
             "damageType": "fire"
           }
         },
@@ -44,59 +90,15 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "deadly-d10",
             "magical",
-            "volley-30"
+            "thrown-20"
           ]
         }
       },
-      "_key": "!actors.items!ileosasFury00001.Lgfpn25oQ6xxmg0i"
+      "_key": "!actors.items!ileosasFury00001.LUXdZdBsMYP8Xi0N"
     },
     {
-      "_id": "tL1zg6huMVqzjWWN",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Striking Longsword",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 26
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+10",
-            "damageType": "slashing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "magical",
-            "versatile-p"
-          ]
-        }
-      },
-      "_key": "!actors.items!ileosasFury00001.tL1zg6huMVqzjWWN"
-    },
-    {
-      "_id": "l7JiApLbNmmBTu1y",
+      "_id": "m6akzYj4XjetWH3n",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "Rope of Binding",
       "sort": 0,
@@ -110,7 +112,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>A 30-ft living rope: @Check[type:reflex|dc:32] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} and @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} (Escape DC 32) as it winches the victim to her.</p>"
+          "value": "<p>A 30-ft living rope (their answer to clerics and healers): @Check[type:reflex|dc:32] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} and @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized} (Escape DC 32) as it winches the victim to her.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -128,12 +130,83 @@
           ]
         }
       },
-      "_key": "!actors.items!ileosasFury00001.l7JiApLbNmmBTu1y"
+      "_key": "!actors.items!ileosasFury00001.m6akzYj4XjetWH3n"
     },
     {
-      "_id": "EHD0RiICETFml8ew",
+      "_id": "hQ3pGGc9GhtcojOW",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Unholy Blight",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>One fury per round drops it on the largest enemy cluster (10-ft burst within 60 ft): @Damage[7d6[spirit]] (@Check[type:will|dc:32|basic:true]; failures @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine"
+          ]
+        }
+      },
+      "_key": "!actors.items!ileosasFury00001.hQ3pGGc9GhtcojOW"
+    },
+    {
+      "_id": "J6kwANfw5USDrT75",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Gang Fear",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><em>Fear</em> at will (@Check[type:will|dc:32]) — they pile it onto a troublesome lone foe, skipping targets they have been forewarned are immune.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "emotion",
+            "fear",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!ileosasFury00001.J6kwANfw5USDrT75"
+    },
+    {
+      "_id": "OsRcVR7P5C6oAsSf",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Fury's Resilience",
+      "name": "Everdawn Infusion",
       "sort": 0,
       "type": "action",
       "system": {
@@ -145,7 +218,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p>Fire immunity; resistance physical 10 (except holy); fly 60; <em>true seeing</em>; teleport once per hour. <strong>Decabbara, Eveanie, Suishani, Verasia</strong> — they teleport to their queen when the Everdawn battle begins.</p>"
+          "value": "<p>Bathed in the Pool: they <strong>teleport freely within the Sunken Queen</strong> (exempt from its interdiction), and are immune to bleed.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -160,7 +233,39 @@
           "value": []
         }
       },
-      "_key": "!actors.items!ileosasFury00001.EHD0RiICETFml8ew"
+      "_key": "!actors.items!ileosasFury00001.OsRcVR7P5C6oAsSf"
+    },
+    {
+      "_id": "6VUZs6eIiv90mk7b",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Fury's Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Fire immunity; resistance physical 10 (except holy); fly 60; <em>true seeing</em>; <em>greater teleport</em> (self only) at will.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ileosasFury00001.6VUZs6eIiv90mk7b"
     }
   ],
   "system": {
@@ -214,6 +319,8 @@
         "details": "",
         "value": [
           "common",
+          "celestial",
+          "draconic",
           "infernal"
         ]
       },
@@ -221,7 +328,7 @@
         "value": 12
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the four erinyes bound into Ileosa's contract — her bodyguard-furies, encountered across the Sunken Queen (B16) and at the Pool. They fight in shrieking pairs, ropes first.</p>",
+      "publicNotes": "<p><strong>Role (B16):</strong> the four erinyes bound to Ileosa by the A90 contract — <strong>Decabbara, Eveanie, Suishani, Verasia</strong> — her bodyguard-furies. On the PCs' <em>first</em> castle assault, one waits with the A17 guard-devils and <strong>teleports to the Sunken Queen to report</strong> rather than fight. At rest they meditate at B16; they teleport to the queen's side the instant she is attacked (B20), and investigate B2 if looting is sensed there — retreating to her at half HP in that errand only. Contract-bound: otherwise they fight to the death, in shrieking pairs, ropes first.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

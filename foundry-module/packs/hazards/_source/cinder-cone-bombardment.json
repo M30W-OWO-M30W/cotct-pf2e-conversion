@@ -1,0 +1,177 @@
+{
+  "_id": "appCinderCone001",
+  "name": "Cinder Cone Bombardment",
+  "type": "hazard",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "items": [
+    {
+      "_id": "PGlJjOB3TEllAiRN",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Volcanic Bomb",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": null,
+        "description": {
+          "value": "<p><strong>Trigger</strong> The party crosses a bombardment zone (or the GM's d20 travel die comes up a 1 near an active cone).</p><hr /><p><strong>Effect</strong> A bomb shatters in a 15-foot burst: @Damage[6d6[piercing]] and @Damage[6d6[fire]] (@Check[type:reflex|dc:28|basic:true]); on a critical failure, @Damage[2d6[fire]] persistent fire as clinging cinders.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!appCinderCone001.PGlJjOB3TEllAiRN"
+    }
+  ],
+  "folder": "appHazardsFld001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Cinder Cone Bombardment",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {}
+  },
+  "system": {
+    "attributes": {
+      "emitsSound": "encounter",
+      "hardness": 0,
+      "stealth": {
+        "details": "<p>@Check[type:perception|dc:28] to hear the tear-drop whistle of an incoming volcanic bomb in time to act.</p>",
+        "value": 28
+      }
+    },
+    "creatureType": "",
+    "details": {
+      "description": "<p>The Cinderlands' active cinder cones lob tear-shaped volcanic bombs up to a mile. They detonate on impact.</p>",
+      "disable": "<p>@Check[type:survival|dc:28] (expert) to read the active cone's rhythm and route the group through a quiet window (avoids the hazard for that leg of travel).</p>",
+      "isComplex": false,
+      "level": {
+        "value": 9
+      },
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      },
+      "reset": "<p>The cone keeps coughing — a new bomb every 1d4 hours in an active stretch.</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "environmental",
+        "fire"
+      ]
+    }
+  },
+  "_key": "!actors!appCinderCone001"
+}

@@ -59,7 +59,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>A bloatmage: his blood is his power. Each spell he casts above 5th rank deals him @Damage[1d6[bleed]] (already in his HP); when he bleeds, his next spell gains +1 to its DC.</p>"
+          "value": "<p>A bloatmage: his blood is his power. Each spell he casts above 5th rank deals him @Damage[1d6[bleed]] (already in his HP); when he bleeds, his next spell gains +1 to its DC. Bleed effects <em>against</em> him are dire: the DC to stanch his hemophiliac wounds is +5, and each new bleed drains the blood pool that fuels his free castings.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -126,7 +126,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>CL-15 wizardry (DC 36): <em>quickened magic missile</em> volleys (5 darts), <em>black tentacles</em> (@Check[type:reflex|dc:36] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, Escape DC 36), <em>cone of cold</em> @Damage[13d6[cold]], <em>dimension door</em>, <em>fly</em>, layered <em>mirror image</em> + <em>stoneskin</em> (pre-cast).</p>"
+          "value": "<p>CL-15 wizardry (DC 36): <em>project image</em> (his A45 opener — he fights through the double from A54), <em>prismatic spray</em>, <em>quickened magic missile</em> volleys (5 darts), <em>black tentacles</em> (@Check[type:reflex|dc:36] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, Escape DC 36), <em>cone of cold</em> @Damage[13d6[cold]], <em>dimension door</em>, <em>fly</em>, layered <em>mirror image</em> + <em>stoneskin</em> contingency (snaps his fingers) + <em>greater invisibility</em>.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -160,7 +160,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>His toad familiar croaks a stored spell (one 3rd-rank effect per scene) from a pocket dimension.</p>"
+          "value": "<p>His corpulent imp familiar (roams the castle as a rat or raven; returns when the alarm sounds) croaks a stored spell, or a <em>suggestion</em> — 'do not speak until sunrise' — at whoever finds the real Togomor.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -181,6 +181,82 @@
     },
     {
       "_id": "TcRhV3npe07eBgwh",
+      "img": "systems/pf2e/icons/default-icons/equipment.svg",
+      "name": "Seneschal's Gear",
+      "type": "equipment",
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+          "value": "<p><strong>Carried:</strong> a <strong>staff of evocation (greater)</strong>, a <strong>necklace of adaptation</strong> (invested: unaffected by inhaled threats, needs no air), the castle <strong>ring of keys</strong> (opens every castle lock unless an area says otherwise), an apex-Intelligence headband (diadem-of-intellect analogue), and scrolls: <em>dispelling (8th)</em>, <em>teleport</em>, <em>stoneskin</em> ×2, <em>wall of force</em>.</p>"
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 15
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 0
+          }
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "invested"
+          ]
+        },
+        "usage": {
+          "value": "worn"
+        }
+      },
+      "_key": "!actors.items!togomorBloatmg01.TcRhV3npe07eBgwh"
+    },
+    {
+      "_id": "9u8Xo4GWKcuLN9Y9",
       "img": "systems/pf2e/icons/default-icons/lore.svg",
       "name": "Thassilon Lore",
       "sort": 0,
@@ -204,7 +280,7 @@
         "rules": [],
         "slug": null
       },
-      "_key": "!actors.items!togomorBloatmg01.TcRhV3npe07eBgwh"
+      "_key": "!actors.items!togomorBloatmg01.9u8Xo4GWKcuLN9Y9"
     }
   ],
   "system": {
@@ -261,7 +337,7 @@
         "value": 15
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the bloatmage <strong>seneschal</strong> — Ileosa's vault-keeper and the castle's arcane warden (A44), grotesquely swollen with leeched blood. He knows the Hidden Way Below (A5) and warded it; his notes name the <strong>Sunken Queen</strong>. <strong>Morale:</strong> dimension-doors to the throne floor at ~60 HP; fights to the death only beside the queen's interests.</p>",
+      "publicNotes": "<p><strong>Role (A44):</strong> the bloatmage <strong>seneschal</strong> — Ileosa's vault-keeper and the castle's arcane warden, grotesquely swollen with leeched blood, and <strong>possessed for years by @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.sermignattoDvl01]{Sermignatto}</strong>, who wears him as a public face (his sketchbooks compulsively repeat a three-faced worm — @Check[type:occultism|dc:30] names a belier devil). He drew the Mushfens map filed in A43; his spellbooks (A44 secret panel) hold the akaruzug formulas. <strong>Morale:</strong> below ~30 HP he <em>dimension doors</em> to A59 — Sermignatto's lair — for a last stand. <strong>If slain</strong> he smiles and whispers thanks, freed. <strong>If the possession is broken without killing him, he surrenders:</strong> he reveals Sermignatto's history and habits (A59), confirms the queen's contract lies in A90, and explains the A77 phase door; once Sermignatto is dead he collects his spellbooks (if the PCs left them) and quits Korvosa forever.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

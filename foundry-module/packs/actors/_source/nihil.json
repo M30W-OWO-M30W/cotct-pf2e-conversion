@@ -1,13 +1,13 @@
 {
   "_id": "nihilDevil000001",
-  "name": "Nihil",
+  "name": "Nihil the Ashbringer",
   "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "YfbttsmGfnS0EMiR",
+      "_id": "5dgbSMCwmKLDDzuN",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Shadow-Barbed Chain",
+      "name": "+1 Unholy Scythe",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -22,7 +22,7 @@
         },
         "damageRolls": {
           "0": {
-            "damage": "3d8+13",
+            "damage": "3d10+13",
             "damageType": "slashing"
           },
           "1": {
@@ -44,31 +44,40 @@
         "traits": {
           "rarity": "common",
           "value": [
+            "deadly-d10",
             "magical",
-            "reach-15",
+            "reach-10",
             "trip",
             "unholy"
           ]
         }
       },
-      "_key": "!actors.items!nihilDevil000001.YfbttsmGfnS0EMiR"
+      "_key": "!actors.items!nihilDevil000001.5dgbSMCwmKLDDzuN"
     },
     {
-      "_id": "6LRAPzQOQxwqnoWG",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Assassin's Gift",
+      "_id": "bKInZ3bMpQX9T9Ge",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Wing Blade",
       "sort": 0,
-      "type": "action",
+      "type": "melee",
       "system": {
-        "actionType": {
-          "value": "action"
+        "attack": {
+          "value": ""
         },
-        "actions": {
-          "value": 2
+        "attackEffects": {
+          "value": []
         },
-        "category": "offensive",
+        "bonus": {
+          "value": 27
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d6+13",
+            "damageType": "slashing"
+          }
+        },
         "description": {
-          "value": "<p>Against an @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creature: a Chain Strike that deals +3d6 precision and forces @Check[type:fortitude|dc:34] or @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} (Zon-Kuthon's gift was a killer, not a soldier).</p>"
+          "value": ""
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -81,16 +90,17 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "attack"
+            "agile",
+            "reach-10"
           ]
         }
       },
-      "_key": "!actors.items!nihilDevil000001.6LRAPzQOQxwqnoWG"
+      "_key": "!actors.items!nihilDevil000001.bKInZ3bMpQX9T9Ge"
     },
     {
-      "_id": "qnLdNB7s1llv3wjV",
+      "_id": "wYvdefaztw8AxWkJ",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Chains of Night",
+      "name": "Ashbringer's Liturgy",
       "sort": 0,
       "type": "action",
       "system": {
@@ -102,7 +112,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>Shadow-chains erupt in a 15-ft burst within 60 feet: @Check[type:reflex|dc:34] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (Escape DC 34) and @Damage[4d6[void]].</p>"
+          "value": "<p>Once all foes are inside her tower: <em>blasphemy</em>-grade condemnation — living creatures in a 30-ft burst, @Damage[8d6[void]] and @Check[type:will|dc:34] or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}; she follows over the next rounds with <em>horrid wilting</em> (@Damage[12d6[void]], @Check[type:fortitude|dc:34|basic:true]) and <em>chain lightning</em> (@Damage[10d12[electricity]], @Check[type:reflex|dc:33|basic:true]).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -115,16 +125,85 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "concentrate",
+            "divine"
+          ]
+        }
+      },
+      "_key": "!actors.items!nihilDevil000001.wYvdefaztw8AxWkJ"
+    },
+    {
+      "_id": "8DfM2G3Cgm4Fpiqh",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Forcecage",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Once per day she walls the single most dangerous PC (the fighter whose weapon beats her resistances) into a cage of force — saved for later.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
             "divine",
-            "shadow"
+            "force",
+            "incapacitation"
           ]
         }
       },
-      "_key": "!actors.items!nihilDevil000001.qnLdNB7s1llv3wjV"
+      "_key": "!actors.items!nihilDevil000001.8DfM2G3Cgm4Fpiqh"
     },
     {
-      "_id": "ZyJrNtkjhfjKXGxD",
+      "_id": "wI8fBTjNO5siNPw6",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Devil's Veil",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><em>Greater invisibility</em> on herself (her pre-combat opener, with a 50% <em>summon</em> of one @UUID[Compendium.pf2e.pathfinder-bestiary-2.Actor.tCJEjNDUxyV1GzE3]{barbed devil}).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "illusion"
+          ]
+        }
+      },
+      "_key": "!actors.items!nihilDevil000001.wI8fBTjNO5siNPw6"
+    },
+    {
+      "_id": "PZte31vPN2GZLAMJ",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "SPIRIT ANCHOR",
       "sort": 0,
@@ -138,7 +217,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p><strong>One of Mithrodar's four anchors</strong> — bound by the chains, not loyalty. Devil immunities (fire; bleed; resistance physical 10 except silver). <em>He wants to be free:</em> clever PCs may bargain his cooperation against the others — though severing his anchor is the only freedom the chains allow.</p>"
+          "value": "<p><strong>One of Mithrodar's four anchors</strong> — chained by the castellan's network, not loyalty, and unable to leave her tower; she need not eat or drink, which makes her prison crueler than Belshallam's. Devil: immune fire; resistance physical 10 (except silver); fast healing 3. <strong>She cannot flee and fights to the death.</strong></p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -153,7 +232,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!nihilDevil000001.ZyJrNtkjhfjKXGxD"
+      "_key": "!actors.items!nihilDevil000001.PZte31vPN2GZLAMJ"
     }
   ],
   "system": {
@@ -192,25 +271,30 @@
         "value": 280
       },
       "speed": {
-        "otherSpeeds": [],
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 60
+          }
+        ],
         "value": 35
       }
     },
     "details": {
-      "blurb": "Chained devil-assassin; SPIRIT ANCHOR (D14)",
+      "blurb": "Ashmede devil; SPIRIT ANCHOR (D14)",
       "languages": {
         "details": "",
         "value": [
-          "common",
-          "infernal",
-          "shadowtongue"
+          "celestial",
+          "draconic",
+          "infernal"
         ]
       },
       "level": {
         "value": 14
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> Zon-Kuthon's gift-assassin to Kazavon, imprisoned by Mithrodar's network in the Tower of Kazavon (D14). The anchor with an agenda — and the best conversation in the Heights.</p>",
+      "publicNotes": "<p><strong>Role:</strong> Zon-Kuthon's gift to Kazavon — an ashmede assassin-enforcer. The night of the raid she was decoyed out of the castle by <strong>Kleestad's false-treason ploy</strong>; she returned too late, failed to retake Scarwall, and was scavenging in the tower when Mandraivus died — so the rising curse seized <em>her</em> soul as an anchor (D14). She monitors the PCs' progress through gargoyle reports, invisible imps, and the telepathy of her last devils (D12 barbed pair, D18 bone pair) — as each falls, the survivors are ordered back to her side. Aura of fear (@Check[type:will|dc:31] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}, cowering 1 round on a critical failure).</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -227,6 +311,9 @@
       "senses": [
         {
           "type": "darkvision"
+        },
+        {
+          "type": "see-invisibility"
         }
       ]
     },
@@ -257,12 +344,15 @@
       },
       "religion": {
         "base": 23
+      },
+      "intimidation": {
+        "base": 26
       }
     },
     "traits": {
       "rarity": "common",
       "size": {
-        "value": "med"
+        "value": "lg"
       },
       "value": [
         "fiend",
@@ -288,7 +378,7 @@
     "lastModifiedBy": null
   },
   "prototypeToken": {
-    "name": "Nihil",
+    "name": "Nihil the Ashbringer",
     "displayName": 20,
     "displayBars": 20,
     "disposition": -1,

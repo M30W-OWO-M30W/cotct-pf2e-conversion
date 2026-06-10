@@ -1,0 +1,202 @@
+{
+  "_id": "ch2DeathsBreath1",
+  "name": "Death's Breath Doors (G1)",
+  "type": "hazard",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "items": [
+    {
+      "_id": "YrAyIDhBFsF0IR3Y",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Reaping Scythes",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": null,
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature that is not a worshiper of Urgathoa touches the north door or the eastern double doors.</p><hr /><p><strong>Effect</strong> The painted skeletons strike out of the mural: scythe +20 vs. each creature within 5 feet of any of the warded doors, @Damage[2d10+9[slashing]] (deadly — a critical hit also leaves the target @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}). The skulls then exhale <strong>ungol dust</strong> through the whole of G1: each breathing creature there attempts a @Check[type:fortitude|dc:26], taking @Damage[2d6[poison]] and becoming @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} on a failure (Drained 2 on a critical failure). The gas disperses after 1 round.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch2DeathsBreath1.YrAyIDhBFsF0IR3Y"
+    }
+  ],
+  "folder": "ch2HazardsFld001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Death's Breath Doors (G1)",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "system": {
+    "attributes": {
+      "emitsSound": "encounter",
+      "hardness": 14,
+      "stealth": {
+        "details": "Trained — the painted scythe-skeletons' arms are subtly raised off the plaster.",
+        "value": 16
+      },
+      "hasHealth": true,
+      "hp": {
+        "details": "",
+        "max": 56,
+        "temp": 0,
+        "tempmax": 0,
+        "value": 56
+      },
+      "immunities": [
+        {
+          "type": "critical-hits"
+        },
+        {
+          "type": "precision"
+        }
+      ],
+      "ac": {
+        "value": 27
+      }
+    },
+    "creatureType": "",
+    "details": {
+      "description": "<p>Potent Urgathoan wards seal the north door and the eastern double doors of the temple's entry hall (G1). The skeletons painted around them animate to reap any non-Urgathoan who touches either door, and their painted mouths vent ungol-dust gas into the room.</p><p><strong>Linked alarm:</strong> triggering the doors also sets off an <em>alarm</em> in G8, alerting every creature in G8–G13 (see The Temple Under Alert).</p><p><strong>Bypass:</strong> if a door is bathed in at least 10 points of vitality/positive energy (a channeled 3-action <em>heal</em>, for example) without anyone touching it, the ward is neutralized for 1 minute before it re-arms.</p>",
+      "disable": "@Check[type:thievery|dc:28] (expert) to scribe out the wards on a door without touching it, or <em>dispel magic</em> (4th rank, counteract DC 26) against each warded door.",
+      "isComplex": false,
+      "level": {
+        "value": 8
+      },
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      },
+      "reset": "<p>The wards re-arm automatically after 1 minute.</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 15
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 12
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "magical",
+        "trap",
+        "poison"
+      ]
+    }
+  },
+  "_key": "!actors!ch2DeathsBreath1"
+}

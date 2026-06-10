@@ -1,0 +1,235 @@
+{
+  "_id": "ch6ParalytcPulse",
+  "name": "Paralytic Pulse (A8)",
+  "type": "hazard",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "items": [
+    {
+      "_id": "b5ZsksyIvvWRqJlH",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Waking Glow",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": null,
+        "description": {
+          "value": "<p><strong>Trigger</strong> Light strikes the statues.</p><hr /><p><strong>Effect</strong> The alcoves kindle; the trap rolls initiative. Round 1: an overwhelming mind-brush — every creature in A8 is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 round (@Check[type:will|dc:23] negates).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch6ParalytcPulse.b5ZsksyIvvWRqJlH"
+    },
+    {
+      "_id": "hDMMDJLophl94lIn",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Mass Hold",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": null,
+        "description": {
+          "value": "<p><strong>Round 2 routine.</strong> Every creature in A8: @Check[type:will|dc:23] (source DC; raise to 35 for level-appropriate teeth) or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} 1 round — critical failure 1 minute, new save each round (incapacitation). Simultaneously, <strong>four @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.ePJcp2ADOjJYYQ5Q]{shining children}</strong> coalesce from the glow and attack for 20 rounds before dissolving as the trap resets.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch6ParalytcPulse.hDMMDJLophl94lIn"
+    }
+  ],
+  "folder": "ch6HazardsFld001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Paralytic Pulse (A8)",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "system": {
+    "attributes": {
+      "emitsSound": "encounter",
+      "hardness": 14,
+      "stealth": {
+        "details": "<p>@Check[type:perception|dc:33] (expert) to sense the waiting charge in the four crumbling kneeling-servant statues in the southwest alcoves.</p>",
+        "value": 23
+      },
+      "hasHealth": true,
+      "hp": {
+        "details": "",
+        "max": 240,
+        "temp": 0,
+        "tempmax": 0,
+        "value": 240
+      },
+      "immunities": [
+        {
+          "type": "critical-hits"
+        },
+        {
+          "type": "precision"
+        }
+      ],
+      "ac": {
+        "value": 37
+      }
+    },
+    "creatureType": "",
+    "details": {
+      "description": "<p>Sorshen's ward on the antechamber to her first consort's crypt (A9). <strong>Trigger:</strong> any light cast on the statues; onset 1 round. Ileosa lost several servants here and abandoned the dig.</p>",
+      "disable": "<p>@Check[type:thievery|dc:33] (master) on each of the four statues to ground them, or destroy them (Hardness 14, HP 60 each). The Chelish conquerors couldn't — they bricked the corridor instead (A7).</p>",
+      "isComplex": true,
+      "level": {
+        "value": 16
+      },
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      },
+      "reset": "<p>Automatic, 2 minutes after triggering; the summoned children vanish as it does.</p>",
+      "routine": "<p>(1 action) Mass Hold each round while creatures remain in A8; the four shining children fight on their own initiative.</p>"
+    },
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 30
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 22
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "magical",
+        "trap",
+        "complex",
+        "incapacitation"
+      ]
+    }
+  },
+  "_key": "!actors!ch6ParalytcPulse"
+}

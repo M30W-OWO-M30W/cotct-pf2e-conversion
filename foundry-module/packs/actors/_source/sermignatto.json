@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "9u8Xo4GWKcuLN9Y9",
+      "_id": "6CixaKKbi03u2SpT",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Binding Quill",
+      "name": "Vile Proboscis",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -18,11 +18,11 @@
           "value": []
         },
         "bonus": {
-          "value": 28
+          "value": 32
         },
         "damageRolls": {
           "0": {
-            "damage": "3d8+11",
+            "damage": "3d10+14",
             "damageType": "piercing"
           },
           "1": {
@@ -44,30 +44,38 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "agile",
             "magical",
+            "reach-10",
             "unholy"
           ]
         }
       },
-      "_key": "!actors.items!sermignattoDvl01.9u8Xo4GWKcuLN9Y9"
+      "_key": "!actors.items!sermignattoDvl01.6CixaKKbi03u2SpT"
     },
     {
-      "_id": "QHjUylTrAkEFJUoO",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Read the Fine Print",
+      "_id": "it3V5cgVHrDLuNql",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Barbed Tentacle",
       "sort": 0,
-      "type": "action",
+      "type": "melee",
       "system": {
-        "actionType": {
-          "value": "action"
+        "attack": {
+          "value": ""
         },
-        "actions": {
-          "value": 1
+        "attackEffects": {
+          "value": []
         },
-        "category": "offensive",
+        "bonus": {
+          "value": 32
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d6+14",
+            "damageType": "slashing"
+          }
+        },
         "description": {
-          "value": "<p>He knows the soul-terms of everyone present: <em>detect thoughts</em> at will (@Check[type:will|dc:35]), and +2 circumstance on all checks against anyone who has ever sworn him anything.</p>"
+          "value": ""
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -80,87 +88,19 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "concentrate",
-            "mental"
+            "agile",
+            "magical",
+            "reach-15",
+            "unholy"
           ]
         }
       },
-      "_key": "!actors.items!sermignattoDvl01.QHjUylTrAkEFJUoO"
+      "_key": "!actors.items!sermignattoDvl01.it3V5cgVHrDLuNql"
     },
     {
-      "_id": "RziCmx4aMLztjvxw",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Clause of Agony",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>One creature within 60 feet: @Check[type:will|dc:35] or contract-script burns across its skin — @Damage[10d6[mental]] and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} 1 round.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "divine",
-            "mental"
-          ]
-        }
-      },
-      "_key": "!actors.items!sermignattoDvl01.RziCmx4aMLztjvxw"
-    },
-    {
-      "_id": "JVUzd5DHZjXaImKl",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Infernal Court",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Summons 1d4 lesser devils (use @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ileosasFury00001]{Fury} stats at Weak) for 1 minute, once per day.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "conjuration",
-            "divine"
-          ]
-        }
-      },
-      "_key": "!actors.items!sermignattoDvl01.JVUzd5DHZjXaImKl"
-    },
-    {
-      "_id": "yRlz0YpA3R2mHiPg",
+      "_id": "zZJogLEqb8oisE0i",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Devil's Resilience",
+      "name": "Ethereal Stalking",
       "sort": 0,
       "type": "action",
       "system": {
@@ -170,9 +110,9 @@
         "actions": {
           "value": null
         },
-        "category": "defensive",
+        "category": "offensive",
         "description": {
-          "value": "<p>Fire immunity; resistance physical 10 (except silver); teleport at will (castle-bound by his own contract).</p>"
+          "value": "<p><em>Ethereal jaunt</em> at will. He patrols the keep from the Ethereal Plane, watching through Togomor's eyes — and deliberately <strong>lets the PCs kill</strong> the castle's devils, the false queen, even Togomor, to learn their tactics before he manifests. (The Sunken Queen's ghost-touch walls would bar this trick; the castle's do not.)</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -187,19 +127,160 @@
           "value": []
         }
       },
-      "_key": "!actors.items!sermignattoDvl01.yRlz0YpA3R2mHiPg"
+      "_key": "!actors.items!sermignattoDvl01.zZJogLEqb8oisE0i"
+    },
+    {
+      "_id": "I8EKUMzddktDkZa2",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Demand",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A <em>sending</em>-borne compulsion to one PC he knows through Togomor: @Check[type:will|dc:38] or the target feels driven to slip away and seek him out <em>alone</em>.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "linguistic",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!sermignattoDvl01.I8EKUMzddktDkZa2"
+    },
+    {
+      "_id": "fUooSUJjyNrfQ2Jw",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Possession Gambit",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>One creature within 30 feet (his favorite opener on a PC who came alone): @Check[type:will|dc:38] (incapacitation) or possessed as 9th-rank <em>possession</em> — he wrecks the party from inside it, as he has worn Togomor for years.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "incapacitation",
+            "mental",
+            "possession"
+          ]
+        }
+      },
+      "_key": "!actors.items!sermignattoDvl01.fUooSUJjyNrfQ2Jw"
+    },
+    {
+      "_id": "JrpvJ5GpkEduTzvb",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "One at a Time",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><em>Mass suggestion</em> (@Check[type:will|dc:38]): duel him singly — he savors strangling mortals one by one. In open combat he flies, keeping range, working spell-like abilities.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "linguistic",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!sermignattoDvl01.JrpvJ5GpkEduTzvb"
+    },
+    {
+      "_id": "UzKFxKR5OHORJYt4",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Devil's Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Fire immunity; resistance physical 15 (except holy silver); <em>true seeing</em>; telepathy 100 ft. <strong>Morale:</strong> below 40 HP he <em>plane shifts</em> back to Hell and does not return for many years.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!sermignattoDvl01.UzKFxKR5OHORJYt4"
     }
   ],
   "system": {
     "abilities": {
       "str": {
-        "mod": 5
+        "mod": 6
       },
       "dex": {
         "mod": 4
       },
       "con": {
-        "mod": 4
+        "mod": 5
       },
       "int": {
         "mod": 6
@@ -214,37 +295,43 @@
     "attributes": {
       "ac": {
         "details": "",
-        "value": 37
+        "value": 39
       },
       "allSaves": {
         "value": ""
       },
       "hp": {
         "details": "",
-        "max": 280,
+        "max": 300,
         "temp": 0,
-        "value": 280
+        "value": 300
       },
       "speed": {
-        "otherSpeeds": [],
-        "value": 30
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 40
+          }
+        ],
+        "value": 25
       }
     },
     "details": {
-      "blurb": "Contract devil of the throne room (A52)",
+      "blurb": "Belier devil of the royal bedroom (A59)",
       "languages": {
         "details": "",
         "value": [
           "common",
           "infernal",
-          "celestial"
+          "celestial",
+          "thassilonian"
         ]
       },
       "level": {
-        "value": 15
+        "value": 16
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the contract devil behind the throne (A52) — broker of Ileosa's erinyes-binding (and secretly the agent of his hidden master, the infernal Duke <strong>Lorthact</strong>). He holds 'court' among the throne room's sycophants, <strong>far preferring negotiation</strong>: the PCs' souls have prices, and he knows them. If Ileosa dies un-raiseable, her contract reverts to him — to Lorthact. A devil worth out-lawyering rather than out-fighting.</p>",
+      "publicNotes": "<p><strong>Role (A59):</strong> the <strong>belier devil</strong> (bdellavritra) behind the throne — a wormlike horror of three vile faces, styled <em>Lord of the Bloody Quicksands</em> (his name means 'Leech Master'). He served Runelord Sorshen in old Thassilon, brokered Ileosa's contract and the Crown's forging in A90, and has <strong>possessed Togomor for years</strong> as his public face — Ileosa entrances him as Sorshen once did. He lairs in the royal bedroom (A59) and manifests only when Togomor dies, when the PCs reach that room — or at once, if they enter the castle <em>ethereally</em>. A devil worth out-maneuvering rather than out-fighting.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -257,7 +344,7 @@
     },
     "perception": {
       "details": "",
-      "mod": 27,
+      "mod": 30,
       "senses": [
         {
           "type": "darkvision"
@@ -271,38 +358,41 @@
     "saves": {
       "fortitude": {
         "saveDetail": "",
-        "value": 25
+        "value": 27
       },
       "reflex": {
         "saveDetail": "",
-        "value": 24
+        "value": 26
       },
       "will": {
         "saveDetail": "",
-        "value": 28
+        "value": 30
       }
     },
     "skills": {
       "deception": {
-        "base": 31
+        "base": 32
       },
       "diplomacy": {
-        "base": 29
+        "base": 30
       },
       "society": {
-        "base": 29
+        "base": 30
       },
       "occultism": {
-        "base": 27
+        "base": 30
       },
       "intimidation": {
-        "base": 27
+        "base": 28
+      },
+      "religion": {
+        "base": 28
       }
     },
     "traits": {
       "rarity": "common",
       "size": {
-        "value": "med"
+        "value": "lg"
       },
       "value": [
         "fiend",

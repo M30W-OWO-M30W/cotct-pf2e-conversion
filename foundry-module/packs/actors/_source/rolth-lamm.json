@@ -1,0 +1,837 @@
+{
+  "_id": "ch2RolthLamm0001",
+  "name": "Rolth Lamm",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "Ze4csfpl4FooRdc5",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+1 Dagger",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4+2",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "rolth-dagger",
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse",
+            "magical",
+            "versatile-s"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.Ze4csfpl4FooRdc5"
+    },
+    {
+      "_id": "nRFS7psBRLaGFE90",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sneak Attack",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Rolth deals 1d6 extra precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [
+          {
+            "key": "DamageDice",
+            "selector": "strike-damage",
+            "category": "precision",
+            "diceNumber": 1,
+            "dieSize": "d6",
+            "predicate": [
+              "target:condition:off-guard"
+            ]
+          },
+          {
+            "key": "RollOption",
+            "domain": "all",
+            "option": "target:condition:off-guard",
+            "toggleable": "totm",
+            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
+          }
+        ],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "rogue"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.nRFS7psBRLaGFE90"
+    },
+    {
+      "_id": "CvGDzRfw3VgbC2t0",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Arcane Spellcasting",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Rolth casts as an 8th-level necromancer (DC 26, spell attack +18). He enters a fight pre-buffed (<em>mage armor, shield, false life</em> — ~15 temporary HP, included).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.CvGDzRfw3VgbC2t0"
+    },
+    {
+      "_id": "47dq3ZSQvoig6SDe",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Void Ray",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A ray of entropy (a spell attack +18 against one creature within 60 feet): @Damage[5d6[void]], and the target is @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} on a critical hit). His PF1e <em>enervation</em>.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "void"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.47dq3ZSQvoig6SDe"
+    },
+    {
+      "_id": "arazFPg39Ann9oRT",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Hold Person",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>One humanoid within 30 feet must succeed at a @Check[type:will|dc:26] or be @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} for 1 round (@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} on a success). His favorite set-up — a held victim is his to knife at leisure.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "incapacitation",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.arazFPg39Ann9oRT"
+    },
+    {
+      "_id": "hsUMLWXZq8z5C1aH",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Lightning Bolt",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A 60-foot line of lightning: @Damage[7d6[electricity]] (basic @Check[type:reflex|dc:26]).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "electricity"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.hsUMLWXZq8z5C1aH"
+    },
+    {
+      "_id": "zlaDbFhEsJb6V6Mx",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Vampiric Touch",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A draining touch (melee spell attack +18): @Damage[5d6[void]]; Rolth gains temporary Hit Points equal to half the damage dealt.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "void"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.zlaDbFhEsJb6V6Mx"
+    },
+    {
+      "_id": "Cu1EG4HrdVLd7W7I",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Dimension Door",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Rolth teleports up to 120 feet. Reduced to fewer than ~15 HP, he uses this to <strong>escape</strong> — he is meant to survive as a recurring villain who animates the PCs' dead allies against them.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "teleportation"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.Cu1EG4HrdVLd7W7I"
+    },
+    {
+      "_id": "kZmHmu4IzXN9VY8G",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Anatomy Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 17
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.kZmHmu4IzXN9VY8G"
+    },
+    {
+      "name": "Dagger",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "dagger",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "agile",
+            "finesse",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "dagger",
+        "bulk": {
+          "value": 0.1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "expend": null,
+        "ammo": null,
+        "reload": {
+          "value": "-"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
+      },
+      "_id": "aemObTmst5SsSQKq",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.aemObTmst5SsSQKq"
+    },
+    {
+      "_id": "StUX6GP4k15VIkzI",
+      "img": "systems/pf2e/icons/default-icons/equipment.svg",
+      "name": "Rolth's Blood-Veil Notes",
+      "type": "equipment",
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+          "value": "<p>Extensive, gleeful research notes on blood veil and the Varisian immunity — one of the <strong>three note-sets</strong> that unlock the cure (Chapter Conclusion → Curing Blood Veil).</p>"
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 0
+          }
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        },
+        "usage": {
+          "value": "worn"
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.StUX6GP4k15VIkzI"
+    },
+    {
+      "_id": "IwcSUw7GACYUW9Z5",
+      "img": "systems/pf2e/icons/default-icons/equipment.svg",
+      "name": "Mortician's Tools & Black Onyxes",
+      "type": "equipment",
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+          "value": "<p>Fine mortician's tools and six black onyx gems (<em>animate dead</em> components; ~21 gp re-scaled), plus a scroll of <em>teleport</em> and a wand of <em>magic missile</em>.</p>"
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 1
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 21
+          }
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        },
+        "usage": {
+          "value": "worn"
+        }
+      },
+      "_key": "!actors.items!ch2RolthLamm0001.IwcSUw7GACYUW9Z5"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": -1
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 5
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 26
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 120,
+        "temp": 0,
+        "value": 120
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Necromancer; the Key Lock Killer; Gaedren's son",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "elven",
+          "necril",
+          "shoanti",
+          "undercommon",
+          "varisian"
+        ]
+      },
+      "level": {
+        "value": 8
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> Gaedren Lamm's son — the necromancer whose Dead Warrens the PCs cleared in Chapter 1, the 'Key Lock Killer' of Korvosan legend, and Jolistina's beloved. Conscripted by the cult, his work drives the <strong>plague-zombie strain</strong> of blood veil, and he holds one of the three note-sets needed for the cure. He is besotted with Lady Andaisin.</p><p><strong>Tactics:</strong> a back-line caster — he lets the cultists and zombies fight while he Holds, drains, and bolts from range, shrilly accusing the PCs of <strong>murdering his father</strong> and promising to animate their corpses. <strong>Morale:</strong> Dimension Door out below ~15 HP; if he escapes he is a <strong>recurring campaign villain</strong> (he resurfaces beside other enemies, and animates any ally the PCs lose).</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 16,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 16
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 18
+      }
+    },
+    "skills": {
+      "arcana": {
+        "base": 19
+      },
+      "crafting": {
+        "base": 17
+      },
+      "occultism": {
+        "base": 17
+      },
+      "stealth": {
+        "base": 16
+      },
+      "thievery": {
+        "base": 14
+      },
+      "deception": {
+        "base": 15
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch2CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Rolth Lamm",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!ch2RolthLamm0001"
+}

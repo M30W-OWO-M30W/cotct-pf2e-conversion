@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "BFCnQPpkznpxq70L",
+      "_id": "NvL4w3aYKmgLsTxT",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Obsession of Servitude",
       "sort": 0,
@@ -19,7 +19,7 @@
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Trigger</strong> Entering the lounge (C6).</p><hr /><p><strong>Effect</strong> @Check[type:will|dc:32] or compelled to clean, mend, and serve for 1 hour (@UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated}; an ally may slap them free — Athletics vs. Fort DC).</p>"
+          "value": "<p><strong>Trigger</strong> Entering the lounge's southern half (C6); it can seize any creature within 200 feet with line of sight.</p><hr /><p><strong>Effect</strong> @Check[type:will|dc:32] or compelled (mass <em>suggestion</em>) to go clean a <em>random</em> second-floor room (roll 1d20 for the area) — a party-splitter; victims fight back if attacked but return to scrubbing after.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -34,10 +34,10 @@
           "value": []
         }
       },
-      "_key": "!actors.items!obsessionHaunt01.BFCnQPpkznpxq70L"
+      "_key": "!actors.items!obsessionHaunt01.NvL4w3aYKmgLsTxT"
     },
     {
-      "_id": "FtWTmG7WHNGL1PP6",
+      "_id": "8VyRtPGWHwFKyQhF",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Obsession of Battle",
       "sort": 0,
@@ -51,7 +51,7 @@
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Trigger</strong> Entering the sparring room (C7).</p><hr /><p><strong>Effect</strong> @Check[type:will|dc:32] or compelled to spar — the victim attacks the nearest creature with nonlethal Strikes for 1 minute (@UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} in effect; damage ends it).</p>"
+          "value": "<p><strong>Trigger</strong> Entering the sparring room's center (C7); same 200-ft reach.</p><hr /><p><strong>Effect</strong> @Check[type:will|dc:30] or compelled to attack the closest creature (as a <em>song of discord</em>) for 1 minute.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -66,7 +66,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!obsessionHaunt01.FtWTmG7WHNGL1PP6"
+      "_key": "!actors.items!obsessionHaunt01.8VyRtPGWHwFKyQhF"
     }
   ],
   "folder": "ch5HazardsFld001",
@@ -158,14 +158,14 @@
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>@Check[type:perception|dc:32] (trained) to notice the compulsion gathering.</p>",
-        "value": 32
+        "details": "<p>@Check[type:perception|dc:30] (trained): dust swept up by invisible hands (C6); blood spattering onto floor and walls (C7).</p>",
+        "value": 30
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>Twin haunts of the servants' floor: <strong>Servitude</strong> (C6) and <strong>Battle</strong> (C7).</p>",
-      "disable": "<p>@Check[type:religion|dc:32] to exorcise (vitality), or indulge the obsession to exhaustion.</p>",
+      "description": "<p>Twin haunts of the servants' floor: <strong>Servitude</strong> (C6) and <strong>Battle</strong> (C7) — both puppeted by the four geists in C8.</p>",
+      "disable": "<p>Destroyed only when the curse lifts <strong>and</strong> the geists of C8 are slain; the geists sense each activation and arrive to attack (reset drops to 5 rounds while they live).</p>",
       "isComplex": false,
       "level": {
         "value": 12
@@ -176,7 +176,7 @@
         "license": "OGL",
         "remaster": true
       },
-      "reset": "<p>1 day.</p>",
+      "reset": "<p>1 minute (5 rounds while the geists control it).</p>",
       "routine": ""
     },
     "saves": {

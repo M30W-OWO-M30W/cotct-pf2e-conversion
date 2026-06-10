@@ -7,7 +7,7 @@
     {
       "_id": "qb0I3ItyDeAvLBVC",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Fine Dagger",
+      "name": "+1 Dagger",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -18,7 +18,7 @@
           "value": []
         },
         "bonus": {
-          "value": 9
+          "value": 10
         },
         "damageRolls": {
           "0": {
@@ -42,6 +42,7 @@
           "value": [
             "agile",
             "finesse",
+            "magical",
             "versatile-s"
           ]
         }
@@ -372,13 +373,12 @@
       "_key": "!actors.items!RKfT6vJ5guinSBjo.huQnkXd4PNlpQgSG"
     },
     {
-      "name": "Dagger",
+      "name": "+1 Dagger",
       "type": "weapon",
       "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
       "system": {
         "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]</p>",
-          "gm": ""
+          "value": "<p>Gaedren's prized magical dagger — the boss's signature loot and a fitting first permanent magic weapon (world copy in the Treasure folder).</p>"
         },
         "rules": [],
         "slug": "dagger",
@@ -397,7 +397,8 @@
             "agile",
             "finesse",
             "thrown-10",
-            "versatile-s"
+            "versatile-s",
+            "magical"
           ],
           "rarity": "common"
         },
@@ -408,7 +409,7 @@
           "remaster": false
         },
         "level": {
-          "value": 0
+          "value": 2
         },
         "quantity": 1,
         "baseItem": "dagger",
@@ -422,7 +423,7 @@
         "hardness": 0,
         "price": {
           "value": {
-            "sp": 2
+            "gp": 35
           }
         },
         "equipped": {
@@ -474,7 +475,7 @@
         },
         "grade": null,
         "runes": {
-          "potency": 0,
+          "potency": 1,
           "striking": 0,
           "property": []
         },
@@ -498,21 +499,20 @@
       "_stats": {
         "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
       },
-      "_id": "hfjlXDQvtsiy3YQe",
+      "_id": "ch1GaedrenDag001",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "_key": "!actors.items!RKfT6vJ5guinSBjo.hfjlXDQvtsiy3YQe"
+      "_key": "!actors.items!RKfT6vJ5guinSBjo.ch1GaedrenDag001"
     },
     {
-      "name": "Padded Armor",
+      "name": "+1 Padded Armor",
       "type": "armor",
       "img": "icons/equipment/chest/breastplate-banded-leather-brown.webp",
       "system": {
         "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh]</p>",
-          "gm": ""
+          "value": "<p>Gaedren's grimy padded armor carries a +1 armor potency rune — his PF1e '+1 padded armor', kept as the minor armor reward the Treasure page promises. His AC already includes it.</p>"
         },
         "rules": [],
         "slug": "padded-armor",
@@ -528,7 +528,8 @@
         "traits": {
           "otherTags": [],
           "value": [
-            "comfort"
+            "comfort",
+            "magical"
           ],
           "rarity": "common"
         },
@@ -539,7 +540,7 @@
           "remaster": false
         },
         "level": {
-          "value": 0
+          "value": 5
         },
         "quantity": 1,
         "baseItem": "padded-armor",
@@ -553,7 +554,7 @@
         "hardness": 0,
         "price": {
           "value": {
-            "sp": 2
+            "gp": 160
           }
         },
         "equipped": {
@@ -589,7 +590,7 @@
         "speedPenalty": 0,
         "grade": null,
         "runes": {
-          "potency": 0,
+          "potency": 1,
           "resilient": 0,
           "property": []
         },
@@ -599,12 +600,12 @@
       "_stats": {
         "compendiumSource": "Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh"
       },
-      "_id": "iv2sTvRM7sy4F8QZ",
+      "_id": "ch1GaedrenPad001",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "_key": "!actors.items!RKfT6vJ5guinSBjo.iv2sTvRM7sy4F8QZ"
+      "_key": "!actors.items!RKfT6vJ5guinSBjo.ch1GaedrenPad001"
     }
   ],
   "system": {

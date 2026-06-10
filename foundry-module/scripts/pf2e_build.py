@@ -48,7 +48,14 @@ def parafy(text, target=550):
             cur = (cur + " " + sent).strip()
     if cur:
         out.append(cur)
-    return "".join("<p>" + x + "</p>" for x in out)
+    # never let a chunk start lowercase (OCR mid-sentence periods) — merge back
+    fixed = []
+    for x in out:
+        if fixed and x[:1].islower():
+            fixed[-1] = fixed[-1] + " " + x
+        else:
+            fixed.append(x)
+    return "".join("<p>" + x + "</p>" for x in fixed)
 
 
 def _scrub_ocr(text):

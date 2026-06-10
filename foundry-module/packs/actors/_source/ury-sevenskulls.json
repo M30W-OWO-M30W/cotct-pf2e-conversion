@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "UA9icugn9xHTxDnO",
+      "_id": "nOfzr2uRukbGdfPz",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Striking Greataxe",
+      "name": "Akeraum (+1 Striking Greatsword)",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -41,14 +41,58 @@
           "rarity": "common",
           "value": [
             "magical",
-            "sweep"
+            "versatile-p"
           ]
         }
       },
-      "_key": "!actors.items!urySevenskulls01.UA9icugn9xHTxDnO"
+      "_key": "!actors.items!urySevenskulls01.nOfzr2uRukbGdfPz"
     },
     {
-      "_id": "nOfzr2uRukbGdfPz",
+      "_id": "dP9TglbMkEFPCR8m",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Composite Longbow",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 19
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+8",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d10",
+            "propulsive",
+            "range-increment-100"
+          ]
+        }
+      },
+      "_key": "!actors.items!urySevenskulls01.dP9TglbMkEFPCR8m"
+    },
+    {
+      "_id": "SpF1TOHANXgFsA9N",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "Skull-Taker's Sweep",
       "sort": 0,
@@ -62,7 +106,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>A Greataxe Strike against each of two adjacent foes; a critical hit also knocks the target @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
+          "value": "<p>An Akeraum Strike against each of two adjacent foes; a critical hit also knocks the target @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -79,10 +123,10 @@
           ]
         }
       },
-      "_key": "!actors.items!urySevenskulls01.nOfzr2uRukbGdfPz"
+      "_key": "!actors.items!urySevenskulls01.SpF1TOHANXgFsA9N"
     },
     {
-      "_id": "dP9TglbMkEFPCR8m",
+      "_id": "xzYzAhiFdSPOmQi6",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "Seven Skulls Roar",
       "sort": 0,
@@ -116,10 +160,10 @@
           ]
         }
       },
-      "_key": "!actors.items!urySevenskulls01.dP9TglbMkEFPCR8m"
+      "_key": "!actors.items!urySevenskulls01.xzYzAhiFdSPOmQi6"
     },
     {
-      "_id": "SpF1TOHANXgFsA9N",
+      "_id": "2CHWxjRPpljtfd1A",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Ferocity",
       "sort": 0,
@@ -148,7 +192,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!urySevenskulls01.SpF1TOHANXgFsA9N"
+      "_key": "!actors.items!urySevenskulls01.2CHWxjRPpljtfd1A"
     }
   ],
   "system": {
@@ -204,7 +248,7 @@
         "value": 10
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> Deadwatcher chieftain (A10). Pragmatic for an orc: the PCs can <strong>fight through the barbican or talk past it</strong> — @Check[type:intimidation|dc:28] or @Check[type:diplomacy|dc:32] (or a worthy gift/duel) buys passage; the Deadwatchers will not follow anyone inside. His seven-skull necklace is a Belkzen legend.</p>",
+      "publicNotes": "<p><strong>Role:</strong> Deadwatcher chieftain (A10) — son of a Rotten Tongue war chief, holder of the post a record three years, inordinately proud of the stuffed nightbelly boa on his ceiling. <strong>Tactics:</strong> on an alarm he joins the bows at A8, grows impatient within a few rounds, and <em>leaps off the parapet</em> (@Check[type:acrobatics|dc:15] to break the fall) to get at melee. Eager to fight something other than wild animals; fights to the death, pursues relentlessly — <strong>but never into Scarwall</strong>. The tribe can also be talked past: @Check[type:intimidation|dc:28] or @Check[type:diplomacy|dc:32] (or a duel/worthy gift) buys passage. <strong>Treasure:</strong> Akeraum (a dragon-feller — +1 striking greatsword), his necklace of seven silver-plated red-wyrmling skulls (~105 gp), 10 pp and 6 gp in pouch.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -247,6 +291,9 @@
         "base": 20
       },
       "survival": {
+        "base": 16
+      },
+      "acrobatics": {
         "base": 16
       }
     },

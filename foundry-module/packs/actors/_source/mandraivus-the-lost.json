@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "HpEBR6a7b6hVPxzc",
+      "_id": "N4KNwHQkMaFo4rYe",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Ghostly Bastard Sword",
+      "name": "Spectral Touch",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -23,7 +23,12 @@
         "damageRolls": {
           "0": {
             "damage": "3d8+9",
-            "damageType": "force"
+            "damageType": "void"
+          },
+          "1": {
+            "damage": "1d6",
+            "damageType": "void",
+            "category": "persistent"
           }
         },
         "description": {
@@ -45,10 +50,10 @@
           ]
         }
       },
-      "_key": "!actors.items!mandraivusLost01.HpEBR6a7b6hVPxzc"
+      "_key": "!actors.items!mandraivusLost01.N4KNwHQkMaFo4rYe"
     },
     {
-      "_id": "qjSW1kMl3gxewKvS",
+      "_id": "DJcTF3jvTXLNtCtH",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "Hero's Lament",
       "sort": 0,
@@ -81,12 +86,12 @@
           ]
         }
       },
-      "_key": "!actors.items!mandraivusLost01.qjSW1kMl3gxewKvS"
+      "_key": "!actors.items!mandraivusLost01.DJcTF3jvTXLNtCtH"
     },
     {
-      "_id": "AZa8PlVF6xB07VvF",
+      "_id": "ONuT1f2cz3a3UnOe",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Frightful Presence",
+      "name": "Drain Life",
       "sort": 0,
       "type": "action",
       "system": {
@@ -98,7 +103,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>60-ft aura: @Check[type:will|dc:31] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} on first sight.</p>"
+          "value": "<p>A creature damaged by his touch: @Check[type:fortitude|dc:33] or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (cumulative).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -113,12 +118,12 @@
           "value": []
         }
       },
-      "_key": "!actors.items!mandraivusLost01.AZa8PlVF6xB07VvF"
+      "_key": "!actors.items!mandraivusLost01.ONuT1f2cz3a3UnOe"
     },
     {
-      "_id": "M8QlIjCs7jrvxvji",
+      "_id": "uMJPmC7ZIBXLXao3",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Ghost Resilience",
+      "name": "Wraith Resilience",
       "sort": 0,
       "type": "action",
       "system": {
@@ -130,7 +135,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p>Incorporeal; resistance all 15 (except force, ghost touch, vitality); rejuvenates in the Vortex of Madness until his anguish is answered.</p>"
+          "value": "<p>Incorporeal; resistance all 15 (except force, ghost touch, vitality); sunlight powerlessness; rejuvenates beside the Vortex of Madness until his anguish is answered.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -145,7 +150,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!mandraivusLost01.M8QlIjCs7jrvxvji"
+      "_key": "!actors.items!mandraivusLost01.uMJPmC7ZIBXLXao3"
     }
   ],
   "system": {
@@ -189,19 +194,20 @@
       }
     },
     "details": {
-      "blurb": "Ghost of Kazavon's slayer (B5)",
+      "blurb": "Wraith of Kazavon's slayer (B5)",
       "languages": {
         "details": "",
         "value": [
           "common",
-          "shoanti"
+          "shoanti",
+          "celestial"
         ]
       },
       "level": {
         "value": 13
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the hero who slew Kazavon — murdered here (B5) by the traitor Kleestad minutes after his victory, and bound by the curse beside the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.vortexMadness001]{Vortex of Madness}. He attacks all who approach… unless calmed: speaking his name, Serithtial's, or showing Shoanti regalia earns @Check[type:diplomacy|dc:34] to reach the hero inside (@Check[type:religion|dc:30] reveals his rejuvenation). Laid to rest — or told Serithtial will be carried against Kazavon's seed — he yields his blessing instead of his blade: <strong>+1 status to saves vs. the castle's fear effects</strong> for the party, and the truth of Kleestad's treason.</p>",
+      "publicNotes": "<p><strong>Role:</strong> the hero who slew Kazavon — and died here (B5) when the <strong>orc horde</strong> stormed the castle he had taken, his guards falling one by one until the invaders overwhelmed him alone. The latent spirits rose in triumph at his death, slaughtered the orcs, and kept the castle; his skeleton still slumps anonymously in the corner, in dust-caked celestial armor. Risen as a unique madness-eaten wraith the round after the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.vortexMadness001]{Vortex of Madness} collapses. <strong>Tactics:</strong> he favors targets resembling his old self — paladins, armored fighters, clerics of militant good gods; <em>any bastard-sword wielder trumps all</em> (he shrieks that no one else shall have Serithtial — it is his alone). <strong>Calming him:</strong> speaking his name, Serithtial's, or showing Shoanti regalia earns @Check[type:diplomacy|dc:34] to reach the hero inside (@Check[type:religion|dc:30] reveals his rejuvenation). Laid to rest — or sworn that Serithtial will be carried against Kazavon's seed — he yields a blessing instead of a blade: <strong>+1 status to saves vs. the castle's fear effects</strong> for the party. <strong>Treasure:</strong> his full plate is <em>celestial armor</em> bearing Lastwall heraldry (+1 resilient chain-light plate that counts as light armor; the rest of his gear was looted centuries ago).</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -218,6 +224,9 @@
       "senses": [
         {
           "type": "darkvision"
+        },
+        {
+          "type": "lifesense"
         }
       ]
     },
@@ -254,7 +263,7 @@
       },
       "value": [
         "undead",
-        "ghost",
+        "wraith",
         "incorporeal"
       ]
     }

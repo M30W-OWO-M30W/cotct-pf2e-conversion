@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "Co873SVV8VDsXTLE",
+      "_id": "m0c8UuGzXSepTAIE",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Uncorked",
       "sort": 0,
@@ -19,7 +19,7 @@
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Trigger</strong> A bottle is opened or broken.</p><hr /><p><strong>Effect</strong> A polong (run as an invisible @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.Gu0cJHGwPd547OtC]{wraith} with +2 status to attacks) erupts and possesses or pummels; all three loose at once is a Severe surprise.</p>"
+          "value": "<p><strong>Trigger</strong> The double door from B17 is opened.</p><hr /><p><strong>Effect</strong> All three bottles pop: three advanced polongs (run as invisible @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.Gu0cJHGwPd547OtC]{wraiths} with +2 status to attacks) erupt, slashing with terrible claw-wounds.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -34,7 +34,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!polongBottles001.Co873SVV8VDsXTLE"
+      "_key": "!actors.items!polongBottles001.m0c8UuGzXSepTAIE"
     }
   ],
   "folder": "ch5HazardsFld001",
@@ -126,14 +126,14 @@
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>@Check[type:perception|dc:32] to notice the three corked bottles trembling on the workbench.</p>",
-        "value": 32
+        "details": "<p>@Check[type:perception|dc:30] to spot the trip-lines and pulleys running to three corked bottles lashed into the torch sconces (DC 10 from inside the room).</p>",
+        "value": 30
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>Three blood-spirits imprisoned in glass by the castle's old caretaker-alchemist.</p>",
-      "disable": "<p>Leave them corked; @Check[type:thievery|dc:32] to wax-seal them permanently.</p>",
+      "description": "<p>Three blood-spirits — undead murderers, a gift from Mithrodar — bottled and rigged across the workshop's doors by the night hag @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ch5Malatrothe001]{Malatrothe} (B19).</p>",
+      "disable": "<p>@Check[type:thievery|dc:25] to cut the lines (DC 10 from inside); @Check[type:religion|dc:22] identifies the polongs — beat the DC by 10 to know that <em>seizing or smashing a polong's bottle</em> controls or staggers it.</p>",
       "isComplex": false,
       "level": {
         "value": 12
@@ -144,7 +144,7 @@
         "license": "OGL",
         "remaster": true
       },
-      "reset": "<p>None.</p>",
+      "reset": "<p>None (repair).</p>",
       "routine": ""
     },
     "saves": {

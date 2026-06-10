@@ -1,0 +1,565 @@
+{
+  "_id": "ch6VavanaDhatri1",
+  "name": "Vavana Dhatri",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "QHjUylTrAkEFJUoO",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+1 Dagger (defending)",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 18
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4+1",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse",
+            "magical",
+            "versatile-s"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch6VavanaDhatri1.QHjUylTrAkEFJUoO"
+    },
+    {
+      "_id": "RziCmx4aMLztjvxw",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Defending Blade",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>While she wields the dagger, +1 circumstance to AC (she fences with wards, not steel).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch6VavanaDhatri1.RziCmx4aMLztjvxw"
+    },
+    {
+      "_id": "JVUzd5DHZjXaImKl",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Dazing Touch",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>7/day, melee touch: @Check[type:will|dc:29] or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} (incapacitation).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "arcane",
+            "incapacitation",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch6VavanaDhatri1.JVUzd5DHZjXaImKl"
+    },
+    {
+      "_id": "yRlz0YpA3R2mHiPg",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Aura of Despair",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>30-ft emanation, sustainable up to 9 rounds/day: enemies @Check[type:will|dc:29] or −1 status to checks and saves while inside.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "arcane",
+            "aura",
+            "emotion",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch6VavanaDhatri1.yRlz0YpA3R2mHiPg"
+    },
+    {
+      "_id": "e7gxSiFlK9eM75qL",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Indoctrinator's Arsenal",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Enchanter spells (DC 29): round 1 <em>displacement</em>, round 2 <em>mirror image</em>, round 3 a scroll of <em>mind fog</em> (−2 status to Will in a 20-ft cloud), then <strong>dominate</strong> on martials (@Check[type:will|dc:29], incapacitation — ordered out of the fight; she keeps 'personal assistants'), <strong>feeblemind</strong>-grade @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 4} on casters, and her specialty <em>suggestion</em> — discard your weapons and armor (an <em>unseen servant</em> spirits them away).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "arcane",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch6VavanaDhatri1.e7gxSiFlK9eM75qL"
+    },
+    {
+      "_id": "ZmmhstzHKcYMwyHj",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Wands of the Arbiter",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Wands of <em>magic missile</em>, <em>force barrage</em>-grade, and 'pain strike' — the last reserved for <em>training</em> Gray Maidens and prisoners, never wasted in combat.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch6VavanaDhatri1.ZmmhstzHKcYMwyHj"
+    },
+    {
+      "name": "Dagger",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "dagger",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "agile",
+            "finesse",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "dagger",
+        "bulk": {
+          "value": 0.1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "expend": null,
+        "ammo": null,
+        "reload": {
+          "value": "-"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
+      },
+      "_id": "0Drw5EddkcDFKnh7",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!ch6VavanaDhatri1.0Drw5EddkcDFKnh7"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": -1
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 4
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 29
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 165,
+        "temp": 0,
+        "value": 165
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Arbiter of Allegiance — the Gray Maiden indoctrinator (A52/A56)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "elven",
+          "infernal",
+          "shoanti",
+          "varisian",
+          "vudrani"
+        ]
+      },
+      "level": {
+        "value": 10
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role (A52/A56):</strong> the Gray Maidens' <strong>Arbiter of Allegiance</strong> — Cressida task #6's 'mysterious indoctrinator.' An embittered Acadamae enchanter who co-designed the Maidens' conditioning (torture, blackmail, mind-control), clashed with Sabina, and commands the castle Maidens once Sabina defects. She is <strong>Ishani Dhatri's sister</strong>: she lured him into the castle by answering his <em>sendings</em>, ambushed him in the chapel (A13), and fed his soul to the @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ch6Akaruzug00001]{akaruzug} (A18). Confronted about him — or facing his raised, returned self — she laughs that Togomor will simply have to build her brother's soul a new 'house.' <strong>Morale:</strong> <em>dimension door</em> to A56 if the false Ileosa melts or she drops below ~40 HP; grabs her spellbooks and flees the castle to shelter with the Arkonas.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 19,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 17
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 19
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 21
+      }
+    },
+    "skills": {
+      "arcana": {
+        "base": 21
+      },
+      "deception": {
+        "base": 19
+      },
+      "diplomacy": {
+        "base": 19
+      },
+      "intimidation": {
+        "base": 19
+      },
+      "society": {
+        "base": 19
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch6CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Vavana Dhatri",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!ch6VavanaDhatri1"
+}

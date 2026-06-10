@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "llHcx2oYGOPEpjEO",
+      "_id": "SKYmPf0w8J41kPKD",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Striking Falchion",
+      "name": "+1 Conductive Battleaxe",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -22,7 +22,7 @@
         },
         "damageRolls": {
           "0": {
-            "damage": "2d10+12",
+            "damage": "2d8+12",
             "damageType": "slashing"
           }
         },
@@ -46,12 +46,12 @@
           ]
         }
       },
-      "_key": "!actors.items!ukwarFext0000001.llHcx2oYGOPEpjEO"
+      "_key": "!actors.items!ukwarFext0000001.SKYmPf0w8J41kPKD"
     },
     {
-      "_id": "QPy88pSZygCZlWbM",
+      "_id": "9o58Yj5GFeVHOPVt",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Nearly Indestructible",
+      "name": "Fext Immortality",
       "sort": 0,
       "type": "action",
       "system": {
@@ -63,7 +63,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p>A fext's pact-flesh: resistance <strong>all damage 10</strong> (bypassed only by <em>cold iron</em>); immune to death effects, disease, paralysis, poison.</p>"
+          "value": "<p>A fext's pact-flesh: resistance <strong>all damage 10</strong>, and she can be <em>permanently</em> destroyed only by <strong>glass or obsidian</strong> weapons. Reduced to 0 HP by anything else, she glares, promises her killer will join her in death soon (in Orc), collapses — and rises nights later to hunt that 'killer' for revenge. Immune to death effects, disease, paralysis, poison.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -78,24 +78,24 @@
           "value": []
         }
       },
-      "_key": "!actors.items!ukwarFext0000001.QPy88pSZygCZlWbM"
+      "_key": "!actors.items!ukwarFext0000001.9o58Yj5GFeVHOPVt"
     },
     {
-      "_id": "jVixn5FjP1CwXva2",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Court of Dead Orcs",
+      "_id": "YfbttsmGfnS0EMiR",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Conductive Drain",
       "sort": 0,
       "type": "action",
       "system": {
         "actionType": {
-          "value": "action"
+          "value": "passive"
         },
         "actions": {
-          "value": 1
+          "value": null
         },
         "category": "offensive",
         "description": {
-          "value": "<p>Ukwar commands his orc-spirit retainers: one wraith-servant Strides and Strikes.</p>"
+          "value": "<p>Her first axe hit each round channels her hunger: the target takes @Check[type:fortitude|dc:31] or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -107,15 +107,13 @@
         "slug": null,
         "traits": {
           "rarity": "common",
-          "value": [
-            "auditory"
-          ]
+          "value": []
         }
       },
-      "_key": "!actors.items!ukwarFext0000001.jVixn5FjP1CwXva2"
+      "_key": "!actors.items!ukwarFext0000001.YfbttsmGfnS0EMiR"
     },
     {
-      "_id": "Gh6mNI1O9pYorEKr",
+      "_id": "6LRAPzQOQxwqnoWG",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "Host's Wrath",
       "sort": 0,
@@ -129,7 +127,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>Two Falchion Strikes; if both hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by spectral orc hands (Escape DC 32).</p>"
+          "value": "<p>Two Battleaxe Strikes; if both hit, the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by spectral orc hands (Escape DC 32).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -146,7 +144,7 @@
           ]
         }
       },
-      "_key": "!actors.items!ukwarFext0000001.Gh6mNI1O9pYorEKr"
+      "_key": "!actors.items!ukwarFext0000001.6LRAPzQOQxwqnoWG"
     }
   ],
   "system": {
@@ -190,11 +188,12 @@
       }
     },
     "details": {
-      "blurb": "Fext lord of the guest wing (B29)",
+      "blurb": "Fext lady of the guest wing (B29)",
       "languages": {
         "details": "",
         "value": [
           "orcish",
+          "common",
           "necril"
         ]
       },
@@ -202,7 +201,7 @@
         "value": 12
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the only Deadwatcher chieftain who answered the castle's call — now an undead <strong>fext</strong> holding mock court in the guest wing (B29), served by orc spirits. The wing's master; Pegg and Loute (B26 — two L6 ettin-spawn 'entertainers,' run as Elite official ogres with juggled cleavers) perform for him.</p>",
+      "publicNotes": "<p><strong>Role:</strong> the only spirit-skulled Deadwatcher chieftain to last a full week inside the castle — risen the next night as a <strong>fext</strong>, now mistress of the guest wing (B29), served by the orc-spirit wraiths of B33. Found staring out her arrow slit, lost in thought; <strong>she won't attack until spoken to or attacked</strong>, then fights in eerie silence. Big noise in B28 brings her in 1d4 rounds. <strong>The kill:</strong> the dead orc in B7 carries a <em>+1 striking obsidian battleaxe</em> — the castle's one ready tool for ending her (the blood-scrawled warnings in B7/B13/B25 are her victims' work). <strong>Permanently slain, her grateful spirit sighs thanks and infuses her own axe</strong> — it becomes the sinister intelligent weapon @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.ch5UkwarAxe00001]{Ukwar}.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

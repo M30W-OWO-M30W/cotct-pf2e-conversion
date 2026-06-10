@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "e7gxSiFlK9eM75qL",
+      "_id": "rHDW9l760FjDETmE",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Chilling Touch",
+      "name": "Corrupting Touch",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -45,10 +45,45 @@
           ]
         }
       },
-      "_key": "!actors.items!vensterArabast01.e7gxSiFlK9eM75qL"
+      "_key": "!actors.items!vensterArabast01.rHDW9l760FjDETmE"
     },
     {
-      "_id": "ZmmhstzHKcYMwyHj",
+      "_id": "WKyyNt4EePqIV9hh",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Telekinetic Heave",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>He shoves rather than kills: @Check[type:fortitude|dc:24] or pushed 15 feet toward the door (and @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} on a critical failure). His card tricks — the A69 Midwife manifestation — are the same art, gentler.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "occult",
+            "telekinesis"
+          ]
+        }
+      },
+      "_key": "!actors.items!vensterArabast01.WKyyNt4EePqIV9hh"
+    },
+    {
+      "_id": "bI0X8pHxaU2M9qG9",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Walled-Up Witness",
       "sort": 0,
@@ -62,7 +97,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p>Incorporeal; resistance all 8 (except force/vitality). He cannot leave his boxroom (A89) until avenged — or until the truth he holds is <em>used</em>.</p>"
+          "value": "<p>Incorporeal; resistance all 8 (except force/vitality); rejuvenates 2d6 rounds after destruction and stays passive unless attacked again. He is bound by guilt while Ileosa lives; her defeat — and his bones honored in the crypts (A3) — lets him rest.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -77,7 +112,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!vensterArabast01.ZmmhstzHKcYMwyHj"
+      "_key": "!actors.items!vensterArabast01.bI0X8pHxaU2M9qG9"
     }
   ],
   "system": {
@@ -126,14 +161,16 @@
         "details": "",
         "value": [
           "common",
-          "infernal"
+          "infernal",
+          "shoanti",
+          "varisian"
         ]
       },
       "level": {
         "value": 6
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role (A88–A89):</strong> the king's tiefling stepbrother — Ileosa's poison-tool and first murder, walled up behind his own card-table. <strong>The castle's kindest ghost and best informant:</strong> treated gently (@Check[type:diplomacy|dc:20], or simply <em>listening</em>), he tells everything — the fool's-leprosy cards, the Crown, the Hidden Way Below (A5), and where the queen has gone: <strong>the Sunken Queen, in the Mushfens</strong>. Avenging him (Ileosa's defeat) lets him rest; his remains deserve the royal crypt (A3).</p>",
+      "publicNotes": "<p><strong>Role (A88–A89):</strong> the king's tiefling stepbrother — Ileosa's poison-tool and first victim, walled up alive behind his own card-room (his bones lie at <strong>A11</strong>). <strong>The castle's kindest ghost and best informant:</strong> at A89 he can barely manifest (a misty horned old man rising from a harrow deck) until his bones are recovered — Zellara senses where they lie. Restored, he testifies that <strong>Ileosa poisoned King Eodred II</strong> (and that he shares the guilt), names her ritual — the <strong>Everdawn Pool</strong> in the <strong>Sunken Queen</strong>, fed by the lifeblood of thousands — and points the PCs to Domina's study (<strong>A90</strong>). See the A89 entry for his and Zellara's farewell gift.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -173,6 +210,9 @@
       },
       "occultism": {
         "base": 12
+      },
+      "stealth": {
+        "base": 17
       }
     },
     "traits": {

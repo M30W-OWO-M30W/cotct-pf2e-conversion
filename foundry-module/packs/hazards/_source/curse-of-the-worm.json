@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "XwqpzOhu5f6JOF1n",
+      "_id": "rY3bHwDLxi4aukSB",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Gnawing Names",
+      "name": "The Traitor's Life",
       "sort": 0,
       "type": "action",
       "system": {
@@ -19,7 +19,7 @@
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Trigger</strong> Reading the rolls.</p><hr /><p><strong>Effect</strong> Spectral worms burrow at the reader: @Damage[12d6[void]] (@Check[type:fortitude|dc:33|basic:true]); on a critical failure also @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2}. The surviving rolls name every officer — and both anchors quartered in the towers.</p>"
+          "value": "<p><strong>Trigger</strong> Reading or touching the scroll.</p><hr /><p><strong>Effect</strong> A weeks-long vision in seconds: being caught betraying the castle; both ankles broken by Kazavon; weeks subsisting on worms in a cave; the crawl back to a corpse-field of slaughtered orcs and humans; a gleaming sword; the dawning horror that the betrayed party was <strong>Zon-Kuthon himself</strong> — transformation, and flight into the deep with the prize. Then @Check[type:will|dc:23] or be cursed (9th-rank): the victim <em>knows</em> himself a worm, no longer believes he can or should walk, drops @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and must crawl wherever he travels until the curse is counteracted — or Kleestad dies.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -34,7 +34,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!curseOfTheWorm01.XwqpzOhu5f6JOF1n"
+      "_key": "!actors.items!curseOfTheWorm01.rY3bHwDLxi4aukSB"
     }
   ],
   "folder": "ch5HazardsFld001",
@@ -126,14 +126,14 @@
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>@Check[type:perception|dc:34] (trained) to hear the chewing beneath the records.</p>",
-        "value": 34
+        "details": "<p>@Check[type:perception|dc:30] (trained) to see the blood on the scroll glisten and begin soaking through the parchment.</p>",
+        "value": 30
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>The records room's haunt — the army's roll of the dead, hungry to add names.</p>",
-      "disable": "<p>@Check[type:religion|dc:34] or burn the gnawed ledgers (losing their intelligence).</p>",
+      "description": "<p>One scroll survives on the records-room desk — the chamberlain's file, 'Kleestad' and 'chamberlain' still legible beneath bloodstains that look fresh after five centuries.</p>",
+      "disable": "<p>It cannot be exorcised while its author lives: <strong>only Kleestad's death (H4) destroys it</strong> — lifting the castle's curse does <em>not</em>.</p>",
       "isComplex": false,
       "level": {
         "value": 13
@@ -144,7 +144,7 @@
         "license": "OGL",
         "remaster": true
       },
-      "reset": "<p>1 day.</p>",
+      "reset": "<p>1 minute.</p>",
       "routine": ""
     },
     "saves": {
@@ -169,7 +169,8 @@
       },
       "value": [
         "haunt",
-        "void"
+        "curse",
+        "mental"
       ]
     }
   },

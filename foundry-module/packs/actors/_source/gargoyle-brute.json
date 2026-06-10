@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "xzYzAhiFdSPOmQi6",
+      "_id": "Hn1EUVc4hJ8wBBF2",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Claw",
       "sort": 0,
@@ -44,10 +44,10 @@
           ]
         }
       },
-      "_key": "!actors.items!gargoyleBrute001.xzYzAhiFdSPOmQi6"
+      "_key": "!actors.items!gargoyleBrute001.Hn1EUVc4hJ8wBBF2"
     },
     {
-      "_id": "2CHWxjRPpljtfd1A",
+      "_id": "cLMZDHOW4iIGecWq",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Horns",
       "sort": 0,
@@ -84,10 +84,44 @@
           "value": []
         }
       },
-      "_key": "!actors.items!gargoyleBrute001.2CHWxjRPpljtfd1A"
+      "_key": "!actors.items!gargoyleBrute001.cLMZDHOW4iIGecWq"
     },
     {
-      "_id": "Hn1EUVc4hJ8wBBF2",
+      "_id": "oTDBXHhvEEtn3Gsz",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Four-Armed Flurry",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Two Claw Strikes against one creature; if both hit, combine the damage for resistance purposes.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "flourish"
+          ]
+        }
+      },
+      "_key": "!actors.items!gargoyleBrute001.oTDBXHhvEEtn3Gsz"
+    },
+    {
+      "_id": "qit147Yc3maiESkR",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "Freeze",
       "sort": 0,
@@ -118,10 +152,10 @@
           ]
         }
       },
-      "_key": "!actors.items!gargoyleBrute001.Hn1EUVc4hJ8wBBF2"
+      "_key": "!actors.items!gargoyleBrute001.qit147Yc3maiESkR"
     },
     {
-      "_id": "cLMZDHOW4iIGecWq",
+      "_id": "DAgE4mYuaaVmtwxe",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Stone Hide",
       "sort": 0,
@@ -150,7 +184,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!gargoyleBrute001.cLMZDHOW4iIGecWq"
+      "_key": "!actors.items!gargoyleBrute001.DAgE4mYuaaVmtwxe"
     }
   ],
   "system": {
@@ -189,7 +223,12 @@
         "value": 155
       },
       "speed": {
-        "otherSpeeds": [],
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 60
+          }
+        ],
         "value": 30
       }
     },
@@ -205,7 +244,7 @@
         "value": 9
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the castle's living grotesques — gargoyle packs roosting on the minarets (D8) and parapets, swooping on anything that crosses the open courts. Encounters scale by roost: 2 (a patrol) to 8 (the full minaret flock).</p>",
+      "publicNotes": "<p><strong>Role:</strong> the castle's living grotesques — <strong>eight</strong> four-armed gargoyles roost in pairs atop the four minarets (D8) and watch the landing ledges (D7). <strong>Air approach:</strong> non-stealthy fliers crossing high draw 4 of the 8; fliers hugging walls or water draw @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.aerilayaBanshe01]{Aerilaya} instead (the gargoyles have learned to keep clear of her). They do not retreat from a fight.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

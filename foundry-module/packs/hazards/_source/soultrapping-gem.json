@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "LuLCDezYSjpFEL86",
+      "_id": "tEBphPNdwH7uQWF2",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Drink the Soul",
       "sort": 0,
@@ -19,7 +19,7 @@
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Trigger</strong> A living creature touches the gem.</p><hr /><p><strong>Effect</strong> @Check[type:will|dc:28] or the toucher's soul is drawn in (the body drops, @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying 1}, soulless); shattering the gem frees every soul inside.</p>"
+          "value": "<p><strong>Trigger</strong> The named creature touches the gem.</p><hr /><p><strong>Effect</strong> @Check[type:will|dc:35] (incapacitation) or the toucher's soul is drawn in — the body drops, @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying 1}, soulless. If the ichor lives, it carries the filled gem up to Ileosa (B20). Shattering the gem frees every soul inside.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -34,7 +34,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!soultrapGem00001.LuLCDezYSjpFEL86"
+      "_key": "!actors.items!soultrapGem00001.tEBphPNdwH7uQWF2"
     }
   ],
   "folder": "ch6HazardsFld001",
@@ -126,14 +126,14 @@
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>@Check[type:perception|dc:28] (trained) to feel the hunger in the fist-sized ruby on its pedestal.</p>",
-        "value": 28
+        "details": "<p>@Check[type:perception|dc:33] (trained) to feel the hunger in the child's-fist <strong>sapphire</strong> cradled on its iron stand — and to spot one PC's <em>name</em> inscribed in the facets.</p>",
+        "value": 23
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>The repository's collector — the 'largest gem below,' which dominated intruders are sent to fetch.</p>",
-      "disable": "<p>@Check[type:thievery|dc:30] to ground the matrix, or shatter it (Hardness 10, HP 40 — releasing its prisoners).</p>",
+      "description": "<p>Ileosa spent a scroll of <em>trap the soul</em> (trigger-object) on this stone, keying it to <strong>one named PC</strong> — the bearer of @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.serithtialSword1]{Serithtial}, or whoever she hates most. The sapphire is a 20,000 gp stone in PF1e terms (re-scale ~2,000 gp). The @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.immortalIchor001]{ichor} — and @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ithierGylou00001]{Ithier} — try to <em>charm or dominate</em> the named PC into picking it up.</p>",
+      "disable": "<p>@Check[type:thievery|dc:33] to ground the matrix, or shatter it (Hardness 10, HP 40 — releasing its prisoners).</p>",
       "isComplex": false,
       "level": {
         "value": 9
@@ -144,7 +144,7 @@
         "license": "OGL",
         "remaster": true
       },
-      "reset": "<p>Automatic.</p>",
+      "reset": "<p>None — one soul fills it.</p>",
       "routine": ""
     },
     "saves": {

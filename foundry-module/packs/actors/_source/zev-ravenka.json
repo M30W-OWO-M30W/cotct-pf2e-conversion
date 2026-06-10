@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "g4gLqHlyeYxemD3j",
+      "_id": "LHJ7RH80uHacZhEa",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Soul-Raking Gaze",
       "sort": 0,
@@ -45,10 +45,10 @@
           ]
         }
       },
-      "_key": "!actors.items!zevRavenkaDemi01.g4gLqHlyeYxemD3j"
+      "_key": "!actors.items!zevRavenkaDemi01.LHJ7RH80uHacZhEa"
     },
     {
-      "_id": "mROKgqsV1sXX4mHx",
+      "_id": "G7b53otufwMPyKmM",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "Trap Soul",
       "sort": 0,
@@ -62,7 +62,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>His signature: one creature within 30 feet, @Check[type:will|dc:37] or its soul is torn into one of his ruby teeth (the body drops, @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying 1}, soulless — death-warded characters resist with the Blessing's <em>Infused Soul</em>). Crushing the gem (Hardness 5) frees the soul. He repeats this every round until bloodied.</p>"
+          "value": "<p>His signature, every round until bloodied: one creature within 30 feet, @Check[type:will|dc:37] or its soul is torn into one of his ruby teeth (the body drops, @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying 1}, soulless — death-warded characters resist with the Blessing's <em>Infused Soul</em>). Crushing the gem (Hardness 5) frees the soul.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -77,15 +77,14 @@
           "value": [
             "concentrate",
             "death",
-            "incapacitation",
-            "necromancy"
+            "incapacitation"
           ]
         }
       },
-      "_key": "!actors.items!zevRavenkaDemi01.mROKgqsV1sXX4mHx"
+      "_key": "!actors.items!zevRavenkaDemi01.G7b53otufwMPyKmM"
     },
     {
-      "_id": "W4CTOgFyl4pOIcyk",
+      "_id": "ipJe0SIjdAxeayPd",
       "img": "systems/pf2e/icons/actions/ThreeActions.webp",
       "name": "Wail of the Banshee",
       "sort": 0,
@@ -118,10 +117,45 @@
           ]
         }
       },
-      "_key": "!actors.items!zevRavenkaDemi01.W4CTOgFyl4pOIcyk"
+      "_key": "!actors.items!zevRavenkaDemi01.ipJe0SIjdAxeayPd"
     },
     {
-      "_id": "VXuqP0dyAoqiJJ6d",
+      "_id": "WFNHqJKtPHziSdMu",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Greater Bestow Curse",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Saved for whoever's attacks hurt him most: @Check[type:will|dc:35] or all that foe's checks are made twice taking the worst (curse, until removed).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "curse",
+            "divine"
+          ]
+        }
+      },
+      "_key": "!actors.items!zevRavenkaDemi01.WFNHqJKtPHziSdMu"
+    },
+    {
+      "_id": "4Mz2MfAj0qrjSWX0",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "SPIRIT ANCHOR / Demilich",
       "sort": 0,
@@ -135,7 +169,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p><strong>The fourth anchor.</strong> A skull and dust — he takes 1 round to fully wake when his remains are disturbed. Immune to all but his weaknesses; resistance all 15. <em>Dispel evil</em>-grade magic can sever the anchor without battle — but the attempt itself disturbs his remains.</p>"
+          "value": "<p><strong>The fourth anchor.</strong> A skull and dust — <em>inert and unaware</em> while his remains lie undisturbed; he takes 1 round to fully wake (skull rising, ash vortexing) once they are. Immune to nearly everything; resistance all 15. <strong>Bloodless removal:</strong> a <em>dispel evil/dispel law</em>-grade casting or an antimagic effect severs the anchor without battle — but the attempt itself counts as disturbing his remains.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -150,7 +184,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!zevRavenkaDemi01.VXuqP0dyAoqiJJ6d"
+      "_key": "!actors.items!zevRavenkaDemi01.4Mz2MfAj0qrjSWX0"
     }
   ],
   "system": {
@@ -213,7 +247,7 @@
         "value": 15
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> Kazavon's religious adviser — a lich who transcended into a <strong>demilich</strong>, drifting as a jeweled skull above the Dark Shrine of Midnight (F11). The hardest anchor. <strong>Treasure is his body:</strong> two ruby eyes (~250 gp each re-scaled) and ten ruby teeth (~100 gp each) — some holding screaming souls.</p>",
+      "publicNotes": "<p><strong>Role:</strong> Bishop of Scarwall, Kazavon's religious adviser — a lich whose own <em>forbiddance</em> gambit backfired: sealed into his donjon by Mandraivus's counter-wards, he ordered his followers' ritual suicides, and then the curse's necromantic detonation focused on the chapel and blasted him to dust, remaking him a <strong>demilich</strong>. A jeweled skull drifting over the Dark Shrine's altar (F11). The hardest anchor — unless the party never wakes him at all. <strong>Treasure is his body:</strong> two ruby eyes (~250 gp each) and ten ruby teeth (~100 gp each) — some holding screaming souls; beneath his ashes on the altar lie a <em>strand of prayer beads (greater)</em> and a <em>+2 striking spiked chain with a speed rune</em>, revealed when the ashes fly up.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

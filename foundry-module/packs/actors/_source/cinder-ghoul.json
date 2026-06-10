@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "BrkO6UcpNJsTzYOT",
+      "_id": "zA4W7M0irVv8ixFX",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Charred Claw",
+      "name": "Conductive Cleaver",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -44,16 +44,17 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "agile"
+            "agile",
+            "magical"
           ]
         }
       },
-      "_key": "!actors.items!cinderGhoul00001.BrkO6UcpNJsTzYOT"
+      "_key": "!actors.items!cinderGhoul00001.zA4W7M0irVv8ixFX"
     },
     {
-      "_id": "O3BgtwsluPb3Lact",
+      "_id": "GWJtcXmNBzRMUWGr",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Jaws",
+      "name": "Charred Slam",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -69,7 +70,7 @@
         "damageRolls": {
           "0": {
             "damage": "2d10+7",
-            "damageType": "piercing"
+            "damageType": "bludgeoning"
           },
           "1": {
             "damage": "1d6",
@@ -92,10 +93,10 @@
           "value": []
         }
       },
-      "_key": "!actors.items!cinderGhoul00001.O3BgtwsluPb3Lact"
+      "_key": "!actors.items!cinderGhoul00001.GWJtcXmNBzRMUWGr"
     },
     {
-      "_id": "PnoJ7slJB8AO0nDr",
+      "_id": "HpEBR6a7b6hVPxzc",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "Smoke Inhalation",
       "sort": 0,
@@ -109,7 +110,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p><strong>Requirement</strong> Adjacent to a creature.</p><hr /><p><strong>Effect</strong> It exhales its body-smoke: @Check[type:fortitude|dc:27] or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} and @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} 1 round.</p>"
+          "value": "<p><strong>Requirement</strong> Adjacent to a creature.</p><hr /><p><strong>Effect</strong> It pours part of its body down the target's throat: @Check[type:fortitude|dc:27] or @Damage[2d6[fire]] per round of burning lungs (new save each round to cough it out; also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -126,12 +127,12 @@
           ]
         }
       },
-      "_key": "!actors.items!cinderGhoul00001.PnoJ7slJB8AO0nDr"
+      "_key": "!actors.items!cinderGhoul00001.HpEBR6a7b6hVPxzc"
     },
     {
-      "_id": "9rsQ77SIBOZsGBFU",
+      "_id": "qjSW1kMl3gxewKvS",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Ghoul Paralysis",
+      "name": "Smoke-Form",
       "sort": 0,
       "type": "action",
       "system": {
@@ -141,9 +142,9 @@
         "actions": {
           "value": null
         },
-        "category": "offensive",
+        "category": "defensive",
         "description": {
-          "value": "<p>A creature damaged by its claws: @Check[type:fortitude|dc:27] or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} 1 round (incapacitation; elves immune).</p>"
+          "value": "<p>A half-gaseous body: resistance physical 10 (except magical); can't slip under doors; wind pushes but never disperses it; cold is its bane (weakness cold 10).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -158,7 +159,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!cinderGhoul00001.9rsQ77SIBOZsGBFU"
+      "_key": "!actors.items!cinderGhoul00001.qjSW1kMl3gxewKvS"
     }
   ],
   "system": {
@@ -197,7 +198,12 @@
         "value": 135
       },
       "speed": {
-        "otherSpeeds": [],
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 40
+          }
+        ],
         "value": 30
       }
     },
@@ -213,7 +219,7 @@
         "value": 9
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the kitchen dead (B15) — servants who burned in the great ovens when Mandraivus's invasion torched the kitchens, risen hungry and still smoldering. They hunt with the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.crematoryBlast01]{Crematory Blast} haunt.</p>",
+      "publicNotes": "<p><strong>Role:</strong> the kitchen dead (B15) — the four cruelest of Kazavon's cooks, thrown into their own ovens by Mandraivus's soldiers, risen as Large smoke-bodied ghouls whose scorched outlines peel off the brickwork the round after the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.crematoryBlast01]{Crematory Blast} haunt fires. Each wields a meat cleaver that is magic only in its dead hand. They pursue into the larder (B16) but no farther.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -259,7 +265,7 @@
     "traits": {
       "rarity": "common",
       "size": {
-        "value": "med"
+        "value": "lg"
       },
       "value": [
         "undead",

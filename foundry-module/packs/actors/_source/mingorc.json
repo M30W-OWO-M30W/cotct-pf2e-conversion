@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "wI8fBTjNO5siNPw6",
+      "_id": "W4CTOgFyl4pOIcyk",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Gravewrought Maul",
+      "name": "Slam",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -40,62 +40,36 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "magical",
-            "reach-10",
-            "shove"
+            "reach-10"
           ]
         }
       },
-      "_key": "!actors.items!mingorcDonjon001.wI8fBTjNO5siNPw6"
+      "_key": "!actors.items!mingorcDonjon001.W4CTOgFyl4pOIcyk"
     },
     {
-      "_id": "PZte31vPN2GZLAMJ",
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Porter's Toll",
+      "_id": "VXuqP0dyAoqiJJ6d",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Hurled Rock",
       "sort": 0,
-      "type": "action",
+      "type": "melee",
       "system": {
-        "actionType": {
-          "value": "reaction"
+        "attack": {
+          "value": ""
         },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Trigger</strong> A creature tries to pass his station (F8).</p><hr /><p><strong>Effect</strong> A Maul Strike; on a hit the creature is shoved 10 feet back.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
+        "attackEffects": {
           "value": []
-        }
-      },
-      "_key": "!actors.items!mingorcDonjon001.PZte31vPN2GZLAMJ"
-    },
-    {
-      "_id": "at9614wtso4aTHvt",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Crushing Sweep",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
         },
-        "actions": {
-          "value": 2
+        "bonus": {
+          "value": 26
         },
-        "category": "offensive",
+        "damageRolls": {
+          "0": {
+            "damage": "3d10+13",
+            "damageType": "bludgeoning"
+          }
+        },
         "description": {
-          "value": "<p>A Maul Strike against each creature in a 10-ft arc.</p>"
+          "value": ""
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -108,16 +82,16 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "flourish"
+            "range-increment-120"
           ]
         }
       },
-      "_key": "!actors.items!mingorcDonjon001.at9614wtso4aTHvt"
+      "_key": "!actors.items!mingorcDonjon001.VXuqP0dyAoqiJJ6d"
     },
     {
-      "_id": "b2iR3uvwbzPttZOQ",
+      "_id": "0NKBlYXEr9eH4rPT",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Grave Resilience",
+      "name": "Grave Disease",
       "sort": 0,
       "type": "action",
       "system": {
@@ -127,9 +101,9 @@
         "actions": {
           "value": null
         },
-        "category": "defensive",
+        "category": "offensive",
         "description": {
-          "value": "<p>Undead immunities; resistance physical 10.</p>"
+          "value": "<p>A creature damaged by his slams: @Check[type:fortitude|dc:31] or sickened with corpse-rot (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} on a critical failure).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -144,7 +118,71 @@
           "value": []
         }
       },
-      "_key": "!actors.items!mingorcDonjon001.b2iR3uvwbzPttZOQ"
+      "_key": "!actors.items!mingorcDonjon001.0NKBlYXEr9eH4rPT"
+    },
+    {
+      "_id": "rnJVmxsalYjJhiiF",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Torpid Sentinel",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>He stands motionless in the room's center and takes <strong>2 full rounds to rouse</strong> after living creatures come into view — PCs who strike first gain a free surprise round.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!mingorcDonjon001.rnJVmxsalYjJhiiF"
+    },
+    {
+      "_id": "3tUSVjKAeuDdnAPW",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Juju Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Zombie immunities; resistance physical 10 (except slashing), cold 10, electricity 10; rock catching.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!mingorcDonjon001.3tUSVjKAeuDdnAPW"
     }
   ],
   "system": {
@@ -188,19 +226,19 @@
       }
     },
     "details": {
-      "blurb": "Undead giant porter of the donjon (F8)",
+      "blurb": "Ash-giant juju zombie porter (F8)",
       "languages": {
         "details": "",
         "value": [
           "jotun",
-          "necril"
+          "common"
         ]
       },
       "level": {
         "value": 13
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the donjon's undead giant porter (F8) — Zon-Kuthon's chapel suffers no uninvited guests. The toll is blood.</p>",
+      "publicNotes": "<p><strong>Role:</strong> the donjon's porter (F8) — an <strong>ash giant</strong> kept servile by constant charms in life, hauling sacrifices down and bodies back up, until Prelate Aruth sacrificed <em>him</em> as part of his own mummy-rising rite. The curse stood the remains back up as a juju zombie that shambled to its old post and has waited five centuries for orders that will never come. <strong>Once he starts bellowing in a fight, @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.prelateAruth0001]{Prelate Aruth} (F10, next door) comes to investigate.</strong> Pursues throughout the donjon but never exits it.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -253,7 +291,8 @@
       },
       "value": [
         "undead",
-        "giant"
+        "giant",
+        "zombie"
       ]
     }
   },

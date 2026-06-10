@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "8AGv9q1qEljHVLCc",
+      "_id": "Rd4Jox16DNx2Ufyn",
       "img": "systems/pf2e/icons/actions/FreeAction.webp",
       "name": "Drowning Despair",
       "sort": 0,
@@ -19,7 +19,7 @@
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Routine:</strong> creatures in the chamber each round: @Check[type:will|dc:29] or @Damage[4d6[mental]] and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} (cumulative to 3).</p>"
+          "value": "<p><strong>Routine:</strong> every creature in the chamber each round: @Check[type:will|dc:29] or be driven briefly mad — @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} 1 round (@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} on a success, cumulative to 3). The round after the vortex collapses, @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mandraivusLost01]{Mandraivus the Lost} rises from the armored bones.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -34,7 +34,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!vortexMadness001.8AGv9q1qEljHVLCc"
+      "_key": "!actors.items!vortexMadness001.Rd4Jox16DNx2Ufyn"
     }
   ],
   "folder": "ch5HazardsFld001",
@@ -126,14 +126,14 @@
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>@Check[type:perception|dc:30] (trained) to feel the psychic undertow before entering.</p>",
-        "value": 30
+        "details": "<p>@Check[type:perception|dc:25] (trained) to hear faint sounds of battle building, 2 rounds before it erupts.</p>",
+        "value": 25
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>The spiritual maelstrom where Mandraivus died — anguish given rotation.</p>",
-      "disable": "<p>Lay @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mandraivusLost01]{Mandraivus} to rest, or <em>dispel magic</em> (5th rank) for 1 hour's calm.</p>",
+      "description": "<p>The spiritual maelstrom of Mandraivus's last stand — phantom battle-cacophony boiling into a vortex of shrieking black shapes.</p>",
+      "disable": "<p>Lay @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mandraivusLost01]{Mandraivus} to rest, or <em>dispel magic</em> (5th rank) for 1 hour's calm; it fades for good only when the curse lifts.</p>",
       "isComplex": true,
       "level": {
         "value": 10
@@ -144,7 +144,7 @@
         "license": "OGL",
         "remaster": true
       },
-      "reset": "<p>Permanent until Mandraivus rests.</p>",
+      "reset": "<p>1 minute.</p>",
       "routine": ""
     },
     "saves": {

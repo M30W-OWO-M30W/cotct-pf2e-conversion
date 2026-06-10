@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "oTDBXHhvEEtn3Gsz",
+      "_id": "K7QpFeXEb7XvgqSg",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Bastard Sword",
+      "name": "Greataxe",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -22,7 +22,7 @@
         },
         "damageRolls": {
           "0": {
-            "damage": "2d8+8",
+            "damage": "2d12+8",
             "damageType": "slashing"
           }
         },
@@ -40,16 +40,56 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "two-hand-d12"
+            "sweep"
           ]
         }
       },
-      "_key": "!actors.items!scarwallGuard001.oTDBXHhvEEtn3Gsz"
+      "_key": "!actors.items!scarwallGuard001.K7QpFeXEb7XvgqSg"
     },
     {
-      "_id": "qit147Yc3maiESkR",
+      "_id": "2DQaOB84z37czPn5",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Longbow",
+      "name": "Gore",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 18
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+8",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!scarwallGuard001.2DQaOB84z37czPn5"
+    },
+    {
+      "_id": "xmhuGaWobVOUAYFJ",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Crossbow",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -82,16 +122,49 @@
         "traits": {
           "rarity": "common",
           "value": [
-            "deadly-d10",
-            "range-increment-100",
-            "volley-30"
+            "range-increment-120",
+            "reload-1"
           ]
         }
       },
-      "_key": "!actors.items!scarwallGuard001.qit147Yc3maiESkR"
+      "_key": "!actors.items!scarwallGuard001.xmhuGaWobVOUAYFJ"
     },
     {
-      "_id": "DAgE4mYuaaVmtwxe",
+      "_id": "GpUhIH54MKlC5ywE",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Powerful Charge",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Stride twice then Gore with +1d8 damage.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack"
+          ]
+        }
+      },
+      "_key": "!actors.items!scarwallGuard001.GpUhIH54MKlC5ywE"
+    },
+    {
+      "_id": "Aru148wETJ9i2cXE",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Eternal Post",
       "sort": 0,
@@ -120,7 +193,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!scarwallGuard001.DAgE4mYuaaVmtwxe"
+      "_key": "!actors.items!scarwallGuard001.Aru148wETJ9i2cXE"
     }
   ],
   "system": {
@@ -164,7 +237,7 @@
       }
     },
     "details": {
-      "blurb": "Skeletal garrison soldier",
+      "blurb": "Skeletal minotaur garrison soldier",
       "languages": {
         "details": "",
         "value": []
@@ -173,7 +246,7 @@
         "value": 7
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the garrison that never went off duty — armored skeletal soldiers at every watchpost (B3, B17, C2, C13, D9, E3…), still walking their patrol routes after five centuries. Numbers per area card; they raise alarms by dying.</p>",
+      "publicNotes": "<p><strong>Role:</strong> the garrison that never went off duty — Kazavon's <strong>minotaur</strong> mercenaries (kept intruders out and his own troops <em>in</em>), slain by Mandraivus and risen as horned skeletal champions. Posted at B3 (2 per room), B17 (5), C1 (4), C13 (1), D2 (2 per turret), E3 (3, advanced); <strong>12 more</strong> walk patrol routes as wanderers. They raise alarms by dying.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -216,7 +289,7 @@
     "traits": {
       "rarity": "common",
       "size": {
-        "value": "med"
+        "value": "lg"
       },
       "value": [
         "undead",

@@ -1,0 +1,324 @@
+{
+  "_id": "ch5PeggLoute0001",
+  "name": "Pegg & Loute",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "IoDSwBR0GXAuLmJ7",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Corrupting Touch",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+6",
+            "damageType": "void"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "magical"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.IoDSwBR0GXAuLmJ7"
+    },
+    {
+      "_id": "eUGQc4jOnlmFmEL7",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Horrific Pantomime",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A mute, gesticulating routine that is <em>meaningless madness</em> (@Check[type:performance|dc:20] to realize) and actively harmful to watch: each living creature within 60 feet observing it, @Check[type:will|dc:24] or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} (cumulative to 3); a success grants immunity to that ghost's pantomime for 24 hours. <strong>The harm is invisible</strong> — only @Check[type:perception|dc:24] notices minds dimming (roll the players' saves secretly until they know).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "emotion",
+            "mental",
+            "visual"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.eUGQc4jOnlmFmEL7"
+    },
+    {
+      "_id": "CA0xsTGyD3fKp2Cv",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Curse-Bound Rejuvenation",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Destroyed, each re-forms in 2d4 days; they are put to rest <strong>only when Scarwall's curse is lifted</strong>. Incorporeal; resistance all 10 (except force/ghost touch/vitality).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.CA0xsTGyD3fKp2Cv"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 23
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 95,
+        "temp": 0,
+        "value": 95
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 30
+          }
+        ],
+        "value": 0
+      }
+    },
+    "details": {
+      "blurb": "Ghost jesters of Scarwall (B26)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 6
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role (B26 + random-encounter wanderers):</strong> Kazavon's court jesters — Pegg halfling-short with a peg leg scavenged from chair-wood, Loute over seven feet with arms to mid-calf — executed by having leather masks <em>sewn over their heads</em> and hung from hooks above the castle gate to suffocate slowly while the troops applauded. Their ghosts still wear the costumes and masks. They rush at the living gesticulating wildly, 'trying to tell the PCs something' — there is nothing to tell; only the pantomime's damage. Lull, then corrupting touch if attacked; they fight until destroyed — they never did know when to quit.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 15,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 13
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 17
+      }
+    },
+    "skills": {
+      "deception": {
+        "base": 14
+      },
+      "performance": {
+        "base": 17
+      },
+      "stealth": {
+        "base": 15
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "undead",
+        "ghost",
+        "incorporeal"
+      ]
+    }
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Pegg & Loute",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!ch5PeggLoute0001"
+}

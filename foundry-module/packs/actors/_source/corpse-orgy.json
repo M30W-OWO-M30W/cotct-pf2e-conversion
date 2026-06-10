@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "JQhRYp0ks8HELx8X",
+      "_id": "AZa8PlVF6xB07VvF",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Grasping Limbs",
       "sort": 0,
@@ -45,12 +45,12 @@
           ]
         }
       },
-      "_key": "!actors.items!corpseOrgy000001.JQhRYp0ks8HELx8X"
+      "_key": "!actors.items!corpseOrgy000001.AZa8PlVF6xB07VvF"
     },
     {
-      "_id": "uCY1oLsYKJtcKESd",
+      "_id": "M8QlIjCs7jrvxvji",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Engulf the Living",
+      "name": "Absorb Body",
       "sort": 0,
       "type": "action",
       "system": {
@@ -62,7 +62,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>It rolls over every creature in a 10-ft burst within reach: @Check[type:reflex|dc:33] or be pulled into the writhing mass — @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (Escape DC 33) and @Damage[3d10+11[bludgeoning]] per round inside.</p>"
+          "value": "<p>It rolls over a creature at 0 HP (or a corpse) within reach and holds contact for 1 round: a living victim resists with @Check[type:fortitude|dc:33]; absorbed, the creature dies and the orgy gains 15 temporary HP. <strong>An absorbed creature can be raised only if the corpse orgy is slain.</strong></p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -79,12 +79,12 @@
           ]
         }
       },
-      "_key": "!actors.items!corpseOrgy000001.uCY1oLsYKJtcKESd"
+      "_key": "!actors.items!corpseOrgy000001.M8QlIjCs7jrvxvji"
     },
     {
-      "_id": "zA4W7M0irVv8ixFX",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Moan of the Mass",
+      "_id": "EbKUAKaJP99Q633L",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Pain Shriek",
       "sort": 0,
       "type": "action",
       "system": {
@@ -92,11 +92,11 @@
           "value": "action"
         },
         "actions": {
-          "value": 1
+          "value": 2
         },
         "category": "offensive",
         "description": {
-          "value": "<p>A hundred mouths at once: creatures within 30 feet, @Check[type:will|dc:31] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>"
+          "value": "<p><strong>Frequency</strong> twice per day. A hundred mouths at once: @Damage[10d6[sonic]] to living creatures in a 40-ft emanation (@Check[type:fortitude|dc:31|basic:true]); failures are also @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -110,18 +110,16 @@
           "rarity": "common",
           "value": [
             "auditory",
-            "emotion",
-            "fear",
-            "mental"
+            "sonic"
           ]
         }
       },
-      "_key": "!actors.items!corpseOrgy000001.zA4W7M0irVv8ixFX"
+      "_key": "!actors.items!corpseOrgy000001.EbKUAKaJP99Q633L"
     },
     {
-      "_id": "GWJtcXmNBzRMUWGr",
+      "_id": "QGtxGCQQ9LxpePdD",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Amalgam Resilience",
+      "name": "False Undeath",
       "sort": 0,
       "type": "action",
       "system": {
@@ -133,7 +131,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p>Undead immunities; resistance physical 10 (it is everyone it has absorbed). Destroying it releases a sigh from a hundred throats.</p>"
+          "value": "<p>Resistance physical 10. It looks, moans, and smells like a heap of risen dead — by design: it lets foes waste vitality energy and undead-bane resources before revealing it is an <strong>aberration</strong> (mind, poison, and death effects all work normally).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -148,7 +146,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!corpseOrgy000001.GWJtcXmNBzRMUWGr"
+      "_key": "!actors.items!corpseOrgy000001.QGtxGCQQ9LxpePdD"
     }
   ],
   "system": {
@@ -160,10 +158,10 @@
         "mod": 3
       },
       "con": {
-        "mod": 0
+        "mod": 6
       },
       "int": {
-        "mod": -2
+        "mod": 2
       },
       "wis": {
         "mod": 2
@@ -196,14 +194,16 @@
       "languages": {
         "details": "",
         "value": [
-          "necril"
+          "aklo",
+          "common",
+          "undercommon"
         ]
       },
       "level": {
         "value": 13
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the Death Chamber's horror (B4) — the castle's massacred court, fused by the curse into one rolling mass of the dead. One of the first true horrors of the keep.</p>",
+      "publicNotes": "<p><strong>Role:</strong> the Death Chamber's horror (B4) — an aberration that absorbed the massacred court, demented enough to believe itself <em>heir of Scarwall</em>: it welcomes intruders 'home' in Aklo as returning fragments of its own body, then scuttles forward to embrace them. A permanent gentle-repose effect keeps every corpse in the room fresh. <strong>Morale:</strong> opens with Pain Shriek; flees deeper into Scarwall below ~40 HP; fights to the death only if cornered.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
@@ -220,6 +220,9 @@
       "senses": [
         {
           "type": "darkvision"
+        },
+        {
+          "type": "tremorsense"
         }
       ]
     },
@@ -244,6 +247,9 @@
       },
       "stealth": {
         "base": 21
+      },
+      "intimidation": {
+        "base": 25
       }
     },
     "traits": {
@@ -252,7 +258,7 @@
         "value": "grg"
       },
       "value": [
-        "undead"
+        "aberration"
       ]
     }
   },

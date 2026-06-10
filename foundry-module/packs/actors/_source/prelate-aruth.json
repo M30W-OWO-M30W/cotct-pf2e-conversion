@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "ET5QCu89Dl9xyt4e",
+      "_id": "8uS2YDLlIQXhyUnr",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Rotting Fist",
+      "name": "+2 Striking Keen Spiked Chain",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -22,8 +22,8 @@
         },
         "damageRolls": {
           "0": {
-            "damage": "3d8+10",
-            "damageType": "bludgeoning"
+            "damage": "2d8+10",
+            "damageType": "slashing"
           },
           "1": {
             "damage": "2d6",
@@ -43,15 +43,19 @@
         "slug": null,
         "traits": {
           "rarity": "common",
-          "value": []
+          "value": [
+            "disarm",
+            "magical",
+            "trip"
+          ]
         }
       },
-      "_key": "!actors.items!prelateAruth0001.ET5QCu89Dl9xyt4e"
+      "_key": "!actors.items!prelateAruth0001.8uS2YDLlIQXhyUnr"
     },
     {
-      "_id": "eKZNq3v5vtLIt5vC",
+      "_id": "aY0H5Ipr9hdFnRNa",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Mummy Rot",
+      "name": "Insidious Mummy Rot",
       "sort": 0,
       "type": "action",
       "system": {
@@ -63,7 +67,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>A creature damaged by his fist: @Check[type:fortitude|dc:33] or contract mummy rot (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} by stage; cured only by disease-removing magic of 6th rank+).</p>"
+          "value": "<p>A creature damaged by his chain or fist: @Check[type:fortitude|dc:33] or contract mummy rot (@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} by stage; cured only by disease-removing magic of 6th rank+).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -78,10 +82,10 @@
           "value": []
         }
       },
-      "_key": "!actors.items!prelateAruth0001.eKZNq3v5vtLIt5vC"
+      "_key": "!actors.items!prelateAruth0001.aY0H5Ipr9hdFnRNa"
     },
     {
-      "_id": "wuYcBoxzsFdB41Lv",
+      "_id": "DKXjeYQxgfq7FZcw",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "Midnight Litany",
       "sort": 0,
@@ -95,7 +99,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>Zon-Kuthon's pain-prayer, 30-ft burst within 120 feet: @Damage[8d6[mental]] (@Check[type:will|dc:33|basic:true]); failures are @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} with razor-ecstasy.</p>"
+          "value": "<p>Zon-Kuthon's pain-prayer, 30-ft burst within 120 feet: @Damage[8d6[mental]] (@Check[type:will|dc:33|basic:true]); failures are @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} with razor-ecstasy. He opens instead with a <em>spiritual weapon</em> on an enemy healer.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -114,12 +118,12 @@
           ]
         }
       },
-      "_key": "!actors.items!prelateAruth0001.wuYcBoxzsFdB41Lv"
+      "_key": "!actors.items!prelateAruth0001.DKXjeYQxgfq7FZcw"
     },
     {
-      "_id": "sSIGHQEaOn2ngEe8",
+      "_id": "QlTJxts3NpAXhuem",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Despair",
+      "name": "Great Despair",
       "sort": 0,
       "type": "action",
       "system": {
@@ -131,7 +135,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>First sight: @Check[type:will|dc:31] or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} 1 round (incapacitation).</p>"
+          "value": "<p>30-ft aura: @Check[type:will|dc:31] or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} 1 round (incapacitation).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -146,7 +150,39 @@
           "value": []
         }
       },
-      "_key": "!actors.items!prelateAruth0001.sSIGHQEaOn2ngEe8"
+      "_key": "!actors.items!prelateAruth0001.QlTJxts3NpAXhuem"
+    },
+    {
+      "_id": "RoxjXRgu9W2DyrFk",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Warded Dead",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Pre-cast on himself: <em>air walk</em>, <em>freedom of movement</em>, <em>shield of faith</em>, <em>spell resistance</em>. Resistance all 10; immune cold, electricity.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!prelateAruth0001.RoxjXRgu9W2DyrFk"
     }
   ],
   "system": {
@@ -195,8 +231,6 @@
         "details": "",
         "value": [
           "common",
-          "infernal",
-          "necril",
           "shadowtongue"
         ]
       },
@@ -204,7 +238,7 @@
         "value": 13
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> mummy-lord Prelate of the Dark Shrine — Zev Ravenka's second, holding the private chapel (F10) with his cinder-eyed congregation. Still kneels to the demilich next door.</p>",
+      "publicNotes": "<p><strong>Role:</strong> mummy-lord Prelate of the donjon — Zev Ravenka's second and a practicing cannibal (his larder, F5, still holds the jars). When Mandraivus sealed the donjon he committed ritual suicide <em>in faith</em>, rising a mummy lord where the acolytes rose mere spectres. Found standing statue-still behind the Zon-Kuthon idol in the private chapel (F10); joins any fight he hears at F8. <strong>Tactics:</strong> spells in melee, slay-living cruelty when winning (he animates fallen PCs as zombies to gloat); fighting retreat toward F11 and the bishop's altar when pressed. Still kneels to the demilich next door. <strong>Treasure:</strong> his gear plus a pouch of two dozen onyx gems (~280 gp).</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

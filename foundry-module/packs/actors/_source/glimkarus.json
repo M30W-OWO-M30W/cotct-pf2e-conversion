@@ -1,0 +1,396 @@
+{
+  "_id": "ch5Glimkarus0001",
+  "name": "Glimkarus",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "r3VUnubRV46B0cM7",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Spindly Claw",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 24
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d10+9",
+            "damageType": "slashing"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "mental"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5Glimkarus0001.r3VUnubRV46B0cM7"
+    },
+    {
+      "_id": "5CRROLAGbXhDfAQH",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Deepest Fears",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>His gaze peels back the mind: one creature within 30 feet, @Check[type:will|dc:30] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} (@UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} 1 round on a critical failure; incapacitation).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "emotion",
+            "fear",
+            "mental",
+            "visual"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5Glimkarus0001.5CRROLAGbXhDfAQH"
+    },
+    {
+      "_id": "G1th6kyDMBSwUBEX",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Whispered Suggestion",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><em>Suggestion</em> or a holding word (@Check[type:will|dc:30] or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} 1 round) — used to occupy the rest of the party while he torments his chosen victim.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "mental",
+            "incapacitation"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5Glimkarus0001.G1th6kyDMBSwUBEX"
+    },
+    {
+      "_id": "fD0v1AMsVOZsqBrV",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Terrible Rejuvenation",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>While any creature within 100 feet is @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}, he has fast healing 10 — <strong>inside Scarwall, the castle's ambient dread keeps this active at all times.</strong> 'Destroyed,' he re-forms in the castle 2d4 days later unless slain while no nearby creature is frightened (or after the curse lifts).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ch5Glimkarus0001.fD0v1AMsVOZsqBrV"
+    },
+    {
+      "_id": "Tk2k4fDs5a9OeE5Z",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Mist Escape",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Gaseous form + invisibility, his exit at 30 HP or fewer.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "polymorph"
+          ]
+        }
+      },
+      "_key": "!actors.items!ch5Glimkarus0001.Tk2k4fDs5a9OeE5Z"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 6
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 6
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 31
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 200,
+        "temp": 0,
+        "value": 200
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 30
+      }
+    },
+    "details": {
+      "blurb": "Rejuvenating bogeyman (C10)",
+      "languages": {
+        "details": "",
+        "value": [
+          "aklo",
+          "common"
+        ]
+      },
+      "level": {
+        "value": 11
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role (C10):</strong> a bogeyman 'tourist' from Lepidstadt who chased Scarwall's legend, got snared by the curse — and has convinced himself that staying is <em>his</em> idea. The torture room's racks and iron maidens stay in perfect working order for him; spirit-skulled orcs he catches learn why. <strong>Tactics:</strong> he occupies the party with whispers and holds while focusing his gaze on the <strong>highest-Charisma PC</strong> (the one most worth tormenting to madness). <strong>At 30 HP or fewer he flees</strong> deep into the castle by Mist Escape, recovers, stalks the party with <em>nightmare</em> dreams — and returns for a rematch, preferably after recruiting another Scarwall denizen to help.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 22,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 19
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 23
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 24
+      }
+    },
+    "skills": {
+      "deception": {
+        "base": 23
+      },
+      "intimidation": {
+        "base": 24
+      },
+      "stealth": {
+        "base": 24
+      },
+      "occultism": {
+        "base": 19
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "fey",
+        "fiend"
+      ]
+    }
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Glimkarus",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!ch5Glimkarus0001"
+}

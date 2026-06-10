@@ -5,9 +5,9 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "wkJ50z8gZ38m1ekx",
+      "_id": "qnLdNB7s1llv3wjV",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Striking Bastard Sword",
+      "name": "+1 Striking Battleaxe",
       "sort": 0,
       "type": "melee",
       "system": {
@@ -41,14 +41,58 @@
           "rarity": "common",
           "value": [
             "magical",
-            "two-hand-d12"
+            "sweep"
           ]
         }
       },
-      "_key": "!actors.items!castothraneSk001.wkJ50z8gZ38m1ekx"
+      "_key": "!actors.items!castothraneSk001.qnLdNB7s1llv3wjV"
     },
     {
-      "_id": "Bw14WI5Q6qu7scz8",
+      "_id": "ZyJrNtkjhfjKXGxD",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Composite Longbow",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 21
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+8",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d10",
+            "propulsive",
+            "range-increment-100"
+          ]
+        }
+      },
+      "_key": "!actors.items!castothraneSk001.ZyJrNtkjhfjKXGxD"
+    },
+    {
+      "_id": "kTTY55xlmLo1x0Hn",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "Captain's Phalanx",
       "sort": 0,
@@ -79,24 +123,58 @@
           ]
         }
       },
-      "_key": "!actors.items!castothraneSk001.Bw14WI5Q6qu7scz8"
+      "_key": "!actors.items!castothraneSk001.kTTY55xlmLo1x0Hn"
     },
     {
-      "_id": "SKYmPf0w8J41kPKD",
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Five Centuries' Parry",
+      "_id": "wxZg4lUaDMf227Yo",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Over the Edge",
       "sort": 0,
       "type": "action",
       "system": {
         "actionType": {
-          "value": "reaction"
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>He Strides and Shoves; he steers fights onto the parapets to bull-rush foes off — @Damage[6d6[bludgeoning]] onto the rocky shore below.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack"
+          ]
+        }
+      },
+      "_key": "!actors.items!castothraneSk001.wxZg4lUaDMf227Yo"
+    },
+    {
+      "_id": "r3EIVmaikVkzePMo",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Find Target",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
         },
         "actions": {
           "value": null
         },
         "category": "offensive",
         "description": {
-          "value": "<p><strong>Trigger</strong> Hit by a Strike.</p><hr /><p><strong>Effect</strong> +2 circumstance AC against it.</p>"
+          "value": "<p>He tracks the holder (and the last holder) of his golden circlet unerringly, as <em>discern location</em> — and is tormented knowing it sits one tower away (D14).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -111,10 +189,10 @@
           "value": []
         }
       },
-      "_key": "!actors.items!castothraneSk001.SKYmPf0w8J41kPKD"
+      "_key": "!actors.items!castothraneSk001.r3EIVmaikVkzePMo"
     },
     {
-      "_id": "9o58Yj5GFeVHOPVt",
+      "_id": "GECr2AXETOTCw3um",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "SPIRIT ANCHOR",
       "sort": 0,
@@ -128,7 +206,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p><strong>One of Mithrodar's four anchors.</strong> Skeleton immunities; resistance cold/piercing/slashing 12. His fall rings the curse one stage looser.</p>"
+          "value": "<p><strong>One of Mithrodar's four anchors.</strong> Skeleton immunities; resistance cold/piercing/slashing 12. His fall rings the curse one stage looser — and the castle <em>screams</em>.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -143,7 +221,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!castothraneSk001.9o58Yj5GFeVHOPVt"
+      "_key": "!actors.items!castothraneSk001.GECr2AXETOTCw3um"
     }
   ],
   "system": {
@@ -199,7 +277,7 @@
         "value": 12
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> Kazavon's captain of the guard, a skeletal champion lord commanding the gatehouse dead (D1, with the loft's garrison). Anchor the party likely breaks first — and the castle <em>screams</em> when any anchor falls (all Scarwall undead gain +4 to resist vitality until the curse breaks).</p>",
+      "publicNotes": "<p><strong>Role:</strong> Kazavon's captain of the guard — a skeleton warrior even before the castle fell, restored by the curse as an anchor and ordered by Mithrodar <strong>never to leave the gatehouse loft (D1)</strong> or its parapets, with two greater shadows (his old bodyguards) in the box-clutter dark. <strong>The bloodless way:</strong> his <strong>golden circlet</strong> (~250 gp) sits in an alcove of Kazavon's tower (D14); its wearer can see through Castothrane's eyes. If a PC carries or wears it he points and rasps, 'Mine... you have what is mine...' — refused, he attacks that character <em>to the exclusion of all others</em> (and if that PC falls, keeps searching the body, ignoring everyone). <strong>Handed the circlet, he sighs, sets it on his skull — and both crumble to dust:</strong> the anchor severed without a blow (his spirit is reabsorbed by the castle; the circlet is lost with him).</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",
