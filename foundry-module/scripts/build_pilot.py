@@ -24,7 +24,10 @@ A = {"gaedren":"RKfT6vJ5guinSBjo","yargin":"7uhbgkK2IOZOlJb3","hookshanks":"qH96
      "mad_prophet":"madProphet000001","rioter":"korvosanRioter01","amin":"aminJalento00001",
      "grau":"grauSoldado00001","trinia":"triniaSabor00001","trinia_wand":"triniaWand000001",
      # Part Three — Blood and Bones, area B (All the World's Meat)
-     "cowhammer":"cowHammerBoy0001","verik":"verikVancask0001","verik_bow":"verikLongbow0001"}
+     "cowhammer":"cowHammerBoy0001","verik":"verikVancask0001","verik_bow":"verikLongbow0001",
+     # Part Three — area C (Eel's End)
+     "enforcer":"eelsEndEnforce01","devargo":"devargoBarvasi01","devargo_armor":"devargoArmor0001",
+     "chittersnap":"chittersnap00001"}
 JID = "aO3z6QTqmYZCZYkw"   # the fat Ch.1 journal entry
 SCN = "PuUGEVunRqjIWFOj"   # Old Fishery scene
 ADV = "OmdAPBg10luB7GUr"   # Adventure doc
@@ -77,7 +80,7 @@ def verbatim(anchor):
     text, k = paras[si], si + 1
     # re-flow a box the two-column OCR split mid-sentence (text doesn't end on
     # sentence punctuation) by appending following paragraphs until it completes
-    while text and text[-1] not in '.!?:"”)' and k < len(paras):
+    while text and text[-1] not in '.!?:"”\'’)' and k < len(paras):
         nxt = paras[k]
         if nxt.startswith("#"): break                 # real section header = stop
         if (not nxt) or nxt.startswith("<!--"):        # blank / image / page marker
@@ -114,6 +117,16 @@ RABOX = {
  "B6":"large cattle pen is open to the air",
  "B7":"round table sits in this room, surrounded by four wooden chairs",
  "B8":"single large desk stands in the eastern part",
+ # Part Three, area C — Eel's End
+ "C1":"sound of carousing booms from the elegantly painted",
+ "C2":"large ship tied off to the pier bears the name",
+ "C4":"hut-like structures sit atop this barge",
+ "C5":"single long structure sits atop the main deck",
+ "C6":"once-proud vessel, the Dragon's Breath",
+ "C7":"large room, once a captain's cabin, has been converted into a throne room",
+ "C13":"single low desk sits against the wall of this room",
+ "C15":"dark chamber is riddled with dizzying tunnels",
+ "C17":"old cargo bay is partially collapsed",
 }
 def box(code, fallback_html):
     """Read-aloud section: exact AP text if the source file is present, else paraphrase."""
@@ -414,6 +427,53 @@ AW("verik-vancaskerkin", B.npc(A["verik"],"Verik Vancaskerkin",4,21,60,11,11,8,8
         "<p><strong>Surrender:</strong> he gives up if dropped below ~1/4 HP, or instantly if shown hard evidence of the murders (the severed finger, the buried stash, or a thug's confession). "+chk("type:intimidation|dc:18")+" cows him (he then flees if unbound); a near-impossible Diplomacy makes him helpful. <strong>Story award</strong> for taking him alive without combat. His silver dagger is the "+B.mon("raktavarna","raktavarna")+" spy.</p>",
   folder=F["a_creatures"], blurb="Deserter watch sergeant; Arkona dupe", token_src=TOK("verik-vancaskerkin"), actor_link=True))
 
+# ---- Part Three: area C — Eel's End (custom NPCs) ----
+AW("eels-end-enforcer", B.npc(A["enforcer"],"Eel's End Enforcer",3,20,45,9,7,8,9,
+  {"str":3,"dex":2,"con":3,"int":0,"wis":1,"cha":-1},25,
+  {"athletics":9,"intimidation":7},
+  ["humanoid","human"],["common"],
+  [B.strike(nid(),"Sap",11,"1d6+3","bludgeoning",["agile","nonlethal"]),
+   B.strike(nid(),"Crossbow",9,"1d8","piercing",["range-increment-120","reload-1"]),
+   B.gear("leather-armor",nid()), B.gear("buckler",nid()), B.gear("crossbow",nid())],
+  notes="<p><strong>Role:</strong> one of Devargo's dozen hired muscle — washed-out soldiers and sailors kept sober by fear of the King of Spiders. They prefer <strong>saps</strong>: troublemakers are knocked out, not killed, then fed to Chittersnap below.</p>"
+        "<p><strong>Tactics &amp; morale:</strong> 4 work the pier (C1), 6 the deck (C2). They fight until reduced to a sliver of HP, then flee. Once Devargo raises the alarm, more arrive at one per round. Bluff/Diplomacy gets past them far more cheaply than a fight.</p>",
+  folder=F["a_creatures"], blurb="Devargo's sap-wielding muscle", token_src=TOK("eels-end-enforcer")))
+
+AW("devargo-barvasi", B.npc(A["devargo"],"Devargo Barvasi",6,23,100,12,16,12,14,
+  {"str":1,"dex":5,"con":3,"int":1,"wis":0,"cha":3},25,
+  {"acrobatics":16,"stealth":16,"deception":14,"intimidation":14,"thievery":14,"society":12,"crafting":12},
+  ["humanoid","human"],["common"],
+  [{"_id":A["devargo_armor"],"img":"systems/pf2e/icons/equipment/armor/studded-leather-armor.webp",
+    "name":"+1 Studded Leather","type":"armor","sort":0,"ownership":{"default":0},"flags":{},"_stats":dict(B.STATS),
+    "system":{"baseItem":"studded-leather","bonus":{"value":0},"category":"light","containerId":None,"description":{"value":"<p>Devargo's spider-motif studded leather, etched with a +1 armor potency rune.</p>"},"equipped":{"carryType":"worn","inSlot":True},"group":"leather","hardness":0,"hp":{"max":0,"value":0},"level":{"value":4},"material":{"grade":None,"type":None},"price":{"value":{"gp":160}},"publication":B.PUB,"quantity":1,"runes":{"potency":1,"property":[],"resilient":0},"size":"med","slug":None,"traits":{"rarity":"common","value":["magical"]},"usage":{"value":"wornarmor"}}},
+   B.strike(nid(),"Poisoned Spiked Gauntlet",16,"1d4+5","piercing",["agile","versatile-b"],slug="devargo-gauntlet"),
+   B.strike(nid(),"Hand Crossbow",16,"1d6","piercing",["range-increment-60","reload-1"]),
+   B.sneak_attack(nid(),3,"Devargo"),
+   B.action(nid(),"Prepare Spider Venom","passive","<p>Before a fight Devargo coats both gauntlets with spider venom. A creature he hits with a gauntlet is exposed to it: "+chk("type:fortitude|dc:24")+", a 1-stage poison inflicting "+B.cond("clumsy","Clumsy 2")+" and "+B.cond("enfeebled","Enfeebled 1")+" for 1 round (Clumsy 2 + Enfeebled 2 for 4 rounds on a critical failure).</p>",category="offensive"),
+   B.action(nid(),"Spring the Throne","free","<p><strong>Trigger</strong> Devargo's turn begins.</p><hr /><p><strong>Effect</strong> He flips the hidden switch in his throne, opening the trap door beneath the petitioner's spot. A creature on it must succeed at a "+chk("type:reflex|dc:25")+" or fall into the Spider's Web (C15) — and Chittersnap.</p>",["manipulate"]),
+   B.lore(nid(),"Underworld Lore",14),
+   B.gear("studded-leather",nid()), B.gear("hand-crossbow",nid()), B.gear("healing-potion-minor",nid(),1),
+   B.equipment(nid(),"Potion of Invisibility",4,12,"<p>Devargo quaffs this to flee when reduced below ~10% HP, vanishing down to his quarters (C14).</p>",traits=["potion","magical","consumable","illusion"])],
+  notes="<p><strong>Role:</strong> the self-styled <strong>King of Spiders</strong> — a poisoner-rogue and blackmailer, <strong>not</strong> a forced boss fight. The PCs only need the ambassador's letters; the intended path is social (Diplomacy + bribes / a game of knivesies), and the Guard won't prosecute if he <em>is</em> killed.</p>"
+        "<p><strong>Tactics:</strong> opens by springing the throne trap door, then wades in with poisoned gauntlets and Sneak Attacks; his enforcers don't respond until he raises the alarm or a thug flees. <strong>Morale:</strong> below ~10 HP he calls for help, drinks his potion of invisibility, and flees to C14.</p>"
+        "<p><strong>His secret:</strong> he can't truly command spiders — the ettercap "+act("chittersnap","Chittersnap")+" in C15 does, in exchange for victims. Kill Chittersnap and every spider on Eel's End turns feral, Devargo included.</p>",
+  folder=F["a_creatures"], blurb="The King of Spiders; blackmailer of Eel's End", token_src=TOK("devargo-barvasi"), actor_link=True))
+
+AW("chittersnap", B.npc(A["chittersnap"],"Chittersnap",4,21,70,12,10,8,12,
+  {"str":4,"dex":3,"con":4,"int":-1,"wis":2,"cha":-1},25,
+  {"athletics":12,"stealth":10},
+  ["aberration"],[],
+  [B.strike(nid(),"Jaws",14,"2d6+6","piercing",[],[("1d6","poison")]),
+   B.strike(nid(),"Claw",14,"2d6+6","slashing",["agile"]),
+   B.strike(nid(),"Web",12,"","bludgeoning",["range-increment-30"]),
+   B.action(nid(),"Web Trap","1","<p>Chittersnap looses a gout of sticky web at one creature within 30 feet ("+chk("type:reflex|dc:21")+"). On a failure the target is "+B.cond("immobilized","Immobilized")+" (Escape or "+chk("type:athletics|dc:21")+" to break free; "+B.cond("grabbed","Grabbed")+" only on a critical failure).</p>",["manipulate"]),
+   B.action(nid(),"Ettercap Venom","passive","<p>A creature damaged by Chittersnap's Jaws is exposed to its venom: "+chk("type:fortitude|dc:23")+", a 1-stage poison dealing @Damage[1d6[poison]] and "+B.cond("enfeebled","Enfeebled 2")+" for 1 round (4 rounds on a critical failure).</p>",category="offensive"),
+   B.action(nid(),"Spider Master","passive","<p>Chittersnap commands every spider on Eel's End — the true source of Devargo's 'control.' While it lives, the dream spiders and giant spider act on its initiative. If it dies, all of them revert to feral hunting, attacking the nearest creature (Devargo included).</p>",category="defensive")],
+  notes="<p><strong>Role:</strong> Devargo's hidden secret — a bloated ettercap lairing in the webbed hold (C15) below the throne, fed a steady diet of Devargo's victims. It views Devargo almost as a father.</p>"
+        "<p><strong>Tactics:</strong> webs prey at range, then closes with poisoned jaws and claws. It rarely leaves its web-choked den, where every square is difficult, poisonous terrain (a "+chk("type:reflex|dc:10")+" each round to avoid the dream-spider webs).</p>",
+  folder=F["a_creatures"], senses=[{"type":"darkvision"},{"acuity":"imprecise","type":"tremorsense","range":30}],
+  blurb="Bloated ettercap; the real King of Spiders", token_src=TOK("chittersnap")))
+
 # =====================================================================
 # HAZARDS (Actor type=hazard; in the hazards pack, Hazards folder)
 # =====================================================================
@@ -481,7 +541,9 @@ PAGE_KEYS=["background","overview","hook","scene","features","A1","A2","A3","A4"
            # Part Two — A City Gone Mad
            "cgm","e1","e2","e3","e4","e5","e6","e7","e8","e9","e10","e11","e12","e13","e14",
            # Part Three — Blood and Bones: B. All the World's Meat
-           "bmeat","B1","B2","B3","B4","B5","B6","B7","B8"]
+           "bmeat","B1","B2","B3","B4","B5","B6","B7","B8",
+           # Part Three — C. Eel's End
+           "cend","C1","C2","C3","C4","C5","C6","C7","C9","C13","C14","C15","C17"]
 P={k:nid() for k in PAGE_KEYS}   # pre-assign so forward relative links resolve
 def newpage(key,name,html,level=3):
     return B.page(P[key],name,html,level=level)
@@ -825,6 +887,82 @@ area("B8","Slaughterhouse Office", SR("B8","48")
      B.aside_token([act("verik","Verik Vancaskerkin (4)"), B.mon("raktavarna","Raktavarna (1, hidden)")], img=TOK("verik-vancaskerkin")))
   +B.s_treasure("<p>Loot: "+act("verik","Verik's")+" +1 striking composite longbow (the area-B permanent magic reward), chain mail, spear, and 3 minor healing potions. The silver 'dagger' is the raktavarna — do not let it travel with the party unnoticed.</p>")
   +B.s_conv("<p><strong>Story award</strong> for taking Verik alive without combat. Spared and turned, Verik can resurface as an ally; his brother <strong>Orik</strong> appears in Chapter 3. Pursuing 'Meliya' opens the Arkona thread (Ch.3).</p>"))
+
+# =====================================================================
+# PART THREE — C. EEL'S END (Devargo's floating den). Party ~L4.
+# Enforcer L3 · Devargo L6 · Chittersnap L4 · thugs = Rioter L-1.
+# =====================================================================
+ev("cend","C. Eel's End",
+  B.s_milestone("<p><strong>C. Eel's End</strong> — a warship and four moored barges of vice ruled by "+act("devargo","Devargo Barvasi")+", the self-styled King of Spiders. Cressida sends the PCs to recover blackmail letters proving the Chelish ambassador Amprei's misdeeds. <strong>The goal is the letters, not Devargo's head</strong> — the intended path is social (please him with bribes and entertainment), though stealth or force are possible (force is dangerous at this level).</p>")
+  +SEC("<p><strong>A Walk with Vencarlo.</strong> Vencarlo Orisini escorts the PCs to Old Korvosa — develop him as a likable mentor; he is secretly the folk-hero <strong>Blackjack</strong> and is quietly assessing the party as a potential heir. He recurs throughout the campaign.</p>")
+  +SEC("<p><strong>Devargo's fate is open.</strong> He pays his vice taxes and polices Eel's End, so the Guard leaves him be — but if the PCs kill him, the Guard quietly thanks them (no charges). <strong>Burning the barges</strong>, however, destroys the evidence and brings arson/murder prosecution. The easiest win is Diplomacy in "+pg(P["C7"],"the throne room (C7)")+".</p>")
+  +B.s_skill("<p>Eel's End welcomes nearly everyone; only obvious Korvosan Guard, Hellknights, or Sable Company are turned away. Claiming Guard business but professing interest in a <em>hideout</em> (not Devargo) grants a large circumstance bonus to talk past the guards.</p>"))
+
+area("C1","Eel's End Pier", SR("C1","50")
+  +box("C1","<p>The sound of carousing booms from the elegantly painted barges moored to this long pier. Painted signs in several languages hang from ropes and pilings: 'The Twin Tigers,' 'Welcome to the Goldenhawk,' 'Dragon's Breath Corridor,' and 'The House of Clouds.' Only the largest vessel — an old warship to the south — bears no sign. Rope bridges and gangplanks link the decks.</p>")
+  +"<p>The pier is the approach to "+act("devargo","Devargo's")+" floating empire. Four "+act("enforcer","Eel's End enforcers")+" loiter as security; they shake down well-dressed visitors but cave to greed.</p>"
+  +B.enc("Eel's End Enforcers (pier)",xpb([3,3,3,3],4),
+     "<p>4 "+act("enforcer","enforcers")+" with saps. They would much rather fleece the PCs than fight — talking past them is far cheaper than a brawl.</p>",
+     B.aside_token(["4× "+act("enforcer","Enforcer (3)")], img=TOK("eels-end-enforcer"))))
+
+area("C2","Eel's End Deck", SR("C2","51")
+  +box("C2","<p>The large ship tied off to the pier bears the name <em>Eel's End</em>; its figurehead is a coiling eel with a woman's head. Drunkards and revelers dance on the open main deck, while the aft deck is clear. A pair of double doors painted with a complex spider open into the stern.</p>")
+  +"<p>Four "+act("enforcer","enforcers")+" sleep in the rigging; two more guard the doors to "+pg(P["C7"],"C7")+", barring the unexpected. "+chk("type:deception|dc:20")+" (claim Devargo expects you), "+chk("type:diplomacy|dc:24")+", or "+chk("type:intimidation|dc:18")+" (the guards then nervously escort you in) gets past them.</p>"
+  +B.enc("Eel's End Enforcers (deck)",xpb([3]*6,4),
+     "<p>All 6 deck "+act("enforcer","enforcers")+" if a fight erupts — an <strong>Extreme</strong> brawl at this level. The whole point of Eel's End is to <em>avoid</em> this by talking or sneaking.</p>",
+     B.aside_token(["6× "+act("enforcer","Enforcer (3)")], img=TOK("eels-end-enforcer"))))
+
+area("C3","The Goldenhawk", SR("C3","51")
+  +"<p>A floating flophouse (4 sp/night) run by a lisping, walleyed gnome named <strong>Tuggins</strong>, who hoards a jingling ring of keys (he has forgotten what most open). Devargo's presence keeps it relatively safe; in a fight, Tuggins hides under a bunk.</p>")
+
+area("C4","The Twin Tigers", SR("C4","51")
+  +box("C4","<p>Two hut-like structures sit atop this barge; raucous laughter and periodic roars of victory sound from within.</p>")
+  +"<p>A gambling barge of dice and card games. A fine place to win (or lose) the bribe money, or to overhear rumors.</p>")
+
+area("C5","The House of Clouds", SR("C5","51")
+  +box("C5","<p>A single long structure sits atop the main deck, double doors open onto a room of throw rugs and pillows, the air thick with incense and red lantern-light. Braziers shaped as serpents and hunting birds breathe anise, rosewater, and cinnamon. Scantily clad men and women loiter on deck.</p>")
+  +"<p>A brothel run by the half-elf madam <strong>Halvara</strong> (5 gp a turn; 100 gp for her personal company), rumored to be Devargo's sometime lover — so few patrons dare cause trouble.</p>")
+
+area("C6","Dragon's Breath Corridor", SR("C6","52")
+  +box("C6","<p>This once-proud vessel, the <em>Dragon's Breath</em>, has been painted gaudy red. A sign at the aft entrance reads simply, 'Pass into the Dreams of the Dragon.'</p>")
+  +"<p>A dream-spider-smoke den run by <strong>Bezzeraty</strong> (5 gp entry), and the home of <strong>knivesies</strong> — Devargo's favorite blood-sport.</p>"
+  +B.s_skill("<p><strong>The smoke:</strong> a minute in the haze forces a "+chk("type:fortitude|dc:18")+" or the fumes leave you "+B.cond("clumsy","Clumsy 1")+" and "+B.cond("stupefied","Stupefied 1")+" for 1 hour (no further effect for 24 hours). Bezzeraty robs anyone who passes out.</p>")
+  +B.s_skill("<p><strong>Knivesies.</strong> Two players, right hands strapped down, a dagger stuck in the table between them; on a 10-count (bettors toss gold) both roll initiative and lunge. Run it as a quick contest of "+chk("type:athletics")+" or unarmed Strikes for the blade, then a Strike — first to draw blood or disarm wins. Winning games for Devargo raises your standing in "+pg(P["C7"],"C7")+".</p>"))
+
+area("C7","Throne of Spiders", SR("C7","52-54")
+  +box("C7","<p>This converted captain's cabin is a throne room, its walls thick with webs in which scuttle dozens of spiders that never leave their silk. Two oaken tables and chairs fill the floor; aft, a cobwebbed leather chair sits on a low stage. A narrow door to port hangs ajar over stairs leading below. An iron birdcage hangs from the ceiling like a chandelier.</p>")
+  +"<p>"+act("devargo","Devargo Barvasi")+" holds court here from noon to a few hours past dusk, evaluating six hopeful thugs over a feast. The caged "+B.mon("house-drake","house drake")+" <strong>Majenko</strong> is his tormented plaything (he will sell it for an absurd 5,000 gp; freed — cage "+chk("type:athletics|dc:22")+" or "+chk("type:thievery|dc:25")+" — it serves its rescuer for a year). A hidden trap door before the throne ("+chk("type:perception|dc:20")+" to spot, again to find the throne-arm switch) drops a petitioner into "+pg(P["C15"],"C15")+".</p>"
+  +SEC("<p><strong>Winning the letters (social).</strong> Have one PC plead the case (standing — note — on the trap door) and roll "+chk("type:diplomacy|dc:24")+"; others may Aid ("+chk("type:diplomacy|dc:18")+"). Devargo despises Intimidation (it starts a fight). Outcomes: <strong>fail badly</strong> → he springs the trap and attacks; <strong>partial</strong> → he wants gold/entertainment (bribes raise his attitude ~+1 per 10 gp; each knivesies win is worth a big step); <strong>success</strong> → he sells the last two letters for ~150 gp (a second "+chk("type:diplomacy|dc:24")+" knocks it to ~100 gp); <strong>critical</strong> → delighted, he hands them over and wishes the PCs well. <strong>Story award</strong> for getting the letters without combat.</p>")
+  +B.enc("Devargo + hopeful thugs (if it turns violent)",xpb([6]+[-1]*6,4),
+     "<p>"+act("devargo","Devargo")+" springs the trap door, then fights with poisoned gauntlets and Sneak Attack; he flees (invisible) below ~10 HP. The 6 hopeful "+act("rioter","thugs")+" are cowards who flee at the first damage and trip over each other. Enforcers from "+pg(P["C2"],"C2")+" arrive one per round once the alarm sounds.</p>",
+     B.aside_token([act("devargo","Devargo Barvasi (6)"), "6× "+act("rioter","Hopeful Thug (−1)"), B.mon("house-drake","Majenko — caged")], img=TOK("devargo-barvasi")))
+  +B.s_conv("<p>Releasing Majenko earns a story award and a loyal, information-gathering house-drake ally. The real goal remains the letters — turn them over to Cressida (Event 10 reward).</p>"))
+
+area("C9","Shiver Brewery", SR("C9","54")
+  +"<p>Cauldrons boil alcohol, water, and dream-spider venom down into <strong>shiver</strong> for the Arkonas — Devargo's standing arrangement that keeps his vice taxes paid.</p>"
+  +B.s_treasure("<p>Among the empty vials sit six doses of shiver (~25 gp each in 1e; story contraband, not loot — destroying it pays off a 'Drug Addict' background hook).</p>"))
+
+area("C13","Meeting Room", SR("C13","54")
+  +box("C13","<p>A single low desk sits against the wall of this room. A large wooden door marked with a painting of a spider stands in the southern wall.</p>")
+  +B.s_treasure("<p>Devargo's sea chest (his key, or "+chk("type:thievery|dc:30")+") holds his favourite treasures, re-scaled to PF2e: a jasper-studded amulet and an emerald gold necklace (art objects, ~120 gp the pair), a <strong>ring of feather fall</strong> with a jade-dragonfly cameo, a <strong>scroll of <em>blur</em></strong>, an <strong>elixir of love</strong>, two doses of <strong>dust of appearance</strong>, a mother-of-pearl horn (~10 gp), and ~60 gp in coin.</p>"))
+
+area("C14","Devargo's Quarters", SR("C14","54")
+  +"<p>Devargo retires here after midnight to read the day's slate reports and sleep — the <strong>best time to infiltrate</strong> Eel's End. <strong>The ambassador's blackmail letters are here</strong> (in his footlocker), the entire object of the mission. A stealth route avoids the throne-room confrontation entirely.</p>"
+  +B.s_conv("<p>However the PCs obtain them, the two letters go to Cressida Kroft for the Event 10 reward (and her leverage over Ambassador Amprei).</p>"))
+
+area("C15","The Spider's Web", SR("C15","54-55")
+  +box("C15","<p>This dark chamber is riddled with dizzying tunnels of thick cobweb. The floor is a sticky mass of webbing and hundreds of bones — many of them humanoid. Some webs shimmer and dance, almost reflecting rainbows.</p>")
+  +"<p>The lair of "+act("chittersnap","Chittersnap")+", the ettercap who is the true source of Devargo's 'spider control,' beneath the throne's trap door. The shimmering strands are dream-spider webs: every square is difficult terrain and a "+chk("type:reflex|dc:10")+" each round avoids their contact poison.</p>"
+  +B.enc("Chittersnap's den",xpb([4,B.mon_lvl("hunting-spider"),B.mon_lvl("dream-spider"),B.mon_lvl("dream-spider")],4),
+     "<p>"+act("chittersnap","Chittersnap")+" (ettercap), one "+B.mon("hunting-spider","giant spider")+", and two "+B.mon("dream-spider","dream spiders")+". Kill the ettercap and every spider on Eel's End turns feral — even on Devargo.</p>",
+     B.aside_token([act("chittersnap","Chittersnap (4)"), B.mon("hunting-spider","Giant Spider (1)"), "2× "+B.mon("dream-spider","Dream Spider (0)")], img=TOK("chittersnap")))
+  +B.s_treasure("<p>Chittersnap hoards what falls down with its meals — the GM may seed a few coins and a minor trinket among the bones.</p>"))
+
+area("C17","Sodden Hold", SR("C17","55")
+  +box("C17","<p>This old cargo bay is partially collapsed; only a soggy section of hull remains in the center, the rest open to the river.</p>")
+  +B.enc("Jigsaw Shark",xpb([1],4),
+     "<p>A "+act("jigsawshark","jigsaw shark")+" (the same river-scavenger species from the Old Fishery) prowls the flooded hold — a hazard for anyone dumped through the "+pg(P["C7"],"trap door")+" who drifts down here.</p>",
+     B.aside_token([act("jigsawshark","Jigsaw Shark (1)")], img=TOK("jigsaw-shark"))))
 
 journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"])
 B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)

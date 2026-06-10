@@ -160,7 +160,7 @@ for (const pack of packDirs) {
       for (const m of html.matchAll(/<p>(.*?)<\/p>/gs)) {            // bare <p> only (skips .subhead etc.)
         const txt = m[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
         if (!txt || txt === "Player Handout") continue;
-        if (/[a-z]/.test(txt[0]) || !/[.!?:"”)]$/.test(txt))
+        if (/[a-z]/.test(txt[0]) || !/[.!?:"”'’)]$/.test(txt))
           warnings.push(`split? [${doc.name} › ${p.name}] "${txt.split(" ").slice(0, 5).join(" ")}…"`);
       }
       const text = html.replace(/@Check\[[^\]]*\]/g, "").replace(/<[^>]+>/g, "");

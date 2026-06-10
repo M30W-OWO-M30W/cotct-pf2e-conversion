@@ -27,15 +27,20 @@ COLL = {"actors": "actors", "hazards": "actors", "items": "items", "journals": "
         "scenes": "scenes", "rolltables": "tables", "macros": "macros", "adventure": "adventures"}
 
 # pf2e condition compendium ids — reference conditions in descriptions via these
-# links (renders the condition badge), exactly like official stat blocks.
-CONDITIONS = {
+# links (renders the condition badge), exactly like official stat blocks. The full
+# 43-condition map is extracted by scripts/extract_conditions.mjs; the hardcoded
+# entries below (incl. the space-keyed "persistent damage") are kept for back-compat.
+import json as _json2, pathlib as _pl2
+_COND_PATH = _pl2.Path(__file__).resolve().parents[1] / "scripts" / "conditions_index.json"
+CONDITIONS = _json2.loads(_COND_PATH.read_text(encoding="utf-8")) if _COND_PATH.exists() else {}
+CONDITIONS.update({
     "off-guard": "AJh5ex99aV6VTggg", "enfeebled": "MIRkyAjyBeXivMa7", "wounded": "Yl48xTdMh3aeQYL2",
     "prone": "j91X7x0XSomq8d60", "sickened": "fesd1n5eVhpCSS18", "frightened": "TBSHQspnbcqxsmjL",
     "clumsy": "i3OJZU2nk64Df3xm", "drained": "4D2KBtexWXa6oUMR", "stunned": "dfCMdR4wnpbYNTix",
     "grabbed": "kWc1fhmv9LBiTuei", "immobilized": "eIcWbB5o3pP6OIMe", "slowed": "xYTAsEpcJE1Ccni3",
     "fleeing": "sDPxOjQ9kx2RZE8D", "dying": "yZRUzMqrMmfLu0V1", "deafened": "9PR9y0bi4JPKnHPR",
     "persistent damage": "lDVqvLKA6eF3Df60",
-}
+})
 def cond(key, label=None):
     return f"@UUID[Compendium.pf2e.conditionitems.Item.{CONDITIONS[key]}]{{{label or key.title()}}}"
 
