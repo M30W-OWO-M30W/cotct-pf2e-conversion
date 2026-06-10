@@ -136,7 +136,7 @@ def npc(_id, name, level, ac, hp, fort, ref, will, per, abil, speed, skills, tra
            "attributes": {"ac": {"details": "", "value": ac}, "allSaves": {"value": ""},
                           "hp": {"details": "", "max": hp, "temp": 0, "value": hp},
                           "speed": {"otherSpeeds": other_speeds or [], "value": speed}},
-           "details": {"blurb": blurb, "languages": {"details": "", "value": langs},
+           "details": {"blurb": blurb, "languages": {"details": "", "value": [l.lower() for l in langs]},
                        "level": {"value": level}, "privateNotes": "", "publicNotes": notes, "publication": PUB},
            "initiative": {"statistic": "perception"},
            "perception": {"details": "", "mod": per, "senses": senses or []},

@@ -214,7 +214,8 @@ AW("gaedren-lamm", B.npc(A["gaedren"],"Gaedren Lamm",2,17,30,3,9,8,8,
    B.sneak_attack(nid(),1,"Gaedren"),
    B.action(nid(),"Nimble Dodge","reaction","<p><strong>Trigger</strong> A creature he can see attacks him.</p><hr /><p><strong>Effect</strong> +2 circumstance bonus to AC against that attack.</p>",["mental"],"defensive"),
    B.action(nid(),"Spur the Beast","1","<p>Gaedren makes a Hand Crossbow Strike against Gobblegut; on a hit, the enraged crocodile gains a +2 status bonus to attack and damage rolls until the end of its next turn and must use a single action to Strike the nearest creature other than Gaedren on its next turn.</p>",["concentrate"]),
-   B.lore(nid(),"Underworld Lore",8)],
+   B.lore(nid(),"Underworld Lore",8),
+   B.gear("hand-crossbow",nid()), B.gear("dagger",nid()), B.gear("padded-armor",nid())],
   notes="<p><strong>Role:</strong> the AP's first villain and every PC's revenge payoff — a frail catalyst, not a tank. The real threat is the crocodile; Gaedren weaponizes it.</p>"
         "<p><strong>Tactics:</strong> an old leg wound caps his Speed at 15 ft, so he holds the far side of the gator pool and snipes rather than kiting. Round 1 <em>Spur the Beast</em> to enrage Gobblegut, then Strikes from cover; <em>Nimble Dodge</em> when focus-fired; flees to the A12 skiffs at &le;8 HP.</p>"
         "<p><strong>If killed and left in A14,</strong> his son Rolth animates the body in the Dead Warrens at the chapter's end — track it.</p>",
@@ -229,7 +230,8 @@ AW("yargin-balko", B.npc(A["yargin"],"Yargin Balko",1,16,20,5,5,7,6,
    B.strike(nid(),"Dagger",5,"1d4+1","piercing",["agile","finesse","versatile-s"]),
    B.action(nid(),"Quick Acid","1","<p>Yargin Interacts to draw an "+B.isrd("acid-flask-lesser","Acid Flask (Lesser)")+", then Strikes with it.</p>",["alchemical"]),
    B.lore(nid(),"Alchemy Lore",7),
-   B.gear("acid-flask-lesser",nid(),3), B.gear("thunderstone-lesser",nid(),1)],
+   B.gear("acid-flask-lesser",nid(),3), B.gear("thunderstone-lesser",nid(),1),
+   B.gear("crossbow",nid()), B.gear("dagger",nid()), B.gear("leather-armor",nid())],
   notes="<p><strong>Role:</strong> Gaedren's fence; answers the front door, fights from A6. Opens with thrown Acid Flasks, falls back to crossbow. <strong>Flees down the hidden trapdoor to warn Gaedren if losing.</strong> Carries the brass key (all fishery doors).</p>",
   folder=F["a_creatures"], blurb="Bitter alchemist-fence; Gaedren's right hand", token_src=TOK("yargin-balko")))
 
@@ -241,7 +243,8 @@ AW("hookshanks-gruller", B.npc(A["hookshanks"],"Hookshanks Gruller",1,16,18,4,7,
    B.strike(nid(),"Dagger",7,"1d4+1","piercing",["agile","finesse","thrown-10","versatile-s"]),
    B.sneak_attack(nid(),1,"Hookshanks"),
    B.action(nid(),"Disguised as an Orphan","passive","<p>Passes as one of Lamm's Lambs; "+chk("type:perception|dc:17")+" against his Deception DC to spot him before he Sneak Attacks.</p>"),
-   B.lore(nid(),"Streetwise Lore",6)],
+   B.lore(nid(),"Streetwise Lore",6),
+   B.gear("kukri",nid()), B.gear("dagger",nid()), B.gear("studded-leather",nid())],
   notes="<p><strong>Role:</strong> gnome taskmaster over the orphans in A7; dresses as one of them and hides in their midst.</p>"
         "<p><strong>Behavior:</strong> orders the orphans to attack and opens the A4 door to loose Bloo. At less than half HP he surrenders and tells the PCs everything he knows about the fishery and Gaedren's routine — except what lies in the den (A14).</p>",
   folder=F["a_creatures"], size="sml", blurb="Gnome taskmaster who hides among the orphans", token_src=TOK("hookshanks-gruller")))
@@ -258,7 +261,8 @@ AW("giggles", B.npc(A["giggles"],"Giggles",1,16,24,7,5,3,5,
      {"key":"FlatModifier","selector":"flail-attack","type":"circumstance","value":1,"predicate":["bludgeoner"]}]),
    B.action(nid(),"Orc Ferocity","reaction","<p><strong>Trigger</strong> Giggles is reduced to 0 HP.</p><hr /><p><strong>Effect</strong> He stays at 1 HP and becomes "+B.cond("wounded","Wounded 1")+" (or increases his wounded value by 1). Once per day.</p>"),
    B.lore(nid(),"Brawling Lore",5),
-   B.gear("healing-potion-minor",nid(),3)],
+   B.gear("healing-potion-minor",nid(),3),
+   B.gear("flail",nid()), B.gear("composite-longbow",nid()), B.gear("chain-mail",nid())],
   notes="<p><strong>Role:</strong> muscle on the main floor (A8); tries to <strong>capture</strong> PCs nonlethally for Gaedren, then fights to the death. Carries 3 "+B.isrd("healing-potion-minor","Minor Healing Potions")+".</p>",
   folder=F["a_creatures"], blurb="Half-orc brute; the fishery's muscle", token_src=TOK("giggles")))
 
@@ -284,7 +288,8 @@ AW("jigsaw-shark", B.npc(A["jigsawshark"],"Jigsaw Shark",1,16,20,7,6,3,7,
 AW("lamms-lamb", B.npc(A["orphan"],"Lamm's Lamb (Orphan)",-1,15,6,2,6,3,5,
   {"str":-2,"dex":3,"con":0,"int":0,"wis":-1,"cha":0},25,
   {"acrobatics":7,"thievery":7,"stealth":6},["humanoid","human"],["Common"],
-  [B.strike(nid(),"Pitchfork (improvised)",5,"1d6-1","piercing",["reach","improvised"])],
+  [B.strike(nid(),"Pitchfork (improvised)",5,"1d6-1","piercing",["reach","improvised"]),
+   B.gear("dagger",nid())],
   notes="<p>Enslaved child pickpockets — 9 toiling by day across A7/A8, all 26 asleep in A8 at night. <strong>The moral core of the dungeon, and never an XP-for-kill source.</strong></p>"
         "<p><strong>Behavior:</strong> an orphan that takes damage flees to A8, or out into the slums once the thugs are down; those invaded at night are too frightened to fight. A PC can rally one with "+chk("type:diplomacy|dc:15")+" (Intimidation fails) to Aid or reveal information. Rescuing them pays off a 'Missing Child' background.</p>",
   folder=F["a_creatures"], size="sml", blurb="Enslaved orphan ('Lamm's Lamb')", token_src=TOK("orphan")))

@@ -64,12 +64,20 @@ potions, …) are **real pf2e equipment-srd items in the inventory**, not just p
   badge), e.g. Quick Acid → "draw an {Acid Flask (Lesser)}, then Strikes with it."
 - Inventory item: `gear("acid-flask-lesser", nid(), qty)` embeds the item with its
   mechanical data + a `compendiumSource` link back to the SRD. Templates live in
-  `scripts/srd_gear.json` (mechanics only — the prose description is stubbed to the
-  compendium link so we don't ship Paizo flavor text). Add new gear by extracting
-  its template from real pf2e data (a carried instance in `.work/kingmaker_ref`, or
-  the installed `pf2e/packs/equipment` LevelDB) into `srd_gear.json` + an `EQUIP` id.
+  `scripts/srd_gear.json`. **Consumables keep their FULL description** — the
+  heal/damage/effect rolls live there, so the item's Use/effect button actually
+  works in Foundry. Plain weapons/armor have their description stubbed to the
+  compendium link (not needed to function; keeps shipped text minimal). Add new gear
+  by extracting its template from real pf2e data (a carried instance in
+  `.work/kingmaker_ref`, or the installed `pf2e/packs/equipment` LevelDB).
 - NPC manual Strikes and inventory items coexist (NPC weapons don't auto-generate
-  strikes), so keep the explicit Strike *and* add the item to inventory.
+  strikes), so keep the explicit Strike *and* add the item to inventory. Every
+  combatant gets weapons + armor + consumables; animals carry nothing.
+
+## 4c. Languages
+Use **lowercase pf2e language slugs** (`common`, `varisian`, `gnomish`, `orcish`,
+`draconic`, …) — `B.npc` lowercases them automatically; capitalized values won't
+render on the sheet. Animals/unintelligent creatures get an empty list.
 
 ## 5. Read-aloud & source text (verbatim, from the GM's own file)
 - The GM reads boxed text **verbatim**, so it's pulled from the GM's local AP markdown

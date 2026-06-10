@@ -5,8 +5,8 @@
   "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/acid-flask.webp",
   "system": {
    "description": {
-    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK]</p>",
-    "gm": ""
+    "gm": "",
+    "value": "<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Strike</p>\n<p>This flask filled with corrosive acid deals 1 acid damage, 1d6 persistent acid damage, and 1 acid splash damage.</p>"
    },
    "rules": [],
    "slug": "acid-flask-lesser",
@@ -39,7 +39,7 @@
    "level": {
     "value": 1
    },
-   "quantity": 3,
+   "quantity": 1,
    "baseItem": "alchemical-bomb",
    "bulk": {
     "value": 0.1
@@ -56,8 +56,8 @@
    },
    "equipped": {
     "carryType": "worn",
-    "invested": null,
-    "handsHeld": 0
+    "handsHeld": 0,
+    "invested": null
    },
    "containerId": null,
    "size": "med",
@@ -122,112 +122,14 @@
    "compendiumSource": "Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK"
   }
  },
- "healing-potion-minor": {
-  "name": "Healing Potion (Minor)",
-  "type": "consumable",
-  "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
-  "system": {
-   "description": {
-    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]</p>",
-    "gm": ""
-   },
-   "rules": [],
-   "slug": "healing-potion-minor",
-   "_migration": {
-    "version": 0.955,
-    "lastMigration": null,
-    "previous": {
-     "schema": 0.953,
-     "foundry": "13.351",
-     "system": "7.12.2"
-    }
-   },
-   "traits": {
-    "otherTags": [],
-    "value": [
-     "consumable",
-     "healing",
-     "magical",
-     "potion",
-     "vitality"
-    ],
-    "rarity": "common"
-   },
-   "publication": {
-    "title": "Pathfinder GM Core",
-    "authors": "",
-    "license": "ORC",
-    "remaster": true
-   },
-   "level": {
-    "value": 1
-   },
-   "quantity": 0,
-   "baseItem": null,
-   "bulk": {
-    "value": 0.1
-   },
-   "hp": {
-    "value": 0,
-    "max": 0
-   },
-   "hardness": 0,
-   "price": {
-    "value": {
-     "gp": 4
-    }
-   },
-   "equipped": {
-    "carryType": "worn"
-   },
-   "containerId": null,
-   "size": "med",
-   "material": {
-    "type": null,
-    "grade": null
-   },
-   "identification": {
-    "status": "identified",
-    "unidentified": {
-     "name": "",
-     "img": "",
-     "data": {
-      "description": {
-       "value": ""
-      }
-     }
-    },
-    "misidentified": {}
-   },
-   "category": "potion",
-   "uses": {
-    "value": 1,
-    "max": 1,
-    "autoDestroy": true
-   },
-   "damage": {
-    "formula": "1d8",
-    "kind": "healing",
-    "type": "vitality"
-   },
-   "usage": {
-    "value": "held-in-one-hand"
-   },
-   "spell": null
-  },
-  "flags": {},
-  "_stats": {
-   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao"
-  }
- },
  "thunderstone-lesser": {
   "name": "Thunderstone (Lesser)",
   "type": "weapon",
   "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/thunderstone.webp",
   "system": {
    "description": {
-    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Xnqglykl3Cif8rN9]</p>",
-    "gm": ""
+    "gm": "",
+    "value": "<p><strong>Activate</strong> <span class=\"action-glyph\">1</span> Strike</p>\n<hr />\n<p>When this stone hits a creature or a hard surface, it explodes with a deafening bang. A thunderstone deals the listed sonic damage and sonic splash damage, and each creature within 10 feet of the space in which the stone exploded must succeed at a @Check[type:fortitude|dc:17|name:Lesser Thunderstone|showDC:all] saving throw with the listed DC or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn. Many types of thunderstone grant an item bonus to attack rolls.</p>\n<p>The bomb deals 1d4 sonic damage and 1 sonic splash damage, and the DC is 17.</p>"
    },
    "rules": [
     {
@@ -283,9 +185,8 @@
    },
    "equipped": {
     "carryType": "worn",
-    "invested": null,
     "handsHeld": 0,
-    "inSlot": false
+    "invested": null
    },
    "containerId": null,
    "size": "med",
@@ -354,6 +255,1260 @@
   "flags": {},
   "_stats": {
    "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Xnqglykl3Cif8rN9"
+  }
+ },
+ "healing-potion-minor": {
+  "name": "Healing Potion (Minor)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+  "system": {
+   "description": {
+    "gm": "",
+    "value": "<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> (manipulate)</p>\n<hr />\n<p>A <em>healing potion</em> is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <em>healing potion</em>, you regain [[/r 1d8[healing]]]{1d8 Hit Points}.</p>"
+   },
+   "rules": [],
+   "slug": "healing-potion-minor",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "consumable",
+     "healing",
+     "magical",
+     "potion",
+     "vitality"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder GM Core",
+    "authors": "",
+    "license": "ORC",
+    "remaster": true
+   },
+   "level": {
+    "value": 1
+   },
+   "quantity": 1,
+   "baseItem": null,
+   "bulk": {
+    "value": 0.1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 4
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "category": "potion",
+   "uses": {
+    "value": 1,
+    "max": 1,
+    "autoDestroy": true
+   },
+   "damage": {
+    "formula": "1d8",
+    "kind": "healing",
+    "type": "vitality"
+   },
+   "usage": {
+    "value": "held-in-one-hand"
+   },
+   "spell": null
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao"
+  }
+ },
+ "dagger": {
+  "name": "Dagger",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "dagger",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "agile",
+     "finesse",
+     "thrown-10",
+     "versatile-s"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "dagger",
+   "bulk": {
+    "value": 0.1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "sp": 2
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "usage": {
+    "value": "held-in-one-hand"
+   },
+   "category": "simple",
+   "group": "knife",
+   "bonus": {
+    "value": 0
+   },
+   "damage": {
+    "dice": 1,
+    "die": "d4",
+    "damageType": "piercing",
+    "persistent": null
+   },
+   "splashDamage": {
+    "value": 0
+   },
+   "range": null,
+   "expend": null,
+   "ammo": null,
+   "reload": {
+    "value": "-"
+   },
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "striking": 0,
+    "property": []
+   },
+   "specific": null,
+   "subitems": [],
+   "bonusDamage": {
+    "value": 0
+   },
+   "property1": {
+    "value": "",
+    "dice": 0,
+    "die": "",
+    "damageType": "",
+    "critDice": 0,
+    "critDie": "",
+    "critDamage": "",
+    "critDamageType": ""
+   }
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
+  }
+ },
+ "crossbow": {
+  "name": "Crossbow",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/weapons/crossbow.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.62nnVQvGhoVLLl2K]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "crossbow",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "crossbow",
+   "bulk": {
+    "value": 1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 3
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "usage": {
+    "value": "held-in-two-hands"
+   },
+   "category": "simple",
+   "group": "crossbow",
+   "bonus": {
+    "value": 0
+   },
+   "damage": {
+    "dice": 1,
+    "die": "d8",
+    "damageType": "piercing",
+    "persistent": null
+   },
+   "splashDamage": {
+    "value": 0
+   },
+   "range": 120,
+   "expend": 1,
+   "ammo": {
+    "capacity": 1,
+    "baseType": "bolts",
+    "builtIn": false
+   },
+   "reload": {
+    "value": "1"
+   },
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "striking": 0,
+    "property": []
+   },
+   "specific": null,
+   "subitems": [],
+   "bonusDamage": {
+    "value": 0
+   },
+   "property1": {
+    "value": "",
+    "dice": 0,
+    "die": "",
+    "damageType": "",
+    "critDice": 0,
+    "critDie": "",
+    "critDamage": "",
+    "critDamageType": ""
+   },
+   "selectedAmmoId": "dmKCXn2dc5sMBk3m"
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.62nnVQvGhoVLLl2K"
+  }
+ },
+ "hand-crossbow": {
+  "name": "Hand Crossbow",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.XyA6PKV46aNlLXOd]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "hand-crossbow",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "hand-crossbow",
+   "bulk": {
+    "value": 0.1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 3
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "usage": {
+    "value": "held-in-one-hand"
+   },
+   "category": "simple",
+   "group": "crossbow",
+   "bonus": {
+    "value": 0
+   },
+   "damage": {
+    "dice": 1,
+    "die": "d6",
+    "damageType": "piercing",
+    "persistent": null
+   },
+   "splashDamage": {
+    "value": 0
+   },
+   "range": 60,
+   "expend": 1,
+   "ammo": {
+    "capacity": 1,
+    "baseType": "bolts",
+    "builtIn": false
+   },
+   "reload": {
+    "value": "1"
+   },
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "striking": 0,
+    "property": []
+   },
+   "specific": null,
+   "subitems": [],
+   "bonusDamage": {
+    "value": 0
+   },
+   "property1": {
+    "value": "",
+    "dice": 0,
+    "die": "",
+    "damageType": "",
+    "critDice": 0,
+    "critDie": "",
+    "critDamage": "",
+    "critDamageType": ""
+   }
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.XyA6PKV46aNlLXOd"
+  }
+ },
+ "kukri": {
+  "name": "Kukri",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/weapons/kukri.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.TDrO7Xdyn7juFy3c]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "kukri",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "agile",
+     "finesse",
+     "trip"
+    ],
+    "rarity": "uncommon"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "kukri",
+   "bulk": {
+    "value": 0.1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "sp": 6
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "Unusual Kukri",
+     "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "usage": {
+    "value": "held-in-one-hand"
+   },
+   "category": "martial",
+   "group": "knife",
+   "bonus": {
+    "value": 0
+   },
+   "damage": {
+    "dice": 1,
+    "die": "d6",
+    "damageType": "slashing",
+    "persistent": null
+   },
+   "splashDamage": {
+    "value": 0
+   },
+   "range": null,
+   "expend": null,
+   "ammo": null,
+   "reload": {
+    "value": null
+   },
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "striking": 0,
+    "property": []
+   },
+   "specific": null,
+   "subitems": [],
+   "bonusDamage": {
+    "value": 0
+   },
+   "property1": {
+    "value": "",
+    "dice": 0,
+    "die": "",
+    "damageType": "",
+    "critDice": 0,
+    "critDie": "",
+    "critDamage": "",
+    "critDamageType": "",
+    "strikeConditionType": "",
+    "strikeConditionValue": null,
+    "criticalConditionType": "",
+    "criticalConditionValue": null
+   }
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.TDrO7Xdyn7juFy3c"
+  }
+ },
+ "flail": {
+  "name": "Flail",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/weapons/flail.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.t5FbyZtRL4qV0V7k]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "flail",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "disarm",
+     "sweep",
+     "trip"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "flail",
+   "bulk": {
+    "value": 1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 1
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "Unusual Flail",
+     "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "usage": {
+    "value": "held-in-one-hand"
+   },
+   "category": "martial",
+   "group": "flail",
+   "bonus": {
+    "value": 0
+   },
+   "damage": {
+    "dice": 1,
+    "die": "d6",
+    "damageType": "bludgeoning",
+    "persistent": null
+   },
+   "splashDamage": {
+    "value": 0
+   },
+   "range": null,
+   "expend": null,
+   "ammo": null,
+   "reload": {
+    "value": null
+   },
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "striking": 0,
+    "property": []
+   },
+   "specific": null,
+   "subitems": [],
+   "bonusDamage": {
+    "value": 0
+   },
+   "property1": {
+    "value": "",
+    "dice": 0,
+    "die": "",
+    "damageType": "",
+    "critDice": 0,
+    "critDie": "",
+    "critDamage": "",
+    "critDamageType": "",
+    "strikeConditionType": "",
+    "strikeConditionValue": null,
+    "criticalConditionType": "",
+    "criticalConditionValue": null
+   }
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.t5FbyZtRL4qV0V7k"
+  }
+ },
+ "composite-longbow": {
+  "name": "Composite Longbow",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.dUC8Fsa6FZtVikS3]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "composite-longbow",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "deadly-d10",
+     "propulsive",
+     "volley-30"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "composite-longbow",
+   "bulk": {
+    "value": 2
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 20
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "usage": {
+    "value": "held-in-one-plus-hands"
+   },
+   "category": "martial",
+   "group": "bow",
+   "bonus": {
+    "value": 0
+   },
+   "damage": {
+    "dice": 1,
+    "die": "d8",
+    "damageType": "piercing",
+    "persistent": null
+   },
+   "splashDamage": {
+    "value": 0
+   },
+   "range": 100,
+   "expend": 1,
+   "ammo": {
+    "capacity": null,
+    "baseType": "arrows",
+    "builtIn": false
+   },
+   "reload": {
+    "value": "0"
+   },
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "striking": 0,
+    "property": []
+   },
+   "specific": null,
+   "subitems": [],
+   "bonusDamage": {
+    "value": 0
+   },
+   "property1": {
+    "value": "",
+    "dice": 0,
+    "die": "",
+    "damageType": "",
+    "critDice": 0,
+    "critDie": "",
+    "critDamage": "",
+    "critDamageType": ""
+   }
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.dUC8Fsa6FZtVikS3"
+  }
+ },
+ "leather-armor": {
+  "name": "Leather Armor",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-banded-simple-leather-brown.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "leather-armor",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "leather-armor",
+   "bulk": {
+    "value": 1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 2
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "category": "light",
+   "group": "leather",
+   "acBonus": 1,
+   "strength": 0,
+   "dexCap": 4,
+   "checkPenalty": -1,
+   "speedPenalty": 0,
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "resilient": 0,
+    "property": []
+   },
+   "subitems": []
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA"
+  }
+ },
+ "studded-leather": {
+  "name": "Studded Leather Armor",
+  "type": "armor",
+  "img": "systems/pf2e/icons/equipment/armor/studded-leather-armor.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "studded-leather-armor",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "studded-leather-armor",
+   "bulk": {
+    "value": 1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 3
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "category": "light",
+   "group": "leather",
+   "acBonus": 2,
+   "strength": 1,
+   "dexCap": 3,
+   "checkPenalty": -1,
+   "speedPenalty": 0,
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "resilient": 0,
+    "property": []
+   },
+   "subitems": [],
+   "specific": null
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN"
+  }
+ },
+ "padded-armor": {
+  "name": "Padded Armor",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-banded-leather-brown.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "padded-armor",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "comfort"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "padded-armor",
+   "bulk": {
+    "value": 0.1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "sp": 2
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "category": "light",
+   "group": null,
+   "acBonus": 1,
+   "strength": 0,
+   "dexCap": 3,
+   "checkPenalty": 0,
+   "speedPenalty": 0,
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "resilient": 0,
+    "property": []
+   },
+   "subitems": []
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh"
+  }
+ },
+ "chain-mail": {
+  "name": "Chain Mail",
+  "type": "armor",
+  "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "chain-mail",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "flexible",
+     "noisy"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 0
+   },
+   "quantity": 1,
+   "baseItem": "chain-mail",
+   "bulk": {
+    "value": 2
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 6
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "handsHeld": 0,
+    "invested": null
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "category": "medium",
+   "group": "chain",
+   "acBonus": 4,
+   "strength": 3,
+   "dexCap": 1,
+   "checkPenalty": -2,
+   "speedPenalty": -5,
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "resilient": 0,
+    "property": []
+   },
+   "subitems": []
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP"
   }
  }
 }

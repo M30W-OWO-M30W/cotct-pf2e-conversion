@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "dnaymsXWUD0Nzprc",
+      "_id": "iv2sTvRM7sy4F8QZ",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Acid Flask",
       "sort": 0,
@@ -51,10 +51,10 @@
           ]
         }
       },
-      "_key": "!actors.items!7uhbgkK2IOZOlJb3.dnaymsXWUD0Nzprc"
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.iv2sTvRM7sy4F8QZ"
     },
     {
-      "_id": "huQnkXd4PNlpQgSG",
+      "_id": "0QseRGFhz8aoCfaT",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Light Crossbow",
       "sort": 0,
@@ -94,10 +94,10 @@
           ]
         }
       },
-      "_key": "!actors.items!7uhbgkK2IOZOlJb3.huQnkXd4PNlpQgSG"
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.0QseRGFhz8aoCfaT"
     },
     {
-      "_id": "hfjlXDQvtsiy3YQe",
+      "_id": "kj0a5BVsaunb6ck1",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Dagger",
       "sort": 0,
@@ -138,10 +138,10 @@
           ]
         }
       },
-      "_key": "!actors.items!7uhbgkK2IOZOlJb3.hfjlXDQvtsiy3YQe"
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.kj0a5BVsaunb6ck1"
     },
     {
-      "_id": "iv2sTvRM7sy4F8QZ",
+      "_id": "A2hNHBlyY65FYXy3",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "Quick Acid",
       "sort": 0,
@@ -172,10 +172,10 @@
           ]
         }
       },
-      "_key": "!actors.items!7uhbgkK2IOZOlJb3.iv2sTvRM7sy4F8QZ"
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.A2hNHBlyY65FYXy3"
     },
     {
-      "_id": "0QseRGFhz8aoCfaT",
+      "_id": "Pzw1geUcwungeGcE",
       "img": "systems/pf2e/icons/default-icons/lore.svg",
       "name": "Alchemy Lore",
       "sort": 0,
@@ -199,7 +199,7 @@
         "rules": [],
         "slug": null
       },
-      "_key": "!actors.items!7uhbgkK2IOZOlJb3.0QseRGFhz8aoCfaT"
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.Pzw1geUcwungeGcE"
     },
     {
       "name": "Acid Flask (Lesser)",
@@ -207,8 +207,8 @@
       "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/acid-flask.webp",
       "system": {
         "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK]</p>",
-          "gm": ""
+          "gm": "",
+          "value": "<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> Strike</p>\n<p>This flask filled with corrosive acid deals 1 acid damage, 1d6 persistent acid damage, and 1 acid splash damage.</p>"
         },
         "rules": [],
         "slug": "acid-flask-lesser",
@@ -258,8 +258,8 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
@@ -323,12 +323,12 @@
       "_stats": {
         "compendiumSource": "Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK"
       },
-      "_id": "kj0a5BVsaunb6ck1",
+      "_id": "h4gkpagPi6TbUN6l",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "_key": "!actors.items!7uhbgkK2IOZOlJb3.kj0a5BVsaunb6ck1"
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.h4gkpagPi6TbUN6l"
     },
     {
       "name": "Thunderstone (Lesser)",
@@ -336,8 +336,8 @@
       "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/thunderstone.webp",
       "system": {
         "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Xnqglykl3Cif8rN9]</p>",
-          "gm": ""
+          "gm": "",
+          "value": "<p><strong>Activate</strong> <span class=\"action-glyph\">1</span> Strike</p>\n<hr />\n<p>When this stone hits a creature or a hard surface, it explodes with a deafening bang. A thunderstone deals the listed sonic damage and sonic splash damage, and each creature within 10 feet of the space in which the stone exploded must succeed at a @Check[type:fortitude|dc:17|name:Lesser Thunderstone|showDC:all] saving throw with the listed DC or be @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened} until the end of its next turn. Many types of thunderstone grant an item bonus to attack rolls.</p>\n<p>The bomb deals 1d4 sonic damage and 1 sonic splash damage, and the DC is 17.</p>"
         },
         "rules": [
           {
@@ -393,9 +393,8 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
           "handsHeld": 0,
-          "inSlot": false
+          "invested": null
         },
         "containerId": null,
         "size": "med",
@@ -465,12 +464,379 @@
       "_stats": {
         "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Xnqglykl3Cif8rN9"
       },
-      "_id": "A2hNHBlyY65FYXy3",
+      "_id": "1lscjgsHRPtAh1u5",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "_key": "!actors.items!7uhbgkK2IOZOlJb3.A2hNHBlyY65FYXy3"
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.1lscjgsHRPtAh1u5"
+    },
+    {
+      "name": "Crossbow",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/crossbow.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.62nnVQvGhoVLLl2K]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "crossbow",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "crossbow",
+        "bulk": {
+          "value": 1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "category": "simple",
+        "group": "crossbow",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 120,
+        "expend": 1,
+        "ammo": {
+          "capacity": 1,
+          "baseType": "bolts",
+          "builtIn": false
+        },
+        "reload": {
+          "value": "1"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        },
+        "selectedAmmoId": "dmKCXn2dc5sMBk3m"
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.62nnVQvGhoVLLl2K"
+      },
+      "_id": "4uhpf6u6GbUF5Zrv",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.4uhpf6u6GbUF5Zrv"
+    },
+    {
+      "name": "Dagger",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "dagger",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "agile",
+            "finesse",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "dagger",
+        "bulk": {
+          "value": 0.1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "expend": null,
+        "ammo": null,
+        "reload": {
+          "value": "-"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
+      },
+      "_id": "xE1IgLu9Q5hnpwbV",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.xE1IgLu9Q5hnpwbV"
+    },
+    {
+      "name": "Leather Armor",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-banded-simple-leather-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "leather-armor",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "leather-armor",
+        "bulk": {
+          "value": 1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "light",
+        "group": "leather",
+        "acBonus": 1,
+        "strength": 0,
+        "dexCap": 4,
+        "checkPenalty": -1,
+        "speedPenalty": 0,
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "subitems": []
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA"
+      },
+      "_id": "oDsYqTFKD2ejR0f5",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!7uhbgkK2IOZOlJb3.oDsYqTFKD2ejR0f5"
     }
   ],
   "system": {
@@ -518,9 +884,9 @@
       "languages": {
         "details": "",
         "value": [
-          "Common",
-          "Gnomish",
-          "Varisian"
+          "common",
+          "gnomish",
+          "varisian"
         ]
       },
       "level": {
