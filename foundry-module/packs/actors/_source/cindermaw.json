@@ -1,0 +1,362 @@
+{
+  "_id": "cindermawWorm001",
+  "name": "Cindermaw, the Clan-Eater",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "ltAzu00s93RYVQhX",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Jaws",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 29
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d12+13",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "fire"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "reach-15"
+          ]
+        }
+      },
+      "_key": "!actors.items!cindermawWorm001.ltAzu00s93RYVQhX"
+    },
+    {
+      "_id": "jLslu6f7oYksjsEe",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Body Slam",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 29
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d10+13",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "reach-15"
+          ]
+        }
+      },
+      "_key": "!actors.items!cindermawWorm001.jLslu6f7oYksjsEe"
+    },
+    {
+      "_id": "th7E0P8CS2frszP4",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Swallow Whole",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Requirement</strong> A Large or smaller creature is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} in its jaws.</p><hr /><p><strong>Effect</strong> Gulp: the victim is swallowed — @Damage[3d6+13[bludgeoning]] plus @Damage[3d6[fire]] per round inside (Rupture 30: dealing 30 slashing/piercing damage to the gullet from within cuts an exit — <em>the entire point of the quest</em>).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack"
+          ]
+        }
+      },
+      "_key": "!actors.items!cindermawWorm001.th7E0P8CS2frszP4"
+    },
+    {
+      "_id": "RjVoaNOXYrCPciDL",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Volcanic Burrow",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Burrow 40 ft through rock and cinder, surfacing in gouts of sparks; fire immunity; tremorsense (imprecise) 120 ft. <strong>Paralysis-resistant</strong> (+4 status vs. paralysis and slow — would-be Skuraks beware).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!cindermawWorm001.RjVoaNOXYrCPciDL"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 9
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 7
+      },
+      "int": {
+        "mod": -3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 36
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 310,
+        "temp": 0,
+        "value": 310
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "burrow",
+            "value": 40
+          }
+        ],
+        "value": 40
+      }
+    },
+    "details": {
+      "blurb": "Quasi-divine clan-eating fire worm",
+      "languages": {
+        "details": "",
+        "value": [
+          "ignan"
+        ]
+      },
+      "level": {
+        "value": 14
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> a quasi-divine fire-infused purple worm — an awakened, <em>vain</em> ancient that once devoured a Plane-of-Fire portal. The quest (Skurak's Tale, Handout #4-1): <strong>be swallowed and emerge, witnessed by Shoanti</strong>. How you get out is irrelevant; killing it is gauche (−1 Respect Point — a slain god 'wasn't that tough'). Tempting it to swallow you: a Deception against its Sense Motive at −2 (it suspects everything is food anyway). Illusions must beat the witnesses' saves <em>and radiate heat</em>.</p><p><strong>Respect:</strong> +2 for a swallowed-and-escaped PC; <strong>+4 if Cindermaw also lives</strong>. Fire resistance strongly advised; <em>teleport</em>-from-the-belly is legal (concentration check inside).</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 25,
+      "senses": [
+        {
+          "acuity": "imprecise",
+          "type": "tremorsense",
+          "range": 120
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 28
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 20
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 23
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 30
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "grg"
+      },
+      "value": [
+        "beast",
+        "fire"
+      ]
+    }
+  },
+  "folder": "ch4CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Cindermaw, the Clan-Eater",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!cindermawWorm001"
+}

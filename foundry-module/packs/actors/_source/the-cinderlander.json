@@ -1,0 +1,561 @@
+{
+  "_id": "cinderlander0001",
+  "name": "The Cinderlander",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "UoJwet2URDIgTbW3",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Vindicator (+2 Striking Human-Bane Repeating Crossbow)",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 27
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d10+8",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "vindicator",
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "range-increment-120",
+            "reload-0"
+          ]
+        }
+      },
+      "_key": "!actors.items!cinderlander0001.UoJwet2URDIgTbW3"
+    },
+    {
+      "_id": "BZ2RzVWVjevbsVPn",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Handaxe",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 22
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d6+4",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "sweep",
+            "thrown-10"
+          ]
+        }
+      },
+      "_key": "!actors.items!cinderlander0001.BZ2RzVWVjevbsVPn"
+    },
+    {
+      "_id": "8ZplvXlXlig3CkBt",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Human's Bane",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><em>Vindicator</em> is bane to humans: +2 status to hit them and an extra @Damage[2d6[piercing]]; against <strong>Shoanti</strong> the Cinderlander also adds his hunted-prey bonus (+2 circumstance to hit, included against them). He loads <strong>screaming bolts</strong> (on a hit, foes within 20 ft: @Check[type:will|dc:30] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!cinderlander0001.8ZplvXlXlig3CkBt"
+    },
+    {
+      "_id": "mqu2DXnX0hofK7Dn",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Hunter's Volley",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Two Vindicator Strikes against the same target; if both hit, the target also takes @Damage[1d8[bleed]] (his signature crippling shot).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "flourish"
+          ]
+        }
+      },
+      "_key": "!actors.items!cinderlander0001.mqu2DXnX0hofK7Dn"
+    },
+    {
+      "_id": "VckQdNn9toN7eX5V",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Shot on the Run",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>He Strides twice (or Strides and Takes Cover) and makes one Vindicator Strike at any point — fighting like the desert: never where the answer lands.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack",
+            "move"
+          ]
+        }
+      },
+      "_key": "!actors.items!cinderlander0001.VckQdNn9toN7eX5V"
+    },
+    {
+      "_id": "yLU8B8UTiWji7Xyv",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Desert Master",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Immune to fatigue and exhaustion; fire resistance 10; <em>pass without trace</em> at will in the Cinderlands (+4 circumstance vs. tracking).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!cinderlander0001.yLU8B8UTiWji7Xyv"
+    },
+    {
+      "_id": "5qKQf34dTlpZNpw6",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Cinderlands Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 24
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!cinderlander0001.5qKQf34dTlpZNpw6"
+    },
+    {
+      "name": "Chain Mail",
+      "type": "armor",
+      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "chain-mail",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "flexible",
+            "noisy"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "chain-mail",
+        "bulk": {
+          "value": 2
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 6
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "medium",
+        "group": "chain",
+        "acBonus": 4,
+        "strength": 3,
+        "dexCap": 1,
+        "checkPenalty": -2,
+        "speedPenalty": -5,
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "subitems": []
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP"
+      },
+      "_id": "x9C7m1JQKiyLuvZ7",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!cinderlander0001.x9C7m1JQKiyLuvZ7"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 6
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": -1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 33
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 230,
+        "temp": 0,
+        "value": 230
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "The devil tshamek; Shoanti-hunter for hire",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "jotun",
+          "shoanti"
+        ]
+      },
+      "level": {
+        "value": 12
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the 'devil tshamek' — sole survivor of a thorp the Shoanti burned, turned genocidal hunter. His calling card: a Shoanti head on a pole, red crossbow bolts through both eyes (@Check[type:society|dc:30] to place it; automatic with a Shoanti companion). Skoan-Quah legend says he is a dead general's unquiet ghost killing until his losses are equalled. Now <strong>Cinnabar's paid guide</strong> — he leads the Red Mantis to the Acropolis and Flameford. His firepelt cougar <strong>Neverfar</strong> (treat as an official leopard with +10 HP) guards his sleep and dies before abandoning his body.</p><p><strong>Tactics:</strong> never within reach — <em>Vindicator</em> at range, Shoanti to the exclusion of all else. <strong>Morale &amp; the lever:</strong> he despises the Red Mantis; a bribe of <strong>~50 gp or better</strong> (re-scaled) turns him mid-fight. He flees below ~20 HP. At Flameford his price is <strong>Krojun's life</strong> (see Saving Krojun). His head is a valid CR-9+ respect trophy.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 25,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 23
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 24
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 19
+      }
+    },
+    "skills": {
+      "stealth": {
+        "base": 26
+      },
+      "survival": {
+        "base": 24
+      },
+      "intimidation": {
+        "base": 20
+      },
+      "nature": {
+        "base": 20
+      },
+      "medicine": {
+        "base": 22
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch4CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "The Cinderlander",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!cinderlander0001"
+}

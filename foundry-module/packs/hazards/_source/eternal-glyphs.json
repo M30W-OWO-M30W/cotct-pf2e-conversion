@@ -1,0 +1,179 @@
+{
+  "_id": "eternalGlyphs001",
+  "name": "The Eternal Glyphs (A7)",
+  "type": "hazard",
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "items": [
+    {
+      "_id": "3Bi6AVodVorEVzCR",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Compulsion to Read",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": null,
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature that understands Thassilonian reads the text.</p><hr /><p><strong>Effect</strong> @Check[type:will|dc:28] or the reader is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} and <strong>cannot stop reading</strong> — a new save each day at a cumulative −2. An unaffected ally can drag a victim free (the victim resists: a successful Athletics check against their Fortitude DC), which ends it instantly. String the player along ('five more minutes… maybe seven hours') before calling for the save.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!eternalGlyphs001.3Bi6AVodVorEVzCR"
+    }
+  ],
+  "folder": "ch4HazardsFld001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "The Eternal Glyphs (A7)",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {}
+  },
+  "system": {
+    "attributes": {
+      "emitsSound": "encounter",
+      "hardness": 0,
+      "stealth": {
+        "details": "<p>@Check[type:perception|dc:33] (trained) to sense the compulsion woven through the wall-text before reading.</p>",
+        "value": 33
+      }
+    },
+    "creatureType": "",
+    "details": {
+      "description": "<p>Coded Thassilonian wall-text (@Check[type:society|dc:30] + the language to decipher) that claims to warn of perils — and self-alters so it can never be finished. Ancient Shoanti skeletons (their gear: <strong>+1 hide armor, a +1 striking frost earth breaker, a +1 striking returning totem spear</strong>) died of thirst mid-sentence here.</p>",
+      "disable": "<p>@Check[type:thievery|dc:33] to deface a keystone glyph, or <em>dispel magic</em> (5th rank). Only readers who comprehend <strong>Thassilonian</strong> can be affected at all.</p>",
+      "isComplex": false,
+      "level": {
+        "value": 9
+      },
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      },
+      "reset": "<p>Automatic — the text rewrites itself.</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "magical",
+        "trap",
+        "mental",
+        "incapacitation"
+      ]
+    }
+  },
+  "_key": "!actors!eternalGlyphs001"
+}

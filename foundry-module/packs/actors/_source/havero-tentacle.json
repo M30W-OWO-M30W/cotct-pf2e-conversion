@@ -1,0 +1,304 @@
+{
+  "_id": "haveroTentacle01",
+  "name": "Havero Tentacle",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "NeaYR42HpvW6r7Jp",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Tentacle Lash",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 22
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d12+9",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "reach-60"
+          ]
+        }
+      },
+      "_key": "!actors.items!haveroTentacle01.NeaYR42HpvW6r7Jp"
+    },
+    {
+      "_id": "wPke06O00DOi5Frp",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Serpentine Reach",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>The tentacle's tip relocates anywhere within 50 feet of its base (its base cannot move), then Strikes any creature adjacent to <em>any point along its length</em> — track its coils on the map.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack",
+            "move"
+          ]
+        }
+      },
+      "_key": "!actors.items!haveroTentacle01.wPke06O00DOi5Frp"
+    },
+    {
+      "_id": "UFNnJMCm8c2KOIA4",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sever & Recoil",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>At 0 HP the tentacle whips back beneath the pool (reduce the Noise total by 1d20). It can be attacked anywhere along its length. <strong>At most four tentacles are active at once</strong>; killing 20+ in one battle quells the havero for an hour.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!haveroTentacle01.UFNnJMCm8c2KOIA4"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 7
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": -5
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 28
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 110,
+        "temp": 0,
+        "value": 110
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 0
+      }
+    },
+    "details": {
+      "blurb": "Reaching limb of the sleeping havero",
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": 9
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the reaching limbs of the <strong>havero</strong> — an Outer-Rifts horror the Thrallkeepers part-summoned millennia ago, hibernating beneath the A2 pool, its bulk dimensionally adjacent to a dead star. <em>The havero itself (CR 24) cannot wake or come through.</em> Its tentacles answer <strong>Noise Points</strong> (see the A2 page): Twitch at 10, Investigate (1 tentacle) at 20, Seek (~30), Assault (2) at 40, Wrath (4) at 50.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 16,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 20
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 14
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 22
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "grg"
+      },
+      "value": [
+        "aberration",
+        "mindless"
+      ]
+    }
+  },
+  "folder": "ch4CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Havero Tentacle",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!haveroTentacle01"
+}

@@ -1,0 +1,367 @@
+{
+  "_id": "moonMaiden000001",
+  "name": "Lyrune-Quah Moon Maiden",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "XutkjpTEyIBJxSZq",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+1 Starknife",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d4+7",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "deadly-d6",
+            "finesse",
+            "magical",
+            "thrown-20",
+            "versatile-s"
+          ]
+        }
+      },
+      "_key": "!actors.items!moonMaiden000001.XutkjpTEyIBJxSZq"
+    },
+    {
+      "_id": "JzrdZbzjzc2nfN6c",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Thrown Starknife",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4+7",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "thrown-20"
+          ]
+        }
+      },
+      "_key": "!actors.items!moonMaiden000001.JzrdZbzjzc2nfN6c"
+    },
+    {
+      "_id": "st5DULbChLYYlUFt",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Twin Stars",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Two Starknife Strikes against one target (combine damage); on a critical hit the target also takes @Damage[1d6[bleed]].</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "flourish"
+          ]
+        }
+      },
+      "_key": "!actors.items!moonMaiden000001.st5DULbChLYYlUFt"
+    },
+    {
+      "_id": "bbySt0n0uvWHgIJP",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Moon Rage",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>+4 damage (included while raging), 12 temporary HP, −1 AC. <strong>A raging maiden never flees.</strong></p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "emotion",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!moonMaiden000001.bbySt0n0uvWHgIJP"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": -1
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 23
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 95,
+        "temp": 0,
+        "value": 95
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 40
+      }
+    },
+    "details": {
+      "blurb": "Moon-clan starknife warrior (Tekrakai's band)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "shoanti"
+        ]
+      },
+      "level": {
+        "value": 6
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> warrior-sisters of the Moon Clan — <strong>Tekrakai</strong> (leader), Eaklai, Maeva, Yandree — guarding the desecrated House of the Moon; a dozen of their sisters already died on the red reaver's claws. Potential <strong>allies</strong>, not foes: Tekrakai asks (or gratefully accepts) help killing it.</p><p><strong>Tactics:</strong> open thrown, close raging with paired starknives. <strong>Morale:</strong> flee below ~10 HP unless raging. <strong>Story award</strong> per maiden surviving the reaver fight; arguing them out of it costs 2d4 Respect Points.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 13,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 11
+      }
+    },
+    "skills": {
+      "survival": {
+        "base": 13
+      },
+      "stealth": {
+        "base": 12
+      },
+      "athletics": {
+        "base": 14
+      },
+      "acrobatics": {
+        "base": 11
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch4CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Lyrune-Quah Moon Maiden",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!moonMaiden000001"
+}

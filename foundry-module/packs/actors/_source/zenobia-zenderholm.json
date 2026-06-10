@@ -1,0 +1,471 @@
+{
+  "_id": "zenobiaZenderh01",
+  "name": "Zenobia Zenderholm",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "Z7Ux61X18PVaDfoE",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Entrail Caress",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 23
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+7",
+            "damageType": "bludgeoning"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "void"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "reach-10"
+          ]
+        }
+      },
+      "_key": "!actors.items!zenobiaZenderh01.Z7Ux61X18PVaDfoE"
+    },
+    {
+      "_id": "X5RGVovOfmIbAusw",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Diseased Bite",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 23
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d10+7",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!zenobiaZenderh01.X5RGVovOfmIbAusw"
+    },
+    {
+      "_id": "kIOQSEdxWMM8hGKG",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Blood Drain",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Requirement</strong> Her last action was a successful Bite.</p><hr /><p><strong>Effect</strong> She drains: @Damage[2d8[bleed]] and she gains that many temporary HP; the victim is exposed to <strong>filth fever</strong> (@Check[type:fortitude|dc:30]).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack"
+          ]
+        }
+      },
+      "_key": "!actors.items!zenobiaZenderh01.kIOQSEdxWMM8hGKG"
+    },
+    {
+      "_id": "XgcKFZVtRQMzUmOx",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Judge's Sentence",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Her old courtroom voice, weaponized: one creature within 30 feet, @Check[type:will|dc:30] or @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} 1 round (incapacitation) as guilt and dread crush it.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "auditory",
+            "emotion",
+            "incapacitation",
+            "mental",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!zenobiaZenderh01.XgcKFZVtRQMzUmOx"
+    },
+    {
+      "_id": "Knvm3iudt19Me2TP",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Detach",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>By night the penanggalen's head and entrails pull free of her body (fly 40 ft); the abandoned body (in the E8 sarcophagus) is helpless — destroying it doesn't destroy <em>her</em>, but ends her masquerade as a living woman. She must soak her entrails in vinegar to rejoin it.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate"
+          ]
+        }
+      },
+      "_key": "!actors.items!zenobiaZenderh01.Knvm3iudt19Me2TP"
+    },
+    {
+      "_id": "WtiEHA66BrV7NsFZ",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Undead Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Immune to death effects, disease, paralysis, poison, sleep; void healing; resistance physical 5 (except magical slashing).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!zenobiaZenderh01.WtiEHA66BrV7NsFZ"
+    },
+    {
+      "_id": "oJ6wRYX23ko5p75J",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Korvosan Law Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 22
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!zenobiaZenderh01.oJ6wRYX23ko5p75J"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 30
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 195,
+        "temp": 0,
+        "value": 195
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 40
+          }
+        ],
+        "value": 20
+      }
+    },
+    "details": {
+      "blurb": "Penanggalen arbiter; the vault's indoctrinator",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "infernal",
+          "necril"
+        ]
+      },
+      "level": {
+        "value": 11
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the senior arbiter who welcomed the Gray Maidens into the Longacre Building — because she was already theirs. Blood veil took her; Abadar's <em>remove disease</em> kept failing; <strong>Urgathoa answered</strong>. Now a penanggalen, she is the Pallid Princess's greatest Korvosan agent since Andaisin — and the vault's indoctrinator, torturing recruits by day and feeding by night (E18). Her guardian Vyloth resents the duty.</p><p><strong>The mission question answered:</strong> 'why did Zenobia side with the queen?' — she didn't; she sided with her goddess. There is no one to rescue.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 21,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 17
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 18
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 21
+      }
+    },
+    "skills": {
+      "society": {
+        "base": 22
+      },
+      "deception": {
+        "base": 22
+      },
+      "intimidation": {
+        "base": 20
+      },
+      "religion": {
+        "base": 18
+      },
+      "occultism": {
+        "base": 18
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "undead"
+      ]
+    }
+  },
+  "folder": "ch4CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Zenobia Zenderholm",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!zenobiaZenderh01"
+}
