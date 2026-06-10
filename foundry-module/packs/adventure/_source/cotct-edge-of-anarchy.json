@@ -175,6 +175,28 @@
     },
     {
       "_id": "kLKvTWKyuwdztJBO",
+      "name": "Campaign Backgrounds",
+      "type": "Item",
+      "folder": "sorI6km8OcXFCXhE",
+      "sorting": "a",
+      "sort": 200000,
+      "color": null,
+      "description": "",
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "HH0UtS9CgfW7Be4Q",
       "name": "Curse of the Crimson Throne",
       "type": "JournalEntry",
       "folder": null,
@@ -196,10 +218,10 @@
       }
     },
     {
-      "_id": "HH0UtS9CgfW7Be4Q",
+      "_id": "W0WJME4fBRrq8baA",
       "name": "Adventure",
       "type": "JournalEntry",
-      "folder": "kLKvTWKyuwdztJBO",
+      "folder": "HH0UtS9CgfW7Be4Q",
       "sorting": "m",
       "sort": 100000,
       "color": "#b3541e",
@@ -218,7 +240,7 @@
       }
     },
     {
-      "_id": "W0WJME4fBRrq8baA",
+      "_id": "hmgnrV2Mgghf1znf",
       "name": "Curse of the Crimson Throne",
       "type": "Scene",
       "folder": null,
@@ -240,10 +262,10 @@
       }
     },
     {
-      "_id": "hmgnrV2Mgghf1znf",
+      "_id": "mLTkiPoOEmDEr97U",
       "name": "1. Edge of Anarchy",
       "type": "Scene",
-      "folder": "W0WJME4fBRrq8baA",
+      "folder": "hmgnrV2Mgghf1znf",
       "sorting": "m",
       "sort": 100000,
       "color": "#8a1a1a",
@@ -268,7 +290,7 @@
       "name": "Introduction",
       "pages": [
         {
-          "_id": "EehHQ57Q89SmWDtp",
+          "_id": "wHE4R7FjfE0HNKk8",
           "name": "Long Live the Queen!",
           "type": "text",
           "title": {
@@ -295,7 +317,7 @@
           "category": null
         },
         {
-          "_id": "wHE4R7FjfE0HNKk8",
+          "_id": "tzAHkhWr0fvCuEVj",
           "name": "Campaign Synopsis",
           "type": "text",
           "title": {
@@ -346,7 +368,7 @@
       "name": "Conversion Guide",
       "pages": [
         {
-          "_id": "HxOS4mCmjZUPOCYr",
+          "_id": "8kKZybygKoYATUSL",
           "name": "The Harrowing",
           "type": "text",
           "title": {
@@ -366,6 +388,60 @@
           "src": null,
           "system": {},
           "sort": 100000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        },
+        {
+          "_id": "NPnU14672WZKro1J",
+          "name": "Korvosa — Reputation, Influence & City Tiers",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 1
+          },
+          "text": {
+            "format": 1,
+            "content": "<p>Korvosa's many point-trackers and its five settlement stat blocks all map to three official PF2e subsystems (GM Core) — built once, reused from Ch.1 on.</p><section class=\"skill\"><p><strong>Reputation (CHG-0013).</strong> Track the party's standing with Korvosa and each faction (Korvosan Guard, the Crown, Old Korvosa's bosses, the Shoanti, later the Gray Maidens). Deeds move Victory Points along a Reputation track (Ignored → Liked → Admired → Revered, or Disliked → Hated); standing gates favors, backup, prices, and access.</p></section><p><strong>City tiers (CHG-0012).</strong> The five Korvosa settlement stat blocks become a Reputation- and chapter-state-driven item-availability table: as the city slides (anarchy → plague → martial law) and your Reputation shifts, the level and quantity of buyable items change. The framework is Reputation tier → available item level / purchase limit; set specifics per chapter.</p><section class=\"skill\"><p><strong>Influence (CHG-0014).</strong> Court and social set-pieces (the doctors' soiree, dealing with Devargo, the war council, researching the queen) run as Influence encounters: each key NPC gets an Influence block — Influence DC, Discovery DCs, and thresholds → outcomes, with Resistances/Weaknesses. Built per-encounter in their chapters.</p></section><section class=\"conversion\"><p><strong>Victory Points (CHG-0013):</strong> Respect / Rebellion / faction trackers → VP clocks. <strong>Rumor Mill (CHG-0012):</strong> the Korvosan rumor table is a rolltable to populate from your own Appendix 2 (we ship no rumor text) — a few entries are plot hooks, most are flavor.</p></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 200000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        },
+        {
+          "_id": "9vx8tr8PDem1sQtV",
+          "name": "Campaign Backgrounds",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 1
+          },
+          "text": {
+            "format": 1,
+            "content": "<p><strong>Tie each PC to Korvosa, not just to Gaedren (CHG-0021).</strong> The AP's campaign traits convert to six PF2e <strong>custom backgrounds</strong> — each grants ability boosts, a trained skill, a Korvosa-themed Lore, and a recommended skill feat, with a built-in hook into the city. Every PC should also carry a personal grudge against Gaedren (the shared reason Zellara's reading draws them together).</p><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.bgBetrayed000001]{Betrayed} — Deception + Underworld Lore</li><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.bgDrugAddict0001]{Drug Addict} — Medicine + Drug Lore</li><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.bgFramed00000001]{Framed} — Society + Korvosa Lore</li><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.bgLoveLost000001]{Love Lost} — Diplomacy + Korvosa Lore</li><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.bgMissingChild01]{Missing Child} — Survival + Korvosa Lore</li><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.bgUnhappyChild01]{Unhappy Childhood} — Thievery + Underworld Lore</li></ul><section class=\"conversion\"><p>Drag a background onto a PC to apply its boosts / trained skill / Lore; then add the recommended skill feat. Mechanics are ours (PF2e); the original trait flavor stays in your AP book.</p></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 300000,
           "ownership": {
             "default": -1
           },
@@ -397,7 +473,7 @@
       "name": "1. Edge of Anarchy",
       "pages": [
         {
-          "_id": "CtC18rAERxvB13di",
+          "_id": "hZUJ2WpPj9SJqTVg",
           "name": "Chapter Background",
           "type": "text",
           "title": {
@@ -424,7 +500,7 @@
           "category": null
         },
         {
-          "_id": "hZUJ2WpPj9SJqTVg",
+          "_id": "yz5Ao0tTfBxREHWy",
           "name": "Overview",
           "type": "text",
           "title": {
@@ -433,7 +509,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<section class=\"description\"><p>A harrow card finds its way to each of you — and a hand-inked message naming a man you each have cause to hate: <strong>Gaedren Lamm</strong>. The fortune-teller Zellara knows where he dens, and asks you to end him.</p></section><p>Zellara's reading (see @UUID[.yz5Ao0tTfBxREHWy]{Haunted Fortunes}) draws the party together and points them at the <strong>Old Fishery</strong>, where crime-lord Gaedren Lamm hides with his thugs, his pet crocodile @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut}, and a workforce of enslaved orphans. In his den the PCs recover @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.iNQaVcbkSM0VPXsa]{Queen Ileosa's stolen brooch}, @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.I7HQNtjI9yPvQ4fA]{Gaedren's coded ledger}, and @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.DPDen8gco6rznX9Y]{Zellara's haunted harrow deck} — and as they step back into the street, the king dies and Korvosa erupts into the riots of <em>A City Gone Mad</em>.</p><section class=\"milestone head\"><p><strong>Advancement:</strong> the party should reach <strong>2nd level</strong> after dealing with Gaedren. Milestone leveling (CHG-0007).</p></section><p><strong>Party:</strong> 4 PCs, level 1 → 2. <strong>System:</strong> PF2e Remaster (Foundry v14 / pf2e 8.2.0).</p><p><strong>Run it like Gotham.</strong> Tell players up front that Gaedren is a <em>connector</em>, not a campaign villain — this defuses the classic 'Lamm is a Lamb' let-down. By <strong>day</strong> 9 orphans toil, the thugs patrol, and the A7 doors stand open; by <strong>night</strong> every door locks, 26 orphans sleep in @UUID[.Rn7RCvRWorI37yxJ]{A8}, and @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo} prowls as a living alarm. The orphans are non-combatants — rescuing them is the heart of the dungeon.</p><section class=\"secret\" id=\"secret-HjYNsmYQVHAO06ij\"><p><strong>The twist the players don't have yet:</strong> Zellara is already dead. Gaedren murdered her and fed her to Gobblegut; her spirit haunts her stolen deck. The PCs only learn this when they find her head in @UUID[.KIN5PWGVmoNGHz5I]{A14} — so play her in the intro as a warm, desperate ally, not a mystery.</p></section>",
+            "content": "<section class=\"description\"><p>A harrow card finds its way to each of you — and a hand-inked message naming a man you each have cause to hate: <strong>Gaedren Lamm</strong>. The fortune-teller Zellara knows where he dens, and asks you to end him.</p></section><p>Zellara's reading (see @UUID[.zXnbWKFw5vnkEuW5]{Haunted Fortunes}) draws the party together and points them at the <strong>Old Fishery</strong>, where crime-lord Gaedren Lamm hides with his thugs, his pet crocodile @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut}, and a workforce of enslaved orphans. In his den the PCs recover @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.iNQaVcbkSM0VPXsa]{Queen Ileosa's stolen brooch}, @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.I7HQNtjI9yPvQ4fA]{Gaedren's coded ledger}, and @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.DPDen8gco6rznX9Y]{Zellara's haunted harrow deck} — and as they step back into the street, the king dies and Korvosa erupts into the riots of <em>A City Gone Mad</em>.</p><section class=\"milestone head\"><p><strong>Advancement:</strong> the party should reach <strong>2nd level</strong> after dealing with Gaedren. Milestone leveling (CHG-0007).</p></section><p><strong>Party:</strong> 4 PCs, level 1 → 2. <strong>System:</strong> PF2e Remaster (Foundry v14 / pf2e 8.2.0).</p><p><strong>Run it like Gotham.</strong> Tell players up front that Gaedren is a <em>connector</em>, not a campaign villain — this defuses the classic 'Lamm is a Lamb' let-down. By <strong>day</strong> 9 orphans toil, the thugs patrol, and the A7 doors stand open; by <strong>night</strong> every door locks, 26 orphans sleep in @UUID[.k5IvJ7N4FJxS4dEF]{A8}, and @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo} prowls as a living alarm. The orphans are non-combatants — rescuing them is the heart of the dungeon.</p><section class=\"secret\" id=\"secret-HjYNsmYQVHAO06ij\"><p><strong>The twist the players don't have yet:</strong> Zellara is already dead. Gaedren murdered her and fed her to Gobblegut; her spirit haunts her stolen deck. The PCs only learn this when they find her head in @UUID[.A1eYD3f6qKDSU9TA]{A14} — so play her in the intro as a warm, desperate ally, not a mystery.</p></section>",
             "markdown": ""
           },
           "image": {},
@@ -451,7 +527,7 @@
           "category": null
         },
         {
-          "_id": "yz5Ao0tTfBxREHWy",
+          "_id": "zXnbWKFw5vnkEuW5",
           "name": "Haunted Fortunes",
           "type": "text",
           "title": {
@@ -478,7 +554,7 @@
           "category": null
         },
         {
-          "_id": "zXnbWKFw5vnkEuW5",
+          "_id": "VCUD5FxhhchRv4fr",
           "name": "Scene Setup",
           "type": "text",
           "title": {
@@ -487,7 +563,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p><strong>No maps are shipped</strong> (copyright). Open the @UUID[Compendium.cotct-pf2e-conversion.cotct-scenes.Scene.PuUGEVunRqjIWFOj]{Old Fishery scene} — its map-note pins already link to each area page below, and its tokens reference the converted actors.</p><p>Drop in a battlemap (Racooze's free CotCT set, or your own at <code>assets/maps/01-old-fishery.webp</code>), then nudge the pins and tokens onto it — positions are staged in a grid for now (<strong>NEEDS GM REVIEW</strong>); the <em>links</em> are already correct. Drag @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Crocodile} (rename 'Gobblegut') into @UUID[.sNJPLWijX4eA3skC]{A13} and @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Guard Dog} ('Bloo') into @UUID[.CEuUTWkaC01YQDo5]{A4}/@UUID[.Rn7RCvRWorI37yxJ]{A8} from the pf2e Monster Core compendium.</p><section class=\"secret\" id=\"secret-KEL2Bb87C5orUdIF\"><p>The fishery is two map levels — an upper floor (A1–A9) and the waterline understructure (A10–A14). When you add the real map, split this into two scenes and re-pin; the area pages are already ordered for that split.</p></section>",
+            "content": "<p><strong>No maps are shipped</strong> (copyright). Open the @UUID[Compendium.cotct-pf2e-conversion.cotct-scenes.Scene.PuUGEVunRqjIWFOj]{Old Fishery scene} — its map-note pins already link to each area page below, and its tokens reference the converted actors.</p><p>Drop in a battlemap (Racooze's free CotCT set, or your own at <code>assets/maps/01-old-fishery.webp</code>), then nudge the pins and tokens onto it — positions are staged in a grid for now (<strong>NEEDS GM REVIEW</strong>); the <em>links</em> are already correct. Drag @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Crocodile} (rename 'Gobblegut') into @UUID[.KIN5PWGVmoNGHz5I]{A13} and @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Guard Dog} ('Bloo') into @UUID[.fzEyuJGsUCTisJ3b]{A4}/@UUID[.k5IvJ7N4FJxS4dEF]{A8} from the pf2e Monster Core compendium.</p><section class=\"secret\" id=\"secret-KEL2Bb87C5orUdIF\"><p>The fishery is two map levels — an upper floor (A1–A9) and the waterline understructure (A10–A14). When you add the real map, split this into two scenes and re-pin; the area pages are already ordered for that split.</p></section>",
             "markdown": ""
           },
           "image": {},
@@ -505,7 +581,7 @@
           "category": null
         },
         {
-          "_id": "VCUD5FxhhchRv4fr",
+          "_id": "svCjticTit7fdDrF",
           "name": "Fishery Features",
           "type": "text",
           "title": {
@@ -514,7 +590,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A. Old Fishery — p.17.</em></p><section class=\"description\"><p>A creaking, mold-mottled building of boarded windows and solid old doors, perched on pilings over the Jeggare River. It still renders 'dock-dumpling' slurry from spoiled fish — a cover for the crime-lord who dens beneath it.</p></section><p>The fishery sits on a 13-ft embankment (@Check[type:athletics|dc:15] to climb the slick bank). Doors are hardness 5 / 10 HP (@Check[type:thievery|dc:15] to pick, or @Check[type:athletics|dc:15] to force); Yargin's brass key opens them all. Standing hazards: the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.6y55S5DpXqnF40WL]{Slippery Boardwalk} (@UUID[.tkc0z28kYBKNBgHd]{A3}) and the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.xMhIQZS6GokTsulZ]{Rotten Ship Deck} (@UUID[.k5IvJ7N4FJxS4dEF]{A9}) — either can dump a PC into @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{the shark's} water (@UUID[.kJ3b4pPQUpk9Lna7]{A12}).</p><p><strong>Day vs. night.</strong> The encounters assume a daytime raid (9 orphans working, thugs at their posts). At night every door is locked, Yargin sleeps in @UUID[.fzEyuJGsUCTisJ3b]{A5}, Giggles and Hookshanks run roving patrols (≈9pm / midnight / 3am), and @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo} wanders @UUID[.Rn7RCvRWorI37yxJ]{A8} — his bark wakes the whole building.</p><section class=\"skill\"><p><strong>The orphans ('Lamm's Lambs').</strong> 9 work the fishery by day; all 26 sleep in @UUID[.Rn7RCvRWorI37yxJ]{A8} at night. Rally them with @Check[type:diplomacy|dc:15] (Intimidation fails — they're inured to it); won over, they feed information or lend a hand. They know nothing past @UUID[.k5IvJ7N4FJxS4dEF]{A9} — those sent below never return.</p></section><section class=\"secret\" id=\"secret-JfHaYd4k2tRrBbq5\"><p>They are <strong>non-combatants and never an XP-for-kill source</strong> (CHG-0107). Invaded at night they're too frightened to fight and flee into the slums once the thugs fall. Treat a rescued orphan as a 'Missing Child' background payoff, not a stat block.</p></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A. Old Fishery — p.17.</em></p><section class=\"description\"><p>A creaking, mold-mottled building of boarded windows and solid old doors, perched on pilings over the Jeggare River. It still renders 'dock-dumpling' slurry from spoiled fish — a cover for the crime-lord who dens beneath it.</p></section><p>The fishery sits on a 13-ft embankment (@Check[type:athletics|dc:15] to climb the slick bank). Doors are hardness 5 / 10 HP (@Check[type:thievery|dc:15] to pick, or @Check[type:athletics|dc:15] to force); Yargin's brass key opens them all. Standing hazards: the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.6y55S5DpXqnF40WL]{Slippery Boardwalk} (@UUID[.CEuUTWkaC01YQDo5]{A3}) and the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.xMhIQZS6GokTsulZ]{Rotten Ship Deck} (@UUID[.6w0W28EjTyXhAecG]{A9}) — either can dump a PC into @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{the shark's} water (@UUID[.sNJPLWijX4eA3skC]{A12}).</p><p><strong>Day vs. night.</strong> The encounters assume a daytime raid (9 orphans working, thugs at their posts). At night every door is locked, Yargin sleeps in @UUID[.kwszgQHAS37zBd0J]{A5}, Giggles and Hookshanks run roving patrols (≈9pm / midnight / 3am), and @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo} wanders @UUID[.k5IvJ7N4FJxS4dEF]{A8} — his bark wakes the whole building.</p><section class=\"skill\"><p><strong>The orphans ('Lamm's Lambs').</strong> 9 work the fishery by day; all 26 sleep in @UUID[.k5IvJ7N4FJxS4dEF]{A8} at night. Rally them with @Check[type:diplomacy|dc:15] (Intimidation fails — they're inured to it); won over, they feed information or lend a hand. They know nothing past @UUID[.6w0W28EjTyXhAecG]{A9} — those sent below never return.</p></section><section class=\"secret\" id=\"secret-JfHaYd4k2tRrBbq5\"><p>They are <strong>non-combatants and never an XP-for-kill source</strong> (CHG-0107). Invaded at night they're too frightened to fight and flee into the slums once the thugs fall. Treat a rescued orphan as a 'Missing Child' background payoff, not a stat block.</p></section>",
             "markdown": ""
           },
           "image": {},
@@ -532,7 +608,7 @@
           "category": null
         },
         {
-          "_id": "svCjticTit7fdDrF",
+          "_id": "zceSTiompH1bHFDc",
           "name": "A1. Front Door",
           "type": "text",
           "title": {
@@ -541,7 +617,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A1 — p.18.</em></p><section class=\"description\"><p>The reek of brine and the stink of week-dead fish hang thickly in the air here. The old double doors in the side of this weathered building are tightly closed, with a drooping signpost hanging above. The sign it once displayed is long gone, leaving behind only a single short length of rusted chain.</p></section><p>The main doors are locked (@Check[type:thievery|dc:15]). Most business runs through @UUID[.5dKt5LoEacUDhJAi]{A7}, so a knock — or a noisy attempt on the lock — brings @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.7uhbgkK2IOZOlJb3]{Yargin} up from @UUID[.kwszgQHAS37zBd0J]{A6} to answer.</p>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A1 — p.18.</em></p><section class=\"description\"><p>The reek of brine and the stink of week-dead fish hang thickly in the air here. The old double doors in the side of this weathered building are tightly closed, with a drooping signpost hanging above. The sign it once displayed is long gone, leaving behind only a single short length of rusted chain.</p></section><p>The main doors are locked (@Check[type:thievery|dc:15]). Most business runs through @UUID[.Rn7RCvRWorI37yxJ]{A7}, so a knock — or a noisy attempt on the lock — brings @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.7uhbgkK2IOZOlJb3]{Yargin} up from @UUID[.5dKt5LoEacUDhJAi]{A6} to answer.</p>",
             "markdown": ""
           },
           "image": {},
@@ -559,7 +635,7 @@
           "category": null
         },
         {
-          "_id": "zceSTiompH1bHFDc",
+          "_id": "tkc0z28kYBKNBgHd",
           "name": "A2. Loading Dock",
           "type": "text",
           "title": {
@@ -568,7 +644,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A2 — p.18.</em></p><section class=\"description\"><p>A fifteen-foot-wide loading dock abuts the side of the building here. A few carts sit nearby, partially loaded with large, tarcaked barrels marked with a fish-shaped splotch of red paint on the side. Double doors to the immediate south of the loading dock's ramp provide access to the building's interior, while a rickety flight of stairs descends ten feet to a point just three feet over the river's surface, where a simple door provides a secondary entrance.</p></section><p>By day the doors into @UUID[.5dKt5LoEacUDhJAi]{A7} stand open for the daily slurry shipment; the door to @UUID[.Rn7RCvRWorI37yxJ]{A8} is always locked (@Check[type:thievery|dc:15]). The orphans do the heavy hauling under Hookshanks' eye.</p>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A2 — p.18.</em></p><section class=\"description\"><p>A fifteen-foot-wide loading dock abuts the side of the building here. A few carts sit nearby, partially loaded with large, tarcaked barrels marked with a fish-shaped splotch of red paint on the side. Double doors to the immediate south of the loading dock's ramp provide access to the building's interior, while a rickety flight of stairs descends ten feet to a point just three feet over the river's surface, where a simple door provides a secondary entrance.</p></section><p>By day the doors into @UUID[.Rn7RCvRWorI37yxJ]{A7} stand open for the daily slurry shipment; the door to @UUID[.k5IvJ7N4FJxS4dEF]{A8} is always locked (@Check[type:thievery|dc:15]). The orphans do the heavy hauling under Hookshanks' eye.</p>",
             "markdown": ""
           },
           "image": {},
@@ -586,7 +662,7 @@
           "category": null
         },
         {
-          "_id": "tkc0z28kYBKNBgHd",
+          "_id": "CEuUTWkaC01YQDo5",
           "name": "A3. Back Alley",
           "type": "text",
           "title": {
@@ -595,7 +671,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A3 — p.18-20.</em></p><section class=\"description\"><p>A slippery boardwalk clings to the side of the fishery, held together by barnacle-encrusted pilings that have had half of their thickness worn away below the waterline twelve feet below.</p></section><p>The @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.6y55S5DpXqnF40WL]{Slippery Boardwalk} hazard: a careful pace is safe, but moving fast or fighting on it risks a fall into @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{the shark's} water (@UUID[.kJ3b4pPQUpk9Lna7]{A12}); the planks also groan and give under heavy loads. The door into @UUID[.kwszgQHAS37zBd0J]{A6} is locked.</p><section class=\"secret\" id=\"secret-ebJ1Ur3OpYCHKbFp\"><p>Despite its state, this boardwalk is Gaedren's own private way in and out of his den (@UUID[.sNJPLWijX4eA3skC]{A13}) — he uses it only a few times a month, spending days or weeks below to avoid being seen.</p></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A3 — p.18-20.</em></p><section class=\"description\"><p>A slippery boardwalk clings to the side of the fishery, held together by barnacle-encrusted pilings that have had half of their thickness worn away below the waterline twelve feet below.</p></section><p>The @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.6y55S5DpXqnF40WL]{Slippery Boardwalk} hazard: a careful pace is safe, but moving fast or fighting on it risks a fall into @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{the shark's} water (@UUID[.sNJPLWijX4eA3skC]{A12}); the planks also groan and give under heavy loads. The door into @UUID[.5dKt5LoEacUDhJAi]{A6} is locked.</p><section class=\"secret\" id=\"secret-ebJ1Ur3OpYCHKbFp\"><p>Despite its state, this boardwalk is Gaedren's own private way in and out of his den (@UUID[.KIN5PWGVmoNGHz5I]{A13}) — he uses it only a few times a month, spending days or weeks below to avoid being seen.</p></section>",
             "markdown": ""
           },
           "image": {},
@@ -613,7 +689,7 @@
           "category": null
         },
         {
-          "_id": "CEuUTWkaC01YQDo5",
+          "_id": "fzEyuJGsUCTisJ3b",
           "name": "A4. Front Room",
           "type": "text",
           "title": {
@@ -640,7 +716,7 @@
           "category": null
         },
         {
-          "_id": "fzEyuJGsUCTisJ3b",
+          "_id": "kwszgQHAS37zBd0J",
           "name": "A5. Barracks",
           "type": "text",
           "title": {
@@ -667,7 +743,7 @@
           "category": null
         },
         {
-          "_id": "kwszgQHAS37zBd0J",
+          "_id": "5dKt5LoEacUDhJAi",
           "name": "A6. Yargin's Office",
           "type": "text",
           "title": {
@@ -676,7 +752,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A6 — p.19-21.</em></p><section class=\"description\"><p>A wooden desk sits in one corner of this room, its side preventing the western door from opening all the way. The table is heaped with dozens of slate boards covered with chalk scrawls, while to the east a cabinet slouches against the wall.</p></section><p>The fishery's 'books': slates of transactions and addresses, compiled monthly into scrolls in the cabinet — cover paperwork for any Guard inspection. @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.7uhbgkK2IOZOlJb3]{Yargin Balko} works here and carries the brass key.</p><section class=\"secret\" id=\"secret-JqBvnNuAxWBpLPAI\"><p>A floorboard behind the chair is a <strong>hidden, barred trapdoor</strong> (@Check[type:perception|dc:18] to spot; @Check[type:athletics|dc:17] or break to force) dropping straight into the boss's chamber (@UUID[.sNJPLWijX4eA3skC]{A13}). A meal-pulley rig makes the climb down trivial — a flanking route onto Gaedren that skips the whole lower floor.</p></section><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/yargin-balko.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.7uhbgkK2IOZOlJb3]{Yargin Balko (1)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">Yargin Balko</span><span class=\"enc-budget\">Low · 40 XP</span></header><p>Opens with thrown <strong>Acid Flasks</strong>, then falls back to his crossbow; he's terrified of melee.</p><section class=\"secret\" id=\"secret-yCnREYhz4JHBPtEq\"><p><strong>Morale:</strong> at the first melee hit (or once his acid is spent) Yargin panics and flees down the trapdoor to warn Gaedren — and may lead the PCs right onto the boss. If he reaches the den, start the @UUID[.sNJPLWijX4eA3skC]{A13} fight with Gobblegut already enraged.</p></section></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A6 — p.19-21.</em></p><section class=\"description\"><p>A wooden desk sits in one corner of this room, its side preventing the western door from opening all the way. The table is heaped with dozens of slate boards covered with chalk scrawls, while to the east a cabinet slouches against the wall.</p></section><p>The fishery's 'books': slates of transactions and addresses, compiled monthly into scrolls in the cabinet — cover paperwork for any Guard inspection. @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.7uhbgkK2IOZOlJb3]{Yargin Balko} works here and carries the brass key.</p><section class=\"secret\" id=\"secret-JqBvnNuAxWBpLPAI\"><p>A floorboard behind the chair is a <strong>hidden, barred trapdoor</strong> (@Check[type:perception|dc:18] to spot; @Check[type:athletics|dc:17] or break to force) dropping straight into the boss's chamber (@UUID[.KIN5PWGVmoNGHz5I]{A13}). A meal-pulley rig makes the climb down trivial — a flanking route onto Gaedren that skips the whole lower floor.</p></section><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/yargin-balko.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.7uhbgkK2IOZOlJb3]{Yargin Balko (1)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">Yargin Balko</span><span class=\"enc-budget\">Low · 40 XP</span></header><p>Opens with thrown <strong>Acid Flasks</strong>, then falls back to his crossbow; he's terrified of melee.</p><section class=\"secret\" id=\"secret-yCnREYhz4JHBPtEq\"><p><strong>Morale:</strong> at the first melee hit (or once his acid is spent) Yargin panics and flees down the trapdoor to warn Gaedren — and may lead the PCs right onto the boss. If he reaches the den, start the @UUID[.KIN5PWGVmoNGHz5I]{A13} fight with Gobblegut already enraged.</p></section></section>",
             "markdown": ""
           },
           "image": {},
@@ -694,7 +770,7 @@
           "category": null
         },
         {
-          "_id": "5dKt5LoEacUDhJAi",
+          "_id": "Rn7RCvRWorI37yxJ",
           "name": "A7. Upper Workroom",
           "type": "text",
           "title": {
@@ -703,7 +779,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A7 — p.20-22.</em></p><section class=\"description\"><p>The stink in this room, a mixture of fish and sweat, is enough to make the eyes water. To the east, a large wooden trough holds a hideous mound of half-rancid fish, seaweed, and brine. Filthy river water and fish blood stain the floor around this trough. A pair of wooden chutes lead from this trough through holes in the eastern wall into a larger room beyond. To the west, a desk and chair sit in one corner while a tall cabinet sits in the other.</p></section><p>Four orphans feed the chutes here. The floor around the trough is slick (@Check[type:acrobatics|dc:15] if moving faster than a Step). The cabinet holds petty cash, locked (@Check[type:thievery|dc:15]; Yargin's key).</p><p>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.qH96VshE6CZqfajv]{Hookshanks Gruller}, a gnome taskmaster, oversees the work — and dresses as one of the orphans, passing for one until a PC beats his Deception with @Check[type:perception|dc:17] (gnome PCs get a bonus).</p><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/hookshanks-gruller.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.qH96VshE6CZqfajv]{Hookshanks Gruller (1)}</li><li>4× @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.UQr3ApF78GW7eghw]{Lamm's Lamb} <em>(non-combatant)</em></li></ul></aside><header class=\"split\"><span class=\"enc-name\">Hookshanks + 4 orphans</span><span class=\"enc-budget\">Low · 40 XP</span></header><p>Hookshanks orders the orphans to attack, then opens the @UUID[.CEuUTWkaC01YQDo5]{A4} door to loose @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo} and raise the alarm; he fights with a kukri.</p><section class=\"skill\"><p>Rally the kids (@Check[type:diplomacy|dc:15]) and an older boy, Kester, blinds Hookshanks with a faceful of rancid fish. Hookshanks surrenders at low HP and tells all — except what lies in the den (@UUID[.KIN5PWGVmoNGHz5I]{A14}).</p></section></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A7 — p.20-22.</em></p><section class=\"description\"><p>The stink in this room, a mixture of fish and sweat, is enough to make the eyes water. To the east, a large wooden trough holds a hideous mound of half-rancid fish, seaweed, and brine. Filthy river water and fish blood stain the floor around this trough. A pair of wooden chutes lead from this trough through holes in the eastern wall into a larger room beyond. To the west, a desk and chair sit in one corner while a tall cabinet sits in the other.</p></section><p>Four orphans feed the chutes here. The floor around the trough is slick (@Check[type:acrobatics|dc:15] if moving faster than a Step). The cabinet holds petty cash, locked (@Check[type:thievery|dc:15]; Yargin's key).</p><p>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.qH96VshE6CZqfajv]{Hookshanks Gruller}, a gnome taskmaster, oversees the work — and dresses as one of the orphans, passing for one until a PC beats his Deception with @Check[type:perception|dc:17] (gnome PCs get a bonus).</p><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/hookshanks-gruller.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.qH96VshE6CZqfajv]{Hookshanks Gruller (1)}</li><li>4× @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.UQr3ApF78GW7eghw]{Lamm's Lamb} <em>(non-combatant)</em></li></ul></aside><header class=\"split\"><span class=\"enc-name\">Hookshanks + 4 orphans</span><span class=\"enc-budget\">Low · 40 XP</span></header><p>Hookshanks orders the orphans to attack, then opens the @UUID[.fzEyuJGsUCTisJ3b]{A4} door to loose @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo} and raise the alarm; he fights with a kukri.</p><section class=\"skill\"><p>Rally the kids (@Check[type:diplomacy|dc:15]) and an older boy, Kester, blinds Hookshanks with a faceful of rancid fish. Hookshanks surrenders at low HP and tells all — except what lies in the den (@UUID[.A1eYD3f6qKDSU9TA]{A14}).</p></section></section>",
             "markdown": ""
           },
           "image": {},
@@ -721,7 +797,7 @@
           "category": null
         },
         {
-          "_id": "Rn7RCvRWorI37yxJ",
+          "_id": "k5IvJ7N4FJxS4dEF",
           "name": "A8. Fishery Floor",
           "type": "text",
           "title": {
@@ -730,7 +806,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A8 — p.21-22.</em></p><section class=\"description\"><p>The floor here is slick with river water, bits of seaweed, and fish blood, and the air is thick with the accompanying scents. Wooden catwalks to the north and south allow access between the western part of the fishery and the floor of the room, which is ten feet lower. A wide opening in the floor to the south allows direct access to the sloppy, muddy water of the Jeggare River a further three feet down, while to the northwest stands an immense eightfoot-tall wooden vat, its sides caked and waterproofed with tar. Inside is a foul-looking mixture of chum, river water, and who knows what else. To the east are stacked many barrels and crates, each with a fish painted on it. Over a dozen small hammocks hang from under the catwalks, each with its own ratty blanket and pillow.</p></section><p>The heart of the operation. @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mHUhxeaalWkTU1h4]{Giggles}, a half-orc brute, oversees 5 orphans by day; all 26 sleep here at night. The hole drops to the river and @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{the jigsaw shark} — the thugs toss scraps through it to keep the shark close and the children terrified.</p><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/giggles.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mHUhxeaalWkTU1h4]{Giggles (1)}</li><li>5× @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.UQr3ApF78GW7eghw]{orphans} <em>(non-combatant)</em></li></ul></aside><header class=\"split\"><span class=\"enc-name\">Giggles [+ Bloo at night]</span><span class=\"enc-budget\">Low · 40 XP (60 with Bloo)</span></header><p>Giggles uses Bludgeoner to <strong>capture</strong> PCs nonlethally for Gaedren, switching to lethal below half HP and quaffing healing potions; then he fights to the death (Orc Ferocity).</p><section class=\"secret\" id=\"secret-olUPT9yY6LMc9b8q\"><p><strong>Night raid:</strong> this floor is wall-to-wall sleeping children — a fight here endangers them. The river-hole is also the quiet route down to the underpier (@UUID[.kJ3b4pPQUpk9Lna7]{A12}) and the den, bypassing the front rooms entirely.</p></section></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A8 — p.21-22.</em></p><section class=\"description\"><p>The floor here is slick with river water, bits of seaweed, and fish blood, and the air is thick with the accompanying scents. Wooden catwalks to the north and south allow access between the western part of the fishery and the floor of the room, which is ten feet lower. A wide opening in the floor to the south allows direct access to the sloppy, muddy water of the Jeggare River a further three feet down, while to the northwest stands an immense eightfoot-tall wooden vat, its sides caked and waterproofed with tar. Inside is a foul-looking mixture of chum, river water, and who knows what else. To the east are stacked many barrels and crates, each with a fish painted on it. Over a dozen small hammocks hang from under the catwalks, each with its own ratty blanket and pillow.</p></section><p>The heart of the operation. @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mHUhxeaalWkTU1h4]{Giggles}, a half-orc brute, oversees 5 orphans by day; all 26 sleep here at night. The hole drops to the river and @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{the jigsaw shark} — the thugs toss scraps through it to keep the shark close and the children terrified.</p><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/giggles.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mHUhxeaalWkTU1h4]{Giggles (1)}</li><li>5× @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.UQr3ApF78GW7eghw]{orphans} <em>(non-combatant)</em></li></ul></aside><header class=\"split\"><span class=\"enc-name\">Giggles [+ Bloo at night]</span><span class=\"enc-budget\">Low · 40 XP (60 with Bloo)</span></header><p>Giggles uses Bludgeoner to <strong>capture</strong> PCs nonlethally for Gaedren, switching to lethal below half HP and quaffing healing potions; then he fights to the death (Orc Ferocity).</p><section class=\"secret\" id=\"secret-olUPT9yY6LMc9b8q\"><p><strong>Night raid:</strong> this floor is wall-to-wall sleeping children — a fight here endangers them. The river-hole is also the quiet route down to the underpier (@UUID[.sNJPLWijX4eA3skC]{A12}) and the den, bypassing the front rooms entirely.</p></section></section>",
             "markdown": ""
           },
           "image": {},
@@ -748,7 +824,7 @@
           "category": null
         },
         {
-          "_id": "k5IvJ7N4FJxS4dEF",
+          "_id": "6w0W28EjTyXhAecG",
           "name": "A9. Kraken's Folly",
           "type": "text",
           "title": {
@@ -757,7 +833,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A9 — p.23-24.</em></p><section class=\"description\"><p>The rotten deck of this ancient sailing ship seems to be barely intact; its hull is worn and thick with seaweed and barnacles. The ship is held together primarily by the layers of old rope that lash it securely to the pilings that support the fishery and the nearby boardwalk. The rickety walkway leads along the ship's starboard, a foot below its railing. A single wooden door leading into the aft cabin bears a crude painting of a red fish on its surface.</p></section><p>No longer seaworthy — Gaedren's route to the den. The @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.xMhIQZS6GokTsulZ]{Rotten Ship Deck} hazard: everything but the stern is rotten, and a Medium+ creature moving toward the bow crashes through into the hold (@UUID[.IijeNzrXCRaWIKb9]{A11}). Stairs in the cabin lead down to the spider nest.</p>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A9 — p.23-24.</em></p><section class=\"description\"><p>The rotten deck of this ancient sailing ship seems to be barely intact; its hull is worn and thick with seaweed and barnacles. The ship is held together primarily by the layers of old rope that lash it securely to the pilings that support the fishery and the nearby boardwalk. The rickety walkway leads along the ship's starboard, a foot below its railing. A single wooden door leading into the aft cabin bears a crude painting of a red fish on its surface.</p></section><p>No longer seaworthy — Gaedren's route to the den. The @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.xMhIQZS6GokTsulZ]{Rotten Ship Deck} hazard: everything but the stern is rotten, and a Medium+ creature moving toward the bow crashes through into the hold (@UUID[.kJ3b4pPQUpk9Lna7]{A11}). Stairs in the cabin lead down to the spider nest.</p>",
             "markdown": ""
           },
           "image": {},
@@ -775,7 +851,7 @@
           "category": null
         },
         {
-          "_id": "6w0W28EjTyXhAecG",
+          "_id": "IijeNzrXCRaWIKb9",
           "name": "A10. Spider Nest",
           "type": "text",
           "title": {
@@ -784,7 +860,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A10 — p.24.</em></p><section class=\"description\"><p>The air in this room is thick and musty. Thick sheets of cobwebs hang from the walls and mounds of blankets, cushions, and straw clutter the floor. To the south, a narrow flight of stairs leads down into the ship's hold.</p></section><p>The cabin is the lair of a single cat-sized @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{drain spider} that lunges at the first creature through the door.</p><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/drain-spider.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{Drain Spider (−1)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">Drain Spider</span><span class=\"enc-budget\">Trivial · 20 XP</span></header><p>One drain spider, off-guard against the surprised intruder it lunges at.</p><section class=\"skill\"><p>The spiders can't abide the <strong>vermin repellent</strong> looted from @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.ymuRwMg6WfWIwkne]{Gaedren's coffer} (@UUID[.sNJPLWijX4eA3skC]{A13}) — a coated creature auto-repels them.</p></section></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A10 — p.24.</em></p><section class=\"description\"><p>The air in this room is thick and musty. Thick sheets of cobwebs hang from the walls and mounds of blankets, cushions, and straw clutter the floor. To the south, a narrow flight of stairs leads down into the ship's hold.</p></section><p>The cabin is the lair of a single cat-sized @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{drain spider} that lunges at the first creature through the door.</p><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/drain-spider.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{Drain Spider (−1)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">Drain Spider</span><span class=\"enc-budget\">Trivial · 20 XP</span></header><p>One drain spider, off-guard against the surprised intruder it lunges at.</p><section class=\"skill\"><p>The spiders can't abide the <strong>vermin repellent</strong> looted from @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.ymuRwMg6WfWIwkne]{Gaedren's coffer} (@UUID[.KIN5PWGVmoNGHz5I]{A13}) — a coated creature auto-repels them.</p></section></section>",
             "markdown": ""
           },
           "image": {},
@@ -802,7 +878,7 @@
           "category": null
         },
         {
-          "_id": "IijeNzrXCRaWIKb9",
+          "_id": "kJ3b4pPQUpk9Lna7",
           "name": "A11. Kraken's Hold",
           "type": "text",
           "title": {
@@ -811,7 +887,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A11 — p.24.</em></p><section class=\"description\"><p>Dark and dank, the ship's hold smells of mildew. Several barrels, crates, and other containers lie stacked here and there. Dust and grime cover the floor, except where river water has collected in puddles.</p></section><p>Four more @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{drain spiders} infest the hold.</p><section class=\"secret\" id=\"secret-MGDCVRw4uqfBHF1i\"><p>Gaedren built a <strong>secret door into the hull</strong> (@Check[type:perception|dc:17]) opening to the underpier (@UUID[.kJ3b4pPQUpk9Lna7]{A12}) and the boss. Spotting his tracks in the filth (@Check[type:survival|dc:15]) grants a circumstance bonus to find it.</p></section><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/drain-spider.webp\" /><ul><li>4× @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{Drain Spider (−1)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">Drain Spider nest</span><span class=\"enc-budget\">Moderate · 80 XP (trivial with repellent)</span></header><p>Four drain spiders swarm anything that enters. Pair this with the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.xMhIQZS6GokTsulZ]{Rotten Deck} collapse from @UUID[.k5IvJ7N4FJxS4dEF]{A9} for a single nasty moment.</p></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A11 — p.24.</em></p><section class=\"description\"><p>Dark and dank, the ship's hold smells of mildew. Several barrels, crates, and other containers lie stacked here and there. Dust and grime cover the floor, except where river water has collected in puddles.</p></section><p>Four more @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{drain spiders} infest the hold.</p><section class=\"secret\" id=\"secret-MGDCVRw4uqfBHF1i\"><p>Gaedren built a <strong>secret door into the hull</strong> (@Check[type:perception|dc:17]) opening to the underpier (@UUID[.sNJPLWijX4eA3skC]{A12}) and the boss. Spotting his tracks in the filth (@Check[type:survival|dc:15]) grants a circumstance bonus to find it.</p></section><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/drain-spider.webp\" /><ul><li>4× @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{Drain Spider (−1)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">Drain Spider nest</span><span class=\"enc-budget\">Moderate · 80 XP (trivial with repellent)</span></header><p>Four drain spiders swarm anything that enters. Pair this with the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.xMhIQZS6GokTsulZ]{Rotten Deck} collapse from @UUID[.6w0W28EjTyXhAecG]{A9} for a single nasty moment.</p></section>",
             "markdown": ""
           },
           "image": {},
@@ -829,7 +905,7 @@
           "category": null
         },
         {
-          "_id": "kJ3b4pPQUpk9Lna7",
+          "_id": "sNJPLWijX4eA3skC",
           "name": "A12. Underpier",
           "type": "text",
           "title": {
@@ -838,7 +914,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A12 — p.24-25.</em></p><section class=\"description\"><p>A narrow space exists under the fishery, with about three feet of room between the floor of the eastern side of the building and the languid, foamy river water below. Wooden pilings support the building, and thick mats of moss and cobwebs hang from ropes and rusted chains between them. A wooden walkway floats on the river's surface, winding along the inner wall of pilings that supports the building's frame above. The walkway leads from the sodden ship to the east all the way west to a small two-and-a-half-foot-square door that leads into an understructure below the fishery's land-bound half. The pilings below this understructure are densely arrayed, leaving only narrow gaps into the water below that area.</p></section><p>Gaedren's escape skiffs are tied along the walkway. The squat door (@Check[type:thievery|dc:17]) leads into the den (@UUID[.sNJPLWijX4eA3skC]{A13}); a Medium creature must stoop to squeeze through.</p><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/jigsaw-shark.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{Jigsaw Shark (1)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">Jigsaw Shark</span><span class=\"enc-budget\">Low · 40 XP · avoidable</span></header><p>The shark scavenges scraps drifting from above. It attacks anything that falls into the water, but only leaps onto the walkway if it is first attacked and damaged.</p><section class=\"skill\"><p>Stay dry and it stays a hazard, not a fight — though the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.6y55S5DpXqnF40WL]{boardwalk} and @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.xMhIQZS6GokTsulZ]{rotten deck} above exist precisely to feed it victims.</p></section></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A12 — p.24-25.</em></p><section class=\"description\"><p>A narrow space exists under the fishery, with about three feet of room between the floor of the eastern side of the building and the languid, foamy river water below. Wooden pilings support the building, and thick mats of moss and cobwebs hang from ropes and rusted chains between them. A wooden walkway floats on the river's surface, winding along the inner wall of pilings that supports the building's frame above. The walkway leads from the sodden ship to the east all the way west to a small two-and-a-half-foot-square door that leads into an understructure below the fishery's land-bound half. The pilings below this understructure are densely arrayed, leaving only narrow gaps into the water below that area.</p></section><p>Gaedren's escape skiffs are tied along the walkway. The squat door (@Check[type:thievery|dc:17]) leads into the den (@UUID[.KIN5PWGVmoNGHz5I]{A13}); a Medium creature must stoop to squeeze through.</p><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/jigsaw-shark.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{Jigsaw Shark (1)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">Jigsaw Shark</span><span class=\"enc-budget\">Low · 40 XP · avoidable</span></header><p>The shark scavenges scraps drifting from above. It attacks anything that falls into the water, but only leaps onto the walkway if it is first attacked and damaged.</p><section class=\"skill\"><p>Stay dry and it stays a hazard, not a fight — though the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.6y55S5DpXqnF40WL]{boardwalk} and @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.xMhIQZS6GokTsulZ]{rotten deck} above exist precisely to feed it victims.</p></section></section>",
             "markdown": ""
           },
           "image": {},
@@ -856,7 +932,7 @@
           "category": null
         },
         {
-          "_id": "sNJPLWijX4eA3skC",
+          "_id": "KIN5PWGVmoNGHz5I",
           "name": "A13. Gaedren's Playground",
           "type": "text",
           "title": {
@@ -865,7 +941,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A13 — p.24-26.</em></p><section class=\"description\"><p>The air in this large room is chilly and stinks of the river, thanks to a huge opening in the floor that drops away to the river shore three feet below. Several pilings emerge from the waters to support the roof eight feet above the floor, with mossy ropes slung between them. In two places, rusty manacles hang from the ropes over the water. Two five-foot-wide walkways cross the hole to the other side of the chamber, where a collection of old cabinets, lockboxes, and piles of clutter are strewn about. Chipped porcelain plates, a cracked goblet, badly rusted silverware, an old wooden shield with a crossbow bolt embedded in it, the odd dinged helm, and other 'treasures' litter the floor of this side of the chamber. Three tables heaped with clutter stand amid this mess. In the southwest corner, a wooden door provides access to a walled-off section.</p></section><p>@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut} lurks in the pit; @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.RKfT6vJ5guinSBjo]{Gaedren Lamm} sorts the day's haul at his tables across it. <strong>Reaching him means crossing the gator's water.</strong></p><section class=\"secret\" id=\"secret-0bc7NukuREJeIASa\"><p>Those manacles are where Gaedren feeds doomed orphans to Gobblegut for sport — the PCs may arrive mid-'feeding,' a child dangling over the snapping jaws. Anyone who names <strong>Zellara</strong> earns a leering reply that 'she's in the next room' — her head waits in @UUID[.KIN5PWGVmoNGHz5I]{A14}. <strong>Tactics:</strong> Gaedren opens with <em>Spur the Beast</em> to enrage Gobblegut, snipes from across the pool, <em>Nimble Dodges</em> focus fire, and flees to the @UUID[.kJ3b4pPQUpk9Lna7]{A12} skiffs at &le;8 HP — though the abused gator may take him first.</p></section><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/gaedren-lamm.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.RKfT6vJ5guinSBjo]{Gaedren Lamm (2)}</li><li>@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut — Crocodile (2)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">BOSS — Gaedren + Gobblegut</span><span class=\"enc-budget\">SEVERE · 120 XP @ level 1 (Moderate @ level 2)</span></header><p>The crocodile is the real threat; Gaedren is a frail catalyst who weaponizes it and snipes from cover.</p><p><strong>Scaling:</strong> 3 PCs → Weak Crocodile · 5–6 PCs → Elite Crocodile and/or pull a drain spider from the pool · if Yargin reached Gaedren first, Gobblegut starts pre-enraged.</p></section><section class=\"treasure\"><p>On the tables: @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.ymuRwMg6WfWIwkne]{a darkwood coffer — 20 doses of shiver + 7 applications of vermin repellent}.</p></section><section class=\"conversion\"><p><strong>⚠ Track what the PCs do with the body.</strong> Left here, Gaedren's son Rolth animates it — the PCs meet an undead Gaedren in the Dead Warrens at the chapter's end. See @UUID[.iL00jRstCzlSAiMp]{Conversion Notes}.</p></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A13 — p.24-26.</em></p><section class=\"description\"><p>The air in this large room is chilly and stinks of the river, thanks to a huge opening in the floor that drops away to the river shore three feet below. Several pilings emerge from the waters to support the roof eight feet above the floor, with mossy ropes slung between them. In two places, rusty manacles hang from the ropes over the water. Two five-foot-wide walkways cross the hole to the other side of the chamber, where a collection of old cabinets, lockboxes, and piles of clutter are strewn about. Chipped porcelain plates, a cracked goblet, badly rusted silverware, an old wooden shield with a crossbow bolt embedded in it, the odd dinged helm, and other 'treasures' litter the floor of this side of the chamber. Three tables heaped with clutter stand amid this mess. In the southwest corner, a wooden door provides access to a walled-off section.</p></section><p>@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut} lurks in the pit; @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.RKfT6vJ5guinSBjo]{Gaedren Lamm} sorts the day's haul at his tables across it. <strong>Reaching him means crossing the gator's water.</strong></p><section class=\"secret\" id=\"secret-0bc7NukuREJeIASa\"><p>Those manacles are where Gaedren feeds doomed orphans to Gobblegut for sport — the PCs may arrive mid-'feeding,' a child dangling over the snapping jaws. Anyone who names <strong>Zellara</strong> earns a leering reply that 'she's in the next room' — her head waits in @UUID[.A1eYD3f6qKDSU9TA]{A14}. <strong>Tactics:</strong> Gaedren opens with <em>Spur the Beast</em> to enrage Gobblegut, snipes from across the pool, <em>Nimble Dodges</em> focus fire, and flees to the @UUID[.sNJPLWijX4eA3skC]{A12} skiffs at &le;8 HP — though the abused gator may take him first.</p></section><section class=\"encounter\"><aside class=\"right token\"><img class=\"token\" src=\"modules/cotct-pf2e-conversion/assets/tokens/gaedren-lamm.webp\" /><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.RKfT6vJ5guinSBjo]{Gaedren Lamm (2)}</li><li>@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut — Crocodile (2)}</li></ul></aside><header class=\"split\"><span class=\"enc-name\">BOSS — Gaedren + Gobblegut</span><span class=\"enc-budget\">SEVERE · 120 XP @ level 1 (Moderate @ level 2)</span></header><p>The crocodile is the real threat; Gaedren is a frail catalyst who weaponizes it and snipes from cover.</p><p><strong>Scaling:</strong> 3 PCs → Weak Crocodile · 5–6 PCs → Elite Crocodile and/or pull a drain spider from the pool · if Yargin reached Gaedren first, Gobblegut starts pre-enraged.</p></section><section class=\"treasure\"><p>On the tables: @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.ymuRwMg6WfWIwkne]{a darkwood coffer — 20 doses of shiver + 7 applications of vermin repellent}.</p></section><section class=\"conversion\"><p><strong>⚠ Track what the PCs do with the body.</strong> Left here, Gaedren's son Rolth animates it — the PCs meet an undead Gaedren in the Dead Warrens at the chapter's end. See @UUID[.EehHQ57Q89SmWDtp]{Conversion Notes}.</p></section>",
             "markdown": ""
           },
           "image": {},
@@ -883,7 +959,7 @@
           "category": null
         },
         {
-          "_id": "KIN5PWGVmoNGHz5I",
+          "_id": "A1eYD3f6qKDSU9TA",
           "name": "A14. Gaedren's Den",
           "type": "text",
           "title": {
@@ -892,7 +968,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A14 — p.26-28.</em></p><section class=\"description\"><p>This foul-smelling room seems to be a combination bedroom and study. A wooden bed with a lumpy mattress stands against the east wall, while a round table heaped with dirty plates, bread crusts, stained goblets, fruit rinds, and scuttling cockroaches sits nearby. At the foot of the bed sits a large strongbox; a slightly rusted lock secures it and a moldy ledger with pages rippled from moisture sits atop its lid. A sagging dresser filled with moth-eaten clothes well past their glory days is in one corner. What appears to be a wooden hatbox surrounded by a small cloud of flies sits atop this dresser.</p></section><p>Gaedren's private quarters. The strongbox opens to the rusty iron key he carries, or @Check[type:thievery|dc:15].</p><section class=\"secret\" id=\"secret-kViv3N3VH0afcymO\"><p><strong>The reveal.</strong> The hatbox holds <strong>Zellara's severed head</strong>, crudely made up to mimic life (@Check[type:medicine|dc:14]: dead for weeks) — confirming the woman who hired the party has been dead all along. Beneath it lies @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.DPDen8gco6rznX9Y]{her haunted harrow deck}, still inhabited by her spirit. Atop the strongbox is @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.I7HQNtjI9yPvQ4fA]{Gaedren's coded ledger}; inside, @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.iNQaVcbkSM0VPXsa]{Queen Ileosa's Brooch} and the hoard. A key-shaped masterwork dagger among the loot is a gift from Gaedren's estranged son <strong>Rolth</strong> — foreshadowing the next chapter (@Check[type:society|dc:20] recognizes the killer's signature blade).</p></section><section class=\"treasure\"><p>Full parcel on the @UUID[.JBdfg4hLf4tohbHd]{Treasure} page.</p></section>",
+            "content": "<p class=\"source\"><em>Source: CotCT (2016 HC), Ch.1, A14 — p.26-28.</em></p><section class=\"description\"><p>This foul-smelling room seems to be a combination bedroom and study. A wooden bed with a lumpy mattress stands against the east wall, while a round table heaped with dirty plates, bread crusts, stained goblets, fruit rinds, and scuttling cockroaches sits nearby. At the foot of the bed sits a large strongbox; a slightly rusted lock secures it and a moldy ledger with pages rippled from moisture sits atop its lid. A sagging dresser filled with moth-eaten clothes well past their glory days is in one corner. What appears to be a wooden hatbox surrounded by a small cloud of flies sits atop this dresser.</p></section><p>Gaedren's private quarters. The strongbox opens to the rusty iron key he carries, or @Check[type:thievery|dc:15].</p><section class=\"secret\" id=\"secret-kViv3N3VH0afcymO\"><p><strong>The reveal.</strong> The hatbox holds <strong>Zellara's severed head</strong>, crudely made up to mimic life (@Check[type:medicine|dc:14]: dead for weeks) — confirming the woman who hired the party has been dead all along. Beneath it lies @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.DPDen8gco6rznX9Y]{her haunted harrow deck}, still inhabited by her spirit. Atop the strongbox is @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.I7HQNtjI9yPvQ4fA]{Gaedren's coded ledger}; inside, @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.iNQaVcbkSM0VPXsa]{Queen Ileosa's Brooch} and the hoard. A key-shaped masterwork dagger among the loot is a gift from Gaedren's estranged son <strong>Rolth</strong> — foreshadowing the next chapter (@Check[type:society|dc:20] recognizes the killer's signature blade).</p></section><section class=\"treasure\"><p>Full parcel on the @UUID[.iL00jRstCzlSAiMp]{Treasure} page.</p></section>",
             "markdown": ""
           },
           "image": {},
@@ -910,7 +986,7 @@
           "category": null
         },
         {
-          "_id": "A1eYD3f6qKDSU9TA",
+          "_id": "JBdfg4hLf4tohbHd",
           "name": "NPCs",
           "type": "text",
           "title": {
@@ -919,7 +995,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<p>Click any creature to open its sheet. Build rationale: <code>reports/npc_monster_conversion_report.md</code>.</p><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.RKfT6vJ5guinSBjo]{Gaedren Lamm} (L2) — @UUID[.sNJPLWijX4eA3skC]{A13} boss · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.7uhbgkK2IOZOlJb3]{Yargin Balko} (L1) — @UUID[.kwszgQHAS37zBd0J]{A6} · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.qH96VshE6CZqfajv]{Hookshanks Gruller} (L1) — @UUID[.5dKt5LoEacUDhJAi]{A7} · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mHUhxeaalWkTU1h4]{Giggles} (L1) — @UUID[.Rn7RCvRWorI37yxJ]{A8}</li><li>@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut} = Crocodile (L2) · @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo} = Guard Dog (L−1) · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{Drain Spider} (L−1) · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{Jigsaw Shark} (L1) · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.UQr3ApF78GW7eghw]{Lamm's Lambs} <em>(non-combatant)</em></li><li><strong>Zellara</strong> — the harrow-spirit guide, bound to @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.DPDen8gco6rznX9Y]{her deck} (story NPC, no stat block).</li></ul>",
+            "content": "<p>Click any creature to open its sheet. Build rationale: <code>reports/npc_monster_conversion_report.md</code>.</p><ul><li>@UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.RKfT6vJ5guinSBjo]{Gaedren Lamm} (L2) — @UUID[.KIN5PWGVmoNGHz5I]{A13} boss · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.7uhbgkK2IOZOlJb3]{Yargin Balko} (L1) — @UUID[.5dKt5LoEacUDhJAi]{A6} · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.qH96VshE6CZqfajv]{Hookshanks Gruller} (L1) — @UUID[.Rn7RCvRWorI37yxJ]{A7} · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mHUhxeaalWkTU1h4]{Giggles} (L1) — @UUID[.k5IvJ7N4FJxS4dEF]{A8}</li><li>@UUID[Compendium.pf2e.pathfinder-monster-core.Actor.2rMLYkUR47ZCQMUg]{Gobblegut} = Crocodile (L2) · @UUID[Compendium.pf2e.pathfinder-monster-core.Actor.KHTYbQgR5hnFZdGL]{Bloo} = Guard Dog (L−1) · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.1M94tm3wnSRGcTG5]{Drain Spider} (L−1) · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.lsdWSvGJ81hDy4it]{Jigsaw Shark} (L1) · @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.UQr3ApF78GW7eghw]{Lamm's Lambs} <em>(non-combatant)</em></li><li><strong>Zellara</strong> — the harrow-spirit guide, bound to @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.DPDen8gco6rznX9Y]{her deck} (story NPC, no stat block).</li></ul>",
             "markdown": ""
           },
           "image": {},
@@ -937,7 +1013,7 @@
           "category": null
         },
         {
-          "_id": "JBdfg4hLf4tohbHd",
+          "_id": "iL00jRstCzlSAiMp",
           "name": "Treasure",
           "type": "text",
           "title": {
@@ -964,7 +1040,7 @@
           "category": null
         },
         {
-          "_id": "iL00jRstCzlSAiMp",
+          "_id": "EehHQ57Q89SmWDtp",
           "name": "Conversion Notes",
           "type": "text",
           "title": {
@@ -991,7 +1067,7 @@
           "category": null
         }
       ],
-      "folder": "HH0UtS9CgfW7Be4Q",
+      "folder": "W0WJME4fBRrq8baA",
       "sort": 0,
       "ownership": {
         "default": 0
@@ -1015,7 +1091,7 @@
     {
       "_id": "PuUGEVunRqjIWFOj",
       "name": "Old Fishery",
-      "folder": "hmgnrV2Mgghf1znf",
+      "folder": "mLTkiPoOEmDEr97U",
       "sort": 0,
       "navigation": true,
       "navName": "Old Fishery",
@@ -1129,7 +1205,7 @@
       "drawings": [],
       "tokens": [
         {
-          "_id": "wXyuw4w7LvVdBLTc",
+          "_id": "eyWlojX9voDNAtpU",
           "name": "Yargin Balko",
           "actorId": "7uhbgkK2IOZOlJb3",
           "actorLink": false,
@@ -1186,7 +1262,7 @@
           "sort": 0
         },
         {
-          "_id": "eyWlojX9voDNAtpU",
+          "_id": "vdhGdo0peDOt0woi",
           "name": "Hookshanks Gruller",
           "actorId": "qH96VshE6CZqfajv",
           "actorLink": false,
@@ -1243,7 +1319,7 @@
           "sort": 0
         },
         {
-          "_id": "vdhGdo0peDOt0woi",
+          "_id": "0k2xylcgh80bZxAG",
           "name": "Giggles",
           "actorId": "mHUhxeaalWkTU1h4",
           "actorLink": false,
@@ -1300,69 +1376,12 @@
           "sort": 0
         },
         {
-          "_id": "0k2xylcgh80bZxAG",
+          "_id": "sNZRoZWYhfPurXCc",
           "name": "Drain Spider",
           "actorId": "1M94tm3wnSRGcTG5",
           "actorLink": false,
           "x": 1900,
           "y": 820,
-          "width": 1,
-          "height": 1,
-          "disposition": -1,
-          "hidden": true,
-          "displayName": 20,
-          "displayBars": 20,
-          "lockRotation": false,
-          "rotation": 0,
-          "alpha": 1,
-          "texture": {
-            "src": "modules/cotct-pf2e-conversion/assets/tokens/drainspider.webp",
-            "scaleX": 1,
-            "scaleY": 1,
-            "tint": "#ffffff",
-            "anchorX": 0.5,
-            "anchorY": 0.5,
-            "fit": "contain",
-            "offsetX": 0,
-            "offsetY": 0,
-            "rotation": 0,
-            "alphaThreshold": 0.75
-          },
-          "bar1": {
-            "attribute": "attributes.hp"
-          },
-          "bar2": {
-            "attribute": null
-          },
-          "sight": {
-            "enabled": false,
-            "range": 0,
-            "angle": 360,
-            "visionMode": "basic",
-            "brightness": 0,
-            "saturation": 0,
-            "contrast": 0,
-            "attenuation": 0.1,
-            "color": null
-          },
-          "detectionModes": [],
-          "flags": {
-            "pf2e": {
-              "linkToActorSize": true,
-              "autoscale": true
-            }
-          },
-          "delta": null,
-          "elevation": 0,
-          "sort": 0
-        },
-        {
-          "_id": "sNZRoZWYhfPurXCc",
-          "name": "Drain Spider",
-          "actorId": "1M94tm3wnSRGcTG5",
-          "actorLink": false,
-          "x": 300,
-          "y": 1220,
           "width": 1,
           "height": 1,
           "disposition": -1,
@@ -1586,6 +1605,63 @@
         },
         {
           "_id": "pyGy9Kj83IHhnRaX",
+          "name": "Drain Spider",
+          "actorId": "1M94tm3wnSRGcTG5",
+          "actorLink": false,
+          "x": 300,
+          "y": 1220,
+          "width": 1,
+          "height": 1,
+          "disposition": -1,
+          "hidden": true,
+          "displayName": 20,
+          "displayBars": 20,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "texture": {
+            "src": "modules/cotct-pf2e-conversion/assets/tokens/drainspider.webp",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotation": 0,
+            "alphaThreshold": 0.75
+          },
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "sight": {
+            "enabled": false,
+            "range": 0,
+            "angle": 360,
+            "visionMode": "basic",
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0,
+            "attenuation": 0.1,
+            "color": null
+          },
+          "detectionModes": [],
+          "flags": {
+            "pf2e": {
+              "linkToActorSize": true,
+              "autoscale": true
+            }
+          },
+          "delta": null,
+          "elevation": 0,
+          "sort": 0
+        },
+        {
+          "_id": "Aeqn4oMu1uoAqoqf",
           "name": "Jigsaw Shark",
           "actorId": "lsdWSvGJ81hDy4it",
           "actorLink": false,
@@ -1642,7 +1718,7 @@
           "sort": 0
         },
         {
-          "_id": "Aeqn4oMu1uoAqoqf",
+          "_id": "FnEL8k26m4Gimpke",
           "name": "Gaedren Lamm",
           "actorId": "RKfT6vJ5guinSBjo",
           "actorLink": false,
@@ -1704,41 +1780,11 @@
       "templates": [],
       "notes": [
         {
-          "_id": "tzAHkhWr0fvCuEVj",
-          "entryId": "aO3z6QTqmYZCZYkw",
-          "pageId": "svCjticTit7fdDrF",
-          "text": "A1",
-          "x": 300,
-          "y": 300,
-          "global": false,
-          "iconSize": 40,
-          "fontFamily": "Signika",
-          "fontSize": 32,
-          "textColor": "#ffffff",
-          "textAnchor": 1,
-          "elevation": 0,
-          "sort": 0,
-          "flags": {},
-          "texture": {
-            "src": "icons/svg/book.svg",
-            "tint": "#ffffff",
-            "anchorX": 0.5,
-            "anchorY": 0.5,
-            "fit": "contain",
-            "scaleX": 1,
-            "scaleY": 1,
-            "offsetX": 0,
-            "offsetY": 0,
-            "rotation": 0,
-            "alphaThreshold": 0.75
-          }
-        },
-        {
           "_id": "io6naHDAKD1ULBcZ",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "zceSTiompH1bHFDc",
-          "text": "A2",
-          "x": 700,
+          "text": "A1",
+          "x": 300,
           "y": 300,
           "global": false,
           "iconSize": 40,
@@ -1767,8 +1813,8 @@
           "_id": "48fVyqsW5eGvSLDg",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "tkc0z28kYBKNBgHd",
-          "text": "A3",
-          "x": 1100,
+          "text": "A2",
+          "x": 700,
           "y": 300,
           "global": false,
           "iconSize": 40,
@@ -1797,8 +1843,8 @@
           "_id": "p452qsnLn5jawrg5",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "CEuUTWkaC01YQDo5",
-          "text": "A4",
-          "x": 1500,
+          "text": "A3",
+          "x": 1100,
           "y": 300,
           "global": false,
           "iconSize": 40,
@@ -1827,8 +1873,8 @@
           "_id": "xr0zLIeGhCjSNcLF",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "fzEyuJGsUCTisJ3b",
-          "text": "A5",
-          "x": 1900,
+          "text": "A4",
+          "x": 1500,
           "y": 300,
           "global": false,
           "iconSize": 40,
@@ -1857,9 +1903,9 @@
           "_id": "tP0HA61DRVvIPecZ",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "kwszgQHAS37zBd0J",
-          "text": "A6",
-          "x": 300,
-          "y": 700,
+          "text": "A5",
+          "x": 1900,
+          "y": 300,
           "global": false,
           "iconSize": 40,
           "fontFamily": "Signika",
@@ -1887,8 +1933,8 @@
           "_id": "Gk27n1tGBL7K5Xmx",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "5dKt5LoEacUDhJAi",
-          "text": "A7",
-          "x": 700,
+          "text": "A6",
+          "x": 300,
           "y": 700,
           "global": false,
           "iconSize": 40,
@@ -1917,8 +1963,8 @@
           "_id": "2QLYKnWPyPM9p7w9",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "Rn7RCvRWorI37yxJ",
-          "text": "A8",
-          "x": 1100,
+          "text": "A7",
+          "x": 700,
           "y": 700,
           "global": false,
           "iconSize": 40,
@@ -1947,8 +1993,8 @@
           "_id": "zowi9PLsuUbpgTrm",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "k5IvJ7N4FJxS4dEF",
-          "text": "A9",
-          "x": 1500,
+          "text": "A8",
+          "x": 1100,
           "y": 700,
           "global": false,
           "iconSize": 40,
@@ -1977,8 +2023,8 @@
           "_id": "KgbQdiOfqI0MSHpA",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "6w0W28EjTyXhAecG",
-          "text": "A10",
-          "x": 1900,
+          "text": "A9",
+          "x": 1500,
           "y": 700,
           "global": false,
           "iconSize": 40,
@@ -2007,9 +2053,9 @@
           "_id": "tgQlgvkVAUaxwXjC",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "IijeNzrXCRaWIKb9",
-          "text": "A11",
-          "x": 300,
-          "y": 1100,
+          "text": "A10",
+          "x": 1900,
+          "y": 700,
           "global": false,
           "iconSize": 40,
           "fontFamily": "Signika",
@@ -2037,8 +2083,8 @@
           "_id": "9hkKANi9M2U2YlSg",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "kJ3b4pPQUpk9Lna7",
-          "text": "A12",
-          "x": 700,
+          "text": "A11",
+          "x": 300,
           "y": 1100,
           "global": false,
           "iconSize": 40,
@@ -2067,8 +2113,8 @@
           "_id": "jXSPaFssn7RqHxPM",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "sNJPLWijX4eA3skC",
-          "text": "A13",
-          "x": 1100,
+          "text": "A12",
+          "x": 700,
           "y": 1100,
           "global": false,
           "iconSize": 40,
@@ -2097,6 +2143,36 @@
           "_id": "sJSBqqWXW3jRYFzo",
           "entryId": "aO3z6QTqmYZCZYkw",
           "pageId": "KIN5PWGVmoNGHz5I",
+          "text": "A13",
+          "x": 1100,
+          "y": 1100,
+          "global": false,
+          "iconSize": 40,
+          "fontFamily": "Signika",
+          "fontSize": 32,
+          "textColor": "#ffffff",
+          "textAnchor": 1,
+          "elevation": 0,
+          "sort": 0,
+          "flags": {},
+          "texture": {
+            "src": "icons/svg/book.svg",
+            "tint": "#ffffff",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotation": 0,
+            "alphaThreshold": 0.75
+          }
+        },
+        {
+          "_id": "wXyuw4w7LvVdBLTc",
+          "entryId": "aO3z6QTqmYZCZYkw",
+          "pageId": "A1eYD3f6qKDSU9TA",
           "text": "A14",
           "x": 1500,
           "y": 1100,
@@ -2137,7 +2213,7 @@
       "img": "systems/pf2e/icons/default-icons/npc.svg",
       "items": [
         {
-          "_id": "mLTkiPoOEmDEr97U",
+          "_id": "qb0I3ItyDeAvLBVC",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Fine Dagger",
           "sort": 0,
@@ -2180,7 +2256,7 @@
           }
         },
         {
-          "_id": "qb0I3ItyDeAvLBVC",
+          "_id": "slFjRgeXBfjCnITt",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Hand Crossbow",
           "sort": 0,
@@ -2222,7 +2298,7 @@
           }
         },
         {
-          "_id": "slFjRgeXBfjCnITt",
+          "_id": "UCOcbfvYVUXyPCXV",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Sneak Attack",
           "sort": 0,
@@ -2273,7 +2349,7 @@
           }
         },
         {
-          "_id": "UCOcbfvYVUXyPCXV",
+          "_id": "3qrKKYIwqx1lDatN",
           "img": "systems/pf2e/icons/actions/Reaction.webp",
           "name": "Nimble Dodge",
           "sort": 0,
@@ -2306,7 +2382,7 @@
           }
         },
         {
-          "_id": "3qrKKYIwqx1lDatN",
+          "_id": "SQrps5TctSwvFRy0",
           "img": "systems/pf2e/icons/actions/OneAction.webp",
           "name": "Spur the Beast",
           "sort": 0,
@@ -2339,7 +2415,7 @@
           }
         },
         {
-          "_id": "SQrps5TctSwvFRy0",
+          "_id": "dnaymsXWUD0Nzprc",
           "img": "systems/pf2e/icons/default-icons/lore.svg",
           "name": "Underworld Lore",
           "sort": 0,
@@ -2490,7 +2566,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.XyA6PKV46aNlLXOd"
           },
-          "_id": "dnaymsXWUD0Nzprc",
+          "_id": "huQnkXd4PNlpQgSG",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -2623,7 +2699,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
           },
-          "_id": "huQnkXd4PNlpQgSG",
+          "_id": "hfjlXDQvtsiy3YQe",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -2723,7 +2799,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.zBYEU9E7034ENCmh"
           },
-          "_id": "hfjlXDQvtsiy3YQe",
+          "_id": "iv2sTvRM7sy4F8QZ",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -2949,7 +3025,7 @@
       "img": "systems/pf2e/icons/default-icons/npc.svg",
       "items": [
         {
-          "_id": "iv2sTvRM7sy4F8QZ",
+          "_id": "0QseRGFhz8aoCfaT",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Acid Flask",
           "sort": 0,
@@ -3003,7 +3079,7 @@
           }
         },
         {
-          "_id": "0QseRGFhz8aoCfaT",
+          "_id": "kj0a5BVsaunb6ck1",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Thunderstone",
           "sort": 0,
@@ -3052,7 +3128,7 @@
           }
         },
         {
-          "_id": "kj0a5BVsaunb6ck1",
+          "_id": "A2hNHBlyY65FYXy3",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Light Crossbow",
           "sort": 0,
@@ -3094,7 +3170,7 @@
           }
         },
         {
-          "_id": "A2hNHBlyY65FYXy3",
+          "_id": "Pzw1geUcwungeGcE",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Dagger",
           "sort": 0,
@@ -3137,7 +3213,7 @@
           }
         },
         {
-          "_id": "Pzw1geUcwungeGcE",
+          "_id": "h4gkpagPi6TbUN6l",
           "img": "systems/pf2e/icons/actions/OneAction.webp",
           "name": "Quick Acid",
           "sort": 0,
@@ -3170,7 +3246,7 @@
           }
         },
         {
-          "_id": "h4gkpagPi6TbUN6l",
+          "_id": "1lscjgsHRPtAh1u5",
           "img": "systems/pf2e/icons/default-icons/lore.svg",
           "name": "Alchemy Lore",
           "sort": 0,
@@ -3317,7 +3393,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK"
           },
-          "_id": "1lscjgsHRPtAh1u5",
+          "_id": "4uhpf6u6GbUF5Zrv",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -3457,7 +3533,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Xnqglykl3Cif8rN9"
           },
-          "_id": "4uhpf6u6GbUF5Zrv",
+          "_id": "xE1IgLu9Q5hnpwbV",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -3590,7 +3666,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.62nnVQvGhoVLLl2K"
           },
-          "_id": "xE1IgLu9Q5hnpwbV",
+          "_id": "oDsYqTFKD2ejR0f5",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -3723,7 +3799,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
           },
-          "_id": "oDsYqTFKD2ejR0f5",
+          "_id": "MvkxPmWeQuyIvIqA",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -3821,14 +3897,14 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA"
           },
-          "_id": "MvkxPmWeQuyIvIqA",
+          "_id": "8zxwiV5cOy360wdG",
           "sort": 0,
           "ownership": {
             "default": 0
           }
         },
         {
-          "_id": "8zxwiV5cOy360wdG",
+          "_id": "xSgFi4qYd74GPi1v",
           "img": "systems/pf2e/icons/default-icons/equipment.svg",
           "name": "Scroll of Acidic Burst",
           "type": "equipment",
@@ -4118,7 +4194,7 @@
       "img": "systems/pf2e/icons/default-icons/npc.svg",
       "items": [
         {
-          "_id": "xSgFi4qYd74GPi1v",
+          "_id": "L6OPduPEemfHre3l",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Kukri",
           "sort": 0,
@@ -4161,7 +4237,7 @@
           }
         },
         {
-          "_id": "L6OPduPEemfHre3l",
+          "_id": "cQiZw5wvfHPASruD",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Dagger",
           "sort": 0,
@@ -4205,7 +4281,7 @@
           }
         },
         {
-          "_id": "cQiZw5wvfHPASruD",
+          "_id": "98Vhz3Uz3kzF0bWW",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Sneak Attack",
           "sort": 0,
@@ -4256,7 +4332,7 @@
           }
         },
         {
-          "_id": "98Vhz3Uz3kzF0bWW",
+          "_id": "QhZrSV8QbpiC4XcT",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Disguised as an Orphan",
           "sort": 0,
@@ -4287,7 +4363,7 @@
           }
         },
         {
-          "_id": "QhZrSV8QbpiC4XcT",
+          "_id": "LmLIyiqYUu2maybI",
           "img": "systems/pf2e/icons/default-icons/lore.svg",
           "name": "Streetwise Lore",
           "sort": 0,
@@ -4442,7 +4518,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.TDrO7Xdyn7juFy3c"
           },
-          "_id": "LmLIyiqYUu2maybI",
+          "_id": "51V5pqZyTPWU9Je6",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -4575,7 +4651,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
           },
-          "_id": "51V5pqZyTPWU9Je6",
+          "_id": "PS0cKvVYfNPtgOfN",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -4674,7 +4750,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN"
           },
-          "_id": "PS0cKvVYfNPtgOfN",
+          "_id": "Ld8oDLUDiLPUyWzN",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -4897,7 +4973,7 @@
       "img": "systems/pf2e/icons/default-icons/npc.svg",
       "items": [
         {
-          "_id": "Ld8oDLUDiLPUyWzN",
+          "_id": "zgRJJ9CuqDK5vXTC",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Flail",
           "sort": 0,
@@ -4939,7 +5015,7 @@
           }
         },
         {
-          "_id": "zgRJJ9CuqDK5vXTC",
+          "_id": "F7XuVemc38d7fcxk",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Fist",
           "sort": 0,
@@ -4982,7 +5058,7 @@
           }
         },
         {
-          "_id": "F7XuVemc38d7fcxk",
+          "_id": "59DhJ6Q6UYWziw9B",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Composite Longbow",
           "sort": 0,
@@ -5025,7 +5101,7 @@
           }
         },
         {
-          "_id": "59DhJ6Q6UYWziw9B",
+          "_id": "AAvQAu4u8fUFX6dM",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Bludgeoner",
           "sort": 0,
@@ -5084,7 +5160,7 @@
           }
         },
         {
-          "_id": "AAvQAu4u8fUFX6dM",
+          "_id": "ly35HxgEvAmNZ6KI",
           "img": "systems/pf2e/icons/actions/Reaction.webp",
           "name": "Orc Ferocity",
           "sort": 0,
@@ -5115,7 +5191,7 @@
           }
         },
         {
-          "_id": "ly35HxgEvAmNZ6KI",
+          "_id": "PUoZqlddLG5xFxdB",
           "img": "systems/pf2e/icons/default-icons/lore.svg",
           "name": "Brawling Lore",
           "sort": 0,
@@ -5239,7 +5315,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao"
           },
-          "_id": "PUoZqlddLG5xFxdB",
+          "_id": "BmnAH8nXFFbtpHdU",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -5375,7 +5451,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.t5FbyZtRL4qV0V7k"
           },
-          "_id": "BmnAH8nXFFbtpHdU",
+          "_id": "sH9yaMZgr41grxqz",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -5511,7 +5587,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.dUC8Fsa6FZtVikS3"
           },
-          "_id": "sH9yaMZgr41grxqz",
+          "_id": "rpafxSqkjEsuvNHc",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -5612,7 +5688,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP"
           },
-          "_id": "rpafxSqkjEsuvNHc",
+          "_id": "cOufM0El0yKjZYF7",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -5824,7 +5900,7 @@
       "img": "systems/pf2e/icons/default-icons/npc.svg",
       "items": [
         {
-          "_id": "cOufM0El0yKjZYF7",
+          "_id": "fM11W3e5GzqzfJQn",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Fangs",
           "sort": 0,
@@ -5869,7 +5945,7 @@
           }
         },
         {
-          "_id": "fM11W3e5GzqzfJQn",
+          "_id": "nbtuy4wuu5ATXEh1",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Drain Spider Venom",
           "sort": 0,
@@ -5902,7 +5978,7 @@
           }
         },
         {
-          "_id": "nbtuy4wuu5ATXEh1",
+          "_id": "UNkzTXihIylWOZcn",
           "img": "systems/pf2e/icons/actions/OneAction.webp",
           "name": "Web Trap",
           "sort": 0,
@@ -6145,7 +6221,7 @@
       "img": "systems/pf2e/icons/default-icons/npc.svg",
       "items": [
         {
-          "_id": "UNkzTXihIylWOZcn",
+          "_id": "AdEtRIsLdlKOnWCQ",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Jaws",
           "sort": 0,
@@ -6186,7 +6262,7 @@
           }
         },
         {
-          "_id": "AdEtRIsLdlKOnWCQ",
+          "_id": "HP8keHwIIY5gsNtZ",
           "img": "systems/pf2e/icons/actions/OneAction.webp",
           "name": "Aquatic Ambush",
           "sort": 0,
@@ -6422,7 +6498,7 @@
       "img": "systems/pf2e/icons/default-icons/npc.svg",
       "items": [
         {
-          "_id": "HP8keHwIIY5gsNtZ",
+          "_id": "vejNR2kRU9hTjF7z",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Pitchfork (improvised)",
           "sort": 0,
@@ -6590,7 +6666,7 @@
           "_stats": {
             "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
           },
-          "_id": "vejNR2kRU9hTjF7z",
+          "_id": "e6d3LqdDmDo97pVA",
           "sort": 0,
           "ownership": {
             "default": 0
@@ -6799,7 +6875,7 @@
       "img": "systems/pf2e/icons/default-icons/hazard.svg",
       "items": [
         {
-          "_id": "e6d3LqdDmDo97pVA",
+          "_id": "Obqhi4FG6wQ0IDZv",
           "img": "systems/pf2e/icons/actions/Reaction.webp",
           "name": "Slip",
           "sort": 0,
@@ -6973,7 +7049,7 @@
       "img": "systems/pf2e/icons/default-icons/hazard.svg",
       "items": [
         {
-          "_id": "Obqhi4FG6wQ0IDZv",
+          "_id": "CtC18rAERxvB13di",
           "img": "systems/pf2e/icons/actions/Reaction.webp",
           "name": "Collapse",
           "sort": 0,
@@ -7615,6 +7691,408 @@
           "value": "held-in-one-hand"
         }
       }
+    },
+    {
+      "_id": "bgBetrayed000001",
+      "name": "Betrayed (Korvosa)",
+      "type": "background",
+      "folder": "kLKvTWKyuwdztJBO",
+      "sort": 0,
+      "img": "systems/pf2e/icons/default-icons/background.svg",
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "description": {
+          "value": "<p>Someone you trusted handed you to Gaedren Lamm. You learned to read people and never be caught off guard twice. <em>Recommended skill feat: Lengthy Diversion.</em></p>"
+        },
+        "boosts": {
+          "0": {
+            "value": [
+              "wis",
+              "cha"
+            ]
+          },
+          "1": {
+            "value": [
+              "str",
+              "dex",
+              "con",
+              "int",
+              "wis",
+              "cha"
+            ]
+          }
+        },
+        "trainedSkills": {
+          "value": [
+            "deception"
+          ],
+          "lore": [
+            "Underworld"
+          ]
+        },
+        "items": {},
+        "rules": [],
+        "slug": null,
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "bgDrugAddict0001",
+      "name": "Drug Addict (Korvosa)",
+      "type": "background",
+      "folder": "kLKvTWKyuwdztJBO",
+      "sort": 0,
+      "img": "systems/pf2e/icons/default-icons/background.svg",
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "description": {
+          "value": "<p>Gaedren's shiver dens sank their hooks into you; clean or not, you know the trade and its cost. <em>Recommended skill feat: Battle Medicine.</em></p>"
+        },
+        "boosts": {
+          "0": {
+            "value": [
+              "con",
+              "int"
+            ]
+          },
+          "1": {
+            "value": [
+              "str",
+              "dex",
+              "con",
+              "int",
+              "wis",
+              "cha"
+            ]
+          }
+        },
+        "trainedSkills": {
+          "value": [
+            "medicine"
+          ],
+          "lore": [
+            "Drug"
+          ]
+        },
+        "items": {},
+        "rules": [],
+        "slug": null,
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "bgFramed00000001",
+      "name": "Framed (Korvosa)",
+      "type": "background",
+      "folder": "kLKvTWKyuwdztJBO",
+      "sort": 0,
+      "img": "systems/pf2e/icons/default-icons/background.svg",
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "description": {
+          "value": "<p>Gaedren framed you for a crime you didn't commit. Clearing your name means knowing how Korvosa's law and streets really work. <em>Recommended skill feat: Streetwise.</em></p>"
+        },
+        "boosts": {
+          "0": {
+            "value": [
+              "int",
+              "cha"
+            ]
+          },
+          "1": {
+            "value": [
+              "str",
+              "dex",
+              "con",
+              "int",
+              "wis",
+              "cha"
+            ]
+          }
+        },
+        "trainedSkills": {
+          "value": [
+            "society"
+          ],
+          "lore": [
+            "Korvosa"
+          ]
+        },
+        "items": {},
+        "rules": [],
+        "slug": null,
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "bgLoveLost000001",
+      "name": "Love Lost (Korvosa)",
+      "type": "background",
+      "folder": "kLKvTWKyuwdztJBO",
+      "sort": 0,
+      "img": "systems/pf2e/icons/default-icons/background.svg",
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "description": {
+          "value": "<p>Gaedren took someone you loved. Grief sharpened into resolve — and a knack for moving people. <em>Recommended skill feat: Group Impression.</em></p>"
+        },
+        "boosts": {
+          "0": {
+            "value": [
+              "wis",
+              "cha"
+            ]
+          },
+          "1": {
+            "value": [
+              "str",
+              "dex",
+              "con",
+              "int",
+              "wis",
+              "cha"
+            ]
+          }
+        },
+        "trainedSkills": {
+          "value": [
+            "diplomacy"
+          ],
+          "lore": [
+            "Korvosa"
+          ]
+        },
+        "items": {},
+        "rules": [],
+        "slug": null,
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "bgMissingChild01",
+      "name": "Missing Child (Korvosa)",
+      "type": "background",
+      "folder": "kLKvTWKyuwdztJBO",
+      "sort": 0,
+      "img": "systems/pf2e/icons/default-icons/background.svg",
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "description": {
+          "value": "<p>A child of yours is among Lamm's Lambs. You've scoured Korvosa's underbelly searching, and learned to survive it. <em>Recommended skill feat: Forager.</em></p>"
+        },
+        "boosts": {
+          "0": {
+            "value": [
+              "con",
+              "wis"
+            ]
+          },
+          "1": {
+            "value": [
+              "str",
+              "dex",
+              "con",
+              "int",
+              "wis",
+              "cha"
+            ]
+          }
+        },
+        "trainedSkills": {
+          "value": [
+            "survival"
+          ],
+          "lore": [
+            "Korvosa"
+          ]
+        },
+        "items": {},
+        "rules": [],
+        "slug": null,
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "bgUnhappyChild01",
+      "name": "Unhappy Childhood (Korvosa)",
+      "type": "background",
+      "folder": "kLKvTWKyuwdztJBO",
+      "sort": 0,
+      "img": "systems/pf2e/icons/default-icons/background.svg",
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "description": {
+          "value": "<p>You came up a street-rat under Gaedren's thumb and got out — the skills he beat into you never left. <em>Recommended skill feat: Subtle Theft.</em></p>"
+        },
+        "boosts": {
+          "0": {
+            "value": [
+              "dex",
+              "wis"
+            ]
+          },
+          "1": {
+            "value": [
+              "str",
+              "dex",
+              "con",
+              "int",
+              "wis",
+              "cha"
+            ]
+          }
+        },
+        "trainedSkills": {
+          "value": [
+            "thievery"
+          ],
+          "lore": [
+            "Underworld"
+          ]
+        },
+        "items": {},
+        "rules": [],
+        "slug": null,
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      }
     }
   ],
   "tables": [
@@ -7628,7 +8106,7 @@
       "img": "icons/svg/d20-grey.svg",
       "results": [
         {
-          "_id": "FnEL8k26m4Gimpke",
+          "_id": "053WIZag6yM53cV0",
           "type": "text",
           "text": "<strong>Hammers</strong> → grants a Harrow Point: reroll one <strong>Strength</strong> check or save this chapter.",
           "img": "icons/svg/d20-black.svg",
@@ -7643,7 +8121,7 @@
           "flags": {}
         },
         {
-          "_id": "053WIZag6yM53cV0",
+          "_id": "BqRe0eoaHbeLE3ik",
           "type": "text",
           "text": "<strong>Keys</strong> → grants a Harrow Point: reroll one <strong>Dexterity</strong> check or save this chapter.",
           "img": "icons/svg/d20-black.svg",
@@ -7658,7 +8136,7 @@
           "flags": {}
         },
         {
-          "_id": "BqRe0eoaHbeLE3ik",
+          "_id": "YhBvCagyIXDpWQsi",
           "type": "text",
           "text": "<strong>Shields</strong> → grants a Harrow Point: reroll one <strong>Constitution</strong> check or save this chapter.",
           "img": "icons/svg/d20-black.svg",
@@ -7673,7 +8151,7 @@
           "flags": {}
         },
         {
-          "_id": "YhBvCagyIXDpWQsi",
+          "_id": "Exka60CFzQauiqBX",
           "type": "text",
           "text": "<strong>Books</strong> → grants a Harrow Point: reroll one <strong>Intelligence</strong> check or save this chapter.",
           "img": "icons/svg/d20-black.svg",
@@ -7688,7 +8166,7 @@
           "flags": {}
         },
         {
-          "_id": "Exka60CFzQauiqBX",
+          "_id": "xbXDyrBYXHkOpf19",
           "type": "text",
           "text": "<strong>Stars</strong> → grants a Harrow Point: reroll one <strong>Wisdom</strong> check or save this chapter.",
           "img": "icons/svg/d20-black.svg",
@@ -7703,7 +8181,7 @@
           "flags": {}
         },
         {
-          "_id": "xbXDyrBYXHkOpf19",
+          "_id": "HxOS4mCmjZUPOCYr",
           "type": "text",
           "text": "<strong>Crowns</strong> → grants a Harrow Point: reroll one <strong>Charisma</strong> check or save this chapter.",
           "img": "icons/svg/d20-black.svg",

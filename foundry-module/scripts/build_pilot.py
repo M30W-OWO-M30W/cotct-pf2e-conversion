@@ -17,7 +17,9 @@ A = {"gaedren":"RKfT6vJ5guinSBjo","yargin":"7uhbgkK2IOZOlJb3","hookshanks":"qH96
      "giggles":"mHUhxeaalWkTU1h4","drainspider":"1M94tm3wnSRGcTG5","jigsawshark":"lsdWSvGJ81hDy4it",
      "orphan":"UQr3ApF78GW7eghw","boardwalk":"6y55S5DpXqnF40WL","rottendeck":"xMhIQZS6GokTsulZ",
      "brooch":"iNQaVcbkSM0VPXsa","harrowdeck":"DPDen8gco6rznX9Y","ledger":"I7HQNtjI9yPvQ4fA",
-     "garnet":"dK4hnpH7s67RYnNI","coffer":"ymuRwMg6WfWIwkne","dagger":"b04PLWVkmm3RM4nm"}
+     "garnet":"dK4hnpH7s67RYnNI","coffer":"ymuRwMg6WfWIwkne","dagger":"b04PLWVkmm3RM4nm",
+     "bg_betrayed":"bgBetrayed000001","bg_drugaddict":"bgDrugAddict0001","bg_framed":"bgFramed00000001",
+     "bg_lovelost":"bgLoveLost000001","bg_missingchild":"bgMissingChild01","bg_unhappy":"bgUnhappyChild01"}
 JID = "aO3z6QTqmYZCZYkw"   # the fat Ch.1 journal entry
 SCN = "PuUGEVunRqjIWFOj"   # Old Fishery scene
 ADV = "OmdAPBg10luB7GUr"   # Adventure doc
@@ -175,7 +177,7 @@ def apspan(start, stop):
 # =====================================================================
 # FOLDERS (one tree per document type; Kingmaker palette)
 # =====================================================================
-F = {k: nid() for k in ["a_root","a_ch1","a_creatures","a_hazards","i_root","i_ch1","i_treasure",
+F = {k: nid() for k in ["a_root","a_ch1","a_creatures","a_hazards","i_root","i_ch1","i_treasure","i_bg",
                         "j_root","j_adventure","s_root","s_ch1"]}
 ROOTC, CHC, SUPC = "#5a0b0b", "#8a1a1a", "#b3541e"   # crimson theme: root / chapter / supplemental
 folders = [
@@ -186,6 +188,7 @@ folders = [
  B.folder(F["i_root"],"Curse of the Crimson Throne","Item",None,100000,ROOTC),
  B.folder(F["i_ch1"],"1. Edge of Anarchy","Item",F["i_root"],100000,CHC),
  B.folder(F["i_treasure"],"Treasure","Item",F["i_ch1"],100000,None,"a"),
+ B.folder(F["i_bg"],"Campaign Backgrounds","Item",F["i_root"],200000,None,"a"),
  B.folder(F["j_root"],"Curse of the Crimson Throne","JournalEntry",None,100000,ROOTC),
  B.folder(F["j_adventure"],"Adventure","JournalEntry",F["j_root"],100000,SUPC),
  B.folder(F["s_root"],"Curse of the Crimson Throne","Scene",None,100000,ROOTC),
@@ -605,6 +608,20 @@ ChatMessage.create({content:b,speaker:{alias:'Zellara'}});"""
 harrow_mac=B.macro(HARROW_MAC_ID,"Harrow Reading",HARROW_CMD,img="icons/sundries/gaming/playing-cards.webp")
 B.write("macros","harrow-reading",copy.deepcopy(harrow_mac))
 
+# Campaign-trait backgrounds (CHG-0021) — PF2e custom backgrounds tying PCs to Korvosa
+BG=[
+ ("bg_betrayed","Betrayed (Korvosa)",["wis","cha"],"deception","Underworld","<p>Someone you trusted handed you to Gaedren Lamm. You learned to read people and never be caught off guard twice. <em>Recommended skill feat: Lengthy Diversion.</em></p>"),
+ ("bg_drugaddict","Drug Addict (Korvosa)",["con","int"],"medicine","Drug","<p>Gaedren's shiver dens sank their hooks into you; clean or not, you know the trade and its cost. <em>Recommended skill feat: Battle Medicine.</em></p>"),
+ ("bg_framed","Framed (Korvosa)",["int","cha"],"society","Korvosa","<p>Gaedren framed you for a crime you didn't commit. Clearing your name means knowing how Korvosa's law and streets really work. <em>Recommended skill feat: Streetwise.</em></p>"),
+ ("bg_lovelost","Love Lost (Korvosa)",["wis","cha"],"diplomacy","Korvosa","<p>Gaedren took someone you loved. Grief sharpened into resolve — and a knack for moving people. <em>Recommended skill feat: Group Impression.</em></p>"),
+ ("bg_missingchild","Missing Child (Korvosa)",["con","wis"],"survival","Korvosa","<p>A child of yours is among Lamm's Lambs. You've scoured Korvosa's underbelly searching, and learned to survive it. <em>Recommended skill feat: Forager.</em></p>"),
+ ("bg_unhappy","Unhappy Childhood (Korvosa)",["dex","wis"],"thievery","Underworld","<p>You came up a street-rat under Gaedren's thumb and got out — the skills he beat into you never left. <em>Recommended skill feat: Subtle Theft.</em></p>"),
+]
+bgs=[]
+for key,bname,boosts,skill,lore,bdesc in BG:
+    _bg=B.background(A[key],bname,bdesc,boosts,skill,lore,folder=F["i_bg"])
+    bgs.append(copy.deepcopy(_bg)); B.write("items",key.replace("bg_","background-"),_bg)
+
 cg_pages=[B.page(nid(),"The Harrowing",
   B.s_desc("<p>“The cards know more than they tell.” At the start of each chapter, Zellara — and, after the Old Fishery, her haunted deck — deals the party a Harrow reading.</p>")
   +"<p><strong>What it is.</strong> A short narrative reading that <em>foreshadows</em> the chapter (a coming time of unrest; the PCs are fated heroes) and grants each PC a small luck boon. Read the omens; don't spoil concrete events.</p>"
@@ -612,7 +629,24 @@ cg_pages=[B.page(nid(),"The Harrowing",
   +"<ul><li><strong>Hammers</strong> → Strength · <strong>Keys</strong> → Dexterity · <strong>Shields</strong> → Constitution · <strong>Books</strong> → Intelligence · <strong>Stars</strong> → Wisdom · <strong>Crowns</strong> → Charisma</li></ul>"
   +B.s_skill("<p><strong>The boon (CHG-0010 — hero-point-style).</strong> The reading grants each PC one <strong>Harrow Point</strong> for the chapter: spend it like a Hero Point to <strong>reroll a check or save that uses the card-suit's ability score</strong> (keep the new result). Unspent Harrow Points fade at the next reading.</p>")
   +"<p><strong>Optional swap.</strong> Groups wanting a deeper subsystem can run the <em>Stolen Fate</em> Harrowing ritual instead; the suit-boon default above keeps it light.</p>"
-  +B.s_conv("<p>Anchor item: "+itm("harrowdeck","Zellara's Harrow Deck")+" (recovered in the Old Fishery, inhabited by her spirit). It becomes the <strong>Harrow Deck of Many Things</strong> in Chapter 6. We ship the <em>mechanics</em> only; the 54 card meanings come from your own Harrow deck.</p>"),level=1)]
+  +B.s_conv("<p>Anchor item: "+itm("harrowdeck","Zellara's Harrow Deck")+" (recovered in the Old Fishery, inhabited by her spirit). It becomes the <strong>Harrow Deck of Many Things</strong> in Chapter 6. We ship the <em>mechanics</em> only; the 54 card meanings come from your own Harrow deck.</p>"),level=1),
+ B.page(nid(),"Korvosa — Reputation, Influence & City Tiers",
+  "<p>Korvosa's many point-trackers and its five settlement stat blocks all map to three official PF2e subsystems (GM Core) — built once, reused from Ch.1 on.</p>"
+  +B.s_skill("<p><strong>Reputation (CHG-0013).</strong> Track the party's standing with Korvosa and each faction (Korvosan Guard, the Crown, Old Korvosa's bosses, the Shoanti, later the Gray Maidens). Deeds move Victory Points along a Reputation track (Ignored → Liked → Admired → Revered, or Disliked → Hated); standing gates favors, backup, prices, and access.</p>")
+  +"<p><strong>City tiers (CHG-0012).</strong> The five Korvosa settlement stat blocks become a Reputation- and chapter-state-driven item-availability table: as the city slides (anarchy → plague → martial law) and your Reputation shifts, the level and quantity of buyable items change. The framework is Reputation tier → available item level / purchase limit; set specifics per chapter.</p>"
+  +B.s_skill("<p><strong>Influence (CHG-0014).</strong> Court and social set-pieces (the doctors' soiree, dealing with Devargo, the war council, researching the queen) run as Influence encounters: each key NPC gets an Influence block — Influence DC, Discovery DCs, and thresholds → outcomes, with Resistances/Weaknesses. Built per-encounter in their chapters.</p>")
+  +B.s_conv("<p><strong>Victory Points (CHG-0013):</strong> Respect / Rebellion / faction trackers → VP clocks. <strong>Rumor Mill (CHG-0012):</strong> the Korvosan rumor table is a rolltable to populate from your own Appendix 2 (we ship no rumor text) — a few entries are plot hooks, most are flavor.</p>"),level=1),
+ B.page(nid(),"Campaign Backgrounds",
+  "<p><strong>Tie each PC to Korvosa, not just to Gaedren (CHG-0021).</strong> The AP's campaign traits convert to six PF2e <strong>custom backgrounds</strong> — each grants ability boosts, a trained skill, a Korvosa-themed Lore, and a recommended skill feat, with a built-in hook into the city. Every PC should also carry a personal grudge against Gaedren (the shared reason Zellara's reading draws them together).</p>"
+  +"<ul>"
+   "<li>"+itm("bg_betrayed","Betrayed")+" — Deception + Underworld Lore</li>"
+   "<li>"+itm("bg_drugaddict","Drug Addict")+" — Medicine + Drug Lore</li>"
+   "<li>"+itm("bg_framed","Framed")+" — Society + Korvosa Lore</li>"
+   "<li>"+itm("bg_lovelost","Love Lost")+" — Diplomacy + Korvosa Lore</li>"
+   "<li>"+itm("bg_missingchild","Missing Child")+" — Survival + Korvosa Lore</li>"
+   "<li>"+itm("bg_unhappy","Unhappy Childhood")+" — Thievery + Underworld Lore</li>"
+   "</ul>"
+  +B.s_conv("<p>Drag a background onto a PC to apply its boosts / trained skill / Lore; then add the recommended skill feat. Mechanics are ours (PF2e); the original trait flavor stays in your AP book.</p>"),level=1)]
 cg_journal=B.journal_entry(CG_JID,"Conversion Guide",cg_pages,folder=None)
 B.write("journals","00-conversion-guide",copy.deepcopy(cg_journal),embed_pages=True)
 
@@ -631,7 +665,7 @@ adv = B.adventure(ADV,"Curse of the Crimson Throne — Ch.1: Edge of Anarchy (pi
   "modules/cotct-pf2e-conversion/assets/art/cover.webp",
   "<p>Phase-2 pilot: the Old Fishery (the hunt for Gaedren Lamm). Imports the chapter journal, the Old Fishery scene (map-note pins + staged tokens), the converted NPCs/hazards, and the treasure — organized into folders. Supply your own maps (Racooze's free CotCT battlemaps).</p>",
   [strip(f) for f in folders], [strip(intro_journal), strip(cg_journal), strip(journal)], [strip(sc)],
-  [strip(a) for a in actors]+[strip(h) for h in hazards], [strip(i) for i in items],
+  [strip(a) for a in actors]+[strip(h) for h in hazards], [strip(i) for i in items]+[strip(b) for b in bgs],
   tables=[strip(harrow_tbl)], macros=[strip(harrow_mac)])
 B.write("adventure","cotct-edge-of-anarchy",copy.deepcopy(adv))
 

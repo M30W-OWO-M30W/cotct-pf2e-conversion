@@ -188,6 +188,20 @@ def equipment(_id, name, level, price_gp, desc, traits=None, bulk=0.1, rarity="c
                        "publication": PUB, "quantity": 1, "rules": [], "size": "med", "slug": None,
                        "traits": {"rarity": rarity, "value": traits or []}, "usage": {"value": "worn"}}}
 
+def background(_id, name, desc, boost_choice, trained_skill, lore, folder=None):
+    """PF2e background item: a fixed choice of two ability boosts + a free boost,
+    one trained skill, and a Lore. (Granted skill feat is recommended in `desc`;
+    players add it.)"""
+    return {"_id": _id, "name": name, "type": "background", "folder": folder, "sort": 0,
+            "img": "systems/pf2e/icons/default-icons/background.svg",
+            "ownership": {"default": 0}, "flags": {}, "_stats": dict(STATS),
+            "system": {"description": {"value": desc},
+                       "boosts": {"0": {"value": boost_choice},
+                                  "1": {"value": ["str", "dex", "con", "int", "wis", "cha"]}},
+                       "trainedSkills": {"value": [trained_skill], "lore": [lore]},
+                       "items": {}, "rules": [], "slug": None, "publication": PUB,
+                       "traits": {"rarity": "common", "value": []}}}
+
 # ---------- folder ----------
 def folder(_id, name, ftype, parent=None, sort=0, color=None, sorting="m"):
     return {"_id": _id, "name": name, "type": ftype, "folder": parent, "sorting": sorting,
