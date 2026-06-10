@@ -1,290 +1,6 @@
 {
-  "_id": "mandraivusLost01",
   "name": "Mandraivus the Lost",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "N4KNwHQkMaFo4rYe",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Spectral Touch",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 27
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "3d8+9",
-            "damageType": "void"
-          },
-          "1": {
-            "damage": "1d6",
-            "damageType": "void",
-            "category": "persistent"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "magical"
-          ]
-        }
-      },
-      "_key": "!actors.items!mandraivusLost01.N4KNwHQkMaFo4rYe"
-    },
-    {
-      "_id": "DJcTF3jvTXLNtCtH",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Hero's Lament",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>A 30-ft cone of remembered failure: @Damage[8d6[mental]] (@Check[type:will|dc:33|basic:true]); failures are @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "concentrate",
-            "emotion",
-            "mental"
-          ]
-        }
-      },
-      "_key": "!actors.items!mandraivusLost01.DJcTF3jvTXLNtCtH"
-    },
-    {
-      "_id": "ONuT1f2cz3a3UnOe",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Drain Life",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>A creature damaged by his touch: @Check[type:fortitude|dc:33] or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (cumulative).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!mandraivusLost01.ONuT1f2cz3a3UnOe"
-    },
-    {
-      "_id": "uMJPmC7ZIBXLXao3",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Wraith Resilience",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Incorporeal; resistance all 15 (except force, ghost touch, vitality); sunlight powerlessness; rejuvenates beside the Vortex of Madness until his anguish is answered.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!mandraivusLost01.uMJPmC7ZIBXLXao3"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 0
-      },
-      "dex": {
-        "mod": 6
-      },
-      "con": {
-        "mod": 0
-      },
-      "int": {
-        "mod": 2
-      },
-      "wis": {
-        "mod": 4
-      },
-      "cha": {
-        "mod": 6
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 33
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 250,
-        "temp": 0,
-        "value": 250
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 0
-      }
-    },
-    "details": {
-      "blurb": "Wraith of Kazavon's slayer (B5)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "shoanti",
-          "celestial"
-        ]
-      },
-      "level": {
-        "value": 13
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the hero who slew Kazavon — and died here (B5) when the <strong>orc horde</strong> stormed the castle he had taken, his guards falling one by one until the invaders overwhelmed him alone. The latent spirits rose in triumph at his death, slaughtered the orcs, and kept the castle; his skeleton still slumps anonymously in the corner, in dust-caked celestial armor. Risen as a unique madness-eaten wraith the round after the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.vortexMadness001]{Vortex of Madness} collapses. <strong>Tactics:</strong> he favors targets resembling his old self — paladins, armored fighters, clerics of militant good gods; <em>any bastard-sword wielder trumps all</em> (he shrieks that no one else shall have Serithtial — it is his alone). <strong>Calming him:</strong> speaking his name, Serithtial's, or showing Shoanti regalia earns @Check[type:diplomacy|dc:34] to reach the hero inside (@Check[type:religion|dc:30] reveals his rejuvenation). Laid to rest — or sworn that Serithtial will be carried against Kazavon's seed — he yields a blessing instead of a blade: <strong>+1 status to saves vs. the castle's fear effects</strong> for the party. <strong>Treasure:</strong> his full plate is <em>celestial armor</em> bearing Lastwall heraldry (+1 resilient chain-light plate that counts as light armor; the rest of his gear was looted centuries ago).</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 24,
-      "senses": [
-        {
-          "type": "darkvision"
-        },
-        {
-          "type": "lifesense"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 21
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 22
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 24
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 22
-      },
-      "intimidation": {
-        "base": 24
-      },
-      "religion": {
-        "base": 22
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "undead",
-        "wraith",
-        "incorporeal"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Mandraivus the Lost",
     "displayName": 20,
@@ -357,5 +73,1057 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 215,
+        "temp": 0,
+        "max": 215,
+        "details": "negative healing"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 0,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 60
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 36,
+        "details": ""
+      },
+      "perception": {
+        "value": 26
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 14
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Dread wraith of Mandraivus",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the hero who slew Kazavon — and died here (B5) when the <strong>orc horde</strong> stormed the castle he had taken, his guards falling one by one until the invaders overwhelmed him alone. The latent spirits rose in triumph at his death, slaughtered the orcs, and kept the castle; his skeleton still slumps anonymously in the corner, in dust-caked celestial armor. Risen as a unique madness-eaten wraith the round after the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.vortexMadness001]{Vortex of Madness} collapses. <strong>Tactics:</strong> he favors targets resembling his old self — paladins, armored fighters, clerics of militant good gods; <em>any bastard-sword wielder trumps all</em> (he shrieks that no one else shall have Serithtial — it is his alone). <strong>Calming him:</strong> speaking his name, Serithtial's, or showing Shoanti regalia earns @Check[type:diplomacy|dc:34] to reach the hero inside (@Check[type:religion|dc:30] reveals his rejuvenation). Laid to rest — or sworn that Serithtial will be carried against Kazavon's seed — he yields a blessing instead of a blade: <strong>+1 status to saves vs. the castle's fear effects</strong> for the party. <strong>Treasure:</strong> his full plate is <em>celestial armor</em> bearing Lastwall heraldry (+1 resilient chain-light plate that counts as light armor; the rest of his gear was looted centuries ago).</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "undead",
+        "incorporeal",
+        "wraith"
+      ],
+      "senses": {
+        "value": "Darkvision, Lifesense 60 feet"
+      },
+      "languages": {
+        "value": [
+          "common",
+          "orcish",
+          "thassilonian",
+          "varisian"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "paralyzed",
+          "poison",
+          "precision",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "all",
+          "value": 10,
+          "exceptions": "except force, ghost touch, or positive; double resistance vs. non-magical"
+        }
+      ],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-21T22:55:33.026+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": -5
+      },
+      "dex": {
+        "mod": 8
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": 4
+      },
+      "wis": {
+        "mod": 5
+      },
+      "cha": {
+        "mod": 8
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 23,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 26,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 28,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "vXMtfqYfgF2KwOYi",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669071457806,
+        "modifiedTime": 1669071940181,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.vXMtfqYfgF2KwOYi"
+    },
+    {
+      "_id": "PT0mvaur4erRXwKc",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Lifesense 60 feet",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Lifesense]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "lifesense",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.sebk9XseMCRkDqRg"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669071461776,
+        "modifiedTime": 1669071940181,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.PT0mvaur4erRXwKc"
+    },
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 26
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "DE2WnJlwa7iAcRvn",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669071594333,
+        "modifiedTime": 1669071618797,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.DE2WnJlwa7iAcRvn"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 29
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "LtRFDIKjWkMbqpnX",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669071597375,
+        "modifiedTime": 1669071618797,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.LtRFDIKjWkMbqpnX"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 26
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "ITBKlar4qhLpXuI1",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669071599560,
+        "modifiedTime": 1669071618797,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.ITBKlar4qhLpXuI1"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "+1 Status to All Saves vs. Positive",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "positive"
+            ],
+            "selector": "saving-throw",
+            "type": "status",
+            "value": 1
+          }
+        ],
+        "slug": "1-status-to-all-saves-vs-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.kquBnQ0kObZztnBc"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074143842,
+        "modifiedTime": 1669074260613,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "IiTfvryaIoATBnFY",
+      "_key": "!actors.items!mandraivusLost01.IiTfvryaIoATBnFY"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074285504,
+        "modifiedTime": 1669074285504,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "qEDvGc1nDzlQ6BWb",
+      "_key": "!actors.items!mandraivusLost01.qEDvGc1nDzlQ6BWb"
+    },
+    {
+      "_id": "9lqRDAvffwmQeS3E",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Attack of Opportunity",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "attack-of-opportunity",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.hFtNbo1LKYCoDy2O"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074521081,
+        "modifiedTime": 1669074521081,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.9lqRDAvffwmQeS3E"
+    },
+    {
+      "_id": "XHxPwNKMFtE5LxGQ",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Draining Presence",
+      "system": {
+        "description": {
+          "value": "<p>@Template[type:emanation|distance:10] @Compendium[pf2e.bestiary-ability-glossary-srd.Aura]{Aura}</p>\n<p>A creature entering the aura must succeed at a @Check[type:fortitude|dc:32] save or become @Compendium[pf2e.conditionitems.Drained]{Drained 1}. It recovers after it has been out of the aura for 1 minute. This drained condition value is cumulative with the drained value caused by drain life, but not with multiple draining presence auras. A creature that succeeds at its save is temporarily immune to draining presence for 24 hours.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Aura]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [
+            "aura",
+            "negative"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "aura",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074530852,
+        "modifiedTime": 1669074578915,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.XHxPwNKMFtE5LxGQ"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sunlight Powerlessness",
+      "system": {
+        "description": {
+          "value": "<p>If Mandraivus the Lost is exposed to sunlight, he is @Compendium[pf2e.conditionitems.Stunned]{Stunned 2} and @Compendium[pf2e.conditionitems.Clumsy]{Clumsy 2}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T23:49:55.879+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "9tX3IupxJX0fmcyI",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074595888,
+        "modifiedTime": 1669074612158,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.9tX3IupxJX0fmcyI"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Spectral Hand",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "finesse"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T23:51:29.799+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "fLjVAeVhFEbBb5AQ": {
+            "damage": "3d10+11",
+            "damageType": "negative"
+          }
+        },
+        "bonus": {
+          "value": 29
+        },
+        "attackEffects": {
+          "value": [
+            "drain-life"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "04WY9uKVK9sGZMo1",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074689802,
+        "modifiedTime": 1669074845599,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.04WY9uKVK9sGZMo1"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Absorb Wraith",
+      "system": {
+        "description": {
+          "value": "<p>Mandraivus the Lost extends its hand toward another wraith creature within 100 feet. The target wraith dissolves and streaks toward Mandraivus the Lost in a straight line, dealing [[/r {6d10}[negative]]]{6d10 negative damage} to each creature along the line (@Check[type:fortitude|dc:34|basic:true]). Mandraivus the Lost absorbs the essence of the target wraith, becoming @Compendium[pf2e.conditionitems.Quickened]{Quickened} and gaining a +10-foot status bonus to its fly Speed for a number of rounds equal to the level of the absorbed wraith. It can use its extra action only to Fly or Strike. An unwilling target can attempt a @Check[type:will|dc:34] save to resist being absorbed.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T23:52:21.385+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "g1zUejdU5WH86a5d",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074741389,
+        "modifiedTime": 1669074915153,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.g1zUejdU5WH86a5d"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Drain Life",
+      "system": {
+        "description": {
+          "value": "<p>When Mandraivus the Lost damages a living creature with its spectral hand Strike, it gains 10 temporary Hit Points and the target must succeed at a @Check[type:fortitude|dc:34] save or become @Compendium[pf2e.conditionitems.Drained]{Drained 1}. Further damage dealt by Mandraivus the Lost increases the drained condition value by 1 on a failed save, to a maximum of @Compendium[pf2e.conditionitems.Drained]{Drained 4}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T23:53:12.428+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "uIEAD3WQGmqBbXvu",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074792432,
+        "modifiedTime": 1669074832839,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.uIEAD3WQGmqBbXvu"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Wraith Spawn",
+      "system": {
+        "description": {
+          "value": "<p>A living humanoid slain by Mandraivus the Lost's spectral hand Strike rises as a wraith spawn after [[/br 1d4 #rounds]]{1d4 rounds}. This wraith spawn is under the command of Mandraivus the Lost. It doesn't have drain life or wraith spawn. If Mandraivus the Lost is slain, the wraith spawn becomes a full-fledged, autonomous wraith; it regains its free will and gains drain life and wraith spawn.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T23:54:15.851+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "2wto0HBVK5rfCrbB",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669074855855,
+        "modifiedTime": 1669074885000,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mandraivusLost01.2wto0HBVK5rfCrbB"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "mandraivusLost01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!mandraivusLost01"
 }

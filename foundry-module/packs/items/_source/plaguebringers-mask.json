@@ -1,14 +1,99 @@
 {
-  "_id": "appPlagueMask001",
-  "img": "systems/pf2e/icons/default-icons/equipment.svg",
-  "name": "Plaguebringer's Mask",
   "type": "equipment",
-  "folder": "appItemFolder001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
+  "img": "systems/pf2e/icons/equipment/worn-items/apex-items/mask-of-allure.webp",
+  "name": "Plaguebringer's Mask",
+  "system": {
+    "description": {
+      "value": "<p>Resembling the more common nonmagical plague mask, a plaguebringer's mask grants a +1 item bonus on saving throws against nauseating scents and immunity to one specific disease (the disease must be chosen at the time of the mask's creation). The mask also veils the wearer's alignment, making their aura register as neutral to alignment-detecting effects.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>The Queen's Physicians' beaked masks</strong> (Ch.2; Appendix 5: 2,000 gp → 200 gp). Invested.</p><ul><li>+1 item bonus to saves vs. inhaled threats and olfactory effects.</li><li><strong>Immunity to one disease</strong>, chosen at creation — every mask in this campaign is keyed to <strong>blood veil</strong> (which is why the doctors never sicken).</li><li><strong>Veiled aura:</strong> divination reads the wearer as an ordinary, unremarkable citizen (@Check[type:perception|dc:24] for a detecting caster to notice the veil itself).</li></ul><p>A recovered mask is hard evidence the 'physicians' expected the plague.</p>"
+    },
+    "source": {
+      "value": ""
+    },
+    "traits": {
+      "value": [
+        "conjuration",
+        "invested",
+        "magical",
+        "necromancy"
+      ],
+      "rarity": "uncommon",
+      "custom": "",
+      "otherTags": []
+    },
+    "rules": [],
+    "slug": null,
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:37.487+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "hp": {
+      "brokenThreshold": 0,
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "weight": {
+      "value": "L"
+    },
+    "equippedBulk": {
+      "value": ""
+    },
+    "price": {
+      "value": {
+        "gp": 160
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "stackGroup": null,
+    "negateBulk": {
+      "value": "0"
+    },
+    "containerId": null,
+    "preciousMaterial": {
+      "value": null
+    },
+    "preciousMaterialGrade": {
+      "value": null
+    },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "Unusual Object",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "wornmask"
+    },
+    "level": {
+      "value": 5
+    }
   },
-  "flags": {},
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Actor.spg7T9pSV6Oa56Uz.Item.3nS2zsXEhPK3FBqr"
+    }
+  },
   "_stats": {
     "systemId": "pf2e",
     "systemVersion": "8.2.0",
@@ -20,57 +105,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "system": {
-    "baseItem": null,
-    "bulk": {
-      "value": 0.1
-    },
-    "containerId": null,
-    "description": {
-      "value": "<p><strong>The Queen's Physicians' beaked masks</strong> (Ch.2; Appendix 5: 2,000 gp → 200 gp). Invested.</p><ul><li>+1 item bonus to saves vs. inhaled threats and olfactory effects.</li><li><strong>Immunity to one disease</strong>, chosen at creation — every mask in this campaign is keyed to <strong>blood veil</strong> (which is why the doctors never sicken).</li><li><strong>Veiled aura:</strong> divination reads the wearer as an ordinary, unremarkable citizen (@Check[type:perception|dc:24] for a detecting caster to notice the veil itself).</li></ul><p>A recovered mask is hard evidence the 'physicians' expected the plague.</p>"
-    },
-    "equipped": {
-      "carryType": "worn",
-      "handsHeld": 0,
-      "invested": null
-    },
-    "hardness": 0,
-    "hp": {
-      "max": 0,
-      "value": 0
-    },
-    "level": {
-      "value": 6
-    },
-    "material": {
-      "grade": null,
-      "type": null
-    },
-    "price": {
-      "value": {
-        "gp": 200
-      }
-    },
-    "publication": {
-      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-      "authors": "",
-      "license": "OGL",
-      "remaster": true
-    },
-    "quantity": 1,
-    "rules": [],
-    "size": "med",
-    "slug": null,
-    "traits": {
-      "rarity": "uncommon",
-      "value": [
-        "invested",
-        "magical"
-      ]
-    },
-    "usage": {
-      "value": "worn"
-    }
+  "_id": "appPlagueMask001",
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
   },
   "_key": "!items!appPlagueMask001"
 }

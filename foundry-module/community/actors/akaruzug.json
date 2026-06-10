@@ -1,0 +1,834 @@
+{
+  "name": "Akaruzug",
+  "type": "npc",
+  "prototypeToken": {
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true
+      },
+      "barbrawl": {
+        "resourceBars": {
+          "bar1": {
+            "order": 0,
+            "id": "bar1",
+            "attribute": "attributes.hp",
+            "mincolor": "#FF0000",
+            "maxcolor": "#80FF00",
+            "position": "bottom-inner",
+            "otherVisibility": 0,
+            "ownerVisibility": 50,
+            "max": null
+          }
+        }
+      },
+      "healthEstimate": {
+        "dontMarkDead": false,
+        "hideHealthEstimate": false,
+        "hideName": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Akaruzug",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/pf2e/icons/default-icons/npc.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "randomImg": false
+  },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 245,
+        "temp": 0,
+        "max": 245,
+        "details": "(Hardness 15)"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 0,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 40
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 39,
+        "details": "(35 when broken); construct armor"
+      },
+      "perception": {
+        "value": 24
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 15
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "construct",
+        "mindless"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [
+          "infernal"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "doomed",
+          "drained",
+          "fatigued",
+          "healing",
+          "mental",
+          "necromancy",
+          "nonlethal-attacks",
+          "paralyzed",
+          "poison",
+          "sickened",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "rare",
+      "size": {
+        "value": "lg"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-26T17:35:30.504+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 9
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 8
+      },
+      "int": {
+        "mod": -5
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 31,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 21,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 19,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "uwOgbILijCMMSxD6",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669484216095,
+        "modifiedTime": 1669484216095,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 33
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "UUYN6mOWUzAVvLb5",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669484253435,
+        "modifiedTime": 1669484256099,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Soul Engine",
+      "system": {
+        "description": {
+          "value": "<p>An akaruzug draws the energy it requires to function from a living creature crucified upon its frame. An active akaruzug (or another creature working with an inactive akaruzug) can spend 1 minute to bind a helpless or willing creature to the construct. Once the victim is @Compendium[pf2e.conditionitems.Restrained]{Restrained}, the akaruzug can attempt to draw the creature's soul into it once per round as a free action&mdash; the victim can resist with a successful @Check[type:will|dc:36] save. On a failure, the victim dies and the akaruzug becomes active. If the body crucified upon an active akaruzug is removed, the soul within the construct is freed and the akaruzug deactivates after [[/br 1d4 #rounds]]{1d4 rounds}. An akaruzug's victim cannot be resurrected while its soul is trapped within the construct, but destroying an akaruzug releases a trapped soul. While an akaruzug is active, attacks and effects directed specifically at the victim crucified to the akaruzug treat the attack or effect as if it targeted the akaruzug instead. However, a creature can attempt to remove a crucified body from the construct, but doing so first requires the akaruzug to have the @Compendium[pf2e.conditionitems.Immobilized]{Immobilized} condition. Once this occurs, the creature can attempt a @Check[type:athletics|dc:35] check to wrench the body free. On a success, the corpse is removed and the akaruzug deactivates in [[/br 1d4 #rounds]]{1d4 rounds}. A deactivated akaruzug can take no action other than to attempt to draw in the soul of a creature crucified on its body to reactivate itself.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:38:15.858+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "5lYBCZRYBNDVyzMg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669484295862,
+        "modifiedTime": 1669484475443,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Construct Armor",
+      "system": {
+        "description": {
+          "value": "<p>Like normal objects, an akaruzug has Hardness. This Hardness reduces any damage the akaruzug takes by an amount equal to the Hardness. Once an akaruzug is reduced to fewer than half its Hit Points, or immediately upon being damaged by a critical hit, its construct armor breaks, removing the Hardness and reducing its Armor Class to 35 when broken.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:45:52.795+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "MWsivJtwwgSEpb0u",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669484752800,
+        "modifiedTime": 1669484779018,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Unhallow",
+      "system": {
+        "description": {
+          "value": "<p>@Template[type:emanation|distance:20] @Compendium[pf2e.bestiary-ability-glossary-srd.Aura]{Aura}</p>\n<p>Allies in the akaruzug's aura gain a +2 status bonus to AC against good creatures and a +2 status bonus to damage rolls against good creatures. The area in the aura is difficult terrain for good creatures.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "abjuration",
+            "aura",
+            "divine",
+            "evil"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:46:25.077+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "rOPbH8jy0DZ5bqUD",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669484785080,
+        "modifiedTime": 1669484808090,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Horns",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "magical",
+            "reach-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:47:13.410+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "t2OE7SQR1CnHmPOI": {
+            "damage": "3d10+17",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 32
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "dPjTEV47STkbH92m",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669484833412,
+        "modifiedTime": 1669484917407,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "magical",
+            "reach-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:49:10.474+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "ynTzPg4iQLiKJu7i": {
+            "damage": "3d8+17",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 32
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "bCybZLF2EzmlVOQa",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669484950477,
+        "modifiedTime": 1669484980525,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Soul Slave",
+      "system": {
+        "description": {
+          "value": "<p><strong>Frequency</strong> once per day</p>\n<hr>\n<p><strong>Effect</strong> Using a trapped soul, an akaruzug manifests a ghostly representation of its victim to attack its enemies, as @UUID[Compendium.pf2e.spells-srd.jQdm301h6e8hIY4U]{Spiritual Guardian} (7th Level). A soul slave appears as the victim did in life and wields a weapon favored by that individual.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "abjuration",
+            "divine",
+            "force"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:49:58.825+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "ySRA3vOurMcJ4f66",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669484998827,
+        "modifiedTime": 1669485053621,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Soul Steal",
+      "system": {
+        "description": {
+          "value": "<p>The akaruzug unleashes a blast of negative energy that tears the souls of its victims. Any creature within 20 feet of the akaruzug must attempt a @Check[type:fortitude|dc:34] save. The akaruzug can't use soul steal again for [[/br 1d4 #rounds]]{1d4 rounds}.</p>\n<hr>\n<p><strong>Critical Success</strong> No effect</p>\n<p><strong>Success</strong> The creature becomes @Compendium[pf2e.conditionitems.Drained]{Drained 1}.</p>\n<p><strong>Failure</strong> The creature becomes @Compendium[pf2e.conditionitems.Drained]{Drained 2}.</p>\n<p><strong>Critical Failure</strong> The creature becomes @Compendium[pf2e.conditionitems.Drained]{Drained 3}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "death",
+            "divine",
+            "necromancy",
+            "negative"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:52:57.021+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "q6Z0v9b4uFb8zJPG",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669485177025,
+        "modifiedTime": 1669485226456,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.290",
+    "createdTime": 1669484130508,
+    "modifiedTime": 1669581185281,
+    "lastModifiedBy": "hBFuMGrVgeghbDDz"
+  },
+  "_id": "8Soy728o3SEgCXnE",
+  "ownership": {
+    "default": 0,
+    "hBFuMGrVgeghbDDz": 3
+  },
+  "folder": null,
+  "sort": 0
+}

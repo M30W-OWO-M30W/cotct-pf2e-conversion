@@ -1,14 +1,91 @@
 {
-  "_id": "appSoulJar000001",
-  "img": "systems/pf2e/icons/default-icons/equipment.svg",
   "name": "Soul Jar",
   "type": "equipment",
-  "folder": "appItemFolder001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
+  "system": {
+    "description": {
+      "value": "<p>An empty soul jar can be used to contain a soul that has been successfully trapped in a black sapphire via bind soul. Holding the gemstone against the soul jar's lid for 1 full round transfers the soul in the gem to the soul jar, leaving the black sapphire unharmed 50% of the time. The rest of the time, transferring the soul from gem to jar shatters the black sapphire. A creature that can use bind soul as an innate spell can automatically place a captured soul in a held soul jar as the spell is cast. A soul in a soul jar cannot travel to the Boneyard to be judged, but can be restored to life via raise dead or more powerful magic. A soul jar can contain only one soul at a time. Soul jars are fragile (<strong>Hardness </strong>1, <strong>HP </strong>6, <strong>BT </strong>3); if a soul jar is broken, the soul held within immediately escapes to the Boneyard.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Urgathoan reliquary</strong> (Appendix 5; 5,000 gp → 500 gp). A squat ceramic jar warm to the touch.</p><ul><li><strong>Decant a soul:</strong> hold a soul-bound gem (e.g. a <em>bind soul</em> black sapphire) to the lid for 1 round to pour the soul (a creature of level 20 or lower) into the jar; the gem has a 50% chance of shattering. Creatures that can bind souls without a focus can deposit one directly.</li><li>A jarred soul cannot pass to judgment — but <strong>can</strong> still be returned to life by <em>resurrection</em>-grade magic.</li><li>One soul at a time. Fragile: Hardness 1, HP 10 — breaking the jar frees the soul to the Boneyard.</li></ul>"
+    },
+    "source": {
+      "value": ""
+    },
+    "traits": {
+      "value": [
+        "divine",
+        "magical",
+        "necromancy"
+      ],
+      "rarity": "rare",
+      "custom": "",
+      "otherTags": []
+    },
+    "rules": [],
+    "slug": null,
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "hp": {
+      "brokenThreshold": 0,
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "weight": {
+      "value": "L"
+    },
+    "equippedBulk": {
+      "value": ""
+    },
+    "price": {
+      "value": {
+        "gp": 7000
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "stackGroup": null,
+    "negateBulk": {
+      "value": "0"
+    },
+    "containerId": null,
+    "preciousMaterial": {
+      "value": null
+    },
+    "preciousMaterialGrade": {
+      "value": null
+    },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "Unusual Object",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "level": {
+      "value": 15
+    }
   },
-  "flags": {},
+  "img": "systems/pf2e/icons/equipment/consumables/oils/nectar-of-purification.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.96BVziw1XapNVvpq"
+    }
+  },
   "_stats": {
     "systemId": "pf2e",
     "systemVersion": "8.2.0",
@@ -20,57 +97,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "system": {
-    "baseItem": null,
-    "bulk": {
-      "value": 0.1
-    },
-    "containerId": null,
-    "description": {
-      "value": "<p><strong>Urgathoan reliquary</strong> (Appendix 5; 5,000 gp → 500 gp). A squat ceramic jar warm to the touch.</p><ul><li><strong>Decant a soul:</strong> hold a soul-bound gem (e.g. a <em>bind soul</em> black sapphire) to the lid for 1 round to pour the soul (a creature of level 20 or lower) into the jar; the gem has a 50% chance of shattering. Creatures that can bind souls without a focus can deposit one directly.</li><li>A jarred soul cannot pass to judgment — but <strong>can</strong> still be returned to life by <em>resurrection</em>-grade magic.</li><li>One soul at a time. Fragile: Hardness 1, HP 10 — breaking the jar frees the soul to the Boneyard.</li></ul>"
-    },
-    "equipped": {
-      "carryType": "worn",
-      "handsHeld": 0,
-      "invested": null
-    },
-    "hardness": 0,
-    "hp": {
-      "max": 0,
-      "value": 0
-    },
-    "level": {
-      "value": 9
-    },
-    "material": {
-      "grade": null,
-      "type": null
-    },
-    "price": {
-      "value": {
-        "gp": 500
-      }
-    },
-    "publication": {
-      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-      "authors": "",
-      "license": "OGL",
-      "remaster": true
-    },
-    "quantity": 1,
-    "rules": [],
-    "size": "med",
-    "slug": null,
-    "traits": {
-      "rarity": "rare",
-      "value": [
-        "magical",
-        "unholy"
-      ]
-    },
-    "usage": {
-      "value": "worn"
-    }
+  "_id": "appSoulJar000001",
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
   },
   "_key": "!items!appSoulJar000001"
 }

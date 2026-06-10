@@ -1,0 +1,1725 @@
+{
+  "name": "Kordaitra Destaid",
+  "type": "npc",
+  "prototypeToken": {
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true
+      },
+      "barbrawl": {
+        "resourceBars": {
+          "bar1": {
+            "order": 0,
+            "id": "bar1",
+            "attribute": "attributes.hp",
+            "mincolor": "#FF0000",
+            "maxcolor": "#80FF00",
+            "position": "bottom-inner",
+            "otherVisibility": 0,
+            "ownerVisibility": 50,
+            "max": null
+          }
+        }
+      },
+      "healthEstimate": {
+        "dontMarkDead": false,
+        "hideHealthEstimate": false,
+        "hideName": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Kordaitra Destaid",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/pf2e/icons/default-icons/npc.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "randomImg": false
+  },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 175,
+        "temp": 0,
+        "max": 175,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 33,
+        "details": ""
+      },
+      "perception": {
+        "value": 19
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 10
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Female human gray maiden dread marshal",
+      "publicNotes": "",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "humanoid",
+        "human"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-20T10:44:52.364+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 7
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 5
+      },
+      "wis": {
+        "mod": 5
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 22,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 19,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 19,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 20
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "uvuwxUdTNSlsAaFA",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668942082855,
+        "modifiedTime": 1668942209277,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "selector": "athletics",
+            "value": 2,
+            "predicate": [
+              {
+                "or": [
+                  "action:disarm",
+                  "action:grapple",
+                  "action:trip"
+                ]
+              }
+            ],
+            "label": "vs Disarm, Grapple and Trip"
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 22
+        },
+        "proficient": {
+          "value": 0
+        },
+        "variants": {
+          "0": {
+            "label": "+2 vs Disarm, Grapple and Trip",
+            "options": "action:disarm, action:grapple, action:trip"
+          }
+        }
+      },
+      "_id": "Q9FadtnkQfjmiyAx",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668942084391,
+        "modifiedTime": 1668942804375,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 20
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "pdmCxjHFVg18fhzq",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668942091444,
+        "modifiedTime": 1668942209277,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Religion",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 18
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "c2MsVIcFVnlqz6vd",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668942094025,
+        "modifiedTime": 1668942209277,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Society",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "6Mc7MTsrb5OQ2DrF",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668942096883,
+        "modifiedTime": 1668942209277,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "70kl8nNSUOh0y1gZ",
+      "img": "systems/pf2e/icons/equipment/weapons/longsword.webp",
+      "name": "Longsword",
+      "system": {
+        "description": {
+          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "evocation",
+            "magical",
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "longsword",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "longsword",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Longsword",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "sword",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "slashing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 2
+        },
+        "strikingRune": {
+          "value": "striking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": "fearsome"
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.LJdbVTOZog39EEbi"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668942854112,
+        "modifiedTime": 1668943120358,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "rz6ornTmK26fTLte",
+      "img": "systems/pf2e/icons/equipment//armor/fullplate.webp",
+      "name": "+1 Resilient Full Plate",
+      "system": {
+        "description": {
+          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "abjuration",
+            "bulwark",
+            "invested",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "full-plate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "full-plate",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "5"
+        },
+        "equippedBulk": {
+          "value": "4"
+        },
+        "price": {
+          "value": {
+            "gp": 30
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "inSlot": false,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Full Plate",
+            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornarmor"
+        },
+        "level": {
+          "value": 8
+        },
+        "armor": {
+          "value": 6
+        },
+        "category": "heavy",
+        "group": "plate",
+        "strength": {
+          "value": 18
+        },
+        "dex": {
+          "value": 0
+        },
+        "check": {
+          "value": -3
+        },
+        "speed": {
+          "value": -10
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "resiliencyRune": {
+          "value": "resilient"
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Gq1cZWSKOtJhKd2p"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668942895392,
+        "modifiedTime": 1668943150559,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "oMCq1fiOAYfcfeGr",
+      "img": "systems/pf2e/icons/equipment/shields/precious-material-shields/adamantite-shield.webp",
+      "name": "Adamantine Shield (Standard-Grade)",
+      "system": {
+        "description": {
+          "value": "<p>Adamantine shields are particularly sturdy, and when used for a shield bash, they are adamantine weapons.</p>\n<p>The shield has Hardness 10, HP 40, and BT 20.</p>\n<hr />\n<p><strong>Craft Requirements</strong> adamantine worth at least 55 gp</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "uncommon",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "adamantine-shield-standard-grade",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 20,
+          "value": 40,
+          "max": 40
+        },
+        "hardness": 10,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 440
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": "adamantine"
+        },
+        "preciousMaterialGrade": {
+          "value": "standard"
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 8
+        },
+        "armor": {
+          "value": 2
+        },
+        "category": "shield",
+        "group": null,
+        "strength": {
+          "value": 0
+        },
+        "dex": {
+          "value": 0
+        },
+        "check": {
+          "value": 0
+        },
+        "speed": {
+          "value": 0
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "resiliencyRune": {
+          "value": ""
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        }
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.2gMlhHlkQp3DuWw5"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668942905638,
+        "modifiedTime": 1668942905638,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Key",
+      "type": "equipment",
+      "system": {
+        "description": {
+          "value": "<div data-visibility=\"gm\">\n<p>Prison Cell Master Key</p>\n</div>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.397+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Object",
+            "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/held-items/key-purple.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Item.rgy1YEDKPT8ElDQf"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668380949675,
+        "modifiedTime": 1668943007738,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "hSqg2m0L75AP1LGR"
+    },
+    {
+      "name": "Key",
+      "type": "equipment",
+      "system": {
+        "description": {
+          "value": "<div data-visibility=\"gm\">\n<p>Endrin&rsquo;s Cell Key</p>\n</div>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.397+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Object",
+            "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/held-items/key-purple.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Item.rgy1YEDKPT8ElDQf"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668380949675,
+        "modifiedTime": 1668943034166,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "YHP7UYrP2B1sxWA0"
+    },
+    {
+      "name": "Key",
+      "type": "equipment",
+      "system": {
+        "description": {
+          "value": "<div data-visibility=\"gm\">\n<p>Treasury Key</p>\n</div>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.397+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Object",
+            "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+            "data": {
+              "description": {
+                "value": "The nature of this object is unclear."
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/held-items/key-purple.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Item.rgy1YEDKPT8ElDQf"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668380949675,
+        "modifiedTime": 1668943094203,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "sryS51i2bxEeIsj9"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Marshal's Aura",
+      "system": {
+        "description": {
+          "value": "<p>Allies within 10 feet of Kordaitra gain a +1 status bonus to saving throws against fear.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "aura",
+            "emotion",
+            "mental",
+            "visual"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T11:19:45.446+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "kcFRRFAbSDyAexqa",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668943185451,
+        "modifiedTime": 1668943209222,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Iron Command",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature within 15 feet damages Kordiatra.</p>\n<p><strong>Effect</strong> Kordaitra commands her enemy to kneel before her in obedience. The creature must either kneel before Kordaitra and gain the @Compendium[pf2e.conditionitems.Prone]{Prone} condition or take [[/r {3d6}[mental]]]{3d6 mental damage}. In addition, Kordaitra's Strikes against the triggering creature deal 2 extra evil damage until the end of her next turn.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "emotion",
+            "enchantment",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T11:20:21.734+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "arNNzmVN360WPxLs",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668943221739,
+        "modifiedTime": 1668943395206,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "XrPtftTPurRvEjt7",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shield Block",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ShieldBlock]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "shield-block",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.m4HQ2o5aPxjXf2kY"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668943414857,
+        "modifiedTime": 1668943414857,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Longsword",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "magical",
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T11:23:54.188+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "Xy47CVGR4GSw9A3Q": {
+            "damage": "2d8+11",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 23
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "70kl8nNSUOh0y1gZ"
+        }
+      },
+      "_id": "6e51PlIKOOcn3KfS",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668943434198,
+        "modifiedTime": 1668943441189,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/default-icons/mystery-man.svg",
+      "name": "Cadence Call",
+      "system": {
+        "description": {
+          "value": "<p>Kordaitra calls out a quick cadence. Each willing ally within her marshal's aura is @Compendium[pf2e.conditionitems.Quickened]{Quickened} until the end of their next turn, and they can use the extra action only to Stride. At the end of each ally's turn, if they used the extra action, they then become @Compendium[pf2e.conditionitems.Slowed]{Slowed 1} until the end of their following turn.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "auditory"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T11:24:19.246+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "CLiWytc85tZzaihY",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668943459250,
+        "modifiedTime": 1668943487169,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Dread Marshal Stance",
+      "system": {
+        "description": {
+          "value": "<p>Kordiatra encourages her allies to strike fear into their foes with vicious attacks. When Kordaitra enters this stance, she attempts a @Check[type:intimidation|dc:27] check.</p>\n<hr>\n<p><strong>Critical Success</strong> Kordaitra's marshal's aura increases to a @Template[type:emanation|distance:20], and it grants her and allies a +2 status bonus to damage rolls. When Kordaitra or an ally in the aura critically hits an enemy with a Strike, that enemy is @Compendium[pf2e.conditionitems.Frightened]{Frightened 1}.</p>\n<p><strong>Success</strong> As critical success, but Kordaitra's aura size doesn't increase.</p>\n<p><strong>Failure</strong> Kordaitra fails to enter the stance.</p>\n<p><strong>Critical Failure</strong> Kordaitra fails to enter the stance and can't take this action again for 1 minute.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "open",
+            "stance"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T11:24:56.787+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "VGxRw1cCu7XK2crr",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668943496791,
+        "modifiedTime": 1668943575084,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "To Battle!",
+      "system": {
+        "description": {
+          "value": "<p>Kordaitra chooses one ally within her marshal's aura who has a reaction available. If she spends 1 action, that ally can use their reaction to immediately Stride. If she spend 2 actions, that ally can use their reaction to immediately Strike.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "flourish"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T11:27:08.391+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "lnpjoKRAgjIDdvT1",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1668943628402,
+        "modifiedTime": 1669413897645,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "exportSource": {
+      "world": "lmop",
+      "system": "pf2e",
+      "coreVersion": "10.290",
+      "systemVersion": "4.4.0"
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.290",
+    "createdTime": 1668941092369,
+    "modifiedTime": 1669581185324,
+    "lastModifiedBy": "hBFuMGrVgeghbDDz"
+  },
+  "_id": "ph0tSOuevqt05vBv",
+  "ownership": {
+    "default": 0,
+    "hBFuMGrVgeghbDDz": 3
+  },
+  "folder": null,
+  "sort": 0
+}

@@ -1,315 +1,6 @@
 {
-  "_id": "lashtonDreadSk01",
   "name": "Lashton",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "h8RqsXwtyI0ENi4q",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Striking Lance",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 23
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+11",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "deadly-d8",
-            "jousting-d6",
-            "magical",
-            "reach-10"
-          ]
-        }
-      },
-      "_key": "!actors.items!lashtonDreadSk01.h8RqsXwtyI0ENi4q"
-    },
-    {
-      "_id": "C8VJmjrfmSSLV5mx",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Watch Commander's Charge",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Mounted on his @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.skelNightmare001]{skeletal nightmare}, Lashton Strides (the mount moves) and Strikes with the lance: +4 circumstance damage if he moved 20+ feet.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "attack"
-          ]
-        }
-      },
-      "_key": "!actors.items!lashtonDreadSk01.C8VJmjrfmSSLV5mx"
-    },
-    {
-      "_id": "3pVaE4ufr5RkaWsZ",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Dread Rebuke",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>One creature within 30 feet: @Check[type:will|dc:29] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} — five hundred years of garrison discipline in a dead voice.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "auditory",
-            "emotion",
-            "fear",
-            "mental"
-          ]
-        }
-      },
-      "_key": "!actors.items!lashtonDreadSk01.3pVaE4ufr5RkaWsZ"
-    },
-    {
-      "_id": "BrkO6UcpNJsTzYOT",
-      "img": "systems/pf2e/icons/actions/FreeAction.webp",
-      "name": "Command Skeletons",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "free"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>All lesser skeletons within 30 feet obey him; skeletal champions resist with @Check[type:will|dc:26]. No skeleton attacks Lashton.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "auditory"
-          ]
-        }
-      },
-      "_key": "!actors.items!lashtonDreadSk01.BrkO6UcpNJsTzYOT"
-    },
-    {
-      "_id": "O3BgtwsluPb3Lact",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Dread Skeleton",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Skeleton immunities; resistance cold/piercing/slashing 10; his fall alerts the keep.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!lashtonDreadSk01.O3BgtwsluPb3Lact"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 6
-      },
-      "dex": {
-        "mod": 4
-      },
-      "con": {
-        "mod": 0
-      },
-      "int": {
-        "mod": 1
-      },
-      "wis": {
-        "mod": 2
-      },
-      "cha": {
-        "mod": 3
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 30
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 175,
-        "temp": 0,
-        "value": 175
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 30
-      }
-    },
-    "details": {
-      "blurb": "Dread-skeleton watch commander (B1)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common"
-        ]
-      },
-      "level": {
-        "value": 10
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> Scarwall's eternal watch commander — Lord of the causeway gate (B1), riding out with twelve skeletal champions when intruders reach the bridge's midpoint. He remembers only fragments of life; the causeway is all that's left. <strong>The bloodless way:</strong> his <strong>gold locket</strong> lies in his old office (B8, @Check[type:perception|dc:33]) — a portrait of a beautiful woman and an inscription begging her Lashton to remember her and come home safe. If a PC carries it, <em>he senses it and halts the charge</em>, demanding its immediate return; handed the locket, he gazes at the portrait for one round, then crumbles to dust. His skeletons and mount still attack — but the commander himself need never be fought.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 19,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 19
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 17
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 18
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 21
-      },
-      "intimidation": {
-        "base": 19
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "undead",
-        "skeleton"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Lashton",
     "displayName": 20,
@@ -382,5 +73,1801 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 175,
+        "temp": 0,
+        "max": 175,
+        "details": "fast healing 11, negative healing;"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 30,
+        "details": ""
+      },
+      "perception": {
+        "value": 20
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 11
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Skeleton cavalier commander",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> Scarwall's eternal watch commander — Lord of the causeway gate (B1), riding out with twelve skeletal champions when intruders reach the bridge's midpoint. He remembers only fragments of life; the causeway is all that's left. <strong>The bloodless way:</strong> his <strong>gold locket</strong> lies in his old office (B8, @Check[type:perception|dc:33]) — a portrait of a beautiful woman and an inscription begging her Lashton to remember her and come home safe. If a PC carries it, <em>he senses it and halts the charge</em>, demanding its immediate return; handed the locket, he gazes at the portrait for one round, then crumbles to dust. His skeletons and mount still attack — but the commander himself need never be fought.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "undead",
+        "skeleton",
+        "mindless"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [
+          "common",
+          "necril"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "mental",
+          "paralyzed",
+          "poison",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "cold",
+          "value": 10,
+          "exceptions": ""
+        },
+        {
+          "type": "electricity",
+          "value": 10,
+          "exceptions": ""
+        },
+        {
+          "type": "fire",
+          "value": 10,
+          "exceptions": ""
+        },
+        {
+          "type": "piercing",
+          "value": 10,
+          "exceptions": ""
+        },
+        {
+          "type": "slashing",
+          "value": 10,
+          "exceptions": ""
+        }
+      ],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-21T17:06:08.433+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 7
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 1
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 22,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 18,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 19,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "UCe6Cdz4KS4Zgixi",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050443031,
+        "modifiedTime": 1669050443031,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.UCe6Cdz4KS4Zgixi"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 23
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "ajZF1yvgo6ECicUk",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050469504,
+        "modifiedTime": 1669050525810,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.ajZF1yvgo6ECicUk"
+    },
+    {
+      "name": "Deception",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 17
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "vE9nArNpTx0ehQSe",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050471938,
+        "modifiedTime": 1669050525810,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.vE9nArNpTx0ehQSe"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "B19BV0d0FWxbuw7D",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050474318,
+        "modifiedTime": 1669050525810,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.B19BV0d0FWxbuw7D"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 23
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "JQhRXihrHxY8QSE2",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050482234,
+        "modifiedTime": 1669050525810,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.JQhRXihrHxY8QSE2"
+    },
+    {
+      "_id": "NYof1E2DWLm60vdb",
+      "img": "systems/pf2e/icons/equipment/weapons/lance.webp",
+      "name": "Lance",
+      "system": {
+        "description": {
+          "value": "<p>This spear‑like weapon is used by a mounted creature to deal a great deal of damage.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "deadly-d8",
+            "evocation",
+            "jousting-d6",
+            "magical",
+            "reach"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "lance",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "lance",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "2"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Lance",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "spear",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": "striking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.OPMzQdM9rZznMGhW"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050592262,
+        "modifiedTime": 1669050685178,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.NYof1E2DWLm60vdb"
+    },
+    {
+      "_id": "ibMCklwatVzw9wTD",
+      "img": "systems/pf2e/icons/equipment/weapons/longsword.webp",
+      "name": "Longsword",
+      "system": {
+        "description": {
+          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "evocation",
+            "magical",
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "longsword",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "longsword",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Longsword",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "sword",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "slashing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": "striking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.LJdbVTOZog39EEbi"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050602934,
+        "modifiedTime": 1669050698195,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.ibMCklwatVzw9wTD"
+    },
+    {
+      "_id": "yyHPk9a8LWVgfFCw",
+      "img": "systems/pf2e/icons/equipment//armor/fullplate.webp",
+      "name": "Full Plate",
+      "system": {
+        "description": {
+          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "abjuration",
+            "bulwark",
+            "invested",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "full-plate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "full-plate",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "5"
+        },
+        "equippedBulk": {
+          "value": "4"
+        },
+        "price": {
+          "value": {
+            "gp": 160
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "inSlot": false,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Full Plate",
+            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornarmor"
+        },
+        "level": {
+          "value": 5
+        },
+        "armor": {
+          "value": 6
+        },
+        "category": "heavy",
+        "group": "plate",
+        "strength": {
+          "value": 18
+        },
+        "dex": {
+          "value": 0
+        },
+        "check": {
+          "value": -3
+        },
+        "speed": {
+          "value": -10
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "resiliencyRune": {
+          "value": null
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Gq1cZWSKOtJhKd2p"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050610154,
+        "modifiedTime": 1669050748121,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.yyHPk9a8LWVgfFCw"
+    },
+    {
+      "_id": "ZneW6qVBvup5b9KI",
+      "img": "systems/pf2e/icons/equipment/shields/specific-shields/sturdy-shield.webp",
+      "name": "Sturdy Shield (Lesser)",
+      "system": {
+        "description": {
+          "value": "<p>With a superior design and excellent craftsmanship, this steel shield has higher Hardness than its non-magical counterparts, making it harder to break and destroy.</p>\n<p>The shield has Hardness 10, HP 80, and BT 40.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "abjuration",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "sturdy-shield-lesser",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 40,
+          "value": 80,
+          "max": 80
+        },
+        "hardness": 10,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 360
+          }
+        },
+        "equipped": {
+          "carryType": "held",
+          "invested": null,
+          "handsHeld": 1
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 7
+        },
+        "armor": {
+          "value": 2
+        },
+        "category": "shield",
+        "group": null,
+        "strength": {
+          "value": 0
+        },
+        "dex": {
+          "value": 0
+        },
+        "check": {
+          "value": 0
+        },
+        "speed": {
+          "value": 0
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "resiliencyRune": {
+          "value": ""
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        }
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.nDZX25OwoN0Imrq6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050622751,
+        "modifiedTime": 1669050672295,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.ZneW6qVBvup5b9KI"
+    },
+    {
+      "_id": "v0Kk6rZC0GMXnGlY",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Fast Healing",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.FastHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "fast-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.fJSNOw4zHGbIm4bZ"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050940274,
+        "modifiedTime": 1669050940274,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.v0Kk6rZC0GMXnGlY"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669050946619,
+        "modifiedTime": 1669050946619,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "TAwHlFrkHUR0bi1K",
+      "_key": "!actors.items!lashtonDreadSk01.TAwHlFrkHUR0bi1K"
+    },
+    {
+      "_id": "5eQ3FFFP47wjfnnu",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Attack of Opportunity",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "attack-of-opportunity",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.hFtNbo1LKYCoDy2O"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051238439,
+        "modifiedTime": 1669051238439,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.5eQ3FFFP47wjfnnu"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Bloody Lashton",
+      "system": {
+        "description": {
+          "value": "<p>is covered in dripping blood and gains fast healing equal to its level.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T17:20:48.307+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "mwvLSCxRuCWXW9zi",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051248312,
+        "modifiedTime": 1669051259774,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.mwvLSCxRuCWXW9zi"
+    },
+    {
+      "_id": "PiA461qhlSAMDoQk",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shield Block",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ShieldBlock]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "shield-block",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.m4HQ2o5aPxjXf2kY"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051269624,
+        "modifiedTime": 1669051269624,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.PiA461qhlSAMDoQk"
+    },
+    {
+      "name": "Lance",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "deadly-d8",
+            "jousting-d6",
+            "magical",
+            "reach-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T17:21:18.408+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "4DlyC5cUpaPevbAa": {
+            "damage": "2d12+11",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 26
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "NYof1E2DWLm60vdb"
+        }
+      },
+      "_id": "AtIrfuLX0fTPy0jY",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051278412,
+        "modifiedTime": 1669051316659,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.AtIrfuLX0fTPy0jY"
+    },
+    {
+      "name": "Longsword",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "magical",
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T17:21:19.729+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "ebfPsw1A7T9pARRG": {
+            "damage": "2d8+11",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 26
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "ibMCklwatVzw9wTD"
+        }
+      },
+      "_id": "P7RxgvLuAZzqHaKS",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051279732,
+        "modifiedTime": 1669051331687,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.P7RxgvLuAZzqHaKS"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T17:22:17.796+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "GKckxDeIa3gurhgW": {
+            "damage": "2d6+11",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 26
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "2npn18e8I2IEsPL3",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051337799,
+        "modifiedTime": 1669051364904,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.2npn18e8I2IEsPL3"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Command Skeletons",
+      "system": {
+        "description": {
+          "value": "<p>Lashton mentally commands its skeletal allies to reposition. Any allies with the skeleton trait within 60 feet can use a reaction to Step.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "concentrate",
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T17:23:06.287+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "vl66NpbGJbGoDV5R",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051386291,
+        "modifiedTime": 1669051419019,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.vl66NpbGJbGoDV5R"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Mounted Superiority",
+      "system": {
+        "description": {
+          "value": "<p>While Lashton is mounted, Lashton's Strikes deal an additional [[/r 1d10]] damage to creatures that aren't mounted.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T17:23:56.825+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "Mwr5is78cuSkREe2",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051436829,
+        "modifiedTime": 1669051482794,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.Mwr5is78cuSkREe2"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Nightmare Rider",
+      "system": {
+        "description": {
+          "value": "<p>When Lashton uses @UUID[Compendium.pf2e.actionspf2e.q9nbyIF0PEBqMtYe]{Command an Animal} on his skeletal nightmare mount, the result is always a Success.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T17:24:56.342+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "UGaKOLdA82U02O1M",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669051496347,
+        "modifiedTime": 1669051591813,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!lashtonDreadSk01.UGaKOLdA82U02O1M"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "lashtonDreadSk01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!lashtonDreadSk01"
 }

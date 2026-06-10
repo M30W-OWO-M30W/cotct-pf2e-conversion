@@ -1,493 +1,6 @@
 {
-  "_id": "appKazavon000001",
   "name": "Kazavon",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "IB9kIwWUks3uXl4M",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Fang of Midnight (Jaws)",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 42
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "4d12+20",
-            "damageType": "piercing"
-          },
-          "1": {
-            "damage": "2d6",
-            "damageType": "electricity"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "magical",
-            "reach-30"
-          ]
-        }
-      },
-      "_key": "!actors.items!appKazavon000001.IB9kIwWUks3uXl4M"
-    },
-    {
-      "_id": "02BfJVnCafKfZGjb",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Claw",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 42
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "4d8+20",
-            "damageType": "slashing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "magical",
-            "reach-20"
-          ]
-        }
-      },
-      "_key": "!actors.items!appKazavon000001.02BfJVnCafKfZGjb"
-    },
-    {
-      "_id": "oIWS5NDQqQzvrcz0",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Tail",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 40
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "4d8+20",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "magical",
-            "reach-25"
-          ]
-        }
-      },
-      "_key": "!actors.items!appKazavon000001.oIWS5NDQqQzvrcz0"
-    },
-    {
-      "_id": "bdKCTeYfNbvlDK9B",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Breath Weapon",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Frequency</strong> once per 1d4 rounds. A 140-foot line of lightning: @Damage[24d6[electricity]] (@Check[type:reflex|dc:47|basic:true]).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "arcane",
-            "electricity"
-          ]
-        }
-      },
-      "_key": "!actors.items!appKazavon000001.bdKCTeYfNbvlDK9B"
-    },
-    {
-      "_id": "tb6OXNGpCSUOSB2Q",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Frightful Presence",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>360 feet, @Check[type:will|dc:45]. Storm-aura: creatures adjacent at the start of his turn take @Damage[2d6[electricity]].</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!appKazavon000001.tb6OXNGpCSUOSB2Q"
-    },
-    {
-      "_id": "Wkg7E3yjKRoGTcGV",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Warlord's Sorcery",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Arcane DC 47: <em>freeze time</em> (1/day, the classic opener) · <em>maze</em> · <em>wall of force</em> (his battlefield architecture) · <em>chain lightning</em> @Damage[8d12[electricity]] · <em>invisibility (4th)</em> · <em>teleport</em>/<em>gate</em> (his exits). He spends his first stolen round walling the battlefield into a killing floor.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "arcane",
-            "concentrate"
-          ]
-        }
-      },
-      "_key": "!actors.items!appKazavon000001.Wkg7E3yjKRoGTcGV"
-    },
-    {
-      "_id": "J2NeT68ap4maPJ1I",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Human Form",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Zon-Kuthon's gift: a fixed human shape — the pale warlord (AC 47; <em>+3 greater striking unholy spiked chain</em> +44, @Damage[3d8+22[slashing]] plus @Damage[1d6[bleed]]). <strong>Death Transformation:</strong> at 0 HP in human form he erupts back into the dragon at full HP, @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 2d4 rounds, his armor destroyed. In human form he fights to the death — because death is a costume change.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "arcane",
-            "polymorph"
-          ]
-        }
-      },
-      "_key": "!actors.items!appKazavon000001.J2NeT68ap4maPJ1I"
-    },
-    {
-      "_id": "gmTN35xxsRORB1Qn",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Rejuvenation",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p><strong>While any of his seven relics exist, he can always manifest again</strong> (GM's timetable — months or years). Defeated or driven off, he takes <strong>2d6 weeks</strong> to secure his human-form gear before acting openly. <strong>If he was restored via the Everdawn Pool</strong> (Ch.6's fail-state), destroying him leaves <em>only his fangs</em> in the dust — the Crown's seeds, again.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!appKazavon000001.gmTN35xxsRORB1Qn"
-    },
-    {
-      "_id": "S8t0A5fXNZXmtutH",
-      "img": "systems/pf2e/icons/default-icons/lore.svg",
-      "name": "Scarwall Lore",
-      "sort": 0,
-      "type": "lore",
-      "system": {
-        "description": {
-          "value": ""
-        },
-        "mod": {
-          "value": 44
-        },
-        "proficient": {
-          "value": 0
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null
-      },
-      "_key": "!actors.items!appKazavon000001.S8t0A5fXNZXmtutH"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 10
-      },
-      "dex": {
-        "mod": 3
-      },
-      "con": {
-        "mod": 8
-      },
-      "int": {
-        "mod": 7
-      },
-      "wis": {
-        "mod": 6
-      },
-      "cha": {
-        "mod": 8
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 50
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 600,
-        "temp": 0,
-        "value": 600
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "fly",
-            "value": 100
-          },
-          {
-            "type": "burrow",
-            "value": 20
-          }
-        ],
-        "value": 40
-      }
-    },
-    "details": {
-      "blurb": "THE DRAGON — CR 25 contingency (Arc III / fail-state)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "draconic",
-          "infernal",
-          "necril",
-          "orcish",
-          "shoanti"
-        ]
-      },
-      "level": {
-        "value": 25
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>THE CONTINGENCY (CR 25 → L25).</strong> Kazavon — blue great wyrm, champion of Zon-Kuthon, the warlord whose fangs crown a queen — only walks if the campaign fails: the Crown unsundered, the ritual finished, or the seven relics allowed to converge (Continuing the Campaign, Arc III). First contact is always the dragon; the human warlord comes later, with armies.</p><p><strong>Tactics (dragon):</strong> opens with <em>freeze time</em>, walls the field, goes invisible on the stolen round's end, then fights mobile and airborne — breath and sorcery, never landing. <strong>Morale (dragon):</strong> below ~100 HP he teleports out or gates to the Shadow Plane, returns in days. <strong>Morale (human):</strong> to the death — see Death Transformation.</p><p><strong>His goal on returning:</strong> reclaim Scarwall, rebuild the warlord state that once broke Belkzen — a years-long shadow over any post-campaign play.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 38,
-      "senses": [
-        {
-          "type": "darkvision"
-        },
-        {
-          "type": "scent"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 40
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 35
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 38
-      }
-    },
-    "skills": {
-      "deception": {
-        "base": 44
-      },
-      "diplomacy": {
-        "base": 44
-      },
-      "intimidation": {
-        "base": 46
-      },
-      "arcana": {
-        "base": 42
-      },
-      "religion": {
-        "base": 42
-      },
-      "society": {
-        "base": 40
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "grg"
-      },
-      "value": [
-        "dragon",
-        "earth",
-        "unholy"
-      ]
-    }
-  },
-  "folder": "appCreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Kazavon",
     "displayName": 20,
@@ -560,5 +73,6640 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 575,
+        "temp": 0,
+        "max": 575,
+        "details": "rejuvenation"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 60,
+        "otherSpeeds": [
+          {
+            "type": "burrow",
+            "value": 30
+          },
+          {
+            "type": "fly",
+            "value": 200
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 49,
+        "details": ""
+      },
+      "perception": {
+        "value": 38
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 23
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Male great wyrm blue dragon",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>THE CONTINGENCY (CR 25 → L23).</strong> Kazavon — blue great wyrm, champion of Zon-Kuthon, the warlord whose fangs crown a queen — only walks if the campaign fails: the Crown unsundered, the ritual finished, or the seven relics allowed to converge (Continuing the Campaign, Arc III). First contact is always the dragon; the human warlord comes later, with armies.</p><p><strong>Tactics (dragon):</strong> opens with <em>freeze time</em>, walls the field, goes invisible on the stolen round's end, then fights mobile and airborne — breath and sorcery, never landing. <strong>Morale (dragon):</strong> below ~100 HP he teleports out or gates to the Shadow Plane, returns in days. <strong>Morale (human):</strong> to the death — see Death Transformation.</p><p><strong>His goal on returning:</strong> reclaim Scarwall, rebuild the warlord state that once broke Belkzen — a years-long shadow over any post-campaign play.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "dragon",
+        "electricity"
+      ],
+      "senses": {
+        "value": "Darkvision, Scent (imprecise) 60 feet"
+      },
+      "languages": {
+        "value": [
+          "aklo",
+          "common",
+          "draconic",
+          "infernal",
+          "jotun",
+          "orcish",
+          "shoanti",
+          "varisian"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "electricity",
+          "paralyzed",
+          "sleep"
+        ],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "grg"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-27T12:41:29.152+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 11
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 9
+      },
+      "int": {
+        "mod": 7
+      },
+      "wis": {
+        "mod": 7
+      },
+      "cha": {
+        "mod": 9
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 39,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 37,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 40,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 35
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "s1FaT48jr6ipeX4f",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553108864,
+        "modifiedTime": 1669553187247,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.s1FaT48jr6ipeX4f"
+    },
+    {
+      "name": "Arcana",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 40
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "YKNEVs0LpXSyFzEb",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553111275,
+        "modifiedTime": 1669553187247,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.YKNEVs0LpXSyFzEb"
+    },
+    {
+      "name": "Deception",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 43
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "rX0fbtjE8pfffGtk",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553113733,
+        "modifiedTime": 1669553187247,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.rX0fbtjE8pfffGtk"
+    },
+    {
+      "name": "Diplomacy",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 43
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "EZEVygIeBLONQzUA",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553120297,
+        "modifiedTime": 1669553187247,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.EZEVygIeBLONQzUA"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 40
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "5pvRiliJ9az8aJLi",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553123525,
+        "modifiedTime": 1669553187247,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.5pvRiliJ9az8aJLi"
+    },
+    {
+      "name": "Society",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 43
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "qBfzAtz7srddOk2q",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553125705,
+        "modifiedTime": 1669553187247,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.qBfzAtz7srddOk2q"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 35
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "Cbs3Bz9Eu2YGY3n8",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553135593,
+        "modifiedTime": 1669553187247,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.Cbs3Bz9Eu2YGY3n8"
+    },
+    {
+      "name": "Survival",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 36
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "bmeyXsmTraY8cKs5",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553138317,
+        "modifiedTime": 1669553187247,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.bmeyXsmTraY8cKs5"
+    },
+    {
+      "_id": "wqZKSe5Yzu9gHMD5",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553410046,
+        "modifiedTime": 1669553410046,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.wqZKSe5Yzu9gHMD5"
+    },
+    {
+      "_id": "Rw4mslKAj7LSjpS7",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Scent (imprecise) 60 feet",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Scent]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "scent",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.rqfnQ5VHT5hxm25r"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553415958,
+        "modifiedTime": 1669553422798,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.Rw4mslKAj7LSjpS7"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sound Imitation",
+      "system": {
+        "description": {
+          "value": "<p>Kazavon can mimic any sound he has heard. To do so, he must succeed at a Deception check with a +4 circumstance bonus.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T12:50:29.529+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "PmAr6kc5NPP0yecI",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553429534,
+        "modifiedTime": 1669553448173,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.PmAr6kc5NPP0yecI"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "+2 Status to All Saves vs. Magic",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              {
+                "or": [
+                  "magical",
+                  "arcane",
+                  "divine",
+                  "primal",
+                  "occult"
+                ]
+              }
+            ],
+            "selector": "saving-throw",
+            "type": "status",
+            "value": 2
+          }
+        ],
+        "slug": "1-status-to-all-saves-vs-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.kquBnQ0kObZztnBc"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553491591,
+        "modifiedTime": 1669553499596,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "qilgNVyBqM6tlPNH",
+      "_key": "!actors.items!appKazavon000001.qilgNVyBqM6tlPNH"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Rejuvenation",
+      "system": {
+        "description": {
+          "value": "<p>If Kazavon is killed, his body crumbles swiftly, and is soon reduced to little more than dust. Any of the relics absorbed into his body remain behind amid the dust. As long as Kazavon's relics continue to exist, there is always a chance the great blue wyrm can manifest again. If Kazavon was restored to life via the Everdawn Pool (as described in Rise of the Dragon), all that remains are his fangs.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T12:52:25.041+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "IlXaeIYe50Gb0hNG",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553545045,
+        "modifiedTime": 1669553567306,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.IlXaeIYe50Gb0hNG"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Contingency",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> Kazavon fails a saving throw against a spell.</p>\n<hr>\n<p><strong>Effect</strong> @UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Dispel Magic} (7th level) attempts to counteract the triggering spell.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T12:53:27.699+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "spZ8f79p6o3OqSHd",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553607702,
+        "modifiedTime": 1669553648830,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.spZ8f79p6o3OqSHd"
+    },
+    {
+      "_id": "rE6Bo9SnhcastFs2",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Frightful Presence",
+      "system": {
+        "description": {
+          "value": "<p>@Template[type:emanation|distance:90]{90 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X]{Aura} @Check[type:will|dc:43]</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.FrightfulPresence]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [
+            "aura",
+            "emotion",
+            "fear",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "frightful-presence",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.etMnv73EIdEZrYYu"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553698978,
+        "modifiedTime": 1669553720168,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.rE6Bo9SnhcastFs2"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Wing Deflection",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> Kazavon is targeted with an attack.</p>\n<hr>\n<p><strong>Effect</strong> Kazavon raises his wing, gaining a +2 circumstance bonus to AC against the triggering attack. If Kazavon is Flying, he descends 10 feet after the attack is complete.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T12:57:09.100+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "YsdJC3UkymU9rDea",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553829105,
+        "modifiedTime": 1669553857254,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.YsdJC3UkymU9rDea"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Jaws",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "electricity",
+            "magical",
+            "reach-20"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T12:58:08.990+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "u2cVvOWArke7CsCa": {
+            "damage": "6d12+11",
+            "damageType": "piercing"
+          },
+          "dRY0b4pBtONMQc50": {
+            "damage": "2d12",
+            "damageType": "electricity"
+          }
+        },
+        "bonus": {
+          "value": 42
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "I11s8NYJtoCjKYdA",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553888993,
+        "modifiedTime": 1669553940918,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.I11s8NYJtoCjKYdA"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "magical",
+            "reach-15"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T12:59:19.647+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "DfmTFqjYKkcRC9Ek": {
+            "damage": "6d10+11",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 40
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "R8f7HRoYPMdZatWO",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669553959651,
+        "modifiedTime": 1669553992879,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.R8f7HRoYPMdZatWO"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Tail",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "magical",
+            "reach-25"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:00:51.176+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "6Qk7YqJlqaHS2tHX": {
+            "damage": "6d10+11",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 40
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "Dezem48NYdO3qFhw",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554051180,
+        "modifiedTime": 1669554086854,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.Dezem48NYdO3qFhw"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Horns",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "magical",
+            "reach-20"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:01:32.023+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "GKZNiT23P7lGAiBb": {
+            "damage": "5d12+11",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 40
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "RvbN0MgLRifPKJWK",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554092027,
+        "modifiedTime": 1669554120151,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.RvbN0MgLRifPKJWK"
+    },
+    {
+      "name": "Arcane Innate Spells",
+      "type": "spellcastingEntry",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:06:37.714+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "ability": {
+          "value": "cha"
+        },
+        "spelldc": {
+          "value": 42,
+          "dc": 45
+        },
+        "tradition": {
+          "value": "arcane"
+        },
+        "prepared": {
+          "value": "innate"
+        },
+        "showUnpreparedSpells": {
+          "value": false
+        },
+        "showSlotlessLevels": {
+          "value": true
+        },
+        "proficiency": {
+          "value": 1
+        },
+        "displayLevels": {},
+        "slots": {
+          "slot0": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot1": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot2": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot3": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot4": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot5": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot6": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot7": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot8": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot9": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot10": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot11": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          }
+        },
+        "autoHeightenLevel": {
+          "value": null
+        }
+      },
+      "_id": "3ww5mZkoYLNUCaXn",
+      "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554397720,
+        "modifiedTime": 1669554408043,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.3ww5mZkoYLNUCaXn"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/contingency.webp",
+      "name": "Contingency",
+      "system": {
+        "description": {
+          "value": "<p>You prepare a spell that will trigger later. While casting contingency, you also cast another spell of 4th level or lower with a casting time of no more than 3 actions. This companion spell must be one that can affect you. You must make any decisions for the spell when you cast contingency, such as choosing a damage type for resist energy. During the casting, choose a trigger under which the spell will be cast, using the same restrictions as for the trigger of a Ready action. Once contingency is cast, you can cause the companion spell to come into effect as a reaction with that trigger. It affects only you, even if it would affect more creatures. If you define complicated conditions, as determined by the GM, the trigger might fail. If you cast contingency again, the newer casting supersedes the older.</p>\n<hr />\n<p><strong>Heightened (8th)</strong> You can choose a spell of 5th level or lower.</p>\n<p><strong>Heightened (9th)</strong> You can choose a spell of 6th level or lower.</p>\n<p><strong>Heightened (10th)</strong> You can choose a spell of 7th level or lower.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "contingency",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 7
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane"
+          ]
+        },
+        "school": {
+          "value": "abjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "10 minutes"
+        },
+        "duration": {
+          "value": "until the next time you make your daily preparations"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 10
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.WG91Z5TiR6oO5FOw"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554534169,
+        "modifiedTime": 1669554539190,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "EvN1LD177OPSLJhj",
+      "_key": "!actors.items!appKazavon000001.EvN1LD177OPSLJhj"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/time-stop.webp",
+      "name": "Time Stop",
+      "system": {
+        "description": {
+          "value": "<p>You temporarily stop time for everything but yourself, allowing you to use several actions in what appears to others to be no time at all. Immediately after casting time stop, you can use up to 9 actions in 3 sets of up to 3 actions each.</p>\n<p>After each set of actions, 1 round passes, but only for you, effects specifically targeting or affecting you, and effects you create during the stoppage. All other creatures and objects are invulnerable to your attacks, and you can't target or affect them with anything.</p>\n<p>Once you have finished your actions, time begins to flow again for the rest of the world. If you created an effect with a duration that extends beyond the time stop's duration, such as wall of fire, it immediately affects others again, but it doesn't have any of the effects that happen only when you first cast the spell.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "time-stop",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 10
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "transmutation"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "3"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 10
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.1dsahW4g1ggXtypx"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554563271,
+        "modifiedTime": 1669554563271,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "mwTyibpmYgBgaCxo",
+      "_key": "!actors.items!appKazavon000001.mwTyibpmYgBgaCxo"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/disjunction.webp",
+      "name": "Disjunction",
+      "system": {
+        "description": {
+          "value": "<p>Crackling energy disjoins the target. You attempt to counteract it. If you succeed, it's deactivated for 1 week. On a critical success, it's destroyed. If it's an artifact or similar item, you automatically fail.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "uncommon",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "disjunction",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 9
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "abjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 magic item"
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 9
+        },
+        "hasCounteractCheck": {
+          "value": true
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.ihbRf964JDXztcy3"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554574139,
+        "modifiedTime": 1669554574139,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "l3CJ1Ghjg46AFw8s",
+      "_key": "!actors.items!appKazavon000001.l3CJ1Ghjg46AFw8s"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/meteor-swarm.webp",
+      "name": "Meteor Swarm",
+      "system": {
+        "description": {
+          "value": "<p>You call down four meteors that explode in a fiery blast. Each meteor deals 6d10 bludgeoning damage to any creatures in the 10-foot burst at the center of its area of effect before exploding, dealing 14d6 fire damage to any creatures in its 40-foot burst. The meteors' central 10-foot bursts can't overlap, and a creature attempts only one saving throw against the spell no matter how many overlapping explosions it's caught in, and they can take each type of damage once once. The saving throw applies to both the bludgeoning and the fire damage.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The bludgeoning damage increases by 1d10, and the fire damage increases by 2d6.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "fire"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "meteor-swarm",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 9
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "evocation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "500 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {
+            "0": {
+              "applyMod": false,
+              "type": {
+                "categories": [],
+                "subtype": "",
+                "value": "bludgeoning"
+              },
+              "value": "6d10"
+            }
+          }
+        },
+        "save": {
+          "value": "reflex",
+          "basic": "basic"
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 9
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "4 40-foot bursts"
+        },
+        "heightening": {
+          "damage": {
+            "0": "1d10"
+          },
+          "interval": 1,
+          "type": "interval"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.jrBa9deU2ULFWvSl"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554582351,
+        "modifiedTime": 1669554582351,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "LY2YTO21XbFpzf2k",
+      "_key": "!actors.items!appKazavon000001.LY2YTO21XbFpzf2k"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/teleport.webp",
+      "name": "Teleport",
+      "system": {
+        "description": {
+          "value": "<p>You and the targets are instantly transported to any location within range, as long as you can identify the location precisely both by its position relative to your starting position and by its appearance (or other identifying features). Incorrect knowledge of the location's appearance usually causes the spell to fail, but it could instead lead to teleporting to an unwanted location or some other unusual mishap determined by the GM. Teleport is not precise over great distances. The targets appear at a distance from the intended destination equal to roughly 1 percent of the total distance traveled, in a direction determined by the GM. For short journeys, this lack of precision is irrelevant, but for long distances this could be up to 1 mile.</p>\n<hr />\n<p><strong>Heightened (7th)</strong> You and the other targets can travel to any location within 1,000 miles.</p>\n<p><strong>Heightened (8th)</strong> You and the other targets can travel to any location on the same planet. If you travel more than 1,000 miles, you arrive only 10 miles off target.</p>\n<p><strong>Heightened (9th)</strong> You and the other targets can travel to any location on another planet within the same solar system. Assuming you have accurate knowledge of the location's position and appearance, you arrive on the new planet 100 miles off target.</p>\n<p><strong>Heightened (10th)</strong> As the 9th-level version, but you and the other targets can travel to any planet within the same galaxy.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "teleportation"
+          ],
+          "rarity": "uncommon",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "teleport",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 6
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "conjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "you and up to 4 targets touched, either willing creatures or objects roughly the size of a creature."
+        },
+        "range": {
+          "value": "100 miles"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "10 minutes"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 9
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.69L70wKfGDY66Mk9"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554596763,
+        "modifiedTime": 1669554596763,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "4cOo0RTw0ht7JwG2",
+      "_key": "!actors.items!appKazavon000001.4cOo0RTw0ht7JwG2"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/hallucinatory-terrain.webp",
+      "name": "Hallucinatory Terrain (At Will)",
+      "system": {
+        "description": {
+          "value": "<p>You create an illusion that causes natural terrain to look, sound, feel, and smell like a different kind of terrain. This doesn't disguise any structures or creatures in the area. Any creature that touches the illusion or uses the Seek action to examine it can attempt to disbelieve your illusion.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> Your image can also disguise structures or create illusory structures (but still doesn't disguise creatures).</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "uncommon",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "hallucinatory-terrain",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 4
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "500 feet"
+        },
+        "area": {
+          "value": "50",
+          "areaType": "burst"
+        },
+        "time": {
+          "value": "10 minutes"
+        },
+        "duration": {
+          "value": "until the next time you make your daily preparations"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 8
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "50-foot burst"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.HBJPsonQnWcC3qdX"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554620183,
+        "modifiedTime": 1669554631717,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "UnBhyJWkdFgPeccp",
+      "_key": "!actors.items!appKazavon000001.UnBhyJWkdFgPeccp"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/illusory-creature.webp",
+      "name": "Illusory Creature (At Will)",
+      "system": {
+        "description": {
+          "value": "<p>You create an illusory image of a Large or smaller creature. It generates the appropriate sounds, smells, and feels believable to the touch. If you and the image are ever farther than 500 feet apart, the spell ends.</p>\n<p>The image can't speak, but you can use your actions to speak through the creature, with the spell disguising your voice as appropriate. You might need to attempt a Deception or Performance check to mimic the creature, as determined by the GM. This is especially likely if you're trying to imitate a specific person and engage with someone that person knows.</p>\n<p>In combat, the illusion can use 2 actions per turn, which it uses when you Sustain the Spell. It uses your spell attack roll for attack rolls and your spell DC for its AC. Its saving throw modifiers are equal to your spell DC - 10. It is substantial enough that it can flank other creatures. If the image is hit by an attack or fails a save, the spell ends.</p>\n<p>The illusion can cause damage by making the target believe the illusion's attacks are real, but it cannot otherwise directly affect the physical world. If the illusory creature hits with a Strike, the target takes mental damage equal to 1d4 plus your spellcasting ability modifier. This is a mental effect. The illusion's Strikes are nonlethal. If the damage doesn't correspond to the image of the monster-for example, if an illusory Large dragon deals only 5 damage-the GM might allow the target to attempt an immediate Perception check to disbelieve the spell. Any relevant resistances and weaknesses apply if the target thinks they do, as judged by the GM. For example, if the illusion wields a warhammer and attacks a creature resistant to bludgeoning damage, the creature would take less mental damage. However, illusory damage does not deactivate regeneration or trigger other effects that require a certain damage type. The GM should track illusory damage dealt by the illusion.</p>\n<p>Any creature that touches the image or uses the Seek action to examine it can attempt to disbelieve your illusion. When a creature disbelieves the illusion, it recovers from half the damage it had taken from it (if any) and doesn't take any further damage from it.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage of the image's Strikes increases by 1d4, and the maximum size of creature you can create increases by one (to a maximum of Gargantuan).</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "olfactory",
+            "visual"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "illusory-creature",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "500 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "sustained"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 8
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.f8SBoXiXQjlCKqly"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554643522,
+        "modifiedTime": 1669554923566,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "RDu4OkU2idUyHyUN",
+      "_key": "!actors.items!appKazavon000001.RDu4OkU2idUyHyUN"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/illusory-object.webp",
+      "name": "Illusory Object (At Will)",
+      "system": {
+        "description": {
+          "value": "<p>You create an illusory visual image of a stationary object. The entire image must fit within the spell's area. The object appears to animate naturally, but it doesn't make sounds or generate smells. For example, water would appear to pour down an illusory waterfall, but it would be silent.</p>\n<p>Any creature that touches the image or uses the Seek action to examine it can attempt to disbelieve your illusion.</p>\n<hr />\n<p><strong>Heightened (2nd)</strong> Your image makes appropriate sounds, generates normal smells, and feels right to the touch. The spell gains the auditory trait. The duration increases to 1 hour.</p>\n<p><strong>Heightened (5th)</strong> As the 2nd-level version, but the duration is unlimited.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "visual"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "illusory-object",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "500 feet"
+        },
+        "area": {
+          "value": "20",
+          "areaType": "burst"
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "10 minutes"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 8
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "20-foot burst"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.2oH5IufzdESuYxat"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554890643,
+        "modifiedTime": 1669554926337,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "YTPBK3xDfsNjPkfT",
+      "_key": "!actors.items!appKazavon000001.YTPBK3xDfsNjPkfT"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/ventriloquism.webp",
+      "name": "Ventriloquism (At Will)",
+      "system": {
+        "description": {
+          "value": "<p>Whenever you speak or make any other sound vocally, you can make your vocalization seem to originate from somewhere else within 60 feet, and you can change that apparent location freely as you vocalize. Any creature that hears the sound can attempt to disbelieve your illusion.</p>\n<hr />\n<p><strong>Heightened (2nd)</strong> The spell's duration increases to 1 hour, and you can also change the tone, quality, and other aspects of your voice. Before a creature can attempt to disbelieve your illusion, it must actively attempt a Perception check or otherwise use actions to interact with the sound.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "auditory"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "ventriloquism",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "10 minutes"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 8
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.yV7Ouzaoe7DHLESI"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554899647,
+        "modifiedTime": 1669554929413,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "e8BlhEgrVlJaY8Y0",
+      "_key": "!actors.items!appKazavon000001.e8BlhEgrVlJaY8Y0"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/dispel-magic.webp",
+      "name": "Dispel Magic",
+      "system": {
+        "description": {
+          "value": "<p>You unravel the magic behind a spell or effect. Attempt a counteract check against the target. If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an artifact or similar item, you automatically fail.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "dispel-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "abjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 spell effect or unattended magic item"
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 7
+        },
+        "hasCounteractCheck": {
+          "value": true
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554940644,
+        "modifiedTime": 1669554943478,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "66WTdvH8gooTVZGL",
+      "_key": "!actors.items!appKazavon000001.66WTdvH8gooTVZGL"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/plane-shift.webp",
+      "name": "Plane Shift",
+      "system": {
+        "description": {
+          "value": "<p>You and your allies traverse the barriers between planes of existence. The targets move to another plane, such as the Plane of Fire, the Shadow Plane, or the Abyss. You must have specific knowledge of the destination plane and use a magic tuning fork created from material from that plane as a focus for the spell. While the tuning forks for most prominent planes are uncommon, just like the spell plane shift, more obscure planes and demiplanes often have rare tuning forks. The spell is highly imprecise, and you appear 1d20x25 miles from the last place one of the targets (of your choice) was located the last time that target traveled to the plane. If it's the first time traveling to a particular plane for all targets, you appear at a random location on the plane. Plane shift doesn't provide a means of return travel, though casting plane shift again allows you to return to your previous plane unless there are extenuating circumstances.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "teleportation"
+          ],
+          "rarity": "uncommon",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "plane-shift",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 7
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "conjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 willing creature, or up to 8 willing creatures joining hands"
+        },
+        "range": {
+          "value": "touch"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "10 minutes"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 7
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.5bTt2CvYHPvaR7QQ"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554958172,
+        "modifiedTime": 1669554958172,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "0vJBacQNmFtpjzco",
+      "_key": "!actors.items!appKazavon000001.0vJBacQNmFtpjzco"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/project-image.webp",
+      "name": "Project Image (See Mirage)",
+      "system": {
+        "description": {
+          "value": "<p>You project an illusory image of yourself. You must stay within range of the image, and if at any point you can't see the image, the spell ends. Whenever you Cast a Spell other than one whose area is an emanation, you can cause the spell effect to originate from either yourself or the image. Because the image is an illusion, it can't benefit from spells, though visual manifestations of the spell appear. The image has the same AC and saves as you. If it is hit by an attack or fails a save, the spell ends.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The maximum duration you can Sustain the Spell increases to 10 minutes.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "project-image",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 7
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "sustained up to 1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 7
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.0873MWM0qKDDv81O"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669554996002,
+        "modifiedTime": 1669555011937,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "yEjngXnw2Ph5uN9c",
+      "_key": "!actors.items!appKazavon000001.yEjngXnw2Ph5uN9c"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/dominate.webp",
+      "name": "Dominate",
+      "system": {
+        "description": {
+          "value": "<p>You take command of the target, forcing it to obey your orders. If you issue an obviously self-destructive order, the target doesn't act until you issue a new order. The effect depends on its Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Stunned 1} as it fights off your commands.</p>\n<p><strong>Failure</strong> You control the target. It gains the @UUID[Compendium.pf2e.conditionitems.9qGBRpbX9NEwtAAr]{Controlled} condition, but it can attempt a Will save at the end of each of its turns. On a success, the spell ends.</p>\n<p><strong>Critical Failure</strong> As a failure, but the target receives a new save only if you give it a new order that is against its nature, such as killing its allies.</p>\n<hr />\n<p><strong>Heightened (10th)</strong> The duration is unlimited.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "incapacitation",
+            "mental"
+          ],
+          "rarity": "uncommon",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "dominate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 6
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "enchantment"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "until the next time you make your daily preparations"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "will",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 6
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.OsOhx3TGIZ7AhD0P"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555078054,
+        "modifiedTime": 1669555078054,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "EC25gjwxaw3Awj1t",
+      "_key": "!actors.items!appKazavon000001.EC25gjwxaw3Awj1t"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/true-seeing.webp",
+      "name": "True Seeing",
+      "system": {
+        "description": {
+          "value": "<p>You see things within 60 feet as they actually are. The GM rolls a secret counteract check against any illusion or transmutation in the area, but only for the purpose of determining whether you see through it (for instance, if the check succeeds against a polymorph spell, you can see the creature's true form, but you don't end the polymorph spell).</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "revelation"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "true-seeing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 6
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "divination"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "10 minutes"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 6
+        },
+        "hasCounteractCheck": {
+          "value": true
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.uqlxMQQeSGWEVjki"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555088726,
+        "modifiedTime": 1669555088726,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "3adrOQJF7MXo43AV",
+      "_key": "!actors.items!appKazavon000001.3adrOQJF7MXo43AV"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/wall-of-force.webp",
+      "name": "Wall of Force",
+      "system": {
+        "description": {
+          "value": "<p>You form an @UUID[Compendium.pf2e.conditionitems.zJxUflt9np0q4yML]{Invisible} wall of pure magical force up to 50 feet long and up to 20 feet high. The wall has no discernible thickness. You must create the wall in an unbroken open space so its edges don't pass through any creatures or objects, or the spell is lost. The wall has AC 10, Hardness 30, and 60 Hit Points, and it's immune to critical hits and precision damage. The wall blocks physical effects from passing through it, and because it's made of force, it blocks incorporeal and ethereal creatures as well. Teleportation effects can pass through the barrier, as can visual effects (since the wall is invisible). Wall of force is immune to counteracting effects of its level or lower, but the wall is automatically destroyed by a disintegrate spell of any level or by contact with a rod of cancellation or sphere of annihilation.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The Hit Points of the wall increases by 20.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "force"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "wall-of-force",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 6
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "evocation"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "3"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 6
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.7Iela4GgVeO3LfAo"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555097330,
+        "modifiedTime": 1669555097330,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "KsxYIs4TZZYwBkgC",
+      "_key": "!actors.items!appKazavon000001.KsxYIs4TZZYwBkgC"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/chromatic-wall.webp",
+      "name": "Chromatic Wall",
+      "system": {
+        "description": {
+          "value": "<p>You create an opaque wall of light in a single vibrant color. The wall is straight and vertical, stretching 60 feet long and 30 feet high. If the wall would pass through a creature, the spell is lost. The wall sheds bright light for 20 feet on each side, and dim light for the next 20 feet. You can ignore the wall's effects.</p>\n<p>Roll 1d4 to determine the color of the wall. Each color has a particular effect on items, effects, or creatures that attempt to pass through. Chromatic wall can't be counteracted normally; rather, each color is automatically counteracted when targeted by a specific spell, even if that spell's level is lower than that of chromatic wall.</p>\n<ol>\n<li><strong>Red</strong> The wall destroys ranged weapon ammunition (such as arrows and crossbow bolts) that would pass through, and it deals 20 fire damage to anyone passing through, with a basic Reflex save. Cone of cold can counteract a red chromatic wall.</li>\n<li><strong>Orange</strong> The wall destroys thrown weapons that would pass through, and it deals 25 acid damage to anyone passing through, with a basic Reflex save. Gust of wind can counteract an orange chromatic wall.</li>\n<li><strong>Yellow</strong> The wall stops acid, cold, electricity, fire, force, negative, positive, and sonic effects from passing through, and it deals 30 electricity damage to anyone passing through, with a basic Reflex save. Disintegrate can counteract a yellow chromatic wall.</li>\n<li><strong>Green</strong> The wall stops toxins, gases, and breath weapons from passing through. It deals 10 poison damage to anyone passing through and makes them @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 minute. A basic Fortitude save reduces the damage and negates the Enfeebled condition on a success. Passwall can counteract a green chromatic wall.<hr /></li>\n</ol>\n<p><strong>Heightened (7th)</strong> The spell's duration increases to 1 hour. Roll 1d8 to determine the wall's color; the results for 5-8 are below. A red, orange, yellow, or green wall deals an extra 10 damage.</p>\n<ol start=\"5\">\n<li><strong>Blue</strong> The wall stops auditory, petrification, sonic and visual effects from passing through, and creatures passing through are subject to the effects of flesh to stone. Magic missile can counteract a blue chromatic wall.</li>\n<li><strong>Indigo</strong> The wall stops divination and mental effects from passing through, and those passing through are subject to the effects of warp mind. Searing light can counteract an indigo chromatic wall.</li>\n<li><strong>Violet</strong> The wall prevents spells from targeting the other side (area effects still cross as normal). Creatures passing through must succeed at a Will save or they are @UUID[Compendium.pf2e.conditionitems.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute; on a critical failure, the creature is instead sent to another plane, with the effect of plane shift. Dispel magic can counteract a violet chromatic wall.</li>\n<li><strong>Reroll</strong>, and creatures that pass through the wall take a -2 circumstance penalty to their saves.</li>\n</ol>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "chromatic-wall",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 5
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "abjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "3"
+        },
+        "duration": {
+          "value": "10 minutes"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 5
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.forsqeofEszBNtLq"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555115565,
+        "modifiedTime": 1669555115565,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "SFke3Ub8zeTCLOIB",
+      "_key": "!actors.items!appKazavon000001.SFke3Ub8zeTCLOIB"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/mind-probe.webp",
+      "name": "Mind Probe",
+      "system": {
+        "description": {
+          "value": "<p>You cast your thoughts through a creature's mind, sifting for information. You access the target's memories and knowledge unless it fends you off with a Will save.</p>\n<hr /><strong>Success</strong> The target is unaffected.\n<p><strong>Failure</strong> Each round of the spell's duration, you can Sustain the Spell to ask a different question and attempt to uncover the answer. For each question, the target can attempt a Deception check against your spell DC; if the target succeeds, you don't learn the answer, and on a critical success, the target gives you a false answer that you believe is truthful Once you've asked the target a given question, asking it again, even with a separate casting of mind probe, produces the same result.</p>\n<p><strong>Critical Failure</strong> As failure, and the target takes a -4 circumstance penalty to Deception checks against your questions.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "linguistic",
+            "mental"
+          ],
+          "rarity": "uncommon",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "mind-probe",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 5
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "divination"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "1 minute"
+        },
+        "duration": {
+          "value": "sustained up to 1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "will",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 5
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.9BnhadUO8FMLmeZ3"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555124970,
+        "modifiedTime": 1669555124970,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "fjLTu00eG3jgWsMB",
+      "_key": "!actors.items!appKazavon000001.fjLTu00eG3jgWsMB"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/sending.webp",
+      "name": "Sending",
+      "system": {
+        "description": {
+          "value": "<p>You send the creature a mental message of 25 words or fewer, and it can respond immediately with its own message of 25 words or fewer.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "sending",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 5
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "divination"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature with whom you are familiar"
+        },
+        "range": {
+          "value": "planetary"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "3"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 5
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.R9xqCBblkS5KE4y7"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555132797,
+        "modifiedTime": 1669555132797,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "ojWlU21r0urCiBHc",
+      "_key": "!actors.items!appKazavon000001.ojWlU21r0urCiBHc"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/dimension-door.webp",
+      "name": "Dimension Door",
+      "system": {
+        "description": {
+          "value": "<p>Opening a door that bypasses normal space, you instantly transport yourself and any items you're wearing and holding from your current space to a clear space within range you can see. If this would bring another creature with you-even if you're carrying it in an extradimensional container-the spell is lost.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> The range increases to 1 mile. You don't need to be able to see your destination, as long as you have been there in the past and know its relative location and distance from you. You are temporarily immune for 1 hour.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "teleportation"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "dimension-door",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 4
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "conjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 4
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "5": {
+              "range": {
+                "value": "1 mile"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.VlNcjmYyu95vOUe8"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555142250,
+        "modifiedTime": 1669555142250,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "LBnqPQi9sB9PkpUx",
+      "_key": "!actors.items!appKazavon000001.LBnqPQi9sB9PkpUx"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/invisibility.webp",
+      "name": "Invisibility",
+      "system": {
+        "description": {
+          "value": "<p>Cloaked in illusion, the target becomes @UUID[Compendium.pf2e.conditionitems.zJxUflt9np0q4yML]{Invisible}. This makes it @UUID[Compendium.pf2e.conditionitems.VRSef5y1LmL2Hkjf]{Undetected} to all creatures, though the creatures can attempt to find the target, making it @UUID[Compendium.pf2e.conditionitems.iU0fEDdBp3rXpTMC]{Hidden} to them instead. If the target uses a hostile action, the spell ends after that hostile action is completed.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The spell lasts 1 minute, but it doesn't end if the target uses a hostile action.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "invisibility",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": false
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "touch"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "10 minutes"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 4
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.XXqE1eY3w3z6xJCB"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555149734,
+        "modifiedTime": 1669555149734,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "Ig9UMABPPiZxX9Ub",
+      "_key": "!actors.items!appKazavon000001.Ig9UMABPPiZxX9Ub"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/suggestion.webp",
+      "name": "Suggestion",
+      "system": {
+        "description": {
+          "value": "<p>Your honeyed words are difficult for creatures to resist. You suggest a course of action to the target, which must be phrased in such a way as to seem like a logical course of action to the target and can't be self-destructive or obviously against the target's self-interest. The target must attempt a Will save.</p>\n<hr /><strong>Critical Success</strong> The target is unaffected and knows you tried to control it.\n<p><strong>Success</strong> The target is unaffected and thinks you were talking to them normally, not casting a spell on them.</p>\n<p><strong>Failure</strong> The target immediately follows your suggestion. The spell has a duration of 1 minute, or until the target has completed a finite suggestion or the suggestion becomes self-destructive or has other obvious negative effects.</p>\n<p><strong>Critical Failure</strong> As failure, but the base duration is 1 hour.</p>\n<hr /><strong>Heightened (8th)</strong> You can target up to 10 creatures."
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "incapacitation",
+            "linguistic",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "suggestion",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 4
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "enchantment"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "varies"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "will",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 4
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "8": {
+              "target": {
+                "value": "10 creatures"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.qwlh6aDgi86U3Q7H"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555155847,
+        "modifiedTime": 1669555155847,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "mHwncMScW808V7VX",
+      "_key": "!actors.items!appKazavon000001.mHwncMScW808V7VX"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/dream-message.webp",
+      "name": "Dream Message",
+      "system": {
+        "description": {
+          "value": "<p>You send a message to your target's dream. The message is one-way, up to 1 minute of speech (roughly 150 words). If the target is asleep, they receive the message instantly. If not, they receive it the next time they sleep. As soon as they receive it, the spell ends, and you know the message was sent.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> You can target up to 10 creatures you know by name and have met in person. You must send the same message to all of them; the spell ends for each creature individually.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "dream-message",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 3
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "enchantment"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature you know by name and have met in person"
+        },
+        "range": {
+          "value": "planetary"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "10 minutes"
+        },
+        "duration": {
+          "value": "until the next time you make your daily preparations"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 3
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "4": {
+              "target": {
+                "value": "10 creatures you know by name and have met in person"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.yM3KTTSAIHhyuP14"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555166042,
+        "modifiedTime": 1669555166042,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "8O1hcEV65LOU6m4g",
+      "_key": "!actors.items!appKazavon000001.8O1hcEV65LOU6m4g"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/locate.webp",
+      "name": "Locate",
+      "system": {
+        "description": {
+          "value": "<p>You learn the direction to the target (if you picked a specific object, such as \"my mother's sword\") or the nearest target (if you picked a type of object, such as \"swords\"). If the target is a specific object, you must have observed it directly with your own senses. If it's a type of object, you still need to have an accurate mental image of the type of object. If there's lead or running water between you and the target, this spell can't locate the object. This means you might find a type of object farther away if the nearest one is behind lead or running water.</p>\n<hr />\n<p><strong>Heightened (5th)</strong> You can target a specific creature or ancestry instead of an object, but you must have met or seen up close the creature or ancestry you want to target.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "detection"
+          ],
+          "rarity": "uncommon",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "locate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 3
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "divination"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 specific object or type of object"
+        },
+        "range": {
+          "value": "500 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "10 minutes"
+        },
+        "duration": {
+          "value": "sustained"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 3
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "5": {
+              "target": {
+                "value": "1 specific object or type of object, or a specific creature or ancestry"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.LQzlKbYjZSMFQawP"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555176773,
+        "modifiedTime": 1669555176773,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "s8dohgPTl67NgTm5",
+      "_key": "!actors.items!appKazavon000001.s8dohgPTl67NgTm5"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/slow.webp",
+      "name": "Slow",
+      "system": {
+        "description": {
+          "value": "<p>You dilate the flow of time around the target, slowing its actions.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 minute.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.xYTAsEpcJE1Ccni3]{Slowed 2} for 1 minute.</p>\n<hr />\n<p><strong>Heightened (6th)</strong> You can target up to 10 creatures.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "slow",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 3
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "transmutation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "fortitude",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 3
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "6": {
+              "target": {
+                "value": "10 creatures"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.WsUwpfmhKrKwoIe3"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555183340,
+        "modifiedTime": 1669555183340,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "C4a2TWz9DtfYYOFW",
+      "_key": "!actors.items!appKazavon000001.C4a2TWz9DtfYYOFW"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/comprehend-language.webp",
+      "name": "Comprehend Language",
+      "system": {
+        "description": {
+          "value": "<p>The target can understand the meaning of a single language it is hearing or reading when you cast the spell. This doesn't let it understand codes, language couched in metaphor, and the like (subject to GM discretion). If the target can hear multiple languages and knows that, it can choose which language to understand; otherwise, choose one of the languages randomly.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The target can also speak the language.</p>\n<p><strong>Heightened (4th)</strong> You can target up to 10 creatures, and targets can also speak the language.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "comprehend-language",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "divination"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 hour"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 2
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "4": {
+              "target": {
+                "value": "10 creatures"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.vTQvfYu2llKQedmY"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555194684,
+        "modifiedTime": 1669555194684,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "62t8XPIgRUuxQ0TR",
+      "_key": "!actors.items!appKazavon000001.62t8XPIgRUuxQ0TR"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/invisibility.webp",
+      "name": "Invisibility",
+      "system": {
+        "description": {
+          "value": "<p>Cloaked in illusion, the target becomes @UUID[Compendium.pf2e.conditionitems.zJxUflt9np0q4yML]{Invisible}. This makes it @UUID[Compendium.pf2e.conditionitems.VRSef5y1LmL2Hkjf]{Undetected} to all creatures, though the creatures can attempt to find the target, making it @UUID[Compendium.pf2e.conditionitems.iU0fEDdBp3rXpTMC]{Hidden} to them instead. If the target uses a hostile action, the spell ends after that hostile action is completed.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The spell lasts 1 minute, but it doesn't end if the target uses a hostile action.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "invisibility",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": false
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "touch"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "10 minutes"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 2
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.XXqE1eY3w3z6xJCB"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555203063,
+        "modifiedTime": 1669555203063,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "GkpaOApMoAfn6DfV",
+      "_key": "!actors.items!appKazavon000001.GkpaOApMoAfn6DfV"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/water-breathing.webp",
+      "name": "Water Breathing",
+      "system": {
+        "description": {
+          "value": "<p>The targets can breathe underwater.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The duration increases to 8 hours.</p>\n<p><strong>Heightened (4th)</strong> The duration increases to until your next daily preparations.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "water-breathing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "transmutation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "up to 5 creatures"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "1 minute"
+        },
+        "duration": {
+          "value": "1 hour"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 2
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.MZGkMsPBztFN0pUO"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555211065,
+        "modifiedTime": 1669555211065,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "hooc3SVfY15C4Ckp",
+      "_key": "!actors.items!appKazavon000001.hooc3SVfY15C4Ckp"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/charm.webp",
+      "name": "Charm",
+      "system": {
+        "description": {
+          "value": "<p>To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened it or used hostile actions against it.</p>\n<p>You can Dismiss the spell. If you use hostile actions against the target, the spell ends. When the spell ends, the target doesn't necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected and aware you tried to charm it.</p>\n<p><strong>Success</strong> The target is unaffected but thinks your spell was something harmless instead of charm, unless it identifies the spell.</p>\n<p><strong>Failure</strong> The target's attitude becomes @UUID[Compendium.pf2e.conditionitems.v66R7FdOf11l94im]{Friendly} toward you. If it was Friendly, it becomes @UUID[Compendium.pf2e.conditionitems.v44P3WUcU1j0115l]{Helpful}. It can't use hostile actions against you.</p>\n<p><strong>Critical Failure</strong> The target's attitude becomes Helpful toward you, and it can't use hostile actions against you.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The duration lasts until the next time you make your daily preparations.</p>\n<p><strong>Heightened (8th)</strong> The duration lasts until the next time you make your daily preparations, and you can target up to 10 creatures.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "emotion",
+            "incapacitation",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "charm",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "enchantment"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 hour"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "will",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 1
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "8": {
+              "target": {
+                "value": "10 creatures"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.vLA0q0WOK2YPuJs6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555221162,
+        "modifiedTime": 1669555221162,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "hFQ73QCtSYWkgDDv",
+      "_key": "!actors.items!appKazavon000001.hFQ73QCtSYWkgDDv"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/create-water.webp",
+      "name": "Create Water (At Will; See Desert Thirst),",
+      "system": {
+        "description": {
+          "value": "<p>As you cup your hands, water begins to flow forth from them. You create 2 gallons of water. If no one drinks it, it evaporates after 1 day.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "water"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "create-water",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "conjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "0 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 1
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.WzLKjSw6hsBhuklC"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555226275,
+        "modifiedTime": 1669555256111,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "Ao3WNoZBtCTr5Iln",
+      "_key": "!actors.items!appKazavon000001.Ao3WNoZBtCTr5Iln"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/unseen-servant.webp",
+      "name": "Unseen Servant",
+      "system": {
+        "description": {
+          "value": "<p>You summon an unseen servant, which you can command as part of Sustaining the Spell. It serves you until its Hit Points are reduced to 0, at which point the spell ends, or until you stop Sustaining the Spell. The unseen servant gains the summoned trait.</p>\n<hr />\n<p>@UUID[Compendium.pf2e.pathfinder-bestiary.j7NNPfZwD19BwSEZ]{Unseen Servant} (No Alignment)</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "unseen-servant",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "conjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "60 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "3"
+        },
+        "duration": {
+          "value": "sustained"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn",
+          "heightenedLevel": 1
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.xqmHD8JIjak15lRk"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555265476,
+        "modifiedTime": 1669555265476,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "sxa7IFnPRDMtJhWA",
+      "_key": "!actors.items!appKazavon000001.sxa7IFnPRDMtJhWA"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/daze.webp",
+      "name": "Daze",
+      "system": {
+        "description": {
+          "value": "<p>You cloud the target's mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<hr />\n<p><strong>Heightened (+2)</strong> The damage increases by 1d6.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "cantrip",
+            "mental",
+            "nonlethal"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "daze",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "enchantment"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "60 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 round"
+        },
+        "damage": {
+          "value": {
+            "0": {
+              "applyMod": true,
+              "type": {
+                "categories": [],
+                "value": "mental"
+              },
+              "value": "0"
+            }
+          }
+        },
+        "save": {
+          "value": "will",
+          "basic": "basic"
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "damage": {
+            "0": "1d6"
+          },
+          "interval": 2,
+          "type": "interval"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.4gBIw4IDrSfFHik4"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555293231,
+        "modifiedTime": 1669555293231,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "XG11zHIYRYiOQCpN",
+      "_key": "!actors.items!appKazavon000001.XG11zHIYRYiOQCpN"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/detect-magic.webp",
+      "name": "Detect Magic",
+      "system": {
+        "description": {
+          "value": "<p>You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies.</p>\n<p>You detect illusion magic only if that magic's effect has a lower level than the level of your detect magic spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an invisibility potion) typically are detected normally.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You learn the school of magic for the highest-level effect within range that the spell detects. If multiple effects are equally strong, the GM determines which you learn.</p>\n<p><strong>Heightened (4th)</strong> As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "detection",
+            "cantrip"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "detect-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ],
+          "custom": ""
+        },
+        "school": {
+          "value": "divination"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": "30",
+          "areaType": "emanation"
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "30-foot emanation"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.gpzpAAAJ1Lza2JVl"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555298293,
+        "modifiedTime": 1669555298293,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "sePu5qHNCw91h9Pk",
+      "_key": "!actors.items!appKazavon000001.sePu5qHNCw91h9Pk"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/forbidding-ward.webp",
+      "name": "Forbidding Ward",
+      "system": {
+        "description": {
+          "value": "<p>You ward an ally against the attacks and hostile spells from the target enemy. The target ally gains a +1 status bonus to Armor Class and saving throws against the target enemy's attacks, spells, and other effects.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.ctMxYPGEpstvhW9C]{Spell Effect: Forbidding Ward}</p>\n<hr />\n<p><strong>Heightened (6th)</strong> The status bonus increases to +2.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "cantrip"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "forbidding-ward",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "divine",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "abjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 ally and 1 enemy"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "sustained up to 1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.RA7VKcen3p56rVyZ"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555314979,
+        "modifiedTime": 1669555314979,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "Yl11wYBXx5khOYnX",
+      "_key": "!actors.items!appKazavon000001.Yl11wYBXx5khOYnX"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/ghost-sound.webp",
+      "name": "Ghost Sound",
+      "system": {
+        "description": {
+          "value": "<p>You create an auditory illusion of simple sounds that has a maximum volume equal to four normal humans shouting. The sounds emanate from a square you designate within range. You can't create intelligible words or other intricate sounds (such as music).</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The range increases to 60 feet.</p>\n<p><strong>Heightened (5th)</strong> The range increases to 120 feet.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "cantrip"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "ghost-sound",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "sustained"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "3": {
+              "range": {
+                "value": "60 feet"
+              }
+            },
+            "5": {
+              "range": {
+                "value": "120 feet"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.atlgGNI1E1Ox3O3a"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555323509,
+        "modifiedTime": 1669555323509,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "BpH9G7pFjM5tIHGV",
+      "_key": "!actors.items!appKazavon000001.BpH9G7pFjM5tIHGV"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/read-aura.webp",
+      "name": "Read Aura",
+      "system": {
+        "description": {
+          "value": "<p>You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical, and if it is, you learn the school of magic.</p>\n<p>If the object is illusory, you detect this only if the effect's level is lower than the level of your read aura spell.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target up to 10 objects.</p>\n<p><strong>Heightened (6th)</strong> You can target any number of objects.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "detection",
+            "cantrip"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "read-aura",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ],
+          "custom": ""
+        },
+        "school": {
+          "value": "divination"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 object"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "1 Minute"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "3ww5mZkoYLNUCaXn"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "3": {
+              "target": {
+                "value": "10 objects"
+              }
+            },
+            "6": {
+              "target": {
+                "value": "any number of objects"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.OhD2Z6rIGGD5ocZA"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555331480,
+        "modifiedTime": 1669555331480,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "nQcHzGTVNBU6C0KA",
+      "_key": "!actors.items!appKazavon000001.nQcHzGTVNBU6C0KA"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Breath Weapon",
+      "system": {
+        "description": {
+          "value": "<p>Kazavon breathes lightning that deals [[/r {12d12}[electricity]]]{12d12 electricity damage} in a @Template[type:line|distance:120] (@Check[type:reflex|dc:46|basic:true]). Kazavon can't use Breath Weapon again for [[/r 1d4 #rounds]]{1d4 rounds}. Each time Kazavon uses Breath Weapon, a 20-foot-radius storm cloud appears 80 feet above a point of Kazavon's choosing along the Breath Weapon's path. Clouds last for 10 minutes and allow Kazavon to use Storm Breath.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "arcane",
+            "electricity",
+            "evocation"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:22:45.248+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "yL91H4SZ9iO8oe7n",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555365258,
+        "modifiedTime": 1669555857055,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.yL91H4SZ9iO8oe7n"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Change Shape",
+      "system": {
+        "description": {
+          "value": "<p>Kazavon assumes a Medium humanoid form, posing as the human warlord by the same name.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "arcane",
+            "concentrate",
+            "polymorph",
+            "transmutation"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:31:00.804+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "w5tmrqmr6wr8ro4m",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555860815,
+        "modifiedTime": 1669555895930,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.w5tmrqmr6wr8ro4m"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Desert Thirst",
+      "system": {
+        "description": {
+          "value": "<p>When casting create water, Kazavon can attempt to destroy liquid instead of creating it, turning an equal amount of liquid into sand. This destroys liquid magic or alchemical items if they're of a lower level than Kazavon (a creature can attempt a @Check[type:will|dc:40] save to protect all liquids in its possession). This doesn't affect the liquids in a creature's body.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "arcane",
+            "transmutation"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:31:40.577+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "PdgIBeIgDEOlMkpt",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555900588,
+        "modifiedTime": 1669555921909,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.PdgIBeIgDEOlMkpt"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Draconic Frenzy",
+      "system": {
+        "description": {
+          "value": "<p>Kazavon makes two claw Strikes and one horns Strike in any order.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:33:03.143+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "plBxss6f4PG3vtNb",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669555983153,
+        "modifiedTime": 1669555997879,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.plBxss6f4PG3vtNb"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Draconic Momentum",
+      "system": {
+        "description": {
+          "value": "<p>Kazavon recharges his Breath Weapon whenever he scores a critical hit with a Strike.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:33:42.330+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "mrQNZXw3D1r5BAZS",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669556022340,
+        "modifiedTime": 1669556033515,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.mrQNZXw3D1r5BAZS"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Mirage",
+      "system": {
+        "description": {
+          "value": "<p>Whenever Kazavon uses Breath Weapon while the illusory image from his innate project image spell persists, he can cause the Breath Weapon to originate from himself or the image.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:34:20.864+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "US173f83dlRU4ahL",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669556060873,
+        "modifiedTime": 1669556074875,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.US173f83dlRU4ahL"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Storm Breath",
+      "system": {
+        "description": {
+          "value": "<p><strong>Frequency</strong> Once per round</p>\n<p><strong>Requirements</strong> A storm cloud created by Breath Weapon is within 500 feet, and Kazavon can see the cloud.</p>\n<hr>\n<p><strong>Effect</strong> Kazavon calls down a lightning bolt from a storm cloud created by his Breath Weapon. This creates a vertical line of lightning to the ground that deals [[/r {6d12}[electricity]]]{6d12 electricity damage} to all enemies in its path (@Check[type:reflex|dc:46|basic:true]).</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "arcane",
+            "concentrate",
+            "electricity",
+            "evocation"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-27T13:34:49.666+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "dkuXmrYS4IFQqaxf",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669556089676,
+        "modifiedTime": 1669556721185,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appKazavon000001.dkuXmrYS4IFQqaxf"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "appKazavon000001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "appCreaturesFld1",
+  "sort": 0,
   "_key": "!actors!appKazavon000001"
 }

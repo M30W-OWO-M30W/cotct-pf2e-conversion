@@ -1,387 +1,6 @@
 {
-  "_id": "gmPalaceGuard001",
   "name": "Gray Maiden Palace Guard",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "dKbw5r1p7Bc7bzr6",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Longsword",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 20
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+9",
-            "damageType": "slashing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "magical",
-            "versatile-p"
-          ]
-        }
-      },
-      "_key": "!actors.items!gmPalaceGuard001.dKbw5r1p7Bc7bzr6"
-    },
-    {
-      "_id": "pckwHkuivmLbq73F",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Longbow",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 17
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+4",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "deadly-d10",
-            "volley-30"
-          ]
-        }
-      },
-      "_key": "!actors.items!gmPalaceGuard001.pckwHkuivmLbq73F"
-    },
-    {
-      "_id": "fdRtjx4Uih0zH5Qr",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Phalanx Discipline",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>+1 status AC while adjacent to another Maiden; Shield Block; they fight to the death — the castle garrison is the conditioning's finest.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!gmPalaceGuard001.fdRtjx4Uih0zH5Qr"
-    },
-    {
-      "name": "Full Plate",
-      "type": "armor",
-      "img": "icons/equipment/chest/breastplate-layered-steel-green.webp",
-      "system": {
-        "acBonus": 6,
-        "baseItem": "full-plate",
-        "bulk": {
-          "value": 4
-        },
-        "category": "heavy",
-        "checkPenalty": -3,
-        "containerId": null,
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]</p>",
-          "gm": ""
-        },
-        "dexCap": 0,
-        "grade": null,
-        "group": "plate",
-        "hardness": 0,
-        "hp": {
-          "max": 0,
-          "value": 0
-        },
-        "level": {
-          "value": 2
-        },
-        "material": {
-          "grade": null,
-          "type": null
-        },
-        "price": {
-          "value": {
-            "gp": 30
-          }
-        },
-        "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "Pathfinder Player Core"
-        },
-        "quantity": 1,
-        "rules": [],
-        "runes": {
-          "potency": 0,
-          "property": [],
-          "resilient": 0
-        },
-        "size": "med",
-        "speedPenalty": -10,
-        "strength": 4,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "bulwark"
-          ]
-        },
-        "slug": "full-plate",
-        "_migration": {
-          "version": 0.959,
-          "previous": null
-        },
-        "equipped": {
-          "carryType": "worn"
-        }
-      },
-      "_id": "HhxBgQ3bi57tHJdN",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!gmPalaceGuard001.HhxBgQ3bi57tHJdN"
-    },
-    {
-      "name": "Steel Shield",
-      "type": "shield",
-      "img": "systems/pf2e/icons/equipment/shields/steel-shield.webp",
-      "system": {
-        "acBonus": 2,
-        "baseItem": "steel-shield",
-        "bulk": {
-          "value": 1
-        },
-        "containerId": null,
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Yr9yCuJiAlFh3QEB]</p>",
-          "gm": ""
-        },
-        "grade": null,
-        "hardness": 5,
-        "hp": {
-          "max": 20,
-          "value": 20
-        },
-        "level": {
-          "value": 0
-        },
-        "material": {
-          "grade": null,
-          "type": null
-        },
-        "price": {
-          "value": {
-            "gp": 2
-          }
-        },
-        "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "Pathfinder Player Core"
-        },
-        "quantity": 1,
-        "rules": [],
-        "runes": {
-          "reinforcing": 0
-        },
-        "size": "med",
-        "speedPenalty": 0,
-        "traits": {
-          "integrated": null,
-          "rarity": "common",
-          "value": []
-        },
-        "slug": "steel-shield",
-        "_migration": {
-          "version": 0.959,
-          "previous": null
-        },
-        "equipped": {
-          "carryType": "worn"
-        }
-      },
-      "_id": "Vz4eY1KfQ9qC2wgq",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!gmPalaceGuard001.Vz4eY1KfQ9qC2wgq"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 5
-      },
-      "dex": {
-        "mod": 2
-      },
-      "con": {
-        "mod": 4
-      },
-      "int": {
-        "mod": 0
-      },
-      "wis": {
-        "mod": 0
-      },
-      "cha": {
-        "mod": 2
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 27
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 135,
-        "temp": 0,
-        "value": 135
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 20
-      }
-    },
-    "details": {
-      "blurb": "Castle-garrison Gray Maiden",
-      "languages": {
-        "details": "",
-        "value": [
-          "common"
-        ]
-      },
-      "level": {
-        "value": 8
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the castle's elite garrison — <strong>26 in all</strong>: 12 bunking in the barracks (A30/A38, 4 present in each at a time), 5 in the gatehouse gallery (A54), 3 before the throne (A52), and one 4-guard patrol each on the second and third floors (10% chance per 5 minutes, clockwise through unlocked rooms). Patrols matter as <em>alarm-raisers</em>: they reinforce in 1d4 rounds and scream the castle awake. After Sabina defects, @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ch6VavanaDhatri1]{Vavana Dhatri} — the Arbiter of Allegiance — commands them; Sabina's Word can still some; the rest die for the Crown.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 15,
-      "senses": []
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 17
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 13
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 14
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 18
-      },
-      "intimidation": {
-        "base": 16
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "humanoid",
-        "human"
-      ]
-    }
-  },
-  "folder": "ch6CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Gray Maiden Palace Guard",
     "displayName": 20,
@@ -454,5 +73,1672 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 135,
+        "temp": 0,
+        "max": 135,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 27,
+        "details": ""
+      },
+      "perception": {
+        "value": 16
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LN"
+      },
+      "level": {
+        "value": 8
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the castle's elite garrison — <strong>26 in all</strong>: 12 bunking in the barracks (A30/A38, 4 present in each at a time), 5 in the gatehouse gallery (A54), 3 before the throne (A52), and one 4-guard patrol each on the second and third floors (10% chance per 5 minutes, clockwise through unlocked rooms). Patrols matter as <em>alarm-raisers</em>: they reinforce in 1d4 rounds and scream the castle awake. After Sabina defects, @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ch6VavanaDhatri1]{Vavana Dhatri} — the Arbiter of Allegiance — commands them; Sabina's Word can still some; the rest die for the Crown.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "humanoid",
+        "human"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-26T17:10:01.182+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 6
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 19,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 16,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 16,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 16
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "WHjXOa8opqfiUXbP",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482684645,
+        "modifiedTime": 1669482699447,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.WHjXOa8opqfiUXbP"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 18
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "XcTNgW1Uv1AMrmoL",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482686214,
+        "modifiedTime": 1669482699447,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.XcTNgW1Uv1AMrmoL"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 18
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "HQim1OtNHO0FkZK7",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482688488,
+        "modifiedTime": 1669482699447,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.HQim1OtNHO0FkZK7"
+    },
+    {
+      "_id": "DajsztCRnxep8k2a",
+      "img": "systems/pf2e/icons/equipment//armor/fullplate.webp",
+      "name": "+1 Full Plate",
+      "system": {
+        "description": {
+          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "bulwark"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "full-plate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "full-plate",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "5"
+        },
+        "equippedBulk": {
+          "value": "4"
+        },
+        "price": {
+          "value": {
+            "gp": 160
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "inSlot": false,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Full Plate",
+            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornarmor"
+        },
+        "level": {
+          "value": 5
+        },
+        "armor": {
+          "value": 6
+        },
+        "category": "heavy",
+        "group": "plate",
+        "strength": {
+          "value": 18
+        },
+        "dex": {
+          "value": 0
+        },
+        "check": {
+          "value": -3
+        },
+        "speed": {
+          "value": -10
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "resiliencyRune": {
+          "value": null
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Gq1cZWSKOtJhKd2p"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482876136,
+        "modifiedTime": 1669482962542,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.DajsztCRnxep8k2a"
+    },
+    {
+      "_id": "XqyXdmaQWuUZxSuE",
+      "img": "systems/pf2e/icons/equipment/weapons/longsword.webp",
+      "name": "Longsword",
+      "system": {
+        "description": {
+          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "longsword",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "longsword",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Longsword",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "sword",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "slashing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": "striking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.LJdbVTOZog39EEbi"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482887224,
+        "modifiedTime": 1669482973287,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.XqyXdmaQWuUZxSuE"
+    },
+    {
+      "_id": "MXi3u5d1Xx1uLuE2",
+      "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
+      "name": "Composite Longbow",
+      "system": {
+        "description": {
+          "value": "<p>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "deadly-d10",
+            "propulsive",
+            "volley-30"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "composite-longbow",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "composite-longbow",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "2"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 20
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Composite Longbow",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-plus-hands"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "bow",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 100,
+        "reload": {
+          "value": "0"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": "striking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.dUC8Fsa6FZtVikS3"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482907243,
+        "modifiedTime": 1669483000025,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.MXi3u5d1Xx1uLuE2"
+    },
+    {
+      "_id": "6PjF0CRCiMbVfzvb",
+      "img": "systems/pf2e/icons/equipment/weapons/arrows.webp",
+      "name": "Arrows",
+      "system": {
+        "description": {
+          "value": "<p>These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "arrows",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 10,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 1
+          },
+          "per": 10
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": "arrows",
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 0
+        },
+        "consumableType": {
+          "value": "ammo"
+        },
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.w2ENw2VMPcsbif8g"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482918538,
+        "modifiedTime": 1669482918538,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.6PjF0CRCiMbVfzvb"
+    },
+    {
+      "_id": "0NbVO7WHk6yGnmv5",
+      "img": "systems/pf2e/icons/equipment/weapons/arrows.webp",
+      "name": "Arrows",
+      "system": {
+        "description": {
+          "value": "<p>These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "arrows",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 10,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 1
+          },
+          "per": 10
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": "arrows",
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 0
+        },
+        "consumableType": {
+          "value": "ammo"
+        },
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.w2ENw2VMPcsbif8g"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482920365,
+        "modifiedTime": 1669482920365,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.0NbVO7WHk6yGnmv5"
+    },
+    {
+      "_id": "JqOkaAe0VP3PfA29",
+      "img": "systems/pf2e/icons/equipment/shields/precious-material-shields/adamantite-shield.webp",
+      "name": "Adamantine Shield (Standard-Grade)",
+      "system": {
+        "description": {
+          "value": "<p>Adamantine shields are particularly sturdy, and when used for a shield bash, they are adamantine weapons.</p>\n<p>The shield has Hardness 10, HP 40, and BT 20.</p>\n<hr />\n<p><strong>Craft Requirements</strong> adamantine worth at least 55 gp</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "uncommon",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "adamantine-shield-standard-grade",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 20,
+          "value": 40,
+          "max": 40
+        },
+        "hardness": 10,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 440
+          }
+        },
+        "equipped": {
+          "carryType": "held",
+          "invested": null,
+          "handsHeld": 1
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": "adamantine"
+        },
+        "preciousMaterialGrade": {
+          "value": "standard"
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 8
+        },
+        "armor": {
+          "value": 2
+        },
+        "category": "shield",
+        "group": null,
+        "strength": {
+          "value": 0
+        },
+        "dex": {
+          "value": 0
+        },
+        "check": {
+          "value": 0
+        },
+        "speed": {
+          "value": 0
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "resiliencyRune": {
+          "value": ""
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        }
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.2gMlhHlkQp3DuWw5"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669482937591,
+        "modifiedTime": 1669482940123,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.JqOkaAe0VP3PfA29"
+    },
+    {
+      "_id": "aWNOCzTlMUVBpY3O",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Attack of Opportunity",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "attack-of-opportunity",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.hFtNbo1LKYCoDy2O"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669483126419,
+        "modifiedTime": 1669483126419,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.aWNOCzTlMUVBpY3O"
+    },
+    {
+      "_id": "eZmVLJVetR3FayTU",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shield Block",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ShieldBlock]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "shield-block",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.m4HQ2o5aPxjXf2kY"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669483134855,
+        "modifiedTime": 1669483134855,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.eZmVLJVetR3FayTU"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Shielded Stride",
+      "system": {
+        "description": {
+          "value": "<p>When a gray maiden palace guard has her shield raised, she can Stride to move half her Speed without triggering reactions that are triggered by movement (such as Attacks of Opportunity).</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:19:00.197+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "RZphXTTPLrPRnIJ7",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669483140203,
+        "modifiedTime": 1669483172648,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.RZphXTTPLrPRnIJ7"
+    },
+    {
+      "name": "Longsword",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "magical",
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:19:55.267+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "fTr0uG0oX4VDz1bf": {
+            "damage": "2d8+14",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 20
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "XqyXdmaQWuUZxSuE"
+        }
+      },
+      "_id": "6uFZypHjaDT5Aw9O",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669483195271,
+        "modifiedTime": 1669483209261,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.6uFZypHjaDT5Aw9O"
+    },
+    {
+      "name": "Composite Longbow",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "deadly-d10",
+            "magical",
+            "propulsive",
+            "range-increment-100",
+            "reload-0",
+            "volley-30"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:19:56.326+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "VkE0bcP4ywsoYDwh": {
+            "damage": "2d8+9",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 19
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "MXi3u5d1Xx1uLuE2"
+        }
+      },
+      "_id": "ciOVOzhK7eBeHf8a",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669483196330,
+        "modifiedTime": 1669483225707,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.ciOVOzhK7eBeHf8a"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Intimidating Strike",
+      "system": {
+        "description": {
+          "value": "<p>The gray maiden palace guard makes a melee Strike. If she hits and deals damage, the target is @Compendium[pf2e.conditionitems.Frightened]{Frightened 1}, or @Compendium[pf2e.conditionitems.Frightened]{Frightened 2} on a critical hit.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:20:36.021+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "gOXJZkflqxjcGHPB",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669483236025,
+        "modifiedTime": 1669483270663,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.gOXJZkflqxjcGHPB"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Shatter Defenses",
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> A frightened creature is in the gray maiden palace guard's melee reach.</p>\n<hr>\n<p><strong>Effect</strong> The gray maiden guard makes a melee Strike against a frightened creature. If she hits and deals damage, the target becomes @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} until its frightened condition ends. If the target was already flat-footed to the gray maiden palace guard when she damaged it with this Strike, it can't reduce its frightened value below 1 until the start of the gray maiden palace guard's next turn.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "press"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:21:11.934+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "mO6kg2251jkC4RzR",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669483271938,
+        "modifiedTime": 1669483309951,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gmPalaceGuard001.mO6kg2251jkC4RzR"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "gmPalaceGuard001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch6CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!gmPalaceGuard001"
 }

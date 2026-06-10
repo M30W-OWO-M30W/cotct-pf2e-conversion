@@ -1,0 +1,2224 @@
+{
+  "name": "Vencarlo Orisini",
+  "type": "npc",
+  "prototypeToken": {
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true
+      },
+      "barbrawl": {
+        "resourceBars": {
+          "bar1": {
+            "order": 0,
+            "id": "bar1",
+            "attribute": "attributes.hp",
+            "mincolor": "#FF0000",
+            "maxcolor": "#80FF00",
+            "position": "bottom-inner",
+            "otherVisibility": 0,
+            "ownerVisibility": 50,
+            "max": null
+          }
+        }
+      },
+      "healthEstimate": {
+        "dontMarkDead": false,
+        "hideHealthEstimate": false,
+        "hideName": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Vencarlo Orisini",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/pf2e/icons/default-icons/npc.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "randomImg": false
+  },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 170,
+        "temp": 0,
+        "max": 170,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 29,
+        "details": ""
+      },
+      "perception": {
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CG"
+      },
+      "level": {
+        "value": 10
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Male human vigilante",
+      "publicNotes": "",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "humanoid",
+        "human"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "elven",
+          "varisian"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:37.459+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 5
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 5
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 16,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 22,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 19,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Deception",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 22
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "5hZoDEEDJ9TkZtGF",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668680994141,
+        "modifiedTime": 1668681030919,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Diplomacy",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "OWFP5nUjgiOgk1ay",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668680996464,
+        "modifiedTime": 1668681030919,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 22
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "Iw59x60bGrITCYI9",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668680998673,
+        "modifiedTime": 1668681030919,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Society",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 18
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "XlV56masIdF6Ck8Q",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681009233,
+        "modifiedTime": 1668681030919,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 20
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "J4WiVL0txkPzmByz",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681011443,
+        "modifiedTime": 1668681030919,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Thievery",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 18
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "15XoQ0obJ72A5TsG",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681014151,
+        "modifiedTime": 1668681030919,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Vigilante",
+      "system": {
+        "description": {
+          "value": "<p>As a vigilante, Vencarlo has two faces: a public persona, and a secret identity that lets him hide his extralegal actions from polite society.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "UGK6FOQMINeFDHbz",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681085077,
+        "modifiedTime": 1668681100229,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "img": "systems/pf2e/icons/equipment/adventuring-gear/thieves-tools.webp",
+      "name": "Thieves' Tools (Infiltrator)",
+      "system": {
+        "description": {
+          "value": "<p>You need thieves' tools to Pick Locks or Disable Devices (of some types) using the Thievery skill. Infiltrator thieves' tools add a +1 item bonus to checks to Pick Locks and Disable Devices.</p>\n<p>If your thieves' tools are broken, you can repair them by replacing the lock picks with @UUID[Compendium.pf2e.equipment-srd.BznmPaRjI4Orb0IH]{Replacement Picks} appropriate to your tools; this doesn't require using the Repair action.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "label": "Thieves' Tools (Pick Lock & Disable Devices)",
+            "predicate": [
+              {
+                "or": [
+                  "action:disable-device",
+                  "action:pick-a-lock"
+                ]
+              }
+            ],
+            "selector": "thievery",
+            "type": "item",
+            "value": 1
+          }
+        ],
+        "slug": "thieves-tools-infiltrator",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 50
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": ""
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 3
+        }
+      },
+      "type": "equipment",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.6nrCxNQFycUVFOV2"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681121458,
+        "modifiedTime": 1668681121458,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "BKtH1Xli7iyIXh3u"
+    },
+    {
+      "_id": "rraP3XnGnKa8KzdE",
+      "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-elixirs/darkvision-elixir.webp",
+      "name": "Darkvision Elixir (Lesser)",
+      "system": {
+        "description": {
+          "value": "<p><strong>Activate</strong><span class=\"pf2-icon\">1</span> Interact</p>\n<p>After you drink this elixir, your sight becomes sharper in darkness. You gain darkvision for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.7UL8belWmo7U5YGM]{Effect: Darkvision Elixir (Lesser)}</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "alchemical",
+            "consumable",
+            "elixir"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "darkvision-elixir-lesser",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 6
+          }
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 2
+        },
+        "consumableType": {
+          "value": "elixir"
+        },
+        "charges": {
+          "value": 1,
+          "max": 1,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.88pGCHV0uKMskTVO"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681267586,
+        "modifiedTime": 1668681267586,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "Hx82kokLaHPmrxVb",
+      "img": "systems/pf2e/icons/equipment/armor/leather-armor.webp",
+      "name": "+1 Leather Armor",
+      "system": {
+        "description": {
+          "value": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "abjuration",
+            "invested",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "leather-armor",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "leather-armor",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "2"
+        },
+        "equippedBulk": {
+          "value": "1"
+        },
+        "price": {
+          "value": {
+            "gp": 160
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "inSlot": false,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Leather Armor",
+            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornarmor"
+        },
+        "level": {
+          "value": 5
+        },
+        "armor": {
+          "value": 1
+        },
+        "category": "light",
+        "group": "leather",
+        "strength": {
+          "value": 10
+        },
+        "dex": {
+          "value": 4
+        },
+        "check": {
+          "value": -1
+        },
+        "speed": {
+          "value": 0
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "resiliencyRune": {
+          "value": null
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.4tIVTg9wj56RrveA"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1668681275262,
+        "modifiedTime": 1669557731332,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "APGPEA0Q5eNkZLiS",
+      "img": "systems/pf2e/icons/equipment/weapons/rapier.webp",
+      "name": "Rapier",
+      "system": {
+        "description": {
+          "value": "<p>The rapier is a long and thin piercing blade with a basket hilt. It is prized among many as a dueling weapon.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "deadly-d8",
+            "disarm",
+            "evocation",
+            "finesse",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "rapier",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "rapier",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Rapier",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "sword",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d6",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": "striking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.tH5GirEy7YB3ZgCk"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681291574,
+        "modifiedTime": 1668681467070,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "ptW6IWBmz77i6seJ",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "name": "Dagger",
+      "system": {
+        "description": {
+          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "evocation",
+            "finesse",
+            "magical",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "dagger",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "dagger",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Dagger",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": "-"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": "striking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.rQWaJhI5Bko5x14Z"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681300116,
+        "modifiedTime": 1668681493868,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Safe House",
+      "system": {
+        "description": {
+          "value": "<p>While within his home, Vencarlo is considered under the effects of @UUID[Compendium.pf2e.spells-srd.EoKBlgf6Smt8opaU]{Nondetection}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "OFIzcC0k8n3YNh9B",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681630976,
+        "modifiedTime": 1668681660083,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "YM6OJ1b2aJEoXEkp",
+      "img": "systems/pf2e/icons/equipment/weapons/fist.webp",
+      "name": "Fist",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "nonlethal",
+            "unarmed"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "fist",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "fist",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "unarmed",
+        "group": "brawling",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d4",
+          "damageType": "bludgeoning"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.UcLqR32mNaGdNkUk"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681687557,
+        "modifiedTime": 1668681687557,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Rapier",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "deadly-d8",
+            "disarm",
+            "finesse",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "cVL6RnXlmkyq0hLx": {
+            "damage": "2d6+9",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 22
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "APGPEA0Q5eNkZLiS"
+        }
+      },
+      "_id": "5QJDsFOkIJMMhFzt",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681715070,
+        "modifiedTime": 1668681737057,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Dagger",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "magical",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "EveOojWg4HufQN7e": {
+            "damage": "2d4+7",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 20
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "ptW6IWBmz77i6seJ"
+        }
+      },
+      "_id": "UFLHxf2SPy5VAPlw",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681716176,
+        "modifiedTime": 1668681755996,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Dagger",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "magical",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "fRPLAMdTIBSNX6kh": {
+            "damage": "2d4+7",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 20
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "ptW6IWBmz77i6seJ"
+        }
+      },
+      "_id": "6oIJgxmWWcLADZeh",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681716176,
+        "modifiedTime": 1668681779524,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Fist",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "nonlethal",
+            "unarmed"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "FGbtWsT1mLqfwhaE": {
+            "damage": "1d4+7",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 20
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "YM6OJ1b2aJEoXEkp"
+        }
+      },
+      "_id": "WHbHgjVZZ03Igs7z",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681716984,
+        "modifiedTime": 1668681792221,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Hidden Blade",
+      "system": {
+        "description": {
+          "value": "<p><strong>Frequency</strong> once per round</p>\n<p><strong>Effect</strong> Vencarlo draws a weapon and then Strikes with it. The target of the Strike is @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} against the attack.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "2DRQQpr26DRVOdbu",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681815390,
+        "modifiedTime": 1668681842453,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sneak Attack",
+      "system": {
+        "description": {
+          "value": "<p>Vencarlo deals an extra [[/r {2d6}[precision]]]{2d6 precision damage} to @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} creatures.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SneakAttack]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "category": "precision",
+            "diceNumber": 1,
+            "dieSize": "d6",
+            "key": "DamageDice",
+            "predicate": [
+              "target:condition:flat-footed",
+              {
+                "or": [
+                  "item:trait:agile",
+                  "item:trait:finesse",
+                  {
+                    "and": [
+                      "item:ranged",
+                      {
+                        "not": "item:thrown-melee"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "selector": "strike-damage"
+          },
+          {
+            "domain": "all",
+            "key": "RollOption",
+            "label": "PF2E.SpecificRule.TOTMToggle.FlatFooted",
+            "option": "target:condition:flat-footed",
+            "toggleable": "totm"
+          }
+        ],
+        "slug": "sneak-attack",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.AWvNPE4U0kEJSL1T"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681871046,
+        "modifiedTime": 1668681906130,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "cpdfAyeG9qnTFpMm"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Startling Appearance",
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> Vencarlo is completely unnoticed by the target creature.</p>\n<p><strong>Effect</strong> Vencarlo can startle foes who are unaware of his presence. Vencarlo makes a Strike against a target. That creature is @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} against this Strike, as normal. If the Strike hits, the target remains @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} for the rest of Vencalro's turn and is @Compendium[pf2e.conditionitems.Frightened]{Frightened 1} (@Compendium[pf2e.conditionitems.Frightened]{Frightened 2} on a critical hit).</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "mental",
+            "vigilante"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "1snHJv5UUMpZaRlL",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668681919232,
+        "modifiedTime": 1668681978821,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Special",
+      "system": {
+        "description": {
+          "value": "<p>When found in <strong>Area E20</strong>, Vencarlo's HP is currently 0, has no items in his possession, and can only use fist Strikes.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.459+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "iASuTsyeWvexDr9V",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668682076384,
+        "modifiedTime": 1668682105567,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.290",
+    "createdTime": 1668680867868,
+    "modifiedTime": 1669581185372,
+    "lastModifiedBy": "hBFuMGrVgeghbDDz"
+  },
+  "_id": "QBmfSPWeMSrczxEa",
+  "ownership": {
+    "default": 0,
+    "hBFuMGrVgeghbDDz": 3
+  },
+  "folder": null,
+  "sort": 0
+}

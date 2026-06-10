@@ -1,0 +1,3471 @@
+{
+  "name": "Kayltanya",
+  "type": "npc",
+  "prototypeToken": {
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true
+      },
+      "barbrawl": {
+        "resourceBars": {
+          "bar1": {
+            "order": 0,
+            "id": "bar1",
+            "attribute": "attributes.hp",
+            "mincolor": "#FF0000",
+            "maxcolor": "#80FF00",
+            "position": "bottom-inner",
+            "otherVisibility": 0,
+            "ownerVisibility": 50,
+            "max": null
+          }
+        }
+      },
+      "healthEstimate": {
+        "dontMarkDead": false,
+        "hideHealthEstimate": false,
+        "hideName": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Kayltanya",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/pf2e/icons/default-icons/npc.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "randomImg": false
+  },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 275,
+        "temp": 0,
+        "max": 275,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 35,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 36,
+        "details": ""
+      },
+      "perception": {
+        "value": 29
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 15
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Female human red mantis vernai",
+      "publicNotes": "",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "humanoid",
+        "human"
+      ],
+      "senses": {
+        "value": "Resurrection Sense"
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {
+      "focus": {
+        "value": 2,
+        "max": 2
+      }
+    },
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-26T21:54:17.806+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 6
+      },
+      "dex": {
+        "mod": 8
+      },
+      "con": {
+        "mod": 6
+      },
+      "int": {
+        "mod": 6
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 23,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 29,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 26,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 30
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "uID0bpmvTdQXqKHo",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669499938779,
+        "modifiedTime": 1669499981486,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "label": "PF2E.SkillVariant.HighJumpOrLongJump",
+            "predicate": [
+              {
+                "or": [
+                  "action:long-jump",
+                  "action:high-jump"
+                ]
+              }
+            ],
+            "selector": "athletics",
+            "value": 3
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 27
+        },
+        "proficient": {
+          "value": 0
+        },
+        "variants": {
+          "0": {
+            "label": "+30 to Long Jump and High Jump",
+            "options": "action:long-jump, action:high-jump"
+          }
+        }
+      },
+      "_id": "LHbnLaQOM4XdarxA",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669499948054,
+        "modifiedTime": 1669500182269,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 25
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "ZpJt3354JHIRBP7z",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669499950203,
+        "modifiedTime": 1669499981486,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Religion",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 29
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "bvV1qXfJBfrkCop8",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669499956101,
+        "modifiedTime": 1669499981486,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 32
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "5Xi9N19ClDaks9iD",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669499958072,
+        "modifiedTime": 1669499981486,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Resurrection Sense",
+      "system": {
+        "description": {
+          "value": "<p>Kayltanya senses if a creature she has slain within the last year has been restored to life, as long as they are both on the same plane.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:05:12.193+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "y4HiRcQESVX3eFEW",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500312204,
+        "modifiedTime": 1669500324866,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "Cq8YsSBP8aj00RAv",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "name": "+2 Greater Striking Returning Dagger (coated with purple worm venom)",
+      "system": {
+        "description": {
+          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "dagger",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "dagger",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Dagger",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": "-"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 2
+        },
+        "strikingRune": {
+          "value": "greaterStriking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": "returning"
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.rQWaJhI5Bko5x14Z"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500425604,
+        "modifiedTime": 1669500494747,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "deXLFGXCETslFOYB",
+      "img": "systems/pf2e/icons/equipment/weapons/sawtooth-saber.webp",
+      "name": "Sawtooth Saber",
+      "system": {
+        "description": {
+          "value": "<p>The signature weapon of the Red Mantis assassins, this curved blade is serrated like a saw, hence the name.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "twin"
+          ],
+          "rarity": "uncommon",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "sawtooth-saber",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 2,
+        "baseItem": "sawtooth-saber",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 5
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Sawtooth Saber",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "advanced",
+        "group": "sword",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d6",
+          "damageType": "slashing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 3
+        },
+        "strikingRune": {
+          "value": "greaterStriking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": "greaterShock"
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.wkzxLpSe7LN6c5Ld"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500512432,
+        "modifiedTime": 1669500550933,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "3E962ajfLnkYXqEF",
+      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
+      "name": "+2 Greater Resilient Chain Mail",
+      "system": {
+        "description": {
+          "value": "<p>A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh. It typically includes a chain shirt, leggings, a pair of arms, and a coif, collectively protecting most of the body.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "flexible",
+            "noisy"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "chain-mail",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "chain-mail",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "3"
+        },
+        "equippedBulk": {
+          "value": "2"
+        },
+        "price": {
+          "value": {
+            "gp": 4500
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "inSlot": false,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Chain Mail",
+            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornarmor"
+        },
+        "level": {
+          "value": 14
+        },
+        "armor": {
+          "value": 4
+        },
+        "category": "medium",
+        "group": "chain",
+        "strength": {
+          "value": 16
+        },
+        "dex": {
+          "value": 1
+        },
+        "check": {
+          "value": -2
+        },
+        "speed": {
+          "value": -5
+        },
+        "potencyRune": {
+          "value": 2
+        },
+        "resiliencyRune": {
+          "value": "greaterResilient"
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Kf4eJEXnFPuAsseP"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500564501,
+        "modifiedTime": 1669500627866,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "equipment",
+      "img": "systems/pf2e/icons/equipment/worn-items/apex-items/headband-of-inspired-wisdom.webp",
+      "name": "Mask of the Mantis",
+      "_id": "pTem1B7OCBg1Afe8",
+      "system": {
+        "description": {
+          "value": "<p>A mask of the mantis is the traditional headgear of a Red Mantis assassin. Designed to both conceal the wearer's identity and give the wearer a ferocious appearance. You gain a +2 item bonus to Perception checks.</p>\n<p><strong>Activate </strong><span class=\"pf2-icon\">D</span> envision, Interact</p>\n<p><strong>Frequency</strong> once per day; Duration 1 hour</p>\n<p><strong>Effect</strong> The masks wearer gains one of the following two effects; darkvision up to 60 feet or Deathwatch. This choice is made when the wearer Activates the mask.</p>\n<p><strong>Deathwatch </strong>You can determine the condition of creatures near death within 30 feet. You instantly know whether each creature within the area is dead, fragile (alive and wounded, with 3 or fewer hit points left), fighting off death (alive with 4 or more hit points), healthy, undead, or neither alive nor dead (such as a construct). Deathwatch sees through any spell or ability that allows creatures to feign death.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divination",
+            "invested",
+            "magical"
+          ],
+          "rarity": "uncommon",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.482+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 500
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": false,
+          "inSlot": false,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Object",
+            "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornmask"
+        },
+        "level": {
+          "value": 8
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Actor.q8rNOUXYRC4xFF0D.Item.bS13jGLzFRb2Mo5S"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1668530245799,
+        "modifiedTime": 1669500653422,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Crimson Shroud",
+      "system": {
+        "description": {
+          "value": "<p>Kayltanya swathes herself in a veil of red mist for 1 minute. While the shroud is active, Kayltanya gains fast healing 4. Kayltanya can Interact with her shroud, swirling it around herself, to gain a +1 circumstance bonus to AC until the beginning of her next turn. Finally, if Kayltanya dies while the shroud is active, she can choose to have her body vanish into red mist, leaving behind only her gear; she makes this choice when she activates Crimson Shroud.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:11:49.012+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "ocWdHpjAM9LAMNfo",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500709024,
+        "modifiedTime": 1669500746949,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Crimson Sight",
+      "system": {
+        "description": {
+          "value": "<p>Kayltanya is immune to visual effects of illusion spells cast by other red mantis assassins or their allies.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:12:28.287+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "mlYBhMN8vsuc4svR",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500748290,
+        "modifiedTime": 1669500758498,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Fading",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> Kayltanya is targeted with a Strike by while Crimson Shroud is active.</p>\n<p><strong>Frequency</strong> Once per Crimson Shroud.</p>\n<hr>\n<p><strong>Effect</strong> The attacker must attempt a @Check[type:flat|dc:11]; on a failure, the attack passes harmlessly through the image of Kayltanya that remains behind. An instant later Kayltanya returns to reality, and her Crimson Shroud ends.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:12:54.858+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "pxfhlXlvz87x0oh2",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500774861,
+        "modifiedTime": 1669500816512,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Sawtooth Saber",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "magical",
+            "twin"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:14:42.593+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "6kz5ZEubc0Gy2VPX": {
+            "damage": "3d6+16",
+            "damageType": "slashing"
+          },
+          "egfy4ksWijNfr0dt": {
+            "damage": "1d6",
+            "damageType": "electricity"
+          }
+        },
+        "bonus": {
+          "value": 29
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "deXLFGXCETslFOYB"
+        }
+      },
+      "_id": "V1UfSxtGUrLbSkR5",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500882598,
+        "modifiedTime": 1669500994468,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Dagger",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "magical",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:14:43.797+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "qqdXlFrqf3d1oPWV": {
+            "damage": "3d4+16",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 29
+        },
+        "attackEffects": {
+          "value": [
+            "purple-worm-venom"
+          ],
+          "custom": ""
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "Cq8YsSBP8aj00RAv"
+        }
+      },
+      "_id": "dRXQbvn8XQPmyz1r",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500883807,
+        "modifiedTime": 1669501750164,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Dagger",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "magical",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:14:43.802+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "oBEfHg9SguLDVnXU": {
+            "damage": "3d4+16",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 28
+        },
+        "attackEffects": {
+          "value": [
+            "purple-worm-venom"
+          ],
+          "custom": ""
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "Cq8YsSBP8aj00RAv"
+        }
+      },
+      "_id": "TVuFOlSvNKAVH5CJ",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669500883807,
+        "modifiedTime": 1669501758229,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Divine Prepared Spells",
+      "type": "spellcastingEntry",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:19:50.683+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "ability": {
+          "value": "int"
+        },
+        "spelldc": {
+          "value": 25,
+          "dc": 32
+        },
+        "tradition": {
+          "value": "divine"
+        },
+        "prepared": {
+          "value": "prepared",
+          "flexible": false
+        },
+        "showUnpreparedSpells": {
+          "value": false
+        },
+        "showSlotlessLevels": {
+          "value": false
+        },
+        "proficiency": {
+          "value": 1
+        },
+        "displayLevels": {},
+        "slots": {
+          "slot0": {
+            "prepared": {
+              "0": {
+                "id": "f7WrIuupzLMqAKU0"
+              },
+              "1": {
+                "id": "ZOzz2faomLYVf79j"
+              }
+            },
+            "value": 0,
+            "max": 2
+          },
+          "slot1": {
+            "prepared": {
+              "0": {
+                "id": "6Qs7BA8hpVAvJ1OQ"
+              }
+            },
+            "value": 0,
+            "max": 1
+          },
+          "slot2": {
+            "prepared": {
+              "0": {
+                "id": "bChyyWSBM8qlK4ol"
+              }
+            },
+            "value": 0,
+            "max": 1
+          },
+          "slot3": {
+            "prepared": {
+              "0": {
+                "id": "Cj6nu2GleWHI6MbZ"
+              },
+              "1": {
+                "id": "u1pVjJ0GLsqFr9U9"
+              }
+            },
+            "value": 0,
+            "max": 2
+          },
+          "slot4": {
+            "prepared": {
+              "0": {
+                "id": "sCgV2j3hH25QI07k"
+              },
+              "1": {
+                "id": "Vzzky5SfF4Y2O4tY"
+              }
+            },
+            "value": 0,
+            "max": 2
+          },
+          "slot5": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot6": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot7": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot8": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot9": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot10": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot11": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          }
+        },
+        "autoHeightenLevel": {
+          "value": null
+        }
+      },
+      "_id": "c8lTBYcHJiBqznUK",
+      "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501190689,
+        "modifiedTime": 1669501328673,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "img": "systems/pf2e/icons/spells/fly.webp",
+      "name": "Fly",
+      "system": {
+        "description": {
+          "value": "<p>The target can soar through the air, gaining a fly Speed equal to its Speed or 20 feet, whichever is greater.</p>\n<hr />\n<p><strong>Heightened (7th)</strong> The duration increases to 1 hour.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "fly",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 4
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "transmutation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "touch"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "5 minutes"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c8lTBYcHJiBqznUK"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.A2JfEKe6BZcTG1S8"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501228761,
+        "modifiedTime": 1669501228761,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "sCgV2j3hH25QI07k"
+    },
+    {
+      "_id": "Vzzky5SfF4Y2O4tY",
+      "img": "systems/pf2e/icons/spells/invisibility.webp",
+      "name": "Invisibility",
+      "system": {
+        "description": {
+          "value": "<p>Cloaked in illusion, the target becomes @UUID[Compendium.pf2e.conditionitems.zJxUflt9np0q4yML]{Invisible}. This makes it @UUID[Compendium.pf2e.conditionitems.VRSef5y1LmL2Hkjf]{Undetected} to all creatures, though the creatures can attempt to find the target, making it @UUID[Compendium.pf2e.conditionitems.iU0fEDdBp3rXpTMC]{Hidden} to them instead. If the target uses a hostile action, the spell ends after that hostile action is completed.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> The spell lasts 1 minute, but it doesn't end if the target uses a hostile action.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "invisibility",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": false
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "touch"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "10 minutes"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c8lTBYcHJiBqznUK"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.XXqE1eY3w3z6xJCB"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501234819,
+        "modifiedTime": 1669501234819,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "Cj6nu2GleWHI6MbZ",
+      "img": "systems/pf2e/icons/spells/haste.webp",
+      "name": "Haste",
+      "system": {
+        "description": {
+          "value": "<p>Magic empowers the target to act faster. It gains the @UUID[Compendium.pf2e.conditionitems.nlCjDvLMf2EkV2dl]{Quickened} condition and can use the extra action each round only for Strike and Stride actions.</p>\n<hr />\n<p><strong>Heightened (7th)</strong> You can target up to 6 creatures.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "haste",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 3
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "transmutation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c8lTBYcHJiBqznUK"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "7": {
+              "target": {
+                "value": "6 creatures"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.o6YCGx4lycsYpww4"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501242571,
+        "modifiedTime": 1669501242571,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "u1pVjJ0GLsqFr9U9",
+      "img": "systems/pf2e/icons/spells/hypnotic-pattern.webp",
+      "name": "Hypnotic Pattern",
+      "system": {
+        "description": {
+          "value": "<p>You create a pattern of shifting colors that hovers in the air in a geometric cloud. Creatures are @UUID[Compendium.pf2e.conditionitems.TkIyaNPgTZFBCCuh]{Dazzled} while inside the pattern. In addition, a creature must attempt a Will saving throw if it is inside the pattern when you cast it, when it enters the pattern, when it ends its turn within the pattern, or if it uses a Seek or Interact action on the pattern. A creature currently @UUID[Compendium.pf2e.conditionitems.AdPVz7rbaVSRxHFg]{Fascinated} by the pattern doesn't attempt new saves.</p>\n<hr />\n<p><strong>Success</strong> The target is unaffected.</p>\n<p><strong>Failure</strong> The target is Fascinated by the pattern.</p>\n<p><strong>Critical Failure</strong> The target is Fascinated by the pattern. While it remains Fascinated, it can't use reactions.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "visual"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "hypnotic-pattern",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 3
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": false
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": 10,
+          "areaType": "burst"
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "sustained up to 1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "will",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c8lTBYcHJiBqznUK"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "10-foot burst"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.K2WpC3FFoHrqX9Q5"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501247592,
+        "modifiedTime": 1669501247592,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "bChyyWSBM8qlK4ol",
+      "img": "systems/pf2e/icons/spells/blur.webp",
+      "name": "Blur",
+      "system": {
+        "description": {
+          "value": "<p>The target's form appears blurry. It becomes @UUID[Compendium.pf2e.conditionitems.DmAIPqOBomZ7H95W]{Concealed}. As the nature of this effect still leaves the target's location obvious, the target can't use this concealment to Hide or Sneak.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "visual"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "blur",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "touch"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c8lTBYcHJiBqznUK"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.3JG1t3T4mWn6vTke"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501257135,
+        "modifiedTime": 1669501257135,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "6Qs7BA8hpVAvJ1OQ",
+      "img": "systems/pf2e/icons/spells/fleet-step.webp",
+      "name": "Fleet Step",
+      "system": {
+        "description": {
+          "value": "<p>You gain a +30-foot status bonus to your Speed.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.ThFug45WHkQQXcoF]{Spell Effect: Fleet Step}</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "fleet-step",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "transmutation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c8lTBYcHJiBqznUK"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.aEM2cttJ2eYcLssW"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501261362,
+        "modifiedTime": 1669501261362,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "f7WrIuupzLMqAKU0",
+      "img": "systems/pf2e/icons/spells/ghost-sound.webp",
+      "name": "Ghost Sound",
+      "system": {
+        "description": {
+          "value": "<p>You create an auditory illusion of simple sounds that has a maximum volume equal to four normal humans shouting. The sounds emanate from a square you designate within range. You can't create intelligible words or other intricate sounds (such as music).</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The range increases to 60 feet.</p>\n<p><strong>Heightened (5th)</strong> The range increases to 120 feet.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "cantrip"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "ghost-sound",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "sustained"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c8lTBYcHJiBqznUK"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "3": {
+              "range": {
+                "value": "60 feet"
+              }
+            },
+            "5": {
+              "range": {
+                "value": "120 feet"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.atlgGNI1E1Ox3O3a"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501269676,
+        "modifiedTime": 1669501269676,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "ZOzz2faomLYVf79j",
+      "img": "systems/pf2e/icons/spells/message.webp",
+      "name": "Message",
+      "system": {
+        "description": {
+          "value": "<p>You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you.</p>\n<p>The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> The spell's range increases to 500 feet.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "cantrip",
+            "linguistic",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "message",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "illusion"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": false,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "1"
+        },
+        "duration": {
+          "value": "see below"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c8lTBYcHJiBqznUK"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "3": {
+              "range": {
+                "value": "500 feet"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.vLzFcIaSXs7YTIqJ"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501274284,
+        "modifiedTime": 1669501274284,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "name": "Red Mantis Spells",
+      "type": "spellcastingEntry",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:22:51.017+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "ability": {
+          "value": "int"
+        },
+        "spelldc": {
+          "value": 25,
+          "dc": 32
+        },
+        "tradition": {
+          "value": "divine"
+        },
+        "prepared": {
+          "value": "focus"
+        },
+        "showUnpreparedSpells": {
+          "value": false
+        },
+        "showSlotlessLevels": {
+          "value": true
+        },
+        "proficiency": {
+          "value": 1
+        },
+        "displayLevels": {},
+        "slots": {
+          "slot0": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot1": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot2": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot3": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot4": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot5": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot6": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot7": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot8": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot9": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot10": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot11": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          }
+        },
+        "autoHeightenLevel": {
+          "value": null
+        }
+      },
+      "_id": "c5dKUizzOxOrHuSk",
+      "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501371025,
+        "modifiedTime": 1669501383213,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "img": "systems/pf2e/icons/spells/vomit-swarm.webp",
+      "name": "Vomit Swarm",
+      "system": {
+        "description": {
+          "value": "<p>You belch forth a swarm of magical vermin. You evoke and shape the creatures from your own imagination, allowing you to change the appearance of the creatures (typically a mix of centipedes, roaches, wasps, and worms), but this doesn't change the effect of the spell. The vermin swarm over anyone in the area, their bites and stings dealing [[/r {2d8}[piercing]]]{2d8 piercing damage} (basic Reflex save). A creature that fails its saving throw also becomes @UUID[Compendium.pf2e.conditionitems.fesd1n5eVhpCSS18]{Sickened 1}. Once the spell ends, the swarm disappears.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> Increase the damage by [[/r {1d8}[piercing]]]{1d8 piercing}.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Advanced Player's Guide"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "vomit-swarm",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "evocation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": 30,
+          "areaType": "cone"
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {
+            "0": {
+              "type": {
+                "categories": [],
+                "value": "piercing"
+              },
+              "value": "2d8"
+            }
+          }
+        },
+        "save": {
+          "value": "reflex",
+          "basic": "basic"
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c5dKUizzOxOrHuSk"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "30-foot cone"
+        },
+        "heightening": {
+          "damage": {
+            "0": "1d8"
+          },
+          "interval": 1,
+          "type": "interval"
+        },
+        "prepared": {
+          "value": false
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.cB17yFc9456Pyfec"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501444307,
+        "modifiedTime": 1669501444307,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "DcKo0OEhtHolM4G9"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/mantis.webp",
+      "name": "Mantis Form",
+      "system": {
+        "description": {
+          "value": "<p>You become a mantis. You gain the effects of <em>@UUID[Compendium.pf2e.spells-srd.XI6Lzd2B5pernkPd]{Insect Form}</em>, heightened to mantis form's level, and you can only transform into a mantis.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Lost Omens: World Guide"
+        },
+        "traits": {
+          "value": [
+            "polymorph"
+          ],
+          "rarity": "uncommon",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "mantis-form",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 4
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "focus"
+        },
+        "traditions": {
+          "value": [],
+          "custom": ""
+        },
+        "school": {
+          "value": "transmutation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "c5dKUizzOxOrHuSk"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.bKDsmKVosexwJ80i"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501451777,
+        "modifiedTime": 1669501451777,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "xmf0B7K1ZytPceNk"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Mantis Doom",
+      "system": {
+        "description": {
+          "value": "<p>Kayltanya can cast vomit swarm as a 7th level focus spell. This version of the spell summons swarms of venomous praying mantises, but the effects are otherwise the same as the spell.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:24:25.475+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "fPuTmGa9PialFjzW",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501465482,
+        "modifiedTime": 1669501492309,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Prayer Attack",
+      "system": {
+        "description": {
+          "value": "<p>Kayltanya attempts to @Compendium[pf2e.actionspf2e.Feint]{Feint} an enemy within 30 feet. If the Feint is successful, when Prayer Attack is used on subsequent turns, Kayltanya automatically makes the target flatfooted against her melee attacks for that turn without rolling a check to Feint, so as long as she remains visible to the target and the target remains within 30 feet of her. If Kayltanya uses Prayer Attack against a different target, she must attempt to Feint the target normally. When Kayltanya uses Prayer Attack, her next successful Strike with a sawtooth saber that turn deals [[/r {2d6}[persistent,bleed]]]{2d6} @Compendium[pf2e.conditionitems.Persistent Damage]{Persistent bleed Damage} to the target.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:25:12.299+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "9vDGSfb2wfZEF9TK",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501512306,
+        "modifiedTime": 1669501541821,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Purple Worm Venom",
+      "system": {
+        "description": {
+          "value": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:32]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> [[/r {5d6}[poison]]]{5d6 poison damage} and @Compendium[pf2e.conditionitems.Enfeebled]{Enfeebled 2} (1 round)</p>\n<p><strong>Stage 2</strong> [[/r {6d6}[poison]]]{6d6 poison damage} and @Compendium[pf2e.conditionitems.Enfeebled]{Enfeebled 2} (1 round)</p>\n<p><strong>Stage 3</strong> [[/r {8d6}[poison]]]{8d6 poison damage} and @Compendium[pf2e.conditionitems.Enfeebled]{Enfeebled 2} (1 round)</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:27:05.796+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "dA8GfmugmKcduDYH",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501625802,
+        "modifiedTime": 1669501685690,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sneak Attack",
+      "system": {
+        "description": {
+          "value": "<p>Kayltanya deals an extra [[/r {4d6}[precision]]]{4d6 precision damage} to @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} creatures.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SneakAttack]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "category": "precision",
+            "diceNumber": 1,
+            "dieSize": "d6",
+            "key": "DamageDice",
+            "predicate": [
+              "target:condition:flat-footed",
+              {
+                "or": [
+                  "item:trait:agile",
+                  "item:trait:finesse",
+                  {
+                    "and": [
+                      "item:ranged",
+                      {
+                        "not": "item:thrown-melee"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "selector": "strike-damage"
+          },
+          {
+            "domain": "all",
+            "key": "RollOption",
+            "label": "PF2E.SpecificRule.TOTMToggle.FlatFooted",
+            "option": "target:condition:flat-footed",
+            "toggleable": "totm"
+          }
+        ],
+        "slug": "sneak-attack",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.AWvNPE4U0kEJSL1T"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669501709051,
+        "modifiedTime": 1669501732478,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "eWOSmClz7uzM30Lk"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.290",
+    "createdTime": 1669499657810,
+    "modifiedTime": 1669581185321,
+    "lastModifiedBy": "hBFuMGrVgeghbDDz"
+  },
+  "_id": "VrgpBcYE7WiBinCB",
+  "ownership": {
+    "default": 0,
+    "hBFuMGrVgeghbDDz": 3
+  },
+  "folder": null,
+  "sort": 0
+}

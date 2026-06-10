@@ -1,325 +1,6 @@
 {
-  "_id": "boggardChamp0001",
   "name": "Boggard Champion",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "Yff8oLOnh6UaN58z",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Thundering Greatclub",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 23
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d10+10",
-            "damageType": "bludgeoning"
-          },
-          "1": {
-            "damage": "1d6",
-            "damageType": "sonic"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "magical",
-            "shove"
-          ]
-        }
-      },
-      "_key": "!actors.items!boggardChamp0001.Yff8oLOnh6UaN58z"
-    },
-    {
-      "_id": "EmeQ6EdN8V4QS7RP",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Tongue",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 21
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "reach-15"
-          ]
-        }
-      },
-      "_key": "!actors.items!boggardChamp0001.EmeQ6EdN8V4QS7RP"
-    },
-    {
-      "_id": "SjUHv8000HliMKSV",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Tongue Drag",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Tongue hit: the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (Escape DC 29) and pulled 10 feet toward the champion — their answer to archers, fliers, and casters.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "attack"
-          ]
-        }
-      },
-      "_key": "!actors.items!boggardChamp0001.SjUHv8000HliMKSV"
-    },
-    {
-      "_id": "VqBCneNPP3SDNG78",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Terrifying Croak",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>30-ft burst: @Check[type:will|dc:27] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (non-boggards only) — and loud enough to alert every nearby area.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "auditory",
-            "fear",
-            "mental"
-          ]
-        }
-      },
-      "_key": "!actors.items!boggardChamp0001.VqBCneNPP3SDNG78"
-    },
-    {
-      "_id": "6dq81s1whK0KvIzp",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Swamp King's Own",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Swim 30; hold breath an hour; rages on round 1 (+4 damage, −1 AC, in these numbers). +2 status to saves vs. fear within sight of the Sunken Queen.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!boggardChamp0001.6dq81s1whK0KvIzp"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 6
-      },
-      "dex": {
-        "mod": 2
-      },
-      "con": {
-        "mod": 5
-      },
-      "int": {
-        "mod": -1
-      },
-      "wis": {
-        "mod": 1
-      },
-      "cha": {
-        "mod": 0
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 29
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 175,
-        "temp": 0,
-        "value": 175
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "swim",
-            "value": 30
-          }
-        ],
-        "value": 20
-      }
-    },
-    "details": {
-      "blurb": "Mushfen boggard elite (B7-B8)",
-      "languages": {
-        "details": "",
-        "value": [
-          "boggard"
-        ]
-      },
-      "level": {
-        "value": 10
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role (B7/B8):</strong> six barbarian champions of the Mushfen tribes, recruited with <em>charm monster</em> and now genuinely loyal: they worship @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ch6Beirawash0001]{Beirawash} as their old god and <strong>Ileosa as 'Mother Queen'</strong> — the pyramid's hundred-foot carving come alive. One stands sentry at the hidden side entrance (B7) and runs to rouse the other five (B8) on sight of intruders; once alarmed, all six actively hunt the PCs. They fight to the death, two to a target.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 18,
-      "senses": []
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 21
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 16
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 16
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 22
-      },
-      "stealth": {
-        "base": 18
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "lg"
-      },
-      "value": [
-        "humanoid",
-        "boggard"
-      ]
-    }
-  },
-  "folder": "ch6CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Boggard Champion",
     "displayName": 20,
@@ -392,5 +73,1353 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 270,
+        "temp": 0,
+        "max": 270,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [
+          {
+            "type": "swim",
+            "value": 30
+          }
+        ],
+        "details": "swampstride"
+      },
+      "ac": {
+        "value": 32,
+        "details": ""
+      },
+      "perception": {
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 12
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role (B7/B8):</strong> six barbarian champions of the Mushfen tribes, recruited with <em>charm monster</em> and now genuinely loyal: they worship @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ch6Beirawash0001]{Beirawash} as their old god and <strong>Ileosa as 'Mother Queen'</strong> — the pyramid's hundred-foot carving come alive. One stands sentry at the hidden side entrance (B7) and runs to rouse the other five (B8) on sight of intruders; once alarmed, all six actively hunt the PCs. They fight to the death, two to a target.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "humanoid",
+        "amphibious",
+        "boggard"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [
+          "boggard"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "uncommon",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-26T22:34:16.078+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 7
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 7
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 24,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 19,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 22,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "zudzatCArf2v8lDS",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502101441,
+        "modifiedTime": 1669502101441,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.zudzatCArf2v8lDS"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 25
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "ab2j5pzdVFr8Bj1P",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502163311,
+        "modifiedTime": 1669502179498,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.ab2j5pzdVFr8Bj1P"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 20
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "u4BbZM5esUfXBY8b",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502165432,
+        "modifiedTime": 1669502179498,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.u4BbZM5esUfXBY8b"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "selector": "stealth",
+            "value": 2,
+            "predicate": [
+              "terrain: In Water"
+            ],
+            "label": "In Water"
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 21
+        },
+        "proficient": {
+          "value": 0
+        },
+        "variants": {
+          "0": {
+            "label": "+23 in water",
+            "options": "terrain: In Water"
+          }
+        }
+      },
+      "_id": "bgfOoT0D7GiDrFou",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502168995,
+        "modifiedTime": 1669502482838,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.bgfOoT0D7GiDrFou"
+    },
+    {
+      "_id": "4ETPb2HdSZNCMhmI",
+      "img": "systems/pf2e/icons/equipment/weapons/greatclub.webp",
+      "name": "Greatclub",
+      "system": {
+        "description": {
+          "value": "<p>While many greatclubs are intricately carved, others are little more than a sturdy tree branch. These massive clubs are too heavy to wield with only one hand.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "backswing",
+            "shove"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "greatclub",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "greatclub",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "2"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Greatclub",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "club",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d10",
+          "damageType": "bludgeoning"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 2
+        },
+        "strikingRune": {
+          "value": "greaterStriking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": "thundering"
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.kdGqnqbrwPzQfTsm"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502718320,
+        "modifiedTime": 1669502760792,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.4ETPb2HdSZNCMhmI"
+    },
+    {
+      "_id": "3mgniCJn9RTBxVoF",
+      "img": "systems/pf2e/icons/equipment/weapons/javelin.webp",
+      "name": "Javelin",
+      "system": {
+        "description": {
+          "value": "<p>This thin spear is well balanced for throwing but is not designed for melee use.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "thrown"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "javelin",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "javelin",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Javelin",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "dart",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d6",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 30,
+        "reload": {
+          "value": "-"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 2
+        },
+        "strikingRune": {
+          "value": "greaterStriking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.JNt7GmLCCVz5BiEI"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502727147,
+        "modifiedTime": 1669502780403,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.3mgniCJn9RTBxVoF"
+    },
+    {
+      "_id": "AC4F5o2JxMHZa6xO",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Attack of Opportunity (Special)",
+      "system": {
+        "description": {
+          "value": "<p>A boggard champion can only use Attack of Opportunity while in rage.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "attack-of-opportunity",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.hFtNbo1LKYCoDy2O"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502844373,
+        "modifiedTime": 1669502870662,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.AC4F5o2JxMHZa6xO"
+    },
+    {
+      "name": "Greatclub",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "backswing",
+            "magical",
+            "shove"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:48:51.440+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "lDRN9bz6WuzC24Bm": {
+            "damage": "3d10+14",
+            "damageType": "bludgeoning"
+          },
+          "UAkjrh9sWrTFHule": {
+            "damage": "1d6",
+            "damageType": "sonic"
+          }
+        },
+        "bonus": {
+          "value": 25
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "4ETPb2HdSZNCMhmI"
+        }
+      },
+      "_id": "GynuxG1qU7EMIfBp",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502931444,
+        "modifiedTime": 1669502942015,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.GynuxG1qU7EMIfBp"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Tongue",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "reach-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:49:09.486+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {},
+        "bonus": {
+          "value": 25
+        },
+        "attackEffects": {
+          "value": [
+            "tongue-grab"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "SeC7G4yzLCWpDh0K",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669502949489,
+        "modifiedTime": 1669503761178,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.SeC7G4yzLCWpDh0K"
+    },
+    {
+      "name": "Javelin",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "magical",
+            "thrown-30"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:50:45.047+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "laI2Ld7ctDbkVVdM": {
+            "damage": "3d6+10",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 19
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "3mgniCJn9RTBxVoF"
+        }
+      },
+      "_id": "EB7BDrvoJoiqkTbk",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669503045052,
+        "modifiedTime": 1669503062314,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.EB7BDrvoJoiqkTbk"
+    },
+    {
+      "_id": "SPXA7EGgEBeKpraK",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Knockdown",
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> The boggard champion's last action was a successful greatclub Strike</p>\n<hr>\n<p><strong>Effect</strong> The boggard champion knocks the target @Compendium[pf2e.conditionitems.Prone]{Prone}.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "knockdown",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.BCLvAx4Pz4MLa2pu"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669503083766,
+        "modifiedTime": 1669503112266,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.SPXA7EGgEBeKpraK"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Rage",
+      "system": {
+        "description": {
+          "value": "<p>As the barbarian class ability; 31 AC, +19 HP, +6 melee damage</p>\n<hr>\n<p>@UUID[Compendium.pf2e.feat-effects.z3uyCMBddrPK5umr]{Effect: Rage}</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "self:effect:rage"
+            ],
+            "selector": "ac",
+            "value": -1
+          },
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "self:effect:rage"
+            ],
+            "selector": [
+              "greatclub-damage",
+              "tongue-damage",
+              "javelin-damage"
+            ],
+            "value": 6,
+            "label": "Rage"
+          },
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "flags.pf2e.rageTempHP",
+            "value": 0
+          },
+          {
+            "key": "FlatModifier",
+            "selector": [
+              "attack",
+              "damage"
+            ],
+            "type": "status",
+            "value": 1
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T22:52:13.608+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "U0Qn9betN8GERVlw",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669503133612,
+        "modifiedTime": 1669503447250,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.U0Qn9betN8GERVlw"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Swamp Stride",
+      "system": {
+        "description": {
+          "value": "<p>A boggard champion ignores difficult terrain caused by swamp terrain features.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T23:00:12.139+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "OQuRs2JG36RCfhLy",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669503612144,
+        "modifiedTime": 1669503622195,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.OQuRs2JG36RCfhLy"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Terrifying Croak",
+      "system": {
+        "description": {
+          "value": "<p>The boggard champion unleashes a terrifying croak. Any non-boggard within 30 feet becomes @Compendium[pf2e.conditionitems.Frightened]{Frightened 1} unless they succeed at a @Check[type:will|dc:32] save; those who critically succeed are temporarily immune for 1 minute.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "emotion",
+            "fear",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T23:00:29.073+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "JG7STQY54wSBOAmt",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669503629076,
+        "modifiedTime": 1669503668687,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.JG7STQY54wSBOAmt"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Tongue Grab",
+      "system": {
+        "description": {
+          "value": "<p>If the boggard champion hits a creature with its tongue, that creature becomes @Compendium[pf2e.conditionitems.Grabbed]{Grabbed} by the boggard. Unlike with a normal grab, the creature isn't @Compendium[pf2e.conditionitems.Immobilized]{Immobilized}, but it can't move beyond the reach of the boggard's tongue. A creature can sever the tongue by hitting AC 30 and dealing at least [[/r {25}[slashing]]]{25 slashing Damage}. Though this doesn't deal any damage to the boggard, it prevents it from using its tongue Strike until it regrows its tongue, which takes a week.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T23:01:19.753+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "CC4dO8ezjktbTfG7",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669503679758,
+        "modifiedTime": 1669503695700,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!boggardChamp0001.CC4dO8ezjktbTfG7"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "boggardChamp0001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch6CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!boggardChamp0001"
 }

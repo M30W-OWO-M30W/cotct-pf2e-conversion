@@ -1,320 +1,6 @@
 {
-  "_id": "gargoyleBrute001",
   "name": "Gargoyle Brute",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "Hn1EUVc4hJ8wBBF2",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Claw",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 21
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d10+9",
-            "damageType": "slashing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile"
-          ]
-        }
-      },
-      "_key": "!actors.items!gargoyleBrute001.Hn1EUVc4hJ8wBBF2"
-    },
-    {
-      "_id": "cLMZDHOW4iIGecWq",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Horns",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 21
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d12+9",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!gargoyleBrute001.cLMZDHOW4iIGecWq"
-    },
-    {
-      "_id": "oTDBXHhvEEtn3Gsz",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Four-Armed Flurry",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Two Claw Strikes against one creature; if both hit, combine the damage for resistance purposes.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "flourish"
-          ]
-        }
-      },
-      "_key": "!actors.items!gargoyleBrute001.oTDBXHhvEEtn3Gsz"
-    },
-    {
-      "_id": "qit147Yc3maiESkR",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Freeze",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Statue-still: indistinguishable from Scarwall's grotesques (@Check[type:perception|dc:29] vs. its Stealth).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "concentrate"
-          ]
-        }
-      },
-      "_key": "!actors.items!gargoyleBrute001.qit147Yc3maiESkR"
-    },
-    {
-      "_id": "DAgE4mYuaaVmtwxe",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Stone Hide",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Resistance physical 8 (except adamantine).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!gargoyleBrute001.DAgE4mYuaaVmtwxe"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 6
-      },
-      "dex": {
-        "mod": 3
-      },
-      "con": {
-        "mod": 5
-      },
-      "int": {
-        "mod": -2
-      },
-      "wis": {
-        "mod": 2
-      },
-      "cha": {
-        "mod": -1
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 28
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 155,
-        "temp": 0,
-        "value": 155
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "fly",
-            "value": 60
-          }
-        ],
-        "value": 30
-      }
-    },
-    "details": {
-      "blurb": "Scarwall grotesque-pack gargoyle",
-      "languages": {
-        "details": "",
-        "value": [
-          "petran"
-        ]
-      },
-      "level": {
-        "value": 9
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the castle's living grotesques — <strong>eight</strong> four-armed gargoyles roost in pairs atop the four minarets (D8) and watch the landing ledges (D7). <strong>Air approach:</strong> non-stealthy fliers crossing high draw 4 of the 8; fliers hugging walls or water draw @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.aerilayaBanshe01]{Aerilaya} instead (the gargoyles have learned to keep clear of her). They do not retreat from a fight.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 17,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 19
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 15
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 15
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 20
-      },
-      "stealth": {
-        "base": 19
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "earth",
-        "gargoyle"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Gargoyle Brute",
     "displayName": 20,
@@ -387,5 +73,699 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 165,
+        "temp": 0,
+        "max": 165,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 40
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 30,
+        "details": ""
+      },
+      "perception": {
+        "value": 19
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 10
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the castle's living grotesques — <strong>eight</strong> four-armed gargoyles roost in pairs atop the four minarets (D8) and watch the landing ledges (D7). <strong>Air approach:</strong> non-stealthy fliers crossing high draw 4 of the 8; fliers hugging walls or water draw @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.aerilayaBanshe01]{Aerilaya} instead (the gargoyles have learned to keep clear of her). They do not retreat from a fight.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "beast",
+        "earth"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [
+          "common",
+          "terran"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "physical",
+          "value": 8,
+          "exceptions": "except adamantine"
+        }
+      ],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-25T14:42:18.112+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.1"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 5
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": -2
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 21,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 18,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 18,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "7nGnngbbIFYzJQni",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387376189,
+        "modifiedTime": 1669387376189,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.7nGnngbbIFYzJQni"
+    },
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "B7NdHQXTE1Yop7mf",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387397276,
+        "modifiedTime": 1669387410533,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.B7NdHQXTE1Yop7mf"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "ALrDlQsYifv2fEjt",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387398764,
+        "modifiedTime": 1669387410533,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.ALrDlQsYifv2fEjt"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 22
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "4B90sV20MFYTZWga",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387400736,
+        "modifiedTime": 1669387410533,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.4B90sV20MFYTZWga"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Clawed Feet",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> The gargoyle brute is Flying, and a creature moves into an adjacent square below it.</p>\n<p><strong>Effect</strong> The gargoyle brute makes a claw Strike against the triggering creature.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "attack"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T14:45:16.609+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "YEFdbna6nzZQEwXv",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387516620,
+        "modifiedTime": 1669387545127,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.YEFdbna6nzZQEwXv"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Jaws",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T14:46:08.860+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "WTuG69WHEN8855xy": {
+            "damage": "2d10+13",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 20
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "lyijVPWDMeFMZWkj",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387568863,
+        "modifiedTime": 1669387583906,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.lyijVPWDMeFMZWkj"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T14:46:32.535+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "7IWDgwjXmA17PBxD": {
+            "damage": "2d8+11",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 20
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "Pm1OihxrJRR0CLQ1",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387592539,
+        "modifiedTime": 1669387614561,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.Pm1OihxrJRR0CLQ1"
+    },
+    {
+      "_id": "CYftTX9lNs99z5Hc",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Rend",
+      "system": {
+        "description": {
+          "value": "<p>Claw</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Rend]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "rend",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.3JOi2cMcGhT3eze1"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387624328,
+        "modifiedTime": 1669387634670,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.CYftTX9lNs99z5Hc"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Statue",
+      "system": {
+        "description": {
+          "value": "<p>Until the next time it acts, the gargoyle brute appears to be a statue. It has an automatic result of 40 on Deception checks and DCs to pass as a statue.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "concentrate"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T14:47:27.461+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "1ZKwrOHwNkeZTFMU",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669387647464,
+        "modifiedTime": 1669387695243,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!gargoyleBrute001.1ZKwrOHwNkeZTFMU"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "gargoyleBrute001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!gargoyleBrute001"
 }

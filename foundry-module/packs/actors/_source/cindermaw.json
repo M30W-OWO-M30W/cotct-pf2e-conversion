@@ -1,291 +1,6 @@
 {
-  "_id": "cindermawWorm001",
   "name": "Cindermaw, the Clan-Eater",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "jLslu6f7oYksjsEe",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Jaws",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 29
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "3d12+13",
-            "damageType": "piercing"
-          },
-          "1": {
-            "damage": "2d6",
-            "damageType": "fire"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "reach-15"
-          ]
-        }
-      },
-      "_key": "!actors.items!cindermawWorm001.jLslu6f7oYksjsEe"
-    },
-    {
-      "_id": "th7E0P8CS2frszP4",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Body Slam",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 29
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "3d10+13",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "reach-15"
-          ]
-        }
-      },
-      "_key": "!actors.items!cindermawWorm001.th7E0P8CS2frszP4"
-    },
-    {
-      "_id": "RjVoaNOXYrCPciDL",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Swallow Whole",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Requirement</strong> A Large or smaller creature is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} in its jaws.</p><hr /><p><strong>Effect</strong> Gulp: the victim is swallowed — @Damage[3d6+13[bludgeoning]] plus @Damage[3d6[fire]] per round inside (Rupture 30: dealing 30 slashing/piercing damage to the gullet from within cuts an exit — <em>the entire point of the quest</em>).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "attack"
-          ]
-        }
-      },
-      "_key": "!actors.items!cindermawWorm001.RjVoaNOXYrCPciDL"
-    },
-    {
-      "_id": "O1u2eZWgfAqSvIBP",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Volcanic Burrow",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Burrow 40 ft through rock and cinder, surfacing in gouts of sparks; fire immunity; tremorsense (imprecise) 120 ft. <strong>Paralysis-resistant</strong> (+4 status vs. paralysis and slow — would-be Skuraks beware).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!cindermawWorm001.O1u2eZWgfAqSvIBP"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 9
-      },
-      "dex": {
-        "mod": 1
-      },
-      "con": {
-        "mod": 7
-      },
-      "int": {
-        "mod": -3
-      },
-      "wis": {
-        "mod": 2
-      },
-      "cha": {
-        "mod": 2
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 36
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 310,
-        "temp": 0,
-        "value": 310
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "burrow",
-            "value": 40
-          }
-        ],
-        "value": 40
-      }
-    },
-    "details": {
-      "blurb": "Quasi-divine clan-eating fire worm",
-      "languages": {
-        "details": "",
-        "value": [
-          "ignan"
-        ]
-      },
-      "level": {
-        "value": 14
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> a quasi-divine fire-infused purple worm — an awakened, <em>vain</em> ancient that once devoured a Plane-of-Fire portal. The quest (Skurak's Tale, Handout #4-1): <strong>be swallowed and emerge, witnessed by Shoanti</strong>. How you get out is irrelevant; killing it is gauche (−1 Respect Point — a slain god 'wasn't that tough'). Tempting it to swallow you: a Deception against its Sense Motive at −2 (it suspects everything is food anyway). Illusions must beat the witnesses' saves <em>and radiate heat</em>.</p><p><strong>Respect:</strong> +2 for a swallowed-and-escaped PC; <strong>+4 if Cindermaw also lives</strong>. Fire resistance strongly advised; <em>teleport</em>-from-the-belly is legal (concentration check inside).</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 25,
-      "senses": [
-        {
-          "acuity": "imprecise",
-          "type": "tremorsense",
-          "range": 120
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 28
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 20
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 23
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 30
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "grg"
-      },
-      "value": [
-        "beast",
-        "fire"
-      ]
-    }
-  },
-  "folder": "ch4CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Cindermaw, the Clan-Eater",
     "displayName": 20,
@@ -358,5 +73,1121 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 290,
+        "temp": 0,
+        "max": 290,
+        "details": "fast healing 5 (while touching fire)"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 40,
+        "otherSpeeds": [
+          {
+            "type": "burrow",
+            "value": 40
+          },
+          {
+            "type": "swim",
+            "value": 20
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 34,
+        "details": ""
+      },
+      "perception": {
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "N"
+      },
+      "level": {
+        "value": 14
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Fused elemental purple worm",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> a quasi-divine fire-infused purple worm — an awakened, <em>vain</em> ancient that once devoured a Plane-of-Fire portal. The quest (Skurak's Tale, Handout #4-1): <strong>be swallowed and emerge, witnessed by Shoanti</strong>. How you get out is irrelevant; killing it is gauche (−1 Respect Point — a slain god 'wasn't that tough'). Tempting it to swallow you: a Deception against its Sense Motive at −2 (it suspects everything is food anyway). Illusions must beat the witnesses' saves <em>and radiate heat</em>.</p><p><strong>Respect:</strong> +2 for a swallowed-and-escaped PC; <strong>+4 if Cindermaw also lives</strong>. Fire resistance strongly advised; <em>teleport</em>-from-the-belly is legal (concentration check inside).</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "beast",
+        "fire",
+        "elemental"
+      ],
+      "senses": {
+        "value": "Darkvision, Tremorsense (imprecise) 100 feet"
+      },
+      "languages": {
+        "value": [],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "bleed",
+          "fire",
+          "paralyzed",
+          "poison",
+          "sleep"
+        ],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "grg"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:39.090+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 9
+      },
+      "dex": {
+        "mod": -1
+      },
+      "con": {
+        "mod": 7
+      },
+      "int": {
+        "mod": -3
+      },
+      "wis": {
+        "mod": -1
+      },
+      "cha": {
+        "mod": -1
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 30,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 23,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 23,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "F4hZ7JnjYL9DbdCx",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668724806522,
+        "modifiedTime": 1668724806522,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.F4hZ7JnjYL9DbdCx"
+    },
+    {
+      "_id": "0tDEI7gaWl7McCLJ",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Tremorsense (imprecise) 100 feet",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Tremorsense]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "tremorsense",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.j2wsK6IsW5yMW1jW"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668724812329,
+        "modifiedTime": 1668724819858,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.0tDEI7gaWl7McCLJ"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 32
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "eC3WZPfPa3d3O1hI",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668724855254,
+        "modifiedTime": 1668724857842,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.eC3WZPfPa3d3O1hI"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Elemental Body",
+      "system": {
+        "description": {
+          "value": "<p>Cindermaw recovers from the slowed and stunned conditions at the end of its turn. Additionally, Cindermaw is immune to penalties to its Speeds and the @Compendium[pf2e.conditionitems.Immobilized]{Immobilized} condition, and it ignores difficult terrain and greater difficult terrain.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "6dVWA3Iz9UfoFuRo",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668724985357,
+        "modifiedTime": 1668725002010,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.6dVWA3Iz9UfoFuRo"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Fire Healing",
+      "system": {
+        "description": {
+          "value": "<p>When struck by a magical fire effect, Cindermaw instead regains 1 hit point for every 10 points of damage that the fire effect would otherwise deal.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "6CfQHBhusgkYY6if",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725010621,
+        "modifiedTime": 1668725025865,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.6CfQHBhusgkYY6if"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Jaws",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "deadly-2d10",
+            "reach-15"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "6t7O8wNBv4Owbgh7": {
+            "damage": "3d10+13",
+            "damageType": "piercing"
+          },
+          "JylmD0asMEIzOud5": {
+            "damage": "2d6",
+            "damageType": "fire"
+          }
+        },
+        "bonus": {
+          "value": 30
+        },
+        "attackEffects": {
+          "value": [
+            "improved-grab"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "abCs9zG3F5oYGmoL",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725071862,
+        "modifiedTime": 1668725126982,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.abCs9zG3F5oYGmoL"
+    },
+    {
+      "_id": "wqwDtQH3OtfB8yaB",
+      "img": "systems/pf2e/icons/actions/FreeAction.webp",
+      "name": "Improved Grab",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ImprovedGrab]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "improved-grab",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "free"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.i18TlebMzwONyPhI"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725137029,
+        "modifiedTime": 1668725137029,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.wqwDtQH3OtfB8yaB"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Stinger",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "fire",
+            "reach-15"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "KfmdJNUpF08TH6HX": {
+            "damage": "2d12+13",
+            "damageType": "piercing"
+          },
+          "fPlgtZ89RaYqXmtz": {
+            "damage": "2d6",
+            "damageType": "fire"
+          }
+        },
+        "bonus": {
+          "value": 30
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "jTft2EWUZMaz0Vps",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725172316,
+        "modifiedTime": 1668725257226,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.jTft2EWUZMaz0Vps"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Body",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "reach-15"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "aXIdmzO3HHvVYgBe": {
+            "damage": "1d10+12",
+            "damageType": "bludgeoning"
+          },
+          "HnFiizgmtfndG9xA": {
+            "damage": "1d6",
+            "damageType": "fire"
+          }
+        },
+        "bonus": {
+          "value": 28
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "y8B2I0kO4Urx7ouk",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725265007,
+        "modifiedTime": 1668725315135,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.y8B2I0kO4Urx7ouk"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Breath Weapon",
+      "system": {
+        "description": {
+          "value": "<p>Cindermaw breathes a blast of flame that deals [[/r {15d6}[fire]]]{15d6 fire damage} in a @Template[type:cone|distance:50] (@Check[type:reflex|dc:36|basic:true]). It can't use Breath Weapon again for [[/br 1d4 #rounds]]{1d4 rounds}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "evocation",
+            "fire",
+            "primal"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "d9BaziVxm4Y2nN0s",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725325344,
+        "modifiedTime": 1668725356902,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.d9BaziVxm4Y2nN0s"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Fast Swallow",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> Cindermaw Grabs a creature.</p>\n<p><strong>Effect</strong> Cindermaw uses @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.uJSseLa57HZYSMUu]{Swallow Whole}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "XpM7ioWCNciwl3pX",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725404806,
+        "modifiedTime": 1668725460863,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.XpM7ioWCNciwl3pX"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Firewalker",
+      "system": {
+        "description": {
+          "value": "<p>Cindermaw can climb an object on fire as though it had a climb speed of 40 feet. It can also fly at this speed with perfect maneuverability as long as it remains in contact with fire, and can walk on flames at its highest speed as per @UUID[Compendium.pf2e.spells-srd.b5sGjGlBf58f8jn0]{Air Walk}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "tqLtXW6b9HGe94B5",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725480777,
+        "modifiedTime": 1668725520578,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.tqLtXW6b9HGe94B5"
+    },
+    {
+      "_id": "OkaAHHGtwN5eirpH",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Swallow Whole",
+      "system": {
+        "description": {
+          "value": "<p>Huge, [[/r {2d6+13}[bludgeoning]]]{2d6+13 bludgeoning} plus [[/r 2d6 #fire]]{2d6 fire}, Rupture [24]</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [
+            "attack"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "swallow-whole",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.uJSseLa57HZYSMUu"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725546981,
+        "modifiedTime": 1668725609749,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.OkaAHHGtwN5eirpH"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Thrash",
+      "system": {
+        "description": {
+          "value": "<p>Cindermaw makes a Strike once against each creature in its reach. It can Strike up to once with its jaws, up to once with its stinger, and any number of times with its body. Each attack counts toward Cindermaw's multiple attack penalty, but the multiple attack penalty doesn't increase until after it makes all the attacks.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "WkOK5sVFpBMjuq3z",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668725928792,
+        "modifiedTime": 1668725949775,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cindermawWorm001.WkOK5sVFpBMjuq3z"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "cindermawWorm001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch4CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!cindermawWorm001"
 }

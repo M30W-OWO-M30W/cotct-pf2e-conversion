@@ -1,295 +1,679 @@
 {
-  "_id": "chokerBrute00001",
-  "name": "Choker Brute",
-  "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "RqceOuw8GSRNY5VE",
+      "_id": "xS1M3nE7TiguYe63",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Tentacle",
-      "sort": 0,
-      "type": "melee",
+      "name": "Arm",
+      "sort": 100000,
       "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 15
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d8+7",
-            "damageType": "bludgeoning"
-          }
-        },
         "description": {
           "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "reach-10"
+          ],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d6+3",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 11
+        },
+        "attackEffects": {
           "value": [
-            "agile",
-            "reach-10"
-          ]
+            "strangling-fingers"
+          ],
+          "custom": ""
         }
       },
-      "_key": "!actors.items!chokerBrute00001.RqceOuw8GSRNY5VE"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!chokerBrute00001.xS1M3nE7TiguYe63"
     },
     {
-      "_id": "EwwKsQG2UxM7n0dd",
+      "_id": "pP0EwdXTDTjgDpZA",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Sneak Attack",
-      "sort": 0,
-      "type": "action",
+      "name": "Darkvision",
+      "sort": 200000,
       "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
         "actionType": {
           "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
         },
         "actions": {
           "value": null
         },
-        "category": "offensive",
-        "description": {
-          "value": "<p>The choker deals 1d6 extra precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        "requirements": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "trigger": {
+          "value": ""
         },
-        "rules": [
-          {
-            "key": "DamageDice",
-            "selector": "strike-damage",
-            "category": "precision",
-            "diceNumber": 1,
-            "dieSize": "d6",
-            "predicate": [
-              "target:condition:off-guard"
-            ]
-          },
-          {
-            "key": "RollOption",
-            "domain": "all",
-            "option": "target:condition:off-guard",
-            "toggleable": "totm",
-            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
-          }
-        ],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "rogue"
-          ]
+        "deathNote": false,
+        "weapon": {
+          "value": ""
         }
       },
-      "_key": "!actors.items!chokerBrute00001.EwwKsQG2UxM7n0dd"
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!chokerBrute00001.pP0EwdXTDTjgDpZA"
     },
     {
-      "_id": "sE1XpbDxLhlZgSmj",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Choke",
-      "sort": 0,
-      "type": "action",
+      "_id": "n5uTPxg5zF7PKMZF",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Yank",
+      "sort": 300000,
       "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> An enemy targets the choker with an attack</p>\n<hr />\n<p><strong>Effect</strong> The choker tries to pull a creature it has @UUID[Compendium.pf2e.conditionitems.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.VcDeM8A5oI6VqhbM]{Restrained} into the path of the attack. The choker attempts an Athletics check, including its bonus to @UUID[Compendium.pf2e.actionspf2e.PMbdMWc2QroouFGD]{Grapple}. If it succeeds against the grabbed or restrained creature's Fortitude DC, the choker redirects the attack to that creature, and the attacker compares its attack roll result against the new target's AC. The choker must move the creature into a space adjacent to itself. The creature must also be moved within the attacker's reach against a melee attack or into a space between itself and the attacker against a ranged attack. The choker can't use this ability to make the attacker target itself, even if it's grabbing or restraining the attacker.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "manipulate"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!chokerBrute00001.n5uTPxg5zF7PKMZF"
+    },
+    {
+      "_id": "z8DPFDp5ksGcM6bT",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.g26YiEIfSHCpLocV"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Constrict",
+      "sort": 400000,
+      "system": {
+        "description": {
+          "value": "<p>[[/r {1d6+3}[bludgeoning]]]{1d6+3 bludgeoning}, @Check[type:fortitude|dc:19|basic:true]</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "constrict",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
         "actionType": {
           "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
         },
         "actions": {
           "value": 1
         },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Requirement</strong> The choker's last action was a successful Tentacle Strike.</p><hr /><p><strong>Effect</strong> It Grabs the target (@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, Escape DC 21) and begins to strangle: the victim takes @Damage[1d8+7[bludgeoning]] at the start of each of the choker's turns and cannot speak or cast verbal spells while held.</p>"
+        "requirements": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!chokerBrute00001.z8DPFDp5ksGcM6bT"
+    },
+    {
+      "_id": "WIlbTCI5PaEEizfq",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Hidden Movement",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": "<p>If the choker starts its turn @UUID[Compendium.pf2e.conditionitems.iU0fEDdBp3rXpTMC]{Hidden} from or @UUID[Compendium.pf2e.conditionitems.VRSef5y1LmL2Hkjf]{Undetected} by a creature, that creature is @UUID[Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg]{Flat-Footed} against the choker's attacks until the end of the turn.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "attack"
-          ]
-        }
-      },
-      "_key": "!actors.items!chokerBrute00001.sE1XpbDxLhlZgSmj"
-    },
-    {
-      "_id": "z5dRGBnFH20Exfc9",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Quickness",
-      "sort": 0,
-      "type": "action",
-      "system": {
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
         "actionType": {
           "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
         },
         "actions": {
           "value": null
         },
-        "category": "defensive",
-        "description": {
-          "value": "<p>The choker is preternaturally quick: it gains an extra action each turn that it can use only to Stride or Climb (climb Speed 20 ft).</p>"
+        "requirements": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!chokerBrute00001.WIlbTCI5PaEEizfq"
+    },
+    {
+      "_id": "vuAvJlvQLWub8gyW",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Strangling Fingers",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": "<p>Any creature hit by a choker's arm Strike is automatically @UUID[Compendium.pf2e.conditionitems.kWc1fhmv9LBiTuei]{Grabbed}, and the choker begins to strangle the target. The creature is suffocating and can't speak as long as it's strangled. This prevents it from casting spells with a verbal component or activating items with a command component.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
         }
       },
-      "_key": "!actors.items!chokerBrute00001.z5dRGBnFH20Exfc9"
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!chokerBrute00001.vuAvJlvQLWub8gyW"
+    },
+    {
+      "_id": "OOgOPxe66wl8FqEm",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Athletics",
+      "sort": 700000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "label": "PF2E.SkillVariant.Grapple",
+            "predicate": [
+              "action:grapple"
+            ],
+            "selector": "athletics",
+            "value": 2
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 9
+        },
+        "proficient": {
+          "value": 0
+        },
+        "variants": {
+          "0": {
+            "label": "+11 to Grapple",
+            "options": "action:grapple"
+          }
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!chokerBrute00001.OOgOPxe66wl8FqEm"
+    },
+    {
+      "_id": "jZ2FrHuO08Yr5pbi",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Stealth",
+      "sort": 800000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.090+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 9
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!chokerBrute00001.jZ2FrHuO08Yr5pbi"
     }
   ],
+  "name": "Choker Brute",
   "system": {
-    "abilities": {
-      "str": {
-        "mod": 5
-      },
-      "dex": {
-        "mod": 2
-      },
-      "con": {
-        "mod": 4
-      },
-      "int": {
-        "mod": -2
-      },
-      "wis": {
-        "mod": 3
-      },
-      "cha": {
-        "mod": -3
-      }
-    },
     "attributes": {
+      "hp": {
+        "value": 43,
+        "temp": 0,
+        "max": 28,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 20,
+        "otherSpeeds": [
+          {
+            "type": "climb",
+            "value": 15
+          }
+        ],
+        "details": ""
+      },
       "ac": {
-        "details": "",
-        "value": 22
+        "value": 18,
+        "details": ""
+      },
+      "perception": {
+        "value": 7
       },
       "allSaves": {
         "value": ""
       },
-      "hp": {
-        "details": "",
-        "max": 78,
-        "temp": 0,
-        "value": 78
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 20
-      }
+      "adjustment": "elite"
     },
     "details": {
-      "blurb": "Strangling rafter-lurker",
-      "languages": {
-        "details": "",
-        "value": [
-          "undercommon"
-        ]
+      "alignment": {
+        "value": "CE"
       },
       "level": {
-        "value": 5
+        "value": 2
       },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> Pilts's rooftop allies from the playhouse days — they dispose of his corpses (eating the choice bits, stashing the rest across the Shingles; the headless state of recent deliveries doesn't bother them). Six nest in the palace attic (C7).</p><p><strong>Tactics:</strong> lurk in rafter-shadow; strike the moment someone opens the door from outside, or 3 rounds after intruders start moving within. Fight to the death.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 13,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 11
+      "source": {
+        "value": "Pathfinder Bestiary 2",
+        "author": ""
       },
-      "reflex": {
-        "saveDetail": "",
-        "value": 11
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 12
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 14
-      },
-      "stealth": {
-        "base": 13
-      },
-      "acrobatics": {
-        "base": 9
-      }
+      "creatureType": "Aberration",
+      "blurb": "",
+      "publicNotes": "<p>With long, cartilaginous limbs and gray skin, chokers easily hide in stony alcoves, rocky fissures, and darkened staircases to ambush their prey. The strange little aberrations prefer to pick off weak and solitary creatures, especially those that wander off from their packs or communities. A choker's long, spongy arms are flexible but deceptively strong. The fingers can tighten rapidly and are ridged with spiky, tooth-like structures that provide an incredible grip. A choker typically strangles its prey to death, then drags the body off or dismembers it using crude tools if the body is too big to carry. If confronted or outnumbered, a choker tries to escape, often compressing into a tight passage to get away. Chokers that encounter humanoids exhibit intense curiosity about their culture, society, and the products of art and industry. This interest isn't very deep-it just results in chokers that like killing people and collecting any of their items that seem sophisticated, such as jewelry, nice clothing, or written texts.</p>\n<p>Chokers sometimes gather in settlements, usually sticking to slums or abandoned structures. These chokers stalk at night, flopping across rooftops, tapping at windows, and scuttling through sewers, gutters, and chimneys to get at prey. An urban choker that finds prey early on its hunt-a wandering pet, a person who is out alone-might spend the rest of the night indulging its curiosity about the products of society. A curious choker might abscond with all sorts of odd items, from tavern signs to library books to roof tiles. A choker usually pilfers only one item at a time, but as its collection grows, it might need to find a larger nest to accommodate its collection, then move its pieces one by one to the new home.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Role:</strong> Pilts's rooftop allies from the playhouse days — they dispose of his corpses (eating the choice bits, stashing the rest across the Shingles; the headless state of recent deliveries doesn't bother them). Six nest in the palace attic (C7).</p><p><strong>Tactics:</strong> lurk in rafter-shadow; strike the moment someone opens the door from outside, or 3 rounds after intruders start moving within. Fight to the death.</p>",
+      "privateNotes": ""
     },
     "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "sml"
-      },
       "value": [
         "aberration"
-      ]
+      ],
+      "senses": {
+        "value": "darkvision"
+      },
+      "languages": {
+        "value": [
+          "aklo",
+          "undercommon"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "sm"
+      },
+      "attitude": {
+        "value": "hostile"
+      },
+      "ci": []
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:39.090+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": -3
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 7,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 10,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 7,
+        "saveDetail": ""
+      }
     }
   },
-  "folder": "ch3CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
+  "type": "npc",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.pathfinder-bestiary-2.O69kXMo6shkA606k"
+    }
   },
   "prototypeToken": {
     "name": "Choker Brute",
@@ -363,5 +747,23 @@
       }
     }
   },
+  "effects": [],
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "chokerBrute00001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch3CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!chokerBrute00001"
 }

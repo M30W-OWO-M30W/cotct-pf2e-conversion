@@ -1,14 +1,92 @@
 {
-  "_id": "appDeathCoffer01",
-  "img": "systems/pf2e/icons/default-icons/equipment.svg",
   "name": "Death's Head Coffer",
   "type": "equipment",
-  "folder": "appItemFolder001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
+  "system": {
+    "description": {
+      "value": "<p>Typically engraved with numerous skulls, this small metal coffer allows the safe transport of infectious substances of up to Tiny size. Closing the lid seals in the contents and holds them in stasis, rendering them immune to aging or any damage. In addition, any infectious material-such as the body of a creature that died of disease-is preserved for as long as the coffer is closed. A death's head coffer's dimensions are approximately 4 inches by 4 inches by 6 inches, so it can potentially hold several Tiny items.</p>\n<p>Any item placed into a coffer with a disease-ridden item (something capable of spreading a disease by contact) becomes infected with the same disease. For 1 week after being removed from the coffer, the newly infected item can spread the same affliction as the disease-ridden item to any creature that touches it.</p>\n<p>After a death's head coffer is closed and then reopened, its magic dissipates, rendering the box completely mundane. Some death's head coffers feature complex locking mechanisms, which require successful @Check[type:thievery|dc:30] check.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Ch.2's infection vector</strong> (Appendix 5; 1,000 gp → 100 gp). A skull-chased metal coffer about the size of two fists. <strong>Single use:</strong> while the lid is closed, the contents (up to Tiny) hang in stasis — no aging, no decay, no damage — and any infectious matter stays viable.</p><ul><li><strong>Plague box:</strong> seal items in with a disease source and every item inside becomes a carrier; for 1 week after removal, touching a carried item forces a save against that disease (blood veil, for the cult's coin-shipments).</li><li>Opening the coffer ends the magic forever (it becomes a mundane box). Some are locked: @Check[type:thievery|dc:30] to pick.</li></ul>"
+    },
+    "source": {
+      "value": ""
+    },
+    "traits": {
+      "value": [
+        "divine",
+        "evil",
+        "necromancy",
+        "negative"
+      ],
+      "rarity": "uncommon",
+      "custom": "",
+      "otherTags": []
+    },
+    "rules": [],
+    "slug": null,
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "hp": {
+      "brokenThreshold": 0,
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "weight": {
+      "value": "-"
+    },
+    "equippedBulk": {
+      "value": ""
+    },
+    "price": {
+      "value": {
+        "gp": 160
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "stackGroup": null,
+    "negateBulk": {
+      "value": "0"
+    },
+    "containerId": null,
+    "preciousMaterial": {
+      "value": null
+    },
+    "preciousMaterialGrade": {
+      "value": null
+    },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "Unusual Object",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "level": {
+      "value": 5
+    }
   },
-  "flags": {},
+  "img": "systems/pf2e/icons/equipment/held-items/sealing-chest.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.56uytrIpII0BbGMD"
+    }
+  },
   "_stats": {
     "systemId": "pf2e",
     "systemVersion": "8.2.0",
@@ -20,57 +98,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "system": {
-    "baseItem": null,
-    "bulk": {
-      "value": 0.1
-    },
-    "containerId": null,
-    "description": {
-      "value": "<p><strong>Ch.2's infection vector</strong> (Appendix 5; 1,000 gp → 100 gp). A skull-chased metal coffer about the size of two fists. <strong>Single use:</strong> while the lid is closed, the contents (up to Tiny) hang in stasis — no aging, no decay, no damage — and any infectious matter stays viable.</p><ul><li><strong>Plague box:</strong> seal items in with a disease source and every item inside becomes a carrier; for 1 week after removal, touching a carried item forces a save against that disease (blood veil, for the cult's coin-shipments).</li><li>Opening the coffer ends the magic forever (it becomes a mundane box). Some are locked: @Check[type:thievery|dc:30] to pick.</li></ul>"
-    },
-    "equipped": {
-      "carryType": "worn",
-      "handsHeld": 0,
-      "invested": null
-    },
-    "hardness": 0,
-    "hp": {
-      "max": 0,
-      "value": 0
-    },
-    "level": {
-      "value": 4
-    },
-    "material": {
-      "grade": null,
-      "type": null
-    },
-    "price": {
-      "value": {
-        "gp": 100
-      }
-    },
-    "publication": {
-      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-      "authors": "",
-      "license": "OGL",
-      "remaster": true
-    },
-    "quantity": 1,
-    "rules": [],
-    "size": "med",
-    "slug": null,
-    "traits": {
-      "rarity": "rare",
-      "value": [
-        "magical",
-        "consumable"
-      ]
-    },
-    "usage": {
-      "value": "worn"
-    }
+  "_id": "appDeathCoffer01",
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
   },
   "_key": "!items!appDeathCoffer01"
 }

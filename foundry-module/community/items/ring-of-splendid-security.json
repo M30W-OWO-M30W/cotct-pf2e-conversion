@@ -1,0 +1,119 @@
+{
+  "name": "Ring of Splendid Security",
+  "type": "equipment",
+  "system": {
+    "description": {
+      "value": "<p>This extravagant ring is heavy with precious jewels. As fashions change, you can alter the appearance of your armor, clothing, and even weaponry at will; this change is illusory and doesn't affect the actual abilities of gear or weapons (although drastic changes in size are beyond the scope of this ability).</p>\n<p>The rings primary purpose, though, is to grant the wearer protection from harm. As long as it is worn, you gain a +3 item bonus to your AC, and a +2 item bonus to saving throws.</p>\n<hr>\n<p><strong>Activate</strong> <span class=\"pf2-icon\">D</span> envision, Interact</p>\n<p><strong>Effect</strong> You change the shape and appearance of your armor and weapons to appear as ordinary or fine clothes of your imagining. The armor and weapon's statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.</p>"
+    },
+    "source": {
+      "value": ""
+    },
+    "traits": {
+      "value": [
+        "abjuration",
+        "illusion",
+        "invested",
+        "magical"
+      ],
+      "rarity": "common",
+      "custom": "",
+      "otherTags": []
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "label": "Ring of Splendid Security",
+        "selector": "ac",
+        "value": 3,
+        "type": "item"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "value": 2,
+        "label": "Ring of Splendid Security"
+      }
+    ],
+    "slug": null,
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "hp": {
+      "brokenThreshold": 0,
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "weight": {
+      "value": "-"
+    },
+    "equippedBulk": {
+      "value": ""
+    },
+    "price": {
+      "value": {
+        "gp": 10000
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "stackGroup": null,
+    "negateBulk": {
+      "value": "0"
+    },
+    "containerId": null,
+    "preciousMaterial": {
+      "value": null
+    },
+    "preciousMaterialGrade": {
+      "value": null
+    },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "Unusual Object",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "wornring"
+    },
+    "level": {
+      "value": 16
+    }
+  },
+  "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/specialists-ring.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.P1wAWrSRevCUzLxP"
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.290",
+    "createdTime": 1669584536372,
+    "modifiedTime": 1669592581779,
+    "lastModifiedBy": "hBFuMGrVgeghbDDz"
+  },
+  "_id": "P1wAWrSRevCUzLxP",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "hBFuMGrVgeghbDDz": 3
+  }
+}

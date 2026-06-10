@@ -1,172 +1,1011 @@
 {
-  "_id": "ch5Tarnworm00001",
-  "name": "Tarnworm",
-  "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "pYCYld2DkI99AYD9",
+      "_id": "HRuAKCIYZlriHOGv",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Bite",
-      "sort": 0,
-      "type": "melee",
+      "name": "Jaws",
+      "sort": 100000,
       "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "deadly-2d10",
+            "reach-15"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "weaponType": {
+          "value": "melee"
+        },
         "attack": {
           "value": ""
         },
-        "attackEffects": {
-          "value": []
+        "damageRolls": {
+          "1ct5xtyrbqxkeve4gasj": {
+            "damage": "3d10+15",
+            "damageType": "piercing"
+          }
         },
         "bonus": {
           "value": 28
         },
-        "damageRolls": {
-          "0": {
-            "damage": "3d12+14",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
+        "attackEffects": {
           "value": [
-            "reach-15"
-          ]
+            "improved-grab"
+          ],
+          "custom": ""
         }
       },
-      "_key": "!actors.items!ch5Tarnworm00001.pYCYld2DkI99AYD9"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.HRuAKCIYZlriHOGv"
     },
     {
-      "_id": "OL8jeReCyBTDn2HN",
+      "_id": "hj2HivadIMJbB0cD",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Stinger",
-      "sort": 0,
-      "type": "melee",
+      "sort": 200000,
       "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "poison",
+            "reach-15"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "weaponType": {
+          "value": "melee"
+        },
         "attack": {
           "value": ""
         },
-        "attackEffects": {
-          "value": []
+        "damageRolls": {
+          "u7glfm4e26u0qq9lf0ii": {
+            "damage": "2d12+15",
+            "damageType": "piercing"
+          }
         },
         "bonus": {
           "value": 28
         },
-        "damageRolls": {
-          "0": {
-            "damage": "3d8+14",
-            "damageType": "piercing"
-          },
-          "1": {
-            "damage": "2d6",
-            "damageType": "poison"
-          }
-        },
+        "attackEffects": {
+          "value": [
+            "purple-worm-venom"
+          ],
+          "custom": ""
+        }
+      },
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.hj2HivadIMJbB0cD"
+    },
+    {
+      "_id": "fkSqSiW3qLpaq6hp",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Body",
+      "sort": 300000,
+      "system": {
         "description": {
           "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
         },
-        "rules": [],
-        "slug": null,
         "traits": {
-          "rarity": "common",
           "value": [
-            "agile",
             "reach-15"
-          ]
-        }
-      },
-      "_key": "!actors.items!ch5Tarnworm00001.OL8jeReCyBTDn2HN"
-    },
-    {
-      "_id": "Te8gecq7pFKbDx23",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Improved Grab + Fast Swallow",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>After a Bite hit the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (Escape DC 33); as a follow-up it Swallows Whole — @Damage[2d12+14[bludgeoning]] per round inside (Rupture 30).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+          ],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "attack"
-          ]
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "c9wyts2r994eq8jhnch0": {
+            "damage": "1d10+13",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 26
+        },
+        "attackEffects": {
+          "value": [],
+          "custom": ""
         }
       },
-      "_key": "!actors.items!ch5Tarnworm00001.Te8gecq7pFKbDx23"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.fkSqSiW3qLpaq6hp"
     },
     {
-      "_id": "lo8I3ZpIfAytPwoA",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Dweller Below",
-      "sort": 0,
-      "type": "action",
+      "_id": "9AEzHj5y2T93e7EF",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Regurgitate",
+      "sort": 400000,
       "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "brutal",
+            "range-increment-60"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {},
+        "bonus": {
+          "value": 26
+        },
+        "attackEffects": {
+          "value": [
+            "regurgitate"
+          ],
+          "custom": ""
+        }
+      },
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.9AEzHj5y2T93e7EF"
+    },
+    {
+      "_id": "V6anmpeGZ7JM0rNx",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
         "actionType": {
           "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
         },
         "actions": {
           "value": null
         },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Stinger venom: @Check[type:fortitude|dc:31] or @Damage[3d6[poison]] and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}. It hunts by wake and splash in 40°F water with 10-ft visibility.</p>"
+        "requirements": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.V6anmpeGZ7JM0rNx"
+    },
+    {
+      "_id": "BJ1PhJfeJAlUL4sL",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.j2wsK6IsW5yMW1jW"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Tremorsense (Imprecise) 100 feet",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Tremorsense]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "tremorsense",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.BJ1PhJfeJAlUL4sL"
+    },
+    {
+      "_id": "IoAJluZoGb9mgLGv",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Inexorable",
+      "sort": 700000,
+      "system": {
+        "description": {
+          "value": "<p>The tarnworm recovers from the @UUID[Compendium.pf2e.conditionitems.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.xYTAsEpcJE1Ccni3]{Slowed}, and @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Stunned} conditions at the end of its turn. It's also immune to penalties to its Speeds and the @UUID[Compendium.pf2e.conditionitems.eIcWbB5o3pP6OIMe]{Immobilized} condition, and it ignores difficult terrain and greater difficult terrain.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
         }
       },
-      "_key": "!actors.items!ch5Tarnworm00001.lo8I3ZpIfAytPwoA"
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1669028463049,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.IoAJluZoGb9mgLGv"
+    },
+    {
+      "_id": "y0G6Hcirsc4uakIL",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shake It Off",
+      "sort": 800000,
+      "system": {
+        "description": {
+          "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> The tarnworm would be affected by a condition or adverse effect (such as <em>@UUID[Compendium.pf2e.spells-srd.dN8QBNuTiaBHCKUe]{Baleful Polymorph}</em>)</p>\n<hr>\n<p><strong>Effect</strong> The tarnworm negates the triggering condition or effect. Effects from artifacts, deities, or a similarly powerful source can't be avoided in this way.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1669028339418,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.y0G6Hcirsc4uakIL"
+    },
+    {
+      "_id": "rGTmjeER3V1KY02w",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Fast Swallow",
+      "sort": 900000,
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> The tarnworm @UUID[Compendium.pf2e.conditionitems.kWc1fhmv9LBiTuei]{Grabs} a creature.</p>\n<hr>\n<p><strong>Effect</strong> The worm uses Swallow Whole.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1669028352012,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.rGTmjeER3V1KY02w"
+    },
+    {
+      "_id": "53LkbbyoyISSppMe",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Tarnworm Venom",
+      "sort": 1000000,
+      "system": {
+        "description": {
+          "value": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:32]</p>\n<hr>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> [[/r {5d6}[poison]]]{5d6 poison damage} and @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7]{Enfeebled 2} (1 round)</p>\n<p><strong>Stage 2</strong> [[/r {6d6}[poison]]]{6d6 poison damage}, and @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7]{Enfeebled 2} (1 round)</p>\n<p><strong>Stage 3</strong> [[/r {8d6}[poison]]]{8d6 poison damage} and @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7]{Enfeebled 2} (1 round)</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1669028445210,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.53LkbbyoyISSppMe"
+    },
+    {
+      "_id": "crXV18abZr2DcEh8",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Regurgitate",
+      "sort": 1100000,
+      "system": {
+        "description": {
+          "value": "<p>The tarnworm can violently regurgitate a creature or boulder it has swallowed to make a ranged Strike. The Strike deals bludgeoning damage depending on the size of the projectile: Tiny deals [[/r {2d6+13}[bludgeoning]]]{2d6+13}, Small [[/r {3d6+13}[bludgeoning]]]{3d6+13}, Medium [[/r {4d6+13}[bludgeoning]]]{4d6+13}, Large [[/r {5d6+13}[bludgeoning]]]{5d6+13}, and Huge [[/r {6d6+13}[bludgeoning]]]{6d6+13}. A regurgitated creature takes falling damage from the height of the target or from 20 feet, whichever is greater.</p>\n<p>Boulders occupy space in the worm's stomach as a creature of equivalent size, and tarnworm often have several boulders swallowed. A tarnworm can use a single action to swallow a new boulder.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1669028408821,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.crXV18abZr2DcEh8"
+    },
+    {
+      "_id": "rTDme0840mDZkokU",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.uJSseLa57HZYSMUu"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Swallow Whole",
+      "sort": 1300000,
+      "system": {
+        "description": {
+          "value": "<p>Huge, [[/r {3d6+9}[bludgeoning]]]{3d6+9 bludgeoning}, Rupture 24</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SwallowWhole]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [
+            "attack"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "swallow-whole",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.rTDme0840mDZkokU"
+    },
+    {
+      "_id": "zEZW1atU8KQCSsNi",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Thrash",
+      "sort": 1400000,
+      "system": {
+        "description": {
+          "value": "<p>The worm makes a Strike once against each creature in its reach. It can Strike up to once with its jaws, up to once with its stinger, and any number of times with its body. Each attack counts toward the worm's multiple attack penalty, but the multiple attack penalty doesn't increase until after it makes all the attacks.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.zEZW1atU8KQCSsNi"
+    },
+    {
+      "_id": "TKaqHg2KqjNmg24t",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.i18TlebMzwONyPhI"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/FreeAction.webp",
+      "name": "Improved Grab",
+      "sort": 1500000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ImprovedGrab]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "improved-grab",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "free"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.TKaqHg2KqjNmg24t"
+    },
+    {
+      "_id": "zVhbHyvMFFCtLGzp",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Athletics",
+      "sort": 1600000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 30
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ch5Tarnworm00001.zVhbHyvMFFCtLGzp"
     }
   ],
+  "name": "Tarnworm",
   "system": {
+    "attributes": {
+      "hp": {
+        "value": 270,
+        "temp": 0,
+        "max": 270,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 40,
+        "otherSpeeds": [
+          {
+            "type": "swim",
+            "value": 60
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 32,
+        "details": ""
+      },
+      "perception": {
+        "value": 20
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "N"
+      },
+      "level": {
+        "value": 13
+      },
+      "source": {
+        "value": "Pathfinder Bestiary",
+        "author": ""
+      },
+      "creatureType": "Animal",
+      "blurb": "",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the crater lake's apex horrors — <em>several</em> of these Gargantuan swimming worms haunt the 800-ft black depths. Any creature entering the water (or boating it) without stealth quickly draws one; another lurks off the ruined quay at the hidden mooring (B37), surging at anything within 20 feet of the shore. <strong>Morale:</strong> the B37 worm retreats to the depths below ~60 HP. They cannot leave the lake — and their meat is too foul even for Belshallam.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "animal"
+      ],
+      "senses": {
+        "value": "darkvision, tremorsense (imprecise) 100 feet"
+      },
+      "languages": {
+        "value": [],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "grg"
+      },
+      "ci": []
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
     "abilities": {
       "str": {
-        "mod": 8
+        "mod": 9
       },
       "dex": {
-        "mod": 2
+        "mod": -1
       },
       "con": {
         "mod": 7
@@ -175,113 +1014,32 @@
         "mod": -5
       },
       "wis": {
-        "mod": 2
+        "mod": -1
       },
       "cha": {
-        "mod": -2
+        "mod": -1
       }
     },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 34
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 275,
-        "temp": 0,
-        "value": 275
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "swim",
-            "value": 40
-          }
-        ],
-        "value": 20
-      }
-    },
-    "details": {
-      "blurb": "Lake-worm of the black tarn",
-      "languages": {
-        "details": "",
-        "value": []
-      },
-      "level": {
-        "value": 13
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the crater lake's apex horrors — <em>several</em> of these Gargantuan swimming worms haunt the 800-ft black depths. Any creature entering the water (or boating it) without stealth quickly draws one; another lurks off the ruined quay at the hidden mooring (B37), surging at anything within 20 feet of the shore. <strong>Morale:</strong> the B37 worm retreats to the depths below ~60 HP. They cannot leave the lake — and their meat is too foul even for Belshallam.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 22,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
     "saves": {
       "fortitude": {
-        "saveDetail": "",
-        "value": 27
+        "value": 28,
+        "saveDetail": ""
       },
       "reflex": {
-        "saveDetail": "",
-        "value": 21
+        "value": 21,
+        "saveDetail": ""
       },
       "will": {
-        "saveDetail": "",
-        "value": 20
+        "value": 21,
+        "saveDetail": ""
       }
-    },
-    "skills": {
-      "athletics": {
-        "base": 28
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "grg"
-      },
-      "value": [
-        "animal",
-        "aquatic"
-      ]
     }
   },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
+  "type": "npc",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.pathfinder-bestiary.4h9jhODg2NwiYsPg"
+    }
   },
   "prototypeToken": {
     "name": "Tarnworm",
@@ -355,5 +1113,23 @@
       }
     }
   },
+  "effects": [],
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "ch5Tarnworm00001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!ch5Tarnworm00001"
 }

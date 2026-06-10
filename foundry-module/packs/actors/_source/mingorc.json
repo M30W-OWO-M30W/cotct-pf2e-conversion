@@ -1,318 +1,6 @@
 {
-  "_id": "mingorcDonjon001",
   "name": "Mingorc",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "W4CTOgFyl4pOIcyk",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Slam",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 28
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "3d12+13",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "reach-10"
-          ]
-        }
-      },
-      "_key": "!actors.items!mingorcDonjon001.W4CTOgFyl4pOIcyk"
-    },
-    {
-      "_id": "VXuqP0dyAoqiJJ6d",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Hurled Rock",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 26
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "3d10+13",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "range-increment-120"
-          ]
-        }
-      },
-      "_key": "!actors.items!mingorcDonjon001.VXuqP0dyAoqiJJ6d"
-    },
-    {
-      "_id": "0NKBlYXEr9eH4rPT",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Grave Disease",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>A creature damaged by his slams: @Check[type:fortitude|dc:31] or sickened with corpse-rot (@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}, @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} on a critical failure).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!mingorcDonjon001.0NKBlYXEr9eH4rPT"
-    },
-    {
-      "_id": "rnJVmxsalYjJhiiF",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Torpid Sentinel",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>He stands motionless in the room's center and takes <strong>2 full rounds to rouse</strong> after living creatures come into view — PCs who strike first gain a free surprise round.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!mingorcDonjon001.rnJVmxsalYjJhiiF"
-    },
-    {
-      "_id": "3tUSVjKAeuDdnAPW",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Juju Resilience",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Zombie immunities; resistance physical 10 (except slashing), cold 10, electricity 10; rock catching.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!mingorcDonjon001.3tUSVjKAeuDdnAPW"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 7
-      },
-      "dex": {
-        "mod": 2
-      },
-      "con": {
-        "mod": 5
-      },
-      "int": {
-        "mod": 0
-      },
-      "wis": {
-        "mod": 3
-      },
-      "cha": {
-        "mod": 2
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 34
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 255,
-        "temp": 0,
-        "value": 255
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 25
-      }
-    },
-    "details": {
-      "blurb": "Ash-giant juju zombie porter (F8)",
-      "languages": {
-        "details": "",
-        "value": [
-          "jotun",
-          "common"
-        ]
-      },
-      "level": {
-        "value": 13
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the donjon's porter (F8) — an <strong>ash giant</strong> kept servile by constant charms in life, hauling sacrifices down and bodies back up, until Prelate Aruth sacrificed <em>him</em> as part of his own mummy-rising rite. The curse stood the remains back up as a juju zombie that shambled to its old post and has waited five centuries for orders that will never come. <strong>Once he starts bellowing in a fight, @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.prelateAruth0001]{Prelate Aruth} (F10, next door) comes to investigate.</strong> Pursues throughout the donjon but never exits it.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 22,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 25
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 18
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 22
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 27
-      },
-      "intimidation": {
-        "base": 23
-      },
-      "religion": {
-        "base": 21
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "lg"
-      },
-      "value": [
-        "undead",
-        "giant",
-        "zombie"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Mingorc",
     "displayName": 20,
@@ -385,5 +73,716 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 275,
+        "temp": 0,
+        "max": 275,
+        "details": "negative healing"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 35,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 33,
+        "details": ""
+      },
+      "perception": {
+        "value": 20
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "NE"
+      },
+      "level": {
+        "value": 13
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Male ash giant juju zombie",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the donjon's porter (F8) — an <strong>ash giant</strong> kept servile by constant charms in life, hauling sacrifices down and bodies back up, until Prelate Aruth sacrificed <em>him</em> as part of his own mummy-rising rite. The curse stood the remains back up as a juju zombie that shambled to its old post and has waited five centuries for orders that will never come. <strong>Once he starts bellowing in a fight, @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.prelateAruth0001]{Prelate Aruth} (F10, next door) comes to investigate.</strong> Pursues throughout the donjon but never exits it.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "undead",
+        "giant",
+        "mindless",
+        "zombie"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [
+          "common",
+          "jotun"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "mental",
+          "paralyzed",
+          "poison",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "positive",
+          "value": 10,
+          "exceptions": ""
+        },
+        {
+          "type": "slashing",
+          "value": 10,
+          "exceptions": ""
+        }
+      ],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "lg"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-25T17:51:39.183+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 8
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": -5
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 25,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 20,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 23,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "MTQ1LWxQmi9iTYiE",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669398756011,
+        "modifiedTime": 1669398756011,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mingorcDonjon001.MTQ1LWxQmi9iTYiE"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Slow",
+      "system": {
+        "description": {
+          "value": "<p>Mingorc is permanently @Compendium[pf2e.conditionitems.Slowed]{Slowed 1} and can't use reactions.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T17:54:00.764+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "ndqGSZfRXKASP9FK",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669398840768,
+        "modifiedTime": 1669398882175,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mingorcDonjon001.ndqGSZfRXKASP9FK"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669398930013,
+        "modifiedTime": 1669398930013,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "MP2g11dCqFDdV2Jm",
+      "_key": "!actors.items!mingorcDonjon001.MP2g11dCqFDdV2Jm"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Disgusting Pustules",
+      "system": {
+        "description": {
+          "value": "<p>Mingorc is covered in pustules that rupture when it takes any piercing damage or any critical hit. In either case, adjacent creatures are hit with vile fluid, causing them to become @Compendium[pf2e.conditionitems.Sickened]{Sickened 1} unless they succeed at a @Check[type:fortitude|dc:31] save.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "disease",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T17:56:36.038+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "XMwH34l0Iel3dHdu",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669398996042,
+        "modifiedTime": 1669399023498,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mingorcDonjon001.XMwH34l0Iel3dHdu"
+    },
+    {
+      "name": "Fist",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "nonlethal",
+            "reach-10",
+            "unarmed"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T17:58:00.151+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "JqPfotXxpZmKQGLx": {
+            "damage": "3d8+18",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 26
+        },
+        "attackEffects": {
+          "value": [
+            "zombie-rot"
+          ],
+          "custom": ""
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "yUebw3Xn5fMxZS64"
+        }
+      },
+      "_id": "AvzSmxyj7dz3p5FL",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669399080155,
+        "modifiedTime": 1669399497037,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mingorcDonjon001.AvzSmxyj7dz3p5FL"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Rock",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "brutal",
+            "range-increment-120"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T17:59:55.260+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "1ysPgIDhXRuLMxIn": {
+            "damage": "2d8+18",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 26
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "yyK97KHLjgWoN9Bo",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669399195263,
+        "modifiedTime": 1669399225886,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mingorcDonjon001.yyK97KHLjgWoN9Bo"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Wide Swing",
+      "system": {
+        "description": {
+          "value": "<p>Mingorc is covered in pustules that rupture when it takes any piercing damage or any critical hit. In either case, adjacent creatures are hit with vile fluid, causing them to become @Compendium[pf2e.conditionitems.Sickened]{Sickened 1} unless they succeed at a @Check[type:fortitude|dc:31] save.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T18:00:34.505+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "xCF0Sdng4ezywdZE",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669399234508,
+        "modifiedTime": 1669399323858,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mingorcDonjon001.xCF0Sdng4ezywdZE"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Zombie Rot",
+      "system": {
+        "description": {
+          "value": "<p>An infected creature can't heal damage it takes from zombie rot until it has been cured of the disease.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:33]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1 day)</p>\n<p><strong>Stage 2</strong> [[/r {2d6}[negative]]]{2d6 negative damage} (1 day)</p>\n<p><strong>Stage 3</strong> [[/r {2d6}[negative]]]{2d6 negative damage} (1 day)</p>\n<p><strong>Stage 4</strong> [[/r {2d6}[negative]]]{2d6 negative damage} (1 day)</p>\n<p><strong>Stage 5</strong> dead, rising as a zombie immediately.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "disease",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T18:03:30.252+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "uksBInVIMAxsZb2Q",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669399410256,
+        "modifiedTime": 1669399439073,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mingorcDonjon001.uksBInVIMAxsZb2Q"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "mingorcDonjon001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!mingorcDonjon001"
 }

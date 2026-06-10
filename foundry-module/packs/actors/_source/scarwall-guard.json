@@ -1,318 +1,579 @@
 {
-  "_id": "scarwallGuard001",
-  "name": "Scarwall Guard",
-  "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "K7QpFeXEb7XvgqSg",
+      "_id": "Zn0AZHlLWAhHykEg",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Greataxe",
-      "sort": 0,
-      "type": "melee",
+      "name": "Claw",
+      "sort": 100000,
       "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "reach-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "weaponType": {
+          "value": "melee"
+        },
         "attack": {
           "value": ""
         },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 18
-        },
         "damageRolls": {
-          "0": {
-            "damage": "2d12+8",
+          "fte6g98p0f65zet8q1l5": {
+            "damage": "2d6+11",
             "damageType": "slashing"
           }
         },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "sweep"
-          ]
-        }
-      },
-      "_key": "!actors.items!scarwallGuard001.K7QpFeXEb7XvgqSg"
-    },
-    {
-      "_id": "2DQaOB84z37czPn5",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Gore",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
         "bonus": {
           "value": 18
         },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+8",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!scarwallGuard001.2DQaOB84z37czPn5"
-    },
-    {
-      "_id": "xmhuGaWobVOUAYFJ",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Crossbow",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
         "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 16
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+4",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "range-increment-120",
-            "reload-1"
-          ]
+          "value": [],
+          "custom": ""
         }
       },
-      "_key": "!actors.items!scarwallGuard001.xmhuGaWobVOUAYFJ"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!scarwallGuard001.Zn0AZHlLWAhHykEg"
     },
     {
-      "_id": "GpUhIH54MKlC5ywE",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Powerful Charge",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Stride twice then Gore with +1d8 damage.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "attack"
-          ]
+      "_id": "dRtVAtuxu9SD6zpN",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
         }
       },
-      "_key": "!actors.items!scarwallGuard001.GpUhIH54MKlC5ywE"
-    },
-    {
-      "_id": "Aru148wETJ9i2cXE",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Eternal Post",
-      "sort": 0,
-      "type": "action",
+      "name": "Darkvision",
+      "sort": 200000,
       "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
         "actionType": {
           "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
         },
         "actions": {
           "value": null
         },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Mithrodar's eyes: when a guard 'falls,' its spirit reports — rooms know the PCs are coming. Skeleton: immune to death effects, disease, mental, paralysis, poison, unconscious; resistance cold 10, piercing 10, slashing 10.</p>"
+        "requirements": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!scarwallGuard001.dRtVAtuxu9SD6zpN"
+    },
+    {
+      "_id": "HScepbVGbS75R0W3",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "sort": 300000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!scarwallGuard001.HScepbVGbS75R0W3"
+    },
+    {
+      "_id": "Y1v59ZBvVAomH20U",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Broad Swipe",
+      "sort": 400000,
+      "system": {
+        "description": {
+          "value": "<p>The giant makes two Strikes with its claw against two adjacent foes, both of whom are within its reach. The multiple attack penalty does not increase until after both attacks are resolved.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
         }
       },
-      "_key": "!actors.items!scarwallGuard001.Aru148wETJ9i2cXE"
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!scarwallGuard001.Y1v59ZBvVAomH20U"
+    },
+    {
+      "_id": "TGIpZcekBlTtMIW2",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Massive Rush",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": "<p>The hulk Strides and makes a claw Strike with a +4 circumstance bonus to damage. If the strike hits, the hulk automatically @UUID[Compendium.pf2e.actionspf2e.7blmbDrQFNfdT731]{Shoves} the target 10 feet.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "domain": "damage-roll",
+            "key": "RollOption",
+            "option": "massive-rush",
+            "toggleable": true
+          },
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "massive-rush"
+            ],
+            "selector": "claw-damage",
+            "type": "circumstance",
+            "value": 4
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!scarwallGuard001.TGIpZcekBlTtMIW2"
+    },
+    {
+      "_id": "787WQYNUKrcjJYEV",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Athletics",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 20
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!scarwallGuard001.787WQYNUKrcjJYEV"
+    },
+    {
+      "_id": "LtLeucxQd9zbdf3u",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Intimidation",
+      "sort": 700000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 15
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!scarwallGuard001.LtLeucxQd9zbdf3u"
     }
   ],
+  "name": "Scarwall Guard",
   "system": {
-    "abilities": {
-      "str": {
-        "mod": 5
-      },
-      "dex": {
-        "mod": 1
-      },
-      "con": {
-        "mod": 0
-      },
-      "int": {
-        "mod": -3
-      },
-      "wis": {
-        "mod": 1
-      },
-      "cha": {
-        "mod": 0
-      }
-    },
     "attributes": {
+      "hp": {
+        "value": 125,
+        "temp": 0,
+        "max": 105,
+        "details": "negative healing"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": [],
+        "details": ""
+      },
       "ac": {
-        "details": "",
-        "value": 25
+        "value": 25,
+        "details": ""
+      },
+      "perception": {
+        "value": 16
       },
       "allSaves": {
         "value": ""
       },
-      "hp": {
-        "details": "",
-        "max": 100,
-        "temp": 0,
-        "value": 100
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 25
-      }
+      "adjustment": "elite"
     },
     "details": {
-      "blurb": "Skeletal minotaur garrison soldier",
-      "languages": {
-        "details": "",
-        "value": []
+      "alignment": {
+        "value": "NE"
       },
       "level": {
         "value": 7
       },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the garrison that never went off duty — Kazavon's <strong>minotaur</strong> mercenaries (kept intruders out and his own troops <em>in</em>), slain by Mandraivus and risen as horned skeletal champions. Posted at B3 (2 per room), B17 (5), C1 (4), C13 (1), D2 (2 per turret), E3 (3, advanced); <strong>12 more</strong> walk patrol routes as wanderers. They raise alarms by dying.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 14,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 15
+      "source": {
+        "value": "Pathfinder Bestiary",
+        "author": ""
       },
-      "reflex": {
-        "saveDetail": "",
-        "value": 11
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 13
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 16
-      }
+      "creatureType": "Undead",
+      "blurb": "",
+      "publicNotes": "<p>Huge giants and other enormous creatures make powerful skeletons.</p>\n<hr />\n<p>Made from bones held together by foul necromancy, skeletons are among the most common types of undead, found haunting old dungeons and forgotten cemeteries.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the garrison that never went off duty — Kazavon's <strong>minotaur</strong> mercenaries (kept intruders out and his own troops <em>in</em>), slain by Mandraivus and risen as horned skeletal champions. Posted at B3 (2 per room), B17 (5), C1 (4), C13 (1), D2 (2 per turret), E3 (3, advanced); <strong>12 more</strong> walk patrol routes as wanderers. They raise alarms by dying.</p>",
+      "privateNotes": ""
     },
     "traits": {
+      "value": [
+        "mindless",
+        "skeleton",
+        "undead"
+      ],
+      "senses": {
+        "value": "darkvision"
+      },
+      "languages": {
+        "value": [],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "mental",
+          "paralyzed",
+          "poison",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "cold",
+          "value": 5
+        },
+        {
+          "type": "electricity",
+          "value": 5
+        },
+        {
+          "type": "fire",
+          "value": 5
+        },
+        {
+          "type": "piercing",
+          "value": 5
+        },
+        {
+          "type": "slashing",
+          "value": 5
+        }
+      ],
+      "dv": [],
       "rarity": "common",
       "size": {
-        "value": "lg"
+        "value": "huge"
       },
-      "value": [
-        "undead",
-        "skeleton"
-      ]
+      "ci": []
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
+    "abilities": {
+      "str": {
+        "mod": 7
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": -5
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 15,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 15,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 13,
+        "saveDetail": ""
+      }
     }
   },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
+  "type": "npc",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.pathfinder-bestiary.lo4fR4jDVzLdwwkH"
+    }
   },
   "prototypeToken": {
     "name": "Scarwall Guard",
@@ -386,5 +647,23 @@
       }
     }
   },
+  "effects": [],
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "scarwallGuard001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!scarwallGuard001"
 }

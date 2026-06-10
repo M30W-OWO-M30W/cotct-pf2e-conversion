@@ -456,10 +456,116 @@ def macro(_id, name, command, img="icons/svg/dice-target.svg", folder=None, sort
             "command": command, "author": None, "ownership": {"default": 0}, "folder": folder,
             "sort": sort, "flags": {}, "_stats": dict(STATS), "_key": f"!macros!{_id}"}
 
+# ---------- Olliebird community statblocks (authoritative — GM directive 2026-06-10) ----------
+# The conversion thread's exported compendia live in foundry-module/community/
+# (materialized by scripts/import_community.py). Any actor/hazard/item we build
+# whose name (alias-aware, scripts/community_aliases.json) matches a community
+# doc is swapped for the community version AT WRITE TIME, keeping our _id and
+# folder so every journal link survives. Community docs are pf2e-4.4-era; the
+# system migrates them on import/draw. Our authored GM notes and treasure
+# inventory are MERGED in, never dropped.
+import hashlib as _hashlib, unicodedata as _ud
+_CIDX_PATH = ROOT / "scripts" / "community_index.json"
+COMMUNITY = _json.loads(_CIDX_PATH.read_text(encoding="utf-8")) if _CIDX_PATH.exists() else {}
+_CALIAS_PATH = ROOT / "scripts" / "community_aliases.json"
+_CALIAS = _json.loads(_CALIAS_PATH.read_text(encoding="utf-8")) if _CALIAS_PATH.exists() else {}
+
+def _cnorm(n):
+    n = _ud.normalize("NFKD", n).encode("ascii", "ignore").decode()
+    n = re.sub(r"[^a-z0-9 ]", "", n.lower())
+    return re.sub(r"\s+", " ", n).strip()
+
+def _cmeta(kind, name):
+    target = _CALIAS.get(kind, {}).get(name, name)
+    return COMMUNITY.get(f"{kind}:{_cnorm(target)}")
+
+def community_doc(kind, name):
+    """Deep-copied community doc for `name` (alias-aware), or None."""
+    meta = _cmeta(kind, name)
+    if not meta:
+        return None
+    return _json.loads((ROOT / "community" / meta["file"]).read_text(encoding="utf-8"))
+
+def cmon(name, label=None, kind="npc"):
+    """@UUID link to a community-only actor/hazard emitted by build_community.py
+    (community-original _id). For in-place REPLACED docs keep linking our own id —
+    this helper raises on those to make the mistake a build error."""
+    meta = _cmeta(kind, name)
+    if not meta:
+        raise KeyError(f"cmon: no community doc named {name!r}")
+    if meta.get("replacedBy"):
+        raise KeyError(f"cmon: {name!r} replaces our {meta['replacedBy']!r} in place — link that id instead")
+    pack = "cotct-actors" if kind == "npc" else "cotct-hazards"
+    return f"@UUID[Compendium.{MOD}.{pack}.Actor.{meta['id']}]{{{label or meta['name']}}}"
+
+def cmon_lvl(name, kind="npc"):
+    """Community creature level, for encounter XP-budget math."""
+    return _cmeta(kind, name)["level"]
+
+_PHYS_TYPES = {"weapon", "armor", "equipment", "consumable", "treasure", "backpack", "shield"}
+
+def _community_swap(pack, doc):
+    kind = {"actors": "npc", "hazards": "hazard", "items": "item"}.get(pack)
+    if not kind or doc.get("type") not in {"npc", "hazard", "equipment", "weapon",
+                                           "armor", "consumable", "treasure"}:
+        return doc
+    out = community_doc(kind, doc["name"])
+    if out is None:
+        return doc
+    out["_id"] = doc["_id"]
+    # our names are AP-canonical (the community export has typos: "Caggagehead",
+    # "Shaonti", "Bavarsi") and carry area codes / epithets the journals use
+    out["name"] = doc["name"]
+    out["folder"] = doc.get("folder")
+    out["sort"] = doc.get("sort", 0)
+    out["ownership"] = {"default": 0}
+    out["_stats"] = dict(STATS)
+    if pack == "actors":
+        # merge our authored treasure/gear where the community actor lacks it
+        have = {_cnorm(i["name"]) for i in out.get("items", []) if i.get("type") in _PHYS_TYPES}
+        used_ids = {i["_id"] for i in out.get("items", [])}
+        for it in doc.get("items", []):
+            if it.get("type") in _PHYS_TYPES and _cnorm(it["name"]) not in have:
+                if it["_id"] in used_ids:
+                    it = _json.loads(_json.dumps(it))
+                    it["_id"] = _hashlib.md5(f"{doc['_id']}.{it['_id']}".encode()).hexdigest()[:16]
+                out.setdefault("items", []).append(it)
+                have.add(_cnorm(it["name"])); used_ids.add(it["_id"])
+        mine = (doc.get("system", {}).get("details", {}) or {}).get("publicNotes", "") or ""
+        det = out["system"].setdefault("details", {})
+        theirs = det.get("publicNotes", "") or ""
+        if mine.strip() and mine.strip() not in theirs:
+            det["publicNotes"] = (theirs + ("<hr />" if theirs.strip() else "")
+                                  + "<h3>Conversion notes (this module)</h3>" + mine)
+        size = ((out["system"].get("traits", {}).get("size") or {}).get("value")) or "med"
+        ptok = doc.get("prototypeToken", {}) or {}
+        out["prototypeToken"] = prototoken(out["name"], size,
+                                           disposition=ptok.get("disposition", -1),
+                                           actor_link=ptok.get("actorLink", False))
+    elif pack == "hazards":
+        mine = (doc.get("system", {}).get("details", {}) or {}).get("description", "") or ""
+        det = out["system"].setdefault("details", {})
+        theirs = det.get("description", "") or ""
+        if mine.strip() and mine.strip() not in theirs:
+            det["description"] = (theirs + ("<hr />" if theirs.strip() else "")
+                                  + "<h3>Conversion notes (this module)</h3>" + mine)
+        hp = ((out["system"].get("attributes", {}).get("hp") or {}).get("max")) or 0
+        out["prototypeToken"] = prototoken(out["name"], "med", has_hp=bool(hp))
+    else:  # items
+        mine = ((doc.get("system", {}).get("description") or {}).get("value", "")) or ""
+        desc = out["system"].setdefault("description", {})
+        theirs = desc.get("value", "") or ""
+        if mine.strip() and mine.strip() not in theirs:
+            desc["value"] = (theirs + ("<hr />" if theirs.strip() else "")
+                             + "<h3>Conversion notes (this module)</h3>" + mine)
+    print(f"  [community] {pack}: {doc['name']}")
+    return out
+
 # ---------- writers ----------
 def write(pack, slug, doc, embed_items=False, embed_pages=False):
     d = PACKS / pack / "_source"
     d.mkdir(parents=True, exist_ok=True)
+    doc = _community_swap(pack, doc)
     doc["_key"] = f"!{COLL[pack]}!{doc['_id']}"
     if embed_items:
         for it in doc.get("items", []):

@@ -1,124 +1,601 @@
 {
-  "_id": "vensterArabast01",
-  "name": "Venster Arabasti",
-  "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "rHDW9l760FjDETmE",
+      "_id": "nWtiD4ASp2FFsobD",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Corrupting Touch",
-      "sort": 0,
-      "type": "melee",
+      "name": "Ghostly Hand",
+      "sort": 100000,
       "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "weaponType": {
+          "value": "melee"
+        },
         "attack": {
           "value": ""
         },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 15
-        },
         "damageRolls": {
-          "0": {
-            "damage": "2d6+4",
-            "damageType": "void"
+          "rgqwwr4quzch137ojdxw": {
+            "damage": "2d6+2",
+            "damageType": "negative"
           }
         },
-        "description": {
-          "value": ""
+        "bonus": {
+          "value": 13
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "magical"
-          ]
+        "attackEffects": {
+          "value": [],
+          "custom": ""
         }
       },
-      "_key": "!actors.items!vensterArabast01.rHDW9l760FjDETmE"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vensterArabast01.nWtiD4ASp2FFsobD"
     },
     {
-      "_id": "WKyyNt4EePqIV9hh",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Telekinetic Heave",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>He shoves rather than kills: @Check[type:fortitude|dc:24] or pushed 15 feet toward the door (and @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} on a critical failure). His card tricks — the A69 Midwife manifestation — are the same art, gentler.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "occult",
-            "telekinesis"
-          ]
+      "_id": "WbJQr5XhkIENzNfG",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
         }
       },
-      "_key": "!actors.items!vensterArabast01.WKyyNt4EePqIV9hh"
-    },
-    {
-      "_id": "bI0X8pHxaU2M9qG9",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Walled-Up Witness",
-      "sort": 0,
-      "type": "action",
+      "name": "Darkvision",
+      "sort": 200000,
       "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
         "actionType": {
           "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
         },
         "actions": {
           "value": null
         },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Incorporeal; resistance all 8 (except force/vitality); rejuvenates 2d6 rounds after destruction and stays passive unless attacked again. He is bound by guilt while Ileosa lives; her defeat — and his bones honored in the crypts (A3) — lets him rest.</p>"
+        "requirements": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vensterArabast01.WbJQr5XhkIENzNfG"
+    },
+    {
+      "_id": "CfzB5r8CSHETuXfA",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-family-ability-glossary.BcSlVpaN72LoQ5BV"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Site Bound",
+      "sort": 300000,
+      "system": {
+        "description": {
+          "value": "<p>A typical ghost can stray only a short distance from where it was killed or the place it haunts. A typical limit is 120 feet. Some ghosts are instead bound to a room, building, item, or creature that was special to it rather than a location.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "ghost-site-bound",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vensterArabast01.CfzB5r8CSHETuXfA"
+    },
+    {
+      "_id": "gdGHPerbX8DzQ8D5",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "sort": 400000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vensterArabast01.gdGHPerbX8DzQ8D5"
+    },
+    {
+      "_id": "HvOzFzF3j47WTzIv",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-family-ability-glossary.unR8VVR4yyRnsmnB"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Rejuvenation",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": "<p>Setting right the injustice that led to the commoner's death allows it to move on to the afterlife.</p>\n<hr />\n<p>When a ghost is destroyed, it re-forms after [[/br 2d4 #days]]{2d4 days} within the location it's bound to, fully healed. A ghost can be permanently destroyed only if someone determines the reason for its existence and sets right whatever prevents the spirit from resting.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "ghost-rejuvenation",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": true,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vensterArabast01.HvOzFzF3j47WTzIv"
+    },
+    {
+      "_id": "uYQrEbjjw3XIQ1cO",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-family-ability-glossary.aiwlPSmNY9b6Psvd"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Frightful Moan",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": "<p>The ghost laments its fate, forcing each living creature within @Template[type:emanation|distance:30]{30 feet} to attempt a @Check[type:will|dc:21] save. On a failure, a creature becomes @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened 2} (or @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened 3} on a critical failure). On a success, a creature is temporarily immune to this ghost's frightful moan for 1 minute.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "divine",
+            "emotion",
+            "enchantment",
+            "fear",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "ghost-frightful-moan",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vensterArabast01.uYQrEbjjw3XIQ1cO"
+    },
+    {
+      "_id": "1h9v3vILKQYAVpKr",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Dwelling Lore (applies to the place the ghost is bound to)",
+      "sort": 700000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 10
+        },
+        "proficient": {
+          "value": 0
         }
       },
-      "_key": "!actors.items!vensterArabast01.bI0X8pHxaU2M9qG9"
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vensterArabast01.1h9v3vILKQYAVpKr"
+    },
+    {
+      "_id": "ol85747StrQp4hsx",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Stealth",
+      "sort": 800000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 12
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vensterArabast01.ol85747StrQp4hsx"
     }
   ],
+  "name": "Venster Arabasti",
   "system": {
+    "attributes": {
+      "hp": {
+        "value": 30,
+        "temp": 0,
+        "max": 30,
+        "details": "negative healing, rejuvenation"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 0,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 25
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 20,
+        "details": ""
+      },
+      "perception": {
+        "value": 10
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 4
+      },
+      "source": {
+        "value": "Pathfinder Bestiary",
+        "author": ""
+      },
+      "creatureType": "Spirit",
+      "blurb": "",
+      "publicNotes": "<p>The ghost commoner is an ordinary person who believes they died unjustly, usually due to foul play or betrayal.</p>\n<hr />\n<p>When some mortals die through tragic circumstances or without closure, they can linger on in the world. These anguished souls haunt a locale significant to them in life, constantly trying to right their perceived wrong or wrongdoings.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Role (A88–A89):</strong> the king's tiefling stepbrother — Ileosa's poison-tool and first victim, walled up alive behind his own card-room (his bones lie at <strong>A11</strong>). <strong>The castle's kindest ghost and best informant:</strong> at A89 he can barely manifest (a misty horned old man rising from a harrow deck) until his bones are recovered — Zellara senses where they lie. Restored, he testifies that <strong>Ileosa poisoned King Eodred II</strong> (and that he shares the guilt), names her ritual — the <strong>Everdawn Pool</strong> in the <strong>Sunken Queen</strong>, fed by the lifeblood of thousands — and points the PCs to Domina's study (<strong>A90</strong>). See the A89 entry for his and Zellara's farewell gift.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "ghost",
+        "incorporeal",
+        "spirit",
+        "undead"
+      ],
+      "senses": {
+        "value": "darkvision"
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "paralyzed",
+          "poison",
+          "precision",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "exceptions": "except force, ghost touch, or positive; double resistance vs. non-magical",
+          "type": "all",
+          "value": 5
+        }
+      ],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "ci": []
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
     "abilities": {
       "str": {
-        "mod": 0
+        "mod": -5
       },
       "dex": {
         "mod": 3
@@ -127,122 +604,35 @@
         "mod": 0
       },
       "int": {
-        "mod": 2
+        "mod": 0
       },
       "wis": {
-        "mod": 3
+        "mod": 2
       },
       "cha": {
-        "mod": 4
+        "mod": 2
       }
     },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 22
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 80,
-        "temp": 0,
-        "value": 80
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 0
-      }
-    },
-    "details": {
-      "blurb": "Ghost of the murdered stepbrother (A89)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "infernal",
-          "shoanti",
-          "varisian"
-        ]
-      },
-      "level": {
-        "value": 6
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role (A88–A89):</strong> the king's tiefling stepbrother — Ileosa's poison-tool and first victim, walled up alive behind his own card-room (his bones lie at <strong>A11</strong>). <strong>The castle's kindest ghost and best informant:</strong> at A89 he can barely manifest (a misty horned old man rising from a harrow deck) until his bones are recovered — Zellara senses where they lie. Restored, he testifies that <strong>Ileosa poisoned King Eodred II</strong> (and that he shares the guilt), names her ritual — the <strong>Everdawn Pool</strong> in the <strong>Sunken Queen</strong>, fed by the lifeblood of thousands — and points the PCs to Domina's study (<strong>A90</strong>). See the A89 entry for his and Zellara's farewell gift.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 14,
-      "senses": []
-    },
-    "resources": {},
     "saves": {
       "fortitude": {
-        "saveDetail": "",
-        "value": 11
+        "value": 8,
+        "saveDetail": ""
       },
       "reflex": {
-        "saveDetail": "",
-        "value": 13
+        "value": 11,
+        "saveDetail": ""
       },
       "will": {
-        "saveDetail": "",
-        "value": 16
+        "value": 8,
+        "saveDetail": ""
       }
-    },
-    "skills": {
-      "society": {
-        "base": 15
-      },
-      "diplomacy": {
-        "base": 14
-      },
-      "occultism": {
-        "base": 12
-      },
-      "stealth": {
-        "base": 17
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "undead",
-        "ghost",
-        "incorporeal"
-      ]
     }
   },
-  "folder": "ch6CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
+  "type": "npc",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.pathfinder-bestiary.2H2AEwQnfKJC0nrd"
+    }
   },
   "prototypeToken": {
     "name": "Venster Arabasti",
@@ -316,5 +706,23 @@
       }
     }
   },
+  "effects": [],
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "vensterArabast01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch6CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!vensterArabast01"
 }

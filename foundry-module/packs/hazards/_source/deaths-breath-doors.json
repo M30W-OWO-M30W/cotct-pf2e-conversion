@@ -1,59 +1,6 @@
 {
-  "_id": "ch2DeathsBreath1",
   "name": "Death's Breath Doors (G1)",
   "type": "hazard",
-  "img": "systems/pf2e/icons/default-icons/hazard.svg",
-  "items": [
-    {
-      "_id": "YrAyIDhBFsF0IR3Y",
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Reaping Scythes",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "reaction"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": null,
-        "description": {
-          "value": "<p><strong>Trigger</strong> A creature that is not a worshiper of Urgathoa touches the north door or the eastern double doors.</p><hr /><p><strong>Effect</strong> The painted skeletons strike out of the mural: scythe +20 vs. each creature within 5 feet of any of the warded doors, @Damage[2d10+9[slashing]] (deadly — a critical hit also leaves the target @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}). The skulls then exhale <strong>ungol dust</strong> through the whole of G1: each breathing creature there attempts a @Check[type:fortitude|dc:26], taking @Damage[2d6[poison]] and becoming @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} and @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} on a failure (Drained 2 on a critical failure). The gas disperses after 1 round.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!ch2DeathsBreath1.YrAyIDhBFsF0IR3Y"
-    }
-  ],
-  "folder": "ch2HazardsFld001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Death's Breath Doors (G1)",
     "displayName": 20,
@@ -82,7 +29,7 @@
       "alphaThreshold": 0.75
     },
     "bar1": {
-      "attribute": "attributes.hp"
+      "attribute": null
     },
     "bar2": {
       "attribute": null
@@ -119,84 +66,317 @@
         "max": 1
       }
     },
-    "flags": {
-      "pf2e": {
-        "linkToActorSize": true,
-        "autoscale": true
-      }
-    }
+    "flags": {}
   },
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "system": {
-    "attributes": {
-      "emitsSound": "encounter",
-      "hardness": 14,
-      "stealth": {
-        "details": "Trained — the painted scythe-skeletons' arms are subtly raised off the plaster.",
-        "value": 16
-      },
-      "hasHealth": true,
-      "hp": {
-        "details": "",
-        "max": 56,
-        "temp": 0,
-        "tempmax": 0,
-        "value": 56
-      },
-      "immunities": [
-        {
-          "type": "critical-hits"
-        },
-        {
-          "type": "precision"
-        }
-      ],
-      "ac": {
-        "value": 27
-      }
+    "source": {
+      "value": "",
+      "author": ""
     },
     "creatureType": "",
+    "saves": {
+      "fortitude": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 0,
+        "saveDetail": ""
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 0
+      },
+      "hp": {
+        "value": 0,
+        "max": 0,
+        "temp": 0,
+        "details": ""
+      },
+      "hardness": 0,
+      "stealth": {
+        "value": 16,
+        "details": "<p>(trained)</p>\n<hr>\n<p>@Check[type:religion|dc:26] or @Check[type:occultism|dc:26] (expert) to understand the alignment restrictions. If either door takes at least 10 points of positive damage without someone touching either door in the process, the trap is neutralized for 1 minute before it resets.</p>"
+      },
+      "emitsSound": "encounter"
+    },
     "details": {
-      "description": "<p>Potent Urgathoan wards seal the north door and the eastern double doors of the temple's entry hall (G1). The skeletons painted around them animate to reap any non-Urgathoan who touches either door, and their painted mouths vent ungol-dust gas into the room.</p><p><strong>Linked alarm:</strong> triggering the doors also sets off an <em>alarm</em> in G8, alerting every creature in G8–G13 (see The Temple Under Alert).</p><p><strong>Bypass:</strong> if a door is bathed in at least 10 points of vitality/positive energy (a channeled 3-action <em>heal</em>, for example) without anyone touching it, the ward is neutralized for 1 minute before it re-arms.</p>",
-      "disable": "@Check[type:thievery|dc:28] (expert) to scribe out the wards on a door without touching it, or <em>dispel magic</em> (4th rank, counteract DC 26) against each warded door.",
-      "isComplex": false,
+      "isComplex": true,
       "level": {
         "value": 8
       },
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      },
-      "reset": "<p>The wards re-arm automatically after 1 minute.</p>",
-      "routine": ""
-    },
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 15
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 12
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 0
-      }
+      "disable": "<p>@Check[type:thievery|dc:28] (expert) to safely disable the pressure switch without triggering the wards, or dispel magic (3rd level; counteract DC 26) to counteract the ward.</p>",
+      "description": "<p>The double doors on the eastern walls and the door to the north bear potent magical and mechanical wards meant to bar all non-Urgathoans from the rooms beyond.</p><hr /><h3>Conversion notes (this module)</h3><p>Potent Urgathoan wards seal the north door and the eastern double doors of the temple's entry hall (G1). The skeletons painted around them animate to reap any non-Urgathoan who touches either door, and their painted mouths vent ungol-dust gas into the room.</p><p><strong>Linked alarm:</strong> triggering the doors also sets off an <em>alarm</em> in G8, alerting every creature in G8–G13 (see The Temple Under Alert).</p><p><strong>Bypass:</strong> if a door is bathed in at least 10 points of vitality/positive energy (a channeled 3-action <em>heal</em>, for example) without anyone touching it, the ward is neutralized for 1 minute before it re-arms.</p>",
+      "reset": "<p>The trap resets after 10 minutes and the animated skeletons return to their painting forms.</p>",
+      "routine": "<p><span class=\"pf2-icon\">T</span> On its first turn, the skulls of the skeletons painted on the wall animate, filling each square surrounding the door with a poisonous cloud. On each subsequent turn, the poison cloud spreads into a number of additional squares equal to half the number of squares the poison currently occupies, with a minimum of 1 square. The GM decides the squares the poison spreads to. Any creature that ends its turn in a square filled with poison is subjected to the effects of death's breath poison. Lastly, the trap makes a scythe Strike against any creature with an alignment other than neutral evil within 5 feet of the door.</p>"
     },
     "statusEffects": [],
     "traits": {
-      "rarity": "common",
+      "value": [
+        "magical",
+        "mechanical",
+        "poison",
+        "trap"
+      ],
+      "rarity": "uncommon",
       "size": {
         "value": "med"
       },
-      "value": [
-        "magical",
-        "trap",
-        "poison"
-      ]
+      "di": {
+        "custom": "",
+        "value": [],
+        "selected": {}
+      },
+      "dr": [],
+      "dv": []
+    },
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:39.086+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
     }
   },
+  "items": [
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Death's Breath",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> Any creature of an alignment other than neutral evil touches the door</p>\n<p><strong>Effect</strong> The door's wards activate, animating the skeletons painted on the wall surrounding the door to make a scythe Strike against the triggering creature, then rolls initiative.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "attack",
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "YY1jC6BBqMzSt0pe",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668467593738,
+        "modifiedTime": 1668467634596,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch2DeathsBreath1.YY1jC6BBqMzSt0pe"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Scythe",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "R7OL6HWPeEzQsrKm": {
+            "damage": "2d10+9",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 21
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "tPQ3xaYGGUMy76Ef",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668467796665,
+        "modifiedTime": 1668467816755,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch2DeathsBreath1.tPQ3xaYGGUMy76Ef"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/default-icons/mystery-man.svg",
+      "name": "Death's Breath Poison",
+      "system": {
+        "description": {
+          "value": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:20]</p>\n<p><strong>Maximum Duration</strong> 1 hour</p>\n<p><strong>Stage 1</strong> @Compendium[pf2e.conditionitems.Slowed]{Slowed 1} (1 round)</p>\n<p><strong>Stage 2</strong> @Compendium[pf2e.conditionitems.Slowed]{Slowed 2} (1 minute)</p>\n<p><strong>Stage 3</strong> @Compendium[pf2e.conditionitems.Unconscious]{Unconscious} with no check to wake up (1 round)</p>\n<p><strong>Stage 4</strong> unconscious with no perception check to wake up (1 hour).</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "Q4bJxLMeNh0pi7Wz",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668467848629,
+        "modifiedTime": 1668467873115,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch2DeathsBreath1.Q4bJxLMeNh0pi7Wz"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "pf2e": {
+      "editHazard": {
+        "value": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "ch2DeathsBreath1",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch2HazardsFld001",
+  "sort": 0,
   "_key": "!actors!ch2DeathsBreath1"
 }

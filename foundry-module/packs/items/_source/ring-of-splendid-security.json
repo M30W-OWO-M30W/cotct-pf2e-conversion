@@ -1,14 +1,106 @@
 {
-  "_id": "appRingSplendid1",
-  "img": "systems/pf2e/icons/default-icons/equipment.svg",
   "name": "Ring of Splendid Security",
   "type": "equipment",
-  "folder": "appItemFolder001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
+  "system": {
+    "description": {
+      "value": "<p>This extravagant ring is heavy with precious jewels. As fashions change, you can alter the appearance of your armor, clothing, and even weaponry at will; this change is illusory and doesn't affect the actual abilities of gear or weapons (although drastic changes in size are beyond the scope of this ability).</p>\n<p>The rings primary purpose, though, is to grant the wearer protection from harm. As long as it is worn, you gain a +3 item bonus to your AC, and a +2 item bonus to saving throws.</p>\n<hr>\n<p><strong>Activate</strong> <span class=\"pf2-icon\">D</span> envision, Interact</p>\n<p><strong>Effect</strong> You change the shape and appearance of your armor and weapons to appear as ordinary or fine clothes of your imagining. The armor and weapon's statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Queen Ileosa's ring</strong> (Appendix 5; PF1e 180,000 gp → 18,000 gp). Invested ring of warded vanity.</p><ul><li><strong>Glamour at will</strong> (1 action, illusion): restyle the apparent fashion of your worn armor, clothing, and weapons — no mechanical change, no drastic size change.</li><li><strong>Worn wards:</strong> +1 item bonus to AC and to all saving throws (already included in Queen Ileosa's stat block).</li><li><strong>Splendid Security</strong> (reaction, 1/hour): when targeted by an attack, spell, or effect, gain a +2 circumstance bonus to your AC or save against it.</li></ul>"
+    },
+    "source": {
+      "value": ""
+    },
+    "traits": {
+      "value": [
+        "abjuration",
+        "illusion",
+        "invested",
+        "magical"
+      ],
+      "rarity": "common",
+      "custom": "",
+      "otherTags": []
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "label": "Ring of Splendid Security",
+        "selector": "ac",
+        "value": 3,
+        "type": "item"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "value": 2,
+        "label": "Ring of Splendid Security"
+      }
+    ],
+    "slug": null,
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "hp": {
+      "brokenThreshold": 0,
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "weight": {
+      "value": "-"
+    },
+    "equippedBulk": {
+      "value": ""
+    },
+    "price": {
+      "value": {
+        "gp": 10000
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "stackGroup": null,
+    "negateBulk": {
+      "value": "0"
+    },
+    "containerId": null,
+    "preciousMaterial": {
+      "value": null
+    },
+    "preciousMaterialGrade": {
+      "value": null
+    },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "Unusual Object",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "wornring"
+    },
+    "level": {
+      "value": 16
+    }
   },
-  "flags": {},
+  "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/specialists-ring.webp",
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Item.P1wAWrSRevCUzLxP"
+    }
+  },
   "_stats": {
     "systemId": "pf2e",
     "systemVersion": "8.2.0",
@@ -20,57 +112,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "system": {
-    "baseItem": null,
-    "bulk": {
-      "value": 0.1
-    },
-    "containerId": null,
-    "description": {
-      "value": "<p><strong>Queen Ileosa's ring</strong> (Appendix 5; PF1e 180,000 gp → 18,000 gp). Invested ring of warded vanity.</p><ul><li><strong>Glamour at will</strong> (1 action, illusion): restyle the apparent fashion of your worn armor, clothing, and weapons — no mechanical change, no drastic size change.</li><li><strong>Worn wards:</strong> +1 item bonus to AC and to all saving throws (already included in Queen Ileosa's stat block).</li><li><strong>Splendid Security</strong> (reaction, 1/hour): when targeted by an attack, spell, or effect, gain a +2 circumstance bonus to your AC or save against it.</li></ul>"
-    },
-    "equipped": {
-      "carryType": "worn",
-      "handsHeld": 0,
-      "invested": null
-    },
-    "hardness": 0,
-    "hp": {
-      "max": 0,
-      "value": 0
-    },
-    "level": {
-      "value": 18
-    },
-    "material": {
-      "grade": null,
-      "type": null
-    },
-    "price": {
-      "value": {
-        "gp": 18000
-      }
-    },
-    "publication": {
-      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-      "authors": "",
-      "license": "OGL",
-      "remaster": true
-    },
-    "quantity": 1,
-    "rules": [],
-    "size": "med",
-    "slug": null,
-    "traits": {
-      "rarity": "rare",
-      "value": [
-        "invested",
-        "magical"
-      ]
-    },
-    "usage": {
-      "value": "worn"
-    }
+  "_id": "appRingSplendid1",
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
   },
   "_key": "!items!appRingSplendid1"
 }

@@ -1,134 +1,879 @@
 {
-  "_id": "queensPhysician1",
-  "name": "Queen's Physician",
-  "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "hjEmx4uCgePijVQj",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Club",
-      "sort": 0,
-      "type": "melee",
+      "_id": "Z6BNfng94z1xdzn3",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.nOFcCidD5AwVZWTv"
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/weapons/war-razor.webp",
+      "name": "Scalpel",
+      "sort": 100000,
       "system": {
+        "description": {
+          "value": "<p>A war razor is an exaggerated version of the barbers' tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "backstabber",
+            "deadly-d8",
+            "finesse"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "war-razor",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 3,
+        "baseItem": "war-razor",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 1
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d4",
+          "damageType": "slashing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": null
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!queensPhysician1.Z6BNfng94z1xdzn3"
+    },
+    {
+      "_id": "s5e6CueENejAHsP7",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.s1vB3HdXjMigYAnY"
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/adventuring-gear/healers-kit.webp",
+      "name": "Healer's Tools",
+      "sort": 200000,
+      "system": {
+        "description": {
+          "value": "<p>This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "healers-tools",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 5
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "level": {
+          "value": 0
+        }
+      },
+      "type": "equipment",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!queensPhysician1.s5e6CueENejAHsP7"
+    },
+    {
+      "_id": "JbPgkPBw6I7dZFcQ",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Scalpel",
+      "sort": 300000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
         "attack": {
           "value": ""
         },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 9
-        },
         "damageRolls": {
           "0": {
-            "damage": "1d6+2",
-            "damageType": "bludgeoning"
+            "damage": "1d4+1",
+            "damageType": "slashing"
           }
         },
+        "bonus": {
+          "value": 11
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!queensPhysician1.JbPgkPBw6I7dZFcQ"
+    },
+    {
+      "_id": "YgMj9CaUadOgAwPl",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Scalpel",
+      "sort": 400000,
+      "system": {
         "description": {
           "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "thrown-10",
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile"
-          ]
-        }
-      },
-      "_key": "!actors.items!queensPhysician1.hjEmx4uCgePijVQj"
-    },
-    {
-      "_id": "vAALf0TVCEI9IYqo",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Sneak Attack",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>The physician deals 1d6 extra precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [
-          {
-            "key": "DamageDice",
-            "selector": "strike-damage",
-            "category": "precision",
-            "diceNumber": 1,
-            "dieSize": "d6",
-            "predicate": [
-              "target:condition:off-guard"
-            ]
-          },
-          {
-            "key": "RollOption",
-            "domain": "all",
-            "option": "target:condition:off-guard",
-            "toggleable": "totm",
-            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
           }
-        ],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "rogue"
-          ]
-        }
-      },
-      "_key": "!actors.items!queensPhysician1.vAALf0TVCEI9IYqo"
-    },
-    {
-      "_id": "d56RaH47niwb1Ism",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Beaked Mask",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
         },
-        "actions": {
-          "value": null
+        "weaponType": {
+          "value": "ranged"
         },
-        "category": "defensive",
-        "description": {
-          "value": "<p>The physician's @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.appPlagueMask001]{plaguebringer's mask} hides its evil and Urgathoan faith and filters the air — it gains a +1 item bonus to saves vs. diseases and inhaled threats and is <strong>immune to blood veil</strong>. Lifting the mask to 'prove' a human face does not remove it or end its effect.</p>"
+        "attack": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "damageRolls": {
+          "0": {
+            "damage": "1d4+1",
+            "damageType": "slashing"
+          }
         },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
+        "bonus": {
+          "value": 11
+        },
+        "attackEffects": {
           "value": []
         }
       },
-      "_key": "!actors.items!queensPhysician1.d56RaH47niwb1Ism"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!queensPhysician1.YgMj9CaUadOgAwPl"
+    },
+    {
+      "_id": "F7IHKiavOdLoatuo",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Doctor's Hand",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": "<p>When the surgeon rolls a critical failure on a check to @UUID[Compendium.pf2e.actionspf2e.TC7OcDa7JlWbqMaN]{Treat Disease}, @UUID[Compendium.pf2e.actionspf2e.KjoCEEmPGTeFE4hh]{Treat Poison}, or @UUID[Compendium.pf2e.actionspf2e.1kGNdIIhuglAjIp9]{Treat Wounds}, they get a failure instead.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "adjustment": {
+              "criticalFailure": "one-degree-better"
+            },
+            "key": "AdjustDegreeOfSuccess",
+            "predicate": [
+              {
+                "or": [
+                  "action:treat-wounds",
+                  "action:treat-disease",
+                  "action:treat-poison"
+                ]
+              }
+            ],
+            "selector": "medicine",
+            "type": "skill"
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!queensPhysician1.F7IHKiavOdLoatuo"
+    },
+    {
+      "_id": "Q95qJwP5SCa0IlGu",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Medical Malpractice",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": "<p>The surgeon attempts a Medicine check against the Fortitude DC of one living creature they can see within 60 feet.</p>\n<p>On a success, the surgeon's melee Strikes deal an extra [[/r {1d6}[precision]]]{1d6 precision damage} against that creature ([[/r {2d6}[precision]]]{2d6 precision damage} on a critical success) until 1 minute passes or the surgeon critically hits that creature, whichever comes first.</p>\n<p>Using this action again designates a new target and ends the effect for any previous target. A surgeon can target an individual creature no more than once per day with this ability.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "domain": "all",
+            "key": "RollOption",
+            "option": "medical-malpractice",
+            "toggleable": true
+          },
+          {
+            "domain": "all",
+            "key": "RollOption",
+            "label": "Medical Malpractice (Critical Success)",
+            "option": "medical-malpractice-crit",
+            "toggleable": true
+          },
+          {
+            "category": "precision",
+            "diceNumber": 1,
+            "dieSize": "d6",
+            "key": "DamageDice",
+            "predicate": [
+              "medical-malpractice"
+            ],
+            "selector": "strike-damage"
+          },
+          {
+            "category": "precision",
+            "diceNumber": 2,
+            "dieSize": "d6",
+            "key": "DamageDice",
+            "predicate": [
+              "medical-malpractice-crit"
+            ],
+            "selector": "strike-damage"
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1669411886504,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!queensPhysician1.Q95qJwP5SCa0IlGu"
+    },
+    {
+      "_id": "QIRnV7ARjaqPa77i",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Crafting",
+      "sort": 700000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 10
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!queensPhysician1.QIRnV7ARjaqPa77i"
+    },
+    {
+      "_id": "dozxqjoRyi4eoisR",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Diplomacy",
+      "sort": 800000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 8
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!queensPhysician1.dozxqjoRyi4eoisR"
+    },
+    {
+      "_id": "0q0T8gJLXTvtrX8J",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Medicine",
+      "sort": 900000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 16
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!queensPhysician1.0q0T8gJLXTvtrX8J"
+    },
+    {
+      "type": "equipment",
+      "img": "systems/pf2e/icons/equipment/worn-items/apex-items/mask-of-allure.webp",
+      "name": "Plaguebringer's Mask",
+      "_id": "3nS2zsXEhPK3FBqr",
+      "system": {
+        "description": {
+          "value": "<p>Resembling the more common nonmagical plague mask, a plaguebringer's mask grants a +1 item bonus on saving throws against nauseating scents and immunity to one specific disease (the disease must be chosen at the time of the mask's creation). The mask also veils the wearer's alignment, making their aura register as neutral to alignment-detecting effects.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "conjuration",
+            "invested",
+            "magical",
+            "necromancy"
+          ],
+          "rarity": "uncommon",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.487+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 160
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0,
+          "inSlot": false
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Object",
+            "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornmask"
+        },
+        "level": {
+          "value": 5
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668690963764,
+        "modifiedTime": 1668691175687,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!queensPhysician1.3nS2zsXEhPK3FBqr"
     },
     {
       "name": "Leather Armor",
@@ -222,12 +967,12 @@
       "_stats": {
         "compendiumSource": "Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA"
       },
-      "_id": "OULUiQuso5cIqvoi",
+      "_id": "vAALf0TVCEI9IYqo",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "_key": "!actors.items!queensPhysician1.OULUiQuso5cIqvoi"
+      "_key": "!actors.items!queensPhysician1.vAALf0TVCEI9IYqo"
     },
     {
       "name": "Club",
@@ -313,211 +1058,137 @@
           "carryType": "worn"
         }
       },
-      "_id": "DY4BKujTO08Fcg0J",
+      "_id": "d56RaH47niwb1Ism",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "_key": "!actors.items!queensPhysician1.DY4BKujTO08Fcg0J"
-    },
-    {
-      "_id": "d2PW86qnk0TY7Ifp",
-      "img": "systems/pf2e/icons/default-icons/equipment.svg",
-      "name": "Healer's Kit",
-      "type": "equipment",
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "flags": {},
-      "_stats": {
-        "systemId": "pf2e",
-        "systemVersion": "8.2.0",
-        "coreVersion": "14.363",
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "createdTime": 0,
-        "modifiedTime": 0,
-        "lastModifiedBy": null
-      },
-      "system": {
-        "baseItem": null,
-        "bulk": {
-          "value": 0.1
-        },
-        "containerId": null,
-        "description": {
-          "value": "<p>Bandages and herbs for Treat Wounds — part of the physician's convincing disguise.</p>"
-        },
-        "equipped": {
-          "carryType": "worn",
-          "handsHeld": 0,
-          "invested": null
-        },
-        "hardness": 0,
-        "hp": {
-          "max": 0,
-          "value": 0
-        },
-        "level": {
-          "value": 0
-        },
-        "material": {
-          "grade": null,
-          "type": null
-        },
-        "price": {
-          "value": {
-            "gp": 5
-          }
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "quantity": 1,
-        "rules": [],
-        "size": "med",
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        },
-        "usage": {
-          "value": "worn"
-        }
-      },
-      "_key": "!actors.items!queensPhysician1.d2PW86qnk0TY7Ifp"
+      "_key": "!actors.items!queensPhysician1.d56RaH47niwb1Ism"
     }
   ],
+  "name": "Queen's Physician",
   "system": {
+    "attributes": {
+      "hp": {
+        "value": 30,
+        "temp": 0,
+        "max": 30,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 17,
+        "details": ""
+      },
+      "perception": {
+        "value": 14
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "N"
+      },
+      "level": {
+        "value": 2
+      },
+      "source": {
+        "value": "Pathfinder Gamemastery Guide",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<p>The surgeon specializes in the physical alteration of the body to prevent the spread of disease, removing necrotic and decaying flesh to help the whole to survive. Few healers know the science of anatomy and physiology better than the surgeon. While their expertise is of grave importance in the medical world, the downside is that when one is in need of their talents, it is likely the complaint is serious. In medical matters, a surgeon is a 6th-level challenge.</p>\n<hr />\n<p>The world is a dangerous place. Thankfully, there are those who devote their lives to easing the pain and suffering of others.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Role:</strong> one of Dr. Davaulus's masked 'Queen's Physicians' — secretly Urgathoa cultists who <em>spread</em> blood veil under cover of treating it. Recurring Ch.2 antagonist.</p><p><strong>Tactics:</strong> they fight in eerie silence, coordinating by hand-signal to flank for Sneak Attacks. <strong>Morale:</strong> as zealots, they rarely flee.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "human",
+        "humanoid"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "ci": []
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:37.486+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
     "abilities": {
       "str": {
-        "mod": 2
+        "mod": 1
       },
       "dex": {
-        "mod": 4
+        "mod": 3
       },
       "con": {
         "mod": 1
       },
       "int": {
-        "mod": 1
+        "mod": 2
       },
       "wis": {
-        "mod": 0
+        "mod": 4
       },
       "cha": {
-        "mod": -1
+        "mod": 0
       }
     },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 18
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 30,
-        "temp": 0,
-        "value": 30
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 25
-      }
-    },
-    "details": {
-      "blurb": "Masked Urgathoan plague-spreader",
-      "languages": {
-        "details": "",
-        "value": [
-          "common"
-        ]
-      },
-      "level": {
-        "value": 2
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> one of Dr. Davaulus's masked 'Queen's Physicians' — secretly Urgathoa cultists who <em>spread</em> blood veil under cover of treating it. Recurring Ch.2 antagonist.</p><p><strong>Tactics:</strong> they fight in eerie silence, coordinating by hand-signal to flank for Sneak Attacks. <strong>Morale:</strong> as zealots, they rarely flee.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 8,
-      "senses": []
-    },
-    "resources": {},
     "saves": {
       "fortitude": {
-        "saveDetail": "",
-        "value": 6
+        "value": 7,
+        "saveDetail": ""
       },
       "reflex": {
-        "saveDetail": "",
-        "value": 9
+        "value": 7,
+        "saveDetail": ""
       },
       "will": {
-        "saveDetail": "",
-        "value": 6
+        "value": 10,
+        "saveDetail": ""
       }
-    },
-    "skills": {
-      "stealth": {
-        "base": 8
-      },
-      "deception": {
-        "base": 6
-      },
-      "medicine": {
-        "base": 6
-      },
-      "religion": {
-        "base": 6
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "humanoid",
-        "human"
-      ]
     }
   },
-  "folder": "ch2CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
+  "type": "npc",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.npc-gallery.wfsT2QDtQhsFXQfE"
+    }
   },
   "prototypeToken": {
     "name": "Queen's Physician",
@@ -591,5 +1262,23 @@
       }
     }
   },
+  "effects": [],
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "queensPhysician1",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch2CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!queensPhysician1"
 }

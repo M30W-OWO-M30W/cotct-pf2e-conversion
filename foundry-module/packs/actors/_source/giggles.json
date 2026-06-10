@@ -1,258 +1,1547 @@
 {
-  "_id": "mHUhxeaalWkTU1h4",
   "name": "Giggles",
   "type": "npc",
+  "prototypeToken": {
+    "name": "Giggles",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
   "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 23,
+        "temp": 0,
+        "max": 23,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 18,
+        "details": ""
+      },
+      "perception": {
+        "value": 6
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 1
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Male half-orc criminal brute",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> muscle on the main floor (A8); tries to <strong>capture</strong> PCs nonlethally for Gaedren, then fights to the death. Carries 3 @UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]{Minor Healing Potions}.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "human",
+        "humanoid",
+        "orc"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:38.586+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": -1
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 8,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 7,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 4,
+        "saveDetail": ""
+      }
+    }
+  },
   "items": [
     {
-      "_id": "PS0cKvVYfNPtgOfN",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Flail",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 7
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d6+5",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": "flail",
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "sweep",
-            "trip"
-          ]
-        }
-      },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.PS0cKvVYfNPtgOfN"
-    },
-    {
-      "_id": "Ld8oDLUDiLPUyWzN",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Fist",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 7
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d4+5",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "nonlethal",
-            "unarmed"
-          ]
-        }
-      },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.Ld8oDLUDiLPUyWzN"
-    },
-    {
-      "_id": "zgRJJ9CuqDK5vXTC",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Composite Longbow",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 5
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d6+3",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "range-increment-100",
-            "deadly-d10",
-            "propulsive"
-          ]
-        }
-      },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.zgRJJ9CuqDK5vXTC"
-    },
-    {
-      "_id": "F7XuVemc38d7fcxk",
+      "_id": "ahrjHciTNXBbU6GX",
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Bludgeoner",
-      "sort": 0,
-      "type": "action",
+      "name": "Darkvision",
       "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
         "actionType": {
           "value": "passive"
         },
+        "actionCategory": {
+          "value": "interaction"
+        },
         "actions": {
           "value": null
         },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Giggles can deal nonlethal damage with his Flail without taking a penalty, and gains a +1 circumstance bonus to the attack roll when he does so.</p>"
+        "requirements": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "trigger": {
+          "value": ""
         },
-        "rules": [
-          {
-            "key": "RollOption",
-            "domain": "all",
-            "option": "bludgeoner",
-            "toggleable": true
-          },
-          {
-            "key": "AdjustStrike",
-            "mode": "add",
-            "property": "weapon-traits",
-            "value": "nonlethal",
-            "definition": [
-              "item:slug:flail"
-            ],
-            "predicate": [
-              "bludgeoner"
-            ]
-          },
-          {
-            "key": "FlatModifier",
-            "selector": "flail-attack",
-            "type": "circumstance",
-            "value": 1,
-            "predicate": [
-              "bludgeoner"
-            ]
-          }
-        ],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
+        "deathNote": false,
+        "weapon": {
+          "value": ""
         }
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.F7XuVemc38d7fcxk"
-    },
-    {
-      "_id": "59DhJ6Q6UYWziw9B",
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Orc Ferocity",
-      "sort": 0,
       "type": "action",
-      "system": {
-        "actionType": {
-          "value": "reaction"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Trigger</strong> Giggles is reduced to 0 HP.</p><hr /><p><strong>Effect</strong> He stays at 1 HP and becomes @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded 1} (or increases his wounded value by 1). Once per day.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
         }
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.59DhJ6Q6UYWziw9B"
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668421924386,
+        "modifiedTime": 1668421924386,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.ahrjHciTNXBbU6GX"
     },
     {
-      "_id": "AAvQAu4u8fUFX6dM",
-      "img": "systems/pf2e/icons/default-icons/lore.svg",
-      "name": "Brawling Lore",
-      "sort": 0,
+      "name": "Acrobatics",
       "type": "lore",
       "system": {
         "description": {
           "value": ""
         },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
         "mod": {
-          "value": 5
+          "value": 4
         },
         "proficient": {
           "value": 0
+        }
+      },
+      "_id": "UUjaHhQH0xPnfuqg",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668421941056,
+        "modifiedTime": 1668421996566,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.UUjaHhQH0xPnfuqg"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
-        "slug": null
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 7
+        },
+        "proficient": {
+          "value": 0
+        }
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.AAvQAu4u8fUFX6dM"
+      "_id": "T8nDFyl6ASt7DJdT",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668421942672,
+        "modifiedTime": 1668421996566,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.T8nDFyl6ASt7DJdT"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 4
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "JLgXFEPOmfcNebFf",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668421981780,
+        "modifiedTime": 1668421996567,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.JLgXFEPOmfcNebFf"
+    },
+    {
+      "name": "Survival",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 4
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "lWp0WYrHTBb11XCJ",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668421987042,
+        "modifiedTime": 1668421996567,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.lWp0WYrHTBb11XCJ"
+    },
+    {
+      "_id": "1RLcMzsQIm9HVaFc",
+      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
+      "name": "Chain Mail",
+      "system": {
+        "description": {
+          "value": "<p>A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh. It typically includes a chain shirt, leggings, a pair of arms, and a coif, collectively protecting most of the body.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "flexible",
+            "noisy"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "chain-mail",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "chain-mail",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "3"
+        },
+        "equippedBulk": {
+          "value": "2"
+        },
+        "price": {
+          "value": {
+            "gp": 6
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "inSlot": false
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornarmor"
+        },
+        "level": {
+          "value": 0
+        },
+        "armor": {
+          "value": 4
+        },
+        "category": "medium",
+        "group": "chain",
+        "strength": {
+          "value": 16
+        },
+        "dex": {
+          "value": 1
+        },
+        "check": {
+          "value": -2
+        },
+        "speed": {
+          "value": -5
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "resiliencyRune": {
+          "value": ""
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Kf4eJEXnFPuAsseP"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422033328,
+        "modifiedTime": 1668422033328,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.1RLcMzsQIm9HVaFc"
+    },
+    {
+      "_id": "PYYCf6iImRZr4JxP",
+      "img": "systems/pf2e/icons/equipment/weapons/flail.webp",
+      "name": "Flail",
+      "system": {
+        "description": {
+          "value": "<p>This weapon consists of a wooden handle attached to a spiked ball or cylinder by a chain, rope, or strap of leather.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "disarm",
+            "sweep",
+            "trip"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "flail",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "flail",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "flail",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d6",
+          "damageType": "bludgeoning"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.t5FbyZtRL4qV0V7k"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422085944,
+        "modifiedTime": 1668422085944,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.PYYCf6iImRZr4JxP"
+    },
+    {
+      "_id": "JcJzHY8mEIUAqDUc",
+      "img": "systems/pf2e/icons/equipment/weapons/crossbow.webp",
+      "name": "Crossbow",
+      "system": {
+        "description": {
+          "value": "<p>This ranged weapon has a bow-like assembly mounted on a handled frame called a tiller. The tiller has a mechanism to lock the bowstring in place, attached to a trigger mechanism that releases the tension and launches a bolt.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "crossbow",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "crossbow",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "bow",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 120,
+        "reload": {
+          "value": "1"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.62nnVQvGhoVLLl2K"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422097858,
+        "modifiedTime": 1668422097858,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.JcJzHY8mEIUAqDUc"
+    },
+    {
+      "_id": "TUVlp1NahylJQNZL",
+      "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
+      "name": "Bolts",
+      "system": {
+        "description": {
+          "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "bolts",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 10,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 1
+          },
+          "per": 10
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": "bolts",
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 0
+        },
+        "consumableType": {
+          "value": "ammo"
+        },
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.AITVZmakiu3RgfKo"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422110817,
+        "modifiedTime": 1668422110817,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.TUVlp1NahylJQNZL"
+    },
+    {
+      "_id": "oiUqSCJMASSKsxv4",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Attack of Opportunity",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "attack-of-opportunity",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.hFtNbo1LKYCoDy2O"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422170855,
+        "modifiedTime": 1668422170855,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.oiUqSCJMASSKsxv4"
+    },
+    {
+      "_id": "0j3ejtNFZPTBwZm3",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Ferocity",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Ferocity]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "ferocity",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": true,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.N1kstYbHScxgUQtN"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422177575,
+        "modifiedTime": 1668422177575,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.0j3ejtNFZPTBwZm3"
+    },
+    {
+      "name": "Flail",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "disarm",
+            "sweep",
+            "trip"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "Ilniy5W8UiXdxVzP": {
+            "damage": "1d6+5",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 7
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "PYYCf6iImRZr4JxP"
+        }
+      },
+      "_id": "EubIGDlgG8admORJ",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422191771,
+        "modifiedTime": 1668422211708,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.EubIGDlgG8admORJ"
+    },
+    {
+      "name": "Crossbow",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "range-increment-120",
+            "reload-1"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "i9bn8ucFNvJ8iyac": {
+            "damage": "1d8",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 5
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "JcJzHY8mEIUAqDUc"
+        }
+      },
+      "_id": "q9fAlHokS552HiD3",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422193223,
+        "modifiedTime": 1668422227722,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.q9fAlHokS552HiD3"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Bludgeoner",
+      "system": {
+        "description": {
+          "value": "<p>Giggles doesn't take the normal penalty for making a nonlethal attack when attacking with his flail.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "NOwIuvvlBXXaOb9o",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668422235060,
+        "modifiedTime": 1668422251196,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.NOwIuvvlBXXaOb9o"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Threaten the Lambs",
+      "system": {
+        "description": {
+          "value": "<p>Giggles threatens and insults any children present. Attempt a @Compendium[pf2e.actionspf2e.Demoralize]{Demoralize} check on any Lambs in the Fishery present in the area. On a success, any Lambs in the Fishery in Giggles' area that have been made helpful to the PC's are instead reverted to harmful actions towards the PC's.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "emotion"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.586+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "ptj5JXjE9aecQN3b",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1668422259657,
+        "modifiedTime": 1669411310070,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.ptj5JXjE9aecQN3b"
     },
     {
       "name": "Healing Potion (Minor)",
@@ -359,143 +1648,6 @@
         "default": 0
       },
       "_key": "!actors.items!mHUhxeaalWkTU1h4.ly35HxgEvAmNZ6KI"
-    },
-    {
-      "name": "Flail",
-      "type": "weapon",
-      "img": "systems/pf2e/icons/equipment/weapons/flail.webp",
-      "system": {
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.t5FbyZtRL4qV0V7k]</p>",
-          "gm": ""
-        },
-        "rules": [],
-        "slug": "flail",
-        "_migration": {
-          "version": 0.955,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.953,
-            "foundry": "13.351",
-            "system": "7.12.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [
-            "disarm",
-            "sweep",
-            "trip"
-          ],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "Pathfinder Core Rulebook",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "flail",
-        "bulk": {
-          "value": 1
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "gp": 1
-          }
-        },
-        "equipped": {
-          "carryType": "worn",
-          "handsHeld": 0,
-          "invested": null
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Flail",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "category": "martial",
-        "group": "flail",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "dice": 1,
-          "die": "d6",
-          "damageType": "bludgeoning",
-          "persistent": null
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "expend": null,
-        "ammo": null,
-        "reload": {
-          "value": null
-        },
-        "grade": null,
-        "runes": {
-          "potency": 0,
-          "striking": 0,
-          "property": []
-        },
-        "specific": null,
-        "subitems": [],
-        "bonusDamage": {
-          "value": 0
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        }
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.t5FbyZtRL4qV0V7k"
-      },
-      "_id": "PUoZqlddLG5xFxdB",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.PUoZqlddLG5xFxdB"
     },
     {
       "name": "Composite Longbow",
@@ -633,223 +1785,9 @@
         "default": 0
       },
       "_key": "!actors.items!mHUhxeaalWkTU1h4.BmnAH8nXFFbtpHdU"
-    },
-    {
-      "name": "Chain Mail",
-      "type": "armor",
-      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
-      "system": {
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP]</p>",
-          "gm": ""
-        },
-        "rules": [],
-        "slug": "chain-mail",
-        "_migration": {
-          "version": 0.955,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.953,
-            "foundry": "13.351",
-            "system": "7.12.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [
-            "flexible",
-            "noisy"
-          ],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "chain-mail",
-        "bulk": {
-          "value": 2
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "gp": 6
-          }
-        },
-        "equipped": {
-          "carryType": "worn",
-          "handsHeld": 0,
-          "invested": null
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "category": "medium",
-        "group": "chain",
-        "acBonus": 4,
-        "strength": 3,
-        "dexCap": 1,
-        "checkPenalty": -2,
-        "speedPenalty": -5,
-        "grade": null,
-        "runes": {
-          "potency": 0,
-          "resilient": 0,
-          "property": []
-        },
-        "subitems": []
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP"
-      },
-      "_id": "sH9yaMZgr41grxqz",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.sH9yaMZgr41grxqz"
     }
   ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 3
-      },
-      "dex": {
-        "mod": 1
-      },
-      "con": {
-        "mod": 3
-      },
-      "int": {
-        "mod": 0
-      },
-      "wis": {
-        "mod": 1
-      },
-      "cha": {
-        "mod": 0
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 16
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 24,
-        "temp": 0,
-        "value": 24
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 25
-      }
-    },
-    "details": {
-      "blurb": "Half-orc brute; the fishery's muscle",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "orcish"
-        ]
-      },
-      "level": {
-        "value": 1
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> muscle on the main floor (A8); tries to <strong>capture</strong> PCs nonlethally for Gaedren, then fights to the death. Carries 3 @UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]{Minor Healing Potions}.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 5,
-      "senses": [
-        {
-          "type": "low-light-vision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 7
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 5
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 3
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 7
-      },
-      "intimidation": {
-        "base": 5
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "humanoid",
-        "orc",
-        "human"
-      ]
-    }
-  },
-  "folder": "rBcjiaGq99bkJyYK",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
+  "effects": [],
   "flags": {},
   "_stats": {
     "systemId": "pf2e",
@@ -862,77 +1800,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "prototypeToken": {
-    "name": "Giggles",
-    "displayName": 20,
-    "displayBars": 20,
-    "disposition": -1,
-    "actorLink": false,
-    "width": 1,
-    "height": 1,
-    "lockRotation": false,
-    "rotation": 0,
-    "alpha": 1,
-    "randomImg": false,
-    "appendNumber": false,
-    "prependAdjective": false,
-    "texture": {
-      "src": "modules/cotct-pf2e-conversion/assets/tokens/giggles.webp",
-      "scaleX": 1,
-      "scaleY": 1,
-      "tint": "#ffffff",
-      "anchorX": 0.5,
-      "anchorY": 0.5,
-      "fit": "contain",
-      "offsetX": 0,
-      "offsetY": 0,
-      "rotation": 0,
-      "alphaThreshold": 0.75
-    },
-    "bar1": {
-      "attribute": "attributes.hp"
-    },
-    "bar2": {
-      "attribute": null
-    },
-    "sight": {
-      "enabled": false,
-      "range": 0,
-      "angle": 360,
-      "visionMode": "basic",
-      "color": null,
-      "attenuation": 0.1,
-      "brightness": 0,
-      "saturation": 0,
-      "contrast": 0
-    },
-    "detectionModes": [],
-    "light": {
-      "alpha": 0.5,
-      "angle": 360,
-      "bright": 0,
-      "dim": 0,
-      "color": null,
-      "coloration": 1,
-      "luminosity": 0.5,
-      "attenuation": 0.5,
-      "animation": {
-        "type": null,
-        "speed": 5,
-        "intensity": 5,
-        "reverse": false
-      },
-      "darkness": {
-        "min": 0,
-        "max": 1
-      }
-    },
-    "flags": {
-      "pf2e": {
-        "linkToActorSize": true,
-        "autoscale": true
-      }
-    }
+  "_id": "mHUhxeaalWkTU1h4",
+  "ownership": {
+    "default": 0
   },
+  "folder": "rBcjiaGq99bkJyYK",
+  "sort": 0,
   "_key": "!actors!mHUhxeaalWkTU1h4"
 }

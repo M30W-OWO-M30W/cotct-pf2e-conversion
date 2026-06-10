@@ -1,59 +1,6 @@
 {
-  "_id": "crematoryBlast01",
   "name": "Crematory Blast (B15)",
   "type": "hazard",
-  "img": "systems/pf2e/icons/default-icons/hazard.svg",
-  "items": [
-    {
-      "_id": "idvKTZNqHdO9EeO7",
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Roaring Ovens",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "reaction"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": null,
-        "description": {
-          "value": "<p><strong>Trigger</strong> A creature comes within 20 feet of the oven fronts.</p><hr /><p><strong>Effect</strong> An <em>illusory</em> sheet of flame and shrieking fire-spirits floods the room: @Check[type:will|dc:20] disbelieves (no damage); failure = @Damage[10d6[fire]]. Only the burned look burned — the room is unscorched. Next round, the four scorched outlines peel off the wall as @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.cinderGhoul00001]{cinder ghouls}.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!crematoryBlast01.idvKTZNqHdO9EeO7"
-    }
-  ],
-  "folder": "ch5HazardsFld001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Crematory Blast (B15)",
     "displayName": 20,
@@ -121,58 +68,179 @@
     },
     "flags": {}
   },
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "system": {
-    "attributes": {
-      "emitsSound": "encounter",
-      "hardness": 0,
-      "stealth": {
-        "details": "<p>@Check[type:perception|dc:25] to spot smoke tendrils rising from each of the three huge ovens.</p>",
-        "value": 25
-      }
+    "source": {
+      "value": "",
+      "author": ""
     },
     "creatureType": "",
+    "saves": {
+      "fortitude": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 0,
+        "saveDetail": ""
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 0
+      },
+      "hp": {
+        "value": 0,
+        "max": 0,
+        "temp": 0,
+        "details": ""
+      },
+      "hardness": 0,
+      "stealth": {
+        "value": 21,
+        "details": "<p>(trained)</p>"
+      },
+      "emitsSound": "encounter"
+    },
     "details": {
-      "description": "<p>The ovens where Kazavon slow-roasted victims — and where Mandraivus's men threw the villainous cooks. Four humanoid outlines are burned into the brick; the ovens are still faintly warm.</p>",
-      "disable": "<p>@Check[type:religion|dc:28] (cast vitality into the ovens); it fades for good only when the curse lifts.</p>",
       "isComplex": false,
       "level": {
         "value": 10
       },
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      },
-      "reset": "<p>1 hour.</p>",
+      "disable": "<p>If the curse affecting Scarwall is lifted, this haunt fades away</p>",
+      "description": "<p>Kitchen ovens haunted by those murdered inside them that shriek and burn anyone who comes near.</p><hr /><h3>Conversion notes (this module)</h3><p>The ovens where Kazavon slow-roasted victims — and where Mandraivus's men threw the villainous cooks. Four humanoid outlines are burned into the brick; the ovens are still faintly warm.</p>",
+      "reset": "<p>The haunt resets after 1 hour.</p>",
       "routine": ""
-    },
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 0
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 0
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 0
-      }
     },
     "statusEffects": [],
     "traits": {
+      "value": [
+        "haunt"
+      ],
       "rarity": "common",
       "size": {
         "value": "med"
       },
-      "value": [
-        "haunt",
-        "fire",
-        "illusion"
-      ]
+      "di": {
+        "custom": "",
+        "value": [],
+        "selected": {}
+      },
+      "dr": [],
+      "dv": []
+    },
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-22T10:21:46.962+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
     }
   },
+  "items": [
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Fires of Torment",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature moves within 10 feet of the haunted ovens.</p>\n<p><strong>Effect</strong> A sudden blast of fire wells up inside of each of the three ovens, then plumes out into a sheet of flame that fills the room. As the fires burn, shrieking spirits made of flame tear through the room, swimming through the bodies of living creatures and appearing to tear away bits of flesh as they do. Each creature exposed to the fires must succeed at a @Check[type:will|dc:30] save or be convinced the flames are real. If a character succeeds at the save, the haunt deals no damage, but failure results in the character taking [[/r {15d6}[fire]]]{15d6 fire damage}. At the end of the round, the fire vanishes, but only those creatures that took fire damage appear burned. Other creatures and the contents of the room are unscathed.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "evocation",
+            "fire",
+            "illusion",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T10:22:53.940+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "RoUyxyY661a2VckZ",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669112573944,
+        "modifiedTime": 1669112711572,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!crematoryBlast01.RoUyxyY661a2VckZ"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "pf2e": {
+      "editHazard": {
+        "value": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "crematoryBlast01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5HazardsFld001",
+  "sort": 0,
   "_key": "!actors!crematoryBlast01"
 }

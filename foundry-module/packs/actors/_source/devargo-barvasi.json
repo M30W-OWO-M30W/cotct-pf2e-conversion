@@ -1,9 +1,2275 @@
 {
-  "_id": "devargoBarvasi01",
   "name": "Devargo Barvasi",
   "type": "npc",
+  "prototypeToken": {
+    "name": "Devargo Barvasi",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
   "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 70,
+        "temp": 0,
+        "max": 70,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 22,
+        "details": ""
+      },
+      "perception": {
+        "value": 12
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 5
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Male human crime lord",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the self-styled <strong>King of Spiders</strong> — a poisoner-rogue and blackmailer, <strong>not</strong> a forced boss fight. The PCs only need the ambassador's letters; the intended path is social (Diplomacy + bribes / a game of knivesies), and the Guard won't prosecute if he <em>is</em> killed.</p><p><strong>Tactics:</strong> opens by springing the throne trap door, then wades in with poisoned gauntlets and Sneak Attacks; his enforcers don't respond until he raises the alarm or a thug flees. <strong>Morale:</strong> below ~10 HP he calls for help, drinks his potion of invisibility, and flees to C14.</p><p><strong>His secret:</strong> he can't truly command spiders — the ettercap @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.chittersnap00001]{Chittersnap} in C15 does, in exchange for victims. Kill Chittersnap and every spider on Eel's End turns feral, Devargo included.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "human",
+        "humanoid"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:39.083+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 1
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 9,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 15,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 12,
+        "saveDetail": ""
+      }
+    }
+  },
   "items": [
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 13
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "vo4kvx9XB91w8edT",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437659077,
+        "modifiedTime": 1668437711151,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.vo4kvx9XB91w8edT"
+    },
+    {
+      "name": "Deception",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 12
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "xwrBMbgXURwXEK8h",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437661171,
+        "modifiedTime": 1668437711151,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.xwrBMbgXURwXEK8h"
+    },
+    {
+      "name": "Diplomacy",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 12
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "HPeS1XULdMW6y7L1",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437663223,
+        "modifiedTime": 1668437711151,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.HPeS1XULdMW6y7L1"
+    },
+    {
+      "name": "Society",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 10
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "GLet5BbRKUxBzxTS",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437670843,
+        "modifiedTime": 1668437711151,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.GLet5BbRKUxBzxTS"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 15
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "jOC61fcNCv2fCBj7",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437673220,
+        "modifiedTime": 1668437711151,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.jOC61fcNCv2fCBj7"
+    },
+    {
+      "name": "Thievery",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 13
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "UVxBbY47df6sq03u",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437675777,
+        "modifiedTime": 1668437711151,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.UVxBbY47df6sq03u"
+    },
+    {
+      "name": "Criminal Lore",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 8
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "tOmobidIN1R1YP8n",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437686136,
+        "modifiedTime": 1668437711151,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.tOmobidIN1R1YP8n"
+    },
+    {
+      "_id": "UjBY48NSVKtvVQ90",
+      "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
+      "name": "Hand Crossbow",
+      "system": {
+        "description": {
+          "value": "<p>Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "hand-crossbow",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "hand-crossbow",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "bow",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d6",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 60,
+        "reload": {
+          "value": "1"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.XyA6PKV46aNlLXOd"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437789053,
+        "modifiedTime": 1668437789053,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.UjBY48NSVKtvVQ90"
+    },
+    {
+      "_id": "LQJtSGO2QORQstCO",
+      "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
+      "name": "Bolts",
+      "system": {
+        "description": {
+          "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "bolts",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 10,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 1
+          },
+          "per": 10
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": "bolts",
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 0
+        },
+        "consumableType": {
+          "value": "ammo"
+        },
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.AITVZmakiu3RgfKo"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437799849,
+        "modifiedTime": 1668437799849,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.LQJtSGO2QORQstCO"
+    },
+    {
+      "_id": "h6VOHyJfRXwDTA0c",
+      "img": "systems/pf2e/icons/equipment/armor/leather-armor.webp",
+      "name": "Leather Armor",
+      "system": {
+        "description": {
+          "value": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "leather-armor",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "leather-armor",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "2"
+        },
+        "equippedBulk": {
+          "value": "1"
+        },
+        "price": {
+          "value": {
+            "gp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "inSlot": false
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornarmor"
+        },
+        "level": {
+          "value": 0
+        },
+        "armor": {
+          "value": 1
+        },
+        "category": "light",
+        "group": "leather",
+        "strength": {
+          "value": 10
+        },
+        "dex": {
+          "value": 4
+        },
+        "check": {
+          "value": -1
+        },
+        "speed": {
+          "value": 0
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "resiliencyRune": {
+          "value": ""
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.4tIVTg9wj56RrveA"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437808856,
+        "modifiedTime": 1668437808856,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.h6VOHyJfRXwDTA0c"
+    },
+    {
+      "_id": "1onJ3jEmPpx4VbHp",
+      "img": "systems/pf2e/icons/equipment/weapons/spiked-gauntlet.webp",
+      "name": "Spiked Gauntlet",
+      "system": {
+        "description": {
+          "value": "<p>Providing the same defensive function as a standard gauntlet, this version has a group of spikes protruding from the knuckles to deliver piercing damage with a punch.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "evocation",
+            "free-hand",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "spiked-gauntlet",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "spiked-gauntlet",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Spiked Gauntlet",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "brawling",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": null
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.YFfG2fMyaIAXkmtr"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437821854,
+        "modifiedTime": 1668437828401,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.1onJ3jEmPpx4VbHp"
+    },
+    {
+      "_id": "9PFHWeEeL3PuSrr5",
+      "img": "systems/pf2e/icons/equipment/consumables/potions/invisibility-potion.webp",
+      "name": "Invisibility Potion",
+      "system": {
+        "description": {
+          "value": "<p>An invisibility potion is colorless and oddly lightweight. Upon drinking it, you gain the effects of a 2nd-level invisibility spell.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "consumable",
+            "illusion",
+            "magical",
+            "potion"
+          ],
+          "rarity": "uncommon",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "invisibility-potion",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 20
+          }
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 4
+        },
+        "consumableType": {
+          "value": "potion"
+        },
+        "charges": {
+          "value": 1,
+          "max": 1,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.bikFUFRLwfdvX2x2"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437865894,
+        "modifiedTime": 1668437865894,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.9PFHWeEeL3PuSrr5"
+    },
+    {
+      "_id": "pDG0ckdaTx2Uyw9K",
+      "img": "systems/pf2e/icons/equipment/consumables/potions/healing-potion.webp",
+      "name": "Healing Potion (Lesser)",
+      "system": {
+        "description": {
+          "value": "<p>A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a healing potion, you regain [[/r {2d8+5}[healing]]]{2d8+5 Hit Points}.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "consumable",
+            "healing",
+            "magical",
+            "necromancy",
+            "positive",
+            "potion"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "healing-potion-lesser",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 12
+          }
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 3
+        },
+        "consumableType": {
+          "value": "potion"
+        },
+        "charges": {
+          "value": 1,
+          "max": 1,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "2d8+5",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.e0vSAQfxhHauiAoD"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437877600,
+        "modifiedTime": 1668437877600,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.pDG0ckdaTx2Uyw9K"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Deny Advantage",
+      "system": {
+        "description": {
+          "value": "<p>Devargo isn't flat‑footed to creatures of 5th level or lower that are @Compendium[pf2e.conditionitems.Hidden]{Hidden}, @UUID[Compendium.pf2e.conditionitems.VRSef5y1LmL2Hkjf]{Undetected}, flanking, or using surprise attack.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "y5VYGtFIhwH3MDjB",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668437950024,
+        "modifiedTime": 1668438868463,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.y5VYGtFIhwH3MDjB"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Nimble Opportunist",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature within Devargo's melee reach is hit by a melee attack from one of his allies</p>\n<p><strong>Effect</strong> Devargo makes a Strike against the triggering creature with a -2 penalty to the attack roll. He can't deal sneak attack damage on this Strike. After this Strike, Devargo can Stride without triggering reactions.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "EOXZFJui1LswZEAG",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668438200439,
+        "modifiedTime": 1668438223944,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.EOXZFJui1LswZEAG"
+    },
+    {
+      "name": "Spiked Gauntlet",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "free-hand",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "19309FQdqw6A0eNu": {
+            "damage": "1d4+5",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 15
+        },
+        "attackEffects": {
+          "value": [
+            "hunting-spider-venom"
+          ],
+          "custom": ""
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "1onJ3jEmPpx4VbHp"
+        }
+      },
+      "_id": "pLUbBC3zuRf3igk7",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668438575732,
+        "modifiedTime": 1668440652506,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.pLUbBC3zuRf3igk7"
+    },
+    {
+      "name": "Hand Crossbow",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "range-increment-60",
+            "reload-1"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "CJjzYSaUmfyDHhDh": {
+            "damage": "1d6+5",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 14
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "UjBY48NSVKtvVQ90"
+        }
+      },
+      "_id": "xeUvBWan8uSg34O9",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668438579467,
+        "modifiedTime": 1668440552804,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.xeUvBWan8uSg34O9"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Hunting Spider Venom",
+      "system": {
+        "description": {
+          "value": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:17]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> 1d6 poison and @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} (1 round)</p>\n<p><strong>Stage 2</strong> [[/r 1d8 #poison]]{1d8 poison}, @Compendium[pf2e.conditionitems.Clumsy]{Clumsy 1}, and @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} (1 round)</p>\n<p><strong>Stage 3</strong> [[/r 1d10 #poison]]{1d10 poison}, @Compendium[pf2e.conditionitems.Clumsy]{Clumsy 2}, and @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} (1 round).</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "dSV8BPVp8Gvl7Nuq",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668438599110,
+        "modifiedTime": 1668438645129,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.dSV8BPVp8Gvl7Nuq"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sneak Attack",
+      "system": {
+        "description": {
+          "value": "<p>Devargo deals an extra [[/r {1d6}[precision]]]{1d6 precision damage} to flat‑footed creatures.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SneakAttack]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "category": "precision",
+            "diceNumber": 1,
+            "dieSize": "d6",
+            "key": "DamageDice",
+            "predicate": [
+              "target:condition:flat-footed",
+              {
+                "or": [
+                  "item:trait:agile",
+                  "item:trait:finesse",
+                  {
+                    "and": [
+                      "item:ranged",
+                      {
+                        "not": "item:thrown-melee"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "selector": "strike-damage"
+          },
+          {
+            "domain": "all",
+            "key": "RollOption",
+            "label": "PF2E.SpecificRule.TOTMToggle.FlatFooted",
+            "option": "target:condition:flat-footed",
+            "toggleable": "totm"
+          }
+        ],
+        "slug": "sneak-attack",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.AWvNPE4U0kEJSL1T"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668438722765,
+        "modifiedTime": 1668438760565,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "Gi93FlAV61ptscO9",
+      "_key": "!actors.items!devargoBarvasi01.Gi93FlAV61ptscO9"
+    },
+    {
+      "_id": "KADRbwxBuOCd0Qu6",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Surprise Attack",
+      "sort": 900000,
+      "system": {
+        "description": {
+          "value": "<p>On the first round of combat, creatures that haven't acted yet are @UUID[Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg]{Flat-Footed} to Devargo.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.083+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Actor.yywVr3wElBO4ZGuh.Item.jEom4zQ0Qu4Q834Z"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668438729207,
+        "modifiedTime": 1668438802108,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!devargoBarvasi01.KADRbwxBuOCd0Qu6"
+    },
+    {
+      "name": "Devargo Bavarsi's Key",
+      "type": "equipment",
+      "system": {
+        "description": {
+          "value": "<p><span data-visibility=\"gm\">key to area <strong>C9</strong></span></p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.397+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unidentified Key",
+            "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+            "data": {
+              "description": {
+                "value": "The nature of this object is unclear."
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/held-items/key-purple.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Item.rgy1YEDKPT8ElDQf"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1668380949675,
+        "modifiedTime": 1669567117234,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "EDNv7Aupcrnpk8k7",
+      "_key": "!actors.items!devargoBarvasi01.EDNv7Aupcrnpk8k7"
+    },
+    {
+      "name": "Devargo Bavarsi's Key",
+      "type": "equipment",
+      "system": {
+        "description": {
+          "value": "<p><span data-visibility=\"gm\">key to footlocker in area <strong>C14</strong></span></p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.397+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unidentified Key",
+            "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/held-items/key-purple.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Item.rgy1YEDKPT8ElDQf"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1668380949675,
+        "modifiedTime": 1669567123392,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "zir28KHMiBStnofl",
+      "_key": "!actors.items!devargoBarvasi01.zir28KHMiBStnofl"
+    },
     {
       "_id": "devargoArmor0001",
       "img": "systems/pf2e/icons/equipment/armor/studded-leather-armor.webp",
@@ -82,463 +2348,6 @@
         }
       },
       "_key": "!actors.items!devargoBarvasi01.devargoArmor0001"
-    },
-    {
-      "_id": "jXSPaFssn7RqHxPM",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Poisoned Spiked Gauntlet",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 16
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d4+5",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": "devargo-gauntlet",
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "versatile-b"
-          ]
-        }
-      },
-      "_key": "!actors.items!devargoBarvasi01.jXSPaFssn7RqHxPM"
-    },
-    {
-      "_id": "sJSBqqWXW3jRYFzo",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Hand Crossbow",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 16
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d6",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "range-increment-60",
-            "reload-1"
-          ]
-        }
-      },
-      "_key": "!actors.items!devargoBarvasi01.sJSBqqWXW3jRYFzo"
-    },
-    {
-      "_id": "wXyuw4w7LvVdBLTc",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Sneak Attack",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Devargo deals 3d6 extra precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [
-          {
-            "key": "DamageDice",
-            "selector": "strike-damage",
-            "category": "precision",
-            "diceNumber": 3,
-            "dieSize": "d6",
-            "predicate": [
-              "target:condition:off-guard"
-            ]
-          },
-          {
-            "key": "RollOption",
-            "domain": "all",
-            "option": "target:condition:off-guard",
-            "toggleable": "totm",
-            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
-          }
-        ],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "rogue"
-          ]
-        }
-      },
-      "_key": "!actors.items!devargoBarvasi01.wXyuw4w7LvVdBLTc"
-    },
-    {
-      "_id": "eyWlojX9voDNAtpU",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Prepare Spider Venom",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Before a fight Devargo coats both gauntlets with spider venom. A creature he hits with a gauntlet is exposed to it: @Check[type:fortitude|dc:24], a 1-stage poison inflicting @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} for 1 round (Clumsy 2 + Enfeebled 2 for 4 rounds on a critical failure).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!devargoBarvasi01.eyWlojX9voDNAtpU"
-    },
-    {
-      "_id": "vdhGdo0peDOt0woi",
-      "img": "systems/pf2e/icons/actions/FreeAction.webp",
-      "name": "Spring the Throne",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "free"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Trigger</strong> Devargo's turn begins.</p><hr /><p><strong>Effect</strong> He flips the hidden switch in his throne, opening the trap door beneath the petitioner's spot. A creature on it must succeed at a @Check[type:reflex|dc:17] to cling to the sides or fall into the Spider's Web (C15) — and Chittersnap.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "manipulate"
-          ]
-        }
-      },
-      "_key": "!actors.items!devargoBarvasi01.vdhGdo0peDOt0woi"
-    },
-    {
-      "_id": "0k2xylcgh80bZxAG",
-      "img": "systems/pf2e/icons/default-icons/lore.svg",
-      "name": "Underworld Lore",
-      "sort": 0,
-      "type": "lore",
-      "system": {
-        "description": {
-          "value": ""
-        },
-        "mod": {
-          "value": 14
-        },
-        "proficient": {
-          "value": 0
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null
-      },
-      "_key": "!actors.items!devargoBarvasi01.0k2xylcgh80bZxAG"
-    },
-    {
-      "name": "Spiked Gauntlet",
-      "type": "weapon",
-      "img": "systems/pf2e/icons/equipment/weapons/spiked-gauntlet.webp",
-      "system": {
-        "ammo": null,
-        "baseItem": "spiked-gauntlet",
-        "bonus": {
-          "value": 0
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "bulk": {
-          "value": 0.1
-        },
-        "category": "simple",
-        "containerId": null,
-        "damage": {
-          "damageType": "piercing",
-          "dice": 1,
-          "die": "d4"
-        },
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.YFfG2fMyaIAXkmtr]</p>",
-          "gm": ""
-        },
-        "expend": null,
-        "grade": null,
-        "group": "brawling",
-        "hardness": 0,
-        "hp": {
-          "max": 0,
-          "value": 0
-        },
-        "level": {
-          "value": 0
-        },
-        "material": {
-          "grade": null,
-          "type": null
-        },
-        "price": {
-          "value": {
-            "sp": 3
-          }
-        },
-        "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "Pathfinder Player Core"
-        },
-        "quantity": 2,
-        "range": null,
-        "reload": {
-          "value": null
-        },
-        "rules": [],
-        "runes": {
-          "potency": 0,
-          "property": [],
-          "striking": 0
-        },
-        "size": "med",
-        "splashDamage": {
-          "value": 0
-        },
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "free-hand"
-          ]
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "slug": "spiked-gauntlet",
-        "_migration": {
-          "version": 0.959,
-          "previous": null
-        },
-        "equipped": {
-          "carryType": "worn"
-        }
-      },
-      "_id": "sNZRoZWYhfPurXCc",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!devargoBarvasi01.sNZRoZWYhfPurXCc"
-    },
-    {
-      "name": "Hand Crossbow",
-      "type": "weapon",
-      "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
-      "system": {
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.XyA6PKV46aNlLXOd]</p>",
-          "gm": ""
-        },
-        "rules": [],
-        "slug": "hand-crossbow",
-        "_migration": {
-          "version": 0.955,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.953,
-            "foundry": "13.351",
-            "system": "7.12.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "Pathfinder Core Rulebook",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "hand-crossbow",
-        "bulk": {
-          "value": 0.1
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "gp": 3
-          }
-        },
-        "equipped": {
-          "carryType": "worn",
-          "handsHeld": 0,
-          "invested": null
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "category": "simple",
-        "group": "crossbow",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "dice": 1,
-          "die": "d6",
-          "damageType": "piercing",
-          "persistent": null
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": 60,
-        "expend": 1,
-        "ammo": {
-          "capacity": 1,
-          "baseType": "bolts",
-          "builtIn": false
-        },
-        "reload": {
-          "value": "1"
-        },
-        "grade": null,
-        "runes": {
-          "potency": 0,
-          "striking": 0,
-          "property": []
-        },
-        "specific": null,
-        "subitems": [],
-        "bonusDamage": {
-          "value": 0
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
-        }
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.XyA6PKV46aNlLXOd"
-      },
-      "_id": "cb72smo3Hs4w06xT",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!devargoBarvasi01.cb72smo3Hs4w06xT"
     },
     {
       "name": "Healing Potion (Minor)",
@@ -798,208 +2607,9 @@
         }
       },
       "_key": "!actors.items!devargoBarvasi01.ch1DevargoKeys01"
-    },
-    {
-      "_id": "ClOqkAeOzIsUsTnk",
-      "img": "systems/pf2e/icons/default-icons/equipment.svg",
-      "name": "Potion of Invisibility",
-      "type": "equipment",
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "flags": {},
-      "_stats": {
-        "systemId": "pf2e",
-        "systemVersion": "8.2.0",
-        "coreVersion": "14.363",
-        "compendiumSource": null,
-        "duplicateSource": null,
-        "exportSource": null,
-        "createdTime": 0,
-        "modifiedTime": 0,
-        "lastModifiedBy": null
-      },
-      "system": {
-        "baseItem": null,
-        "bulk": {
-          "value": 0.1
-        },
-        "containerId": null,
-        "description": {
-          "value": "<p>Devargo quaffs this to flee when reduced below ~10% HP, vanishing down to his quarters (C14).</p>"
-        },
-        "equipped": {
-          "carryType": "worn",
-          "handsHeld": 0,
-          "invested": null
-        },
-        "hardness": 0,
-        "hp": {
-          "max": 0,
-          "value": 0
-        },
-        "level": {
-          "value": 4
-        },
-        "material": {
-          "grade": null,
-          "type": null
-        },
-        "price": {
-          "value": {
-            "gp": 12
-          }
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "quantity": 1,
-        "rules": [],
-        "size": "med",
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "potion",
-            "magical",
-            "consumable",
-            "illusion"
-          ]
-        },
-        "usage": {
-          "value": "worn"
-        }
-      },
-      "_key": "!actors.items!devargoBarvasi01.ClOqkAeOzIsUsTnk"
     }
   ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 1
-      },
-      "dex": {
-        "mod": 5
-      },
-      "con": {
-        "mod": 3
-      },
-      "int": {
-        "mod": 1
-      },
-      "wis": {
-        "mod": 0
-      },
-      "cha": {
-        "mod": 3
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 23
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 100,
-        "temp": 0,
-        "value": 100
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 25
-      }
-    },
-    "details": {
-      "blurb": "The King of Spiders; blackmailer of Eel's End",
-      "languages": {
-        "details": "",
-        "value": [
-          "common"
-        ]
-      },
-      "level": {
-        "value": 6
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the self-styled <strong>King of Spiders</strong> — a poisoner-rogue and blackmailer, <strong>not</strong> a forced boss fight. The PCs only need the ambassador's letters; the intended path is social (Diplomacy + bribes / a game of knivesies), and the Guard won't prosecute if he <em>is</em> killed.</p><p><strong>Tactics:</strong> opens by springing the throne trap door, then wades in with poisoned gauntlets and Sneak Attacks; his enforcers don't respond until he raises the alarm or a thug flees. <strong>Morale:</strong> below ~10 HP he calls for help, drinks his potion of invisibility, and flees to C14.</p><p><strong>His secret:</strong> he can't truly command spiders — the ettercap @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.chittersnap00001]{Chittersnap} in C15 does, in exchange for victims. Kill Chittersnap and every spider on Eel's End turns feral, Devargo included.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 14,
-      "senses": []
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 12
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 16
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 12
-      }
-    },
-    "skills": {
-      "acrobatics": {
-        "base": 16
-      },
-      "stealth": {
-        "base": 16
-      },
-      "deception": {
-        "base": 14
-      },
-      "intimidation": {
-        "base": 14
-      },
-      "thievery": {
-        "base": 14
-      },
-      "society": {
-        "base": 12
-      },
-      "crafting": {
-        "base": 12
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "humanoid",
-        "human"
-      ]
-    }
-  },
-  "folder": "rBcjiaGq99bkJyYK",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
+  "effects": [],
   "flags": {},
   "_stats": {
     "systemId": "pf2e",
@@ -1012,77 +2622,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "prototypeToken": {
-    "name": "Devargo Barvasi",
-    "displayName": 20,
-    "displayBars": 20,
-    "disposition": -1,
-    "actorLink": true,
-    "width": 1,
-    "height": 1,
-    "lockRotation": false,
-    "rotation": 0,
-    "alpha": 1,
-    "randomImg": false,
-    "appendNumber": false,
-    "prependAdjective": false,
-    "texture": {
-      "src": "modules/cotct-pf2e-conversion/assets/tokens/devargo-barvasi.webp",
-      "scaleX": 1,
-      "scaleY": 1,
-      "tint": "#ffffff",
-      "anchorX": 0.5,
-      "anchorY": 0.5,
-      "fit": "contain",
-      "offsetX": 0,
-      "offsetY": 0,
-      "rotation": 0,
-      "alphaThreshold": 0.75
-    },
-    "bar1": {
-      "attribute": "attributes.hp"
-    },
-    "bar2": {
-      "attribute": null
-    },
-    "sight": {
-      "enabled": false,
-      "range": 0,
-      "angle": 360,
-      "visionMode": "basic",
-      "color": null,
-      "attenuation": 0.1,
-      "brightness": 0,
-      "saturation": 0,
-      "contrast": 0
-    },
-    "detectionModes": [],
-    "light": {
-      "alpha": 0.5,
-      "angle": 360,
-      "bright": 0,
-      "dim": 0,
-      "color": null,
-      "coloration": 1,
-      "luminosity": 0.5,
-      "attenuation": 0.5,
-      "animation": {
-        "type": null,
-        "speed": 5,
-        "intensity": 5,
-        "reverse": false
-      },
-      "darkness": {
-        "min": 0,
-        "max": 1
-      }
-    },
-    "flags": {
-      "pf2e": {
-        "linkToActorSize": true,
-        "autoscale": true
-      }
-    }
+  "_id": "devargoBarvasi01",
+  "ownership": {
+    "default": 0
   },
+  "folder": "rBcjiaGq99bkJyYK",
+  "sort": 0,
   "_key": "!actors!devargoBarvasi01"
 }

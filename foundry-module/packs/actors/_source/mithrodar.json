@@ -1,322 +1,6 @@
 {
-  "_id": "mithrodarChain01",
   "name": "Mithrodar",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "FtWTmG7WHNGL1PP6",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Spectral Chains",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 31
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "4d8+12",
-            "damageType": "void"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "magical",
-            "reach-20"
-          ]
-        }
-      },
-      "_key": "!actors.items!mithrodarChain01.FtWTmG7WHNGL1PP6"
-    },
-    {
-      "_id": "XwqpzOhu5f6JOF1n",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Chain the Living",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Ghost-chains lash a 20-ft burst within 60 feet: @Check[type:reflex|dc:38] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (Escape DC 38) and @Damage[4d8[void]] per round held.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "concentrate",
-            "divine"
-          ]
-        }
-      },
-      "_key": "!actors.items!mithrodarChain01.XwqpzOhu5f6JOF1n"
-    },
-    {
-      "_id": "6lSXX0bIDab06zX6",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Castle's Voice",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Mithrodar speaks through every wall: all foes in the castle who can hear, @Check[type:will|dc:36] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}; his undead gain +1 status to attacks for 1 round.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "auditory",
-            "fear",
-            "mental"
-          ]
-        }
-      },
-      "_key": "!actors.items!mithrodarChain01.6lSXX0bIDab06zX6"
-    },
-    {
-      "_id": "Co873SVV8VDsXTLE",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Spirit Anchors",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p><strong>While any of his four anchors exists</strong> (Belshallam B23, Castothrane D1, Nihil D14, Zev Ravenka F11), Mithrodar <strong>re-forms at full strength one minute after destruction</strong> — he cannot be permanently defeated, and one ghostly chain hangs from his body per surviving anchor. He can chain a new non-mindless evil creature as a replacement anchor (constructs never; Ildervok never — Zon-Kuthon's writ outranks his; <em>Sial or Laori would serve nicely</em>). Per anchor destroyed, the curse sheds a layer: 1 — safe sleep (and the castle screams: all Scarwall undead +4 to resist vitality); 2 — the Aura of Menace ends; 3 — wall-spirits stop roaming; 4 — the <em>unhallow</em> and dimensional lock fall, and he can finally die.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!mithrodarChain01.Co873SVV8VDsXTLE"
-    },
-    {
-      "_id": "QLiDNvXKJPKOpKE6",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Chained Spirit",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Incorporeal; resistance all 15 (except force/ghost touch/vitality); <strong>bound to the Great Hall</strong> — he cannot leave C14 to pursue. Five spectre thralls in the servants' entrance answer his mental summons in 1 round. The curse's soultrap (see the Curse page) is <em>his</em> reach — he assaults any spirit entering the castle, Zellara above all.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!mithrodarChain01.QLiDNvXKJPKOpKE6"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 0
-      },
-      "dex": {
-        "mod": 7
-      },
-      "con": {
-        "mod": 0
-      },
-      "int": {
-        "mod": 3
-      },
-      "wis": {
-        "mod": 5
-      },
-      "cha": {
-        "mod": 8
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 38
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 320,
-        "temp": 0,
-        "value": 320
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 0
-      }
-    },
-    "details": {
-      "blurb": "The chained spirit; heart of the curse (C14)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "infernal",
-          "necril",
-          "shadowtongue"
-        ]
-      },
-      "level": {
-        "value": 16
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> Scarwall's castellan, who died on Serithtial's edge buying Kazavon time to retreat — now the <strong>chained spirit</strong> at the heart of the curse, enthroned beside his master's empty chair in the Great Hall (C14). Every bound soul in the walls is his to spend; he commands vast necromancy but cannot directly act elsewhere in the castle, and he <em>fears for his anchors</em>. <strong>Destroying him (after the four anchors) frees every trapped soul, lifts the curse — and wakes <em>Serithtial</em>.</strong></p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 30,
-      "senses": [
-        {
-          "type": "darkvision"
-        },
-        {
-          "type": "true-seeing"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 26
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 27
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 29
-      }
-    },
-    "skills": {
-      "intimidation": {
-        "base": 30
-      },
-      "occultism": {
-        "base": 28
-      },
-      "religion": {
-        "base": 28
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "lg"
-      },
-      "value": [
-        "undead",
-        "incorporeal",
-        "spirit"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Mithrodar",
     "displayName": 20,
@@ -389,5 +73,1197 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 220,
+        "temp": 0,
+        "max": 220,
+        "details": "fast healing 20, negative healing, spirit anchor"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 0,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 50
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 44,
+        "details": "(36 without spirit anchors"
+      },
+      "perception": {
+        "value": 29
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 15
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Chained spirit of Scarwall",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> Scarwall's castellan, who died on Serithtial's edge buying Kazavon time to retreat — now the <strong>chained spirit</strong> at the heart of the curse, enthroned beside his master's empty chair in the Great Hall (C14). Every bound soul in the walls is his to spend; he commands vast necromancy but cannot directly act elsewhere in the castle, and he <em>fears for his anchors</em>. <strong>Destroying him (after the four anchors) frees every trapped soul, lifts the curse — and wakes <em>Serithtial</em>.</strong></p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "undead",
+        "incorporeal",
+        "spirit"
+      ],
+      "senses": {
+        "value": "Darkvision, Lifesense 500 feet, Spectral Sight"
+      },
+      "languages": {
+        "value": [
+          "common",
+          "necril"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "disease",
+          "paralyzed",
+          "poison",
+          "positive",
+          "precision",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "all",
+          "value": 10,
+          "exceptions": "except force or ghost touch; double resistance vs. non-magical"
+        }
+      ],
+      "dv": [],
+      "rarity": "rare",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-24T21:46:48.050+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.1"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": -5
+      },
+      "dex": {
+        "mod": 6
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 7
+      },
+      "cha": {
+        "mod": 7
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 22,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 26,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 29,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 28
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "0Ia63kMhw9VPjqN9",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326509057,
+        "modifiedTime": 1669326522539,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.0Ia63kMhw9VPjqN9"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 29
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "T82UUVyClzI0e8sk",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326510957,
+        "modifiedTime": 1669326522539,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.T82UUVyClzI0e8sk"
+    },
+    {
+      "name": "Occultism",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 22
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "lGaJPiazzCQbckab",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326513205,
+        "modifiedTime": 1669326522539,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.lGaJPiazzCQbckab"
+    },
+    {
+      "_id": "vO3lIo5WU4nzZysY",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326589270,
+        "modifiedTime": 1669326589270,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.vO3lIo5WU4nzZysY"
+    },
+    {
+      "_id": "kvUFFZvQcDE2Nn72",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Lifesense 500 feet",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Lifesense]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "lifesense",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.sebk9XseMCRkDqRg"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326601733,
+        "modifiedTime": 1669326609022,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.kvUFFZvQcDE2Nn72"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Spectral Sight",
+      "system": {
+        "description": {
+          "value": "<p>A chained spirit can see and hear through any of its spirit anchors at any time it wishes as if using its own eyes and ears.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T21:50:16.128+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "16YEJgISeDfIDeUH",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326616132,
+        "modifiedTime": 1669326638321,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.16YEJgISeDfIDeUH"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Spectral Bindings",
+      "system": {
+        "description": {
+          "value": "<p>If the chained spirit has a spirit anchor and Strides from its starting location during its turn; it is immediately teleported to its original location at the end of its turn. This is considered forced movement and cannot be interrupted in any way.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "conjuration",
+            "divine",
+            "teleportation"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T21:50:44.093+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "ronA7U1uUV9iqljj",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326644096,
+        "modifiedTime": 1669326669612,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.ronA7U1uUV9iqljj"
+    },
+    {
+      "_id": "PtYt5SJBKUJGvc3i",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Fast Healing 20",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.FastHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "fast-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.fJSNOw4zHGbIm4bZ"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326757913,
+        "modifiedTime": 1669326763303,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.PtYt5SJBKUJGvc3i"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326769159,
+        "modifiedTime": 1669326769159,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "9Cmd0l0uI4ejTs5C",
+      "_key": "!actors.items!mithrodarChain01.9Cmd0l0uI4ejTs5C"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Spirit Anchor",
+      "system": {
+        "description": {
+          "value": "<p>When a chained spirit is destroyed, it re-forms after 1 minute within the location it's bound to, fully healed. A chained spirit can only be destroyed if all of its spirit anchors have been destroyed prior to destroying the chained spirit. Each time a spirit anchor is destroyed, the chained spirit loses Spectral Sight through that anchor, fast healing 5 and takes a -2 status penalty to its AC for each anchor destroyed. If all of a chained spirit's anchors are destroyed, the chained spirit also loses immunity to positive damage, and is no longer bound by Spectral Bindings.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T21:54:23.991+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "bGJZpyKQFMScLLQ1",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326864001,
+        "modifiedTime": 1669326888417,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.bGJZpyKQFMScLLQ1"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Spectral Chain",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "evil",
+            "finesse",
+            "magical",
+            "reach-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T21:55:15.075+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "tfhpw5I3idJUQofn": {
+            "damage": "3d10+14",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 29
+        },
+        "attackEffects": {
+          "value": [
+            "drain-mind"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "Pz7Wnx2ZTiPf1BuZ",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669326915079,
+        "modifiedTime": 1669327551090,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.Pz7Wnx2ZTiPf1BuZ"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Spectral Hand",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T21:59:43.732+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "Ja5yNlvmLOPNMs8P": {
+            "damage": "3d8+14",
+            "damageType": "negative"
+          }
+        },
+        "bonus": {
+          "value": 29
+        },
+        "attackEffects": {
+          "value": [
+            "drain-life"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "o5pC01CAHZI2zT7o",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669327183743,
+        "modifiedTime": 1669327565218,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.o5pC01CAHZI2zT7o"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Chain Spirit",
+      "system": {
+        "description": {
+          "value": "<p>The chained spirit attempts to chain a creature of a Level lower than its own and can sense with Lifesense. The target creature must succeed a @Check[type:fortitude|dc:35] save. Dead creatures automatically critically fail this save.</p>\n<hr>\n<p><strong>Critical Success</strong> No effect and the creature is immune to Chain Spirit for 24 hours.</p>\n<p><strong>Success</strong> No effect.</p>\n<p><strong>Failure</strong> The creature is @Compendium[pf2e.conditionitems.Drained]{Drained 1} or increases its drained condition by 1.</p>\n<p><strong>Critical Failure</strong> As failure, but @Compendium[pf2e.conditionitems.Drained]{Drained 2}. If the drained condition would reduce the target's maximum health to 0, the chained spirit binds the creature's soul to it as a spirit anchor. Once the chained spirit has bound a soul, it cannot perform this ability on another soul for 1 week. The target creature loses its drained condition and cannot move more than 100 feet from the location it was chained unless the chained spirit wills it. If the creature was dead when it was bound, it raises as an undead version of itself under the chained spirit's control. If a spirit anchor is destroyed, the chained spirit cannot chain a new spirit for 24 hours. The chained spirit cannot have any more than 4 spirit anchors at any time.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T22:01:14.495+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "gCB56iASwZM5Y73M",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669327274498,
+        "modifiedTime": 1669327304342,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.gCB56iASwZM5Y73M"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Drain Life",
+      "system": {
+        "description": {
+          "value": "<p>When a chained spirit damages a living creature with its spectral hand Strike, the chained spirit gains 15 temporary Hit Points and the target must succeed at a @Check[type:fortitude|dc:35] save or become @Compendium[pf2e.conditionitems.Drained]{Drained 1}. Further damage dealt by the chained spirit's spectral hand Strikes increases the value of the drained condition by 1 on a failed save, to a maximum of 8.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T22:02:34.024+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "fq1vIrBh011SAKQk",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669327354029,
+        "modifiedTime": 1669327382859,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.fq1vIrBh011SAKQk"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Drain Mind",
+      "system": {
+        "description": {
+          "value": "<p>When a chained spirit damages a living creature with its spectral chain Strike, the target must succeed at a @Check[type:will|dc:35] save or become @Compendium[pf2e.conditionitems.Stupefied]{Stupefied 1}. Further damage dealt by the chained spirit's spectral chain Strikes increases the value of the stupefied condition by 1 on a failed save, to a maximum of 4.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T22:03:29.537+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "jB31qarv9r7brmzh",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669327409541,
+        "modifiedTime": 1669327430921,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.jB31qarv9r7brmzh"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Specter Spawn",
+      "system": {
+        "description": {
+          "value": "<p>A living humanoid slain by a chained spirit rises as a specter after [[/br 1d4 #rounds]]{1d4 rounds}. This specter is under the command of the chained spirit that killed it. If the creator of the specter dies, the specter becomes a full-fledged, autonomous specter.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-24T22:04:45.883+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.1"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "Cm4bDHIV1qDjz35B",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.1",
+        "coreVersion": "10.290",
+        "createdTime": 1669327485887,
+        "modifiedTime": 1669327526759,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!mithrodarChain01.Cm4bDHIV1qDjz35B"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "mithrodarChain01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!mithrodarChain01"
 }

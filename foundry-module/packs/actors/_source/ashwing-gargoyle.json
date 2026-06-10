@@ -1,323 +1,650 @@
 {
-  "_id": "ashwingGargoyl01",
-  "name": "Ashwing Gargoyle",
-  "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "La2lzhnzxhYUYeRB",
+      "_id": "qhS5ZEJcqNFytqWd",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Claw",
-      "sort": 0,
-      "type": "melee",
+      "name": "Jaws",
+      "sort": 100000,
       "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 17
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+7",
-            "damageType": "slashing"
-          }
-        },
         "description": {
           "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile"
-          ]
-        }
-      },
-      "_key": "!actors.items!ashwingGargoyl01.La2lzhnzxhYUYeRB"
-    },
-    {
-      "_id": "knxIuIN5cLiZoWmG",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Jaws",
-      "sort": 0,
-      "type": "melee",
-      "system": {
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.101+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
         "attack": {
           "value": ""
         },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 17
-        },
         "damageRolls": {
-          "0": {
-            "damage": "2d10+7",
+          "l62r53xvi5fa93emftw4": {
+            "damage": "2d8+3",
             "damageType": "piercing"
           }
         },
+        "bonus": {
+          "value": 13
+        },
+        "attackEffects": {
+          "value": [],
+          "custom": ""
+        }
+      },
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ashwingGargoyl01.qhS5ZEJcqNFytqWd"
+    },
+    {
+      "_id": "cprgu1LyMWRqzI0w",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "sort": 200000,
+      "system": {
         "description": {
           "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
         },
-        "rules": [],
-        "slug": null,
         "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!ashwingGargoyl01.knxIuIN5cLiZoWmG"
-    },
-    {
-      "_id": "ca8WGC32HP82EEyP",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Flyby Strike",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>The gargoyle Flies up to its Speed and makes one Strike at any point along the way — denying grounded foes their full answer.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
           "value": [
-            "attack"
-          ]
-        }
-      },
-      "_key": "!actors.items!ashwingGargoyl01.ca8WGC32HP82EEyP"
-    },
-    {
-      "_id": "awLiwDN0QLXnAClG",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Freeze",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>It holds statue-still: until it moves, it is indistinguishable from eroded rock (@Check[type:perception|dc:26] against its Stealth to pick it from the cindercone scree). +4 circumstance to Stealth in stony terrain.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+            "agile"
+          ],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "concentrate"
-          ]
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.101+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "igj8v3sf65ku76csurok": {
+            "damage": "2d6+3",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 13
+        },
+        "attackEffects": {
+          "value": [],
+          "custom": ""
         }
       },
-      "_key": "!actors.items!ashwingGargoyl01.awLiwDN0QLXnAClG"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ashwingGargoyl01.cprgu1LyMWRqzI0w"
     },
     {
-      "_id": "t0k0HriixH12DwJV",
+      "_id": "1V9uaQOnCMGgMxl2",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
       "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Stone Hide",
-      "sort": 0,
-      "type": "action",
+      "name": "Darkvision",
+      "sort": 300000,
       "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.101+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
         "actionType": {
           "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
         },
         "actions": {
           "value": null
         },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Resistance physical 5 (except adamantine).</p>"
+        "requirements": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ashwingGargoyl01.1V9uaQOnCMGgMxl2"
+    },
+    {
+      "_id": "DsvyLX53TeuZHMQ3",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Clawed Feet",
+      "sort": 400000,
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> The gargoyle is Flying, and a creature moves into an adjacent square below it.</p>\n<hr />\n<p><strong>Effect</strong> The gargoyle makes a claw Strike against the triggering creature.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "attack"
+          ],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.101+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
         }
       },
-      "_key": "!actors.items!ashwingGargoyl01.t0k0HriixH12DwJV"
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ashwingGargoyl01.DsvyLX53TeuZHMQ3"
+    },
+    {
+      "_id": "9bomxaBEHSLvRrkq",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Statue",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": "<p>Until the next time it acts, the gargoyle appears to be a statue. It has an automatic result of 32 on Deception checks and DCs to pass as a statue.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "concentrate"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.101+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ashwingGargoyl01.9bomxaBEHSLvRrkq"
+    },
+    {
+      "_id": "a214g3errazlAkKb",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Acrobatics",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.101+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 10
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ashwingGargoyl01.a214g3errazlAkKb"
+    },
+    {
+      "_id": "Ura0eOQUMHdW4GGC",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Athletics",
+      "sort": 700000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.101+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 9
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ashwingGargoyl01.Ura0eOQUMHdW4GGC"
+    },
+    {
+      "_id": "fiMdWAcWbeu1N0Jm",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Stealth",
+      "sort": 800000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.101+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 12
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ashwingGargoyl01.fiMdWAcWbeu1N0Jm"
     }
   ],
+  "name": "Ashwing Gargoyle",
   "system": {
+    "attributes": {
+      "hp": {
+        "value": 55,
+        "temp": 0,
+        "max": 40,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 40
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 21,
+        "details": ""
+      },
+      "perception": {
+        "value": 10
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "adjustment": "elite"
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 4
+      },
+      "source": {
+        "value": "Pathfinder Bestiary",
+        "author": ""
+      },
+      "creatureType": "Beast",
+      "blurb": "",
+      "publicNotes": "<p>Gargoyles are monstrous hunters made of elemental stone. They use their resemblance to decorative statues to hide in plain sight in cities during the day and descend upon unlucky pedestrians at night. Their most common form is that of a horned humanoid with bat-like wings, but individual gargoyles show a great deal of variation, with some appearing more or less humanoid and others resembling no known creature. A gargoyle's features are not flxed; city-dwelling gargoyles who remain in the same locale long enough slowly morph, day by day, to match the style of the local architecture. These patient monsters can stay disguised for long stretches of time as they patiently await an opportunity to strike.</p>\n<p>Gargoyles tend to be lone hunters, though sometimes they band into fearsome tribes called \"wings\" for protection or sport. On rare occasions, wings become relatively stable communities, and gargoyles in wings may even ally with other creatures such as demons and intelligent aberrations, though these alliances exist on a razor's edge. The majority of gargoyles are treacherous, vindictive, and petty-traits that preclude lasting partnerships. Many tend to be obsessive and compulsive. Some are collectors, focusing on anything from books to grim trophies, while others are ritualistic or overly passionate about niche intellectual subjects or certain artistic motifs. These tendencies often contribute to the dissolution of wings as individuals' obsessions and compulsions clash.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the Ashwings — advanced gargoyles at generations-long war with all three quahs, bought for this chapter with Red Mantis gold from Mediogalti. They hate humans (Shoanti most of all), ferry the assassins over the spike-stone fields at Flameford, and look exactly like wind-carved rocks until they don't.</p><p><strong>Tactics:</strong> Flyby Strikes and altitude; they never brawl grounded. <strong>Morale:</strong> a gargoyle flees below ~10 HP; when the last assassin dies, all survivors quit the field.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "beast",
+        "earth"
+      ],
+      "senses": {
+        "value": "darkvision"
+      },
+      "languages": {
+        "value": [
+          "common",
+          "terran"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "exceptions": "except adamantine",
+          "type": "physical",
+          "value": 5
+        }
+      ],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "ci": []
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:39.101+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
     "abilities": {
       "str": {
-        "mod": 4
+        "mod": 3
       },
       "dex": {
-        "mod": 4
+        "mod": 2
       },
       "con": {
-        "mod": 4
+        "mod": 3
       },
       "int": {
-        "mod": 0
+        "mod": -2
       },
       "wis": {
         "mod": 2
       },
       "cha": {
-        "mod": 0
+        "mod": -2
       }
     },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 24
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 95,
-        "temp": 0,
-        "value": 95
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "fly",
-            "value": 60
-          }
-        ],
-        "value": 40
-      }
-    },
-    "details": {
-      "blurb": "Mercenary gargoyle of the Cinderlands",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "petran"
-        ]
-      },
-      "level": {
-        "value": 6
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the Ashwings — advanced gargoyles at generations-long war with all three quahs, bought for this chapter with Red Mantis gold from Mediogalti. They hate humans (Shoanti most of all), ferry the assassins over the spike-stone fields at Flameford, and look exactly like wind-carved rocks until they don't.</p><p><strong>Tactics:</strong> Flyby Strikes and altitude; they never brawl grounded. <strong>Morale:</strong> a gargoyle flees below ~10 HP; when the last assassin dies, all survivors quit the field.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 13,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
     "saves": {
       "fortitude": {
-        "saveDetail": "",
-        "value": 14
+        "value": 13,
+        "saveDetail": ""
       },
       "reflex": {
-        "saveDetail": "",
-        "value": 14
+        "value": 10,
+        "saveDetail": ""
       },
       "will": {
-        "saveDetail": "",
-        "value": 12
+        "value": 10,
+        "saveDetail": ""
       }
-    },
-    "skills": {
-      "stealth": {
-        "base": 16
-      },
-      "acrobatics": {
-        "base": 14
-      },
-      "survival": {
-        "base": 12
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "earth",
-        "gargoyle"
-      ]
     }
   },
-  "folder": "ch4CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
+  "type": "npc",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.pathfinder-bestiary.aeCoh4u6c5kt1iCs"
+    }
   },
   "prototypeToken": {
     "name": "Ashwing Gargoyle",
@@ -391,5 +718,23 @@
       }
     }
   },
+  "effects": [],
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "ashwingGargoyl01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch4CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!ashwingGargoyl01"
 }

@@ -1,245 +1,6 @@
 {
-  "_id": "cytillipede00001",
   "name": "Cytillipede",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "mn1jokRumHLk9WMD",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Mandibles",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 20
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d10+7",
-            "damageType": "piercing"
-          },
-          "1": {
-            "damage": "1d6",
-            "damageType": "poison"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!cytillipede00001.mn1jokRumHLk9WMD"
-    },
-    {
-      "_id": "rfKguCphlmtKoDGY",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Cytillesh Flash",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Its segments strobe with brain-mold light in a 20-ft burst: @Check[type:will|dc:26] or @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1} and @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} 1 round (Stunned 2 on a critical failure). It times the flash for maximum coverage — the assassins sneak-attack the stunned.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "concentrate",
-            "light",
-            "visual",
-            "incapacitation"
-          ]
-        }
-      },
-      "_key": "!actors.items!cytillipede00001.rfKguCphlmtKoDGY"
-    },
-    {
-      "_id": "v0YHJ9KdgDqvKBDO",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Numbing Venom",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Mandible poison: @Check[type:fortitude|dc:26] or @Damage[1d6[poison]] and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!cytillipede00001.v0YHJ9KdgDqvKBDO"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 5
-      },
-      "dex": {
-        "mod": 4
-      },
-      "con": {
-        "mod": 4
-      },
-      "int": {
-        "mod": -3
-      },
-      "wis": {
-        "mod": 1
-      },
-      "cha": {
-        "mod": -2
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 26
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 120,
-        "temp": 0,
-        "value": 120
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 40
-      }
-    },
-    "details": {
-      "blurb": "Mercy-bought brain-mold centipede",
-      "languages": {
-        "details": "",
-        "value": [
-          "undercommon"
-        ]
-      },
-      "level": {
-        "value": 8
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> a horse-sized, intelligent centipede-thing that begged for its life during the Gray Maidens' derro purge — and got it, in exchange for service. It lairs amid the E4 cytillesh patches (the brain-mold: 24 hours within 20 ft of a patch, @Check[type:will|dc:25] or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}, cumulative).</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 15,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 17
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 15
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 13
-      }
-    },
-    "skills": {
-      "athletics": {
-        "base": 18
-      },
-      "stealth": {
-        "base": 16
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "lg"
-      },
-      "value": [
-        "aberration"
-      ]
-    }
-  },
-  "folder": "ch4CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Cytillipede",
     "displayName": 20,
@@ -312,5 +73,602 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 138,
+        "temp": 0,
+        "max": 138,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": [
+          {
+            "type": "climb",
+            "value": 30
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 27,
+        "details": ""
+      },
+      "perception": {
+        "value": 14
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "N"
+      },
+      "level": {
+        "value": 8
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> a horse-sized, intelligent centipede-thing that begged for its life during the Gray Maidens' derro purge — and got it, in exchange for service. It lairs amid the E4 cytillesh patches (the brain-mold: 24 hours within 20 ft of a patch, @Check[type:will|dc:25] or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}, cumulative).</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "beast"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "mental",
+          "poison"
+        ],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "lg"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:39.086+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": -4
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 16,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 17,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 13,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "dJEhSDl0JEE8oUR2",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668785345871,
+        "modifiedTime": 1668785345871,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cytillipede00001.dJEhSDl0JEE8oUR2"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 14
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "h2FAKnMt0ptKJcCk",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668785361829,
+        "modifiedTime": 1668785378515,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cytillipede00001.h2FAKnMt0ptKJcCk"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 18
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "atDFJ28TzYiitrjy",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668785364443,
+        "modifiedTime": 1668785378515,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cytillipede00001.atDFJ28TzYiitrjy"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Mandibles",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "finesse"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "zRf69WauldRqXweb": {
+            "damage": "2d8+9",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 19
+        },
+        "attackEffects": {
+          "value": [
+            "cytillipede-poison"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "5ZFFcZT1FOQxy2aM",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668785542435,
+        "modifiedTime": 1668785638259,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cytillipede00001.5ZFFcZT1FOQxy2aM"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Cytillipede Poison",
+      "system": {
+        "description": {
+          "value": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:27]</p>\n<p><strong>Maximum Duration</strong> 6 rounds</p>\n<p><strong>Stage 1</strong> [[/r {2d6}[poison]]]{2d6 poison damage} and @Compendium[pf2e.conditionitems.Clumsy]{Clumsy 1} (1 round)</p>\n<p><strong>Stage 2</strong> [[/r {2d6}[poison]]]{2d6 poison damage}, @Compendium[pf2e.conditionitems.Clumsy]{Clumsy 2}, and @Compendium[pf2e.conditionitems.Slowed]{Slowed 1} (1 round)</p>\n<p><strong>Stage 3</strong> [[/r {2d6}[poison]]]{2d6 poison damage}, @Compendium[pf2e.conditionitems.Clumsy]{Clumsy 2}, and @Compendium[pf2e.conditionitems.Slowed]{Slowed 2} (1 round)</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "iuzPxBXth6AYAuMo",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668785575650,
+        "modifiedTime": 1668785623558,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cytillipede00001.iuzPxBXth6AYAuMo"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Cytillesh Flash",
+      "system": {
+        "description": {
+          "value": "<p>The cytillesh patches that grow along the cytillipede's body release a bright flash of blue light that provides bright light in a @Template[type:emanation|distance:20] and raises the light level by one step for the next 20 feet. Creatures within the @Template[type:emanation|distance:40] must attempt a @Check[type:will|dc:27] save or become @Compendium[pf2e.conditionitems.Blinded]{Blinded} for 1 round and @Compendium[pf2e.conditionitems.Dazzled]{Dazzled} for 1 minute. Creatures within the 20-foot area of bright light that fail this save also become @Compendium[pf2e.conditionitems.Stunned]{Stunned 4}. The creature can spend an Interact action rubbing its eyes to end the blinded condition. The cytillipede can't use Cytillesh Flash again for [[/br 1d4 #rounds]]{1d4 rounds}.</p>\n<p>&nbsp;</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "light",
+            "visual"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "xsCVIwkT2PSkVWnF",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668785656584,
+        "modifiedTime": 1668791168700,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cytillipede00001.xsCVIwkT2PSkVWnF"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Undulate",
+      "system": {
+        "description": {
+          "value": "<p>The cytillipede Strides or Steps. During this movement, it can pass through spaces as narrow as 5 feet without Squeezing.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.086+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "6eFxxEK8MyGJOor0",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668791253028,
+        "modifiedTime": 1668791275193,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cytillipede00001.6eFxxEK8MyGJOor0"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "cytillipede00001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch4CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!cytillipede00001"
 }

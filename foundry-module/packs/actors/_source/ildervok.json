@@ -1,295 +1,6 @@
 {
-  "_id": "ildervokNight001",
   "name": "Ildervok",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "cE0IGqBWbKWxK8LG",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Shadow Bite",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 30
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "3d12+14",
-            "damageType": "piercing"
-          },
-          "1": {
-            "damage": "2d6",
-            "damageType": "void"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "magical",
-            "reach-10"
-          ]
-        }
-      },
-      "_key": "!actors.items!ildervokNight001.cE0IGqBWbKWxK8LG"
-    },
-    {
-      "_id": "p4HyJqTsZjb72Txg",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Drain Magic",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Requirement</strong> Bite hit a creature bearing magic items.</p><hr /><p><strong>Effect</strong> One of the target's magic items: @Check[type:fortitude|dc:34] (item's owner) or the item is suppressed 1 round (drained of light and power).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "necromancy"
-          ]
-        }
-      },
-      "_key": "!actors.items!ildervokNight001.p4HyJqTsZjb72Txg"
-    },
-    {
-      "_id": "6B1LxBvUBBnwAtTT",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Umbral Dive",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>He folds through shadow up to 120 feet and Strikes from @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden}.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "attack",
-            "shadow",
-            "teleportation"
-          ]
-        }
-      },
-      "_key": "!actors.items!ildervokNight001.6B1LxBvUBBnwAtTT"
-    },
-    {
-      "_id": "VodQV7tEG4lTjmsn",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Nightshade Resilience",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Undead immunities; resistance all 12 (except vitality and silver); <em>light aversion</em>: @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} in bright light.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!ildervokNight001.VodQV7tEG4lTjmsn"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 8
-      },
-      "dex": {
-        "mod": 4
-      },
-      "con": {
-        "mod": 5
-      },
-      "int": {
-        "mod": 2
-      },
-      "wis": {
-        "mod": 4
-      },
-      "cha": {
-        "mod": 5
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 36
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 295,
-        "temp": 0,
-        "value": 295
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "fly",
-            "value": 60
-          }
-        ],
-        "value": 30
-      }
-    },
-    "details": {
-      "blurb": "Nightwing warden of the Star Tower (G7)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "necril",
-          "shadowtongue"
-        ]
-      },
-      "level": {
-        "value": 14
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the nightwing of the Star Tower (G7) — sent by <strong>Zon-Kuthon himself</strong> weeks after the curse woke, to ward the Chamber of the Well until a new curate takes the post; bound by the god's will, <em>not</em> the curse (he can never become an anchor). He greets visitors telepathically, invisible above the well: <strong>give him a curate, and the way below opens</strong> — a new curate (or a banishment-grade effect) is his only release from the post. He prefers a volunteer, ideally a Kuthite — <em>Sial or Laori are perfect</em> — otherwise he nominates the most Zon-Kuthon-like PC. Refused outright, his patience snaps: he attacks to force someone to beg acquiescence. <strong>See the G-H page for the Devil-You-Know turn this triggers</strong> — and for what he reveals once a curate is settled (Zon-Kuthon <em>wants</em> Kazavon's fragment cut out of the queen).</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 26,
-      "senses": [
-        {
-          "type": "darkvision"
-        },
-        {
-          "type": "true-seeing"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 26
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 22
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 24
-      }
-    },
-    "skills": {
-      "stealth": {
-        "base": 26
-      },
-      "religion": {
-        "base": 24
-      },
-      "intimidation": {
-        "base": 26
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "grg"
-      },
-      "value": [
-        "undead",
-        "nightshade"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Ildervok",
     "displayName": 20,
@@ -362,5 +73,2709 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 205,
+        "temp": 0,
+        "max": 205,
+        "details": "negative healing"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 60
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 35,
+        "details": ""
+      },
+      "perception": {
+        "value": 26
+      },
+      "allSaves": {
+        "value": "+1 to all saves vs. magic"
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 14
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Nightwing nightshade",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the nightwing of the Star Tower (G7) — sent by <strong>Zon-Kuthon himself</strong> weeks after the curse woke, to ward the Chamber of the Well until a new curate takes the post; bound by the god's will, <em>not</em> the curse (he can never become an anchor). He greets visitors telepathically, invisible above the well: <strong>give him a curate, and the way below opens</strong> — a new curate (or a banishment-grade effect) is his only release from the post. He prefers a volunteer, ideally a Kuthite — <em>Sial or Laori are perfect</em> — otherwise he nominates the most Zon-Kuthon-like PC. Refused outright, his patience snaps: he attacks to force someone to beg acquiescence. <strong>See the G-H page for the Devil-You-Know turn this triggers</strong> — and for what he reveals once a curate is settled (Zon-Kuthon <em>wants</em> Kazavon's fragment cut out of the queen).</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "undead",
+        "fiend"
+      ],
+      "senses": {
+        "value": "Darkvision, Darksense 60 feet, Detect Magic"
+      },
+      "languages": {
+        "value": [
+          "abyssal",
+          "common",
+          "necril"
+        ],
+        "selected": [],
+        "custom": "Telepathy 100 feet"
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "paralyzed",
+          "poison",
+          "sleep"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "cold",
+          "value": 10,
+          "exceptions": ""
+        },
+        {
+          "type": "physical",
+          "value": 10,
+          "exceptions": "except silver"
+        }
+      ],
+      "dv": [
+        {
+          "type": "good",
+          "value": 10,
+          "exceptions": ""
+        }
+      ],
+      "rarity": "rare",
+      "size": {
+        "value": "huge"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-25T20:37:51.930+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 9
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 4
+      },
+      "wis": {
+        "mod": 5
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 25,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 23,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 27,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "NaXlWxBu4W38nytf",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669408870781,
+        "modifiedTime": 1669408870781,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.NaXlWxBu4W38nytf"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darksense 60 feet",
+      "system": {
+        "description": {
+          "value": "<p>Nightshades gain true seeing in dim light and darkness up to 60 feet. Regardless of light conditions, they can detect living creatures and their health, as Lifesense.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divination",
+            "divine"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T20:43:09.925+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "wgSSMftuE6XIoLUV",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669408989937,
+        "modifiedTime": 1669409019574,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.wgSSMftuE6XIoLUV"
+    },
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 26
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "ekiqzLCyKOI0LMpl",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409094118,
+        "modifiedTime": 1669409126116,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.ekiqzLCyKOI0LMpl"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 24
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "L2f7mxkOSsFDte59",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409095958,
+        "modifiedTime": 1669409126116,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.L2f7mxkOSsFDte59"
+    },
+    {
+      "name": "Religion",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 26
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "cMRtQ2dj50hEhu1I",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409107581,
+        "modifiedTime": 1669409126116,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.cMRtQ2dj50hEhu1I"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 28
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "BYzyN6G8ZvsMcaRi",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409110496,
+        "modifiedTime": 1669409126116,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.BYzyN6G8ZvsMcaRi"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "+1 Status to All Saves vs. Magic",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              {
+                "or": [
+                  "magical",
+                  "arcane",
+                  "divine",
+                  "primal",
+                  "occult"
+                ]
+              }
+            ],
+            "selector": "saving-throw",
+            "type": "status",
+            "value": 1
+          }
+        ],
+        "slug": "1-status-to-all-saves-vs-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.kquBnQ0kObZztnBc"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409173102,
+        "modifiedTime": 1669409173102,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "d4IcunxnTaktW7hT",
+      "_key": "!actors.items!ildervokNight001.d4IcunxnTaktW7hT"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409336480,
+        "modifiedTime": 1669409336480,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "S1ytnbb1H6nk91Eb",
+      "_key": "!actors.items!ildervokNight001.S1ytnbb1H6nk91Eb"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Clawed Feet",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> The nightwing is Flying, and a creature moves into an adjacent square below it.</p>\n<hr>\n<p><strong>Effect</strong> The nightwing makes a claw Strike against the triggering creature.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "attack"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T20:50:54.354+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "uadlSai2vd0H8AtV",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409454364,
+        "modifiedTime": 1669409481062,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.uadlSai2vd0H8AtV"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sunlight Powerlessness",
+      "system": {
+        "description": {
+          "value": "<p>A nightwing caught in sunlight is @Compendium[pf2e.conditionitems.Stunned]{Stunned 2} and @Compendium[pf2e.conditionitems.Clumsy]{Clumsy 2}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T20:51:28.926+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "66zZjWssrVCJxhIY",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409488929,
+        "modifiedTime": 1669409503646,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.66zZjWssrVCJxhIY"
+    },
+    {
+      "_id": "ZjIUNxyippSJ8MCZ",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Undead Mastery",
+      "system": {
+        "description": {
+          "value": "<p>@Template[type:emanation|distance:30] @Compendium[pf2e.bestiary-ability-glossary-srd.Aura]{Aura}</p>\n<p>Commanded or allied undead in the aura that have a lower level than the nightwing gain a +1 circumstance bonus to attack rolls, damage rolls, AC, saves, and skill checks.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Aura]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [
+            "aura",
+            "divine",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "aura",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409517094,
+        "modifiedTime": 1669409545589,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.ZjIUNxyippSJ8MCZ"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Fangs",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T20:52:51.331+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "lbsRzlWquHDQb8pN": {
+            "damage": "3d8+10",
+            "damageType": "piercing"
+          },
+          "dqfwc5e0ZsmfhTMi": {
+            "damage": "2d6",
+            "damageType": "cold"
+          }
+        },
+        "bonus": {
+          "value": 28
+        },
+        "attackEffects": {
+          "value": [
+            "magic-drain"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "Mhw8THVo6Sbd6caw",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409571335,
+        "modifiedTime": 1669409731526,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.Mhw8THVo6Sbd6caw"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "reach-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T20:53:42.313+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "c7IxBPRm3pEKhwJk": {
+            "damage": "3d6+10",
+            "damageType": "slashing"
+          },
+          "dAwKIi3Rrj3vY4oX": {
+            "damage": "2d6",
+            "damageType": "cold"
+          }
+        },
+        "bonus": {
+          "value": 28
+        },
+        "attackEffects": {
+          "value": [
+            "grab"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "R7T20GKzgub1ymnq",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409622324,
+        "modifiedTime": 1669409662965,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.R7T20GKzgub1ymnq"
+    },
+    {
+      "_id": "7IzvgJ1npkJEiPvp",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Grab",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Grab]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "grab",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.Tkd8sH4pwFIPzqTr"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409678855,
+        "modifiedTime": 1669409678855,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.7IzvgJ1npkJEiPvp"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Magic Drain",
+      "system": {
+        "description": {
+          "value": "<p>When a nightwing makes a successful fangs Strike, the victim must make a @Check[type:will|dc:33] save or one spell effect currently affecting him immediately ends. Determine which spell is drained randomly if the target is under the effects of more than one spell. The nightwing heals damage equal to twice the level of the spell drained &mdash;hit points in excess of its maximum are instead gained as temporary hit points that last for 1 hour.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "abjuration",
+            "divine"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T20:54:56.680+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "DPwFhplKiaqhOFZL",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409696683,
+        "modifiedTime": 1669409717119,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.DPwFhplKiaqhOFZL"
+    },
+    {
+      "name": "Divine Innate Spells",
+      "type": "spellcastingEntry",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T20:57:38.739+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "ability": {
+          "value": "cha"
+        },
+        "spelldc": {
+          "value": 26,
+          "dc": 34
+        },
+        "tradition": {
+          "value": "divine"
+        },
+        "prepared": {
+          "value": "innate"
+        },
+        "showUnpreparedSpells": {
+          "value": false
+        },
+        "showSlotlessLevels": {
+          "value": false
+        },
+        "proficiency": {
+          "value": 1
+        },
+        "displayLevels": {},
+        "slots": {
+          "slot0": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot1": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot2": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot3": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot4": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot5": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot6": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot7": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot8": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot9": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot10": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot11": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          }
+        },
+        "autoHeightenLevel": {
+          "value": null
+        }
+      },
+      "_id": "YUvOAgT8AkBkjsmc",
+      "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409858743,
+        "modifiedTime": 1669410095453,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.YUvOAgT8AkBkjsmc"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/finger-of-death.webp",
+      "name": "Finger of Death",
+      "system": {
+        "description": {
+          "value": "<p>You point your finger toward the target and speak a word of slaying. You deal 70 negative damage to the target. If the damage from finger of death reduces the target to 0 Hit Points, the target dies instantly.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 10.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "death"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "finger-of-death",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 7
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "divine",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "necromancy"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 living creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {
+            "0": {
+              "applyMod": false,
+              "type": {
+                "categories": [],
+                "subtype": "",
+                "value": "negative"
+              },
+              "value": "70"
+            }
+          }
+        },
+        "save": {
+          "value": "fortitude",
+          "basic": "basic"
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc",
+          "heightenedLevel": 7
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "damage": {
+            "0": "10"
+          },
+          "interval": 1,
+          "type": "interval"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.Z9OrRXKgAPv6Hn5l"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409890972,
+        "modifiedTime": 1669409890972,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "u9UMJySav8yt8iED",
+      "_key": "!actors.items!ildervokNight001.u9UMJySav8yt8iED"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/harm.webp",
+      "name": "Harm",
+      "system": {
+        "description": {
+          "value": "<p>You channel negative energy to harm the living or heal the undead. If the target is a living creature, you deal 1d8 negative damage to it, and it gets a basic Fortitude save. If the target is a willing undead creature, you restore that amount of Hit Points. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.</p>\n<p><span class=\"pf2-icon\">1</span> <strong>(somatic)</strong> The spell has a range of touch.</p>\n<p><span class=\"pf2-icon\">2</span> <strong>(verbal, somatic)</strong> The spell has a range of 30 feet. If you're healing an undead creature, increase the Hit Points restored by 8.</p>\n<p><span class=\"pf2-icon\">3</span> <strong>(material, verbal, somatic)</strong> You disperse negative energy in a 30-foot emanation. This targets all living and undead creatures in the area.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "negative"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "harm",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "divine"
+          ]
+        },
+        "school": {
+          "value": "necromancy"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": false,
+          "verbal": false
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 living creature or 1 willing undead creature"
+        },
+        "range": {
+          "value": "varies"
+        },
+        "area": {
+          "value": "30",
+          "areaType": "emanation"
+        },
+        "time": {
+          "value": "1 to 3"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {
+            "0": {
+              "applyMod": false,
+              "type": {
+                "categories": [],
+                "subtype": "",
+                "value": "negative"
+              },
+              "value": "1d8"
+            }
+          }
+        },
+        "save": {
+          "value": "fortitude",
+          "basic": "basic"
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc",
+          "heightenedLevel": 7,
+          "uses": {
+            "max": 3,
+            "value": 3
+          }
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "varies"
+        },
+        "heightening": {
+          "damage": {
+            "0": "1d8"
+          },
+          "interval": 1,
+          "type": "interval"
+        },
+        "overlays": {
+          "4gyp3qlsv5ywdyjq": {
+            "_id": "4gyp3qlsv5ywdyjq",
+            "name": "Harm (vs. Undead)",
+            "overlayType": "override",
+            "sort": 3,
+            "system": {
+              "area": {
+                "areaType": "",
+                "value": ""
+              },
+              "components": {
+                "somatic": true,
+                "verbal": true
+              },
+              "damage": {
+                "value": {
+                  "0": {
+                    "value": "1d8+8"
+                  }
+                }
+              },
+              "heightening": {
+                "damage": {
+                  "0": "1d8+8"
+                }
+              },
+              "range": {
+                "value": "30 feet"
+              },
+              "save": {
+                "basic": "",
+                "value": ""
+              },
+              "spellType": {
+                "value": "heal"
+              },
+              "target": {
+                "value": "1 willing undead creature"
+              },
+              "time": {
+                "value": "2"
+              }
+            }
+          },
+          "pq7cxntbz4s8g5ik": {
+            "_id": "pq7cxntbz4s8g5ik",
+            "overlayType": "override",
+            "sort": 1,
+            "system": {
+              "area": {
+                "areaType": "",
+                "value": ""
+              },
+              "components": {
+                "somatic": true
+              },
+              "range": {
+                "value": "touch"
+              },
+              "time": {
+                "value": "1"
+              }
+            }
+          },
+          "rvhoa43rqqqp8izn": {
+            "_id": "rvhoa43rqqqp8izn",
+            "overlayType": "override",
+            "sort": 4,
+            "system": {
+              "components": {
+                "material": true,
+                "somatic": true,
+                "verbal": true
+              },
+              "range": {
+                "value": ""
+              },
+              "target": {
+                "value": "all living and undead creatures"
+              },
+              "time": {
+                "value": "3"
+              }
+            }
+          },
+          "z04svm1cvfcxtplb": {
+            "_id": "z04svm1cvfcxtplb",
+            "name": "Harm (vs. Living)",
+            "overlayType": "override",
+            "sort": 2,
+            "system": {
+              "area": {
+                "areaType": "",
+                "value": ""
+              },
+              "components": {
+                "somatic": true,
+                "verbal": true
+              },
+              "range": {
+                "value": "30 feet"
+              },
+              "target": {
+                "value": "1 living creature"
+              },
+              "time": {
+                "value": "2"
+              }
+            }
+          }
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.wdA52JJnsuQWeyqz"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409896863,
+        "modifiedTime": 1669409905866,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "RsoVyPHQo628uCBt",
+      "_key": "!actors.items!ildervokNight001.RsoVyPHQo628uCBt"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/sudden-blight.webp",
+      "name": "Sudden Blight",
+      "system": {
+        "description": {
+          "value": "<p>You accelerate the processes of decay in the area. Each living creature in the area takes [[/r {2d10}[negative]]]{2d10 negative damage} (basic Fortitude save). A creature afflicted by a disease takes a -2 circumstance penalty to this save.You can also direct the blight to rot all Small and Tiny non-creature plants in the area, eliminating non-magical undergrowth and any resulting difficult terrain, cover, and concealment. <em>Sudden blight</em> attempts to counteract any magical effect on the plants before withering them.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d10.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Advanced Player's Guide"
+        },
+        "traits": {
+          "value": [
+            "negative"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "sudden-blight",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "divine",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "necromancy"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": 20,
+          "areaType": "burst"
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {
+            "0": {
+              "type": {
+                "categories": [],
+                "value": "negative"
+              },
+              "value": "2d10"
+            }
+          }
+        },
+        "save": {
+          "value": "fortitude",
+          "basic": "basic"
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc",
+          "heightenedLevel": 7
+        },
+        "hasCounteractCheck": {
+          "value": true
+        },
+        "areasize": {
+          "value": "20-foot burst"
+        },
+        "heightening": {
+          "damage": {
+            "0": "1d10"
+          },
+          "interval": 1,
+          "type": "interval"
+        },
+        "prepared": {
+          "value": false
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.XFtO4BBI22Uox2QP"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409916403,
+        "modifiedTime": 1669409917955,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "4Yf0EMTkMB38V6s2",
+      "_key": "!actors.items!ildervokNight001.4Yf0EMTkMB38V6s2"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/dispel-magic.webp",
+      "name": "Dispel Magic",
+      "system": {
+        "description": {
+          "value": "<p>You unravel the magic behind a spell or effect. Attempt a counteract check against the target. If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an artifact or similar item, you automatically fail.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "dispel-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "abjuration"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 spell effect or unattended magic item"
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": null,
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc",
+          "heightenedLevel": 6
+        },
+        "hasCounteractCheck": {
+          "value": true
+        },
+        "areasize": {
+          "value": ""
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409926073,
+        "modifiedTime": 1669409930829,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "Rint4O35iTdGgShi",
+      "_key": "!actors.items!ildervokNight001.Rint4O35iTdGgShi"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/cone-of-cold.webp",
+      "name": "Cone of Cold",
+      "system": {
+        "description": {
+          "value": "<p>Icy cold rushes forth from your hands. You deal 12d6 cold damage to creatures in the area.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d6.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "cold"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "cone-of-cold",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 5
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "evocation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": "60",
+          "areaType": "cone"
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {
+            "0": {
+              "type": {
+                "categories": [],
+                "value": "cold"
+              },
+              "value": "12d6"
+            }
+          }
+        },
+        "save": {
+          "value": "reflex",
+          "basic": "basic"
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc",
+          "heightenedLevel": 5
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "60-foot cone"
+        },
+        "heightening": {
+          "damage": {
+            "0": "2d6"
+          },
+          "interval": 1,
+          "type": "interval"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.3puDanGfpEt6jK5k"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409947865,
+        "modifiedTime": 1669409947865,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "5aq67o8Lf7lQD3KP",
+      "_key": "!actors.items!ildervokNight001.5aq67o8Lf7lQD3KP"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/confusion.webp",
+      "name": "Confusion",
+      "system": {
+        "description": {
+          "value": "<p>You befuddle your target with strange impulses, causing it to act randomly. The effects are determined by the target's Will save. You can Dismiss the spell.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target babbles incoherently and is @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Stunned 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.yblD8fOR1J8rDwEQ]{Confused} for 1 minute. It can attempt a new save at the end of each of its turns to end the confusion.</p>\n<p><strong>Critical Failure</strong> The target is Confused for 1 minute, with no save to end early.</p>\n<hr />\n<p><strong>Heightened (8th)</strong> You can target up to 10 creatures.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "emotion",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "confusion",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 4
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "enchantment"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "will",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc",
+          "heightenedLevel": 4
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "8": {
+              "target": {
+                "value": "10 creatures"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.LiGbewa9pO0yjbsY"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409957112,
+        "modifiedTime": 1669409957112,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "WxqMU3pCPUOXgtdR",
+      "_key": "!actors.items!ildervokNight001.WxqMU3pCPUOXgtdR"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/darkness.webp",
+      "name": "Darkness (At Will)",
+      "system": {
+        "description": {
+          "value": "<p>You create a shroud of darkness that prevents light from penetrating or emanating within the area. Light does not enter the area and any non-magical light sources, such as a torch or lantern, do not emanate any light while inside the area, even if their light radius would extend beyond the darkness. This also suppresses magical light of your darkness spell's level or lower. Light can't pass through, so creatures in the area can't see outside. From outside, it appears as a globe of pure darkness.</p>\n<hr />\n<p><strong>Heightened (4th)</strong> Even creatures with darkvision (but not greater darkvision) can barely see through the darkness. They treat targets seen through the darkness as @UUID[Compendium.pf2e.conditionitems.DmAIPqOBomZ7H95W]{Concealed}.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "darkness"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkness",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 2
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "evocation"
+        },
+        "components": {
+          "focus": false,
+          "material": true,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": "120 feet"
+        },
+        "area": {
+          "value": "20",
+          "areaType": "burst"
+        },
+        "time": {
+          "value": "3"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc",
+          "heightenedLevel": 4,
+          "uses": {
+            "max": 99,
+            "value": 99
+          }
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "20-foot burst"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.4GE2ZdODgIQtg51c"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669409998351,
+        "modifiedTime": 1669410024567,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "tTEZ77oETe5f1rkc",
+      "_key": "!actors.items!ildervokNight001.tTEZ77oETe5f1rkc"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/haste.webp",
+      "name": "Haste",
+      "system": {
+        "description": {
+          "value": "<p>Magic empowers the target to act faster. It gains the @UUID[Compendium.pf2e.conditionitems.nlCjDvLMf2EkV2dl]{Quickened} condition and can use the extra action each round only for Strike and Stride actions.</p>\n<hr />\n<p><strong>Heightened (7th)</strong> You can target up to 6 creatures.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "haste",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 3
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "transmutation"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "1 minute"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc",
+          "heightenedLevel": 3
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "7": {
+              "target": {
+                "value": "6 creatures"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.o6YCGx4lycsYpww4"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669410032531,
+        "modifiedTime": 1669410036904,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "chFurWSBzvu0XOvk",
+      "_key": "!actors.items!ildervokNight001.chFurWSBzvu0XOvk"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/detect-magic.webp",
+      "name": "Detect Magic (Constant)",
+      "system": {
+        "description": {
+          "value": "<p>You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies.</p>\n<p>You detect illusion magic only if that magic's effect has a lower level than the level of your detect magic spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an invisibility potion) typically are detected normally.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You learn the school of magic for the highest-level effect within range that the spell detects. If multiple effects are equally strong, the GM determines which you learn.</p>\n<p><strong>Heightened (4th)</strong> As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "cantrip",
+            "detection"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "detect-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "utility"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ],
+          "custom": ""
+        },
+        "school": {
+          "value": "divination"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
+        "area": {
+          "value": "30",
+          "areaType": "emanation"
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "YUvOAgT8AkBkjsmc"
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": "30-foot emanation"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.gpzpAAAJ1Lza2JVl"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669410046169,
+        "modifiedTime": 1669410063164,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "UqWuxLY7b9IXhx2V",
+      "_key": "!actors.items!ildervokNight001.UqWuxLY7b9IXhx2V"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Snatch",
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> The nightwing @Compendium[pf2e.conditionitems.Grabbed]{Grabbed} a creature this turn with its claw Strike.</p>\n<hr>\n<p><strong>Effect</strong> The nightwing can Fly at half Speed while holding the creature in its claws, carrying that creature along with it and dropping it at the end of its movement. Alternatively, the nightwing can Strike the creature with its fangs with a +2 circumstance bonus.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T21:02:08.932+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "VREb8IcyM6lh7ftS",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669410128944,
+        "modifiedTime": 1669410148137,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ildervokNight001.VREb8IcyM6lh7ftS"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "ildervokNight001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!ildervokNight001"
 }

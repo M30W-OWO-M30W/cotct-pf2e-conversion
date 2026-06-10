@@ -1,90 +1,570 @@
 {
-  "_id": "korvosanRioter01",
-  "name": "Korvosan Rioter",
-  "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "CtC18rAERxvB13di",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Club",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 6
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d6+3",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
+      "_id": "UZlHtMydIq06OfJW",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.ynnBwzkzsR6B73iO"
         }
       },
-      "_key": "!actors.items!korvosanRioter01.CtC18rAERxvB13di"
+      "img": "systems/pf2e/icons/equipment/weapons/sickle.webp",
+      "name": "Sickle",
+      "sort": 100000,
+      "system": {
+        "description": {
+          "value": "<p>Originally a farming tool used for reaping grain, this one‑handed weapon has a short wooden handle ending in a curved blade, sometimes sharpened on both sides.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "trip"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "sickle",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.478+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "sickle",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 1
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d4",
+          "damageType": "slashing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!korvosanRioter01.UZlHtMydIq06OfJW"
     },
     {
-      "_id": "hZUJ2WpPj9SJqTVg",
+      "_id": "o8GJ3AVTDFtS1dFG",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Improvised Thrown",
-      "sort": 0,
-      "type": "melee",
+      "name": "Sickle",
+      "sort": 200000,
       "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 6
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d6+3",
-            "damageType": "bludgeoning"
-          }
-        },
         "description": {
           "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "trip"
+          ],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
         "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "range-increment-10"
-          ]
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.478+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "uc1s1t4wur5bbofg09gjg": {
+            "damage": "1d4+2",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 5
+        },
+        "attackEffects": {
+          "value": []
         }
       },
-      "_key": "!actors.items!korvosanRioter01.hZUJ2WpPj9SJqTVg"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!korvosanRioter01.o8GJ3AVTDFtS1dFG"
+    },
+    {
+      "_id": "Q9h6X4WFBsWo4KlV",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Rock",
+      "sort": 300000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "thrown-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.478+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "c16oqbic9ep578zkoag35t": {
+            "damage": "1d4+2",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 3
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!korvosanRioter01.Q9h6X4WFBsWo4KlV"
+    },
+    {
+      "_id": "T3ZpHsIT64RGyhT0",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Power of the Mob",
+      "sort": 400000,
+      "system": {
+        "description": {
+          "value": "<p>When three or more commoners are adjacent to each other each commoner gets a +1 circumstance bonus to Athletics checks to @UUID[Compendium.pf2e.actionspf2e.7blmbDrQFNfdT731]{Shove}, attack rolls, and damage rolls.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "domain": "all",
+            "key": "RollOption",
+            "option": "power-of-the-mob",
+            "toggleable": true
+          },
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "action:shove",
+              "power-of-the-mob"
+            ],
+            "selector": "athletics",
+            "value": 1
+          },
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "power-of-the-mob"
+            ],
+            "selector": "attack",
+            "value": 1
+          },
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "power-of-the-mob"
+            ],
+            "selector": "strike-damage",
+            "value": 1
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.478+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!korvosanRioter01.T3ZpHsIT64RGyhT0"
+    },
+    {
+      "_id": "fxz50qBlMmlNMKcG",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Athletics",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.478+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 5
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!korvosanRioter01.fxz50qBlMmlNMKcG"
+    },
+    {
+      "_id": "lqVfEZu6MeCHDuky",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Lore (any one related to their trade)",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.478+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 6
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!korvosanRioter01.lqVfEZu6MeCHDuky"
+    },
+    {
+      "_id": "opItqtXq4hh669qB",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Society",
+      "sort": 700000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.478+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 2
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!korvosanRioter01.opItqtXq4hh669qB"
     },
     {
       "name": "Club",
@@ -178,7 +658,89 @@
       "_key": "!actors.items!korvosanRioter01.yz5Ao0tTfBxREHWy"
     }
   ],
+  "name": "Korvosan Rioter",
   "system": {
+    "attributes": {
+      "hp": {
+        "value": 10,
+        "temp": 0,
+        "max": 10,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 13,
+        "details": ""
+      },
+      "perception": {
+        "value": 3
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "N"
+      },
+      "level": {
+        "value": -1
+      },
+      "source": {
+        "value": "Pathfinder Gamemastery Guide",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<p>Though not every commoner is downtrodden, many live hard lives of toil as they work to keep their families fed and housed in relative comfort. While many commoners are just simple folks who keep to themselves, sometimes commoners rebel, either rising up to face their oppressors or persuaded or even duped into joining nefarious plans and criminal conspiracies. Commoners benefit from power in numbers, and a crowd of commoners can accomplish a great deal more than their rulers often expect.</p>\n<hr />\n<p>Unfortunately, every society has people living on its fringes. While good communities work to grant aid and respite to their downtrodden, sometimes-due to economic downturn, famine, or war-the ranks of the less fortunate exceed the community's capacity to support them. In heartless neutral and evil societies, poverty is seen as an inevitability that can never be truly eradicated, or even worse, as a tool to be manipulated for political gain.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Role:</strong> a fragile mob mook — a laborer with a chair-leg, not a soldier. Reuse this stat block for any riot in the AP.</p><p><strong>Tactics:</strong> swarms the nearest target, or focuses any obviously well-to-do socialite. <strong>Morale:</strong> a rioter flees as soon as it takes any damage — a mob this size routs fast once blooded.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "human",
+        "humanoid"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "ci": []
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:37.478+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
     "abilities": {
       "str": {
         "mod": 3
@@ -190,112 +752,35 @@
         "mod": 2
       },
       "int": {
-        "mod": -1
+        "mod": 0
       },
       "wis": {
-        "mod": 0
+        "mod": 1
       },
       "cha": {
         "mod": 0
       }
     },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 15
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 14,
-        "temp": 0,
-        "value": 14
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 25
-      }
-    },
-    "details": {
-      "blurb": "Angry laborer in the riots",
-      "languages": {
-        "details": "",
-        "value": [
-          "common"
-        ]
-      },
-      "level": {
-        "value": -1
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> a fragile mob mook — a laborer with a chair-leg, not a soldier. Reuse this stat block for any riot in the AP.</p><p><strong>Tactics:</strong> swarms the nearest target, or focuses any obviously well-to-do socialite. <strong>Morale:</strong> a rioter flees as soon as it takes any damage — a mob this size routs fast once blooded.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 3,
-      "senses": []
-    },
-    "resources": {},
     "saves": {
       "fortitude": {
-        "saveDetail": "",
-        "value": 5
+        "value": 6,
+        "saveDetail": ""
       },
       "reflex": {
-        "saveDetail": "",
-        "value": 2
+        "value": 3,
+        "saveDetail": ""
       },
       "will": {
-        "saveDetail": "",
-        "value": 2
+        "value": 3,
+        "saveDetail": ""
       }
-    },
-    "skills": {
-      "athletics": {
-        "base": 6
-      },
-      "intimidation": {
-        "base": 5
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "humanoid",
-        "human"
-      ]
     }
   },
-  "folder": "rBcjiaGq99bkJyYK",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
+  "type": "npc",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.npc-gallery.xY2WjwebqTNXAP0q"
+    }
   },
   "prototypeToken": {
     "name": "Korvosan Rioter",
@@ -312,7 +797,7 @@
     "appendNumber": false,
     "prependAdjective": false,
     "texture": {
-      "src": "modules/cotct-pf2e-conversion/assets/tokens/korvosan-rioter.webp",
+      "src": "icons/svg/mystery-man.svg",
       "scaleX": 1,
       "scaleY": 1,
       "tint": "#ffffff",
@@ -369,5 +854,23 @@
       }
     }
   },
+  "effects": [],
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "korvosanRioter01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "rBcjiaGq99bkJyYK",
+  "sort": 0,
   "_key": "!actors!korvosanRioter01"
 }

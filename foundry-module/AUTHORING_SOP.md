@@ -28,6 +28,16 @@ Never transliterate from PF1e. DCs found inside verbatim source prose are conver
 by `dcfix()` at build. `validate` warns on any raw `DC \d+` not wrapped in `@Check`.
 
 ## 3. Actor stat blocks: mechanics in items, everything else in notes
+- **Statblock authority order (GM directive, 2026-06-10):** **1)** the Olliebird
+  community export (`foundry-module/community/`, materialized from the conversion
+  thread's actor/item modules) — `pf2e_build.write()` swaps any same-named
+  (alias-aware, `scripts/community_aliases.json`) doc we build for the community
+  version in place, keeping our `_id`/`folder`/name and merging our GM notes +
+  treasure inventory; community-only docs ship via `build_community.py`;
+  **2)** official remastered Bestiary links via `mon()` where the community doc
+  is just a copy of the same official creature; **3)** our own builds where
+  neither exists. The npc()/hazard() literals for swapped actors are a fallback
+  only — sync encounter math via the community levels, not those literals.
 - **Action/ability items = pure mechanics.** No tactics, no GM flavor, no "he flees
   at half HP" in an action description.
 - **Role, tactics, behavior, morale, GM context → `system.details.publicNotes`.**

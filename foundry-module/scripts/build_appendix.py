@@ -62,8 +62,29 @@ MA = {"stirge": "stirgeFeeder0001", "drainspider": "1M94tm3wnSRGcTG5", "jigsaw":
       "redmantis": "redMantisAssn001", "rioter": "korvosanRioter01", "lavthug": "lavenderThug0001",
       "empthug": "emperorsThug0001", "boggard": "boggardChamp0001", "thunder": "sklarThundercal1",
       "ashwing": "ashwingGargoyl01", "mithrodar": "mithrodarChain01", "redreaver": "redReaver0000001",
-      "havtentacle": "haveroTentacle01", "ukwarfext": "ukwarFext0000001", "sial": "shadowcountSial1",
-      "danse": "danseMacabre0001"}
+      "havtentacle": "haveroTentacle01", "ukwarfext": "ukwarFext0000001", "sial": "shadowcountSial1"}
+
+# OLLIEBIRD STATBLOCK RESYNC (community swap made these levels/links authoritative):
+# levels: Kazavon 25->23 (Arc III finale enc + L-mentions ×3; band recomputes Extreme->Severe,
+#   prose follows) · Asyra unchanged (L11 both sides) · swapped items carry no level text here
+# rewires: Appendix 7 bestiary page Danse Macabre -> B.cmon (ch5 deletes our danseMacabre0001
+#   hazard; community creature L15, MA entry dropped) · items5/artifacts pages now link the
+#   community-only Rakshasan Third Eye + Everdawn Pool item docs (build_community files them
+#   into OUR appendix/artifact folders; CIT below resolves their original ids) · Mushfens
+#   96-100 flavor un-names Beirawash (ch6's actor is the B1 devilfish, not a black dragon)
+# gear dedup vs community inventory: injection (9) drops our embedded Mask of the Mantis copy
+#   (community Red Mantis Assassin already carries one) and our Smoke Bombs ×3 (community
+#   Jolistina carries ×4) — stale embedded copies are stripped idempotently · KEPT: Ring of
+#   Splendid Security -> Queen Ileosa (community Ileosa omits this AP treasure), injected as
+#   the community item text so it matches the swapped items-pack doc
+# skipped: rolltable rows keep official B.mon for wolverine / dream spider / house drake / imp /
+#   otyugh / rat swarm / reefclaw / wererat / bulette / erinys / specter / barbed+bone devils /
+#   wyvern — the community exports are the same plain creatures (bespoke ones already link
+#   module ids) · Kazavon npc() fallback statline left at 25 (swapped at write either way)
+
+# community-only item docs build_community ships into our folders (original 16-char ids)
+CIT = {"thirdeye": B.community_doc("item", "Rakshasan Third Eye")["_id"],
+       "everdawn": B.community_doc("item", "Everdawn Pool")["_id"]}
 
 # ---------- pack-file IO for idempotent cross-chapter patches ----------
 def _load(p): return json.loads(p.read_text(encoding="utf-8"))
@@ -394,7 +415,7 @@ if build_kaz:
        B.action(nid(), "Human Form", "1", "<p>Zon-Kuthon's gift: a fixed human shape — the pale warlord (AC 47; <em>+3 greater striking unholy spiked chain</em> +44, @Damage[3d8+22[slashing]] plus @Damage[1d6[bleed]]). <strong>Death Transformation:</strong> at 0 HP in human form he erupts back into the dragon at full HP, "+B.cond("slowed", "Slowed 1")+" for 2d4 rounds, his armor destroyed. In human form he fights to the death — because death is a costume change.</p>", ["arcane", "polymorph"]),
        B.action(nid(), "Rejuvenation", "passive", "<p><strong>While any of his seven relics exist, he can always manifest again</strong> (GM's timetable — months or years). Defeated or driven off, he takes <strong>2d6 weeks</strong> to secure his human-form gear before acting openly. <strong>If he was restored via the Everdawn Pool</strong> (Ch.6's fail-state), destroying him leaves <em>only his fangs</em> in the dust — the Crown's seeds, again.</p>", category="defensive"),
        B.lore(nid(), "Scarwall Lore", 44)],
-      notes="<p><strong>THE CONTINGENCY (CR 25 → L25).</strong> Kazavon — blue great wyrm, champion of Zon-Kuthon, the warlord whose fangs crown a queen — only walks if the campaign fails: the Crown unsundered, the ritual finished, or the seven relics allowed to converge (Continuing the Campaign, Arc III). First contact is always the dragon; the human warlord comes later, with armies.</p>"
+      notes="<p><strong>THE CONTINGENCY (CR 25 → L23).</strong> Kazavon — blue great wyrm, champion of Zon-Kuthon, the warlord whose fangs crown a queen — only walks if the campaign fails: the Crown unsundered, the ritual finished, or the seven relics allowed to converge (Continuing the Campaign, Arc III). First contact is always the dragon; the human warlord comes later, with armies.</p>"
       + "<p><strong>Tactics (dragon):</strong> opens with <em>freeze time</em>, walls the field, goes invisible on the stolen round's end, then fights mobile and airborne — breath and sorcery, never landing. <strong>Morale (dragon):</strong> below ~100 HP he teleports out or gates to the Shadow Plane, returns in days. <strong>Morale (human):</strong> to the death — see Death Transformation.</p>"
       + "<p><strong>His goal on returning:</strong> reclaim Scarwall, rebuild the warlord state that once broke Belkzen — a years-long shadow over any post-campaign play.</p>",
       folder=FA["a_creatures"], senses=[{"type": "darkvision"}, {"type": "scent"}], size="grg",
@@ -617,7 +638,7 @@ TW("enc-mushfens", B.rolltable(TBL["mushfens"], "Encounters: The Mushfens", "1d1
  (46, 55, "1 "+M("viper-vine")), (56, 65, "1d4 "+M("hezrou", "hezrous")),
  (66, 80, "1d8 "+L("boggard", "boggard champions")+" (Beirawash's tithe-takers)"),
  (81, 90, "2d6 "+M("marsh-giant", "marsh giants")), (91, 95, "1d6 "+M("omox", "omox demons")),
- (96, 100, "1 "+M("black-dragon-ancient", "ancient black dragon")+" (Beirawash herself — or worse)"),
+ (96, 100, "1 "+M("black-dragon-ancient", "ancient black dragon")+" (the swamp's eldest terror)"),
 ]), desc="<p>Ch.6's swamp road to the Sunken Queen (Appendix 7) — a high-level band (L11-16). 20% per travel day.</p>", sort=900000))
 
 # ---- the promised Rumor Mill scaffold (CHG-0012) — original paraphrase hooks ----
@@ -656,9 +677,9 @@ PG(PID["arc"], "Continuing the Campaign — the Post-Finale Arc",
   + "<p><strong>ARC I — Rulers of Korvosa (L17, intrigue):</strong> no monarch in a century of curses. Neolandus runs the restoration and asks the PCs to broker the succession; factions (the noble houses, the church of Abadar's schism, the surviving Arkonas' papers, the freed Gray Maidens) maneuver. Run it as Influence — and let a PC end it on the Crimson Throne, with everything that word now means.</p>"
   + "<p><strong>ARC II — Sorshen's Legacy &amp; the Everdawn Pool (L18, dungeon):</strong> the Pool's residue stirs what sleeps beneath the city — the pyramid under Castle Korvosa was <em>hers</em>. Destroying the artifact for good is a high-level expedition into Thassilonian deeps; using it, even once, invites Eurythnia's leftovers up the crystal veins.</p>"
   + "<p><strong>ARC III — Kazavon Rises (L19–20, the true endgame):</strong> the Crown was one relic of seven. Across Avistan the others begin to <em>converge</em>, carried by owners who dream the same dream. If they meet, the dragon is reborn whole. Serithtial knows it; she has been waiting five hundred years to finish this.</p>"
-  + B.enc("ARC III FINALE — Kazavon Reborn", encx([25], 20),
-     "<p>"+act(KAZAVON_ID, "KAZAVON")+" (L25), complete, with whatever army 2d6 weeks of regearing bought him — against one sword. The actor ships his draconic and human forms, the time-stop opening, and his rejuvenation/return logistics. An Extreme finale for an L20 party <em>by design</em>.</p>",
-     B.aside_token([act(KAZAVON_ID, "Kazavon (25)"), itm(SERITHTIAL_ID, "Serithtial")]))
+  + B.enc("ARC III FINALE — Kazavon Reborn", encx([23], 20),
+     "<p>"+act(KAZAVON_ID, "KAZAVON")+" (L23), complete, with whatever army 2d6 weeks of regearing bought him — against one sword. The actor ships his draconic and human forms, the time-stop opening, and his rejuvenation/return logistics. A Severe solo budget at L20 — the regeared army is the dial that pushes the finale to Extreme <em>by design</em>.</p>",
+     B.aside_token([act(KAZAVON_ID, "Kazavon (23)"), itm(SERITHTIAL_ID, "Serithtial")]))
   + SEC("<p><strong>Side-seeds</strong> (thread into the arcs): <strong>Ileosa's Revenge</strong> — her soul went to Hell under contract; she can bargain her way back (a devil-army vengeance, or a vampire-return via Pool blood-magic). <strong>Lorthact's Plot</strong> — the contract's hidden master is the exiled Infernal Duke ruling the Acadamae in secret; Ileosa's soul may be his ticket home, and his enemies pay well. <strong>A New Crimson Peril</strong> — the Red Mantis remember: the Crimson Citadel raid is 'harder than Scarwall' (and if Cinnabar lives redeemed, they remember her most of all).</p>")
   + B.s_conv("<p><strong>The six lost relics are dangling by design.</strong> The AP never places the Armor of Skulls, Bound Blade, Howling Horn, Shredskin, Staff of the Slain, or Throne of Nalt — they are Arc III's quest hooks, not an oversight. Seed one per region your table cares about; every owner shares the dream. This conversion deliberately leaves them locationless.</p>"))
 
@@ -666,7 +687,7 @@ PG(PID["artifacts"], "Campaign Artifacts",
   SRC("Appendix 5 (artifacts)", "432-436")
   + "<p>The campaign's three great objects, as items: "+itm(SERITHTIAL_ID, "Serithtial")+" · "+itm(CROWN_ID, "The Crown of Fangs")+" · and "+itm(ZELLARA_DECK_ID, "Zellara's Harrow Deck")+" (Ch.1 items folder), which in the endgame transcends into the <strong>Harrow Deck of Many Things</strong> — no longer GM hand-waving: the full 54-draw table ships as "+tbl(TBL["harrowdeck"], "a rolltable")+", with procedure on "+pg(PID["harrowdeck"], "its own page")+". Venster's ghost (Ch.6) may bestow the first draw.</p>"
   + B.s_conv("<p><strong>Item links at their recovery scenes:</strong> Serithtial is granted at the Sacred Lake islet (Ch.5, H4 — linked there); the Crown is sundered or claimed at the Everdawn Pool (Ch.6, B20 — linked there). Both chapter pages carry the drag-and-drop links.</p>")
-  + SEC("<p><strong>The Everdawn Pool</strong> (not lootable, mercifully): a major artifact of stored life — each charge a day of stolen blood (max 25; 10 remain at the finale; bathing grants bleed-immunity and the Sunken Queen's all-seeing eyes; 5 charges spin up a taniniver; 100 charges in a year buy eternal youth over the donors' corpses). Its destruction wants five impossible bloods and a wish — Arc II's prize.</p>"))
+  + SEC("<p><strong>The "+itm(CIT["everdawn"], "Everdawn Pool")+"</strong> (not lootable, mercifully — the item doc is a GM reference): a major artifact of stored life — each charge a day of stolen blood (max 25; 10 remain at the finale; bathing grants bleed-immunity and the Sunken Queen's all-seeing eyes; 5 charges spin up a taniniver; 100 charges in a year buy eternal youth over the donors' corpses). Its destruction wants five impossible bloods and a wish — Arc II's prize.</p>"))
 
 PG(PID["items5"], "Appendix 5: Equipment & Magic (Item Docs)",
   SRC("Appendix 5 (Equipment and Magic)", "430-437")
@@ -683,7 +704,7 @@ PG(PID["items5"], "Appendix 5: Equipment & Magic (Item Docs)",
   "<li>"+itm(IT["ukwaraxe"], "Ukwar")+" — the Deadwatcher leader's spirit in her own battleaxe (Ch.5).</li>"
   "<li>"+itm(IT["foolslep"], "Fool's Leprosy")+" — the poison that killed a king, statted as an affliction.</li>"
   "</ul>"
-  + B.s_treasure("<p><strong>Not converted:</strong> the <em>third eye</em> (Bahor carries it as flavor in his Ch.3 stat block) and the <em>Everdawn Pool</em> (see Campaign Artifacts). <strong>Availability:</strong> none of these are on Korvosa's open market; fool's leprosy and the masks are villain-issue only.</p>"))
+  + B.s_treasure("<p><strong>Community statblock adoption also ships:</strong> the "+itm(CIT["thirdeye"], "Rakshasan Third Eye")+" (Bahor's, Ch.3), the "+itm(CIT["everdawn"], "Everdawn Pool")+" (filed under Campaign Artifacts), and the eight war-paint colors as individual pots in this folder (the combined doc above stays the Ch.4 grant's mechanics reference). <strong>Availability:</strong> none of these are on Korvosa's open market; fool's leprosy and the masks are villain-issue only.</p>"))
 
 PG(PID["harrowdeck"], "The Harrow Deck of Many Things",
   SRC("Appendix 3 (harrow deck of many things)", "428-429")
@@ -728,7 +749,7 @@ PG(PID["dramatis"], "Appendix 6: Dramatis Personae (Campaign Index)",
    "</ul>"
   + '<p class="subhead"><strong>Contingencies & Engines</strong></p>'
   + "<ul>"
-    "<li>"+act(KAZAVON_ID, "Kazavon")+" (L25) — the fail-state and Arc III finale; ships with return logistics (2d6 weeks to regear; an Everdawn restoration leaves only fangs on destruction).</li>"
+    "<li>"+act(KAZAVON_ID, "Kazavon")+" (L23) — the fail-state and Arc III finale; ships with return logistics (2d6 weeks to regear; an Everdawn restoration leaves only fangs on destruction).</li>"
     "<li>"+act(AKARUZUG_ID, "Akaruzug")+" (L15) — the soul-engine crucifix construct (Deathhead Vault arc / Scarwall).</li>"
    "</ul>"
   + B.s_conv("<p><strong>Module complete:</strong> Chapters 1–6, the subsystems (Harrowing · Reputation/City Tiers · Blood Veil/Epidemic Clock · Respect &amp; Rebellion Points · Becoming Blackjack · Korvosan Guard ranks), the campaign backgrounds, the Appendix 5 items, the Appendix 7 tables, and the postgame arc. Verbatim read-aloud renders only on the GM's machine (local AP.md injection); all mechanics are original PF2e conversion work. Run well.</p>"))
@@ -773,7 +794,7 @@ PG(PID["bestiary7"], "Appendix 7: Bestiary & Random Encounters",
     "<li><strong>Dream spider</strong> — official PF2e print: "+B.mon("dream-spider")+" (its venom distills into the drug shiver — Ch.1's economy).</li>"
     "<li><strong>Drain spider / shingle spider</strong> — module actor: "+L("drainspider", "Drain Spider")+" (the shingle variant is the same beast in a chimney).</li>"
     "<li><strong>Chained spirit</strong> — module actor: "+L("mithrodar", "Mithrodar")+" (Ch.5's curse-heart; the anchor mechanics live on his sheet).</li>"
-    "<li><strong>Danse macabre</strong> — module hazard-creature: "+haz(MA["danse"], "Danse Macabre")+" (Ch.5).</li>"
+    "<li><strong>Danse macabre</strong> — community statblock (creature, L15): "+B.cmon("Danse Macabre")+" (Ch.5).</li>"
     "<li><strong>Red reaver</strong> — module actor: "+L("redreaver", "Red Reaver")+" (beauty-fascinated siege-beast).</li>"
     "<li><strong>Akaruzug</strong> — new appendix actor: "+act(AKARUZUG_ID, "Akaruzug")+" (the soul-engine crucifix).</li>"
     "<li><strong>Havero</strong> — <strong>tentacles only, by design:</strong> the full CR-21 horror is never fought; Ch.4/Ch.6 stage only its reaching limbs ("+L("havtentacle", "Havero Tentacle")+"). Severing tentacles buys passage — the body behind the wall is a reason to <em>leave</em>, and the conversion keeps it that way deliberately.</li>"
@@ -923,13 +944,27 @@ patch_page("06-crown-of-fangs", "THE EVERDAWN POOL", CROWN_ID,
     + ". The wearer-corruption clock and the sunder profile (Hardness 20, HP 80 vs. Serithtial alone) live on the item.</p>"))
 
 # --- (9) Inventory injections (Appendix 5 items into their bearers) ---
-ring_emb = copy.deepcopy(ring_splendid); ring_emb["_id"] = EMB["ring"]
+# Community Ileosa omits her AP-treasure ring — keep the injection, but embed the
+# community item text so her copy matches the swapped items-pack doc.
+ring_emb = B.community_doc("item", "Ring of Splendid Security") or copy.deepcopy(ring_splendid)
+ring_emb["_id"] = EMB["ring"]; ring_emb.pop("_key", None); ring_emb["sort"] = 0
 inject_item("queen-ileosa", ring_emb)
-mask_emb = copy.deepcopy(mantis_mask); mask_emb["_id"] = EMB["mask"]
-inject_item("red-mantis-assassin", mask_emb)
-smoke_emb = copy.deepcopy(smoke_bomb); smoke_emb["_id"] = EMB["smoke"]
-smoke_emb["system"]["quantity"] = 3
-inject_item("jolistina-susperio", smoke_emb)
+
+def remove_injected(actor_slug, item_id, why):
+    """Strip a previously injected embedded copy (idempotent gear dedup)."""
+    p = ASRC / f"{actor_slug}.json"
+    if not p.exists():
+        return
+    d = _load(p)
+    kept = [x for x in d["items"] if x["_id"] != item_id]
+    if len(kept) != len(d["items"]):
+        d["items"] = kept
+        _save(p, d); print(f"  [inject] removed {item_id} from {actor_slug} ({why})")
+
+# gear dedup vs community inventory: the swapped statblocks already carry these —
+# Mask of the Mantis on the assassin, Smoke Bombs ×4 on Jolistina.
+remove_injected("red-mantis-assassin", EMB["mask"], "community gear: Mask of the Mantis")
+remove_injected("jolistina-susperio", EMB["smoke"], "community gear: Smoke Bomb ×4")
 
 # --- (10) Havero: explicit 'tentacles-only by design' note on the ch4 actor ---
 _hav = ASRC / "havero-tentacle.json"

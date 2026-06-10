@@ -1,0 +1,326 @@
+{
+  "name": "Lambs in the Fishery",
+  "type": "hazard",
+  "prototypeToken": {
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": false
+      },
+      "barbrawl": {
+        "resourceBars": {
+          "bar1": {
+            "order": 0,
+            "id": "bar1",
+            "attribute": "attributes.hp",
+            "mincolor": "#FF0000",
+            "maxcolor": "#80FF00",
+            "position": "bottom-inner",
+            "otherVisibility": 0,
+            "ownerVisibility": 50,
+            "max": null
+          }
+        }
+      },
+      "healthEstimate": {
+        "dontMarkDead": false,
+        "hideHealthEstimate": false,
+        "hideName": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Lambs in the Fishery",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/pf2e/icons/default-icons/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "randomImg": false
+  },
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "system": {
+    "source": {
+      "value": "",
+      "author": ""
+    },
+    "creatureType": "",
+    "saves": {
+      "fortitude": {
+        "value": 4,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 4,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 6,
+        "saveDetail": ""
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 13
+      },
+      "hp": {
+        "value": 8,
+        "max": 8,
+        "temp": 0,
+        "details": "per room of children"
+      },
+      "hardness": 0,
+      "stealth": {
+        "value": -10,
+        "details": "<p>and no minimum proficiency to notice</p>"
+      },
+      "emitsSound": "encounter"
+    },
+    "details": {
+      "isComplex": true,
+      "level": {
+        "value": 0
+      },
+      "disable": "<p>@Check[type:diplomacy|dc:16] to convince the children to be helpful or quiet a room.</p>",
+      "description": "<p>The orphan children known as Lamm's Lambs stab with their pitchforks, daggers, and otherwise harass any intruders into the domain of Gaedren Lamm.</p>",
+      "reset": "",
+      "routine": "<p><span class=\"pf2-icon\">T</span>&nbsp;At the beginning of each turn, the Lambs choose to be helpful or harmful to the PC's and make a pitchfork Strike on each creature in the room they have chosen to be harmful towards and roll the damage once for all targets. The Lambs always choose to be harmful unless a successful Diplomacy check has been made to convince them to be helpful. The Lambs then use use Chaos in the Fishery.</p>"
+    },
+    "statusEffects": [],
+    "traits": {
+      "value": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "di": {
+        "custom": "",
+        "value": [
+          "critical-hits",
+          "precision",
+          "swarm-mind"
+        ],
+        "selected": {}
+      },
+      "dr": [],
+      "dv": []
+    },
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:38.567+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Pitchfork",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.567+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "1pA6wHIoHJkPgr9F": {
+            "damage": "1d4+1",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 4
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "GQs9PFsTBm3Dicbc",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668383355271,
+        "modifiedTime": 1668383381455,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/default-icons/mystery-man.svg",
+      "name": "Chaos in the Fishery",
+      "system": {
+        "description": {
+          "value": "<p>The Lambs create an effect based on their allegiance, located at any point within the hazard (even within sections that have been disabled) as long as the entire hazard has not been disabled. The DC for each effect is 14.</p>\n<p>&bull; <strong>Harmful </strong>The Lambs splash water and slime from the trough over the floor, coating 4 contiguous 5- foot squares with the effect of grease.</p>\n<p>&bull; <strong>Helpful </strong>A Lamb hurls a pitchfork with surprising accuracy at the face of any creature considered an enemy to the PC's. If Hookshanks is present, this ability always targets him. The target creature gains the @Compendium[pf2e.conditionitems.Blinded]{Blinded} condition for 1 round.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.567+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "sFGcf6AteItxwGnQ",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668383556132,
+        "modifiedTime": 1668383688792,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "pf2e": {
+      "editHazard": {
+        "value": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.290",
+    "createdTime": 1668382897540,
+    "modifiedTime": 1669579877049,
+    "lastModifiedBy": "hBFuMGrVgeghbDDz"
+  },
+  "_id": "1u2HIv2OljHzj60B",
+  "ownership": {
+    "default": 0,
+    "hBFuMGrVgeghbDDz": 3
+  },
+  "folder": null,
+  "sort": 0
+}

@@ -1,196 +1,1831 @@
 {
-  "_id": "grauSoldado00001",
-  "name": "Grau Soldado",
-  "type": "npc",
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "CEuUTWkaC01YQDo5",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+1 Striking Mithral Longsword",
-      "sort": 0,
-      "type": "melee",
+      "_id": "l2i7aOSZ1o0FbLUP",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.62nnVQvGhoVLLl2K"
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/weapons/crossbow.webp",
+      "name": "Crossbow",
+      "sort": 100000,
       "system": {
-        "attack": {
-          "value": ""
+        "description": {
+          "value": "<p>This ranged weapon has a bow-like assembly mounted on a handled frame called a tiller. The tiller has a mechanism to lock the bowstring in place, attached to a trigger mechanism that releases the tension and launches a bolt.</p>"
         },
-        "attackEffects": {
-          "value": []
+        "source": {
+          "value": "Pathfinder Core Rulebook"
         },
-        "bonus": {
-          "value": 13
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
         },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+6",
-            "damageType": "slashing"
+        "rules": [],
+        "slug": "crossbow",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
           }
         },
+        "quantity": 1,
+        "baseItem": "crossbow",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 2
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "bow",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 120,
+        "reload": {
+          "value": "1"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.l2i7aOSZ1o0FbLUP"
+    },
+    {
+      "_id": "TCDCbHDHjLorCHLx",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.rQWaJhI5Bko5x14Z"
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "name": "Dagger",
+      "sort": 200000,
+      "system": {
+        "description": {
+          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "dagger",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "dagger",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 1
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": "-"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.TCDCbHDHjLorCHLx"
+    },
+    {
+      "_id": "EYXqnzW1WGw1aWCa",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.LJdbVTOZog39EEbi"
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/weapons/longsword.webp",
+      "name": "Longsword",
+      "sort": 300000,
+      "system": {
+        "description": {
+          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "versatile-p"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "longsword",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "longsword",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 1
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "sword",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "slashing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": ""
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "type": "weapon",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.EYXqnzW1WGw1aWCa"
+    },
+    {
+      "_id": "uynKYJoCB64MIHm3",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Gq1cZWSKOtJhKd2p"
+        }
+      },
+      "img": "systems/pf2e/icons/equipment//armor/fullplate.webp",
+      "name": "Full Plate",
+      "sort": 400000,
+      "system": {
+        "description": {
+          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "bulwark"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "full-plate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "full-plate",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "5"
+        },
+        "equippedBulk": {
+          "value": "4"
+        },
+        "price": {
+          "value": {
+            "gp": 30
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "inSlot": true
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "wornarmor"
+        },
+        "level": {
+          "value": 2
+        },
+        "armor": {
+          "value": 6
+        },
+        "category": "heavy",
+        "group": "plate",
+        "strength": {
+          "value": 18
+        },
+        "dex": {
+          "value": 0
+        },
+        "check": {
+          "value": -3
+        },
+        "speed": {
+          "value": -10
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "resiliencyRune": {
+          "value": ""
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.uynKYJoCB64MIHm3"
+    },
+    {
+      "_id": "TKT45YKDBK7C1DIF",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.Yr9yCuJiAlFh3QEB"
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/shields/steel-shield.webp",
+      "name": "Steel Shield",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": "<p>Like wooden shields, steel shields come in a variety of shapes and sizes. Though more expensive than wooden shields, they are much more durable.</p>\n<table class=\"pf2-table\">\n<thead>\n<tr>\n<th>Hardness</th>\n<th>HP</th>\n<th>BT</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>5</td>\n<td>20</td>\n<td>10</td>\n</tr>\n</tbody>\n</table>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "steel-shield",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 10,
+          "value": 20,
+          "max": 20
+        },
+        "hardness": 5,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "held",
+          "invested": null,
+          "handsHeld": 1
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "armor": {
+          "value": 2
+        },
+        "category": "shield",
+        "group": null,
+        "strength": {
+          "value": 0
+        },
+        "dex": {
+          "value": 0
+        },
+        "check": {
+          "value": 0
+        },
+        "speed": {
+          "value": 0
+        },
+        "potencyRune": {
+          "value": 0
+        },
+        "resiliencyRune": {
+          "value": ""
+        },
+        "propertyRune1": {
+          "value": ""
+        },
+        "propertyRune2": {
+          "value": ""
+        },
+        "propertyRune3": {
+          "value": ""
+        },
+        "propertyRune4": {
+          "value": ""
+        },
+        "potency": {}
+      },
+      "type": "armor",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1669557062841,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!grauSoldado00001.TKT45YKDBK7C1DIF"
+    },
+    {
+      "_id": "sH9wjvFFWdNhYpVU",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.AITVZmakiu3RgfKo"
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
+      "name": "Bolts",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "bolts",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 20,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 1
+          },
+          "per": 10
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 1
+        },
+        "stackGroup": "bolts",
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 0
+        },
+        "consumableType": {
+          "value": "ammo"
+        },
+        "charges": {
+          "value": 0,
+          "max": 0,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.sH9wjvFFWdNhYpVU"
+    },
+    {
+      "_id": "J0gZtGInMyuCyCuB",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Longsword",
+      "sort": 700000,
+      "system": {
         "description": {
           "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
         },
-        "rules": [],
-        "slug": "grau-longsword",
         "traits": {
-          "rarity": "common",
           "value": [
             "magical",
             "versatile-p"
-          ]
-        }
-      },
-      "_key": "!actors.items!grauSoldado00001.CEuUTWkaC01YQDo5"
-    },
-    {
-      "_id": "fzEyuJGsUCTisJ3b",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Sneak Attack",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
+          ],
+          "rarity": "common",
+          "custom": ""
         },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Grau deals 1d6 extra precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [
-          {
-            "key": "DamageDice",
-            "selector": "strike-damage",
-            "category": "precision",
-            "diceNumber": 1,
-            "dieSize": "d6",
-            "predicate": [
-              "target:condition:off-guard"
-            ]
-          },
-          {
-            "key": "RollOption",
-            "domain": "all",
-            "option": "target:condition:off-guard",
-            "toggleable": "totm",
-            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
           }
-        ],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "rogue"
-          ]
-        }
-      },
-      "_key": "!actors.items!grauSoldado00001.fzEyuJGsUCTisJ3b"
-    },
-    {
-      "_id": "kwszgQHAS37zBd0J",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Power Attack",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
         },
-        "actions": {
-          "value": 2
+        "weaponType": {
+          "value": "melee"
         },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Grau makes a Longsword Strike that deals an extra @Damage[1d8[slashing]] on a hit (he always uses this while drunk and belligerent). On a failure he is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of his next turn.</p>"
+        "attack": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "damageRolls": {
+          "0": {
+            "damage": "1d8+11",
+            "damageType": "slashing"
+          }
         },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "flourish"
-          ]
-        }
-      },
-      "_key": "!actors.items!grauSoldado00001.kwszgQHAS37zBd0J"
-    },
-    {
-      "_id": "5dKt5LoEacUDhJAi",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Drunk",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
+        "bonus": {
+          "value": 18
         },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Grau fights @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} while intoxicated; this −1 penalty is already included in his statistics. He makes poor tactical choices, ignoring openings for Sneak Attack and provoking reactions as he stumbles between foes.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
+        "attackEffects": {
           "value": []
         }
       },
-      "_key": "!actors.items!grauSoldado00001.5dKt5LoEacUDhJAi"
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.J0gZtGInMyuCyCuB"
     },
     {
-      "_id": "Rn7RCvRWorI37yxJ",
-      "img": "systems/pf2e/icons/default-icons/lore.svg",
-      "name": "Korvosa Lore",
-      "sort": 0,
-      "type": "lore",
+      "_id": "3k43BvFaLIDzoL5a",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Crossbow",
+      "sort": 800000,
       "system": {
         "description": {
           "value": ""
         },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "range-increment-120",
+            "reload-1"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d8+6",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 12
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "type": "melee",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.3k43BvFaLIDzoL5a"
+    },
+    {
+      "_id": "PlvlB09wLGdgmyo3",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.hFtNbo1LKYCoDy2O"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Attack of Opportunity",
+      "sort": 900000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.AttackOfOpportunity]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "attack-of-opportunity",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.PlvlB09wLGdgmyo3"
+    },
+    {
+      "_id": "T7oZcH7OKDm1O4cw",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Aura of Command",
+      "sort": 1000000,
+      "system": {
+        "description": {
+          "value": "<p>@Template[type:emanation|distance:30]{30 feet} @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X]{Aura}</p>\n<hr>\n<p>Grau bolsters lower-level guards under their command, granting them a +1 status bonus to their attack rolls and a +2 status bonus to their Will saves.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.OxOMYmlPtjsEkRtY]{Effect: Aura of Command}</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "aura",
+            "emotion",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1668427830530,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!grauSoldado00001.T7oZcH7OKDm1O4cw"
+    },
+    {
+      "_id": "HXCEPfKkb2TP6NVy",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Bravery",
+      "sort": 1100000,
+      "system": {
+        "description": {
+          "value": "<p>When Grau rolls a success on a Will save against a fear effect, they get a critical success instead. In addition, any time they gain the @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened} condition, reduce its value by 1.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "adjustment": {
+              "success": "one-degree-better"
+            },
+            "key": "AdjustDegreeOfSuccess",
+            "predicate": [
+              "fear"
+            ],
+            "selector": "will",
+            "type": "save"
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1668427807764,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!grauSoldado00001.HXCEPfKkb2TP6NVy"
+    },
+    {
+      "_id": "LEi8MMikbUZD1avz",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.m4HQ2o5aPxjXf2kY"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shield Block",
+      "sort": 1200000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.ShieldBlock]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "shield-block",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.LEi8MMikbUZD1avz"
+    },
+    {
+      "_id": "9hxxkHZZGdkhbZvg",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Shield Warden",
+      "sort": 1300000,
+      "system": {
+        "description": {
+          "value": "<p>When Grau has their shield raised, they can @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.m4HQ2o5aPxjXf2kY]{Shield Block} when an attack is made against an adjacent ally. If they do, the shield prevents that ally from taking damage instead of Grau.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1668427783000,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!grauSoldado00001.9hxxkHZZGdkhbZvg"
+    },
+    {
+      "_id": "drNAUPLqWo7QSh3l",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Shielded Advance",
+      "sort": 1400000,
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> Grau has their shield raised</p>\n<hr>\n<p><strong>Effect</strong> Grau presses forward, using their shield to push back foes.</p>\n<p>Grau Strides and @UUID[Compendium.pf2e.actionspf2e.7blmbDrQFNfdT731]{Shoves}, in either order. The multiple attack penalty doesn't apply to this Shove, though the Shove does count toward Grau's multiple attack penalty.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": null,
+        "modifiedTime": 1668427979863,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!grauSoldado00001.drNAUPLqWo7QSh3l"
+    },
+    {
+      "_id": "gjRkdJRbt97tIbfZ",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Athletics",
+      "sort": 1500000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
         "mod": {
-          "value": 6
+          "value": 15
         },
         "proficient": {
           "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.gjRkdJRbt97tIbfZ"
+    },
+    {
+      "_id": "mU5IeLhsZuwGA8dX",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Diplomacy",
+      "sort": 1600000,
+      "system": {
+        "description": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
-        "slug": null
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 11
+        },
+        "proficient": {
+          "value": 0
+        }
       },
-      "_key": "!actors.items!grauSoldado00001.Rn7RCvRWorI37yxJ"
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.mU5IeLhsZuwGA8dX"
+    },
+    {
+      "_id": "KvliqTPC7wXCxpCr",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Intimidation",
+      "sort": 1700000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 13
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.KvliqTPC7wXCxpCr"
+    },
+    {
+      "_id": "7JSOtd0bGE4q9bHf",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Legal Lore",
+      "sort": 1800000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 12
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.7JSOtd0bGE4q9bHf"
+    },
+    {
+      "_id": "oy3Dc9bbilIEBgxH",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Society",
+      "sort": 1900000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 10
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.oy3Dc9bbilIEBgxH"
+    },
+    {
+      "_id": "hF5pPWi7gLBNBaO0",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Warfare Lore",
+      "sort": 2000000,
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:38.584+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 8
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "type": "lore",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!grauSoldado00001.hF5pPWi7gLBNBaO0"
     },
     {
       "name": "+1 Striking Mithral Longsword",
@@ -284,300 +1919,132 @@
         "default": 0
       },
       "_key": "!actors.items!grauSoldado00001.ch1GrauSword0001"
-    },
-    {
-      "name": "Chain Mail",
-      "type": "armor",
-      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
-      "system": {
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP]</p>",
-          "gm": ""
-        },
-        "rules": [],
-        "slug": "chain-mail",
-        "_migration": {
-          "version": 0.955,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.953,
-            "foundry": "13.351",
-            "system": "7.12.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [
-            "flexible",
-            "noisy"
-          ],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "chain-mail",
-        "bulk": {
-          "value": 2
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "gp": 6
-          }
-        },
-        "equipped": {
-          "carryType": "worn",
-          "handsHeld": 0,
-          "invested": null
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "category": "medium",
-        "group": "chain",
-        "acBonus": 4,
-        "strength": 3,
-        "dexCap": 1,
-        "checkPenalty": -2,
-        "speedPenalty": -5,
-        "grade": null,
-        "runes": {
-          "potency": 0,
-          "resilient": 0,
-          "property": []
-        },
-        "subitems": []
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP"
-      },
-      "_id": "k5IvJ7N4FJxS4dEF",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!grauSoldado00001.k5IvJ7N4FJxS4dEF"
-    },
-    {
-      "name": "Steel Shield",
-      "type": "shield",
-      "img": "systems/pf2e/icons/equipment/shields/steel-shield.webp",
-      "system": {
-        "acBonus": 2,
-        "baseItem": "steel-shield",
-        "bulk": {
-          "value": 1
-        },
-        "containerId": null,
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Yr9yCuJiAlFh3QEB]</p>",
-          "gm": ""
-        },
-        "grade": null,
-        "hardness": 5,
-        "hp": {
-          "max": 20,
-          "value": 20
-        },
-        "level": {
-          "value": 0
-        },
-        "material": {
-          "grade": null,
-          "type": null
-        },
-        "price": {
-          "value": {
-            "gp": 2
-          }
-        },
-        "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "Pathfinder Player Core"
-        },
-        "quantity": 1,
-        "rules": [],
-        "runes": {
-          "reinforcing": 0
-        },
-        "size": "med",
-        "speedPenalty": 0,
-        "traits": {
-          "integrated": null,
-          "rarity": "common",
-          "value": []
-        },
-        "slug": "steel-shield",
-        "_migration": {
-          "version": 0.959,
-          "previous": null
-        },
-        "equipped": {
-          "carryType": "worn"
-        }
-      },
-      "_id": "6w0W28EjTyXhAecG",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!grauSoldado00001.6w0W28EjTyXhAecG"
     }
   ],
+  "name": "Grau Soldado",
   "system": {
+    "attributes": {
+      "hp": {
+        "value": 75,
+        "temp": 0,
+        "max": 95,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 20,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 24,
+        "details": "(26 with shield raised)"
+      },
+      "perception": {
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "adjustment": "weak"
+    },
+    "details": {
+      "alignment": {
+        "value": "LN"
+      },
+      "level": {
+        "value": 6
+      },
+      "source": {
+        "value": "Pathfinder Gamemastery Guide",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<p>The captain of the guard leads a troop of soldiers who serve as security forces for a powerful individual, most often a high-ranking noble or very rich merchant, though this stat block could also represent a lower-ranking captain of the guard for the leader of a nation. A formidable opponent in their own right, the captain of the guard skillfully employs their troops to protect the life and health of their ward.</p>\n<hr />\n<p>Larger societies rely on those with the authority and the ability to interpret and enforce laws. In good-aligned societies, these officials carry out their duties fairly. In neutral and evil ones, these officials can be harsh and cruel (with an altered alignment to reflect this), imposing severe punishments on those who can't pay for mercy.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Role:</strong> a recurring NPC — a well-liked Korvosan Guard watch sergeant (Vencarlo Orisini's expelled student) drowning his despair in drink. This 'fight' is meant to be survived and <strong>defused</strong>, not a kill.</p><p><strong>Defusing him:</strong> commiserate (@Check[type:diplomacy|dc:19], or a Deception vs. his Perception) and he sobers up; @Check[type:society|dc:18] recognizes the sergeant he was. A lesser restoration sobers him instantly. Escorted to Citadel Volshyenek, his fellow guards clean him up and he becomes a grateful ally.</p><p><strong>If he duels:</strong> he limits attacks to the PC who accepted the duel; if another PC strikes him he cries 'Foul!' and flails at random foes. <strong>Morale:</strong> surrenders rather than dies. Award XP as if defeated whether he is beaten or talked down.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "human",
+        "humanoid"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "ci": []
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:38.584+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
     "abilities": {
       "str": {
-        "mod": 3
+        "mod": 5
       },
       "dex": {
-        "mod": 3
+        "mod": 0
       },
       "con": {
-        "mod": 4
+        "mod": 2
       },
       "int": {
         "mod": 0
       },
       "wis": {
-        "mod": 0
+        "mod": 3
       },
       "cha": {
-        "mod": 1
+        "mod": 3
       }
     },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 21
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 62,
-        "temp": 0,
-        "value": 62
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 25
-      }
-    },
-    "details": {
-      "blurb": "Drunken watch sergeant; future ally",
-      "languages": {
-        "details": "",
-        "value": [
-          "common"
-        ]
-      },
-      "level": {
-        "value": 4
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> a recurring NPC — a well-liked Korvosan Guard watch sergeant (Vencarlo Orisini's expelled student) drowning his despair in drink. This 'fight' is meant to be survived and <strong>defused</strong>, not a kill.</p><p><strong>Defusing him:</strong> commiserate (@Check[type:diplomacy|dc:19], or a Deception vs. his Perception) and he sobers up; @Check[type:society|dc:18] recognizes the sergeant he was. A lesser restoration sobers him instantly. Escorted to Citadel Volshyenek, his fellow guards clean him up and he becomes a grateful ally.</p><p><strong>If he duels:</strong> he limits attacks to the PC who accepted the duel; if another PC strikes him he cries 'Foul!' and flails at random foes. <strong>Morale:</strong> surrenders rather than dies. Award XP as if defeated whether he is beaten or talked down.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 9,
-      "senses": []
-    },
-    "resources": {},
     "saves": {
       "fortitude": {
-        "saveDetail": "",
-        "value": 11
+        "value": 14,
+        "saveDetail": ""
       },
       "reflex": {
-        "saveDetail": "",
-        "value": 11
+        "value": 12,
+        "saveDetail": ""
       },
       "will": {
-        "saveDetail": "",
-        "value": 5
+        "value": 15,
+        "saveDetail": ""
       }
-    },
-    "skills": {
-      "athletics": {
-        "base": 10
-      },
-      "acrobatics": {
-        "base": 12
-      },
-      "intimidation": {
-        "base": 9
-      },
-      "deception": {
-        "base": 8
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "humanoid",
-        "human"
-      ]
     }
   },
-  "folder": "rBcjiaGq99bkJyYK",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
+  "type": "npc",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.npc-gallery.t7QwdZ2m7AbuRWqd"
+    }
   },
   "prototypeToken": {
     "name": "Grau Soldado",
@@ -594,7 +2061,7 @@
     "appendNumber": false,
     "prependAdjective": false,
     "texture": {
-      "src": "modules/cotct-pf2e-conversion/assets/tokens/grau-soldado.webp",
+      "src": "icons/svg/mystery-man.svg",
       "scaleX": 1,
       "scaleY": 1,
       "tint": "#ffffff",
@@ -651,5 +2118,23 @@
       }
     }
   },
+  "effects": [],
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "grauSoldado00001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "rBcjiaGq99bkJyYK",
+  "sort": 0,
   "_key": "!actors!grauSoldado00001"
 }

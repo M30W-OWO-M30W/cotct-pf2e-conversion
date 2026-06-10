@@ -1,14 +1,205 @@
 {
-  "_id": "appUkwarAxe00001",
-  "img": "systems/pf2e/icons/default-icons/equipment.svg",
+  "img": "systems/pf2e/icons/equipment/weapons/battle-axe.webp",
   "name": "Ukwar (Intelligent Battleaxe)",
-  "type": "equipment",
-  "folder": "appItemFolder001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
+  "system": {
+    "description": {
+      "value": "<p><strong>Perception </strong>+12; precise vision 30 feet, imprecise hearing 30 feet<br><strong>Communication </strong>speech (Common and Orcish)<br><strong>Skills </strong>Intimidation +22, Scarwall Lore +20<br><strong>Int </strong>+0, <strong>Wis </strong>+3, <strong>Cha </strong>+2<br><strong>Will </strong>+21</p>\n<hr>\n<p>Ukwar is a +2 striking conducting battleaxe imbued with the soul of the Deadwatcher orc chieftain of the same name. After perishing in Scarwall and rising soon thereafter as a fext, Ukwar spent decades longing to be free of her curse. When she is permanently slain, her spirit enters her axe. As long as the PCs continue to adventure in Scarwall, she doesn't attempt to exert influence over her wielder&mdash;she wants to see each and every one of Scarwall's denizens suffer. If her wielder spends more than 1 day outside of Scarwall (and the castle remains cursed), she attempts to take control (@Check[type:will|dc:31] save) and force her wielder to return and finish this job.</p>\n<p>As long as Ukwar remains intelligent, the blade grants trained proficiency with the battleaxe to her wielder. If the wielder is already proficient with battleaxes, they instead gains a +1 bonus on all attack rolls and damage rolls made with Ukwar.</p>\n<p>She can enrage her wielder, and does so the first time each day they attack one of the spirit anchors or the chained spirit&mdash;she can be convinced to enrage her wielder at another time with a successful @Compendium[pf2e.actionspf2e.Make an Impression]{Make an Impression} or @Compendium[pf2e.actionspf2e.Coerce]{Coerce} attempt.</p>\n<p>Ukwar's special purpose is to lift Scarwall's curse, and as long as her wielder is engaged in this quest and is within Scarwall, the weapon gains the ghost touch property and its conducting rune conducts [[/r {2d8}[negative]]]{2d8 negative damage} when using the Conduct Energy activity. If Scarwall's curse is lifted, Ukwar's spirit leaves the axe behind, and this weapon returns to being an unintelligent +2 striking conducting battleaxe.</p>\n<hr>\n<p><strong>Activate </strong><span class=\"pf2-icon\">A</span> envision</p>\n<p><strong>Frequency</strong> three times per day</p>\n<p><strong>Effect</strong> You become enraged. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. This frenzy lasts for 1 minute, until there are no enemies you can perceive, or until you fall @Compendium[pf2e.conditionitems.Unconscious]{Unconscious}, whichever comes first. You can't voluntarily stop raging. While you are raging, you deal [[/r {6}[additional]]]{6 additional Damage} with melee weapons and unarmed attacks (this additional damage is halved if your weapon or unarmed attack is agile), you take a &ndash;1 penalty to AC, and you can't use actions with the concentrate trait unless they also have the rage trait. You can @Compendium[pf2e.actionspf2e.Seek]{Seek} while raging.</p>\n<hr>\n<p>@UUID[Compendium.pf2e.feat-effects.z3uyCMBddrPK5umr]{Effect: Rage}</p><hr /><h3>Conversion notes (this module)</h3><p><strong>The fext-axe</strong> (Appendix 5; 23,335 gp → ~2,000 gp): when the Deadwatcher leader @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ukwarFext0000001]{Ukwar} is permanently destroyed (Ch.5), her spirit sinks into her <em>+1 striking battleaxe</em> — this item. CE; speaks Common and Orc; darkvision 30 feet; a voice like rocks chewing.</p><ul><li><strong>Axe-sense:</strong> the wielder counts as trained with it; an already-proficient wielder instead gains +1 circumstance to damage with it (her spite guiding the edge).</li><li><strong>Rage</strong> (1/day): Ukwar bellows — the wielder gains <em>animal rage</em>-style fury (temp HP = level, +2 status melee damage, −1 AC, 1 minute). It triggers automatically the first time each day the wielder Strikes a spirit anchor or the chained spirit; otherwise @Check[type:diplomacy|dc:28] or @Check[type:intimidation|dc:28] to talk her into it.</li><li><strong>Special purpose — lift Scarwall's curse:</strong> while the wielder pursues it inside Scarwall, the axe gains <em>ghost touch</em> and deals an extra @Damage[1d6[spirit]] against the spirit anchors and the chained spirit.</li><li><strong>The leash:</strong> a wielder who spends more than a day outside Scarwall while the castle stays cursed faces her nightly: @Check[type:will|dc:28] or be compelled back. Non-chaotic-evil wielders outside Scarwall are @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} while wielding her. <strong>If the curse breaks, the spirit departs</strong> — leaving an ordinary <em>+1 striking battleaxe</em>.</li></ul>"
+    },
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "traits": {
+      "value": [
+        "chaotic",
+        "evil",
+        "evocation",
+        "intelligent",
+        "invested",
+        "magical",
+        "necromancy",
+        "sweep"
+      ],
+      "rarity": "unique",
+      "custom": "",
+      "otherTags": []
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "label": "PF2E.TraitRage",
+        "predicate": [
+          "self:effect:rage"
+        ],
+        "selector": "ac",
+        "value": -1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.rageTempHP",
+        "value": 0
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Ukwar Rage",
+        "predicate": [
+          "self:effect:rage",
+          {
+            "nor": [
+              "agile",
+              "ranged",
+              "barbarian-dedication"
+            ]
+          }
+        ],
+        "selector": "strike-damage",
+        "value": 6
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Ukwar Rage",
+        "predicate": [
+          "self:effect:rage",
+          "agile",
+          {
+            "nor": [
+              "ranged",
+              "barbarian-dedication"
+            ]
+          }
+        ],
+        "selector": "strike-damage",
+        "slug": "rage-agile",
+        "value": 3
+      }
+    ],
+    "slug": "battle-axe",
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
+    "quantity": 1,
+    "baseItem": "battle-axe",
+    "hp": {
+      "brokenThreshold": 0,
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "weight": {
+      "value": "1"
+    },
+    "equippedBulk": {
+      "value": ""
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": false,
+      "handsHeld": 0
+    },
+    "stackGroup": null,
+    "negateBulk": {
+      "value": "0"
+    },
+    "containerId": null,
+    "preciousMaterial": {
+      "value": null
+    },
+    "preciousMaterialGrade": {
+      "value": null
+    },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "Unusual Battle Axe",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "level": {
+      "value": 0
+    },
+    "category": "martial",
+    "group": "axe",
+    "bonus": {
+      "value": 0
+    },
+    "damage": {
+      "value": "",
+      "dice": 1,
+      "die": "d8",
+      "damageType": "slashing"
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": ""
+    },
+    "MAP": {
+      "value": ""
+    },
+    "potencyRune": {
+      "value": 2
+    },
+    "strikingRune": {
+      "value": "striking"
+    },
+    "specific": {
+      "value": false
+    },
+    "propertyRune1": {
+      "value": "conducting"
+    },
+    "propertyRune2": {
+      "value": null
+    },
+    "propertyRune3": {
+      "value": null
+    },
+    "propertyRune4": {
+      "value": null
+    },
+    "property1": {
+      "value": "",
+      "dice": 0,
+      "die": "",
+      "damageType": "",
+      "critDice": 0,
+      "critDie": "",
+      "critDamage": "",
+      "critDamageType": "",
+      "strikeConditionType": "",
+      "strikeConditionValue": null,
+      "criticalConditionType": "",
+      "criticalConditionValue": null
+    }
   },
-  "flags": {},
+  "type": "weapon",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.equipment-srd.War0uyLBx1jA0Ge7"
+    }
+  },
+  "effects": [],
   "_stats": {
     "systemId": "pf2e",
     "systemVersion": "8.2.0",
@@ -20,57 +211,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "system": {
-    "baseItem": null,
-    "bulk": {
-      "value": 0.1
-    },
-    "containerId": null,
-    "description": {
-      "value": "<p><strong>The fext-axe</strong> (Appendix 5; 23,335 gp → ~2,000 gp): when the Deadwatcher leader @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ukwarFext0000001]{Ukwar} is permanently destroyed (Ch.5), her spirit sinks into her <em>+1 striking battleaxe</em> — this item. CE; speaks Common and Orc; darkvision 30 feet; a voice like rocks chewing.</p><ul><li><strong>Axe-sense:</strong> the wielder counts as trained with it; an already-proficient wielder instead gains +1 circumstance to damage with it (her spite guiding the edge).</li><li><strong>Rage</strong> (1/day): Ukwar bellows — the wielder gains <em>animal rage</em>-style fury (temp HP = level, +2 status melee damage, −1 AC, 1 minute). It triggers automatically the first time each day the wielder Strikes a spirit anchor or the chained spirit; otherwise @Check[type:diplomacy|dc:28] or @Check[type:intimidation|dc:28] to talk her into it.</li><li><strong>Special purpose — lift Scarwall's curse:</strong> while the wielder pursues it inside Scarwall, the axe gains <em>ghost touch</em> and deals an extra @Damage[1d6[spirit]] against the spirit anchors and the chained spirit.</li><li><strong>The leash:</strong> a wielder who spends more than a day outside Scarwall while the castle stays cursed faces her nightly: @Check[type:will|dc:28] or be compelled back. Non-chaotic-evil wielders outside Scarwall are @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} while wielding her. <strong>If the curse breaks, the spirit departs</strong> — leaving an ordinary <em>+1 striking battleaxe</em>.</li></ul>"
-    },
-    "equipped": {
-      "carryType": "worn",
-      "handsHeld": 0,
-      "invested": null
-    },
-    "hardness": 0,
-    "hp": {
-      "max": 0,
-      "value": 0
-    },
-    "level": {
-      "value": 12
-    },
-    "material": {
-      "grade": null,
-      "type": null
-    },
-    "price": {
-      "value": {
-        "gp": 2000
-      }
-    },
-    "publication": {
-      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-      "authors": "",
-      "license": "OGL",
-      "remaster": true
-    },
-    "quantity": 1,
-    "rules": [],
-    "size": "med",
-    "slug": null,
-    "traits": {
-      "rarity": "unique",
-      "value": [
-        "magical",
-        "unique"
-      ]
-    },
-    "usage": {
-      "value": "worn"
-    }
+  "_id": "appUkwarAxe00001",
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
   },
   "_key": "!items!appUkwarAxe00001"
 }

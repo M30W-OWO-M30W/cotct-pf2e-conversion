@@ -1,253 +1,6 @@
 {
-  "_id": "ch5PeggLoute0001",
   "name": "Pegg & Loute",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "IoDSwBR0GXAuLmJ7",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Corrupting Touch",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 17
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+6",
-            "damageType": "void"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "magical"
-          ]
-        }
-      },
-      "_key": "!actors.items!ch5PeggLoute0001.IoDSwBR0GXAuLmJ7"
-    },
-    {
-      "_id": "eUGQc4jOnlmFmEL7",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Horrific Pantomime",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>A mute, gesticulating routine that is <em>meaningless madness</em> (@Check[type:performance|dc:29] to realize) and actively harmful to watch: each living creature within 60 feet observing it, @Check[type:will|dc:24] or @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} (cumulative to 3); a success grants immunity to that ghost's pantomime for 24 hours. <strong>The harm is invisible</strong> — only @Check[type:perception|dc:24] notices minds dimming (roll the players' saves secretly until they know).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "emotion",
-            "mental",
-            "visual"
-          ]
-        }
-      },
-      "_key": "!actors.items!ch5PeggLoute0001.eUGQc4jOnlmFmEL7"
-    },
-    {
-      "_id": "CA0xsTGyD3fKp2Cv",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Curse-Bound Rejuvenation",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Destroyed, each re-forms in 2d4 days; they are put to rest <strong>only when Scarwall's curse is lifted</strong>. Incorporeal; resistance all 10 (except force/ghost touch/vitality).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!ch5PeggLoute0001.CA0xsTGyD3fKp2Cv"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 0
-      },
-      "dex": {
-        "mod": 3
-      },
-      "con": {
-        "mod": 0
-      },
-      "int": {
-        "mod": 0
-      },
-      "wis": {
-        "mod": 0
-      },
-      "cha": {
-        "mod": 5
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 23
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 95,
-        "temp": 0,
-        "value": 95
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "fly",
-            "value": 30
-          }
-        ],
-        "value": 0
-      }
-    },
-    "details": {
-      "blurb": "Ghost jesters of Scarwall (B26)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common"
-        ]
-      },
-      "level": {
-        "value": 6
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role (B26 + random-encounter wanderers):</strong> Kazavon's court jesters — Pegg halfling-short with a peg leg scavenged from chair-wood, Loute over seven feet with arms to mid-calf — executed by having leather masks <em>sewn over their heads</em> and hung from hooks above the castle gate to suffocate slowly while the troops applauded. Their ghosts still wear the costumes and masks. They rush at the living gesticulating wildly, 'trying to tell the PCs something' — there is nothing to tell; only the pantomime's damage. Lull, then corrupting touch if attacked; they fight until destroyed — they never did know when to quit.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 15,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 13
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 14
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 17
-      }
-    },
-    "skills": {
-      "deception": {
-        "base": 14
-      },
-      "performance": {
-        "base": 17
-      },
-      "stealth": {
-        "base": 15
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "undead",
-        "ghost",
-        "incorporeal"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Pegg & Loute",
     "displayName": 20,
@@ -320,5 +73,632 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 115,
+        "temp": 0,
+        "max": 115,
+        "details": "negative healing, rejuvenation;"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 0,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 25
+          }
+        ],
+        "details": ""
+      },
+      "ac": {
+        "value": 24,
+        "details": ""
+      },
+      "perception": {
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CN"
+      },
+      "level": {
+        "value": 7
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role (B26 + random-encounter wanderers):</strong> Kazavon's court jesters — Pegg halfling-short with a peg leg scavenged from chair-wood, Loute over seven feet with arms to mid-calf — executed by having leather masks <em>sewn over their heads</em> and hung from hooks above the castle gate to suffocate slowly while the troops applauded. Their ghosts still wear the costumes and masks. They rush at the living gesticulating wildly, 'trying to tell the PCs something' — there is nothing to tell; only the pantomime's damage. Lull, then corrupting touch if attacked; they fight until destroyed — they never did know when to quit.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "spirit",
+        "ghost",
+        "incorporeal",
+        "undead"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "paralyzed",
+          "poison",
+          "precision",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "all",
+          "value": 5,
+          "exceptions": "except force, ghost touch, or positive; double resistance vs. non-magical"
+        }
+      ],
+      "dv": [],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-21T11:52:17.871+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 6
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 4
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 6
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 12,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 15,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 18,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Deception",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 17
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "hA8l7T88Jtv6yQWL",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669035337132,
+        "modifiedTime": 1669035383267,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.hA8l7T88Jtv6yQWL"
+    },
+    {
+      "name": "Diplomacy",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 17
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "SojSULYRSPBHbD2R",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669035339192,
+        "modifiedTime": 1669035383267,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.SojSULYRSPBHbD2R"
+    },
+    {
+      "name": "Performance",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 20
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "lNDpWh0QgbPsPED5",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669035345845,
+        "modifiedTime": 1669035383267,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.lNDpWh0QgbPsPED5"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 15
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "SuAHDZzUJwh7IC6H",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669035347982,
+        "modifiedTime": 1669035383267,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.SuAHDZzUJwh7IC6H"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669035644947,
+        "modifiedTime": 1669035644947,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "uV0ONFoNOnn1eCt6",
+      "_key": "!actors.items!ch5PeggLoute0001.uV0ONFoNOnn1eCt6"
+    },
+    {
+      "_id": "cErz0aqcyzYEnad2",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Regeneration",
+      "system": {
+        "description": {
+          "value": "<p>When either Pegg or Loute is destroyed, it re-forms after [[/br 2d4 #days]]{2d4 days} within Scarwall, fully healed. Pegg or Loute can be permanently destroyed only if the Scarwall curse is lifted.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Regeneration]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "regeneration",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": true,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.lR9R5Vld8Eu2Dha5"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669035650898,
+        "modifiedTime": 1669035767904,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.cErz0aqcyzYEnad2"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Ghostly Hand",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T13:03:53.830+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "qbUZcqQYgCdJwP9N": {
+            "damage": "2d8+8",
+            "damageType": "negative"
+          }
+        },
+        "bonus": {
+          "value": 16
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "OLVxsZqElgXnRUUi",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669035833834,
+        "modifiedTime": 1669035866284,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.OLVxsZqElgXnRUUi"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Horrific Pantomime",
+      "system": {
+        "description": {
+          "value": "<p>Any creature within 60 feet who can see Pegg or Loute's horrific pantomime must attempt a @Check[type:will|dc:25] save.</p>\n<hr>\n<p><strong>Critical Success</strong> The creature is unaffected and immune to Horrific Pantomime for 24 hours.</p>\n<p><strong>Success</strong> The creature is @Compendium[pf2e.conditionitems.Stupefied]{Stupefied 1}.</p>\n<p><strong>Failure</strong> The creature is @Compendium[pf2e.conditionitems.Stupefied]{Stupefied 2}.</p>\n<p><strong>Critical Failure</strong> The creature is @Compendium[pf2e.conditionitems.Stupefied]{Stupefied 2} and @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Stunned} for 1 round as they become mesmerized by the pantomime.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "concentrate",
+            "emotion",
+            "mental",
+            "occult",
+            "visual"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T13:04:43.567+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "b2fbq9xkabcTAuOE",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669035883571,
+        "modifiedTime": 1669120415883,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5PeggLoute0001.b2fbq9xkabcTAuOE"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "ch5PeggLoute0001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!ch5PeggLoute0001"
 }

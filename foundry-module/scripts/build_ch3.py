@@ -20,6 +20,28 @@ B.SCOPE = (5514, 8160)   # AP.md line range for this chapter (anchor scoping)
 #       Researching-the-Emperor table (Society, per community) and the audience socials use the
 #       community's area-keyed DC 26 Diplomacy / DC 22 Intimidation ruling.
 
+# OLLIEBIRD STATBLOCK RESYNC (community statblock = stat authority; npc()/hazard() literals are
+# swapped in place by B.write, so only encounter() args + "(L)" text labels are re-synced here):
+#   Levels: Emperor's Thug 5->6 (mob/guardroom/court/blood-pig encs), Red Mantis Assassin 9->8,
+#           Choker Brute 5->2, Marai 9->8, Bahor 13->14 (Severe-solo prose -> Extreme-solo),
+#           Sivit 11->10, Enormous Reefclaw 12->11, Senshiir 10->9 (E21 band prose softened),
+#           Belker 7->8. Symbols E6/E18 6->7 + Stinging Wasps 8->10 have no enc/text level refs.
+#   Rewired to community-only docs: D4 marble elephant mon(giant-animated-statue)->cmon(Marble
+#           Elephant); D24 Avidexu mon(raja-rakshasa)->cmon(Avidexu); E7 blood cobra
+#           mon(giant-viper)->cmon(Blood Cobra); E4 pool now links cmon(Corrupted Pool) hazard;
+#           Blood Pig now links cmon(Piglet).
+#   Kept official: otyugh, wolverine, living-waterfall (community Large Water Elemental = same
+#           re-export), emperor-cobra (community doc = base L5 re-export; their prose says Elite
+#           but exported base), pf2e Yellow Mold (community hazard = same doc). Elite Red Mantis
+#           Assassin + Pudgyknuckles: no matching ch3 encounter in our build — not linked.
+#   Gear dedup vs community inventories: dropped thug Studded Leather (their Leather Armor covers
+#           the armor parcel), Pilts Leather Armor (their +1 Glamered Chain Shirt), RMA leather/
+#           sabers/daggers/alch-fire+potions pack (all on their statblock), Laori Chain Mail,
+#           Vencarlo Rapier (same-name), Bahor keystone equipment (their Rakshasan Third Eye is
+#           the parcel; network notes live in D1-D3/D17-D18 treasure text). Kept: thug Steel
+#           Shield (PF1 parcel they omit), marai Scimitar, Vimanda Gold Armbands, Neolandus
+#           Crossbow (his PF1 tactics weapon; no community dup).
+
 MODID = "cotct-pf2e-conversion"
 ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cotctAdvFolder01"
 
@@ -93,7 +115,7 @@ AW("emperors-thug", B.npc(A3["empthug"], "Emperor's Thug", 5, 22, 75, 12, 11, 9,
    B.strike(nid(), "Throwing Axe", 12, "1d6+7", "slashing", ["agile", "thrown-10"]),
    B.sneak_attack(nid(), 2, "The thug"),
    B.action(nid(), "Mob Tactics", "passive", "<p>Emperor's thugs swarm and flank: a thug's Strikes gain a +1 circumstance bonus against a creature adjacent to another thug.</p>", category="offensive"),
-   B.gear("studded-leather", nid()), B.gear("steel-shield", nid())],
+   B.gear("steel-shield", nid())],
   notes="<p><strong>Role:</strong> the muscle of Pilts Swastel's mob — soldiers of the 'Emperor of Old Korvosa,' commanding the petty thugs of Old Dock through fear. Reused throughout the island: street mobs (4), the palace guardroom, the Blood Pig arena (up to 8).</p>"
         "<p><strong>Tactics:</strong> swarm with battleaxes for flanked Sneak Attacks, hurling throwing axes at runners. <strong>Morale:</strong> bullies at heart — once half their number falls, the rest scatter into the alleys.</p>",
   folder=F3["a_creatures"], blurb="Mob soldier of the Emperor of Old Korvosa", token_src=None, actor_link=False))
@@ -109,9 +131,7 @@ AW("red-mantis-assassin", B.npc(A3["redmantis"], "Red Mantis Assassin", 9, 28, 1
    B.action(nid(), "Red Shroud", "1", "<p><strong>Frequency</strong> twice per day. A veil of red mist (unaffected by wind) wreathes the assassin for 3 rounds: +1 circumstance bonus to AC and fast healing 2. If she dies while shrouded, she may disintegrate into red mist, leaving only her gear — denying enemies her remains.</p>", ["concentrate"], "defensive"),
    B.action(nid(), "Vanish", "1", "<p>The assassin becomes "+B.cond("invisible", "Invisible")+" until the end of her next turn or until she Strikes — her favored repositioning trick (she can also cast <em>feather fall</em> and <em>expeditious retreat</em>).</p>", ["concentrate", "occult"]),
    B.action(nid(), "Mask of the Mantis", "passive", "<p>Her insectile mask grants darkvision, and by spending charges: <em>see invisibility</em>, <em>deathwatch</em>, and a +2 item bonus to Perception (active when prepared for an ambush).</p>", category="defensive"),
-   B.lore(nid(), "Assassin Lore", 17),
-   B.gear("leather-armor", nid()), B.gear("sawtooth-saber", nid(), 2), B.gear("dagger", nid(), 4),
-   B.equipment(nid(), "Alchemist's Fire (x2) & Fire-Ward Potions", 5, 10, "<p>2 vials of alchemist's fire (her ambush-arson tools) and pre-quaffed potions of fire resistance (resistance 10 for the ambush) — see her tactics.</p>", traits=["alchemical", "consumable"])],
+   B.lore(nid(), "Assassin Lore", 17)],
   notes="<p><strong>Role:</strong> the Red Mantis — the assassin guild Ileosa hired for the king's murder, now hunting <strong>Neolandus</strong> (and anyone shielding him). The campaign's recurring elite killers: paired ambushes here, more beneath the Longacre Building in Chapter 4.</p>"
         "<p><strong>Ambush doctrine (Vencarlo's home):</strong> pre-buffed (fire resistance 10, mask charges burning, blades enchanted), hidden under the stairs (A6) and in the A7 rafters. Round 1 each hurls alchemist's fire into her level's fireplace, igniting the "+act(A3["housefire"], "Spreading House Fire")+" they are warded against. They Red Shroud, pair up to flank, and Prayer-Attack a lone PC; the Spreading House Fire hazard is their battlefield. <strong>Morale:</strong> they fight to the death (and may dissolve to red mist).</p>",
   folder=F3["a_creatures"], senses=[{"type": "darkvision"}], blurb="Elite Red Mantis killer (recurring)", token_src=None, actor_link=False))
@@ -124,8 +144,7 @@ AW("laori-vaus", B.npc(A3["laori"], "Laori Vaus", 10, 29, 165, 19, 17, 21, 20,
    B.action(nid(), "Savor the Sting", "2", "<p>One creature within 30 feet relives exquisite agony: @Damage[4d6[mental]] and "+chk("type:will|dc:29")+" or "+B.cond("sickened", "Sickened 1")+" with pain (Sickened 2 and "+B.cond("slowed", "Slowed 1")+" for 1 round on a critical failure). Laori giggles.</p>", ["concentrate", "manipulate", "mental", "nonlethal", "occult"]),
    B.action(nid(), "Shadow Step", "1", "<p>Laori steps from one shadow to another she can see within 60 feet — Zon-Kuthon's roads are dark and quick.</p>", ["concentrate", "shadow", "teleportation"]),
    B.action(nid(), "Umbral Chains", "2", "<p>Shadowy chains lash a 15-ft burst within 60 feet: @Damage[6d6[negative]] void damage and "+chk("type:reflex|dc:29|basic:true")+"; a creature critically failing is "+B.cond("grabbed", "Grabbed")+" by the chains (Escape DC 29) for 1 round.</p>", ["concentrate", "manipulate", "shadow", "occult"]),
-   B.lore(nid(), "Zon-Kuthon Lore", 21),
-   B.gear("chain-mail", nid())],
+   B.lore(nid(), "Zon-Kuthon Lore", 21)],
   notes="<p><strong>Role:</strong> a chipper, utterly sincere elf priestess of <strong>Zon-Kuthon</strong> — a cheerful sadist and one of the campaign's strangest, most useful <strong>allies</strong>. She belongs to the <strong>Brotherhood of Bones</strong>, Kuthite fanatics hunting Kazavon's relics to prevent his resurrection; she tracked Andaisin to Korvosa, then stayed to find the dragon's seven whisper-touched artists. Six are suicides (their candle-lit skulls decorate Salvator's desk — she <em>speaks with dead</em> to them); Salvator, the strongest-touched, was taken before she arrived.</p>"
         "<p><strong>Playing her:</strong> bubbly, friendly, casually horrifying. She offers an alliance to reach Salvator and trades her evidence — a bloodstained scrap of the <strong>seneschal's uniform</strong> — for it. She admits her faith freely but conceals the Brotherhood, her queen-suspicions, and Kazavon (except under magical compulsion — or when the story needs the crown reveal early). Rebuffed, she shadows the party and 'reappears' at a dramatic moment, ideally saving their lives. She returns as a major ally in Chapter 5 (Scarwall).</p>",
   folder=F3["a_creatures"], senses=[{"type": "low-light-vision"}], blurb="Cheerful Kuthite priestess; Brotherhood of Bones", token_src=None, actor_link=True))
@@ -140,8 +159,7 @@ AW("pilts-swastel", B.npc(A3["pilts"], "Pilts Swastel", 10, 29, 175, 17, 21, 19,
    B.action(nid(), "Rod of Wonder", "1", "<p>Pilts Activates his beloved <strong>rod of wonder</strong> at a foe and gleefully narrates whatever chaos results (use the PF2e wand-of-wonder table). He does this even when losing — <em>especially</em> when losing.</p>", ["manipulate", "magical"]),
    B.action(nid(), "Displacement", "2", "<p>When personally threatened: attacks against Pilts suffer a 50% miss chance (as <em>blur</em>-displacement) for 1 minute, and he finally draws his razor.</p>", ["concentrate", "illusion", "occult"], "defensive"),
    B.action(nid(), "Dimension Door", "2", "<p>Pilts teleports up to 120 feet — his exit, twice. Below ~20 HP he doors to his chambers (C11), spends rounds snatching favourite prizes, then doors again to vanish into Old Dock and plot revenge. Out of doors and below ~10 HP, he drops to his knees and begs, offering anything.</p>", ["concentrate", "occult", "teleportation"]),
-   B.lore(nid(), "Theater Lore", 18),
-   B.gear("leather-armor", nid())],
+   B.lore(nid(), "Theater Lore", 18)],
   notes="<p><strong>Role:</strong> the <strong>Emperor of Old Korvosa</strong> — a failed gore-theater impresario turned mob-tyrant, ruling Old Dock from a salvage-prop throne beside his guillotine. A showman-bard: glibness, charm, mirror-tricks, and a rod of wonder; his power is the <em>audience</em>, not his blade.</p>"
         "<p><strong>Court:</strong> held daily, breakfast to dusk, with "+act(A3["jabbyr"], "Jabbyr")+" at the Tall Knife and four thugs at hand. He freely admits Salvator is his 'houseguest' but no Diplomacy or Intimidation wins an audience — only the <strong>blood pig wager</strong> (or violence). A <em>noticed</em> enchantment attempt = execution order. <strong>Morale:</strong> flees by dimension door at ~20 HP; his death or public surrender disbands the mob in 2d6 rounds.</p>",
   folder=F3["a_creatures"], blurb="The Emperor of Old Korvosa; mad impresario", token_src=None, actor_link=True))
@@ -204,10 +222,9 @@ AW("bahor-glorio-arkona", B.npc(A3["bahor"], "Bahor (Glorio Arkona)", 13, 34, 27
    B.action(nid(), "Rakshasa's Mockery", "2", "<p>Bahor turns a victim's own faith against it: one creature within 30 feet takes @Damage[8d6[mental]] ("+chk("type:will|dc:33|basic:true")+"); a divine caster who critically fails is also "+B.cond("stupefied", "Stupefied 2")+" for 1 minute.</p>", ["concentrate", "emotion", "mental", "occult"]),
    B.action(nid(), "Change Shape", "1", "<p>Any humanoid form. 'Glorio Arkona' is merely his favourite mask.</p>", ["concentrate", "polymorph", "occult"]),
    B.action(nid(), "Lord's Resilience", "passive", "<p><strong>Resistance</strong> physical 15 (except piercing holy); immune to disease and to <em>detect</em>-style divinations weaker than his own art. The most dangerous foe of this chapter — the PCs are not expected to beat him at L10.</p>", category="defensive"),
-   B.lore(nid(), "Korvosa Lore", 24),
-   B.equipment(nid(), "Third Eye Bloodstone Network (keystone)", 10, 100, "<p>The master-stone of the palace's nine <em>third eye bloodstones</em> — Bahor can see and hear through any of them (and through the deep-green stone in the ring of evasion he gifts the PCs).</p>", traits=["magical", "divination", "unique"])],
+   B.lore(nid(), "Korvosa Lore", 24)],
   notes="<p><strong>Role:</strong> patriarch of the Arkonas — the rakshasa behind 'Glorio.' He wants Ileosa <em>removed</em> (Neolandus is his legal lever, to be played months from now) but cannot hand over the prisoners without looking weak before <strong>Vimanda</strong>. So he deals: <strong>kill Pilts</strong>, and he'll 'help'; afterwards he gifts the <strong>ring of evasion</strong> (its bloodstone is his spy-eye), reveals the elephant-statue passage ('Chamidu is blind'), and sends the PCs into the Labyrinth — secretly dispatching Vimanda to die at their hands, clearing his rival.</p>"
-        "<p><strong>If infiltrated instead:</strong> he lets his defenses test the PCs and intervenes only at his chambers (D18) or the treasury — then pitches the same offer. <strong>Story award (negotiation):</strong> learning the prisoners' location from Bahor without violence is worth a full encounter's XP. <strong>If attacked:</strong> he fights in earnest — Severe-solo at L10, Extreme with marai support — but prefers not to waste good pawns; per the Conclusion he likely survives the chapter in damage-control or vendetta mode.</p>",
+        "<p><strong>If infiltrated instead:</strong> he lets his defenses test the PCs and intervenes only at his chambers (D18) or the treasury — then pitches the same offer. <strong>Story award (negotiation):</strong> learning the prisoners' location from Bahor without violence is worth a full encounter's XP. <strong>If attacked:</strong> he fights in earnest — Extreme-solo at L10, beyond it with marai support — but prefers not to waste good pawns; per the Conclusion he likely survives the chapter in damage-control or vendetta mode.</p>",
   folder=F3["a_creatures"], senses=[{"type": "darkvision"}, {"type": "see-invisibility"}], blurb="Rakshasa patriarch of House Arkona", token_src=None, actor_link=True))
 
 AW("vimanda-arkona", B.npc(A3["vimanda"], "Vimanda (Meliya Arkona)", 12, 33, 230, 21, 24, 22, 22,
@@ -277,7 +294,7 @@ AW("senshiir", B.npc(A3["senshiir"], "Senshiir", 10, 30, 175, 19, 21, 17, 19,
    B.action(nid(), "Asura Resilience", "passive", "<p>Immune to curses and disease; resistance physical 10 (except holy). Born of a god's mistake, she does not fear death — only boredom.</p>", category="defensive"),
    B.lore(nid(), "Torture Lore", 20)],
   notes="<p><strong>Role:</strong> an upasunda asura — the Labyrinth's contract torturer, paid in 'a steady supply of fresh victims.' The quarantine has starved her docket and Bahor forbade marking the 'guest'; she has just strapped a sobbing <strong>Neolandus</strong> to the rack (E21), studying him with detached, infernal curiosity, when the PCs arrive.</p>"
-        "<p><strong>Tactics:</strong> a four-armed blade-dancer; she whirls into the thick, carves the restrained, and projects waves of remembered agony. If "+act(A3["vimanda"], "Vimanda")+" is present (un-alerted infiltration), the sisters-in-cruelty fight together: a Severe-to-Extreme room.</p>",
+        "<p><strong>Tactics:</strong> a four-armed blade-dancer; she whirls into the thick, carves the restrained, and projects waves of remembered agony. If "+act(A3["vimanda"], "Vimanda")+" is present (un-alerted infiltration), the sisters-in-cruelty fight together: a Moderate-to-Severe room.</p>",
   folder=F3["a_creatures"], senses=[{"type": "darkvision"}], blurb="Four-armed asura torturer", token_src=None))
 
 AW("rajambari", B.npc(A3["rajambari"], "Rajambari", 8, 26, 120, 17, 12, 14, 12,
@@ -297,8 +314,7 @@ AW("vencarlo-orisini", B.npc(A3["vencarlo"], "Vencarlo Orisini", 8, 27, 125, 14,
   [B.strike(nid(), "+1 Rapier", 19, "2d6+5", "piercing", ["deadly-d8", "disarm", "finesse", "magical"]),
    B.action(nid(), "Master's Riposte", "reaction", "<p><strong>Trigger</strong> A creature within his reach critically fails a Strike against him.</p><hr /><p><strong>Effect</strong> Vencarlo makes a Rapier Strike against it — forty years of the academy in one motion.</p>"),
    B.action(nid(), "Disarming Flourish", "1", "<p>Vencarlo attempts to Disarm with a +2 circumstance bonus; on a success he flicks the weapon to any square within 10 feet (he famously took two of Sabina's fingers — and lost two of his own — in such an exchange).</p>", ["attack", "flourish"]),
-   B.lore(nid(), "Dueling Lore", 16),
-   B.gear("rapier", nid())],
+   B.lore(nid(), "Dueling Lore", 16)],
   notes="<p><strong>Role:</strong> swordmaster, mentor, conscience — and secretly <strong>Blackjack</strong>. Found chained to the western statue of Sivit's throne room (E20) at 0 HP, starved and beaten; the manacle key hides under the throne cushion ("+chk("type:perception|dc:26")+"; "+chk("type:thievery|dc:30")+" without it). Healed and re-armed (his gear sits in the D16 treasury), he insists on helping — <strong>Neolandus first</strong> — and knows the illusory walls of the lower level.</p>"
         "<p><strong>The mask:</strong> confronted about Blackjack he laughs it off; with proof he admits it — after the rescue, after the escape. The mantle, he'll say, has passed before; perhaps it's time it passed again.</p>",
   folder=F3["a_creatures"], blurb="Swordmaster; secretly Blackjack", token_src=None, actor_link=True))
@@ -479,18 +495,18 @@ PG("Old Korvosa Today", SR("Old Korvosa Today", 139)
     "<li><strong>Olmere Bliversin</strong> (the ranting baker): harangues the empty street from his balcony — what will the queen do about the mob? the bridges? the quarantine? — in his nightclothes, every demand punctuated by a high-pitched giggle.</li>"
    "</ul>"
   + SEC("<p><strong>The mob.</strong> Unless the PCs stay unobtrusive, each hour carries a 10% chance (50% per 10 minutes in Old Dock) that mob soldiers notice them — four "+act(A3["empthug"], "Emperor's Thugs")+", arrogant and jeering, demand to know their business in 'the emperor's domain.' Any answer except 'We're here to join you' draws scorn and an order to hand over weapons. <strong>PCs who comply are escorted to the throne balcony (C3)</strong> to be judged by the Emperor, their gear stacked beside his throne as an offering. The mob should be the PCs' <em>first</em> encounter; afterwards roll on the Korvosa Street Encounter table (Appendices).</p>")
-  + B.enc("Pilts's Mob (recurring, in waves)", encx([5, 5, 5, 5], 8),
-     "<p>4 "+act(A3["empthug"], "Emperor's Thugs")+" — the standard shakedown. They open with nonlethal fists (live captives amuse the Emperor) and draw axes only if the PCs fight lethally; each flees at ~10 HP. <strong>Escalation:</strong> if the PCs cut down the first group, <strong>two more groups of four</strong> converge 3d6 minutes later ("+encx([5]*8, 8)+"); if those fall too, a <strong>fourth group of four</strong> arrives in another 3d6 minutes — this one extending a wary <em>invitation</em> to meet the Emperor. PCs who accept keep their gear, but are shadowed by thugs all the way to the palace.</p>",
-     B.aside_token(["4× "+act(A3["empthug"], "Emperor's Thug (5)")])))
+  + B.enc("Pilts's Mob (recurring, in waves)", encx([6, 6, 6, 6], 8),
+     "<p>4 "+act(A3["empthug"], "Emperor's Thugs")+" — the standard shakedown. They open with nonlethal fists (live captives amuse the Emperor) and draw axes only if the PCs fight lethally; each flees at ~10 HP. <strong>Escalation:</strong> if the PCs cut down the first group, <strong>two more groups of four</strong> converge 3d6 minutes later ("+encx([6]*8, 8)+"); if those fall too, a <strong>fourth group of four</strong> arrives in another 3d6 minutes — this one extending a wary <em>invitation</em> to meet the Emperor. PCs who accept keep their gear, but are shadowed by thugs all the way to the palace.</p>",
+     B.aside_token(["4× "+act(A3["empthug"], "Emperor's Thug (6)")])))
 
 area3("A", "Vencarlo's Home", SR("A — Vencarlo's Home", 141)
   + "<p>A humble house in southern Fort Korvosa, beside the charred ruin of the <strong>Orisini Academy</strong> (burned by the Red Mantis after Vencarlo escaped their ambush). The door is unlocked; the rooms are warm, quiet, unlit — and both fireplaces are burning in an 'empty' house.</p>"
   + B.s_skill("<p><strong>Reading the scene:</strong> "+chk("type:perception|dc:24")+" (in A7/A8; +10 with scent) catches a strange-tanged smoke; "+chk("type:crafting|dc:20")+" identifies <strong>residual alchemist's fire</strong>, and "+chk("type:perception|dc:26")+" finds it faintly staining walls, floor, and furniture. "+chk("type:survival|dc:24")+": no real traffic since Vencarlo's last letter; "+chk("type:survival|dc:29")+": faint marks of a <em>very</em> stealthy recent visitor.</p>")
   + "<p><strong>The rooms (A1–A8):</strong> a Vudrani-rug entry · a blade-repair workshop · bath · a study of fencing and philosophy texts (the academy's books show business dying after the king's death) · pantry · the living room (lit hearth, hiding-nook under the stairs) · the double-height training room (lit hearth, open rafters) · Vencarlo's unslept-in bedroom.</p>"
   + SEC("<p><strong>The ambush.</strong> Two "+act(A3["redmantis"], "Red Mantis assassins")+" squat here in 8-hour shifts (relieved from the guild's hideout below the Longacre Building — a Chapter 4 thread), waiting for Vencarlo. One hides under the A6 stairs, one in the A7 rafters. They pre-buff the moment anyone enters and spring when a PC climbs to A7 — opening by igniting <strong>both fireplaces</strong> into the "+haz(A3["housefire"], "Spreading House Fire")+".</p>")
-  + B.enc("Red Mantis ambush", encx([9, 9], 8),
-     "<p>2 "+act(A3["redmantis"], "Red Mantis assassins")+" + the "+haz(A3["housefire"], "fire")+" they are warded against. A telegraphed Severe: the fire punishes slow play, and the assassins use it as terrain.</p>",
-     B.aside_token(["2× "+act(A3["redmantis"], "Red Mantis Assassin (9)"), haz(A3["housefire"], "Spreading House Fire (8)")]))
+  + B.enc("Red Mantis ambush", encx([8, 8], 8),
+     "<p>2 "+act(A3["redmantis"], "Red Mantis assassins")+" + the "+haz(A3["housefire"], "fire")+" they are warded against. A telegraphed set-piece: the fire punishes slow play, and the assassins use it as terrain.</p>",
+     B.aside_token(["2× "+act(A3["redmantis"], "Red Mantis Assassin (8)"), haz(A3["housefire"], "Spreading House Fire (8)")]))
   + B.s_treasure("<p><strong>The Blackjack cache.</strong> "+chk("type:perception|dc:29")+" in the A8 closet reveals a hidden panel; the iron lockbox within ("+chk("type:thievery|dc:40")+", or Hardness 10 / 40 HP — the key is with Vencarlo's confiscated gear in the Arkona vaults, D16) holds a <strong>bag of holding (type I)</strong> containing Blackjack's full regalia: a black hooded <strong>cloak of elvenkind</strong>, several masks, 12 masterwork 'B'-pommeled daggers, <strong>+1 resilient slick leather armor</strong>, <strong>boots of elvenkind</strong>, an <strong>amulet of proof against detection</strong>, black <strong>gloves of climbing and swimming</strong> (two fingers of the right glove false and adjustable — concealing Vencarlo's old dueling wound), and a <strong>+2 striking keen rapier</strong>. "+chk("type:society|dc:15")+" (automatic for anyone who saw the execution rescue) recognizes <strong>Blackjack's</strong> signature gear.</p>")
   + B.s_conv("<p><strong>The Blackjack legacy.</strong> The mantle has passed hero-to-hero for generations; Vencarlo is merely its latest bearer. With this cache, <em>a PC could become the next Blackjack</em> — encourage it; the regalia is sized to fit its wearer. If the PCs don't fight the fire, the house burns (citizens + Arkona brigades contain the blaze but can't save it; the lockbox survives, "+chk("type:perception|dc:26")+" in the rubble).</p>"))
 
@@ -548,7 +564,7 @@ PG("Part 2 — The Emperor of Old Korvosa", SR("Part 2 — Emperor of Old Korvos
 
 # --- C. Pilts's Palace ---
 PG("C. Pilts's Palace", SR("C — Pilts's Palace", 151)
-  + B.s_milestone("<p><strong>C. Pilts's Palace</strong> — a block of six gutted tenements at <strong>11 Silk Street</strong>, central Old Dock, linked by rope bridges and rooftop fields, where the Emperor holds court from an hour past sunrise to dusk. The intended path is <strong>showmanship, not siege</strong>: petition the Emperor, accept the blood pig wager, win an audience with Salvator. Fighting the whole court at once is an Extreme-tier mistake — "+encx([10, 8, 5, 5, 5, 5], 8)+".</p>")
+  + B.s_milestone("<p><strong>C. Pilts's Palace</strong> — a block of six gutted tenements at <strong>11 Silk Street</strong>, central Old Dock, linked by rope bridges and rooftop fields, where the Emperor holds court from an hour past sunrise to dusk. The intended path is <strong>showmanship, not siege</strong>: petition the Emperor, accept the blood pig wager, win an audience with Salvator. Fighting the whole court at once is an Extreme-tier mistake — "+encx([10, 8, 6, 6, 6, 6], 8)+".</p>")
   + B.s_skill("<p><strong>Getting in:</strong> guards who spot unescorted PCs raise the alarm and demand their purpose. "+chk("type:diplomacy|dc:26")+" or "+chk("type:intimidation|dc:22")+" talks the thugs into escorting the party to the Emperor (a critical success and they don't insist on confiscating weapons first). Mob-escorted PCs enter at C1 and are marched up to the game-field (C4) before the throne, every thug alert. If it comes to blades: a guard battle can spread palace-wide with Pilts barking orders from his throne — but <strong>defeating the Emperor cows the entire mob</strong>; nobody needs to kill every thug, and Pilts can summon hundreds of replacements from Old Dock besides.</p>"))
 
 area3("C1-C2", "Entrance & Guardroom", SR("C1-C2", 152)
@@ -557,18 +573,18 @@ area3("C1-C2", "Entrance & Guardroom", SR("C1-C2", 152)
   + box("What was once an attic has been",
         "<p>The attic beyond has been swept bare to the rafters — a wide open space under the roof. Rope bridges run out to the northeast and southwest, and a wooden stair drops away to the northwest.</p>")
   + "<p>The guardroom holds 4 "+act(A3["empthug"], "Emperor's Thugs")+" (−2 to their Perception — they're arguing about whether chokers have skeletons). The NE bridge runs level; the SW one climbs an extra 10 ft to the throne balcony as an unsettling 'rope stairway'; the NW stairs descend into rubble that blocks all entry from below.</p>"
-  + B.enc("Guardroom", encx([5, 5, 5, 5], 8),
+  + B.enc("Guardroom", encx([6, 6, 6, 6], 8),
      "<p>4 "+act(A3["empthug"], "Emperor's Thugs")+" — posted only while the alarm is down.</p>",
-     B.aside_token(["4× "+act(A3["empthug"], "Emperor's Thug (5)")])))
+     B.aside_token(["4× "+act(A3["empthug"], "Emperor's Thug (6)")])))
 
 area3("C3", "The Emperor's Throne", SR("C3", 153)
   + box("This open-air balcony is shielded from rain",
         "<p>A canvas-roofed balcony overlooks the rooftop field 25 feet below. Upon it squats a throne of gilt scrap — a cheap mockery of the Crimson Throne — and, to its west, an ornately carved guillotine, its blade gleaming with use it has not yet been given today.</p>")
   + "<p>"+act(A3["pilts"], "Pilts Swastel")+" holds court here daily with "+act(A3["jabbyr"], "Jabbyr")+" (in executioner's costume at the "+haz(A3["tallknife"], "Tall Knife")+") and 4 "+act(A3["empthug"], "thugs")+", hearing mob reports, citizen pleas, and execution dockets.</p>"
   + SEC("<p><strong>Negotiating:</strong> Pilts happily confirms Salvator is his 'houseguest' but refuses every plea and threat — until boredom suggests <strong>the wager</strong> (see A Rousing Game). An <em>unnoticed</em> <em>suggestion</em>-style spell can move him; a noticed one means the Tall Knife. </p>")
-  + B.enc("The full court (DON'T)", encx([10, 8, 5, 5, 5, 5], 8),
+  + B.enc("The full court (DON'T)", encx([10, 8, 6, 6, 6, 6], 8),
      "<p>"+act(A3["pilts"], "Pilts (10)")+" + "+act(A3["jabbyr"], "Jabbyr (8)")+" + 4 "+act(A3["empthug"], "thugs")+" + a mob of spectators — an Extreme bloodbath best avoided until the blood pig audience isolates Pilts (see the Development under Blood Pig).</p>",
-     B.aside_token([act(A3["pilts"], "Pilts Swastel (10)"), act(A3["jabbyr"], "Jabbyr (8)"), "4× "+act(A3["empthug"], "Thug (5)"), haz(A3["tallknife"], "The Tall Knife (10)")])))
+     B.aside_token([act(A3["pilts"], "Pilts Swastel (10)"), act(A3["jabbyr"], "Jabbyr (8)"), "4× "+act(A3["empthug"], "Thug (6)"), haz(A3["tallknife"], "The Tall Knife (10)")])))
 
 area3("C4-C5", "The Emperor's Stage & Rooftops", SR("C4-C5", 154)
   + box("The large, flat roof of this long building",
@@ -587,9 +603,9 @@ area3("C7", "Choker Nest", SR("C7", 155)
   + box("This large room might once have been an attic",
         "<p>This large attic opens to the sky where its northwest corner has collapsed; the shadows between the rafters seem to shift and reach.</p>")
   + "<p>Six "+act(A3["chokerbrute"], "choker brutes")+" — Pilts's corpse-disposal partners since the theater days — nest here. The collapsed gap can be a stealth entry ("+chk("type:athletics|dc:24")+" to climb the 25-ft exterior), but within 5 feet of the broken floor a square crumbles: "+chk("type:reflex|dc:20")+" to lurch back or fall for @Damage[2d6[bludgeoning]] (and the noise).</p>"
-  + B.enc("The nest", encx([5] * 6, 8),
+  + B.enc("The nest", encx([2] * 6, 8),
      "<p>6 "+act(A3["chokerbrute"], "choker brutes")+" strike from the rafters — at the door from outside, or 3 rounds after southern intruders start moving. They fight to the death.</p>",
-     B.aside_token(["6× "+act(A3["chokerbrute"], "Choker Brute (5)")]))
+     B.aside_token(["6× "+act(A3["chokerbrute"], "Choker Brute (2)")]))
   + B.s_treasure("<p>"+chk("type:perception|dc:22")+" finds their bag wedged in the SE rafters: ~75 gp re-scaled in coin, a pearl-inset silk glove, a masterwork hand crossbow, and a <strong>wand of slow</strong> (13 charges).</p>"))
 
 area3("C8-C10", "Stairway, Art Supplies & Trophy Hall", SR("C8-C10", 156)
@@ -622,7 +638,7 @@ area3("C12", "Salvator's Cell", SR("C12", 158)
 
 PG("A Rousing Game: BLOOD PIG!", SR("A Rousing Game / Blood Pig!", 158)
   + B.s_milestone("<p><strong>The wager.</strong> Pilts offers it when pleading stalls: beat his champion team — the eight-thug <strong>Shinglesnipes</strong> — at <strong>blood pig</strong>, and the PCs get five supervised minutes with Salvator (plus, if they surrendered their gear at the door, its return and safe escort from Old Dock). The rules were invented by a madman, are never written down, and change weekly — narrate Pilts declaiming them; confusion is part of the show.</p>")
-  + "<p><strong>The rules (as declaimed this week):</strong> first team to <strong>5 points</strong>; a point = your team's pig into your team's pit. No weapons, no spellcasting (each violation = a point to the other team); unarmed Strikes are legal. Up to 8 a side, starting in the marked squares; a fresh pig is craned into the cage opposite the scoring team's pit; a coin flip starts play.</p>"
+  + "<p><strong>The rules (as declaimed this week):</strong> first team to <strong>5 points</strong>; a point = your team's pig into your team's pit. No weapons, no spellcasting (each violation = a point to the other team); unarmed Strikes are legal. Up to 8 a side, starting in the marked squares; a fresh "+B.cmon("Piglet", "pig")+" is craned into the cage opposite the scoring team's pit; a coin flip starts play.</p>"
   + "<ul>"
     "<li><strong>Picking up</strong> a pig (cage or loose): an Interact action that provokes reactions; a loose pig also needs a successful unarmed Strike vs AC 15 to corner.</li>"
     "<li><strong>Carrying</strong> a live pig: each round roll d6 on the <em>Squirming Pig</em> table — 1 slump (lose 1 action) · 2 squirm ("+chk("type:athletics|dc:20")+" or drop) · 3 squeal (the crowd roars) · 4 bite (pig attacks +6, 1 damage; if damaged, check to drop) · 5 kick ("+chk("type:acrobatics|dc:20")+" or drop) · 6 panic (all four at once). Taking damage while carrying: "+chk("type:athletics|dc:15")+" (+1 to the DC per point of damage taken) or drop. Thugs knock their pigs out first.</li>"
@@ -630,10 +646,10 @@ PG("A Rousing Game: BLOOD PIG!", SR("A Rousing Game / Blood Pig!", 158)
     "<li><strong>Scoring:</strong> drop into an adjacent pit free, or throw at the 1-ft mouth (a Strike vs AC 15). The pits are 10 ft deep with a starving "+B.mon("wolverine", "wolverine")+" in each — <strong>killing a wolverine forfeits</strong> for the killer's team; it spends 1d3 rounds devouring each scored piglet, otherwise claws at anything within 5 ft of the mouth.</li>"
     "<li><strong>Betting:</strong> the thugs give 2-to-1 against the PCs, up to 100 gp per PC.</li>"
    "</ul>"
-  + B.enc("BLOOD PIG — the Shinglesnipes", encx([5] * 8, 8),
+  + B.enc("BLOOD PIG — the Shinglesnipes", encx([6] * 8, 8),
      "<p>8 "+act(A3["empthug"], "Emperor's Thugs")+" (the Shinglesnipes) — but it's a <em>game</em>, not a battle: unarmed, pig-fixated, crowd-roared. Run it fast and absurd.</p>",
-     B.aside_token(["8× "+act(A3["empthug"], "Shinglesnipe (5)"), "2× "+B.mon("wolverine", "Wolverine (2)") + " (in the pits)"]))
-  + SEC("<p><strong>Development — the sore loser.</strong> On a PC win Pilts demands two-of-three and adds "+act(A3["jabbyr"], "Jabbyr")+" to the Shinglesnipes (player cap be damned); after a second loss he calls for three-of-five — and is told they're out of pigs. He nearly guillotines the messenger, then laughs, congratulates the PCs, and brings them up the balcony <em>with only Jabbyr and two thugs</em>. The supervised meeting (Salvator silent while Pilts lives) is the PCs' <strong>best shot at Pilts away from his mob</strong>: "+encx([10, 8, 5, 5], 9)+".</p>")
+     B.aside_token(["8× "+act(A3["empthug"], "Shinglesnipe (6)"), "2× "+B.mon("wolverine", "Wolverine (2)") + " (in the pits)", B.cmon("Piglet", "Piglet (-1)") + " (the living ball)"]))
+  + SEC("<p><strong>Development — the sore loser.</strong> On a PC win Pilts demands two-of-three and adds "+act(A3["jabbyr"], "Jabbyr")+" to the Shinglesnipes (player cap be damned); after a second loss he calls for three-of-five — and is told they're out of pigs. He nearly guillotines the messenger, then laughs, congratulates the PCs, and brings them up the balcony <em>with only Jabbyr and two thugs</em>. The supervised meeting (Salvator silent while Pilts lives) is the PCs' <strong>best shot at Pilts away from his mob</strong>: "+encx([10, 8, 6, 6], 9)+".</p>")
   + B.s_treasure("<p><strong>Payouts &amp; awards:</strong> the thugs honor their 2-to-1 bets — up to 200 gp profit per wagering PC per game. Winning two games and the audience with Salvator is itself worth a Severe encounter's XP (PF1e 9,600) <em>on top of</em> XP for any thugs bested during play.</p>"))
 
 PG("Part 3 — Wrath of the Arkonas", SR("Part 3 — Wrath of the Arkonas", 162)
@@ -664,10 +680,10 @@ area3("D4", "The Garden", SR("D4", 163)
   + box("This chamber hardly seems to be part of",
         "<p>This chamber hardly seems part of a building at all: a living Vudrani jungle under a glass dome, loud with birds, threaded with fountains — and watched from a balcony twenty-five feet up.</p>")
   + "<p>Illusion-dressed windows keep the jungle seamless; "+chk("type:perception|dc:23")+" picks the real balcony from the painted walls. The door to the palace grounds is kept secured with a good lock ("+chk("type:thievery|dc:30")+"). The cobra-fountain holds two bloodstone 'eyes' (one a spy-stone); its plume is an officially-statted "+B.mon("living-waterfall", "living waterfall")+" that ignores intruders — unless they open the <strong>secret trap door</strong>.</p>"
-  + SEC("<p><strong>The way down:</strong> "+chk("type:perception|dc:28")+" finds the circular platform under the elephant statue; a hidden pressure-plate rotates it open onto spiral stairs (10 minutes, then auto-close; a second switch 20 steps down reopens it). Without the passphrase <strong>'Chamidu is blind,'</strong> the statue — a "+B.mon("giant-animated-statue", "marble elephant guardian")+" (a 26,000-gp variant <em>figurine of wondrous power</em> that can also hold a <em>statue</em>-spell form indefinitely) — animates and attacks.</p>")
-  + B.enc("Garden on alert", encx([7, 5, 9, 9], 10),
-     "<p>The "+B.mon("giant-animated-statue", "marble elephant")+" + the "+B.mon("living-waterfall", "living waterfall")+" + Avishandu and Nudhaali (2 "+act(A3["marai"], "marai")+", invisible in the howdah, re-casting every 5 minutes before abandoning post). Avishandu directs the elephant; Nudhaali rains <em>scorching rays</em>.</p>",
-     B.aside_token([B.mon("giant-animated-statue", "Marble Elephant (7)"), B.mon("living-waterfall", "Living Waterfall (5)"), "2× "+act(A3["marai"], "Marai Rakshasa (9)")])))
+  + SEC("<p><strong>The way down:</strong> "+chk("type:perception|dc:28")+" finds the circular platform under the elephant statue; a hidden pressure-plate rotates it open onto spiral stairs (10 minutes, then auto-close; a second switch 20 steps down reopens it). Without the passphrase <strong>'Chamidu is blind,'</strong> the statue — a "+B.cmon("Marble Elephant", "marble elephant guardian")+" (a 26,000-gp variant <em>figurine of wondrous power</em> that can also hold a <em>statue</em>-spell form indefinitely) — animates and attacks.</p>")
+  + B.enc("Garden on alert", encx([B.cmon_lvl("Marble Elephant"), 5, 8, 8], 10),
+     "<p>The "+B.cmon("Marble Elephant", "marble elephant")+" + the "+B.mon("living-waterfall", "living waterfall")+" + Avishandu and Nudhaali (2 "+act(A3["marai"], "marai")+", invisible in the howdah, re-casting every 5 minutes before abandoning post). Avishandu directs the elephant; Nudhaali rains <em>scorching rays</em>.</p>",
+     B.aside_token([B.cmon("Marble Elephant", "Marble Elephant (7)"), B.mon("living-waterfall", "Living Waterfall (5)"), "2× "+act(A3["marai"], "Marai Rakshasa (8)")])))
 
 area3("D5-D8", "Stores, Library & Smoking Den", SR("D5-D8", 165)
   + "<p><strong>D5</strong> holds garden tools, five huge water casks, and buckets by the dozen; the <strong>D6 storerooms</strong> (three of them) stack tools, firewood, and food among barrels and crates — fine hiding spots for sneaking PCs.</p>"
@@ -677,9 +693,9 @@ area3("D5-D8", "Stores, Library & Smoking Den", SR("D5-D8", 165)
   + box("A long couch and two stuffed chairs sit",
         "<p><strong>D8:</strong> a long couch and stuffed chairs ring an elegant rug below walls carved with cloud-dancing air spirits. Exotic smoke perfumes the air around four jewelled hookahs, and beneath the stairs a glass case displays cigars, pottery jars, and bundles of dried leaves in a dozen colours.</p>")
   + B.s_treasure("<p><strong>D8 treasure:</strong> the four bejeweled hookahs run ~35 gp each (the one by the southwestern chair hides a 100-gp-grade <em>third eye</em> spy-stone in its pipe); the case holds <strong>10 pounds of exotic cigars, smoking-weed, and minor narcotics worth ~140 gp re-scaled</strong> — and is warded by the "+haz(A3["hungrysmoke"], "Hungry Smoke")+" trap (Bahor keeps the only key).</p>")
-  + B.enc("Hungry Smoke springs", encx([7, 7], 10),
+  + B.enc("Hungry Smoke springs", encx([8, 8], 10),
      "<p>2 "+act(A3["belker"], "belkers")+" from the 20-ft ceiling — reach down, can't easily be reached back.</p>",
-     B.aside_token([haz(A3["hungrysmoke"], "Hungry Smoke (8)"), "2× "+act(A3["belker"], "Belker (7)")])))
+     B.aside_token([haz(A3["hungrysmoke"], "Hungry Smoke (8)"), "2× "+act(A3["belker"], "Belker (8)")])))
 
 area3("D9-D10", "Trophy Hall & Statuary", SR("D9-D10", 166)
   + box("Glass cases line this hallway's north and",
@@ -703,9 +719,9 @@ area3("D14", "Guard Quarters", SR("D14", 166)
   + box("The floor of this room is thickly carpeted",
         "<p>Thick carpets, low couches, the musk of great cats — and four figures who are no longer wearing their faces.</p>")
   + "<p>Off-duty, the four 'Arkona cousins' lounge in true form (often with abducted 'entertainment'; the quarantine has made them short-tempered). Bickering, they take −2 Perception to hear the house alarms. On alert they defer to <strong>Vennashti's</strong> tactics.</p>"
-  + B.enc("The four marai", encx([9, 9, 9, 9], 10),
-     "<p>Avishandu, Carnochan, Nudhaali, Vennashti — 4 "+act(A3["marai"], "marai rakshasas")+". A Severe brawl; worse if the alarm has scattered them into ambush pairs.</p>",
-     B.aside_token(["4× "+act(A3["marai"], "Marai Rakshasa (9)")])))
+  + B.enc("The four marai", encx([8, 8, 8, 8], 10),
+     "<p>Avishandu, Carnochan, Nudhaali, Vennashti — 4 "+act(A3["marai"], "marai rakshasas")+". A bruising brawl; worse if the alarm has scattered them into ambush pairs.</p>",
+     B.aside_token(["4× "+act(A3["marai"], "Marai Rakshasa (8)")])))
 
 area3("D16", "Leaves of Gold and Glitter (the Treasury)", SR("D16", 167)
   + box("The plain ebony walls of this chamber seem",
@@ -720,9 +736,9 @@ area3("D17-D18", "The Siblings' Rooms", SR("D17-D18", 169)
   + box("The crowning glory of this dazzling chamber is,",
         "<p>The crowning glory of this dazzling chamber is its trophy wall: six mounted animal heads of species no naturalist could place, gazing down with disquieting attention.</p>")
   + SEC("<p><strong>D18, Bahor's room:</strong> the six 'Vudrani animal' heads ("+chk("type:nature|dc:28")+": <em>not</em> real animals; "+chk("type:arcana|dc:30")+": preserved <strong>rakshasa heads</strong> — his predecessors and disappointing children). During an infiltration "+act(A3["bahor"], "Bahor")+" waits here in human form, offering his deal one last time before the claws come out.</p>")
-  + B.enc("BAHOR (if it comes to it)", encx([13], 10),
-     "<p>"+act(A3["bahor"], "Bahor")+" alone is Severe at L10 — with marai support, Extreme. The chapter neither expects nor requires his death; per the conclusion, he likely survives in damage-control (secret safe) or vendetta (secret out) mode.</p>",
-     B.aside_token([act(A3["bahor"], "Bahor (13)")]))
+  + B.enc("BAHOR (if it comes to it)", encx([14], 10),
+     "<p>"+act(A3["bahor"], "Bahor")+" alone is Extreme at L10 — with marai support, beyond it. The chapter neither expects nor requires his death; per the conclusion, he likely survives in damage-control (secret safe) or vendetta (secret out) mode.</p>",
+     B.aside_token([act(A3["bahor"], "Bahor (14)")]))
   + B.s_treasure("<p>Exquisite furniture (~300 gp re-scaled, unwieldy), a 500-gp bloodstone paperweight (spy-stone), and a gold-filigreed Jawassan sitar (~35 gp).</p>"))
 
 area3("D19-D25", "The Sea Caves", SR("D19-D25", 170)
@@ -735,14 +751,14 @@ area3("D19-D25", "The Sea Caves", SR("D19-D25", 170)
      B.aside_token(["4× "+act(A3["gardenguard"], "Garden Guardian (8)")]))
   + box("At the bottom of the vast cavern,",
         "<p><strong>D23:</strong> at the cavern's floor a wooden pier juts into a sloshing pool of blue seawater, a shallow-draft barge tied alongside with an unlit lantern at its bow. Timber-and-brick shoring to west and south betrays where the sea cave was artificially widened; from a twenty-five-foot waterway to the north drift the distant, muffled sounds of surf.</p>")
-  + B.enc("D23 — the Arkona Pier (the escape scene)", encx([12], 10),
+  + B.enc("D23 — the Arkona Pier (the escape scene)", encx([11], 10),
      "<p>The 15-ft-deep pool is home to the "+act(A3["enormreef"], "Enormous Reefclaw")+" (50% out hunting on the first visit; <strong>always home for the escape</strong> — run this as the chapter's last battle, Vencarlo and Neolandus huddled aboard the barge). The waterway winds ~120 ft northwest to a 'stone wall' that is an illusion ("+chk("type:will|dc:16")+" on interaction) masking the exit onto the Jeggare; the Arkonas use the cave to move sensitive cargo — most often unconscious abductees bound for the family table.</p>",
-     B.aside_token([act(A3["enormreef"], "Enormous Reefclaw (12)")]))
+     B.aside_token([act(A3["enormreef"], "Enormous Reefclaw (11)")]))
   + box("Four lit braziers illuminate this vast chamber,",
         "<p><strong>D24:</strong> four burning braziers light a cathedral of polished tan marble, its dome arching sixty feet overhead, empty of bench or pew. Six alcove statues of a tiger-headed man line the walls; on a raised pulpit stand three more — the central figure twice life-size, holding out two lances flying the flag of Korvosa and the Arkona arms.</p>")
-  + B.enc("D24 — the Arkona 'Temple'", encx([10, 5, 5], 10),
-     "<p>No god is worshiped here — every statue is <strong>Bahor as god-king of Korvosa</strong>, a monument to rakshasa ego. "+B.mon("raja-rakshasa", "Avidexu")+" (a true rakshasa, indifferent to politics, devoted to his pets) shares a fresh-shed snakeskin meal with two 18-ft "+B.mon("emperor-cobra", "emperor cobras")+", which he feeds on animals and vagrants. D22 hides the dungeon door ("+chk("type:perception|dc:25")+"; a tunnel winds 100 ft southeast to E1); D25 is the second tunnel to E1.</p>",
-     B.aside_token([B.mon("raja-rakshasa", "Avidexu (10)"), "2× "+B.mon("emperor-cobra", "Emperor Cobra (5)")])))
+  + B.enc("D24 — the Arkona 'Temple'", encx([B.cmon_lvl("Avidexu"), 5, 5], 10),
+     "<p>No god is worshiped here — every statue is <strong>Bahor as god-king of Korvosa</strong>, a monument to rakshasa ego. "+B.cmon("Avidexu", "Avidexu")+" (a true rakshasa, indifferent to politics, devoted to his pets) shares a fresh-shed snakeskin meal with two 18-ft "+B.mon("emperor-cobra", "emperor cobras")+", which he feeds on animals and vagrants. D22 hides the dungeon door ("+chk("type:perception|dc:25")+"; a tunnel winds 100 ft southeast to E1); D25 is the second tunnel to E1.</p>",
+     B.aside_token([B.cmon("Avidexu", "Avidexu (10)"), "2× "+B.mon("emperor-cobra", "Emperor Cobra (5)")])))
 
 # --- E. The Vivified Labyrinth ---
 PG("E. The Vivified Labyrinth", SR("E — The Vivified Labyrinth", 176)
@@ -758,14 +774,14 @@ PG("E. The Vivified Labyrinth", SR("E — The Vivified Labyrinth", 176)
   + SEC("<p><strong>The two roamers:</strong> "+act(A3["vimanda"], "Vimanda")+" — disguised as a starved, grateful <strong>Vencarlo</strong> ('Bahor sent you to die; come, we must face him!') — patrols clockwise from E13, tracking Bahor's gifted ring by <em>locate object</em>, immune to the symbol glyphs, terrified of Sivit. "+act(A3["sivit"], "Sivit")+" scries the lever rooms, herds prey across her glyphs, and cannot leave. <strong>Tell Sivit of Vimanda's treachery and the binding does the rest.</strong> If the PCs still carry the Chapter-1 raktavarna 'silver dagger,' it has been Vimanda's informant all along — and bites its owner when she calls it home.</p>"))
 
 area3("E1-E4", "Entrance, Statues, First Lever & the Poisoned Pool", SR("E1-E4", 176)
-  + "<p><strong>E1:</strong> silent bronze tiger-doors; an illusory wall ("+chk("type:will|dc:25")+" on interaction) hides the eastern passage. <strong>E2:</strong> two statues of a tiger-headed man — Bahor again ("+chk("type:perception|dc:23")+" spots the rotation seam beyond). <strong>E3:</strong> the first ebony rotation lever. <strong>E4:</strong> a crystal pool whose water is a <em>poison</em> effect ("+chk("type:fortitude|dc:25")+"; @Damage[6d6[poison]]; the magic is aura-masked, and water removed from it turns ordinary — Vimanda loves a well-timed <em>suggestion</em> here).</p>")
+  + "<p><strong>E1:</strong> silent bronze tiger-doors; an illusory wall ("+chk("type:will|dc:25")+" on interaction) hides the eastern passage. <strong>E2:</strong> two statues of a tiger-headed man — Bahor again ("+chk("type:perception|dc:23")+" spots the rotation seam beyond). <strong>E3:</strong> the first ebony rotation lever. <strong>E4:</strong> a crystal pool — the "+B.cmon("Corrupted Pool", "Corrupted Pool", kind="hazard")+" — whose water is a <em>poison</em> effect ("+chk("type:fortitude|dc:25")+"; @Damage[6d6[poison]]; the magic is aura-masked, and water removed from it turns ordinary — Vimanda loves a well-timed <em>suggestion</em> here).</p>")
 
 area3("E5-E8", "Pools, Pain & the Second Lever", SR("E5-E8", 177)
   + "<p><strong>E5:</strong> a <em>murky</em> pool that is actually a once-per-day <em>heal</em> (both roamers retreat here when hurt; liquid carried off reverts to foul water) — guarded by the "+haz(A3["symfear"], "Symbol of Fear")+". <strong>E6:</strong> a bare room whose floor bears the "+haz(A3["sympain"], "Symbol of Pain")+".</p>"
   + box("Three large wooden chests, their lids decorated",
         "<p><strong>E7:</strong> three big wooden chests, lids carved with cavorting tigers, stand against one wall — a short phrase incised on each. The facing wall's fresco marches hundreds of tigers in widening rings around a fist-sized green gem, set into the stone and cut as a tiger's head.</p>")
   + B.s_skill("<p><strong>The language gate:</strong> the lid inscriptions are carved <strong>in Vudrani</strong> — only readers of that tongue (or <em>comprehend languages</em> etc.) get Bahor's 'hints,' and since the hints mislead, speaking his native language is more curse than gift here. Left: <em>'By gentle caress shall truth be known.'</em> Right: <em>'Breathe deep your salvation.'</em> Middle: <em>'Life within but Death without.'</em></p>")
-  + "<p>Left is the "+haz(A3["terinavchest"], "terinav-painted decoy")+" (empty); right is the "+haz(A3["insanitychest"], "insanity-mist bellows")+"; the middle holds 3 healing potions + 3 lesser restoration potions <em>and</em> an underfed, furious "+B.mon("giant-viper", "blood cobra")+" that strikes the first face it sees. The fresco's gem is a 75-gp-grade <em>third eye</em> bloodstone (re-scaled). <strong>E8:</strong> the second lever (Sivit scries this room after the first rotation).</p>")
+  + "<p>Left is the "+haz(A3["terinavchest"], "terinav-painted decoy")+" (empty); right is the "+haz(A3["insanitychest"], "insanity-mist bellows")+"; the middle holds 3 healing potions + 3 lesser restoration potions <em>and</em> an underfed, furious "+B.cmon("Blood Cobra", "blood cobra")+" that strikes the first face it sees. The fresco's gem is a 75-gp-grade <em>third eye</em> bloodstone (re-scaled). <strong>E8:</strong> the second lever (Sivit scries this room after the first rotation).</p>")
 
 area3("E9-E12", "Mapras's Obstacle Course", SR("E9-E12", 178)
   + "<p>Four rooms built by Bahor's father (Bahor killed him; the rooms were too ingeniously cruel to demolish). Each has a hidden bypass switch ("+chk("type:perception|dc:30")+"; suppresses 3 rounds, re-pressable):</p>"
@@ -792,17 +808,17 @@ area3("E20", "Sivit's Throne — the Vencarlo Rescue", SR("E20", 182)
   + "<p>"+act(A3["sivit"], "Sivit")+" keeps her playthings shackled to the statues (the dead go to E17). <strong>"+act(A3["vencarlo"], "Vencarlo Orisini")+" hangs from the western one — at 0 HP</strong>, starved, in rags, waking the moment anyone heals him. Battered as he is, his face lights up: <em>'It's quite the delight to see you.'</em> He points out the manacle key under the throne cushion ("+chk("type:perception|dc:26")+"; "+chk("type:thievery|dc:30")+" without it). Healed, he insists on helping — <em>Neolandus first</em> — and, having spent time in the torture chamber, can show the PCs the illusory walls hiding the lower level.</p>"
   + SEC("<p><strong>The Blackjack confrontation:</strong> challenged about his other identity, Vencarlo laughs it off as a fine joke. Presented with proof (he <em>was</em> caught dressed as Blackjack), he goes quiet, then concedes — <em>'Looks like you caught me. Well done.'</em> — and immediately defers the whole conversation: no time now; rescue Neolandus, get out of Korvosa, and there will be plenty of time to talk it over later. He keeps that promise.</p>")
   + B.s_treasure("<p><strong>Story award:</strong> rescuing Vencarlo is worth a Severe encounter's XP (PF1e 9,600).</p>")
-  + B.enc("BOSS — Sivit, Lady of the Labyrinth", encx([11], 10),
+  + B.enc("BOSS — Sivit, Lady of the Labyrinth", encx([10], 10),
      "<p>"+act(A3["sivit"], "Sivit")+" — scry, rotate, herd, pounce. She wand-doors back here when bloodied and fights to the death inside her prison. <strong>Story award</strong> for Vencarlo's rescue.</p>",
-     B.aside_token([act(A3["sivit"], "Sivit (11)"), act(A3["vencarlo"], "Vencarlo (0 HP)")])))
+     B.aside_token([act(A3["sivit"], "Sivit (10)"), act(A3["vencarlo"], "Vencarlo (0 HP)")])))
 
 area3("E21-E22", "The Torture Chamber — the Neolandus Rescue", SR("E21", 184)
   + box_stitch("This large room is lit by a heartily", "hooks in the", "ceiling, while racks, strappados, gibbets",
         "<p>A firepit burns merrily at the room's center; caged silhouettes sway on chains hooked to the ceiling, and racks, strappados, gibbets, and subtler instruments crowd the floor between them. Immense wooden doors fill the north wall; along the south waits a row of narrow, very clean cells.</p>")
   + "<p>"+act(A3["senshiir"], "Senshiir")+", the four-armed asura who tortures for the Arkonas by contract, has just strapped a sobbing man to the rack — <strong>"+act(A3["neolandus"], "Neolandus Kalepopolis")+"</strong> ("+chk("type:society|dc:15")+" to recognize him; he claims to be 'Velak' otherwise, and begs the PCs to rescue 'a friend' before they leave). The E16 teleporters dump victims into the southern cells. E22 is the dead torturer's old room, where Senshiir sometimes meditates.</p>"
-  + B.enc("Senshiir (+ Vimanda, if unalerted)", encx([10, 12], 10),
-     "<p>"+act(A3["senshiir"], "Senshiir")+" alone is Low-Moderate — but if the PCs reached here without alarms or Bahor's deal, "+act(A3["vimanda"], "Vimanda")+" is here trading torture-craft with her, and the room is <strong>Severe-to-Extreme</strong>.</p>",
-     B.aside_token([act(A3["senshiir"], "Senshiir (10)"), act(A3["vimanda"], "Vimanda (12, perhaps)")]))
+  + B.enc("Senshiir (+ Vimanda, if unalerted)", encx([9, 12], 10),
+     "<p>"+act(A3["senshiir"], "Senshiir")+" alone is a light fight — but if the PCs reached here without alarms or Bahor's deal, "+act(A3["vimanda"], "Vimanda")+" is here trading torture-craft with her, and the room is <strong>Moderate-to-Severe</strong>.</p>",
+     B.aside_token([act(A3["senshiir"], "Senshiir (9)"), act(A3["vimanda"], "Vimanda (12, perhaps)")]))
   + B.s_treasure("<p><strong>Story award:</strong> rescuing Neolandus from the rack is worth a Moderate-to-Severe encounter's XP (PF1e 6,400).</p>")
   + B.s_conv("<p>Once Neolandus is sure the PCs aren't the queen's agents, he grows excited — these are exactly the heroes he's been hoping for — and shares everything; see the Conclusion.</p>"))
 

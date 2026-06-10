@@ -1,326 +1,6 @@
 {
-  "_id": "ch5Risibeth00001",
   "name": "Risibeth",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "c3l5iquW5Sd68T7l",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Claw",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 25
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d10+9",
-            "damageType": "slashing"
-          },
-          "1": {
-            "damage": "1d6",
-            "damageType": "void"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "finesse"
-          ]
-        }
-      },
-      "_key": "!actors.items!ch5Risibeth00001.c3l5iquW5Sd68T7l"
-    },
-    {
-      "_id": "VialiAd8r7jYrvoV",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Blood Drain",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Requirement</strong> a @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or willing creature.</p><hr /><p><strong>Effect</strong> @Damage[2d8[void]] and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}; she regains 20 HP. <strong>Feeding for 1+ rounds lets her wear living form for 24 hours.</strong></p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "necromancy"
-          ]
-        }
-      },
-      "_key": "!actors.items!ch5Risibeth00001.VialiAd8r7jYrvoV"
-    },
-    {
-      "_id": "x4wIAjDgvKhnyB1D",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Dominate",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>One humanoid within 30 feet: @Check[type:will|dc:32] or @UUID[Compendium.pf2e.conditionitems.Item.9qGBRpbX9NEwtAAr]{Controlled} (incapacitation; her favorite leash for a PC caught alone).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "mental",
-            "incapacitation"
-          ]
-        }
-      },
-      "_key": "!actors.items!ch5Risibeth00001.x4wIAjDgvKhnyB1D"
-    },
-    {
-      "_id": "Cr3tBDIq5kElrAFm",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Pale Guises",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Invisibility or gaseous form at will — how she follows the party unseen.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "illusion"
-          ]
-        }
-      },
-      "_key": "!actors.items!ch5Risibeth00001.Cr3tBDIq5kElrAFm"
-    },
-    {
-      "_id": "a5GF1UMUjdFlafDv",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Sayona Resilience",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Undead immunities; resistance physical 10 (except magical); fast healing 5 while she has fed within a day.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!ch5Risibeth00001.a5GF1UMUjdFlafDv"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 5
-      },
-      "dex": {
-        "mod": 5
-      },
-      "con": {
-        "mod": 0
-      },
-      "int": {
-        "mod": 3
-      },
-      "wis": {
-        "mod": 4
-      },
-      "cha": {
-        "mod": 6
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 32
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 240,
-        "temp": 0,
-        "value": 240
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 30
-      }
-    },
-    "details": {
-      "blurb": "Sayona information-broker (E7)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "orcish",
-          "necril"
-        ]
-      },
-      "level": {
-        "value": 12
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role (E7, social encounter):</strong> Scarwall's <strong>war commander</strong> — external troop movements, distinct from the hunt and watch commanders — and the only one outside the walls during Mandraivus's raid… because she was already a blood-drinking <strong>sayona</strong> posing as a living woman. An orc priest's <em>command undead</em> pressed her into the vanguard that retook the castle; the rising curse freed her from orc control and she simply never left. Melancholic, fatalistic, amused by the PCs' zeal (she does not expect them to beat Mithrodar — but the attempt entertains). <strong>Blood for secrets:</strong> she answers questions about Kazavon's last days, Mandraivus's doom, and the castle's history — price: a willing PC lets her drink for at least 1 round (she asks for 4; negotiable). Truthfulness is the GM's choice — use her to reorient a lost party. She feels no urge whatever to defend the castle. <strong>Left alive, she follows:</strong> invisible and gaseous she stalks the party, and once a PC is alone she Dominates him back to E7 to feed — kept alive, and helpless.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 24,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 21
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 22
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 25
-      }
-    },
-    "skills": {
-      "deception": {
-        "base": 24
-      },
-      "diplomacy": {
-        "base": 22
-      },
-      "society": {
-        "base": 22
-      },
-      "stealth": {
-        "base": 23
-      },
-      "intimidation": {
-        "base": 22
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "undead",
-        "sayona"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Risibeth",
     "displayName": 20,
@@ -393,5 +73,1495 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 230,
+        "temp": 0,
+        "max": 230,
+        "details": "negative healing"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 40,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 32,
+        "details": ""
+      },
+      "perception": {
+        "value": 21
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 12
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Female sayona vampire",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role (E7, social encounter):</strong> Scarwall's <strong>war commander</strong> — external troop movements, distinct from the hunt and watch commanders — and the only one outside the walls during Mandraivus's raid… because she was already a blood-drinking <strong>sayona</strong> posing as a living woman. An orc priest's <em>command undead</em> pressed her into the vanguard that retook the castle; the rising curse freed her from orc control and she simply never left. Melancholic, fatalistic, amused by the PCs' zeal (she does not expect them to beat Mithrodar — but the attempt entertains). <strong>Blood for secrets:</strong> she answers questions about Kazavon's last days, Mandraivus's doom, and the castle's history — price: a willing PC lets her drink for at least 1 round (she asks for 4; negotiable). Truthfulness is the GM's choice — use her to reorient a lost party. She feels no urge whatever to defend the castle. <strong>Left alive, she follows:</strong> invisible and gaseous she stalks the party, and once a PC is alone she Dominates him back to E7 to feed — kept alive, and helpless.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "undead",
+        "vampire"
+      ],
+      "senses": {
+        "value": "Darkvision, Lifesense 60 feet"
+      },
+      "languages": {
+        "value": [
+          "abyssal",
+          "common",
+          "infernal"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "paralyzed",
+          "poison",
+          "sleep"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "cold",
+          "value": 10,
+          "exceptions": ""
+        }
+      ],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-25T15:28:09.672+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 8
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": 4
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 8
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 21,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 22,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 19,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "25i5nxO0lGTLfG4C",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390133741,
+        "modifiedTime": 1669390133741,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.25i5nxO0lGTLfG4C"
+    },
+    {
+      "_id": "eYcFpWqBlH5S9dxy",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Lifesense 60 feet",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Lifesense]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "lifesense",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.sebk9XseMCRkDqRg"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390139689,
+        "modifiedTime": 1669390145821,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.eYcFpWqBlH5S9dxy"
+    },
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 22
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "ZsyctB9N8YMXYJS5",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390162253,
+        "modifiedTime": 1669390205394,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.ZsyctB9N8YMXYJS5"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 27
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "goFNp9Q6RMgCTRP8",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390164037,
+        "modifiedTime": 1669390205394,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.goFNp9Q6RMgCTRP8"
+    },
+    {
+      "name": "Deception",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 25
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "9oWO1OLUEHXffzaH",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390166640,
+        "modifiedTime": 1669390205394,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.9oWO1OLUEHXffzaH"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 25
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "vZfHEFsLxUUOEhMz",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390176490,
+        "modifiedTime": 1669390205394,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.vZfHEFsLxUUOEhMz"
+    },
+    {
+      "name": "Religion",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 17
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "3OvNKNSnh2VSYS5m",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390180591,
+        "modifiedTime": 1669390205394,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.3OvNKNSnh2VSYS5m"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 24
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "mI7BTOwoOnLgL9Y8",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390182853,
+        "modifiedTime": 1669390205394,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.mI7BTOwoOnLgL9Y8"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390326189,
+        "modifiedTime": 1669390326189,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "eUgQGpITRJ53MeRY",
+      "_key": "!actors.items!ch5Risibeth00001.eUgQGpITRJ53MeRY"
+    },
+    {
+      "_id": "yATsjz67vQThfXLf",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Frightening Gaze",
+      "system": {
+        "description": {
+          "value": "<p>@Template[type:emanation|distance:30] @Compendium[pf2e.bestiary-ability-glossary-srd.Aura]{Aura}</p>\n<p>When a creature ends its turn in the aura, it must attempt a @Check[type:will|dc:29] save. If the creature fails, it becomes @Compendium[pf2e.conditionitems.Frightened]{Frightened 1} or increases its frightened condition by 1 if it was already frightened. The sayona can deactivate or activate this aura by using a single action, which has the concentrate trait.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Aura]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [
+            "aura",
+            "divine",
+            "emotion",
+            "enchantment",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "aura",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.v61oEQaDdcRpaZ9X"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390395880,
+        "modifiedTime": 1669390465566,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.yATsjz67vQThfXLf"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Fangs",
+      "system": {
+        "description": {
+          "value": "<p>[[/r {1d6}[persistent,bleed]]] @Compendium[pf2e.conditionitems.Persistent Damage]{Persistent Bleed Damage}</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T15:35:01.857+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "Wc4SFx0FzMaWfMmS": {
+            "damage": "3d10+15",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 25
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "FPXqTgQiBSUtbTV7",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390501862,
+        "modifiedTime": 1669390594354,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.FPXqTgQiBSUtbTV7"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "system": {
+        "description": {
+          "value": "<p>[[/r {1d6}[persistent,bleed]]] @Compendium[pf2e.conditionitems.Persistent Damage]{Persistent Bleed Damage}</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T15:37:12.719+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "QDXFrnynLAgn2qDo": {
+            "damage": "3d6+15",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 25
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "oRDzTSFUhOF9LdtJ",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669390632725,
+        "modifiedTime": 1669392623680,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.oRDzTSFUhOF9LdtJ"
+    },
+    {
+      "name": "Divine Innate Spells",
+      "type": "spellcastingEntry",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T16:12:15.086+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "ability": {
+          "value": "cha"
+        },
+        "spelldc": {
+          "value": 25,
+          "dc": 33
+        },
+        "tradition": {
+          "value": "divine"
+        },
+        "prepared": {
+          "value": "innate"
+        },
+        "showUnpreparedSpells": {
+          "value": false
+        },
+        "showSlotlessLevels": {
+          "value": false
+        },
+        "proficiency": {
+          "value": 1
+        },
+        "displayLevels": {},
+        "slots": {
+          "slot0": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot1": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot2": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot3": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot4": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot5": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot6": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot7": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot8": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot9": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot10": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot11": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          }
+        },
+        "autoHeightenLevel": {
+          "value": null
+        }
+      },
+      "_id": "KJOQlO4lZGuO9qk1",
+      "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669392735092,
+        "modifiedTime": 1669393038387,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.KJOQlO4lZGuO9qk1"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/vampiric-touch.webp",
+      "name": "Vampiric Touch",
+      "system": {
+        "description": {
+          "value": "<p>Your touch leeches the lifeblood out of a target to empower yourself. You deal 6d6 negative damage to the target. You gain temporary Hit Points equal to half the negative damage the target takes (after applying resistances and the like). You lose any remaining temporary Hit Points after 1 minute.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d6.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "death",
+            "negative"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "vampiric-touch",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 3
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult"
+          ]
+        },
+        "school": {
+          "value": "necromancy"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 living creature"
+        },
+        "range": {
+          "value": "touch"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": ""
+        },
+        "damage": {
+          "value": {
+            "0": {
+              "type": {
+                "categories": [],
+                "value": "negative",
+                "subtype": ""
+              },
+              "value": "6d6",
+              "applyMod": false
+            }
+          }
+        },
+        "save": {
+          "value": "fortitude",
+          "basic": "basic"
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "KJOQlO4lZGuO9qk1",
+          "heightenedLevel": 7,
+          "uses": {
+            "max": 3,
+            "value": 3
+          }
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "damage": {
+            "0": "2d6"
+          },
+          "interval": 1,
+          "type": "interval"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.N1Z1oLPdBxaSgrEE"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669392762014,
+        "modifiedTime": 1669392907608,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "8UhDAapPzCuDyNt0",
+      "_key": "!actors.items!ch5Risibeth00001.8UhDAapPzCuDyNt0"
+    },
+    {
+      "img": "systems/pf2e/icons/spells/fear.webp",
+      "name": "Fear",
+      "system": {
+        "description": {
+          "value": "<p>You plant fear in the target; it must attempt a Will save.</p>\n<hr />\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened 2}.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.sDPxOjQ9kx2RZE8D]{Fleeing} for 1 round.</p>\n<hr />\n<p><strong>Heightened (3rd)</strong> You can target up to five creatures.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "fear",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "level": {
+          "value": 1
+        },
+        "spellType": {
+          "value": "save"
+        },
+        "category": {
+          "value": "spell"
+        },
+        "traditions": {
+          "value": [
+            "arcane",
+            "divine",
+            "occult",
+            "primal"
+          ]
+        },
+        "school": {
+          "value": "enchantment"
+        },
+        "components": {
+          "focus": false,
+          "material": false,
+          "somatic": true,
+          "verbal": true
+        },
+        "materials": {
+          "value": ""
+        },
+        "target": {
+          "value": "1 creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": {
+          "value": "",
+          "areaType": ""
+        },
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "varies"
+        },
+        "damage": {
+          "value": {}
+        },
+        "save": {
+          "value": "will",
+          "basic": ""
+        },
+        "sustained": {
+          "value": false
+        },
+        "cost": {
+          "value": ""
+        },
+        "ability": {
+          "value": ""
+        },
+        "location": {
+          "value": "KJOQlO4lZGuO9qk1",
+          "heightenedLevel": 3,
+          "uses": {
+            "max": 3,
+            "value": 3
+          }
+        },
+        "hasCounteractCheck": {
+          "value": false
+        },
+        "areasize": {
+          "value": ""
+        },
+        "heightening": {
+          "levels": {
+            "3": {
+              "target": {
+                "value": "5 creatures"
+              }
+            }
+          },
+          "type": "fixed"
+        },
+        "prepared": {
+          "value": ""
+        },
+        "primarycheck": {
+          "value": ""
+        },
+        "secondarycasters": {
+          "value": ""
+        },
+        "secondarycheck": {
+          "value": ""
+        }
+      },
+      "type": "spell",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.spells-srd.4koZzrnMXhhosn0D"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669393019067,
+        "modifiedTime": 1669393025362,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "z1Tk2iKIRR7sL8NZ",
+      "_key": "!actors.items!ch5Risibeth00001.z1Tk2iKIRR7sL8NZ"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Absorb Blood",
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> The sayona is adjacent to a bleeding creature</p>\n<hr>\n<p><strong>Effect</strong> The sayona absorbs the creature's blood. The creature must attempt a @Check[type:fortitude|dc:35] save. If a creature is targeted with this ability in consecutive rounds, the save DC decreases by 2 each round after the first.</p>\n<p><strong>Success</strong> The target is unaffected.</p>\n<p><strong>Failure</strong> The target is @Compendium[pf2e.conditionitems.Drained]{Drained 1} or increases its drained condition by 1 and the sayona regains its level in HP, regaining excess HP as temporary hit points. Absorbing blood from a creature that's already drained doesn't restore any HP to the sayona, but it increases the creature's drained condition value by 1. A sayona can also absorb blood that's been emptied into a vessel for sustenance, but it gains no HP from doing so. The target creature's drained condition value decreases by 1 per week. A blood transfusion, which requires a successful @Check[type:medicine|dc:18] check and sufficient blood or a blood donor, reduces the drained value by 1 after 10 minutes.</p>\n<p><strong>Critical Failure</strong> As failure, but @Compendium[pf2e.conditionitems.Drained]{Drained 2}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T16:17:53.194+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "sI7HvTjtyujpmbWu",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669393073200,
+        "modifiedTime": 1669393330046,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.sI7HvTjtyujpmbWu"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "name": "Living Form",
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> The sayona has successfully used Drink Blood or Absorb Blood in the past hour.</p>\n<hr>\n<p><strong>Effect</strong> A sayona can transform into a young, beautiful form resembling the body it had in life, with the effects of humanoid form for 24 hours. It loses its fangs and claw Strikes but gains a +2 circumstance bonus to Deception checks to Impersonate in this form. Exposure to holy water or positive energy in this form reduces the duration of this transformation by [[/br 1d4 #hours]]{1d4 hours}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "concentrate",
+            "divine",
+            "polymorph",
+            "transmutation"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T16:24:12.798+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 3
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "MI9Hwlf80MFcOgff",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669393452806,
+        "modifiedTime": 1669393500717,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.MI9Hwlf80MFcOgff"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Staggering Fear",
+      "system": {
+        "description": {
+          "value": "<p>The sayona fixes their glare at a creature they can see within 30 feet. The target must immediately attempt a Will save against the sayona's frightening gaze. If the creature was already @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened} by frightening gaze before attempting its save, a failed save causes it to be @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Stunned} for 1 round. After attempting its save, the creature is then temporarily immune until the start of the sayona's next turn.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "divine",
+            "emotion",
+            "enchantment",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T16:25:06.919+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "WUIXdRMEvR91wNp4",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669393506923,
+        "modifiedTime": 1669394069093,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!ch5Risibeth00001.WUIXdRMEvR91wNp4"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "ch5Risibeth00001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!ch5Risibeth00001"
 }

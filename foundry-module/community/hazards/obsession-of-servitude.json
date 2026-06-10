@@ -1,0 +1,263 @@
+{
+  "name": "Obsession of Servitude",
+  "type": "hazard",
+  "prototypeToken": {
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": false
+      },
+      "barbrawl": {
+        "resourceBars": {
+          "bar1": {
+            "order": 0,
+            "id": "bar1",
+            "attribute": "attributes.hp",
+            "mincolor": "#FF0000",
+            "maxcolor": "#80FF00",
+            "position": "bottom-inner",
+            "otherVisibility": 0,
+            "ownerVisibility": 50,
+            "max": null
+          }
+        }
+      },
+      "healthEstimate": {
+        "dontMarkDead": false,
+        "hideHealthEstimate": false,
+        "hideName": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Obsession of Servitude",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/pf2e/icons/default-icons/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "randomImg": false
+  },
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "system": {
+    "source": {
+      "value": "",
+      "author": ""
+    },
+    "creatureType": "",
+    "saves": {
+      "fortitude": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 0,
+        "saveDetail": ""
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 0
+      },
+      "hp": {
+        "value": 0,
+        "max": 0,
+        "temp": 0,
+        "details": ""
+      },
+      "hardness": 0,
+      "stealth": {
+        "value": 24,
+        "details": "<p>(expert)</p>"
+      },
+      "emitsSound": "encounter"
+    },
+    "details": {
+      "isComplex": true,
+      "level": {
+        "value": 12
+      },
+      "disable": "<p>@Check[type:religion|dc:32] (master) or dispel magic (6th level; counteract DC 30) to suppress the ghosts for 1 minute.</p>",
+      "description": "<p>A dusty room in which ghostly images of harried, emaciated servants clad in rags manifest and possess creatures to scurry about, frantic in their attempt to keep the castle presentable for their lord.</p>\n<hr>\n<p><strong>Destruction</strong> If the curse upon Scarwall is lifted or the geists in <strong>C8</strong> are destroyed, this haunt fades away.</p>",
+      "reset": "<p>The haunt grows quiet and resets 1 minute after there are no living creatures in area C6. If the geists in area C8 are still alive and control the haunt, this time is reduced to 5 rounds.</p>",
+      "routine": "<p><span class=\"pf2-icon\">T</span> As All Must Serve, but the haunt randomly chooses a new living target in area C6. This new target cannot be a previously possessed creature.</p>"
+    },
+    "statusEffects": [],
+    "traits": {
+      "value": [
+        "haunt"
+      ],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "di": {
+        "custom": "",
+        "value": [],
+        "selected": {}
+      },
+      "dr": [],
+      "dv": []
+    },
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-22T22:34:16.569+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/default-icons/mystery-man.svg",
+      "name": "All Must Serve",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A living creature remains in area C6 for more than 1 round.</p>\n<p><strong>Effect</strong> A ghostly servant attempts to enter the body of a random living creature in the room. The target must attempt a save against the ghostly servant's suggestion (@Check[type:will|dc:30] save) to head out into the castle to clean a randomly determined room on the second floor. A character attacked along the way can fight back, but once a battle is completed must return to the task at hand. Characters prevented from following the suggestion do not resist violently, but do seek to obey the suggestion to the best of their abilities until the duration expires or the effect is dispelled. The haunt then rolls intiative.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "enchantment",
+            "incapacitation",
+            "mental",
+            "occult"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T22:35:43.654+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "ui7uSof35diOnR7o",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669156543658,
+        "modifiedTime": 1669156573657,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "pf2e": {
+      "editHazard": {
+        "value": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.290",
+    "createdTime": 1669156456573,
+    "modifiedTime": 1669579914335,
+    "lastModifiedBy": "hBFuMGrVgeghbDDz"
+  },
+  "_id": "QSjiBEekS8zOvN1d",
+  "ownership": {
+    "default": 0,
+    "hBFuMGrVgeghbDDz": 3
+  },
+  "folder": null,
+  "sort": 0
+}

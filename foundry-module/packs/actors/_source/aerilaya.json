@@ -1,285 +1,6 @@
 {
-  "_id": "aerilayaBanshe01",
   "name": "Aerilaya",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "at9614wtso4aTHvt",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Spectral Touch",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 27
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "3d10+8",
-            "damageType": "void"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "magical"
-          ]
-        }
-      },
-      "_key": "!actors.items!aerilayaBanshe01.at9614wtso4aTHvt"
-    },
-    {
-      "_id": "b2iR3uvwbzPttZOQ",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Wail",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Frequency</strong> once per day (her opener from the cupola, D16). All living creatures within 40 feet: @Check[type:fortitude|dc:33]; critical failure = dropped to 0 HP and @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying 1}; failure = @Damage[8d10[void]]; success = half.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "auditory",
-            "death",
-            "incapacitation"
-          ]
-        }
-      },
-      "_key": "!actors.items!aerilayaBanshe01.b2iR3uvwbzPttZOQ"
-    },
-    {
-      "_id": "ET5QCu89Dl9xyt4e",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Spellstrike Memory",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>In life a magus: a ray of frost-and-shadow, spell attack +25, @Damage[6d8[cold]] plus @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} on a critical hit.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "arcane",
-            "cold"
-          ]
-        }
-      },
-      "_key": "!actors.items!aerilayaBanshe01.ET5QCu89Dl9xyt4e"
-    },
-    {
-      "_id": "eKZNq3v5vtLIt5vC",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Banshee Resilience",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Incorporeal; resistance all 15 (except force/ghost touch/vitality); sunlight powerlessness (she keeps to the tower's shadow).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!aerilayaBanshe01.eKZNq3v5vtLIt5vC"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 0
-      },
-      "dex": {
-        "mod": 6
-      },
-      "con": {
-        "mod": 0
-      },
-      "int": {
-        "mod": 3
-      },
-      "wis": {
-        "mod": 4
-      },
-      "cha": {
-        "mod": 7
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 33
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 240,
-        "temp": 0,
-        "value": 240
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 0
-      }
-    },
-    "details": {
-      "blurb": "Banshee sky-warden (D16)",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "elven",
-          "necril"
-        ]
-      },
-      "level": {
-        "value": 13
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> Kazavon's elf-assassin and rare arcanist — exiled from Kyonin for vengeance-killings, she sought death in Belkzen until Kazavon ('a handsome, well-spoken lunatic,' her journal says) hired the orc-butcher on sight. Slain in the cupola by an elven sorcerer cousin of Mandraivus's band; now the banshee <strong>alone</strong> in D16 (no stair connects it to the keep), eternally watching the skies — <strong>any low aerial approach</strong> answers to her first. <strong>Orc-hatred:</strong> against an orc or half-orc she attacks that creature exclusively and <em>never uses her Wail</em>, speechless with rage. Pursues up to a mile from the castle, then returns to her vigil. Her spellbook and journal (B12, @Check[type:perception|dc:29]) reveal the obsession — knowing it grants the party a tactical edge.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 24,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 20
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 22
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 25
-      }
-    },
-    "skills": {
-      "stealth": {
-        "base": 25
-      },
-      "arcana": {
-        "base": 23
-      },
-      "intimidation": {
-        "base": 25
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "undead",
-        "incorporeal",
-        "spirit"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Aerilaya",
     "displayName": 20,
@@ -352,5 +73,915 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 195,
+        "temp": 0,
+        "max": 195,
+        "details": "negative healing"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 35,
+        "details": ""
+      },
+      "perception": {
+        "value": 28
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 14
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Variant banshee (Pathfinder Bestiary 34)",
+      "publicNotes": "<p>Banshees are the furious, tormented souls of elves bound to the Material Plane by a betrayal that defined the final hours of their lives. Some banshees arise from elves who were slain by trusted friends and allies, or whose loved ones betrayed them on their deathbeds. Others spawn from elves whose treacherous deeds shortly before their deaths left a stain upon their souls. Regardless of their origin, banshees despise the living. This hatred of life is all too often a horrific inversion of their personalities in life. Some speculate that the more kind-hearted the elf (and the more wrenching the betrayal), the crueler the banshee.</p>\n<p>Banshees rarely stray far from where they perished and typically haunt thick forests and canopied swamps where little light graces the ground. Many banshees can be found in the elven nation of Kyonin, specifically in Tanglebriar, the sinister domain of the demon Treerazer. Similarly, a large number of banshees can be found lurking about the edges of drow settlements in the Darklands, as plenty of cruelty and betrayal exists in drow culture.</p>\n<p>Banshees' mere touch inflicts pain and primal fear, and those exposed to their wails of grief rarely survive the experience.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Role:</strong> Kazavon's elf-assassin and rare arcanist — exiled from Kyonin for vengeance-killings, she sought death in Belkzen until Kazavon ('a handsome, well-spoken lunatic,' her journal says) hired the orc-butcher on sight. Slain in the cupola by an elven sorcerer cousin of Mandraivus's band; now the banshee <strong>alone</strong> in D16 (no stair connects it to the keep), eternally watching the skies — <strong>any low aerial approach</strong> answers to her first. <strong>Orc-hatred:</strong> against an orc or half-orc she attacks that creature exclusively and <em>never uses her Wail</em>, speechless with rage. Pursues up to a mile from the castle, then returns to her vigil. Her spellbook and journal (B12, @Check[type:perception|dc:29]) reveal the obsession — knowing it grants the party a tactical edge.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "spirit",
+        "incorporeal",
+        "undead"
+      ],
+      "senses": {
+        "value": "hears heartbeats (imprecise) 60 feet, Darkvision"
+      },
+      "languages": {
+        "value": [
+          "common",
+          "elven"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "disease",
+          "paralyzed",
+          "poison",
+          "precision",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "all",
+          "value": 6,
+          "exceptions": "except force, ghost touch, or positive; double resistance vs. non-magical"
+        }
+      ],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-21T11:10:08.284+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": -5
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 6
+      },
+      "cha": {
+        "mod": 6
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 23,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 25,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 28,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "TfVJgGMZMNH1qUAD",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "sort": 200000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029250004,
+        "modifiedTime": 1669029250004,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.TfVJgGMZMNH1qUAD"
+    },
+    {
+      "_id": "PX2TmSTftAjaxaDQ",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Hears Heartbeats (Imprecise) 60 feet",
+      "sort": 300000,
+      "system": {
+        "description": {
+          "value": "<p>Aerilaya can hear heartbeats within 60 feet (imprecise).</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Actor.OZ4o0pmJc07Itu6U.Item.74wDKknM5LCOcK73"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029251158,
+        "modifiedTime": 1669029616411,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.PX2TmSTftAjaxaDQ"
+    },
+    {
+      "_id": "82zn9rko3U4k3EQc",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sunlight Powerlessness",
+      "sort": 400000,
+      "system": {
+        "description": {
+          "value": "<p>If in direct sunlight, Aerilaya is @Compendium[pf2e.conditionitems.Slowed]{Slowed 1} and can't use actions that have the attack trait.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Actor.OZ4o0pmJc07Itu6U.Item.rQT7KUvA4yzEm4PO"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029252440,
+        "modifiedTime": 1669029646379,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.82zn9rko3U4k3EQc"
+    },
+    {
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.TTCw5NusiSSkJU1x"
+        }
+      },
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Negative Healing",
+      "sort": 500000,
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary 2"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "override",
+            "path": "system.attributes.hp.negativeHealing",
+            "value": true
+          }
+        ],
+        "slug": "negative-healing",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029253656,
+        "modifiedTime": 1669029253656,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "UzpMm0Xo7omuFWjP",
+      "_key": "!actors.items!aerilayaBanshe01.UzpMm0Xo7omuFWjP"
+    },
+    {
+      "_id": "E8cVrG9xNaOIz3qr",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Spectral Ripple",
+      "sort": 700000,
+      "system": {
+        "description": {
+          "value": "<p>When Aerilaya Strides at least 10 feet, she is @Compendium[pf2e.conditionitems.Concealed]{Concealed} until the start of her next turn.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Actor.OZ4o0pmJc07Itu6U.Item.q8ASqdiBd9SflYVU"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029254794,
+        "modifiedTime": 1669029960510,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.E8cVrG9xNaOIz3qr"
+    },
+    {
+      "_id": "mnlOCMnoj7pk9F0j",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Terrifying Touch",
+      "sort": 800000,
+      "system": {
+        "description": {
+          "value": "<p>A creature damaged by Aerilaya's touch that isn't already @UUID[Compendium.pf2e.conditionitems.TBSHQspnbcqxsmjL]{Frightened} must attempt a @Check[type:will|dc:33] save (@Check[type:will|dc:38] if the attack was a critical hit). If the creature fails its save, it's @Compendium[pf2e.conditionitems.Frightened]{Frightened 2}; on a critical failure, the creature also cowers with fear and is @UUID[Compendium.pf2e.conditionitems.dfCMdR4wnpbYNTix]{Stunned 4}. If the creature is protected against fear by a spell or magic item, the banshee's touch first attempts to counteract the protection effect, with the effect of a 7th-level <em>@UUID[Compendium.pf2e.spells-srd.9HpwDN4MYQJnW0LG]{Dispel Magic</em> spell.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "emotion",
+            "enchantment",
+            "fear",
+            "occult"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Actor.OZ4o0pmJc07Itu6U.Item.ePRrl3MsWtcXXzD7"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029255788,
+        "modifiedTime": 1669030390373,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.mnlOCMnoj7pk9F0j"
+    },
+    {
+      "_id": "hJakYL0T9BxvPmdv",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Vengeful Spite",
+      "sort": 600000,
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A foe critically hits Aerilaya, or Aerilaya critically fails her save against a foe's damaging effect.</p>\n<p><strong>Effect</strong> Aerilaya lashes back at her tormentor, dealing [[/r {3d8 + 14}[mental]]]{3d8 + 14 mental damage} (@Check[type:will|dc:33|basic:true]) and applying the effects of terrifying touch based on the results of the same Will save.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "evocation",
+            "occult"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Actor.OZ4o0pmJc07Itu6U.Item.NKs8hoGb4IyfFWCw"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029257654,
+        "modifiedTime": 1669029799959,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.hJakYL0T9BxvPmdv"
+    },
+    {
+      "_id": "5oOPyqGsaW60BjX4",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Wail",
+      "sort": 900000,
+      "system": {
+        "description": {
+          "value": "<p>Aerilaya unleashes a soul-chilling wail of the banshee (@Check[type:fortitude|dc:33], [[/r {6d10}[negative]]]{6d10 negative damage}). This Wail overcomes <em>@UUID[Compendium.pf2e.spells-srd.gIdDLrbswTV3OBJy]{Silence}</em> and similar effects of 4th level or lower. Aerilaya can instead use Wail as a threeaction activity to overcome such effects of up to 7th level.</p>\n<p>Aerilaya's Wail resonates for 1 round, and any creature that comes within the area during that time must attempt a save against the effect. A creature can't be affected more than once by the same Wail.</p>\n<p>Aerilaya can't Wail again for [[/br 1d4 #rounds]]{1d4 rounds}.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "auditory",
+            "concentrate",
+            "death",
+            "necromancy",
+            "occult"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 2
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "effects": [],
+      "folder": null,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Actor.OZ4o0pmJc07Itu6U.Item.IFPnmQpUJLW9TJa9"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029259177,
+        "modifiedTime": 1669030626721,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.5oOPyqGsaW60BjX4"
+    },
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 25
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "u3u7wuvCtgv6cAUE",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029516395,
+        "modifiedTime": 1669029557833,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.u3u7wuvCtgv6cAUE"
+    },
+    {
+      "name": "Intimidation",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 28
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "KVQM3mVx7GbeArYo",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029518613,
+        "modifiedTime": 1669029557833,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.KVQM3mVx7GbeArYo"
+    },
+    {
+      "name": "Occultism",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 20
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "rE5HvdNQU8gTmUbb",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029526267,
+        "modifiedTime": 1669029557833,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.rE5HvdNQU8gTmUbb"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Hand",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "finesse",
+            "magical"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T11:24:48.067+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "8sQBmhVJDt9ss2no": {
+            "damage": "3d8+15",
+            "damageType": "negative"
+          }
+        },
+        "bonus": {
+          "value": 29
+        },
+        "attackEffects": {
+          "value": [
+            "terrifying-touch"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "4uovtrI0F5iLwKVY",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669029888071,
+        "modifiedTime": 1669029932172,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!aerilayaBanshe01.4uovtrI0F5iLwKVY"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "aerilayaBanshe01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!aerilayaBanshe01"
 }

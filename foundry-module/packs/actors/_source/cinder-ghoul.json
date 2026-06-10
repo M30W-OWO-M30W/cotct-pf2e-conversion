@@ -1,296 +1,6 @@
 {
-  "_id": "cinderGhoul00001",
   "name": "Cinder Ghoul",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "zA4W7M0irVv8ixFX",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Conductive Cleaver",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 21
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+7",
-            "damageType": "slashing"
-          },
-          "1": {
-            "damage": "1d6",
-            "damageType": "fire"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "magical"
-          ]
-        }
-      },
-      "_key": "!actors.items!cinderGhoul00001.zA4W7M0irVv8ixFX"
-    },
-    {
-      "_id": "GWJtcXmNBzRMUWGr",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Charred Slam",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 21
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d10+7",
-            "damageType": "bludgeoning"
-          },
-          "1": {
-            "damage": "1d6",
-            "damageType": "fire"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!cinderGhoul00001.GWJtcXmNBzRMUWGr"
-    },
-    {
-      "_id": "HpEBR6a7b6hVPxzc",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Smoke Inhalation",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p><strong>Requirement</strong> Adjacent to a creature.</p><hr /><p><strong>Effect</strong> It pours part of its body down the target's throat: @Check[type:fortitude|dc:27] or @Damage[2d6[fire]] per round of burning lungs (new save each round to cough it out; also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "incapacitation"
-          ]
-        }
-      },
-      "_key": "!actors.items!cinderGhoul00001.HpEBR6a7b6hVPxzc"
-    },
-    {
-      "_id": "qjSW1kMl3gxewKvS",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Smoke-Form",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>A half-gaseous body: resistance physical 10 (except magical); can't slip under doors; wind pushes but never disperses it; cold is its bane (weakness cold 10).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!cinderGhoul00001.qjSW1kMl3gxewKvS"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 4
-      },
-      "dex": {
-        "mod": 5
-      },
-      "con": {
-        "mod": 0
-      },
-      "int": {
-        "mod": -1
-      },
-      "wis": {
-        "mod": 2
-      },
-      "cha": {
-        "mod": 1
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 27
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 135,
-        "temp": 0,
-        "value": 135
-      },
-      "speed": {
-        "otherSpeeds": [
-          {
-            "type": "fly",
-            "value": 40
-          }
-        ],
-        "value": 30
-      }
-    },
-    "details": {
-      "blurb": "Smoldering kitchen ghoul (B15)",
-      "languages": {
-        "details": "",
-        "value": [
-          "necril"
-        ]
-      },
-      "level": {
-        "value": 9
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> the kitchen dead (B15) — the four cruelest of Kazavon's cooks, thrown into their own ovens by Mandraivus's soldiers, risen as Large smoke-bodied ghouls whose scorched outlines peel off the brickwork the round after the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.crematoryBlast01]{Crematory Blast} haunt fires. Each wields a meat cleaver that is magic only in its dead hand. They pursue into the larder (B16) but no farther.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 17,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 17
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 18
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 15
-      }
-    },
-    "skills": {
-      "acrobatics": {
-        "base": 19
-      },
-      "stealth": {
-        "base": 19
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "lg"
-      },
-      "value": [
-        "undead",
-        "ghoul",
-        "fire"
-      ]
-    }
-  },
-  "folder": "ch5CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Cinder Ghoul",
     "displayName": 20,
@@ -363,5 +73,946 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 155,
+        "temp": 0,
+        "max": 155,
+        "details": "negative healing"
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 28,
+        "details": ""
+      },
+      "perception": {
+        "value": 17
+      },
+      "allSaves": {
+        "value": ""
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CE"
+      },
+      "level": {
+        "value": 9
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> the kitchen dead (B15) — the four cruelest of Kazavon's cooks, thrown into their own ovens by Mandraivus's soldiers, risen as Large smoke-bodied ghouls whose scorched outlines peel off the brickwork the round after the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.crematoryBlast01]{Crematory Blast} haunt fires. Each wields a meat cleaver that is magic only in its dead hand. They pursue into the larder (B16) but no farther.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "undead",
+        "fire",
+        "ghoul"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [
+          "common",
+          "necril"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [
+          "death-effects",
+          "disease",
+          "fire",
+          "paralyzed",
+          "poison",
+          "unconscious"
+        ],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [
+        {
+          "type": "cold",
+          "value": 10,
+          "exceptions": ""
+        }
+      ],
+      "rarity": "uncommon",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-22T10:25:30.613+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 6
+      },
+      "dex": {
+        "mod": 6
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 16,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 21,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 17,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "T6n7NfxV8QtrrdyP",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669112787889,
+        "modifiedTime": 1669112787889,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.T6n7NfxV8QtrrdyP"
+    },
+    {
+      "name": "Acrobatics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "WuNX85qVGcxj1rMu",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669112829951,
+        "modifiedTime": 1669112964579,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.WuNX85qVGcxj1rMu"
+    },
+    {
+      "name": "Athletics",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "label": "to Grapple",
+            "selector": "athletics",
+            "value": 2,
+            "predicate": [
+              "action:grapple"
+            ]
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        },
+        "variants": {
+          "0": {
+            "label": "+21 to Grapple",
+            "options": "action:grapple"
+          }
+        }
+      },
+      "_id": "tlBnex5Iko1PFqCv",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669112831383,
+        "modifiedTime": 1669113004682,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.tlBnex5Iko1PFqCv"
+    },
+    {
+      "name": "Stealth",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "YW3iiZzTmjtoRANS",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669112836616,
+        "modifiedTime": 1669112964579,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.YW3iiZzTmjtoRANS"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Tear Flesh",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature @Compendium[pf2e.conditionitems.Grabbed]{Grabbed} by the cinder ghoul critically fails a skill check to @Compendium[pf2e.actionspf2e.Escape]{Escape}</p>\n<p><strong>Effect</strong> The cinder ghoul makes a claw Strike against the triggering creature.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T10:33:39.787+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "TlqwN7fsPrOVChPp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669113219791,
+        "modifiedTime": 1669113246627,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.TlqwN7fsPrOVChPp"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Jaws",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "finesse"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T10:34:25.725+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "fOMXEhwAtOkFL6hP": {
+            "damage": "2d10+10",
+            "damageType": "piercing"
+          },
+          "2Ua8c1OISLGr53Fd": {
+            "damage": "1d6",
+            "damageType": "fire"
+          }
+        },
+        "bonus": {
+          "value": 21
+        },
+        "attackEffects": {
+          "value": [
+            "cinder-lung",
+            "paralysis"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "AVwVTLOBc2q0lHoA",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669113265727,
+        "modifiedTime": 1669113917737,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.AVwVTLOBc2q0lHoA"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T10:36:30.589+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "GipMJzVvn5ZPRIfP": {
+            "damage": "2d6+10",
+            "damageType": "chaotic"
+          },
+          "3enLc9ylQiXdhwpJ": {
+            "damage": "1d6",
+            "damageType": "fire"
+          }
+        },
+        "bonus": {
+          "value": 21
+        },
+        "attackEffects": {
+          "value": [
+            "grab",
+            "paralysis"
+          ],
+          "custom": ""
+        }
+      },
+      "_id": "5FaonpAmltkUfwhg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669113390599,
+        "modifiedTime": 1669113934673,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.5FaonpAmltkUfwhg"
+    },
+    {
+      "_id": "OX3aHJ7eMQh0Ishj",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Grab",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Grab]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "grab",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.Tkd8sH4pwFIPzqTr"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669113474475,
+        "modifiedTime": 1669113474475,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.OX3aHJ7eMQh0Ishj"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Bone Cinder",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "range-increment-10"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T10:38:23.488+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "31eGeFkWzDko4K5C": {
+            "damage": "2d6+10",
+            "damageType": "piercing"
+          },
+          "v1n4DI25uUxJaNQ3": {
+            "damage": "1d6",
+            "damageType": "fire"
+          }
+        },
+        "bonus": {
+          "value": 21
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "hrOxQr5VDeS1mWfb",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669113503493,
+        "modifiedTime": 1669113547024,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.hrOxQr5VDeS1mWfb"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Consume Flesh",
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> The cinder ghoul is adjacent to the corpse of a creature that died within the last hour.</p>\n<p><strong>Effect</strong> The cinder ghoul devours a chunk of the corpse and regains [[/r 5d6]] Hit Points. It can regain Hit Points from any given corpse only once.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "manipulate"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T10:40:20.200+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "qVa0Y6igxsXaTm7I",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669113620211,
+        "modifiedTime": 1669113955620,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.qVa0Y6igxsXaTm7I"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Cinder Lung",
+      "system": {
+        "description": {
+          "value": "<p>Any breathing creature bitten by a cinder ghoul begins to have their lungs filled with smoke and cinder.</p>\n<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:26]</p>\n<p><strong>Stage 1</strong> @Compendium[pf2e.conditionitems.Drained]{Drained 1} and [[/r {1d6}[fire]]]{1d6 fire damage} (1 round)</p>\n<p><strong>Stage 2</strong> @Compendium[pf2e.conditionitems.Drained]{Drained 2} and [[/r {2d6}[fire]]]{2d6 fire damage} (1 round)</p>\n<p><strong>Stage 3</strong> @Compendium[pf2e.conditionitems.Drained]{Drained 3} and [[/r {3d6}[fire]]]{3d6 fire damage} (1 round)</p>\n<p><strong>Stage 4</strong> suffocating and cannot reduce below stage 4 until the smoke is purged; purging the smoke requires a successful @Check[type:medicine|dc:26] check to Administer First Aid (which stops the creature from suffocating and returns the creature to stage 3; stage 2 on a critical success) or a magical effect that removes curses or the drained condition (which stops the creature from suffocating and ends the curse). If the creature dies from suffocation, it rises as a cinder ghoul the next midnight.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "curse",
+            "fire",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T10:41:40.352+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "G10wolB7Dac43j1y",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669113700355,
+        "modifiedTime": 1669113725518,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.G10wolB7Dac43j1y"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Paralysis",
+      "system": {
+        "description": {
+          "value": "<p>Any living, non-elf creature hit by a cinder ghoul's attack must succeed at @Check[type:fortitude|dc:26] save or become @Compendium[pf2e.conditionitems.Paralyzed]{Paralyzed}. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "incapacitation",
+            "necromancy",
+            "occult"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-22T10:43:57.396+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "yVmRctVgFnig1vm2",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669113837401,
+        "modifiedTime": 1669113872144,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!cinderGhoul00001.yVmRctVgFnig1vm2"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "cinderGhoul00001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!cinderGhoul00001"
 }

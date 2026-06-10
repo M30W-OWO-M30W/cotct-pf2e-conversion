@@ -1,59 +1,6 @@
 {
-  "_id": "curseOfTheWorm01",
   "name": "Curse of the Worm (E10)",
   "type": "hazard",
-  "img": "systems/pf2e/icons/default-icons/hazard.svg",
-  "items": [
-    {
-      "_id": "rY3bHwDLxi4aukSB",
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "The Traitor's Life",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "reaction"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": null,
-        "description": {
-          "value": "<p><strong>Trigger</strong> Reading or touching the scroll.</p><hr /><p><strong>Effect</strong> A weeks-long vision in seconds: being caught betraying the castle; both ankles broken by Kazavon; weeks subsisting on worms in a cave; the crawl back to a corpse-field of slaughtered orcs and humans; a gleaming sword; the dawning horror that the betrayed party was <strong>Zon-Kuthon himself</strong> — transformation, and flight into the deep with the prize. Then @Check[type:will|dc:23] or be cursed (9th-rank): the victim <em>knows</em> himself a worm, no longer believes he can or should walk, drops @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}, and must crawl wherever he travels until the curse is counteracted — or Kleestad dies.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!curseOfTheWorm01.rY3bHwDLxi4aukSB"
-    }
-  ],
-  "folder": "ch5HazardsFld001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Curse of the Worm (E10)",
     "displayName": 20,
@@ -121,58 +68,180 @@
     },
     "flags": {}
   },
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "system": {
-    "attributes": {
-      "emitsSound": "encounter",
-      "hardness": 0,
-      "stealth": {
-        "details": "<p>@Check[type:perception|dc:30] (trained) to see the blood on the scroll glisten and begin soaking through the parchment.</p>",
-        "value": 30
-      }
+    "source": {
+      "value": "",
+      "author": ""
     },
     "creatureType": "",
+    "saves": {
+      "fortitude": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 0,
+        "saveDetail": ""
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 0
+      },
+      "hp": {
+        "value": 0,
+        "max": 0,
+        "temp": 0,
+        "details": ""
+      },
+      "hardness": 0,
+      "stealth": {
+        "value": 25,
+        "details": "<p>(trained) to see the blood on the scroll start to glisten and soak through the parchment.</p>\n<hr>\n<p><strong>Destruction</strong> Unlike the other haunts in Scarwall, lifting the castle's curse does not destroy this haunt. To do so, Kleestad himself, in his new incarnation as a pharmakos, must be slain (see Area <strong>H4</strong>).</p>"
+      },
+      "emitsSound": "encounter"
+    },
     "details": {
-      "description": "<p>One scroll survives on the records-room desk — the chamberlain's file, 'Kleestad' and 'chamberlain' still legible beneath bloodstains that look fresh after five centuries.</p>",
-      "disable": "<p>It cannot be exorcised while its author lives: <strong>only Kleestad's death (H4) destroys it</strong> — lifting the castle's curse does <em>not</em>.</p>",
       "isComplex": false,
       "level": {
         "value": 13
       },
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      },
-      "reset": "<p>1 minute.</p>",
+      "disable": "<p>@Check[type:religion|dc:33] (master) or dispel magic (7th level; counteract DC 31) to suppress the scroll's desire to possess for 1 minute.</p>",
+      "description": "<p>A bleeding scroll that forces its bearer to relive the final, horrid moments of Kleestad's life.</p><hr /><h3>Conversion notes (this module)</h3><p>One scroll survives on the records-room desk — the chamberlain's file, 'Kleestad' and 'chamberlain' still legible beneath bloodstains that look fresh after five centuries.</p>",
+      "reset": "",
       "routine": ""
-    },
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 0
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 0
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 0
-      }
     },
     "statusEffects": [],
     "traits": {
+      "value": [
+        "haunt"
+      ],
       "rarity": "common",
       "size": {
         "value": "med"
       },
-      "value": [
-        "haunt",
-        "curse",
-        "mental"
-      ]
+      "di": {
+        "custom": "",
+        "value": [],
+        "selected": {}
+      },
+      "dr": [],
+      "dv": []
+    },
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-25T16:51:32.640+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
     }
   },
+  "items": [
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Curse of the Chained One",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature picks up the scroll.</p>\n<hr>\n<p><strong>Effect</strong> When the creature picks up the scroll, a sense of panic wells up inside him as the conviction takes hold that he is Scarwall's chamberlain and was just caught by Kazavon in the act of betraying the castle to its enemies. Pain shoots through the creature's feet as he experiences the agony of both ankles breaking, and then experiences a panicked crawl through Scarwall while it's under attack, seeking shelter in a cave deep below ground. Days or weeks seem to pass with nothing but worms to eat and muddy water to drink, and then the creature experiences another painful crawl up to the castle, where he finds a gleaming sword amid dozens of freshly slaughtered orcs and humans. Yet as he grasps the sword, that sense of panic fills him againthis time, he knows it is not Kazavon whom he has betrayed, but Zon-Kuthon himself, and as his body twists and transforms into a monster, the creature flees back into the caverns below with his prize. All of this seems to take place over several weeks for the victim of the haunt, when in fact only a few seconds pass in real time. As the complex vision ends, the creature must succeed at a @Check[type:will|dc:35] save or be afflicted with a potent curse: he thinks of himself as a worm and no longer believes he can or even deserves to walk, and must drop @Compendium[pf2e.conditionitems.Prone]{Prone} and crawl wherever he travels.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "curse",
+            "divine",
+            "emotion",
+            "enchantment",
+            "mental"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-25T16:57:55.332+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "uHtSPsahjhZA9cUA",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669395475343,
+        "modifiedTime": 1669414486355,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!curseOfTheWorm01.uHtSPsahjhZA9cUA"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "pf2e": {
+      "editHazard": {
+        "value": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "curseOfTheWorm01",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5HazardsFld001",
+  "sort": 0,
   "_key": "!actors!curseOfTheWorm01"
 }

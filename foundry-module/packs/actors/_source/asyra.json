@@ -1,370 +1,6 @@
 {
-  "_id": "appAsyraKyton001",
   "name": "Asyra",
   "type": "npc",
-  "img": "systems/pf2e/icons/default-icons/npc.svg",
-  "items": [
-    {
-      "_id": "1vOXaEeiNqfUKlrF",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "+2 Spiked Chain",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 25
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d8+12",
-            "damageType": "slashing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "disarm",
-            "magical",
-            "reach-10",
-            "trip"
-          ]
-        }
-      },
-      "_key": "!actors.items!appAsyraKyton001.1vOXaEeiNqfUKlrF"
-    },
-    {
-      "_id": "F8aF48jKr99SYyhZ",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Animated Chain",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 23
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d6+9",
-            "damageType": "bludgeoning"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "reach-10"
-          ]
-        }
-      },
-      "_key": "!actors.items!appAsyraKyton001.F8aF48jKr99SYyhZ"
-    },
-    {
-      "_id": "WVM8O50fd5YAOCHH",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Claw",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 23
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "2d6+9",
-            "damageType": "slashing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile"
-          ]
-        }
-      },
-      "_key": "!actors.items!appAsyraKyton001.WVM8O50fd5YAOCHH"
-    },
-    {
-      "_id": "PfanJvXRJr0HayYv",
-      "img": "systems/pf2e/icons/actions/TwoActions.webp",
-      "name": "Chain Dance",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 2
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>One Spiked Chain Strike and one Animated Chain Strike (different targets allowed) — her body-chains fight beside her hands.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "flourish"
-          ]
-        }
-      },
-      "_key": "!actors.items!appAsyraKyton001.PfanJvXRJr0HayYv"
-    },
-    {
-      "_id": "ThFREpBeJC0ExYJR",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Unnerving Gaze",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>One creature within 30 feet: @Check[type:will|dc:29] or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} as well on a critical failure). Sial is immune; so are other kytons.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "emotion",
-            "fear",
-            "mental",
-            "visual"
-          ]
-        }
-      },
-      "_key": "!actors.items!appAsyraKyton001.ThFREpBeJC0ExYJR"
-    },
-    {
-      "_id": "laj9rNB9LqluRDni",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Eidolon Bond",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "defensive",
-        "description": {
-          "value": "<p>Bound to @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.shadowcountSial1]{Shadowcount Sial} (his casket is her door): when Sial would take damage, she can absorb it instead (his life link). At 0 HP she is <strong>banished to the Plane of Shadow, not slain</strong> — Sial cannot call her back for a day. Resistance 10 cold; resistance 5 physical (except holy).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!appAsyraKyton001.laj9rNB9LqluRDni"
-    }
-  ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 6
-      },
-      "dex": {
-        "mod": 5
-      },
-      "con": {
-        "mod": 4
-      },
-      "int": {
-        "mod": -2
-      },
-      "wis": {
-        "mod": 0
-      },
-      "cha": {
-        "mod": 0
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 31
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 200,
-        "temp": 0,
-        "value": 200
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 30
-      }
-    },
-    "details": {
-      "blurb": "Sial's chain-eidolon — fights to the death for him",
-      "languages": {
-        "details": "",
-        "value": [
-          "common"
-        ]
-      },
-      "level": {
-        "value": 11
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Sial's kyton eidolon</strong> (Appendix 4's kyton subtype, made flesh): a woman-shaped lattice of pale skin and living chains. She manifests from the bone-house casket Sial carries, speaks rarely, and regards Laori with something like professional disappointment.</p><p><strong>Morale: she fights to the death defending Sial — every time, without hesitation.</strong> Her 'death' is a banishment; her loyalty is structural.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 20,
-      "senses": [
-        {
-          "type": "darkvision"
-        }
-      ]
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 22
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 20
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 19
-      }
-    },
-    "skills": {
-      "acrobatics": {
-        "base": 22
-      },
-      "intimidation": {
-        "base": 19
-      },
-      "medicine": {
-        "base": 17
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "fiend",
-        "kyton",
-        "eidolon"
-      ]
-    }
-  },
-  "folder": "appCreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Asyra",
     "displayName": 20,
@@ -437,5 +73,727 @@
       }
     }
   },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 146,
+        "temp": 0,
+        "max": 146,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 35,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 30,
+        "details": ""
+      },
+      "perception": {
+        "value": 21
+      },
+      "allSaves": {
+        "value": "+2 Status to All Saves vs. Mental"
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "LE"
+      },
+      "level": {
+        "value": 11
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Female velstrac eidolon",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Sial's kyton eidolon</strong> (Appendix 4's kyton subtype, made flesh): a woman-shaped lattice of pale skin and living chains. She manifests from the bone-house casket Sial carries, speaks rarely, and regards Laori with something like professional disappointment.</p><p><strong>Morale: she fights to the death defending Sial — every time, without hesitation.</strong> Her 'death' is a banishment; her loyalty is structural.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "ethereal",
+        "eidolon",
+        "phantom"
+      ],
+      "senses": {
+        "value": "Darkvision"
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-20T19:07:08.374+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 5
+      },
+      "dex": {
+        "mod": 7
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 18,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 24,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 21,
+        "saveDetail": ""
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "WBUjZcBrKwKfTHTD",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Darkvision]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "interaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.qCCLZhnp2HhP3Ex6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668971418382,
+        "modifiedTime": 1668971418382,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appAsyraKyton001.WBUjZcBrKwKfTHTD"
+    },
+    {
+      "_id": "ski5Y8zieA5uDBSD",
+      "img": "systems/pf2e/icons/equipment/weapons/spiked-chain.webp",
+      "name": "Spiked Chain",
+      "system": {
+        "description": {
+          "value": "<p>This 4‑foot‑long length of chain is covered with barbs and has spikes on one or both ends. Some feature metal hoops used as handgrips.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "disarm",
+            "evocation",
+            "finesse",
+            "magical",
+            "trip"
+          ],
+          "rarity": "uncommon",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "spiked-chain",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "quantity": 1,
+        "baseItem": "spiked-chain",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Spiked Chain",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "martial",
+        "group": "flail",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d8",
+          "damageType": "slashing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": ""
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 2
+        },
+        "strikingRune": {
+          "value": "striking"
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.zi9ovfoRp2fMhfpO"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668971467078,
+        "modifiedTime": 1668971476906,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appAsyraKyton001.ski5Y8zieA5uDBSD"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Dutiful Strike",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A foe within 15 feet of Sial hits him with a Strike and deals damage.</p>\n<p><strong>Requirements</strong> Asyra is adjacent to Sial.</p>\n<p><strong>Effect</strong> Asyra instinctively flashes with ectoplasmic energy, allowing her to make a melee attack against a foe who dares to harm Sial. Asyra makes a phantom fist Strike against the triggering foe, even if that foe isn't within Asyra's reach.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T19:18:56.305+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "uVgqfKGc7wAB8wei",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668971936315,
+        "modifiedTime": 1668971957807,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appAsyraKyton001.uVgqfKGc7wAB8wei"
+    },
+    {
+      "name": "Spiked Chain",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "disarm",
+            "finesse",
+            "magical",
+            "trip"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T19:19:36.109+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "YDpa0gdVcyffyOj9": {
+            "damage": "2d8+13",
+            "damageType": "slashing"
+          }
+        },
+        "bonus": {
+          "value": 23
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "ski5Y8zieA5uDBSD"
+        }
+      },
+      "_id": "V8c7e3Bgcwr1pluN",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668971976112,
+        "modifiedTime": 1668971991965,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appAsyraKyton001.V8c7e3Bgcwr1pluN"
+    },
+    {
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Phantom Fist",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T19:20:29.669+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "2rlc2i5nss4aCa5s": {
+            "damage": "2d6+10",
+            "damageType": "bludgeoning"
+          }
+        },
+        "bonus": {
+          "value": 23
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "_id": "ML39UgJa9rB84yNp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668972029671,
+        "modifiedTime": 1668972060613,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appAsyraKyton001.ML39UgJa9rB84yNp"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "name": "Flickering Form",
+      "system": {
+        "description": {
+          "value": "<p>Asyra can switch from her normal form to a less substantial flickering form. While in her flickering form, she gains resistance 5 to all damage (except force and negative). However, Asyra can't use any of her Strikes or actions requiring a fully physical form like @Compendium[pf2e.actionspf2e.Grapple]{Grapple}, @Compendium[pf2e.actionspf2e.Shove]{Shove}, or @Compendium[pf2e.actionspf2e.Trip]{Trip}. Asyra can switch back to her normal form as a single action, which also has the concentrate trait.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-20T19:21:22.335+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 3
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "rmT9IcfbMAJLK650",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668972082338,
+        "modifiedTime": 1668972107258,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!appAsyraKyton001.rmT9IcfbMAJLK650"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "+2 Status to All Saves vs. Mental",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "mental"
+            ],
+            "selector": "saving-throw",
+            "type": "status",
+            "value": 2
+          }
+        ],
+        "slug": "1-status-to-all-saves-vs-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": null
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.kquBnQ0kObZztnBc"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669074143842,
+        "modifiedTime": 1669400548083,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "rutHAZJfsHFXyCGj",
+      "_key": "!actors.items!appAsyraKyton001.rutHAZJfsHFXyCGj"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "appAsyraKyton001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "appCreaturesFld1",
+  "sort": 0,
   "_key": "!actors!appAsyraKyton001"
 }

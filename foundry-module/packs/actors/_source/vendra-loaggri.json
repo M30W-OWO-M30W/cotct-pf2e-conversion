@@ -1,234 +1,3107 @@
 {
-  "_id": "vendraLoaggri001",
   "name": "Vendra Loaggri",
   "type": "npc",
+  "prototypeToken": {
+    "name": "Vendra Loaggri",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
   "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 92,
+        "temp": 0,
+        "max": 92,
+        "details": ""
+      },
+      "initiative": {
+        "ability": "perception"
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": [],
+        "details": ""
+      },
+      "ac": {
+        "value": 23,
+        "details": ""
+      },
+      "perception": {
+        "value": 10
+      },
+      "allSaves": {
+        "value": "+1 status to all saves vs. poison"
+      }
+    },
+    "details": {
+      "alignment": {
+        "value": "CN"
+      },
+      "level": {
+        "value": 6
+      },
+      "source": {
+        "value": "",
+        "author": ""
+      },
+      "creatureType": "",
+      "blurb": "Female charlatan alchemist",
+      "publicNotes": "<h3>Conversion notes (this module)</h3><p><strong>Role:</strong> a Chelish con-artist perfumer hawking 'Lavender's Luxuriant Liniment' — a fake plague cure that is sugar, cheap scent, and <strong>river water</strong> (@Check[type:crafting|dc:22] to analyze). The mission is to <strong>expose her</strong>, not necessarily to fight; bring proof to the Guard.</p><p><strong>Tactics:</strong> plays the harmless, shrieking merchant while angling for a poisoned Sneak Attack; charms foes at range; flees to her apartment (C2). <strong>Morale:</strong> surrenders at ≤10-ish HP and will say anything to escape the city alive. She burns her wand of <em>remove disease</em> keeping herself plague-free.</p>",
+      "privateNotes": ""
+    },
+    "traits": {
+      "value": [
+        "human",
+        "humanoid"
+      ],
+      "senses": {
+        "value": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "selected": [],
+        "custom": ""
+      },
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": [
+        {
+          "type": "poison",
+          "value": 5,
+          "exceptions": ""
+        }
+      ],
+      "dv": [],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    },
+    "resources": {},
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:37.457+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 5
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "saves": {
+      "fortitude": {
+        "value": 17,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 14,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 10,
+        "saveDetail": ""
+      }
+    }
+  },
   "items": [
     {
-      "_id": "8kJemUGzuXmxbVVU",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Poisoned Dagger",
-      "sort": 0,
-      "type": "melee",
-      "system": {
-        "attack": {
-          "value": ""
-        },
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 12
-        },
-        "damageRolls": {
-          "0": {
-            "damage": "1d4",
-            "damageType": "piercing"
-          }
-        },
-        "description": {
-          "value": ""
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "agile",
-            "finesse",
-            "thrown-10",
-            "versatile-s"
-          ]
-        }
-      },
-      "_key": "!actors.items!vendraLoaggri001.8kJemUGzuXmxbVVU"
-    },
-    {
-      "_id": "YpSZ61gVKRcw6JXi",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Sneak Attack",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Vendra deals 3d6 extra precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [
-          {
-            "key": "DamageDice",
-            "selector": "strike-damage",
-            "category": "precision",
-            "diceNumber": 3,
-            "dieSize": "d6",
-            "predicate": [
-              "target:condition:off-guard"
-            ]
-          },
-          {
-            "key": "RollOption",
-            "domain": "all",
-            "option": "target:condition:off-guard",
-            "toggleable": "totm",
-            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
-          }
-        ],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "rogue"
-          ]
-        }
-      },
-      "_key": "!actors.items!vendraLoaggri001.YpSZ61gVKRcw6JXi"
-    },
-    {
-      "_id": "Q9ZjAB6bLxHviiOG",
-      "img": "systems/pf2e/icons/actions/Passive.webp",
-      "name": "Giant Wasp Poison",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "passive"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Vendra keeps her dagger envenomed: a creature she hits with it is exposed to giant wasp poison (@Check[type:fortitude|dc:22]), inflicting @Damage[1d6[poison]] and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (stage 2 on a critical failure).</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!vendraLoaggri001.Q9ZjAB6bLxHviiOG"
-    },
-    {
-      "_id": "mDDWjSO3272GYh1l",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Wand of Charm Person",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>Vendra Activates her wand: one creature within 30 feet must succeed at a @Check[type:will|dc:18] or treat her as a trusted friend for 10 minutes (it won't fight her, though obviously harmful requests get a new save). Her favored escape from a fight.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "concentrate",
-            "magical"
-          ]
-        }
-      },
-      "_key": "!actors.items!vendraLoaggri001.mDDWjSO3272GYh1l"
-    },
-    {
-      "_id": "iSSP3e4WvJi1Ehe6",
-      "img": "systems/pf2e/icons/actions/OneAction.webp",
-      "name": "Deceptive Patter",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "action"
-        },
-        "actions": {
-          "value": 1
-        },
-        "category": "offensive",
-        "description": {
-          "value": "<p>A consummate fast-talker, Vendra Creates a Diversion or Feints with a Deception check (vs. Perception/Will DC), sobbing and flailing 'harmlessly' to set up a Sneak Attack.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": [
-            "concentrate",
-            "linguistic"
-          ]
-        }
-      },
-      "_key": "!actors.items!vendraLoaggri001.iSSP3e4WvJi1Ehe6"
-    },
-    {
-      "_id": "WpEuXb76BSCjBxMF",
-      "img": "systems/pf2e/icons/default-icons/lore.svg",
-      "name": "Perfumery Lore",
-      "sort": 0,
+      "name": "Acrobatics",
       "type": "lore",
       "system": {
         "description": {
           "value": ""
         },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
         "mod": {
-          "value": 11
+          "value": 12
         },
         "proficient": {
           "value": 0
+        }
+      },
+      "_id": "h9rRSyqHkUDABK1E",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460735691,
+        "modifiedTime": 1668460790989,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.h9rRSyqHkUDABK1E"
+    },
+    {
+      "name": "Crafting",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
         },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
         },
         "rules": [],
-        "slug": null
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 17
+        },
+        "proficient": {
+          "value": 0
+        }
       },
-      "_key": "!actors.items!vendraLoaggri001.WpEuXb76BSCjBxMF"
+      "_id": "fUN7K7OldKDX0dAE",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460752641,
+        "modifiedTime": 1668460790989,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.fUN7K7OldKDX0dAE"
+    },
+    {
+      "name": "Deception",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 9
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "jI61fSMDGh0pwvLM",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460754661,
+        "modifiedTime": 1668460790989,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.jI61fSMDGh0pwvLM"
+    },
+    {
+      "name": "Engineering Lore",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 15
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "N3UqwF9bGsSGcLtf",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460760722,
+        "modifiedTime": 1668460790990,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.N3UqwF9bGsSGcLtf"
+    },
+    {
+      "name": "Medicine",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 10
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "MwHiLMEb7lbPkflO",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460763737,
+        "modifiedTime": 1668460790990,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.MwHiLMEb7lbPkflO"
+    },
+    {
+      "name": "Performance",
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "mod": {
+          "value": 12
+        },
+        "proficient": {
+          "value": 0
+        }
+      },
+      "_id": "xmWmiEIi67eVGKvO",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460767999,
+        "modifiedTime": 1668460790990,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.xmWmiEIi67eVGKvO"
+    },
+    {
+      "_id": "9HiblEkCEehWIoGp",
+      "img": "systems/pf2e/icons/equipment/adventuring-gear/alchemists-tools.webp",
+      "name": "Alchemist's Tools",
+      "system": {
+        "description": {
+          "value": "<p>This mobile collection of vials and chemicals can be used for simple alchemical tasks.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "alchemists-tools",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "1"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": ""
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "level": {
+          "value": 0
+        }
+      },
+      "type": "equipment",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.4ftXXUCBHcf4b0MH"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460830990,
+        "modifiedTime": 1668460830990,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.9HiblEkCEehWIoGp"
+    },
+    {
+      "_id": "nIIUEnNbmDTDwHQ2",
+      "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-elixirs/antidote.webp",
+      "name": "Antidote (Moderate)",
+      "system": {
+        "description": {
+          "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Interact</p>\n<p>An antidote protects you against toxins. Upon drinking an antidote, you gain a +3 item bonus to Fortitude saving throws against poisons for 6 hours.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.mi4Md1fB2XThCand]{Effect: Antidote (Moderate)}</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "alchemical",
+            "consumable",
+            "elixir",
+            "healing"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "antidote-moderate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 35
+          }
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 6
+        },
+        "consumableType": {
+          "value": "elixir"
+        },
+        "charges": {
+          "value": 1,
+          "max": 1,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.AJ1dC7EtTIfBey0M"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460841655,
+        "modifiedTime": 1668460841655,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.nIIUEnNbmDTDwHQ2"
+    },
+    {
+      "_id": "ifYBFD0tD4NZw0X8",
+      "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-elixirs/antiplague.webp",
+      "name": "Antiplague (Moderate)",
+      "system": {
+        "description": {
+          "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Interact</p>\n<p>Antiplague can fortify the body's defenses against diseases. Upon drinking an antiplague, you gain a +3 item bonus to Fortitude saving throws against diseases for 24 hours; this applies to your daily save against a disease's progression.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.HeRHBo2NaKy5IxhU]{Effect: Antiplague (Moderate)}</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "alchemical",
+            "consumable",
+            "elixir",
+            "healing"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "antiplague-moderate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 35
+          }
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 6
+        },
+        "consumableType": {
+          "value": "elixir"
+        },
+        "charges": {
+          "value": 1,
+          "max": 1,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.biRbqKo2C97XLfQ0"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460851446,
+        "modifiedTime": 1668460851446,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.ifYBFD0tD4NZw0X8"
+    },
+    {
+      "_id": "T1RXnyRpHpzAAUib",
+      "img": "systems/pf2e/icons/equipment/adventuring-gear/bandolier.webp",
+      "name": "Bandolier",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "bandolier",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": "0"
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "worn"
+        },
+        "level": {
+          "value": 0
+        },
+        "bulkCapacity": {
+          "value": "8L"
+        },
+        "collapsed": false,
+        "stowing": false
+      },
+      "type": "backpack",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.HamOU17sqb5ljiB5"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460858816,
+        "modifiedTime": 1668460878547,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.T1RXnyRpHpzAAUib"
+    },
+    {
+      "_id": "VDXeS4nGRsGwj8Ut",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "name": "Dagger",
+      "system": {
+        "description": {
+          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "evocation",
+            "finesse",
+            "magical",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "dagger",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "dagger",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Dagger",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "reload": {
+          "value": "-"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": 1
+        },
+        "strikingRune": {
+          "value": null
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.rQWaJhI5Bko5x14Z"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668460867784,
+        "modifiedTime": 1668460893755,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.VDXeS4nGRsGwj8Ut"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Infused Items",
+      "system": {
+        "description": {
+          "value": "<p>Vendra carries the following infused items: 2 @UUID[Compendium.pf2e.equipment-srd.SgtqZxt26BdjUmEB]{Acid Flask (Moderate)}, 2 @UUID[Compendium.pf2e.equipment-srd.gWr4q4HiyGhETA8H]{Alchemist's Fire (Moderate)}, 1 @UUID[Compendium.pf2e.equipment-srd.T4ouD4mVFHA3EHs6]{Bomber's Eye Elixir (Lesser)}, 2 @UUID[Compendium.pf2e.equipment-srd.nVvH1ZcM7OwIVIs8]{Frost Vial (Moderate)}, and 3 @UUID[Compendium.pf2e.equipment-srd.TZUskLT7yvP7N2co]{Elixir of Life (Lesser)}. These items last for 24 hours, or until the next time Vendra makes her daily preparations.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "E5t5jZtXmW8DCjQS",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668461083209,
+        "modifiedTime": 1668461203111,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.E5t5jZtXmW8DCjQS"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Versatile Performance",
+      "system": {
+        "description": {
+          "value": "<p>Vendra can use Performance instead of Diplomacy to @Compendium[pf2e.actionspf2e.Make an Impression]{Make an Impression} and instead of Intimidation to @Compendium[pf2e.actionspf2e.Demoralize]{Demoralize}. She can also use an acting Performance instead of Deception to Impersonate.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "St9oNUKq38ToUlrR",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668461622853,
+        "modifiedTime": 1668461641639,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.St9oNUKq38ToUlrR"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "+1 Status to All Saves vs. Poison",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              {
+                "or": [
+                  "magical",
+                  "arcane",
+                  "divine",
+                  "primal",
+                  "occult"
+                ]
+              }
+            ],
+            "selector": "saving-throw",
+            "type": "status",
+            "value": 1
+          }
+        ],
+        "slug": "1-status-to-all-saves-vs-magic",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "defensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.kquBnQ0kObZztnBc"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668461765006,
+        "modifiedTime": 1668461775873,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "wC6x3tLY0J7LcXkI",
+      "_key": "!actors.items!vendraLoaggri001.wC6x3tLY0J7LcXkI"
+    },
+    {
+      "name": "Dagger",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "magical",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "melee"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "CvDITaX4hN4mECko": {
+            "damage": "1d4+7",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 17
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "VDXeS4nGRsGwj8Ut"
+        }
+      },
+      "_id": "OBJQJenPcvLVCq05",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462107899,
+        "modifiedTime": 1668462123902,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.OBJQJenPcvLVCq05"
+    },
+    {
+      "name": "Dagger",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "agile",
+            "magical",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "tMhrvvaxHV5LSohc": {
+            "damage": "1d4+3",
+            "damageType": "piercing"
+          }
+        },
+        "bonus": {
+          "value": 16
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "VDXeS4nGRsGwj8Ut"
+        }
+      },
+      "_id": "T41kUyxa58D7IRcK",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462107899,
+        "modifiedTime": 1668462134294,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.T41kUyxa58D7IRcK"
+    },
+    {
+      "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/acid-flask.webp",
+      "name": "Acid Flask (Moderate)",
+      "system": {
+        "description": {
+          "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Strike</p>\n<p>This flask filled with corrosive acid deals 1 acid damage, 2d6 persistent acid damage, and 2 acid splash damage. You gain a +1 item bonus to attack rolls.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "acid",
+            "alchemical",
+            "bomb",
+            "consumable",
+            "infused",
+            "splash"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [
+          {
+            "key": "Note",
+            "outcome": [
+              "success"
+            ],
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.AcidFlask.Moderate.success"
+          },
+          {
+            "key": "Note",
+            "outcome": [
+              "criticalSuccess"
+            ],
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.AcidFlask.Moderate.criticalSuccess"
+          }
+        ],
+        "slug": "acid-flask-moderate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "alchemical-bomb",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 10
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Alchemical Bomb",
+            "img": "systems/pf2e/icons/unidentified_item_icons/alchemical_bomb.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 3
+        },
+        "category": "martial",
+        "group": "bomb",
+        "bonus": {
+          "value": 1
+        },
+        "damage": {
+          "value": "",
+          "dice": 1,
+          "die": "",
+          "damageType": "acid"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 2
+        },
+        "range": 20,
+        "reload": {
+          "value": "-"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": null
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.SgtqZxt26BdjUmEB"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462210089,
+        "modifiedTime": 1668462563854,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "NCNySWzQteB1E03f",
+      "_key": "!actors.items!vendraLoaggri001.NCNySWzQteB1E03f"
+    },
+    {
+      "name": "Acid Flask (Moderate)",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.BombNotes.AcidFlask.Moderate.success]</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "bomb",
+            "consumable",
+            "splash"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "Note",
+            "outcome": [
+              "success"
+            ],
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.AcidFlask.Moderate.success"
+          },
+          {
+            "key": "Note",
+            "outcome": [
+              "criticalSuccess"
+            ],
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.AcidFlask.Moderate.criticalSuccess"
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "aJ3crPuwMqUJeCfW": {
+            "damage": "2",
+            "damageType": "acid"
+          }
+        },
+        "bonus": {
+          "value": 16
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "NCNySWzQteB1E03f"
+        }
+      },
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462213015,
+        "modifiedTime": 1668462700267,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "eF1NL57iHLpj8fQA",
+      "_key": "!actors.items!vendraLoaggri001.eF1NL57iHLpj8fQA"
+    },
+    {
+      "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/alchemists-fire.webp",
+      "name": "Alchemist's Fire (Moderate)",
+      "system": {
+        "description": {
+          "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Strike</p>\n<p>Alchemist's fire is a combination of volatile liquids that ignite when exposed to air. Alchemist's fire deals 2d8 fire damage, 2 persistent fire damage, and 2 fire splash damage. You gain a +1 item bonus to attack rolls.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "alchemical",
+            "bomb",
+            "consumable",
+            "fire",
+            "infused",
+            "splash"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [
+          {
+            "key": "Note",
+            "outcome": [
+              "success"
+            ],
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.AlchemistsFire.Moderate.success"
+          },
+          {
+            "key": "Note",
+            "outcome": [
+              "criticalSuccess"
+            ],
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.AlchemistsFire.Moderate.criticalSuccess"
+          }
+        ],
+        "slug": "alchemists-fire-moderate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "alchemical-bomb",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 10
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Alchemical Bomb",
+            "img": "systems/pf2e/icons/unidentified_item_icons/alchemical_bomb.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 3
+        },
+        "category": "martial",
+        "group": "bomb",
+        "bonus": {
+          "value": 1
+        },
+        "damage": {
+          "value": "",
+          "dice": 2,
+          "die": "d8",
+          "damageType": "fire"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 2
+        },
+        "range": 20,
+        "reload": {
+          "value": "-"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": null
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.gWr4q4HiyGhETA8H"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462507061,
+        "modifiedTime": 1668462579430,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "OzqbwStRX92gaAkL",
+      "_key": "!actors.items!vendraLoaggri001.OzqbwStRX92gaAkL"
+    },
+    {
+      "_id": "PG2cZmxLKG5GxEMu",
+      "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-elixirs/bombers-eye-elixir.webp",
+      "name": "Bomber's Eye Elixir (Lesser)",
+      "system": {
+        "description": {
+          "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Interact</p>\n<p>This tincture lets you pinpoint your foes. For the next 5 minutes, your alchemical bomb Strikes reduce the circumstance bonus to AC your targets gain from cover by 1.</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "alchemical",
+            "consumable",
+            "elixir",
+            "infused"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "bombers-eye-elixir-lesser",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Liquid",
+            "img": "systems/pf2e/icons/unidentified_item_icons/alchemical_elixir.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 4
+        },
+        "consumableType": {
+          "value": "elixir"
+        },
+        "charges": {
+          "value": 1,
+          "max": 1,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.T4ouD4mVFHA3EHs6"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462509927,
+        "modifiedTime": 1668462602465,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.PG2cZmxLKG5GxEMu"
+    },
+    {
+      "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/frost-vial.webp",
+      "name": "Frost Vial (Moderate)",
+      "system": {
+        "description": {
+          "value": "<p>The liquid reagents in this vial rapidly absorb heat when exposed to air. A frost vial deals the listed cold damage and cold splash damage. On a hit, the target takes a status penalty to its Speeds until the end of its next turn. Many types of frost vial also grant an item bonus to attack rolls.</p>\n<p>You gain a +1 item bonus to attack rolls, the bomb deals 2d6 cold damage and 2 cold splash damage, and the target takes a -10-foot penalty.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.dv0IKm5syOdP759w]{Effect: Frost Vial (Moderate)}</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "alchemical",
+            "bomb",
+            "cold",
+            "consumable",
+            "infused",
+            "splash"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [
+          {
+            "key": "Note",
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.FrostVial.Moderate.success"
+          }
+        ],
+        "slug": "frost-vial-moderate",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": "alchemical-bomb",
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {
+            "gp": 10
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Alchemical Bomb",
+            "img": "systems/pf2e/icons/unidentified_item_icons/alchemical_bomb.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 3
+        },
+        "category": "martial",
+        "group": "bomb",
+        "bonus": {
+          "value": 1
+        },
+        "damage": {
+          "value": "",
+          "dice": 2,
+          "die": "d6",
+          "damageType": "cold"
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "splashDamage": {
+          "value": 2
+        },
+        "range": 20,
+        "reload": {
+          "value": "-"
+        },
+        "MAP": {
+          "value": ""
+        },
+        "potencyRune": {
+          "value": null
+        },
+        "strikingRune": {
+          "value": null
+        },
+        "specific": {
+          "value": false
+        },
+        "propertyRune1": {
+          "value": null
+        },
+        "propertyRune2": {
+          "value": null
+        },
+        "propertyRune3": {
+          "value": null
+        },
+        "propertyRune4": {
+          "value": null
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": "",
+          "strikeConditionType": "",
+          "strikeConditionValue": null,
+          "criticalConditionType": "",
+          "criticalConditionValue": null
+        }
+      },
+      "type": "weapon",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.nVvH1ZcM7OwIVIs8"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462511514,
+        "modifiedTime": 1668462589600,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "v21QzF6Lp7qazAYk",
+      "_key": "!actors.items!vendraLoaggri001.v21QzF6Lp7qazAYk"
+    },
+    {
+      "_id": "CqfMCGCeo9uJA4z1",
+      "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-elixirs/elixir-of-life.webp",
+      "name": "Elixir of Life (Lesser)",
+      "system": {
+        "description": {
+          "value": "<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> Interact</p>\n<p>Elixirs of life accelerate a living creatures natural healing processes and immune system. Upon drinking this elixir, you regain [[/r {3d6+6}[healing]]]{3d6+6 Hit Points} and gain +1 item bonus to saving throws against diseases and poisons for 10 minutes.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.EpB7yJPEuG6ez4z3]{Effect: Elixir of Life (Lesser)}</p>"
+        },
+        "source": {
+          "value": "Pathfinder Core Rulebook"
+        },
+        "traits": {
+          "value": [
+            "alchemical",
+            "consumable",
+            "elixir",
+            "healing",
+            "infused"
+          ],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": "elixir-of-life-lesser",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "L"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": ""
+        },
+        "preciousMaterialGrade": {
+          "value": ""
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Liquid",
+            "img": "systems/pf2e/icons/unidentified_item_icons/alchemical_elixir.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoUse": true,
+          "autoDestroy": true
+        },
+        "spell": null,
+        "level": {
+          "value": 5
+        },
+        "consumableType": {
+          "value": "elixir"
+        },
+        "charges": {
+          "value": 1,
+          "max": 1,
+          "_deprecated": true
+        },
+        "consume": {
+          "value": "3d6+6",
+          "_deprecated": true
+        },
+        "autoUse": {
+          "value": true,
+          "_deprecated": true
+        },
+        "autoDestroy": {
+          "value": true,
+          "_deprecated": true
+        }
+      },
+      "type": "consumable",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.equipment-srd.TZUskLT7yvP7N2co"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462513924,
+        "modifiedTime": 1668462615155,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.CqfMCGCeo9uJA4z1"
+    },
+    {
+      "name": "Alchemist's Fire (Moderate)",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.BombNotes.AlchemistsFire.Moderate.success]</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "bomb",
+            "consumable",
+            "splash"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "Note",
+            "outcome": [
+              "success"
+            ],
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.AlchemistsFire.Moderate.success"
+          },
+          {
+            "key": "Note",
+            "outcome": [
+              "criticalSuccess"
+            ],
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.AlchemistsFire.Moderate.criticalSuccess"
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "0tlRshWUZLSWh6sR": {
+            "damage": "2d8+3",
+            "damageType": "fire"
+          }
+        },
+        "bonus": {
+          "value": 16
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "OzqbwStRX92gaAkL"
+        }
+      },
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462552905,
+        "modifiedTime": 1668462740067,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "9klRA5FkWKVpc8II",
+      "_key": "!actors.items!vendraLoaggri001.9klRA5FkWKVpc8II"
+    },
+    {
+      "name": "Frost Vial (Moderate)",
+      "type": "melee",
+      "system": {
+        "description": {
+          "value": "<p>@Localize[PF2E.BombNotes.FrostVial.Moderate.success]</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "bomb",
+            "consumable",
+            "splash"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "key": "Note",
+            "selector": "{item|_id}-damage",
+            "text": "PF2E.BombNotes.FrostVial.Moderate.success"
+          }
+        ],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "weaponType": {
+          "value": "ranged"
+        },
+        "attack": {
+          "value": ""
+        },
+        "damageRolls": {
+          "5pg7BCsZqZBxKpqs": {
+            "damage": "2d6+3",
+            "damageType": "cold"
+          }
+        },
+        "bonus": {
+          "value": 16
+        },
+        "attackEffects": {
+          "value": []
+        }
+      },
+      "flags": {
+        "pf2e": {
+          "linkedWeapon": "v21QzF6Lp7qazAYk"
+        }
+      },
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462554353,
+        "modifiedTime": 1668462752365,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "f2kcGHi79phVCYRa",
+      "_key": "!actors.items!vendraLoaggri001.f2kcGHi79phVCYRa"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Quick Bomber",
+      "system": {
+        "description": {
+          "value": "<p>Vendra Interacts to draw a bomb, then Strikes with it.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "Zi5TQ9VUtpT9236v",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462895300,
+        "modifiedTime": 1668462909722,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.Zi5TQ9VUtpT9236v"
+    },
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Reckless Alchemy",
+      "system": {
+        "description": {
+          "value": "<p><strong>Requirements</strong> Vendra is holding a bomb or elixir</p>\n<p><strong>Effect</strong> Vendra combines the bomb with another bomb or the elixir with another elixir. She can Interact to draw a second bomb or elixir if necessary as part of this action. She attempts a @Check[type:crafting|dc:28] check, destroying both component items to create one new item. If a viable resulting item isn't used by the end of Vendra's next turn, it explodes as described under critical failure.</p>\n<hr>\n<p><strong>Critical Success</strong> The new item has the full effect of both component items when used.</p>\n<p><strong>Success</strong> The new item combines both items, but halves the effect of each. (This halves damage for bombs, the amount of healing of elixirs of life, or the duration for effects that can't have their value halved. Details are determined by the GM.)</p>\n<p><strong>Failure</strong> The new item is inert.</p>\n<p><strong>Critical Failure</strong> The new item immediately explodes, dealing [[/r {3d6}[piercing]]]{3d6 piercing damage} to Vendra.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "concentrate",
+            "manipulate"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": 1
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "K7i5tL4rPFIyqEdj",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668462921000,
+        "modifiedTime": 1668463218918,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vendraLoaggri001.K7i5tL4rPFIyqEdj"
+    },
+    {
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sneak Attack",
+      "system": {
+        "description": {
+          "value": "<p>Vendra deals and extra [[/r {2d6}[precision]]]{2d6 precision damage} to @Compendium[pf2e.conditionitems.Flat-Footed]{Flat-Footed} creatures.</p>\n<hr>\n<p>@Localize[PF2E.NPC.Abilities.Glossary.SneakAttack]</p>"
+        },
+        "source": {
+          "value": "Pathfinder Bestiary"
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [
+          {
+            "category": "precision",
+            "diceNumber": 1,
+            "dieSize": "d6",
+            "key": "DamageDice",
+            "predicate": [
+              "target:condition:flat-footed",
+              {
+                "or": [
+                  "item:trait:agile",
+                  "item:trait:finesse",
+                  {
+                    "and": [
+                      "item:ranged",
+                      {
+                        "not": "item:thrown-melee"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "selector": "strike-damage"
+          },
+          {
+            "domain": "all",
+            "key": "RollOption",
+            "label": "PF2E.SpecificRule.TOTMToggle.FlatFooted",
+            "option": "target:condition:flat-footed",
+            "toggleable": "totm"
+          }
+        ],
+        "slug": "sneak-attack",
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:37.457+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actionCategory": {
+          "value": "offensive"
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false,
+        "weapon": {
+          "value": ""
+        }
+      },
+      "type": "action",
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.pf2e.bestiary-ability-glossary-srd.AWvNPE4U0kEJSL1T"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.3.4",
+        "coreVersion": "10.290",
+        "createdTime": 1668463070705,
+        "modifiedTime": 1668463188665,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "uacniyFGQ4g6zjtp",
+      "_key": "!actors.items!vendraLoaggri001.uacniyFGQ4g6zjtp"
+    },
+    {
+      "name": "Vendra Loaggri's Set of Keys",
+      "type": "equipment",
+      "system": {
+        "description": {
+          "value": "<p><span data-visibility=\"gm\">keys to apartments and Lavender</span></p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [],
+          "rarity": "common",
+          "custom": "",
+          "otherTags": []
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-19T02:28:39.397+00:00",
+            "version": {
+              "schema": 0.796,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "hp": {
+          "brokenThreshold": 0,
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "weight": {
+          "value": "-"
+        },
+        "equippedBulk": {
+          "value": ""
+        },
+        "price": {
+          "value": {}
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null,
+          "handsHeld": 0
+        },
+        "stackGroup": null,
+        "negateBulk": {
+          "value": "0"
+        },
+        "containerId": null,
+        "preciousMaterial": {
+          "value": null
+        },
+        "preciousMaterialGrade": {
+          "value": null
+        },
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "Unusual Object",
+            "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "level": {
+          "value": 0
+        }
+      },
+      "img": "systems/pf2e/icons/equipment/held-items/key-purple.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Item.rgy1YEDKPT8ElDQf"
+        }
+      },
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1668380949675,
+        "modifiedTime": 1669568152656,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_id": "lMi8vzqglJgojCOi",
+      "_key": "!actors.items!vendraLoaggri001.lMi8vzqglJgojCOi"
     },
     {
       "name": "Leather Armor",
@@ -322,271 +3195,15 @@
       "_stats": {
         "compendiumSource": "Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA"
       },
-      "_id": "wz6bU3zeFGP2OXqK",
+      "_id": "Q9ZjAB6bLxHviiOG",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "_key": "!actors.items!vendraLoaggri001.wz6bU3zeFGP2OXqK"
-    },
-    {
-      "name": "Dagger",
-      "type": "weapon",
-      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
-      "system": {
-        "description": {
-          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]</p>",
-          "gm": ""
-        },
-        "rules": [],
-        "slug": "dagger",
-        "_migration": {
-          "version": 0.955,
-          "lastMigration": null,
-          "previous": {
-            "schema": 0.953,
-            "foundry": "13.351",
-            "system": "7.12.2"
-          }
-        },
-        "traits": {
-          "otherTags": [],
-          "value": [
-            "agile",
-            "finesse",
-            "thrown-10",
-            "versatile-s"
-          ],
-          "rarity": "common"
-        },
-        "publication": {
-          "title": "Pathfinder Core Rulebook",
-          "authors": "",
-          "license": "OGL",
-          "remaster": false
-        },
-        "level": {
-          "value": 0
-        },
-        "quantity": 1,
-        "baseItem": "dagger",
-        "bulk": {
-          "value": 0.1
-        },
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "price": {
-          "value": {
-            "sp": 2
-          }
-        },
-        "equipped": {
-          "carryType": "worn",
-          "handsHeld": 0,
-          "invested": null
-        },
-        "containerId": null,
-        "size": "med",
-        "material": {
-          "type": null,
-          "grade": null
-        },
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "category": "simple",
-        "group": "knife",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "dice": 1,
-          "die": "d4",
-          "damageType": "piercing",
-          "persistent": null
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "expend": null,
-        "ammo": null,
-        "reload": {
-          "value": "-"
-        },
-        "grade": null,
-        "runes": {
-          "potency": 0,
-          "striking": 0,
-          "property": []
-        },
-        "specific": null,
-        "subitems": [],
-        "bonusDamage": {
-          "value": 0
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
-        }
-      },
-      "flags": {},
-      "_stats": {
-        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
-      },
-      "_id": "hrWqEe7l84Pg4Zb6",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!vendraLoaggri001.hrWqEe7l84Pg4Zb6"
+      "_key": "!actors.items!vendraLoaggri001.Q9ZjAB6bLxHviiOG"
     }
   ],
-  "system": {
-    "abilities": {
-      "str": {
-        "mod": 0
-      },
-      "dex": {
-        "mod": 4
-      },
-      "con": {
-        "mod": -1
-      },
-      "int": {
-        "mod": 2
-      },
-      "wis": {
-        "mod": 1
-      },
-      "cha": {
-        "mod": 4
-      }
-    },
-    "attributes": {
-      "ac": {
-        "details": "",
-        "value": 21
-      },
-      "allSaves": {
-        "value": ""
-      },
-      "hp": {
-        "details": "",
-        "max": 60,
-        "temp": 0,
-        "value": 60
-      },
-      "speed": {
-        "otherSpeeds": [],
-        "value": 25
-      }
-    },
-    "details": {
-      "blurb": "Snake-oil perfumer; fake-cure grifter",
-      "languages": {
-        "details": "",
-        "value": [
-          "common",
-          "halfling",
-          "shoanti",
-          "varisian",
-          "vudrani"
-        ]
-      },
-      "level": {
-        "value": 5
-      },
-      "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> a Chelish con-artist perfumer hawking 'Lavender's Luxuriant Liniment' — a fake plague cure that is sugar, cheap scent, and <strong>river water</strong> (@Check[type:crafting|dc:22] to analyze). The mission is to <strong>expose her</strong>, not necessarily to fight; bring proof to the Guard.</p><p><strong>Tactics:</strong> plays the harmless, shrieking merchant while angling for a poisoned Sneak Attack; charms foes at range; flees to her apartment (C2). <strong>Morale:</strong> surrenders at ≤10-ish HP and will say anything to escape the city alive. She burns her wand of <em>remove disease</em> keeping herself plague-free.</p>",
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      }
-    },
-    "initiative": {
-      "statistic": "perception"
-    },
-    "perception": {
-      "details": "",
-      "mod": 13,
-      "senses": []
-    },
-    "resources": {},
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 8
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 13
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 11
-      }
-    },
-    "skills": {
-      "deception": {
-        "base": 15
-      },
-      "diplomacy": {
-        "base": 15
-      },
-      "society": {
-        "base": 11
-      },
-      "stealth": {
-        "base": 12
-      },
-      "thievery": {
-        "base": 11
-      },
-      "crafting": {
-        "base": 9
-      }
-    },
-    "traits": {
-      "rarity": "common",
-      "size": {
-        "value": "med"
-      },
-      "value": [
-        "humanoid",
-        "human"
-      ]
-    }
-  },
-  "folder": "ch2CreaturesFld1",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
+  "effects": [],
   "flags": {},
   "_stats": {
     "systemId": "pf2e",
@@ -599,77 +3216,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "prototypeToken": {
-    "name": "Vendra Loaggri",
-    "displayName": 20,
-    "displayBars": 20,
-    "disposition": -1,
-    "actorLink": true,
-    "width": 1,
-    "height": 1,
-    "lockRotation": false,
-    "rotation": 0,
-    "alpha": 1,
-    "randomImg": false,
-    "appendNumber": false,
-    "prependAdjective": false,
-    "texture": {
-      "src": "icons/svg/mystery-man.svg",
-      "scaleX": 1,
-      "scaleY": 1,
-      "tint": "#ffffff",
-      "anchorX": 0.5,
-      "anchorY": 0.5,
-      "fit": "contain",
-      "offsetX": 0,
-      "offsetY": 0,
-      "rotation": 0,
-      "alphaThreshold": 0.75
-    },
-    "bar1": {
-      "attribute": "attributes.hp"
-    },
-    "bar2": {
-      "attribute": null
-    },
-    "sight": {
-      "enabled": false,
-      "range": 0,
-      "angle": 360,
-      "visionMode": "basic",
-      "color": null,
-      "attenuation": 0.1,
-      "brightness": 0,
-      "saturation": 0,
-      "contrast": 0
-    },
-    "detectionModes": [],
-    "light": {
-      "alpha": 0.5,
-      "angle": 360,
-      "bright": 0,
-      "dim": 0,
-      "color": null,
-      "coloration": 1,
-      "luminosity": 0.5,
-      "attenuation": 0.5,
-      "animation": {
-        "type": null,
-        "speed": 5,
-        "intensity": 5,
-        "reverse": false
-      },
-      "darkness": {
-        "min": 0,
-        "max": 1
-      }
-    },
-    "flags": {
-      "pf2e": {
-        "linkToActorSize": true,
-        "autoscale": true
-      }
-    }
+  "_id": "vendraLoaggri001",
+  "ownership": {
+    "default": 0
   },
+  "folder": "ch2CreaturesFld1",
+  "sort": 0,
   "_key": "!actors!vendraLoaggri001"
 }

@@ -1,0 +1,264 @@
+{
+  "name": "Paralytic Pulse",
+  "type": "hazard",
+  "prototypeToken": {
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": false
+      },
+      "barbrawl": {
+        "resourceBars": {
+          "bar1": {
+            "order": 0,
+            "id": "bar1",
+            "attribute": "attributes.hp",
+            "mincolor": "#FF0000",
+            "maxcolor": "#80FF00",
+            "position": "bottom-inner",
+            "otherVisibility": 0,
+            "ownerVisibility": 50,
+            "max": null
+          }
+        }
+      },
+      "healthEstimate": {
+        "dontMarkDead": false,
+        "hideHealthEstimate": false,
+        "hideName": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Paralytic Pulse",
+    "displayName": 20,
+    "actorLink": false,
+    "texture": {
+      "src": "systems/pf2e/icons/default-icons/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": null
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": null,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "randomImg": false
+  },
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
+  "system": {
+    "source": {
+      "value": "",
+      "author": ""
+    },
+    "creatureType": "",
+    "saves": {
+      "fortitude": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 0,
+        "saveDetail": ""
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 0
+      },
+      "hp": {
+        "value": 0,
+        "max": 0,
+        "temp": 0,
+        "details": ""
+      },
+      "hardness": 0,
+      "stealth": {
+        "value": 25,
+        "details": "<p>(master) to notice the statues begin to glow.</p>"
+      },
+      "emitsSound": "encounter"
+    },
+    "details": {
+      "isComplex": true,
+      "level": {
+        "value": 16
+      },
+      "disable": "<p>@Check[type:arcana|dc:35] (master) on each statue to suppress the extraplanar connection of the statues or dispel magic (8th level; counteract DC 37) to break the connection entirely.</p>",
+      "description": "<p>Four crumbling statues imbued with ancient summoning magic protect the chambers beyond.</p>",
+      "reset": "<p>After 2 minutes, any statue that hasn't summoned a shining child becomes recharged. If a statue's shining child has been summoned, the statue takes 24 hours to recharge.</p>",
+      "routine": "<p><span class=\"pf2-icon\">T</span> On its turn, [[/br 1d4]] statues summon a shining child in front of their respective statue. After each statue has summoned a shining child, the trap ceases to function for 24 hours.</p>"
+    },
+    "statusEffects": [],
+    "traits": {
+      "value": [
+        "magical",
+        "trap"
+      ],
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "di": {
+        "custom": "",
+        "value": [],
+        "selected": {}
+      },
+      "dr": [],
+      "dv": []
+    },
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-26T17:26:43.810+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.2"
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Paralyzing Light",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> Light from any source is shed upon the statues.</p>\n<hr>\n<p><strong>Effect</strong> The statues reflect the light in a mesmerizing pattern as they begin to shine brighter, affecting any creature within 20 feet of a statue with @UUID[Compendium.pf2e.spells-srd.LiGbewa9pO0yjbsY]{Confusion} (8th level, DC 37) and then rolls initiative.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "arcane",
+            "incapacitation",
+            "light",
+            "visual"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-26T17:30:48.733+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.2"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "Iqa6dbUVMZDXMgoZ",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.2",
+        "coreVersion": "10.290",
+        "createdTime": 1669483848736,
+        "modifiedTime": 1669483894784,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "pf2e": {
+      "editHazard": {
+        "value": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "4.4.2",
+    "coreVersion": "10.290",
+    "createdTime": 1669483603813,
+    "modifiedTime": 1669579945917,
+    "lastModifiedBy": "hBFuMGrVgeghbDDz"
+  },
+  "_id": "ZJa8hUTkg9J8WoyN",
+  "ownership": {
+    "default": 0,
+    "hBFuMGrVgeghbDDz": 3
+  },
+  "folder": null,
+  "sort": 0
+}

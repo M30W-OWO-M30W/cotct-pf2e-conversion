@@ -1,59 +1,6 @@
 {
-  "_id": "vortexMadness001",
   "name": "Vortex of Madness (B5)",
   "type": "hazard",
-  "img": "systems/pf2e/icons/default-icons/hazard.svg",
-  "items": [
-    {
-      "_id": "Rd4Jox16DNx2Ufyn",
-      "img": "systems/pf2e/icons/actions/FreeAction.webp",
-      "name": "Drowning Despair",
-      "sort": 0,
-      "type": "action",
-      "system": {
-        "actionType": {
-          "value": "free"
-        },
-        "actions": {
-          "value": null
-        },
-        "category": null,
-        "description": {
-          "value": "<p><strong>Routine:</strong> every creature in the chamber each round: @Check[type:will|dc:29] or be driven briefly mad — @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} 1 round (@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} on a success, cumulative to 3). The round after the vortex collapses, @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mandraivusLost01]{Mandraivus the Lost} rises from the armored bones.</p>"
-        },
-        "publication": {
-          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-          "authors": "",
-          "license": "OGL",
-          "remaster": true
-        },
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "rarity": "common",
-          "value": []
-        }
-      },
-      "_key": "!actors.items!vortexMadness001.Rd4Jox16DNx2Ufyn"
-    }
-  ],
-  "folder": "ch5HazardsFld001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
-  },
-  "flags": {},
-  "_stats": {
-    "systemId": "pf2e",
-    "systemVersion": "8.2.0",
-    "coreVersion": "14.363",
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "exportSource": null,
-    "createdTime": 0,
-    "modifiedTime": 0,
-    "lastModifiedBy": null
-  },
   "prototypeToken": {
     "name": "Vortex of Madness (B5)",
     "displayName": 20,
@@ -121,57 +68,181 @@
     },
     "flags": {}
   },
+  "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "system": {
-    "attributes": {
-      "emitsSound": "encounter",
-      "hardness": 0,
-      "stealth": {
-        "details": "<p>@Check[type:perception|dc:25] (trained) to hear faint sounds of battle building, 2 rounds before it erupts.</p>",
-        "value": 25
-      }
+    "source": {
+      "value": "",
+      "author": ""
     },
     "creatureType": "",
+    "saves": {
+      "fortitude": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 0,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 0,
+        "saveDetail": ""
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 0
+      },
+      "hp": {
+        "value": 0,
+        "max": 0,
+        "temp": 0,
+        "details": ""
+      },
+      "hardness": 0,
+      "stealth": {
+        "value": 21,
+        "details": "<p>(trained)</p>"
+      },
+      "emitsSound": "encounter"
+    },
     "details": {
-      "description": "<p>The spiritual maelstrom of Mandraivus's last stand — phantom battle-cacophony boiling into a vortex of shrieking black shapes.</p>",
-      "disable": "<p>Lay @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.mandraivusLost01]{Mandraivus} to rest, or <em>dispel magic</em> (5th rank) for 1 hour's calm; it fades for good only when the curse lifts.</p>",
-      "isComplex": true,
+      "isComplex": false,
       "level": {
         "value": 10
       },
-      "publication": {
-        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-        "authors": "",
-        "license": "OGL",
-        "remaster": true
-      },
-      "reset": "<p>1 minute.</p>",
+      "disable": "<p>If the curse affecting Scarwall is lifted, this haunt fades away.</p>",
+      "description": "<p>A skeleton-strewn hall haunted by the endless battles of Scarwall.</p><hr /><h3>Conversion notes (this module)</h3><p>The spiritual maelstrom of Mandraivus's last stand — phantom battle-cacophony boiling into a vortex of shrieking black shapes.</p>",
+      "reset": "<p>The haunt resets 1 minute after being triggered.</p>",
       "routine": ""
-    },
-    "saves": {
-      "fortitude": {
-        "saveDetail": "",
-        "value": 0
-      },
-      "reflex": {
-        "saveDetail": "",
-        "value": 0
-      },
-      "will": {
-        "saveDetail": "",
-        "value": 0
-      }
     },
     "statusEffects": [],
     "traits": {
+      "value": [
+        "haunt",
+        "evil"
+      ],
       "rarity": "common",
       "size": {
         "value": "med"
       },
-      "value": [
-        "haunt",
-        "mental"
-      ]
+      "di": {
+        "custom": "",
+        "value": [],
+        "selected": {}
+      },
+      "dr": [],
+      "dv": []
+    },
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-21T22:50:04.605+00:00",
+        "version": {
+          "schema": null,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
     }
   },
+  "items": [
+    {
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shrieking Spirits",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger</strong> A creature moves 10 feet into the hall.</p>\n<p><strong>Effect</strong> A storm of shrieking spirits churns into an overwhelming vortex, every creature in this room must attempt a @Check[type:will|dc:29] save or become @Compendium[pf2e.conditionitems.Confused]{Confused} for 1 minute. Each creature can attempt a new save at the end of each of its turns to end the confusion.</p>"
+        },
+        "source": {
+          "value": ""
+        },
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "illusion",
+            "mental",
+            "necromancy"
+          ],
+          "rarity": "common",
+          "custom": ""
+        },
+        "rules": [],
+        "slug": null,
+        "schema": {
+          "version": 0.8,
+          "lastMigration": {
+            "datetime": "2022-11-21T22:51:56.461+00:00",
+            "version": {
+              "schema": null,
+              "foundry": "10.290",
+              "system": "4.4.0"
+            }
+          }
+        },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actionCategory": {
+          "value": ""
+        },
+        "actions": {
+          "value": null
+        },
+        "requirements": {
+          "value": ""
+        },
+        "trigger": {
+          "value": ""
+        },
+        "deathNote": false
+      },
+      "_id": "ZJxZ9ugLeQS0if7n",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1669071116464,
+        "modifiedTime": 1669071156834,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      },
+      "_key": "!actors.items!vortexMadness001.ZJxZ9ugLeQS0if7n"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "pf2e": {
+      "editHazard": {
+        "value": false
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_id": "vortexMadness001",
+  "ownership": {
+    "default": 0
+  },
+  "folder": "ch5HazardsFld001",
+  "sort": 0,
   "_key": "!actors!vortexMadness001"
 }

@@ -20,6 +20,27 @@ B.SCOPE = (8160, 10823)   # AP.md line range for this chapter (anchor scoping)
 # Society→Religion 31, A11 map Society→Nature 26; E14/E21 locks ruled 'good
 # lock' → Thievery 30; Boule's secret-door bonus +20→+15, Akram's aid +10→+5.
 
+# OLLIEBIRD STATBLOCK RESYNC: encounter budgets + text levels synced to the
+# in-place community swap; bespoke rewires per research/olliebird/ch4.txt.
+# Levels: Ashwing Gargoyle 6→4 (Assault budgets + aside) · Havero Tentacle 9→8
+# (A2 Wrath) · Manananggal 9→8 (E3) · Gray Maiden Guard 6→8 (E18 both budgets
+# + aside) · Vyloth 13→11 (E8 + E18) · Dispelling Mist aside 8→10. (Gray
+# Maiden Recruit 0→1 and Marcus Endrin 12→13: no budget or text level to fix.)
+# Rewires: every Ch.4 Mantis squad → community-only ELITE Red Mantis Assassin
+# (L9 — the Ch.3 actor swapped to the L8 standard assassin; olliebird runs all
+# Ch.4 mantis fights Elite) · E2 Mogmora → community Mogmora (L7; was official
+# greater-barghest stand-in at 8) · Neverfar → community Neverfar (L12; was
+# 'leopard +10 HP' text — now also budgeted into the Saving Krojun duel).
+# Kept official B.mon: bulette, catoblepas (olliebird cites the Bestiary pages
+# directly), giant-mantis (Cinnabar's summons). Gear dedup vs community
+# sheets: dropped our chain mail (Cinderlander, Cinnabar, Koriantu), sawtooth
+# sabers (Cinnabar, Koriantu), composite longbow (Boneslayer), full plate /
+# steel shield / longsword (GM Guard, Kordaitra), Vault Keys ring (Kordaitra —
+# the community sheet carries all three labeled keys; her Ch.6 treasury-key
+# note stays in notes + E21). War paint: Krojun's orange and a new Boneslayer
+# white dose link the community per-color items; the generic '5 pots' string
+# in Thousand Bones's gifts is untouched (build_appendix.py string-patches it).
+
 MODID = "cotct-pf2e-conversion"
 ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cotctAdvFolder01"
 
@@ -33,7 +54,11 @@ A4 = {"ashwing": "ashwingGargoyl01", "cinderlander": "cinderlander0001", "krojun
       "motherthorns": "motherOfThorns01", "vyloth": "vylothMeladaem01", "kordaitra": "kordaitraDesta01",
       "eternalglyphs": "eternalGlyphs001", "dispellingmist": "dispellingMist01"}
 F4 = {"a_ch4": "ch4ActorFolder01", "a_creatures": "ch4CreaturesFld1", "a_hazards": "ch4HazardsFld001"}
-RMA = "redMantisAssn001"   # Ch.3 Red Mantis Assassin (reused throughout)
+# Ch.4's hit-squads are the community-only ELITE Red Mantis Assassin (the Ch.3
+# actor redMantisAssn001 swapped to the L8 standard assassin; olliebird's ch4
+# doc runs every Ch.4 mantis encounter with the Elite, L9).
+def erma(label="Red Mantis assassin"): return B.cmon("Elite Red Mantis Assassin", label)
+ERMA_L = B.cmon_lvl("Elite Red Mantis Assassin")   # 9
 
 ids = B._idgen(440004)
 def nid(): return next(ids)
@@ -42,6 +67,9 @@ def sid(): return next(sids)
 
 def act(_id, label): return f"@UUID[Compendium.{MODID}.cotct-actors.Actor.{_id}]{{{label}}}"
 def haz(_id, label): return f"@UUID[Compendium.{MODID}.cotct-hazards.Actor.{_id}]{{{label}}}"
+def itm(_id, label): return f"@UUID[Compendium.{MODID}.cotct-items.Item.{_id}]{{{label}}}"
+# community per-color "Shaonti War Paint" item ids (community-original ids)
+WP_ORANGE, WP_WHITE = "g6xzyPLrVqwmd2fp", "5qytyTu9CGh01fCN"
 def chk(s): return f"@Check[{s}]"
 def SEC(html): return B.s_secret(html, sid())
 def box(anchor, fallback_html):
@@ -118,9 +146,8 @@ AW("the-cinderlander", B.npc(A4["cinderlander"], "The Cinderlander", 12, 33, 230
    B.action(nid(), "Hunter's Volley", "2", "<p>Two Vindicator Strikes against the same target; if both hit, the target also takes @Damage[1d8[bleed]] (his signature crippling shot).</p>", ["flourish"]),
    B.action(nid(), "Shot on the Run", "2", "<p>He Strides twice (or Strides and Takes Cover) and makes one Vindicator Strike at any point — fighting like the desert: never where the answer lands.</p>", ["attack", "move"]),
    B.action(nid(), "Desert Master", "passive", "<p>Immune to fatigue and exhaustion; fire resistance 10; <em>pass without trace</em> at will in the Cinderlands (+4 circumstance vs. tracking).</p>", category="defensive"),
-   B.lore(nid(), "Cinderlands Lore", 24),
-   B.gear("chain-mail", nid())],
-  notes="<p><strong>Role:</strong> the 'devil tshamek' — sole survivor of a thorp the Shoanti burned, turned genocidal hunter. His calling card: a Shoanti head on a pole, red crossbow bolts through both eyes ("+chk("type:society|dc:30")+" to place it; automatic with a Shoanti companion). Skoan-Quah legend says he is a dead general's unquiet ghost killing until his losses are equalled. Now <strong>Cinnabar's paid guide</strong> — he leads the Red Mantis to the Acropolis and Flameford. His firepelt cougar <strong>Neverfar</strong> (treat as an official leopard with +10 HP) guards his sleep and dies before abandoning his body.</p>"
+   B.lore(nid(), "Cinderlands Lore", 24)],
+  notes="<p><strong>Role:</strong> the 'devil tshamek' — sole survivor of a thorp the Shoanti burned, turned genocidal hunter. His calling card: a Shoanti head on a pole, red crossbow bolts through both eyes ("+chk("type:society|dc:30")+" to place it; automatic with a Shoanti companion). Skoan-Quah legend says he is a dead general's unquiet ghost killing until his losses are equalled. Now <strong>Cinnabar's paid guide</strong> — he leads the Red Mantis to the Acropolis and Flameford. His firepelt cougar "+B.cmon("Neverfar")+" (L12) guards his sleep and dies before abandoning his body.</p>"
         "<p><strong>Tactics:</strong> never within reach — <em>Vindicator</em> at range, Shoanti to the exclusion of all else. <strong>Morale &amp; the lever:</strong> he despises the Red Mantis; a bribe of <strong>~50 gp or better</strong> (re-scaled) turns him mid-fight. He flees below ~20 HP. At Flameford his price is <strong>Krojun's life</strong> (see Saving Krojun). His head is a valid CR-9+ respect trophy.</p>",
   folder=F4["a_creatures"], blurb="The devil tshamek; Shoanti-hunter for hire", token_src=None, actor_link=True))
 
@@ -134,7 +161,7 @@ AW("krojun-eats-what-he-kills", B.npc(A4["krojun"], "Krojun Eats-What-He-Kills",
    B.action(nid(), "Rage", "1", "<p>+6 damage (included), 24 temporary HP, −1 AC (included). He rages if a sredna match passes six rounds, and always in real battle.</p>", ["concentrate", "emotion", "mental"], "defensive"),
    B.action(nid(), "Unstoppable", "passive", "<p>Resistance physical 4; he cannot be flanked by creatures of his level or lower; scent (imprecise) 30 ft.</p>", category="defensive"),
    B.lore(nid(), "Shoanti Lore", 20),
-   B.equipment(nid(), "Shoanti War Paint (orange, x3)", 8, 15, "<p>Ritual paint; a dose grants +1 status to saves vs. fear for 10 minutes. He paints up (and drinks a <em>shield of faith</em> potion — treat as a <em>potion of resistance</em>) before any fight he respects.</p>", traits=["consumable", "talisman"]),
+   B.equipment(nid(), "Shoanti War Paint (orange, x3)", 6, 45, "<p>Three doses of "+itm(WP_ORANGE, "Shoanti War Paint (Orange)")+" (full rules on the linked community item — physical resistance 5 for an hour, one color at a time). He paints up (and drinks a <em>shield of faith</em> potion — treat as a <em>potion of resistance</em>) before any fight he respects.</p>", traits=["consumable", "talisman"]),
    B.equipment(nid(), "Garnet (x3)", 1, 5, "<p>Three cut garnets (~5 gp each, re-scaled) — Krojun's portable trophy-wealth.</p>")],
   notes="<p><strong>Role:</strong> Sklar-Quah champion — trained in Thunder and Fang by a sorcerer's trials, single-handedly freed his enslaved kin from the orc champion Kyrust Chiefkiller. He despises tshamek on principle but is <em>secretly testing</em> whether these ones deserve respect: he wants to stop a suicidal Shoanti march on Korvosa. The chapter's rival-then-ally: the sredna challenge, the shadowing war party ("+chk("type:perception|dc:38")+" to be sure it's him), the Acropolis 'observation,' the Flameford protest — and, if the PCs save him from the Cinderlander, <strong>nalharest</strong>: honorary siblinghood and lifelong alliance.</p>"
         "<p><strong>Morale:</strong> withdraws if hopelessly overmatched or at ~20 HP — but <strong>fights to the death while raging</strong>. At the Flameford duel he stands at 30 HP against the Cinderlander's 100.</p>",
@@ -148,7 +175,8 @@ AW("skoan-quah-boneslayer", B.npc(A4["boneslayer"], "Skoan-Quah Boneslayer", 5, 
    B.strike(nid(), "Composite Longbow", 13, "1d8+4", "piercing", ["deadly-d10", "propulsive", "range-increment-100", "volley-30"]),
    B.action(nid(), "Bone Ward", "1", "<p>The boneslayer calls on the ancestors: one ally within 30 feet gains +1 status to AC and saves vs. undead and fear for 1 round; or the boneslayer casts a minor heal (@Damage[1d8+4[healing]], touch).</p>", ["concentrate", "divine"]),
    B.action(nid(), "Undead Hunter", "passive", "<p>+2 circumstance damage against undead; +2 status to saves vs. disease, mental, and poison (the haunted oracle-blood of the Skull Clan).</p>", category="offensive"),
-   B.gear("composite-longbow", nid()), B.gear("healing-potion-minor", nid(), 2)],
+   B.gear("healing-potion-minor", nid(), 2),
+   B.equipment(nid(), "Shoanti War Paint (white)", 6, 45, "<p>One dose of "+itm(WP_WHITE, "Shoanti War Paint (White)")+" (full rules on the linked community item — wards against void magic and the drained condition for an hour) — the AP's per-boneslayer parcel, which the community sheet omits.</p>", traits=["consumable", "talisman"])],
   notes="<p><strong>Role:</strong> the four Skoan-Quah escorts Thousand Bones lends the party — <strong>Ahalak, Hargev, Nalmid, Shadfrar</strong> — guides, witnesses, and walking proof the PCs can protect Shoanti. <strong>At least one alive</strong> when meeting a Sun Shaman eases everything.</p>"
         "<p><strong>Tactics:</strong> bows from cover; they mob whatever engages one of them; at 10+ Respect Points they follow the PCs' plans. They fight to the death. <strong>Stakes:</strong> each one slain and unraised costs 1d4 Respect Points; all four dead freezes RP gains until one is raised or replaced (Thousand Bones can resupply four more, three times). <strong>Story award</strong> per original survivor at chapter's end.</p>",
   folder=F4["a_creatures"], blurb="Skull-clan escort & witness (Ahalak/Hargev/Nalmid/Shadfrar)", token_src=None))
@@ -233,8 +261,7 @@ AW("cinnabar", B.npc(A4["cinnabar"], "Cinnabar", 13, 34, 245, 21, 25, 18, 23,
    B.action(nid(), "Summon Mantis", "2", "<p><strong>Frequency</strong> once per day. She calls 1d3 fiendish "+B.mon("giant-mantis", "giant mantises")+" (blood-red) for 1 minute — round one of any planned fight, with <em>haste</em> on herself round two.</p>", ["concentrate", "conjuration", "occult"]),
    B.action(nid(), "Red Shroud", "1", "<p><strong>Frequency</strong> 4/day. Red mist: +1 circumstance AC and fast healing 2 for 7 rounds; on death she may dissolve into mist, leaving only gear.</p>", ["concentrate"], "defensive"),
    B.action(nid(), "Resurrection Sense", "passive", "<p>She knows, instantly and at any distance on the same plane, if a creature she slew within the past year returns to life.</p>", category="defensive"),
-   B.lore(nid(), "Red Mantis Lore", 21),
-   B.gear("chain-mail", nid()), B.gear("sawtooth-saber", nid(), 2)],
+   B.lore(nid(), "Red Mantis Lore", 21)],
   notes="<p><strong>Role:</strong> commander of the Red Mantis in Korvosa — retasked by Ileosa from Neolandus to <em>the PCs</em>. Daughter of a Red Mantis cultist who laid a kill-weekly geas on her at eight; the geas died with her mother, but her underlings still believe in it, and their terror passes for loyalty. She directs the chapter's ambushes from afar (her cleric Koriantu's <em>sending</em>), pays the Cinderlander, and buys the Ashwings.</p>"
         "<p><strong>Morale — the broken thing in her:</strong> at ~10 HP she drops her sabers, kneels, and <strong>begs for a quick death</strong>. Killed: that's that. Left unharmed one round: she snatches up her blades and fights to the death at +4 attack and damage for 10 rounds. <strong>Offered surrender:</strong> speechless 1d6 rounds — and if unattacked through them, the kind child under the assassin may begin to surface. A redeemed Cinnabar shares the Kayltanya letter, warns of her Mistress, details the vault's defenders — and may stand with the PCs at the AP's climax. The Red Mantis will mark her for death.</p>",
   folder=F4["a_creatures"], blurb="Red Mantis commander; breakable blade", token_src=None, actor_link=True))
@@ -247,8 +274,7 @@ AW("koriantu", B.npc(A4["koriantu"], "Koriantu", 13, 33, 250, 23, 19, 25, 23,
    B.action(nid(), "Blade Barrier", "3", "<p>A wall of whirling sawtooth blades (60 ft long): @Damage[7d8[force]] to creatures passing through ("+chk("type:reflex|dc:31|basic:true")+") — her battlefield-splitter.</p>", ["concentrate", "force", "manipulate", "divine"]),
    B.action(nid(), "Divine Wrath", "2", "<p>A 20-ft burst within 120 feet: @Damage[6d10[spirit]] ("+chk("type:fortitude|dc:31|basic:true")+"; "+B.cond("sickened", "Sickened 1")+" on a failure).</p>", ["concentrate", "manipulate", "divine"]),
    B.action(nid(), "Scry the Hunt", "passive", "<p>From her sanctum's water-bowl she watches through her assassins (the Acropolis ambush exists so she can <em>study the PCs fight</em>); she relays Cinnabar's orders across the Cinderlands by <em>sending</em>.</p>", category="offensive"),
-   B.lore(nid(), "Achaekek Lore", 25),
-   B.gear("chain-mail", nid()), B.gear("sawtooth-saber", nid())],
+   B.lore(nid(), "Achaekek Lore", 25)],
   notes="<p><strong>Role:</strong> aasimar high priestess of Achaekek — an ex-Iomedaean crusader twelve years fallen, now the Red Mantis's <em>internal affairs</em>: she volunteered for Korvosa to document Cinnabar's failure and execute her as a weak link. She thinks the Ileosa contract cheapens the Mantis brand and has no personal interest in the PCs at all. If Cinnabar's kind self resurfaces mid-fight, Koriantu <strong>turns her spells on Cinnabar</strong> before she can reveal too much.</p>"
         "<p><strong>Her sanctum (E6)</strong> hides behind a <em>screen</em> illusion — animated slaughter-murals and a towering four-armed mantis statue ("+chk("type:will|dc:32")+" on interaction to doubt; only the six pillars are real). The 'statue' hides her cot, altar, and scrying bowl.</p>"
         "<p><strong>Morale:</strong> at ~40 HP, debilitated, or plainly outnumbered she casts <em>word of recall</em> back to the Crimson Citadel on Mediogalti (if it's somehow stopped, <em>invisibility</em> and flight, then the recall after her next preparations). <strong>She is re-encountered at Mistress Kayltanya's side in Chapter 6.</strong></p>",
@@ -282,8 +308,7 @@ AW("gray-maiden-guard", B.npc(A4["gmguard"], "Gray Maiden Guard", 6, 24, 100, 14
   [B.strike(nid(), "Longsword", 17, "1d8+9", "slashing", ["versatile-p"]),
    B.strike(nid(), "Longbow", 14, "1d8+4", "piercing", ["deadly-d10", "propulsive", "range-increment-100", "volley-30"]),
    B.action(nid(), "Shield Wall", "reaction", "<p><strong>Trigger</strong> An adjacent Gray Maiden is hit.</p><hr /><p><strong>Effect</strong> The guard interposes her shield: the ally gains +2 circumstance AC against the triggering Strike.</p>"),
-   B.action(nid(), "Shield Block", "reaction", "<p>Standard shield block (Hardness 5).</p>"),
-   B.gear("full-plate", nid()), B.gear("steel-shield", nid()), B.gear("longsword", nid())],
+   B.action(nid(), "Shield Block", "reaction", "<p>Standard shield block (Hardness 5).</p>")],
   notes="<p><strong>Role:</strong> the Deathhead Vault's veteran garrison (a step above the Ch.2 foot soldier). Posts: the E15 cage (two firing through bars with cover and two in the hall — one caged guard shouts the alarm before fighting), E16 quarters (four resting — ~5 minutes to armor up after an alarm), the E18 watch-post (five). Conditioned: they fight to the death; when switching targets, one Demoralizes the survivors.</p>",
   folder=F4["a_creatures"], blurb="Veteran vault Gray Maiden", token_src=None))
 
@@ -369,12 +394,9 @@ AW("kordaitra-destaid", B.npc(A4["kordaitra"], "Kordaitra Destaid", 10, 30, 190,
    B.action(nid(), "Constable's Challenge", "1", "<p>She marks one foe: +2 circumstance damage against it, and it takes −1 to attacks against anyone but her — the Asmodean enforcer's discipline.</p>", ["concentrate"]),
    B.action(nid(), "Break the Will", "2", "<p>A gauntleted Strike followed by an Intimidation Demoralize against the same target at +2 circumstance (her conditioning craft, miniaturized).</p>", ["flourish"]),
    B.action(nid(), "Shield Block", "reaction", "<p>Standard (tower-trained; Hardness 5).</p>"),
-   B.lore(nid(), "Asmodean Doctrine Lore", 18),
-   B.equipment(nid(), "Vault Keys (cell master · Endrin's cell · treasury)", 1, 0,
-     "<p>Three iron keys on a ring: the <strong>prison-cell master key</strong> (E13/E18 cages), the separate key to <strong>Endrin's hidden cell</strong> (E14) — and a <strong>treasury key</strong>. The last opens nothing in Deathhead Vault: it is a duplicate of the Korvosan treasury key the queen has been 'borrowing,' and it matters again beneath <strong>Castle Korvosa in Chapter 6</strong>.</p>"),
-   B.gear("full-plate", nid()), B.gear("steel-shield", nid()), B.gear("longsword", nid())],
+   B.lore(nid(), "Asmodean Doctrine Lore", 18)],
   notes="<p><strong>Role:</strong> the Gray Maidens' de facto second — quartermaster at the Ch.2 muster, ex-knight-enforcer of Asmodeus, author of the Maidens' loyalty-conditioning. She resents Sabina's credit and means to replace her. <strong>Boule's bait:</strong> fake 'Korvosan Revolution' ciphers keep the would-be codebreaker ensconced in her quarters (E21) for at least a week — if she cracks them first, she decamps to Castle Korvosa with the emergency cache (reassign it among the castle's third-floor defenders).</p>"
-        "<p><strong>On the alarm</strong> she relocates to the Nursery (E18) — pre-briefing the garrison with her squad-commander plan (Shield Wall, 11 minutes) — and commands the defense beside Zenobia (round 1: her order grants Zenobia an extra action; round 3: Zenobia returns <em>divine power</em>). Her keys open the vault's cells — including Endrin's — <strong>plus a treasury key that matters in Ch.6</strong>.</p>"
+        "<p><strong>On the alarm</strong> she relocates to the Nursery (E18) — pre-briefing the garrison with her squad-commander plan (Shield Wall, 11 minutes) — and commands the defense beside Zenobia (round 1: her order grants Zenobia an extra action; round 3: Zenobia returns <em>divine power</em>). Her three labeled keys (on the community sheet) open the vault's cells — including Endrin's — <strong>plus a treasury key</strong> that opens nothing here: it duplicates the Korvosan treasury key the queen has been 'borrowing,' and <strong>matters again beneath Castle Korvosa in Ch.6</strong>.</p>"
         "<p><strong>Morale:</strong> below ~40 HP she breaks for her quarters' hidden room, locks herself in, grabs the cache, and escapes to Castle Korvosa on <em>dust of disappearance</em> + a <em>potion of gaseous form</em> — re-encountered in Ch.6 at Vavana Dhatri's side.</p>",
   folder=F4["a_creatures"], blurb="Gray Maiden second; Asmodean conditioner", token_src=None, actor_link=True))
 
@@ -457,10 +479,10 @@ PG("The Bone Council Fire & Skoan-Quah Support", SR("The Bone Council Fire", 206
 # --- Quest A: the Acropolis ---
 PG("Quest A: The Acropolis of the Thrallkeepers", SR("A. The Acropolis of the Thrallkeepers", 209)
   + B.s_milestone("<p><strong>The Acropolis</strong> — a Thassilonian conjuration complex whose masters died summoning the <strong>havero</strong>, 'Arms and Eyes of Forever,' from the Dark Tapestry; the part-summoned horror still hibernates below. Black granite flecked with blood-red crystal; every stone door bears a Sihedron bas-relief (press → it grinds up; descends after a minute; "+chk("type:thievery|dc:24")+" jams one for a month; the closing crush deals @Damage[3d6[bludgeoning]] and pins — "+chk("type:athletics|dc:29")+" or "+chk("type:acrobatics|dc:29")+" to wrench free).</p>")
-  + SEC("<p><strong>A crowded dungeon:</strong> 4 "+act(RMA, "Red Mantis assassins")+" enter ~10 minutes behind the PCs ("+act(A4["cinderlander"], "the Cinderlander")+" guided them but waits outside) — their real mission is to let "+act(A4["koriantu"], "Koriantu")+" <em>watch the PCs fight</em> through a scried assassin. And "+act(A4["krojun"], "Krojun")+" + 3 "+act(A4["thundercaller"], "thundercallers")+" arrived an hour <em>before</em>, hiding at the observation gallery (A3) to take the party's measure (he mocks the Mark-quest as 'stargazing' — his laugh adds 2 Noise Points). "+chk("type:diplomacy|dc:31")+" or "+chk("type:intimidation|dc:27")+" brings the Shoanti in against the Mantis early (intimidated, they leave after and bad-mouth). The Shoanti <em>automatically</em> aid against the havero. Save them from certain death and Krojun may declare <strong>nalharest</strong> on the spot.</p>")
-  + B.enc("The Mantis tail", encx([9, 9, 9, 9], 11),
-     "<p>4 "+act(RMA, "Red Mantis assassins")+" — they strike once discovered (or as the PCs leave, if never engaged). Koriantu is watching; let the players feel it.</p>",
-     B.aside_token(["4× "+act(RMA, "Red Mantis Assassin (9)")])))
+  + SEC("<p><strong>A crowded dungeon:</strong> 4 "+erma("Red Mantis assassins")+" enter ~10 minutes behind the PCs ("+act(A4["cinderlander"], "the Cinderlander")+" guided them but waits outside) — their real mission is to let "+act(A4["koriantu"], "Koriantu")+" <em>watch the PCs fight</em> through a scried assassin. And "+act(A4["krojun"], "Krojun")+" + 3 "+act(A4["thundercaller"], "thundercallers")+" arrived an hour <em>before</em>, hiding at the observation gallery (A3) to take the party's measure (he mocks the Mark-quest as 'stargazing' — his laugh adds 2 Noise Points). "+chk("type:diplomacy|dc:31")+" or "+chk("type:intimidation|dc:27")+" brings the Shoanti in against the Mantis early (intimidated, they leave after and bad-mouth). The Shoanti <em>automatically</em> aid against the havero. Save them from certain death and Krojun may declare <strong>nalharest</strong> on the spot.</p>")
+  + B.enc("The Mantis tail", encx([ERMA_L] * 4, 11),
+     "<p>4 "+erma("Red Mantis assassins")+" — they strike once discovered (or as the PCs leave, if never engaged). Koriantu is watching; let the players feel it.</p>",
+     B.aside_token(["4× "+erma("Elite Red Mantis Assassin (9)")])))
 
 area4("A1-A3", "Thrallkeeper's Walk, the Pool & the Gallery", SR("A1-A3", 209)
   + box("The stone stairs end at a twenty-foot-wide",
@@ -470,9 +492,9 @@ area4("A1-A3", "Thrallkeeper's Walk, the Pool & the Gallery", SR("A1-A3", 209)
         "<p>A2: the air in this cathedral-space lies cold and still. Carved ridges climb sixty feet to a vaulted dark; a five-foot balcony rings a pool sunk fifteen feet below, crossed midway by a bridge; four Sihedron-marked stone doors face the compass points.</p>")
   + "<p><strong>A2, Pool of the Havero:</strong> a 60-ft vault over a 15-ft pool of cold, algae-choked water floored with the sleeping horror's rubbery flank (closed bulbous eyes stud it) — the bottom is dimensionally adjacent to a thing orbiting a dead star. <strong>Narrow observation gaps</strong> in the north and south walls let watchers in the corridors beyond study this room ("+chk("type:perception|dc:31")+" to spot the gaps from inside); "+chk("type:survival|dc:27")+" tracks the Sklar-Quah across the floor toward A3.</p>"
   + B.s_skill("<p><strong>NOISE POINTS</strong> (track openly): verbal spell +1 · running +1/runner · yell +1 · <strong>combat +5/round</strong> · sonic effect +10 · damaging the flank +1/point. Noise <em>in A2</em> doubles. The total <strong>decays 1d10/minute</strong>. Thresholds (trigger the round after): <strong>10</strong> Twitch · <strong>20</strong> Investigate (1 "+act(A4["havtentacle"], "tentacle")+") · <strong>~30</strong> Seek · <strong>40</strong> Assault (2) · <strong>50</strong> Wrath (4, the max). Each slain tentacle −1d20 noise; below 10, all retract (quelled 1 hour). 20+ tentacles slain in one fight also quells it. <strong>Story award</strong> for crossing without waking it — or for quelling it once woken.</p>")
-  + B.enc("Tentacle Wrath (worst case)", encx([9, 9, 9, 9], 11),
+  + B.enc("Tentacle Wrath (worst case)", encx([8, 8, 8, 8], 11),
      "<p>4 "+act(A4["havtentacle"], "havero tentacles")+" at 60-ft reach, attackable anywhere along their lengths. The Mantis <em>watch</em>; the Shoanti help.</p>",
-     B.aside_token(["≤4× "+act(A4["havtentacle"], "Havero Tentacle (9)")]))
+     B.aside_token(["≤4× "+act(A4["havtentacle"], "Havero Tentacle (8)")]))
   + box("One wall of this otherwise plain hallway features",
         "<p>A3: one wall of this plain gallery is cut with long, narrow slits opening onto the chamber beyond.</p>")
   + "<p><strong>A3, Observation Point:</strong> the builders' 'safe' viewing gallery onto the summoning pool — and now "+act(A4["krojun"], "Krojun's")+" hide. Once the PCs leave A2, the Shoanti tail them as quietly as four armored barbarians can; when (likely) spotted, resolve via the Crowded Dungeon notes on the quest page.</p>")
@@ -543,10 +565,10 @@ PG("Quest D: Flameford & the Trial of the Totem", SR("D. Flameford", 226)
 
 PG("The Flameford Assault & Saving Krojun", SR("The Flameford Assault / Saving Krojun", 230)
   + B.s_milestone("<p><strong>The Assault</strong> triggers at 20 RP: the Sun Shaman must first commune at the Kallow Mounds (<em>wind walk</em>, back in a day; Krojun commands). At dusk the "+act(A4["ashwing"], "Ashwings")+" lift the Red Mantis over the spike-fields and drop them among the yurts.</p>")
-  + B.enc("The Assault", encx([9, 9, 9, 6, 6, 6], 11),
-     "<p><strong>If the vault still stands / PCs L11:</strong> 3 "+act(RMA, "Red Mantis assassins")+" + 3 "+act(A4["ashwing"], "Ashwing gargoyles")+". <strong>If the hideout fell first / PCs L12:</strong> double it (6+6 — "+encx([9]*6+[6]*6, 12)+"), adding "+act(A4["cinnabar"], "Cinnabar")+" if she escaped with a grudge. The lead assassin names the PCs and offers the Shoanti peace for their heads: <strong>with 5+ RP the Shoanti refuse</strong>; with 4 or fewer they stand aside and the PCs face the <em>full</em> force (6 assassins, the Cinderlander, two dozen gargoyles). The tribal battle runs offstage: if the PCs win their fight, most Shoanti live. <strong>+4 RP</strong> for breaking the assault.</p>",
-     B.aside_token(["3-6× "+act(RMA, "Red Mantis Assassin (9)"), "3-6× "+act(A4["ashwing"], "Ashwing Gargoyle (6)")]))
-  + SEC("<p><strong>Saving Krojun:</strong> the "+act(A4["cinderlander"], "Cinderlander's")+" price for guiding the Mantis was <em>Krojun</em>. As the PCs finish their fight, the duel still rages — "+act(A4["krojun"], "Krojun")+" at ~30 HP against the hunter's ~100 ("+encx([12], 11)+"). Unaided, Krojun dies and the killer walks. Intervene: the Cinderlander flees below ~20 HP; Krojun, saved, declares the PCs <strong>nalharest</strong> — <strong>+3 RP</strong> and a story award equal to his own defeat. The aftermath is a victory feast: sredna rematches, Sklar-Quah tattoos, a marriage offer contingent on shaving a PC's head.</p>")
+  + B.enc("The Assault", encx([ERMA_L] * 3 + [4, 4, 4], 11),
+     "<p><strong>If the vault still stands / PCs L11:</strong> 3 "+erma("Red Mantis assassins")+" + 3 "+act(A4["ashwing"], "Ashwing gargoyles")+". <strong>If the hideout fell first / PCs L12:</strong> double it (6+6 — "+encx([ERMA_L]*6+[4]*6, 12)+"), adding "+act(A4["cinnabar"], "Cinnabar")+" if she escaped with a grudge. The lead assassin names the PCs and offers the Shoanti peace for their heads: <strong>with 5+ RP the Shoanti refuse</strong>; with 4 or fewer they stand aside and the PCs face the <em>full</em> force (6 assassins, the Cinderlander, two dozen gargoyles). The tribal battle runs offstage: if the PCs win their fight, most Shoanti live. <strong>+4 RP</strong> for breaking the assault.</p>",
+     B.aside_token(["3-6× "+erma("Elite Red Mantis Assassin (9)"), "3-6× "+act(A4["ashwing"], "Ashwing Gargoyle (4)")]))
+  + SEC("<p><strong>Saving Krojun:</strong> the "+act(A4["cinderlander"], "Cinderlander's")+" price for guiding the Mantis was <em>Krojun</em>. As the PCs finish their fight, the duel still rages — "+act(A4["krojun"], "Krojun")+" at ~30 HP against the hunter's ~100, the cougar "+B.cmon("Neverfar")+" harrying at his master's side ("+encx([12, B.cmon_lvl("Neverfar")], 11)+"). Unaided, Krojun dies and the killer walks. Intervene: the Cinderlander flees below ~20 HP; Krojun, saved, declares the PCs <strong>nalharest</strong> — <strong>+3 RP</strong> and a story award equal to his own defeat. The aftermath is a victory feast: sredna rematches, Sklar-Quah tattoos, a marriage offer contingent on shaving a PC's head.</p>")
   + B.s_conv("<p>If the PCs fall, the Shoanti are wiped out — the merciful out: survivors wake stripped and imprisoned in the Deathhead Vault, which conveniently is where Part 3 goes anyway.</p>"))
 
 # --- Part 3: Mantis and Maiden ---
@@ -569,21 +591,21 @@ area4("E1-E4", "The Red Mantis Caverns", SR("E1-E4", 237)
      B.aside_token([B.mon("catoblepas", "Catoblepas (12)")]))
   + box("The air in this room smells strongly of",
         "<p>E2: frankincense haze from wall-mounted burners almost — almost — hides the sewer stink. Two rickety chairs with moldy cushions face a flat absurdity: a wooden tavern bar, shelved bottles and tankards and all, with a door tucked behind it in the northeast corner.</p>")
-  + B.enc("E2 — the 'Sewer Brewer'", encx([8], 12),
-     "<p>"+B.mon("greater-barghest", "Mogmora")+" (an Elite greater barghest in goblin form — effectively L8), planar-bound bartender of the Society's old smuggling waiting-room dressed as a tavern, offering his 'lucky first customers' free ale <strong>poisoned with lich dust</strong> (party-size + 4 doses behind the bar; the display bottles are tinted sewer water). He stalls 1d4 rounds with backhanded compliments, cataloguing numbers, arms, and faces — then feigns terror and <em>dimension doors</em> to E6 to report to Koriantu. His key (or Boule's) opens the north door ("+chk("type:thievery|dc:41")+" to pick it).</p>",
-     B.aside_token([B.mon("greater-barghest", "Mogmora (8, Elite)")]))
+  + B.enc("E2 — the 'Sewer Brewer'", encx([B.cmon_lvl("Mogmora")], 12),
+     "<p>"+B.cmon("Mogmora")+" (the community's greater barghest in goblin form, L7), planar-bound bartender of the Society's old smuggling waiting-room dressed as a tavern, offering his 'lucky first customers' free ale <strong>poisoned with lich dust</strong> (party-size + 4 doses behind the bar; the display bottles are tinted sewer water). He stalls 1d4 rounds with backhanded compliments, cataloguing numbers, arms, and faces — then feigns terror and <em>dimension doors</em> to E6 to report to Koriantu. His key (or Boule's) opens the north door ("+chk("type:thievery|dc:41")+" to pick it).</p>",
+     B.aside_token([B.cmon("Mogmora", "Mogmora (7)")]))
   + box("The tunnel opens into a wide cavern with",
         "<p>E3: the tunnel opens into a thirty-foot-vaulted cavern. Two ten-foot ledges overhang the northwest wall; eastward the floor dips into a dark pool; lumps of softly glowing blue fungus — eerily brain-like — light the whole cave. To the southeast a fifteen-foot tunnel is cut by a deep pit, 'bridged' by two questionable planks.</p>")
-  + B.enc("E3 — the Chokepoint", encx([9, 9, 9], 12),
-     "<p>The "+haz(A4["dispellingmist"], "Dispelling Mist")+" at the entry; a 60-ft spike-rocked pit (@Damage[8d6[bludgeoning]]) bridged by a <em>permanent-image</em> plank ("+chk("type:will|dc:17")+" on interaction — the assassins jump or climb, "+chk("type:athletics|dc:26")+" on the walls); the east pool is drinkable but bitter (the garrison's water source); cytillesh patches ("+B.cond("stupefied", "Stupefied")+" creep within 20 ft per day — the assassins ration exposure under 20 hours); and 2 "+act(A4["manananggal"], "manananggals")+" — the late Sable officers Banzul and Wevenner — plus a hidden "+act(RMA, "Red Mantis assassin")+" beyond the pit who watches two rounds, then slips to E4 to report.</p>"
+  + B.enc("E3 — the Chokepoint", encx([8, 8, ERMA_L], 12),
+     "<p>The "+haz(A4["dispellingmist"], "Dispelling Mist")+" at the entry; a 60-ft spike-rocked pit (@Damage[8d6[bludgeoning]]) bridged by a <em>permanent-image</em> plank ("+chk("type:will|dc:17")+" on interaction — the assassins jump or climb, "+chk("type:athletics|dc:26")+" on the walls); the east pool is drinkable but bitter (the garrison's water source); cytillesh patches ("+B.cond("stupefied", "Stupefied")+" creep within 20 ft per day — the assassins ration exposure under 20 hours); and 2 "+act(A4["manananggal"], "manananggals")+" — the late Sable officers Banzul and Wevenner — plus a hidden "+erma("Red Mantis assassin")+" beyond the pit who watches two rounds, then slips to E4 to report.</p>"
      "<p><strong>By night</strong> the pair slumber-bomb from the ledges and swoop; <strong>by day</strong> they wear their human faces and cry out as 'escaped prisoners of the derros,' begging rescue from atop the ledges — bait to split the party and draw one or two climbers into reach (they keep bite and claw in human guise). Their torsos lie in E8: destroy those to end them at dawn.</p>",
-     B.aside_token([haz(A4["dispellingmist"], "Dispelling Mist (8)"), "2× "+act(A4["manananggal"], "Manananggal (9)"), act(RMA, "Red Mantis Assassin (9)")]))
+     B.aside_token([haz(A4["dispellingmist"], "Dispelling Mist (10)"), "2× "+act(A4["manananggal"], "Manananggal (8)"), erma("Elite Red Mantis Assassin (9)")]))
   + box("The arched ceiling of this vast, crescent-shaped,",
         "<p>E4: a vast crescent cavern arches to forty feet on four natural columns caked in the glowing brain-fungus. Nine dark openings near the ceiling can be reached only by climb or flight; southeast, eight stone benches face a pulpit and a stair rising to a worked façade — an immense carved mantis, arms arched over double doors.</p>")
-  + B.enc("E4 — the Temple of Achaekek", encx([9, 9, 8], 12),
-     "<p>The mantis façade is fresh <em>stone shape</em> ("+chk("type:arcana|dc:28")+"); "+chk("type:religion|dc:26")+" names <strong>Achaekek</strong>. Most of Korvosa's assassins rotate through here a few nights a week (cytillesh caps each stay under 20 hours) — but with the bulk out hunting the PCs, only 2 resting "+act(RMA, "assassins")+" + the mercy-bought "+act(A4["cytillipede"], "cytillipede")+" (flash timed for maximum coverage, sneak attacks on the stunned) are present. If the alarm is up they hide among the benches, everything that fled converges here, and "+act(A4["cinnabar"], "Cinnabar")+" and "+act(A4["koriantu"], "Koriantu")+" stand behind them ("+encx([13, 13, 9, 9, 9, 8], 12)+" — the vault's worst case).</p>"
+  + B.enc("E4 — the Temple of Achaekek", encx([ERMA_L, ERMA_L, 8], 12),
+     "<p>The mantis façade is fresh <em>stone shape</em> ("+chk("type:arcana|dc:28")+"); "+chk("type:religion|dc:26")+" names <strong>Achaekek</strong>. Most of Korvosa's assassins rotate through here a few nights a week (cytillesh caps each stay under 20 hours) — but with the bulk out hunting the PCs, only 2 resting "+erma("assassins")+" + the mercy-bought "+act(A4["cytillipede"], "cytillipede")+" (flash timed for maximum coverage, sneak attacks on the stunned) are present. If the alarm is up they hide among the benches, everything that fled converges here, and "+act(A4["cinnabar"], "Cinnabar")+" and "+act(A4["koriantu"], "Koriantu")+" stand behind them ("+encx([13, 13, ERMA_L, ERMA_L, ERMA_L, 8], 12)+" — the vault's worst case).</p>"
      "<p><strong>E4a:</strong> the north tunnel once wound down to deeper derro warrens and, beyond, to <strong>Nar-Voth in the Darklands</strong> — the Gray Maidens collapsed it after the derro purge. What lies past the rubble is beyond this chapter; if the PCs dig, stock it with Darklands material of your own.</p>",
-     B.aside_token(["2× "+act(RMA, "Red Mantis Assassin (9)"), act(A4["cytillipede"], "Cytillipede (8)")])))
+     B.aside_token(["2× "+erma("Elite Red Mantis Assassin (9)"), act(A4["cytillipede"], "Cytillipede (8)")])))
 
 area4("E5-E6", "Cinnabar & Koriantu", SR("E5-E6", 242)
   + box("Three large stone vats sit in alcoves",
@@ -608,9 +630,9 @@ area4("E7-E11", "Crypts, the Daemon & the Mother of Thorns", SR("E7-E11", 245)
   + box("The walls of this large room bear",
         "<p>E8: the walls bear carved beasts ranging a rugged, barren land — Cinderlands vistas meant to soothe the honored dead. Two sarcophagi sit open in alcoves north and east; a third rests on a raised dais to the west amid waist-high vats, and the whole room reeks of rank vinegar.</p>")
   + "<p><strong>E8, Zenobia's Crypt:</strong> once a great Shoanti shaman's tomb ("+chk("type:society|dc:30")+" reads the carvings), then a derro necromantic workshop. By night her headless body lies in the west sarcophagus and the manananggals' torsos in the others ("+chk("type:religion|dc:31")+": destroying torsos destroys their owners; destroying <em>Zenobia's</em> body only ends her living masquerade — the vinegar vats are how she fits back into it).</p>"
-  + B.enc("E8 — Vyloth", encx([13], 12),
+  + B.enc("E8 — Vyloth", encx([11], 12),
      "<p>"+act(A4["vyloth"], "Vyloth")+", the bored famine-daemon, opens with his lying question-game — then Horrid Wilting. If the body is destroyed he teleports to Zenobia (E18) and is fought there instead.</p>",
-     B.aside_token([act(A4["vyloth"], "Vyloth (13)")]))
+     B.aside_token([act(A4["vyloth"], "Vyloth (11)")]))
   + "<p><strong>E9:</strong> the Society's secret stair ("+chk("type:perception|dc:41")+" at either end, +15 from Boule) — saboteur work so audacious the arbiters never thought to look for it.</p>"
   + box("The walls of this ten-foot-wide hallway",
         "<p>E10: polished ivory tiles line a ten-foot hallway, each tile holding a soft circle of glow.</p>")
@@ -643,9 +665,9 @@ area4("E12-E21", "The Gray Maiden Dungeons", SR("E12-E21", 248)
   + "<p><strong>E20 — The records:</strong> every woman recruited and conditioned, every failure 'executed as a traitor' (in truth few survive the torments that long), <strong>no</strong> Crown–Mantis paperwork — but closure for the families of the lost, and <strong>the location of Endrin's secret cell (E14)</strong>. <strong>Story award</strong> for recovering them.</p>"
   + box("This grim chamber is outfitted with",
         "<p>E18: rack, cages, a spiked stockade, shelves of thumbscrews and iron boots — and a caged-off guard post to the west. On the table, a young woman mid-'lesson,' her tutor's head floating free of its body on a fan of glistening entrails.</p>")
-  + B.enc("E18 — the Maiden's Nursery (climax)", encx([13, 13, 11, 10, 6, 6, 6, 6, 6], 12),
-     "<p>"+act(A4["zenobia"], "Zenobia")+" mid-indoctrination of one of <strong>3 caged "+act(A4["gmrecruit"], "recruits")+"</strong> behind a 5-"+act(A4["gmguard"], "guard")+" watch post (locked gate) — alone, a mild fight for L12 PCs ("+encx([11, 6, 6, 6, 6, 6], 12)+"). <strong>The label above is the alarm-stacked worst case:</strong> prisoners caged, guards out front, "+act(A4["kordaitra"], "Kordaitra")+" relocating from E21 with her Shield Wall plan pre-briefed (round 1 her order gives Zenobia a double-cast; <em>divine power</em> comes back round 3) — plus "+act(A4["motherthorns"], "the Mother of Thorns")+" and/or "+act(A4["vyloth"], "Vyloth")+" fallen back per their morale. <strong>Thin the pile before it stacks.</strong> Zenobia flees at ~40 HP (her <em>sending</em> warns Vavana; re-encounter her in Castle Korvosa); Kordaitra below ~40 HP bolts for her hidden room and escapes to the castle on <em>dust of disappearance</em> + <em>gaseous form</em>.</p>",
-     B.aside_token([act(A4["zenobia"], "Zenobia (11)"), act(A4["kordaitra"], "Kordaitra (10)"), "5× "+act(A4["gmguard"], "Gray Maiden Guard (6)"), "+ "+act(A4["motherthorns"], "Mother of Thorns (13)")+" / "+act(A4["vyloth"], "Vyloth (13)")+" fallbacks"]))
+  + B.enc("E18 — the Maiden's Nursery (climax)", encx([13, 11, 11, 10, 8, 8, 8, 8, 8], 12),
+     "<p>"+act(A4["zenobia"], "Zenobia")+" mid-indoctrination of one of <strong>3 caged "+act(A4["gmrecruit"], "recruits")+"</strong> behind a 5-"+act(A4["gmguard"], "guard")+" watch post (locked gate) — alone, a mild fight for L12 PCs ("+encx([11, 8, 8, 8, 8, 8], 12)+"). <strong>The label above is the alarm-stacked worst case:</strong> prisoners caged, guards out front, "+act(A4["kordaitra"], "Kordaitra")+" relocating from E21 with her Shield Wall plan pre-briefed (round 1 her order gives Zenobia a double-cast; <em>divine power</em> comes back round 3) — plus "+act(A4["motherthorns"], "the Mother of Thorns")+" and/or "+act(A4["vyloth"], "Vyloth")+" fallen back per their morale. <strong>Thin the pile before it stacks.</strong> Zenobia flees at ~40 HP (her <em>sending</em> warns Vavana; re-encounter her in Castle Korvosa); Kordaitra below ~40 HP bolts for her hidden room and escapes to the castle on <em>dust of disappearance</em> + <em>gaseous form</em>.</p>",
+     B.aside_token([act(A4["zenobia"], "Zenobia (11)"), act(A4["kordaitra"], "Kordaitra (10)"), "5× "+act(A4["gmguard"], "Gray Maiden Guard (8)"), "+ "+act(A4["motherthorns"], "Mother of Thorns (13)")+" / "+act(A4["vyloth"], "Vyloth (11)")+" fallbacks"]))
   + box("This bedroom's decor reveals little about",
         "<p>E21: a bedroom that confesses almost nothing — blocky monochrome furniture, military order, and one extravagance: a large, lovely landscape of Korvosa.</p>")
   + B.s_treasure("<p><strong>E21 — Kordaitra:</strong> "+act(A4["kordaitra"], "the conditioner")+" at Boule's ciphers (≥1 week to crack; if she succeeds first she decamps to the castle with everything below). The painting — <em>Sinister Sister</em>, Goren Andosalu of Magnimar, 3×6 ft, 40 lbs — ~450 gp re-scaled. Secret door "+chk("type:perception|dc:33")+" (locked — a good lock, "+chk("type:thievery|dc:30")+" — or her key) to the <strong>emergency repository</strong>: a cherrywood coffer (~50 gp) of <strong>4 moderate healing potions</strong> (cure serious), <strong>3 potions of remove disease</strong>, <strong>6 potions of lesser restoration</strong>, and <strong>3 potions of gaseous form</strong>; plus <strong>2 doses of dust of disappearance</strong>, a <strong>wand of cure critical wounds</strong> (40 charges), scrolls of <em>break enchantment, heal, limited wish,</em> and <em>resurrection</em>, <strong>2 candles of truth</strong>, and <strong>3 doses of stone salve</strong> — all carried in a <strong>bag of holding (type IV)</strong>. Her key ring also holds the <strong>treasury key</strong> (see her entry — it matters in Ch.6).</p>"))

@@ -1,14 +1,205 @@
 {
-  "_id": "ch5UkwarAxe00001",
-  "img": "systems/pf2e/icons/default-icons/equipment.svg",
+  "img": "systems/pf2e/icons/equipment/weapons/battle-axe.webp",
   "name": "Ukwar (Intelligent Battleaxe)",
-  "type": "equipment",
-  "folder": "WwBY7pQ5NHBsE5Vx",
-  "sort": 0,
-  "ownership": {
-    "default": 0
+  "system": {
+    "description": {
+      "value": "<p><strong>Perception </strong>+12; precise vision 30 feet, imprecise hearing 30 feet<br><strong>Communication </strong>speech (Common and Orcish)<br><strong>Skills </strong>Intimidation +22, Scarwall Lore +20<br><strong>Int </strong>+0, <strong>Wis </strong>+3, <strong>Cha </strong>+2<br><strong>Will </strong>+21</p>\n<hr>\n<p>Ukwar is a +2 striking conducting battleaxe imbued with the soul of the Deadwatcher orc chieftain of the same name. After perishing in Scarwall and rising soon thereafter as a fext, Ukwar spent decades longing to be free of her curse. When she is permanently slain, her spirit enters her axe. As long as the PCs continue to adventure in Scarwall, she doesn't attempt to exert influence over her wielder&mdash;she wants to see each and every one of Scarwall's denizens suffer. If her wielder spends more than 1 day outside of Scarwall (and the castle remains cursed), she attempts to take control (@Check[type:will|dc:31] save) and force her wielder to return and finish this job.</p>\n<p>As long as Ukwar remains intelligent, the blade grants trained proficiency with the battleaxe to her wielder. If the wielder is already proficient with battleaxes, they instead gains a +1 bonus on all attack rolls and damage rolls made with Ukwar.</p>\n<p>She can enrage her wielder, and does so the first time each day they attack one of the spirit anchors or the chained spirit&mdash;she can be convinced to enrage her wielder at another time with a successful @Compendium[pf2e.actionspf2e.Make an Impression]{Make an Impression} or @Compendium[pf2e.actionspf2e.Coerce]{Coerce} attempt.</p>\n<p>Ukwar's special purpose is to lift Scarwall's curse, and as long as her wielder is engaged in this quest and is within Scarwall, the weapon gains the ghost touch property and its conducting rune conducts [[/r {2d8}[negative]]]{2d8 negative damage} when using the Conduct Energy activity. If Scarwall's curse is lifted, Ukwar's spirit leaves the axe behind, and this weapon returns to being an unintelligent +2 striking conducting battleaxe.</p>\n<hr>\n<p><strong>Activate </strong><span class=\"pf2-icon\">A</span> envision</p>\n<p><strong>Frequency</strong> three times per day</p>\n<p><strong>Effect</strong> You become enraged. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. This frenzy lasts for 1 minute, until there are no enemies you can perceive, or until you fall @Compendium[pf2e.conditionitems.Unconscious]{Unconscious}, whichever comes first. You can't voluntarily stop raging. While you are raging, you deal [[/r {6}[additional]]]{6 additional Damage} with melee weapons and unarmed attacks (this additional damage is halved if your weapon or unarmed attack is agile), you take a &ndash;1 penalty to AC, and you can't use actions with the concentrate trait unless they also have the rage trait. You can @Compendium[pf2e.actionspf2e.Seek]{Seek} while raging.</p>\n<hr>\n<p>@UUID[Compendium.pf2e.feat-effects.z3uyCMBddrPK5umr]{Effect: Rage}</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Forms only when the fext @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ukwarFext0000001]{Ukwar} is permanently slain</strong> (by glass or obsidian, B29): her grateful spirit sighs thanks and sinks into her own <em>+1 striking battleaxe</em>, making it a sinister but genuinely loyal intelligent weapon.</p><p><strong>Ukwar</strong> (intelligent <em>+1 striking battleaxe</em>): speaks Common and Orc in a dead chieftain's flat voice; perceives 30 feet (darkvision). She urges her wielder to hunt worthy foes and despises cowardice — but remembers her release with something like gratitude. <strong>Once per day</strong> she channels her old hunger through a hit: the target must attempt @Check[type:fortitude|dc:30] or become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (she shares the stolen vigor: the wielder gains 10 temporary HP for 1 minute).</p>"
+    },
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "traits": {
+      "value": [
+        "chaotic",
+        "evil",
+        "evocation",
+        "intelligent",
+        "invested",
+        "magical",
+        "necromancy",
+        "sweep"
+      ],
+      "rarity": "unique",
+      "custom": "",
+      "otherTags": []
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "label": "PF2E.TraitRage",
+        "predicate": [
+          "self:effect:rage"
+        ],
+        "selector": "ac",
+        "value": -1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.rageTempHP",
+        "value": 0
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Ukwar Rage",
+        "predicate": [
+          "self:effect:rage",
+          {
+            "nor": [
+              "agile",
+              "ranged",
+              "barbarian-dedication"
+            ]
+          }
+        ],
+        "selector": "strike-damage",
+        "value": 6
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Ukwar Rage",
+        "predicate": [
+          "self:effect:rage",
+          "agile",
+          {
+            "nor": [
+              "ranged",
+              "barbarian-dedication"
+            ]
+          }
+        ],
+        "selector": "strike-damage",
+        "slug": "rage-agile",
+        "value": 3
+      }
+    ],
+    "slug": "battle-axe",
+    "schema": {
+      "version": 0.8,
+      "lastMigration": null
+    },
+    "quantity": 1,
+    "baseItem": "battle-axe",
+    "hp": {
+      "brokenThreshold": 0,
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "weight": {
+      "value": "1"
+    },
+    "equippedBulk": {
+      "value": ""
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": false,
+      "handsHeld": 0
+    },
+    "stackGroup": null,
+    "negateBulk": {
+      "value": "0"
+    },
+    "containerId": null,
+    "preciousMaterial": {
+      "value": null
+    },
+    "preciousMaterialGrade": {
+      "value": null
+    },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "Unusual Battle Axe",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "level": {
+      "value": 0
+    },
+    "category": "martial",
+    "group": "axe",
+    "bonus": {
+      "value": 0
+    },
+    "damage": {
+      "value": "",
+      "dice": 1,
+      "die": "d8",
+      "damageType": "slashing"
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": ""
+    },
+    "MAP": {
+      "value": ""
+    },
+    "potencyRune": {
+      "value": 2
+    },
+    "strikingRune": {
+      "value": "striking"
+    },
+    "specific": {
+      "value": false
+    },
+    "propertyRune1": {
+      "value": "conducting"
+    },
+    "propertyRune2": {
+      "value": null
+    },
+    "propertyRune3": {
+      "value": null
+    },
+    "propertyRune4": {
+      "value": null
+    },
+    "property1": {
+      "value": "",
+      "dice": 0,
+      "die": "",
+      "damageType": "",
+      "critDice": 0,
+      "critDie": "",
+      "critDamage": "",
+      "critDamageType": "",
+      "strikeConditionType": "",
+      "strikeConditionValue": null,
+      "criticalConditionType": "",
+      "criticalConditionValue": null
+    }
   },
-  "flags": {},
+  "type": "weapon",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.equipment-srd.War0uyLBx1jA0Ge7"
+    }
+  },
+  "effects": [],
   "_stats": {
     "systemId": "pf2e",
     "systemVersion": "8.2.0",
@@ -20,57 +211,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "system": {
-    "baseItem": null,
-    "bulk": {
-      "value": 1
-    },
-    "containerId": null,
-    "description": {
-      "value": "<p><strong>Forms only when the fext @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ukwarFext0000001]{Ukwar} is permanently slain</strong> (by glass or obsidian, B29): her grateful spirit sighs thanks and sinks into her own <em>+1 striking battleaxe</em>, making it a sinister but genuinely loyal intelligent weapon.</p><p><strong>Ukwar</strong> (intelligent <em>+1 striking battleaxe</em>): speaks Common and Orc in a dead chieftain's flat voice; perceives 30 feet (darkvision). She urges her wielder to hunt worthy foes and despises cowardice — but remembers her release with something like gratitude. <strong>Once per day</strong> she channels her old hunger through a hit: the target must attempt @Check[type:fortitude|dc:30] or become @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (she shares the stolen vigor: the wielder gains 10 temporary HP for 1 minute).</p>"
-    },
-    "equipped": {
-      "carryType": "worn",
-      "handsHeld": 0,
-      "invested": null
-    },
-    "hardness": 0,
-    "hp": {
-      "max": 0,
-      "value": 0
-    },
-    "level": {
-      "value": 12
-    },
-    "material": {
-      "grade": null,
-      "type": null
-    },
-    "price": {
-      "value": {
-        "gp": 1800
-      }
-    },
-    "publication": {
-      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-      "authors": "",
-      "license": "OGL",
-      "remaster": true
-    },
-    "quantity": 1,
-    "rules": [],
-    "size": "med",
-    "slug": null,
-    "traits": {
-      "rarity": "unique",
-      "value": [
-        "magical",
-        "unique"
-      ]
-    },
-    "usage": {
-      "value": "worn"
-    }
+  "_id": "ch5UkwarAxe00001",
+  "folder": "WwBY7pQ5NHBsE5Vx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
   },
   "_key": "!items!ch5UkwarAxe00001"
 }

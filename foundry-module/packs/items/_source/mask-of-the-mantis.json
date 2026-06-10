@@ -1,14 +1,98 @@
 {
-  "_id": "appMantisMask001",
-  "img": "systems/pf2e/icons/default-icons/equipment.svg",
-  "name": "Mask of the Mantis",
   "type": "equipment",
-  "folder": "appItemFolder001",
-  "sort": 0,
-  "ownership": {
-    "default": 0
+  "img": "systems/pf2e/icons/equipment/worn-items/apex-items/headband-of-inspired-wisdom.webp",
+  "name": "Mask of the Mantis",
+  "system": {
+    "description": {
+      "value": "<p>A mask of the mantis is the traditional headgear of a Red Mantis assassin. Designed to both conceal the wearer's identity and give the wearer a ferocious appearance. You gain a +2 item bonus to Perception checks.</p>\n<p><strong>Activate </strong><span class=\"pf2-icon\">D</span> envision, Interact</p>\n<p><strong>Frequency</strong> once per day; Duration 1 hour</p>\n<p><strong>Effect</strong> The masks wearer gains one of the following two effects; darkvision up to 60 feet or Deathwatch. This choice is made when the wearer Activates the mask.</p>\n<p><strong>Deathwatch </strong>You can determine the condition of creatures near death within 30 feet. You instantly know whether each creature within the area is dead, fragile (alive and wounded, with 3 or fewer hit points left), fighting off death (alive with 4 or more hit points), healthy, undead, or neither alive nor dead (such as a construct). Deathwatch sees through any spell or ability that allows creatures to feign death.</p><hr /><h3>Conversion notes (this module)</h3><p><strong>Red Mantis insignia-helm</strong> (Appendix 5; 6,000 gp → 600 gp). Invested. 3 charges per day, restored at dawn. Spend 1 charge (1 action, concentrate) for one of the following, lasting 30 minutes (effects can run simultaneously):</p><ul><li><strong>Hunter's eyes:</strong> darkvision.</li><li><strong>See the unseen:</strong> as <em>see the unseen</em> — invisible creatures appear as shimmering outlines.</li><li><strong>Deathwatch:</strong> you sense whether creatures you see are alive, @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying}, undead, or neither.</li><li><strong>Vigil:</strong> +2 item bonus to Perception.</li></ul><p>Standard issue for Red Mantis assassins (a copy rides in their inventory); Mistress Kayltanya's is rubied.</p>"
+    },
+    "source": {
+      "value": ""
+    },
+    "traits": {
+      "value": [
+        "divination",
+        "invested",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "custom": "",
+      "otherTags": []
+    },
+    "rules": [],
+    "slug": null,
+    "schema": {
+      "version": 0.8,
+      "lastMigration": {
+        "datetime": "2022-11-19T02:28:37.482+00:00",
+        "version": {
+          "schema": 0.796,
+          "foundry": "10.290",
+          "system": "4.4.0"
+        }
+      }
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "hp": {
+      "brokenThreshold": 0,
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "weight": {
+      "value": "-"
+    },
+    "equippedBulk": {
+      "value": ""
+    },
+    "price": {
+      "value": {
+        "gp": 500
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "stackGroup": null,
+    "negateBulk": {
+      "value": "0"
+    },
+    "containerId": null,
+    "preciousMaterial": {
+      "value": null
+    },
+    "preciousMaterialGrade": {
+      "value": null
+    },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "Unusual Object",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "wornmask"
+    },
+    "level": {
+      "value": 8
+    }
   },
-  "flags": {},
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Actor.q8rNOUXYRC4xFF0D.Item.bS13jGLzFRb2Mo5S"
+    }
+  },
   "_stats": {
     "systemId": "pf2e",
     "systemVersion": "8.2.0",
@@ -20,57 +104,11 @@
     "modifiedTime": 0,
     "lastModifiedBy": null
   },
-  "system": {
-    "baseItem": null,
-    "bulk": {
-      "value": 0.1
-    },
-    "containerId": null,
-    "description": {
-      "value": "<p><strong>Red Mantis insignia-helm</strong> (Appendix 5; 6,000 gp → 600 gp). Invested. 3 charges per day, restored at dawn. Spend 1 charge (1 action, concentrate) for one of the following, lasting 30 minutes (effects can run simultaneously):</p><ul><li><strong>Hunter's eyes:</strong> darkvision.</li><li><strong>See the unseen:</strong> as <em>see the unseen</em> — invisible creatures appear as shimmering outlines.</li><li><strong>Deathwatch:</strong> you sense whether creatures you see are alive, @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{Dying}, undead, or neither.</li><li><strong>Vigil:</strong> +2 item bonus to Perception.</li></ul><p>Standard issue for Red Mantis assassins (a copy rides in their inventory); Mistress Kayltanya's is rubied.</p>"
-    },
-    "equipped": {
-      "carryType": "worn",
-      "handsHeld": 0,
-      "invested": null
-    },
-    "hardness": 0,
-    "hp": {
-      "max": 0,
-      "value": 0
-    },
-    "level": {
-      "value": 10
-    },
-    "material": {
-      "grade": null,
-      "type": null
-    },
-    "price": {
-      "value": {
-        "gp": 600
-      }
-    },
-    "publication": {
-      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
-      "authors": "",
-      "license": "OGL",
-      "remaster": true
-    },
-    "quantity": 1,
-    "rules": [],
-    "size": "med",
-    "slug": null,
-    "traits": {
-      "rarity": "uncommon",
-      "value": [
-        "invested",
-        "magical"
-      ]
-    },
-    "usage": {
-      "value": "worn"
-    }
+  "_id": "appMantisMask001",
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
   },
   "_key": "!items!appMantisMask001"
 }
