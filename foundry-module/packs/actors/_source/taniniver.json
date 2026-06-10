@@ -1,0 +1,398 @@
+{
+  "_id": "taniniverKaz0001",
+  "name": "Taniniver (Kazavon's Shade)",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "VUpu3GPUfg1gv72o",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Diseased Jaws",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 33
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d12+14",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "3d6",
+            "damageType": "void"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "reach-15"
+          ]
+        }
+      },
+      "_key": "!actors.items!taniniverKaz0001.VUpu3GPUfg1gv72o"
+    },
+    {
+      "_id": "U5PcZanLUot2IjPL",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 33
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d10+14",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "reach-10"
+          ]
+        }
+      },
+      "_key": "!actors.items!taniniverKaz0001.U5PcZanLUot2IjPL"
+    },
+    {
+      "_id": "isnyfXSqCVvefC0O",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Blood Veil Incarnate",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Every natural attack exposes the target to <strong>blood veil</strong> at its apex: @Check[type:fortitude|dc:37] or contract it (the Conversion Guide disease at +5 DC). The plague has teeth now.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!taniniverKaz0001.isnyfXSqCVvefC0O"
+    },
+    {
+      "_id": "Yff8oLOnh6UaN58z",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Pestilent Breath",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Frequency</strong> once per 1d4 rounds. 60-ft cone: @Damage[16d6[void]] (@Check[type:fortitude|dc:39|basic:true]); failures are exposed to blood veil.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "void",
+            "disease"
+          ]
+        }
+      },
+      "_key": "!actors.items!taniniverKaz0001.Yff8oLOnh6UaN58z"
+    },
+    {
+      "_id": "EmeQ6EdN8V4QS7RP",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Manifestation of the Pool",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Spun from <strong>5 pool charges</strong>; if charges remain, a replacement coalesces the round after this one dies (one at a time). It obeys Ileosa absolutely and cannot pursue past a mile from the Pool. <strong>Every taniniver the PCs destroy burns five days of the ritual.</strong></p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!taniniverKaz0001.EmeQ6EdN8V4QS7RP"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 8
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 6
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 40
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 330,
+        "temp": 0,
+        "value": 330
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 80
+          }
+        ],
+        "value": 40
+      }
+    },
+    "details": {
+      "blurb": "Plague-dragon manifestation of the Pool (B20)",
+      "languages": {
+        "details": "",
+        "value": [
+          "draconic"
+        ]
+      },
+      "level": {
+        "value": 17
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role (B20):</strong> the Everdawn Pool's dream of <strong>Kazavon</strong> — a rotting, plague-wrapped serpent-dragon conjured from stolen blood. Not the true dragon (that horror is the fail-state); a promise of him.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 29,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 29
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 26
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 27
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 33
+      },
+      "intimidation": {
+        "base": 31
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "grg"
+      },
+      "value": [
+        "dragon",
+        "disease"
+      ]
+    }
+  },
+  "folder": "ch6CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Taniniver (Kazavon's Shade)",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!taniniverKaz0001"
+}

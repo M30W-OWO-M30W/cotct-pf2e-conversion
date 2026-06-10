@@ -1,0 +1,509 @@
+{
+  "_id": "queenIleosa00001",
+  "name": "Queen Ileosa Arabasti",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "SjUHv8000HliMKSV",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+3 Major-Striking Speed Rapier",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 40
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "4d6+15",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "1d6",
+            "damageType": "cold"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "ileosa-rapier",
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d8",
+            "finesse",
+            "magical"
+          ]
+        }
+      },
+      "_key": "!actors.items!queenIleosa00001.SjUHv8000HliMKSV"
+    },
+    {
+      "_id": "VqBCneNPP3SDNG78",
+      "img": "systems/pf2e/icons/actions/FreeAction.webp",
+      "name": "Quickened Grace",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "free"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Once per round: an extra Rapier Strike or Stride (her blade's speed rune).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!queenIleosa00001.VqBCneNPP3SDNG78"
+    },
+    {
+      "_id": "6dq81s1whK0KvIzp",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Crown of Fangs",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>The artifact.</strong> Regeneration 20 (suppressed only by <em>Serithtial</em>); <em>mirror image</em> at will; <em>dominate</em> 3/day (@Check[type:will|dc:42]); true seeing; her death is impossible while she wears it — <strong>sundering the Crown with Serithtial</strong> (Hardness 20, HP 80 vs. that blade alone) ends the regeneration and the second soul. <em>Susceptible to Serithtial:</em> each hit from it, @Check[type:fortitude|dc:35] or @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (cumulative).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!queenIleosa00001.6dq81s1whK0KvIzp"
+    },
+    {
+      "_id": "NRFvmwV8qpYH4oUD",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Songs of the Two-Souled",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Bardic war-art (DC 42): <em>inspire courage</em> for her court; <strong>Frightening Tune</strong> (@Check[type:will|dc:42] or @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2} and @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing} 1 round); or <em>mass suggestion</em> — 'kneel before your queen' (@Check[type:will|dc:42]).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "auditory",
+            "concentrate",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!queenIleosa00001.NRFvmwV8qpYH4oUD"
+    },
+    {
+      "_id": "VX86poHVOoHeeVEt",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Irresistible Dance",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Her projected image delivers it: one creature, @Check[type:will|dc:42] or dance (@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2}, −2 AC) for 1d4 rounds (incapacitation).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "occult",
+            "incapacitation",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!queenIleosa00001.VX86poHVOoHeeVEt"
+    },
+    {
+      "_id": "unzByamHtoVoTZpq",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Court of Devils",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Once per day: summon an ice-devil-grade fiend (run as @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ithierGylou00001]{Ithier} at Weak) for 1 minute; her four @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ileosasFury00001]{Furies} answer without being called.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "conjuration",
+            "divine"
+          ]
+        }
+      },
+      "_key": "!actors.items!queenIleosa00001.unzByamHtoVoTZpq"
+    },
+    {
+      "_id": "oKzDemhwueqTw7MM",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Getaway",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>At ~60 HP:</strong> she and every fury and false Ileosa within 30 feet teleport to the Blood Repository (B19); she heals (ring of spell storing: <em>heal</em>; contingency: <em>heal</em> at 30 HP) and returns. <strong>After that, she fights to the death.</strong></p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "teleportation"
+          ]
+        }
+      },
+      "_key": "!actors.items!queenIleosa00001.oKzDemhwueqTw7MM"
+    },
+    {
+      "_id": "oarNZ8ynPnsdCTf5",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Kazavon Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 36
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!queenIleosa00001.oarNZ8ynPnsdCTf5"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 9
+      },
+      "con": {
+        "mod": 6
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 10
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 47
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 420,
+        "temp": 0,
+        "value": 420
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 60
+          }
+        ],
+        "value": 30
+      }
+    },
+    "details": {
+      "blurb": "THE QUEEN — two souls, one crown (B20)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "infernal",
+          "thassilonian",
+          "varisian",
+          "shadowtongue"
+        ]
+      },
+      "level": {
+        "value": 21
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>THE FINAL BOSS (B20, the Everdawn Pool).</strong> Two souls wear one crown: the spoiled queen, and the seed of <strong>Kazavon</strong> ripening inside her. She floats in trance at the Pool's heart — <strong>10 days remain</strong> on the ritual (give the party two attempts; driven off twice, she finishes it — see What If Ileosa Wins). Noticing intruders, she releases the six @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.falseIleosa00001]{false Ileosas}, her @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ileosasFury00001]{Furies} teleport in, @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.ithierGylou00001]{Ithier} climbs from below — and the Pool spins up a @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.taniniverKaz0001]{taniniver} (5 charges each, replaceable). <strong>Only Serithtial ends her</strong>: suppress the regeneration, sunder the Crown, and the dragon-soul dies screaming. Her contract: un-raiseable without @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.sermignattoDvl01]{Sermignatto's} leave; his master Lorthact inherits if he's dead.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 35,
+      "senses": [
+        {
+          "type": "darkvision"
+        },
+        {
+          "type": "true-seeing"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 32
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 35
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 33
+      }
+    },
+    "skills": {
+      "performance": {
+        "base": 40
+      },
+      "deception": {
+        "base": 40
+      },
+      "diplomacy": {
+        "base": 40
+      },
+      "acrobatics": {
+        "base": 38
+      },
+      "arcana": {
+        "base": 36
+      },
+      "intimidation": {
+        "base": 38
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch6CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Queen Ileosa Arabasti",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!queenIleosa00001"
+}

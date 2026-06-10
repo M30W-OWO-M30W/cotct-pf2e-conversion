@@ -1,0 +1,410 @@
+{
+  "_id": "togomorBloatmg01",
+  "name": "Togomor",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "KKhGtx1pwfrR4ks4",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Bloated Slam",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 27
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d8+8",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!togomorBloatmg01.KKhGtx1pwfrR4ks4"
+    },
+    {
+      "_id": "y9twI1pixLAHDQoG",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Blood Magic",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A bloatmage: his blood is his power. Each spell he casts above 5th rank deals him @Damage[1d6[bleed]] (already in his HP); when he bleeds, his next spell gains +1 to its DC.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!togomorBloatmg01.y9twI1pixLAHDQoG"
+    },
+    {
+      "_id": "uhs2hl54n7VQSlzr",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "name": "Hemorrhage Wave",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 3
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A 30-ft cone of pressurized blood-magic: @Damage[14d6[force]] (@Check[type:reflex|dc:36|basic:true]); failures take @Damage[2d6[bleed]].</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "arcane",
+            "force"
+          ]
+        }
+      },
+      "_key": "!actors.items!togomorBloatmg01.uhs2hl54n7VQSlzr"
+    },
+    {
+      "_id": "gFapfNFDBcHVkwkP",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Wizard's Arsenal",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>CL-15 wizardry (DC 36): <em>quickened magic missile</em> volleys (5 darts), <em>black tentacles</em> (@Check[type:reflex|dc:36] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, Escape DC 36), <em>cone of cold</em> @Damage[13d6[cold]], <em>dimension door</em>, <em>fly</em>, layered <em>mirror image</em> + <em>stoneskin</em> (pre-cast).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "arcane"
+          ]
+        }
+      },
+      "_key": "!actors.items!togomorBloatmg01.gFapfNFDBcHVkwkP"
+    },
+    {
+      "_id": "UZNDnPfeOjPkyd2O",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Pudgyknuckles",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>His toad familiar croaks a stored spell (one 3rd-rank effect per scene) from a pocket dimension.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate"
+          ]
+        }
+      },
+      "_key": "!actors.items!togomorBloatmg01.UZNDnPfeOjPkyd2O"
+    },
+    {
+      "_id": "TcRhV3npe07eBgwh",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Thassilon Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 29
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!togomorBloatmg01.TcRhV3npe07eBgwh"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 7
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 36
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 290,
+        "temp": 0,
+        "value": 290
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 20
+      }
+    },
+    "details": {
+      "blurb": "Bloatmage seneschal of Castle Korvosa (A44)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "infernal",
+          "thassilonian"
+        ]
+      },
+      "level": {
+        "value": 15
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the bloatmage <strong>seneschal</strong> — Ileosa's vault-keeper and the castle's arcane warden (A44), grotesquely swollen with leeched blood. He knows the Hidden Way Below (A5) and warded it; his notes name the <strong>Sunken Queen</strong>. <strong>Morale:</strong> dimension-doors to the throne floor at ~60 HP; fights to the death only beside the queen's interests.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 26,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 24
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 22
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 28
+      }
+    },
+    "skills": {
+      "arcana": {
+        "base": 31
+      },
+      "occultism": {
+        "base": 29
+      },
+      "society": {
+        "base": 27
+      },
+      "intimidation": {
+        "base": 25
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch6CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Togomor",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!togomorBloatmg01"
+}
