@@ -1,0 +1,537 @@
+{
+  "_id": "laoriVaus0000001",
+  "name": "Laori Vaus",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "asvMLYYFiz0mexhR",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+1 Striking Spiked Chain",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 21
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+8",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laori-chain",
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "disarm",
+            "finesse",
+            "magical",
+            "trip"
+          ]
+        }
+      },
+      "_key": "!actors.items!laoriVaus0000001.asvMLYYFiz0mexhR"
+    },
+    {
+      "_id": "gONC9hmFSG7HwNOt",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Harm",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Void energy (DC 29). <strong>1 action</strong> (touch): @Damage[5d8[void]] to the living (basic @Check[type:fortitude|dc:29]) or that much healing to undead. <strong>2 actions</strong> (30 ft) adds +10. She channels several times a day — and can invert it to <em>mend her allies</em> through stimulating pain (treat as equivalent healing) when she has taken the PCs as friends.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "void"
+          ]
+        }
+      },
+      "_key": "!actors.items!laoriVaus0000001.gONC9hmFSG7HwNOt"
+    },
+    {
+      "_id": "SMXbVErGXS89xKnQ",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Savor the Sting",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>One creature within 30 feet relives exquisite agony: @Damage[4d6[mental]] and @Check[type:will|dc:29] or @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} with pain (Sickened 2 and @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} for 1 round on a critical failure). Laori giggles.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "mental",
+            "nonlethal",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!laoriVaus0000001.SMXbVErGXS89xKnQ"
+    },
+    {
+      "_id": "8VU1MjcxAvUc71kj",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Shadow Step",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Laori steps from one shadow to another she can see within 60 feet — Zon-Kuthon's roads are dark and quick.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "shadow",
+            "teleportation"
+          ]
+        }
+      },
+      "_key": "!actors.items!laoriVaus0000001.8VU1MjcxAvUc71kj"
+    },
+    {
+      "_id": "EwXafizNKpkyY6qr",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Umbral Chains",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Shadowy chains lash a 15-ft burst within 60 feet: @Damage[6d6[negative]] void damage and @Check[type:reflex|dc:29|basic:true]; a creature critically failing is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the chains (Escape DC 29) for 1 round.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "shadow",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!laoriVaus0000001.EwXafizNKpkyY6qr"
+    },
+    {
+      "_id": "MzizcEfo6Z1ig0Tt",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Zon-Kuthon Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 21
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!laoriVaus0000001.MzizcEfo6Z1ig0Tt"
+    },
+    {
+      "name": "Chain Mail",
+      "type": "armor",
+      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "chain-mail",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "flexible",
+            "noisy"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "chain-mail",
+        "bulk": {
+          "value": 2
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 6
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "medium",
+        "group": "chain",
+        "acBonus": 4,
+        "strength": 3,
+        "dexCap": 1,
+        "checkPenalty": -2,
+        "speedPenalty": -5,
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "subitems": []
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP"
+      },
+      "_id": "AU76763tOkCIvMfS",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!laoriVaus0000001.AU76763tOkCIvMfS"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 5
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 29
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 165,
+        "temp": 0,
+        "value": 165
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Cheerful Kuthite priestess; Brotherhood of Bones",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "elven",
+          "infernal",
+          "shadowtongue"
+        ]
+      },
+      "level": {
+        "value": 10
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> a chipper, utterly sincere elf priestess of <strong>Zon-Kuthon</strong> — a cheerful sadist and one of the campaign's strangest, most useful <strong>allies</strong>. She belongs to the <strong>Brotherhood of Bones</strong>, Kuthite fanatics hunting Kazavon's relics to prevent his resurrection; she tracked Andaisin to Korvosa, then stayed to find the dragon's seven whisper-touched artists. Six are suicides (their candle-lit skulls decorate Salvator's desk — she <em>speaks with dead</em> to them); Salvator, the strongest-touched, was taken before she arrived.</p><p><strong>Playing her:</strong> bubbly, friendly, casually horrifying. She offers an alliance to reach Salvator and trades her evidence — a bloodstained scrap of the <strong>seneschal's uniform</strong> — for it. She admits her faith freely but conceals the Brotherhood, her queen-suspicions, and Kazavon (except under magical compulsion — or when the story needs the crown reveal early). Rebuffed, she shadows the party and 'reappears' at a dramatic moment, ideally saving their lives. She returns as a major ally in Chapter 5 (Scarwall).</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 20,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 19
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 17
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 21
+      }
+    },
+    "skills": {
+      "religion": {
+        "base": 21
+      },
+      "intimidation": {
+        "base": 19
+      },
+      "occultism": {
+        "base": 17
+      },
+      "diplomacy": {
+        "base": 17
+      },
+      "stealth": {
+        "base": 17
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "elf"
+      ]
+    }
+  },
+  "folder": "ch3CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Laori Vaus",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!laoriVaus0000001"
+}

@@ -1,0 +1,367 @@
+{
+  "_id": "chokerBrute00001",
+  "name": "Choker Brute",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "RqceOuw8GSRNY5VE",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Tentacle",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d8+7",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "reach-10"
+          ]
+        }
+      },
+      "_key": "!actors.items!chokerBrute00001.RqceOuw8GSRNY5VE"
+    },
+    {
+      "_id": "EwwKsQG2UxM7n0dd",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sneak Attack",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>The choker deals 1d6 extra precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [
+          {
+            "key": "DamageDice",
+            "selector": "strike-damage",
+            "category": "precision",
+            "diceNumber": 1,
+            "dieSize": "d6",
+            "predicate": [
+              "target:condition:off-guard"
+            ]
+          },
+          {
+            "key": "RollOption",
+            "domain": "all",
+            "option": "target:condition:off-guard",
+            "toggleable": "totm",
+            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
+          }
+        ],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "rogue"
+          ]
+        }
+      },
+      "_key": "!actors.items!chokerBrute00001.EwwKsQG2UxM7n0dd"
+    },
+    {
+      "_id": "sE1XpbDxLhlZgSmj",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Choke",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Requirement</strong> The choker's last action was a successful Tentacle Strike.</p><hr /><p><strong>Effect</strong> It Grabs the target (@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}, Escape DC 21) and begins to strangle: the victim takes @Damage[1d8+7[bludgeoning]] at the start of each of the choker's turns and cannot speak or cast verbal spells while held.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack"
+          ]
+        }
+      },
+      "_key": "!actors.items!chokerBrute00001.sE1XpbDxLhlZgSmj"
+    },
+    {
+      "_id": "z5dRGBnFH20Exfc9",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Quickness",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>The choker is preternaturally quick: it gains an extra action each turn that it can use only to Stride or Climb (climb Speed 20 ft).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!chokerBrute00001.z5dRGBnFH20Exfc9"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 5
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": -2
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": -3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 78,
+        "temp": 0,
+        "value": 78
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 20
+      }
+    },
+    "details": {
+      "blurb": "Strangling rafter-lurker",
+      "languages": {
+        "details": "",
+        "value": [
+          "undercommon"
+        ]
+      },
+      "level": {
+        "value": 5
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> Pilts's rooftop allies from the playhouse days — they dispose of his corpses (eating the choice bits, stashing the rest across the Shingles; the headless state of recent deliveries doesn't bother them). Six nest in the palace attic (C7).</p><p><strong>Tactics:</strong> lurk in rafter-shadow; strike the moment someone opens the door from outside, or 3 rounds after intruders start moving within. Fight to the death.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 13,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 12
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 14
+      },
+      "stealth": {
+        "base": 13
+      },
+      "acrobatics": {
+        "base": 9
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "sml"
+      },
+      "value": [
+        "aberration"
+      ]
+    }
+  },
+  "folder": "ch3CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Choker Brute",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!chokerBrute00001"
+}

@@ -1,0 +1,615 @@
+{
+  "_id": "piltsSwastel0001",
+  "name": "Pilts Swastel",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "WgWQLzxmKaqJRGrU",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "War Razor",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 19
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d4+4",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "backstabber",
+            "deadly-d8",
+            "finesse"
+          ]
+        }
+      },
+      "_key": "!actors.items!piltsSwastel0001.WgWQLzxmKaqJRGrU"
+    },
+    {
+      "_id": "3YzzWKf0LYZyb6BC",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Crossbow",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 19
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+2",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "range-increment-120",
+            "reload-1"
+          ]
+        }
+      },
+      "_key": "!actors.items!piltsSwastel0001.3YzzWKf0LYZyb6BC"
+    },
+    {
+      "_id": "BNvIIJm4Y3Wgn5rr",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Dirge of Doom",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A grinding, theatrical death-hymn: enemies within 30 feet are @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} (no save, but a creature that ends its turn out of earshot recovers). His showman's counterpart, <em>Inspire Courage</em>, grants his mob +1 status to attacks, damage, and saves vs. fear.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "auditory",
+            "composition",
+            "emotion",
+            "fear",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!piltsSwastel0001.BNvIIJm4Y3Wgn5rr"
+    },
+    {
+      "_id": "Q2hMBUEdr8m8X1nb",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Confounding Performance",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Pilts targets one creature within 60 feet with a maddening harangue: @Check[type:will|dc:29] or the creature is @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused} for 1 round (3 rounds on a critical failure; he favors <em>charm</em> and <em>hold person</em> variants — Will save, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed} 1 round — as the mood takes him).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "auditory",
+            "concentrate",
+            "emotion",
+            "incapacitation",
+            "mental",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!piltsSwastel0001.Q2hMBUEdr8m8X1nb"
+    },
+    {
+      "_id": "FetJXfhZzQ9g7uvr",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Rod of Wonder",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Pilts Activates his beloved <strong>rod of wonder</strong> at a foe and gleefully narrates whatever chaos results (use the PF2e wand-of-wonder table). He does this even when losing — <em>especially</em> when losing.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "manipulate",
+            "magical"
+          ]
+        }
+      },
+      "_key": "!actors.items!piltsSwastel0001.FetJXfhZzQ9g7uvr"
+    },
+    {
+      "_id": "ijoWhWENHhPHwJYx",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Displacement",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>When personally threatened: attacks against Pilts suffer a 50% miss chance (as <em>blur</em>-displacement) for 1 minute, and he finally draws his razor.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "illusion",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!piltsSwastel0001.ijoWhWENHhPHwJYx"
+    },
+    {
+      "_id": "0U2Cy1p9BAQ9eqtV",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Dimension Door",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Pilts teleports up to 120 feet — his exit, twice. Below ~20 HP he doors to his chambers (C11), spends rounds snatching favourite prizes, then doors again to vanish into Old Dock and plot revenge. Out of doors and below ~10 HP, he drops to his knees and begs, offering anything.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "occult",
+            "teleportation"
+          ]
+        }
+      },
+      "_key": "!actors.items!piltsSwastel0001.0U2Cy1p9BAQ9eqtV"
+    },
+    {
+      "_id": "blrT7wvp5BomfbwC",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Theater Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 18
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!piltsSwastel0001.blrT7wvp5BomfbwC"
+    },
+    {
+      "name": "Leather Armor",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-banded-simple-leather-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "leather-armor",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "leather-armor",
+        "bulk": {
+          "value": 1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "light",
+        "group": "leather",
+        "acBonus": 1,
+        "strength": 0,
+        "dexCap": 4,
+        "checkPenalty": -1,
+        "speedPenalty": 0,
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "subitems": []
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA"
+      },
+      "_id": "HbAKVMG3XpFgqB2U",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!piltsSwastel0001.HbAKVMG3XpFgqB2U"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": -1
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 29
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 175,
+        "temp": 0,
+        "value": 175
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 20
+      }
+    },
+    "details": {
+      "blurb": "The Emperor of Old Korvosa; mad impresario",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "gnomish",
+          "varisian"
+        ]
+      },
+      "level": {
+        "value": 10
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the <strong>Emperor of Old Korvosa</strong> — a failed gore-theater impresario turned mob-tyrant, ruling Old Dock from a salvage-prop throne beside his guillotine. A showman-bard: glibness, charm, mirror-tricks, and a rod of wonder; his power is the <em>audience</em>, not his blade.</p><p><strong>Court:</strong> held daily, breakfast to dusk, with @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.jabbyrGnome00001]{Jabbyr} at the Tall Knife and four thugs at hand. He freely admits Salvator is his 'houseguest' but no Diplomacy or Intimidation wins an audience — only the <strong>blood pig wager</strong> (or violence). A <em>noticed</em> enchantment attempt = execution order. <strong>Morale:</strong> flees by dimension door at ~20 HP; his death or public surrender disbands the mob in 2d6 rounds.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 19,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 17
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 21
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 19
+      }
+    },
+    "skills": {
+      "performance": {
+        "base": 22
+      },
+      "diplomacy": {
+        "base": 20
+      },
+      "intimidation": {
+        "base": 20
+      },
+      "deception": {
+        "base": 20
+      },
+      "society": {
+        "base": 18
+      },
+      "thievery": {
+        "base": 17
+      },
+      "stealth": {
+        "base": 17
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch3CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Pilts Swastel",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!piltsSwastel0001"
+}

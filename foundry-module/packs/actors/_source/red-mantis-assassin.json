@@ -1,0 +1,957 @@
+{
+  "_id": "redMantisAssn001",
+  "name": "Red Mantis Assassin",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "wv97Ac419zXPNZ5G",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+1 Striking Sawtooth Saber",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 20
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+7",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "rma-saber",
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse",
+            "magical",
+            "twin"
+          ]
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.wv97Ac419zXPNZ5G"
+    },
+    {
+      "_id": "egexfv6pvZnS65FV",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Dagger",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 19
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4+7",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse",
+            "thrown-10",
+            "versatile-s"
+          ]
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.egexfv6pvZnS65FV"
+    },
+    {
+      "_id": "GS0pFgPZmEYmBBPq",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Sneak Attack",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>The assassin deals 3d6 extra precision damage to @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creatures.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [
+          {
+            "key": "DamageDice",
+            "selector": "strike-damage",
+            "category": "precision",
+            "diceNumber": 3,
+            "dieSize": "d6",
+            "predicate": [
+              "target:condition:off-guard"
+            ]
+          },
+          {
+            "key": "RollOption",
+            "domain": "all",
+            "option": "target:condition:off-guard",
+            "toggleable": "totm",
+            "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"
+          }
+        ],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "rogue"
+          ]
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.GS0pFgPZmEYmBBPq"
+    },
+    {
+      "_id": "JauJQczBPlr4aeb9",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Twin Sabers",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>The assassin makes two Sawtooth Saber Strikes against the same target (the twin trait adds +2 circumstance damage to the second). If both hit, combine the damage for resistances.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "flourish"
+          ]
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.JauJQczBPlr4aeb9"
+    },
+    {
+      "_id": "3F9wdRX9orioME1X",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Prayer Attack",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>The assassin weaves her blades point-down before a creature within 30 feet that can see her: @Check[type:will|dc:28] or the target is @UUID[Compendium.pf2e.conditionitems.Item.AdPVz7rbaVSRxHFg]{Fascinated} (it may re-save whenever a new threat appears). The assassin Sustains this hypnosis; after sustaining 3 full rounds, her next Saber Strike against the still-fascinated target is an <strong>automatic critical hit</strong> on a success — the Red Mantis's signature execution.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "incapacitation",
+            "mental",
+            "visual"
+          ]
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.3F9wdRX9orioME1X"
+    },
+    {
+      "_id": "H6YMby3cP1KHHPxt",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Red Shroud",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>Frequency</strong> twice per day. A veil of red mist (unaffected by wind) wreathes the assassin for 3 rounds: +1 circumstance bonus to AC and fast healing 2. If she dies while shrouded, she may disintegrate into red mist, leaving only her gear — denying enemies her remains.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate"
+          ]
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.H6YMby3cP1KHHPxt"
+    },
+    {
+      "_id": "AQUqapi80nGO4zFx",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Vanish",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>The assassin becomes @UUID[Compendium.pf2e.conditionitems.Item.zJxUflt9np0q4yML]{Invisible} until the end of her next turn or until she Strikes — her favored repositioning trick (she can also cast <em>feather fall</em> and <em>expeditious retreat</em>).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.AQUqapi80nGO4zFx"
+    },
+    {
+      "_id": "1a8KJ48ymcz6X9ST",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Mask of the Mantis",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Her insectile mask grants darkvision, and by spending charges: <em>see invisibility</em>, <em>deathwatch</em>, and a +2 item bonus to Perception (active when prepared for an ambush).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.1a8KJ48ymcz6X9ST"
+    },
+    {
+      "_id": "GxhO5TEh4RjD0cUX",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Assassin Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 17
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!redMantisAssn001.GxhO5TEh4RjD0cUX"
+    },
+    {
+      "name": "Leather Armor",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-banded-simple-leather-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "leather-armor",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "leather-armor",
+        "bulk": {
+          "value": 1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "light",
+        "group": "leather",
+        "acBonus": 1,
+        "strength": 0,
+        "dexCap": 4,
+        "checkPenalty": -1,
+        "speedPenalty": 0,
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "subitems": []
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA"
+      },
+      "_id": "TNS9BSw6vj4pA5ia",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!redMantisAssn001.TNS9BSw6vj4pA5ia"
+    },
+    {
+      "name": "Sawtooth Saber",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/sawtooth-saber.webp",
+      "system": {
+        "ammo": null,
+        "baseItem": "sawtooth-saber",
+        "bonus": {
+          "value": 0
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "advanced",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d6"
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.wkzxLpSe7LN6c5Ld]</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 5
+          }
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
+        },
+        "quantity": 2,
+        "range": null,
+        "reload": {
+          "value": null
+        },
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
+        },
+        "size": "med",
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "uncommon",
+          "value": [
+            "agile",
+            "finesse",
+            "twin"
+          ]
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "slug": "sawtooth-saber",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
+        }
+      },
+      "_id": "9BXstMSkynvIQRBO",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!redMantisAssn001.9BXstMSkynvIQRBO"
+    },
+    {
+      "name": "Dagger",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "dagger",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "agile",
+            "finesse",
+            "thrown-10",
+            "versatile-s"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 4,
+        "baseItem": "dagger",
+        "bulk": {
+          "value": 0.1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "sp": 2
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "category": "simple",
+        "group": "knife",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": null,
+        "expend": null,
+        "ammo": null,
+        "reload": {
+          "value": "-"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
+      },
+      "_id": "SYLbo17wAyv425lv",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!redMantisAssn001.SYLbo17wAyv425lv"
+    },
+    {
+      "_id": "2ASAXRxXh37noqHc",
+      "img": "systems/pf2e/icons/default-icons/equipment.svg",
+      "name": "Alchemist's Fire (x2) & Fire-Ward Potions",
+      "type": "equipment",
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "system": {
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+          "value": "<p>2 vials of alchemist's fire (her ambush-arson tools) and pre-quaffed potions of fire resistance (resistance 10 for the ambush) — see her tactics.</p>"
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 5
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 10
+          }
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "alchemical",
+            "consumable"
+          ]
+        },
+        "usage": {
+          "value": "worn"
+        }
+      },
+      "_key": "!actors.items!redMantisAssn001.2ASAXRxXh37noqHc"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -1
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 28
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 135,
+        "temp": 0,
+        "value": 135
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Elite Red Mantis killer (recurring)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 9
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the Red Mantis — the assassin guild Ileosa hired for the king's murder, now hunting <strong>Neolandus</strong> (and anyone shielding him). The campaign's recurring elite killers: paired ambushes here, more beneath the Longacre Building in Chapter 4.</p><p><strong>Ambush doctrine (Vencarlo's home):</strong> pre-buffed (fire resistance 10, mask charges burning, blades enchanted), hidden under the stairs (A6) and in the A7 rafters. Round 1 each hurls alchemist's fire into her level's fireplace, igniting the @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.spreadingFire001]{Spreading House Fire} they are warded against. They Red Shroud, pair up to flank, and Prayer-Attack a lone PC; the Spreading House Fire hazard is their battlefield. <strong>Morale:</strong> they fight to the death (and may dissolve to red mist).</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 18,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 17
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 20
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 16
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 20
+      },
+      "athletics": {
+        "base": 17
+      },
+      "stealth": {
+        "base": 20
+      },
+      "intimidation": {
+        "base": 15
+      },
+      "deception": {
+        "base": 15
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch3CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Red Mantis Assassin",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!redMantisAssn001"
+}

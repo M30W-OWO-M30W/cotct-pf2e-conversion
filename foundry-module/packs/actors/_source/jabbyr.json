@@ -1,0 +1,349 @@
+{
+  "_id": "jabbyrGnome00001",
+  "name": "Jabbyr",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "GNOQ6ZuNcXH3PhGR",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+1 Striking Greataxe",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 20
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d12+9",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "jabbyr-axe",
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "sweep"
+          ]
+        }
+      },
+      "_key": "!actors.items!jabbyrGnome00001.GNOQ6ZuNcXH3PhGR"
+    },
+    {
+      "_id": "Hs4QubhCRuR1IDJz",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Rage",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Jabbyr rages the instant combat begins: +4 damage (included), 16 temporary HP, −1 AC (included). While raging he cannot use concentrate actions.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "emotion",
+            "mental"
+          ]
+        }
+      },
+      "_key": "!actors.items!jabbyrGnome00001.Hs4QubhCRuR1IDJz"
+    },
+    {
+      "_id": "QqhjqNJcL4Brp5Yn",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "No Escape",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Trigger</strong> A foe within reach moves away.</p><hr /><p><strong>Effect</strong> Jabbyr Strides up to his Speed, following the foe; if he ends adjacent, he makes a Greataxe Strike against it.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!jabbyrGnome00001.QqhjqNJcL4Brp5Yn"
+    },
+    {
+      "_id": "aQW4StN8ONKrLIb0",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Operate the Tall Knife",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Jabbyr releases the guillotine's blade (see the Tall Knife hazard) — his sacred office, performed in full executioner's costume.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "manipulate"
+          ]
+        }
+      },
+      "_key": "!actors.items!jabbyrGnome00001.aQW4StN8ONKrLIb0"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 6
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": -3
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 26
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 160,
+        "temp": 0,
+        "value": 160
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 30
+      }
+    },
+    "details": {
+      "blurb": "Tongueless gnome executioner",
+      "languages": {
+        "details": "",
+        "value": [
+          "gnomish"
+        ]
+      },
+      "level": {
+        "value": 8
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> Pilts's executioner — a tongueless, one-eyed gnome berserker who calls the Emperor 'Unca Pit' and loves the guillotine like a pet. <strong>He never attacks gnomes</strong> unless struck first (Pilts knows never to order it). Understanding his babbling takes @Check[type:society|dc:20] (or Sense Motive at the GM's whim).</p><p><strong>Morale:</strong> fights to the death. If Pilts dies he freezes a round in shock, then resumes. If Pilts <strong>surrenders</strong> in his presence, Jabbyr snaps and attacks the ex-emperor for treason — and may demand the PCs help him strap 'Unca Pit' into the Tall Knife.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 15,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 17
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 13
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 19
+      },
+      "acrobatics": {
+        "base": 14
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "sml"
+      },
+      "value": [
+        "humanoid",
+        "gnome"
+      ]
+    }
+  },
+  "folder": "ch3CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Jabbyr",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!jabbyrGnome00001"
+}
