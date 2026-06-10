@@ -20,10 +20,12 @@ intra-module references MUST be **Compendium UUIDs**, not bare world UUIDs (bare
 `Actor./Item./Scene.` links are a regression — there should be 0).
 
 ## 2. DCs are always `@Check` enrichers
-Never leave a plain "DC 15" in text. Use `chk("type:thievery|dc:15")`. DCs are
-**re-judged to PF2e** (level-based / simple), never transliterated from PF1e. DCs
-found inside verbatim source prose are converted by `dcfix()` at build. `validate`
-warns on any raw `DC \d+` not wrapped in `@Check`.
+Never leave a plain "DC 15" in text. Use `chk("type:thievery|dc:15")`. DC authority
+order (GM directive, 2026-06-10): **1) the Olliebird community conversion's ruling**
+for that check (`research/olliebird/ch*.txt` — area-keyed; skills as named there);
+**2)** where the community is silent, re-judge to PF2e (level-based / simple).
+Never transliterate from PF1e. DCs found inside verbatim source prose are converted
+by `dcfix()` at build. `validate` warns on any raw `DC \d+` not wrapped in `@Check`.
 
 ## 3. Actor stat blocks: mechanics in items, everything else in notes
 - **Action/ability items = pure mechanics.** No tactics, no GM flavor, no "he flees

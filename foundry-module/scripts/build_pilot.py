@@ -177,12 +177,18 @@ def box(code, fallback_html):
 def _tc(s):  # title-case that respects apostrophes ("ZELLARA'S HOME" -> "Zellara's Home")
     return re.sub(r"[A-Za-z][A-Za-z']*", lambda m: m.group(0)[0].upper()+m.group(0)[1:].lower(), s)
 
+# OLLIEBIRD DC ALIGNMENT (research/olliebird/ch1.txt + ch2.txt Blood Veil = DC authority):
+# applied 49 rulings (48 ch1 DC sets — 8 more already matched — + the Blood Veil
+# Fort 24–30 band w/ crit-fail-skips-onset in the Conversion Guide), added 13 new
+# checks, skipped 5: hardness/HP/BT figures (not DCs); Grau "Make an Impression/
+# Lie" has no DC; C7 bribe-attitude framework has no DC; creature/template
+# substitutions out of scope; C6 smoke "Stupefied 2" is an effect, not a DC.
 # Convert PF1e DC references that appear inside the verbatim source prose into
 # PF2e @Check enrichers (clickable). PF1e skills/saves -> PF2e equivalents; DCs
 # re-judged to PF2e, not transliterated. Extend as new chapters surface more.
 _DCFIX = [
-    (r"a successful DC\s*12\s*Knowledge \(local\) check", "a successful @Check[type:society|dc:12] check"),
-    (r"a DC\s*25\s*Will save",                            "a @Check[type:will|dc:18|basic:false] save"),
+    (r"a successful DC\s*12\s*Knowledge \(local\) check", "a successful @Check[type:society|dc:15] check"),
+    (r"a DC\s*25\s*Will save",                            "a @Check[type:will|dc:20|basic:false] save"),
     (r"a successful DC 20 Diplomacy check",               "a successful @Check[type:diplomacy|dc:20] check"),
     # PF1e-isms / alignment-isms surfaced by the audit (patterns match source text;
     # replacements are ours) — keep each matched run ≤ 8 source words.
@@ -451,7 +457,7 @@ AW("amin-jalento", B.npc(A["amin"],"Amin Jalento",1,16,18,4,6,7,5,
    B.action(nid(),"Fight Defensively","1","<p>Amin focuses entirely on defense, gaining a +1 circumstance bonus to AC until the start of his next turn. He has never been in a real fight and avoids attacking if he can flee instead.</p>",["concentrate"]),
    B.gear("leather-armor",nid()), B.gear("healing-potion-minor",nid(),2),
    B.equipment(nid(),"Signet Ring & 12 pp",0,12,"<p>A young nobleman's signet ring and purse — about 12 pp.</p>",traits=["art-object"])],
-  notes="<p><strong>Role:</strong> a beardless young noble cornered by the mob in Event 5 — a quest-giver, not a combatant. If the PCs disperse the mob ("+chk("type:diplomacy|dc:18")+" or "+chk("type:intimidation|dc:18")+") or fight it off, Amin escapes.</p>"
+  notes="<p><strong>Role:</strong> a beardless young noble cornered by the mob in Event 5 — a quest-giver, not a combatant. If the PCs disperse the mob ("+chk("type:diplomacy|dc:16")+" or "+chk("type:intimidation|dc:19")+") or fight it off, Amin escapes.</p>"
         "<p><strong>Behavior:</strong> fights defensively only if cornered; flees at the first chance. <strong>Reward:</strong> if saved, he gratefully gives the party a gold ring worth 250 gp (award XP as if defeated).</p>",
   folder=F["a_creatures"], blurb="Rescued young nobleman (Event 5)", token_src=TOK("amin-jalento")))
 
@@ -469,7 +475,7 @@ AW("grau-soldado", B.npc(A["grau"],"Grau Soldado",4,21,62,11,11,5,9,
      potency=1, striking=1, price_gp=160, level=4),
    B.gear("chain-mail",nid()), B.gear("steel-shield",nid())],
   notes="<p><strong>Role:</strong> a recurring NPC — a well-liked Korvosan Guard watch sergeant (Vencarlo Orisini's expelled student) drowning his despair in drink. This 'fight' is meant to be survived and <strong>defused</strong>, not a kill.</p>"
-        "<p><strong>Defusing him:</strong> commiserate ("+chk("type:diplomacy|dc:20")+", or a Deception vs. his Perception) and he sobers up; "+chk("type:society|dc:18")+" recognizes the sergeant he was. A lesser restoration sobers him instantly. Escorted to Citadel Volshyenek, his fellow guards clean him up and he becomes a grateful ally.</p>"
+        "<p><strong>Defusing him:</strong> commiserate ("+chk("type:diplomacy|dc:19")+", or a Deception vs. his Perception) and he sobers up; "+chk("type:society|dc:18")+" recognizes the sergeant he was. A lesser restoration sobers him instantly. Escorted to Citadel Volshyenek, his fellow guards clean him up and he becomes a grateful ally.</p>"
         "<p><strong>If he duels:</strong> he limits attacks to the PC who accepted the duel; if another PC strikes him he cries 'Foul!' and flails at random foes. <strong>Morale:</strong> surrenders rather than dies. Award XP as if defeated whether he is beaten or talked down.</p>",
   folder=F["a_creatures"], blurb="Drunken watch sergeant; future ally", token_src=TOK("grau-soldado"), actor_link=True))
 
@@ -513,7 +519,7 @@ AW("verik-vancaskerkin", B.npc(A["verik"],"Verik Vancaskerkin",4,21,60,11,11,8,8
    B.gear("chain-mail",nid()), B.gear("spear",nid()), B.gear("healing-potion-minor",nid(),3)],
   notes="<p><strong>Role:</strong> deserter watch sergeant fronting the slaughterhouse — a recurring NPC, not a die-hard villain. He believes his Vudrani lover 'Meliya' (secretly the rakshasa Vimanda) is just feeding the poor; he has no idea his men murder for hire.</p>"
         "<p><strong>Tactics:</strong> fights from range with the longbow, switching to the spear only if engaged in melee. He hesitates several rounds before joining a fight below (fearing the Guard has come for him), often arriving as it ends.</p>"
-        "<p><strong>Surrender:</strong> he gives up if dropped below ~1/4 HP, or instantly if shown hard evidence of the murders (the severed finger, the buried stash, or a thug's confession). "+chk("type:intimidation|dc:18")+" cows him (he then flees if unbound); a near-impossible Diplomacy makes him helpful. <strong>Story award</strong> for taking him alive without combat. His silver dagger is the "+B.mon("raktavarna","raktavarna")+" spy.</p>",
+        "<p><strong>Surrender:</strong> he gives up if dropped below ~1/4 HP, or instantly if shown hard evidence of the murders (the severed finger, the buried stash, or a thug's confession). "+chk("type:intimidation|dc:16")+" cows him (he then flees if unbound); a near-impossible Diplomacy ("+chk("type:diplomacy|dc:27")+" to Make an Impression) makes him helpful. <strong>Story award</strong> for taking him alive without combat. His silver dagger is the "+B.mon("raktavarna","raktavarna")+" spy.</p>",
   folder=F["a_creatures"], blurb="Deserter watch sergeant; Arkona dupe", token_src=TOK("verik-vancaskerkin"), actor_link=True))
 
 # ---- Part Three: area C — Eel's End (custom NPCs) ----
@@ -539,7 +545,7 @@ AW("devargo-barvasi", B.npc(A["devargo"],"Devargo Barvasi",6,23,100,12,16,12,14,
    B.strike(nid(),"Hand Crossbow",16,"1d6","piercing",["range-increment-60","reload-1"]),
    B.sneak_attack(nid(),3,"Devargo"),
    B.action(nid(),"Prepare Spider Venom","passive","<p>Before a fight Devargo coats both gauntlets with spider venom. A creature he hits with a gauntlet is exposed to it: "+chk("type:fortitude|dc:24")+", a 1-stage poison inflicting "+B.cond("clumsy","Clumsy 2")+" and "+B.cond("enfeebled","Enfeebled 1")+" for 1 round (Clumsy 2 + Enfeebled 2 for 4 rounds on a critical failure).</p>",category="offensive"),
-   B.action(nid(),"Spring the Throne","free","<p><strong>Trigger</strong> Devargo's turn begins.</p><hr /><p><strong>Effect</strong> He flips the hidden switch in his throne, opening the trap door beneath the petitioner's spot. A creature on it must succeed at a "+chk("type:reflex|dc:25")+" or fall into the Spider's Web (C15) — and Chittersnap.</p>",["manipulate"]),
+   B.action(nid(),"Spring the Throne","free","<p><strong>Trigger</strong> Devargo's turn begins.</p><hr /><p><strong>Effect</strong> He flips the hidden switch in his throne, opening the trap door beneath the petitioner's spot. A creature on it must succeed at a "+chk("type:reflex|dc:17")+" to cling to the sides or fall into the Spider's Web (C15) — and Chittersnap.</p>",["manipulate"]),
    B.lore(nid(),"Underworld Lore",14),
    B.gear("spiked-gauntlet",nid(),2), B.gear("hand-crossbow",nid()), B.gear("healing-potion-minor",nid(),1),
    B.equipment("ch1DevargoVenom1","Spider Venom (4 Doses)",1,4,
@@ -565,7 +571,7 @@ AW("chittersnap", B.npc(A["chittersnap"],"Chittersnap",4,21,70,12,10,8,12,
    B.action(nid(),"Ettercap Venom","passive","<p>A creature damaged by Chittersnap's Jaws is exposed to its venom: "+chk("type:fortitude|dc:23")+", a 1-stage poison dealing @Damage[1d6[poison]] and "+B.cond("enfeebled","Enfeebled 2")+" for 1 round (4 rounds on a critical failure).</p>",category="offensive"),
    B.action(nid(),"Spider Master","passive","<p>Chittersnap commands every spider on Eel's End — the true source of Devargo's 'control.' While it lives, the dream spiders and giant spider act on its initiative. If it dies, all of them revert to feral hunting, attacking the nearest creature (Devargo included).</p>",category="defensive")],
   notes="<p><strong>Role:</strong> Devargo's hidden secret — a bloated ettercap lairing in the webbed hold (C15) below the throne, fed a steady diet of Devargo's victims. It views Devargo almost as a father.</p>"
-        "<p><strong>Tactics:</strong> webs prey at range, then closes with poisoned jaws and claws. It rarely leaves its web-choked den, where every square is difficult, poisonous terrain (a "+chk("type:reflex|dc:10")+" each round to avoid the dream-spider webs).</p>",
+        "<p><strong>Tactics:</strong> webs prey at range, then closes with poisoned jaws and claws. It rarely leaves its web-choked den, where every square is difficult, poisonous terrain (a "+chk("type:reflex|dc:15")+" each round to avoid the dream-spider webs).</p>",
   folder=F["a_creatures"], senses=[{"type":"darkvision"},{"acuity":"imprecise","type":"tremorsense","range":30}],
   blurb="Bloated ettercap; the real King of Spiders", token_src=TOK("chittersnap")))
 
@@ -588,7 +594,7 @@ AW("derro", B.npc(A["derro"],"Derro",2,18,30,6,8,4,6,
    B.strike(nid(),"Repeating Crossbow",9,"1d6","piercing",["range-increment-60","reload-0"]),
    B.action(nid(),"Insane Shriek","1","<p>The derro looses a burst of mad gibbering; one creature within 30 feet must succeed at a "+chk("type:will|dc:16")+" or be "+B.cond("sickened","Sickened 1")+" by the psychic noise.</p>",["auditory","emotion","mental"]),
    B.gear("crossbow",nid())],
-  notes="<p><strong>Role:</strong> one of Vreeg's insane subterranean kin guarding the warrens for Rolth (who took Vreeg on as an apprentice). <strong>Tactics:</strong> attacks on sight, then flees through the secret crawl-tunnels ("+chk("type:perception|dc:20")+" to find) to warn the others.</p>",
+  notes="<p><strong>Role:</strong> one of Vreeg's insane subterranean kin guarding the warrens for Rolth (who took Vreeg on as an apprentice). <strong>Tactics:</strong> attacks on sight, then flees through the secret crawl-tunnels ("+chk("type:perception|dc:21")+" to find) to warn the others.</p>",
   folder=F["a_creatures"], senses=[{"type":"darkvision"}], size="sml",
   blurb="Insane derro minion of Vreeg", token_src=TOK("derro")))
 
@@ -651,7 +657,7 @@ def HW(slug, doc):
 
 HW("slippery-boardwalk", B.hazard(A["boardwalk"],"Slippery Boardwalk",1,0,
   "<p>Obvious — no check needed to notice.</p>",
-  "<p>"+chk("type:acrobatics|dc:15")+" to cross carefully, or brace a stretch ("+chk("type:crafting|dc:15")+").</p>",
+  "<p>"+chk("type:acrobatics|dc:14")+" to Balance across, or brace a stretch ("+chk("type:crafting|dc:15")+").</p>",
   "<p>A barnacle-slick boardwalk (A3) 13 ft above shark water; the planks also groan under heavy loads.</p>",
   [B.action(nid(),"Slip","reaction","<p><strong>Trigger</strong> A creature Strides &gt;5 ft or fights on it.</p><hr /><p><strong>Effect</strong> "+chk("type:reflex|dc:15")+" or fall "+B.cond("prone","Prone")+"; on a critical failure, slide off and fall 13 ft into the river and the Jigsaw Shark's water (A12) — the water is deep enough and the fall short enough that the creature takes no falling damage.</p>")],
   folder=F["a_hazards"], traits=["environmental"], reset="<p>Persistent terrain.</p>"))
@@ -660,7 +666,7 @@ HW("rotten-ship-deck", B.hazard(A["rottendeck"],"Rotten Ship Deck",1,16,
   "<p>"+chk("type:perception|dc:16")+" to spot the unsafe foredeck first.</p>",
   "<p>"+chk("type:crafting|dc:16")+" to shore up a path, or keep to the sound stern.</p>",
   "<p>The derelict Kraken's Folly (A9) has a rotten foredeck; only the stern holds weight.</p>",
-  [B.action(nid(),"Collapse","reaction","<p><strong>Trigger</strong> A Medium+ creature moves onto the foredeck toward the bow.</p><hr /><p><strong>Effect</strong> "+chk("type:reflex|dc:16|basic:true")+" or crash to the hold (A11) for @Damage[1d6[bludgeoning]] and land "+B.cond("prone","Prone")+" among the drain spiders.</p>")],
+  [B.action(nid(),"Collapse","reaction","<p><strong>Trigger</strong> A Medium+ creature moves onto the foredeck toward the bow.</p><hr /><p><strong>Effect</strong> "+chk("type:reflex|dc:15|basic:true")+" or crash to the hold (A11) for @Damage[1d6[bludgeoning]] and land "+B.cond("prone","Prone")+" among the drain spiders.</p>")],
   folder=F["a_hazards"], traits=["environmental"], reset="<p>Once collapsed, that stretch is gone.</p>"))
 
 HW("acid-spraying-skulls", B.hazard(A["acidskulls"],"Acid-Spraying Skulls",3,25,
@@ -684,7 +690,7 @@ IW("zellaras-harrow-deck", B.equipment(A["harrowdeck"],"Zellara's Harrow Deck",1
   "<p><strong>Story item — the Harrow subsystem anchor (CHG-0010).</strong> Inhabited by the spirit of the murdered fortune-teller Zellara; recovered in A14. Anchors the recurring Harrowing (hero-point-style suit boons). Becomes the Harrow Deck of Many Things in Ch.6.</p>",
   traits=["magical","divination"], rarity="unique", folder=F["i_treasure"]))
 IW("gaedrens-coded-ledger", B.equipment(A["ledger"],"Gaedren's Coded Ledger",0,0,
-  "<p><strong>Quest item.</strong> Records Gaedren's crimes in a Varisian cipher. "+chk("type:society|dc:17")+" (must read Varisian) to decode. Guard bounty: 15 gp (30 gp with the cipher key). Unlocks the 'Framed' background payoff.</p>",
+  "<p><strong>Quest item.</strong> Records Gaedren's crimes in a Varisian cipher. "+chk("type:society|dc:16")+" (Decipher Writing; must read Varisian) to decode. Guard bounty: 15 gp (30 gp with the cipher key). Unlocks the 'Framed' background payoff.</p>",
   traits=["evidence"], rarity="unique", folder=F["i_treasure"]))
 IW("garnet-amulet", B.equipment(A["garnet"],"Garnet Amulet",0,8,
   "<p>A cheap garnet amulet (Yargin). Converted treasure: ~8 gp gem (PF1e 100 gp, re-scaled).</p>",
@@ -768,7 +774,7 @@ _hf_body = ((_hf1 + _sub("Zellara's Home") + _hf_home_box + _hf2
 pages.append(newpage("hook","Haunted Fortunes",
   SR("Part 1: Haunted Fortunes","14-16")
   +_hf_body
-  +B.s_skill("<p><strong>First Harrowing → PF2e (CHG-0010).</strong> Run the reading as foreshadowing (a coming time of unrest; the PCs are fated heroes), then grant each PC a small pool of <strong>hero-point-style suit boons</strong> via "+itm("harrowdeck","Zellara's deck")+" — the recurring subsystem from here on. The illusions in her home are "+chk("type:will|dc:18")+" to disbelieve.</p>")
+  +B.s_skill("<p><strong>First Harrowing → PF2e (CHG-0010).</strong> Run the reading as foreshadowing (a coming time of unrest; the PCs are fated heroes), then grant each PC a small pool of <strong>hero-point-style suit boons</strong> via "+itm("harrowdeck","Zellara's deck")+" — the recurring subsystem from here on. The illusions in her home are "+chk("type:will|dc:20")+" to disbelieve.</p>")
   ,level=2))
 
 # 3. Scene Setup ---------------------------------------------------------------
@@ -781,7 +787,7 @@ pages.append(newpage("scene","Scene Setup",
 pages.append(newpage("features","Fishery Features",
   SR("A. Old Fishery","17")
   +RA("<p>A creaking, mold-mottled building of boarded windows and solid old doors, perched on pilings over the Jeggare River. It still renders 'dock-dumpling' slurry from spoiled fish — a cover for the crime-lord who dens beneath it.</p>")
-  +"<p>The fishery sits on a 13-ft embankment ("+chk("type:athletics|dc:15")+" to climb the slick bank). Doors are hardness 5 / 10 HP ("+chk("type:thievery|dc:15")+" to pick, or "+chk("type:athletics|dc:15")+" to force); Yargin's brass key opens them all. Standing hazards: the "+haz("boardwalk","Slippery Boardwalk")+" ("+pg(P["A3"],"A3")+") and the "+haz("rottendeck","Rotten Ship Deck")+" ("+pg(P["A9"],"A9")+") — either can dump a PC into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+").</p>"
+  +"<p>The fishery sits on a 13-ft embankment ("+chk("type:athletics|dc:14")+" to climb the slick bank). Doors are hardness 5 / 10 HP ("+chk("type:thievery|dc:18")+" to pick, or "+chk("type:athletics|dc:15")+" to force); Yargin's brass key opens them all. Standing hazards: the "+haz("boardwalk","Slippery Boardwalk")+" ("+pg(P["A3"],"A3")+") and the "+haz("rottendeck","Rotten Ship Deck")+" ("+pg(P["A9"],"A9")+") — either can dump a PC into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+").</p>"
   +"<p><strong>Day vs. night.</strong> The encounters assume a daytime raid (9 orphans working, thugs at their posts). At night every door is locked, Yargin sleeps in "+pg(P["A5"],"A5")+", Giggles and Hookshanks run roving patrols (≈9pm / midnight / 3am), and "+mc("guarddog","Bloo")+" wanders "+pg(P["A8"],"A8")+" — his bark wakes the whole building.</p>"
   +B.s_skill("<p><strong>The orphans ('Lamm's Lambs').</strong> 9 work the fishery by day; all 26 sleep in "+pg(P["A8"],"A8")+" at night. Rally them with "+chk("type:diplomacy|dc:15")+" (Intimidation fails — they're inured to it); won over, they feed information or lend a hand. They know nothing past "+pg(P["A9"],"A9")+" — those sent below never return.</p>")
   +SEC("<p>They are <strong>non-combatants and never an XP-for-kill source</strong> (CHG-0107). Invaded at night they're too frightened to fight and flee into the slums once the thugs fall. Treat a rescued orphan as a 'Missing Child' background payoff, not a stat block.</p>"),level=2))
@@ -791,15 +797,15 @@ def area(code,name,page_html): pages.append(newpage(code,f"{code}. {name}",page_
 
 area("A1","Front Door", SR("A1","18")
   +box("A1","<p>Weathered double doors stand shut in the fishery's flank, a broken signboard swinging from a length of rusted chain above them. Brine and the stink of week-dead fish hang thick in the air.</p>")
-  +"<p>The main doors are locked ("+chk("type:thievery|dc:15")+"). Most business runs through "+pg(P["A7"],"A7")+", so a knock — or a noisy attempt on the lock — brings "+act("yargin","Yargin")+" up from "+pg(P["A6"],"A6")+" to answer.</p>")
+  +"<p>The main doors are locked ("+chk("type:thievery|dc:18")+"). Most business runs through "+pg(P["A7"],"A7")+", so a knock — or a noisy attempt on the lock — brings "+act("yargin","Yargin")+" up from "+pg(P["A6"],"A6")+" to answer.</p>")
 
 area("A2","Loading Dock", SR("A2","18")
   +box("A2","<p>A fifteen-foot loading dock juts from the building. Carts wait half-laden with tar-caked barrels, each daubed with a red, fish-shaped splotch. A rickety stair drops to a second door barely three feet above the river.</p>")
-  +"<p>By day the doors into "+pg(P["A7"],"A7")+" stand open for the daily slurry shipment; the door to "+pg(P["A8"],"A8")+" is always locked ("+chk("type:thievery|dc:15")+"). The orphans do the heavy hauling under Hookshanks' eye.</p>")
+  +"<p>By day the doors into "+pg(P["A7"],"A7")+" stand open for the daily slurry shipment; the door to "+pg(P["A8"],"A8")+" is always locked ("+chk("type:thievery|dc:18")+"). The orphans do the heavy hauling under Hookshanks' eye.</p>")
 
 area("A3","Back Alley", SR("A3","18-20")
   +box("A3","<p>A slippery boardwalk clings to the south wall on barnacle-eaten pilings, worn thin below the waterline. It runs about thirteen feet above the river, sloping down toward the derelict ship to the east.</p>")
-  +"<p>The "+haz("boardwalk","Slippery Boardwalk")+" hazard: a careful pace is safe, but moving fast or fighting on it risks a fall into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+"); the planks also groan and give under heavy loads. The door into "+pg(P["A6"],"A6")+" is locked.</p>"
+  +"<p>The "+haz("boardwalk","Slippery Boardwalk")+" hazard: a careful pace is safe, but moving fast or fighting on it risks a fall into "+act("jigsawshark","the shark's")+" water ("+pg(P["A12"],"A12")+"); the planks also groan and give under heavy loads. The door into "+pg(P["A6"],"A6")+" is locked ("+chk("type:thievery|dc:18")+").</p>"
   +SEC("<p>Despite its state, this boardwalk is Gaedren's own private way in and out of his den ("+pg(P["A13"],"A13")+") — he uses it only a few times a month, spending days or weeks below to avoid being seen.</p>"))
 
 area("A4","Front Room", SR("A4","19")
@@ -816,8 +822,8 @@ area("A5","Barracks", SR("A5","20")
 
 area("A6","Yargin's Office", SR("A6","19-21")
   +box("A6","<p>A desk wedged into one corner — its bulk blocking the western door — overflows with chalk-scrawled slate boards. A slouching cabinet leans against the east wall.</p>")
-  +"<p>The fishery's 'books': slates of transactions and addresses, compiled monthly into scrolls in the cabinet — cover paperwork for any Guard inspection. "+act("yargin","Yargin Balko")+" works here and carries the brass key.</p>"
-  +SEC("<p>A floorboard behind the chair is a <strong>hidden, barred trapdoor</strong> ("+chk("type:perception|dc:18")+" to spot; "+chk("type:athletics|dc:17")+" or break to force) dropping straight into the boss's chamber ("+pg(P["A13"],"A13")+"). A meal-pulley rig makes the climb down trivial — a flanking route onto Gaedren that skips the whole lower floor.</p>")
+  +"<p>The fishery's 'books': slates of transactions and addresses, compiled monthly into scrolls in the cabinet — cover paperwork for any Guard inspection. "+act("yargin","Yargin Balko")+" works here and carries the brass key. The desk-blocked western door from "+pg(P["A4"],"A4")+" can be slipped past with "+chk("type:acrobatics|dc:18")+" to Squeeze.</p>"
+  +SEC("<p>A floorboard behind the chair is a <strong>hidden, barred trapdoor</strong> ("+chk("type:perception|dc:22")+" to spot; "+chk("type:athletics|dc:18")+" or break to force) dropping straight into the boss's chamber ("+pg(P["A13"],"A13")+"). The hole is tight — "+chk("type:acrobatics|dc:28")+" for a Medium creature to Squeeze through ("+chk("type:acrobatics|dc:16")+" for Small) — but a meal-pulley rope makes the climb down easy ("+chk("type:athletics|dc:11")+"): a flanking route onto Gaedren that skips the whole lower floor.</p>")
   +B.enc("Yargin Balko","Low · 40 XP",
      "<p>Opens with thrown <strong>Acid Flasks</strong>, then falls back to his crossbow; he's terrified of melee.</p>"
      +SEC("<p><strong>Morale:</strong> at the first melee hit (or once his acid is spent) Yargin panics and flees down the trapdoor to warn Gaedren — and may lead the PCs right onto the boss. If he reaches the den, start the "+pg(P["A13"],"A13")+" fight with Gobblegut already enraged.</p>"),
@@ -825,7 +831,7 @@ area("A6","Yargin's Office", SR("A6","19-21")
 
 area("A7","Upper Workroom", SR("A7","20-22")
   +box("A7","<p>The reek of fish and sweat stings the eyes. A great trough of half-rancid fish and brine drains through wooden chutes into a larger room beyond; a desk and a tall cabinet sit opposite.</p>")
-  +"<p>Four orphans feed the chutes here. The floor around the trough is slick ("+chk("type:acrobatics|dc:15")+" if moving faster than a Step). The cabinet holds petty cash, locked ("+chk("type:thievery|dc:15")+"; Yargin's key).</p>"
+  +"<p>Four orphans feed the chutes here. The floor around the trough is slick ("+chk("type:acrobatics|dc:14")+" to Balance if moving faster than a Step). The desk is locked ("+chk("type:thievery|dc:18")+"), as is the cabinet of petty cash ("+chk("type:thievery|dc:18")+"; Yargin's key).</p>"
   +"<p>"+act("hookshanks","Hookshanks Gruller")+", a gnome taskmaster, oversees the work — and dresses as one of the orphans, passing for one until a PC beats his Deception with "+chk("type:perception|dc:17")+" (gnome PCs get a bonus).</p>"
   +B.enc("Hookshanks + 4 orphans","Low · 40 XP",
      "<p>Hookshanks orders the orphans to attack, then opens the "+pg(P["A4"],"A4")+" door to loose "+mc("guarddog","Bloo")+" and raise the alarm; he fights with a kukri.</p>"
@@ -855,14 +861,14 @@ area("A10","Spider Nest", SR("A10","24")
 area("A11","Kraken's Hold", SR("A11","24")
   +box("A11","<p>Dark and dank, the hold smells of mildew. Crates and barrels lie stacked among puddles of standing river water.</p>")
   +"<p>Four more "+act("drainspider","drain spiders")+" infest the hold.</p>"
-  +SEC("<p>Gaedren built a <strong>secret door into the hull</strong> ("+chk("type:perception|dc:17")+") opening to the underpier ("+pg(P["A12"],"A12")+") and the boss. Spotting his tracks in the filth ("+chk("type:survival|dc:15")+") grants a circumstance bonus to find it.</p>")
+  +SEC("<p>Gaedren built a <strong>secret door into the hull</strong> ("+chk("type:perception|dc:18")+") opening to the underpier ("+pg(P["A12"],"A12")+") and the boss. Spotting his tracks in the filth ("+chk("type:survival|dc:16")+") grants a +5 circumstance bonus to find it.</p>")
   +B.enc("Drain Spider nest","Moderate · 80 XP (trivial with repellent)",
      "<p>Four drain spiders swarm anything that enters. Pair this with the "+haz("rottendeck","Rotten Deck")+" collapse from "+pg(P["A9"],"A9")+" for a single nasty moment.</p>",
      B.aside_token(["4× "+act("drainspider","Drain Spider (−1)")], img=TOK("drain-spider"))))
 
 area("A12","Underpier", SR("A12","24-25")
   +box("A12","<p>A narrow space runs beneath the fishery, three feet of headroom above the foamy river. Moss and rusted chain hang between the pilings, and a floating walkway threads west to a tiny two-and-a-half-foot door.</p>")
-  +"<p>Gaedren's escape skiffs are tied along the walkway. The squat door ("+chk("type:thievery|dc:17")+") leads into the den ("+pg(P["A13"],"A13")+"); a Medium creature must stoop to squeeze through.</p>"
+  +"<p>Gaedren's escape skiffs are tied along the walkway. The squat door ("+chk("type:thievery|dc:18")+") leads into the den ("+pg(P["A13"],"A13")+"); a Medium creature must stoop to Squeeze through ("+chk("type:acrobatics|dc:18")+"). A swimmer could instead Squeeze between the pilings straight into the den ("+chk("type:acrobatics|dc:28")+").</p>"
   +B.enc("Jigsaw Shark","Low · 40 XP · avoidable",
      "<p>The shark scavenges scraps drifting from above. It attacks anything that falls into the water, but only leaps onto the walkway if it is first attacked and damaged.</p>"
      +B.s_skill("<p>Stay dry and it stays a hazard, not a fight — though the "+haz("boardwalk","boardwalk")+" and "+haz("rottendeck","rotten deck")+" above exist precisely to feed it victims.</p>"),
@@ -884,8 +890,8 @@ area("A13","Gaedren's Playground", SR("A13","24-26")
 
 area("A14","Gaedren's Den", SR("A14","26-28")
   +box("A14","<p>A squalid bedroom-study: a lumpy bed against one wall, a table heaped with rotting food and scuttling roaches, a sagging dresser. At the foot of the bed sits a locked strongbox, a moldy ledger resting on its lid. A fly-blown hatbox sits atop the dresser.</p>")
-  +"<p>Gaedren's private quarters. The strongbox opens to the rusty iron key he carries, or "+chk("type:thievery|dc:15")+".</p>"
-  +SEC("<p><strong>The reveal.</strong> The hatbox holds <strong>Zellara's severed head</strong>, crudely made up to mimic life ("+chk("type:medicine|dc:14")+": dead for weeks) — confirming the woman who hired the party has been dead all along. Beneath it lies "+itm("harrowdeck","her haunted harrow deck")+", still inhabited by her spirit. Atop the strongbox is "+itm("ledger","Gaedren's coded ledger")+"; inside, "+itm("brooch","Queen Ileosa's Brooch")+" and the hoard. A key-shaped masterwork dagger among the loot is a gift from Gaedren's estranged son <strong>Rolth</strong> — foreshadowing the next chapter ("+chk("type:society|dc:20")+" recognizes the killer's signature blade).</p>")
+  +"<p>Gaedren's private quarters. The strongbox opens to the rusty iron key he carries, or "+chk("type:thievery|dc:18")+".</p>"
+  +SEC("<p><strong>The reveal.</strong> The hatbox holds <strong>Zellara's severed head</strong>, crudely made up to mimic life ("+chk("type:medicine|dc:10")+": dead for weeks) — confirming the woman who hired the party has been dead all along. Beneath it lies "+itm("harrowdeck","her haunted harrow deck")+", still inhabited by her spirit. Atop the strongbox is "+itm("ledger","Gaedren's coded ledger")+"; inside, "+itm("brooch","Queen Ileosa's Brooch")+" ("+chk("type:society|dc:16")+" recognizes it as the queen's) and the hoard. A key-shaped masterwork dagger among the loot is a gift from Gaedren's estranged son <strong>Rolth</strong> — foreshadowing the next chapter ("+chk("type:society|dc:18")+" recognizes the killer's signature blade).</p>")
   +B.s_treasure("<p>Full parcel on the "+pg(P["treasure"],"Treasure")+" page.</p>")
   +B.s_milestone("<p><strong>Campaign-background closure (story awards — milestone credit, CHG-0021):</strong></p>"
    "<ul><li><strong>Framed:</strong> decoding "+itm("ledger","the ledger")+" surfaces written proof that Gaedren orchestrated the crime the PC was framed for — their name can finally be cleared.</li>"
@@ -939,7 +945,7 @@ ev("cgm","A City Gone Mad",
   +box("CGM","<p>Smoke rises on the horizon (or, by night, the flicker of fires); alarm bells clang over screams, the clash of steel, and the periodic detonation of arcane power. A wing of Sable Company hippogriff riders sweeps toward Castle Korvosa; one wounded mount crashes into a statue. A herald cries 'The king is dead! Long live the queen!' — answered by 'Hang the queen!' The city has gone mad.</p>")
   +"<p>Use the <strong>Korvosa (Anarchy)</strong> city statistics now — see the Conversion Guide journal → <em>Korvosa: Reputation &amp; City Tiers</em>. Korvosa stays in turmoil until the PCs begin Part Three.</p>"
   +SEC("<p><strong>How the king really died (GM only).</strong> Ileosa had her stepbrother-in-law Venster coat the king's playing cards with <em>fool's leprosy</em>, a Red Mantis poison that mimics a fast leprosy and so <strong>resists</strong> <em>remove disease</em>. No one realized it was poison, not sickness; a <em>neutralize poison</em> would have saved him. The body is sealed in the royal crypt and crumbles too fast for <em>speak with dead</em>; by the time anyone could attempt <em>resurrection</em>, his soul is judged and beyond mortal magic. These stay mysteries for now.</p>")
-  +B.s_skill("<p><strong>Investigating the Queen.</strong> "+chk("type:society|dc:15")+" or "+chk("type:diplomacy|dc:20")+" (gather information) recalls common knowledge: Ileosa Arvanxi, born in Chelish Westcrown, scandalized her family to marry the aging Eodred II after a short courtship, and openly disdains Korvosa as 'a backwater colonial village.' Her true feelings — and her crimes — stay hidden this early. See the rumor table in your AP book (Appendix 2).</p>")
+  +B.s_skill("<p><strong>Investigating the Queen.</strong> "+chk("type:society|dc:15")+" or "+chk("type:diplomacy|dc:19")+" (gather information) recalls common knowledge: Ileosa Arvanxi, born in Chelish Westcrown, scandalized her family to marry the aging Eodred II after a short courtship, and openly disdains Korvosa as 'a backwater colonial village.' Her true feelings — and her crimes — stay hidden this early. See the rumor table in your AP book (Appendix 2).</p>")
   +B.s_conv("<p>Before Event 11, make sure the PCs have heard rumors that the king was murdered — these rile the city and set up the Queen's Scapegoat.</p>"))
 
 ev("e1","Event 1. A Return to Zellara's Home",
@@ -949,7 +955,7 @@ ev("e1","Event 1. A Return to Zellara's Home",
 
 ev("e2","Event 2. The Mysterious Brooch",
   SR("Event 2","31")
-  +"<p>When the PCs investigate "+itm("brooch","the brooch")+" from Gaedren's stash, "+chk("type:society|dc:15")+" recognizes it as the queen's. Any merchant they approach knows it instantly — it is registered with the Korvosan Guard as stolen, and the queen has offered a reward. The merchant advises returning it to Castle Korvosa to claim <strong>1,200 gp</strong>.</p>"
+  +"<p>When the PCs investigate "+itm("brooch","the brooch")+" from Gaedren's stash, "+chk("type:society|dc:16")+" recognizes it as the queen's. Any merchant they approach knows it instantly — it is registered with the Korvosan Guard as stolen, and the queen has offered a reward. The merchant advises returning it to Castle Korvosa to claim <strong>1,200 gp</strong>.</p>"
   +B.s_conv("<p>Following this up triggers "+pg(P["e8"],"Event 8: Long Live the Queen!")+" — the PCs' first audience with their future archenemy.</p>"))
 
 ev("e3","Event 3. The Mad Prophet",
@@ -970,7 +976,7 @@ ev("e4","Event 4. Imps and Dragons",
 ev("e5","Event 5. Meet the Mob",
   SR("Event 5","32-35")
   +"<p>Rioting laborers roam in mobs, battering anyone in finery with cries of 'Die, dandy!' and 'Death to the false queen!' The PCs come on a mob surrounding "+act("amin","Amin Jalento")+", a young nobleman. A burly woman jeers about her brother's dock-crushed arm — 'Wanna know what it feels like?' If the PCs do not intervene, the mob attacks Amin.</p>"
-  +B.s_skill("<p>"+chk("type:diplomacy|dc:18")+" or "+chk("type:intimidation|dc:18")+" disperses the mob long enough for Amin to escape — otherwise it is a fight against six rioters.</p>")
+  +B.s_skill("<p>"+chk("type:diplomacy|dc:16")+" or "+chk("type:intimidation|dc:19")+" disperses the mob long enough for Amin to escape — otherwise it is a fight against six rioters.</p>")
   +B.enc("Riot mob + Amin Jalento",xpb([-1]*6,2),
      "<p>6 "+act("rioter","rioters")+" (fragile mooks — each flees the instant it takes damage; the mob routs fast). "+act("amin","Amin")+" is a non-combatant who fights only defensively and flees when he can.</p>"
      +B.s_treasure("<p><strong>Reward:</strong> save Amin and he gives the party a gold ring worth <strong>250 gp</strong> (award XP as if the mob were defeated).</p>"),
@@ -979,7 +985,7 @@ ev("e5","Event 5. Meet the Mob",
 ev("e6","Event 6. The Drunken Guard",
   SR("Event 6","35-37")
   +"<p>The PCs run across "+act("grau","Grau Soldado")+" — a Korvosan Guard watch sergeant, once Vencarlo Orisini's prize student, now drunk and despondent in a tavern or staggering the streets. He bemoans the end of Korvosa; the king's death hit him hard, the riots harder.</p>"
-  +B.s_skill("<p>"+chk("type:society|dc:18")+" recognizes the well-liked sergeant he was. Commiserate ("+chk("type:diplomacy|dc:20")+", or Deception vs. his Perception) and he sobers; a <em>lesser restoration</em> does it instantly. The right move is to escort him to Citadel Volshyenek, where the Guard cleans him up. If the PCs mock him, he challenges them to a duel (he relocates to a back alley if asked; the Guard breaks up a public fight in 3d6 rounds).</p>")
+  +B.s_skill("<p>"+chk("type:society|dc:18")+" recognizes the well-liked sergeant he was. Commiserate ("+chk("type:diplomacy|dc:19")+", or Deception vs. his Perception) and he sobers; a <em>lesser restoration</em> does it instantly. The right move is to escort him to Citadel Volshyenek, where the Guard cleans him up. If the PCs mock him, he challenges them to a duel (he relocates to a back alley if asked; the Guard breaks up a public fight in 3d6 rounds).</p>")
   +B.enc("Grau Soldado (duel — defuse, don't kill)",xpb([4],3),
      "<p>A single, skilled but "+B.cond("sickened","Sickened")+"-drunk duelist. He limits attacks to the PC who accepted the duel; if another PC strikes him he cries 'Foul!' and flails at random foes, provoking reactions. <strong>Morale:</strong> surrenders rather than dies.</p>"
      +B.s_treasure("<p><strong>Reward:</strong> get him back to the Guard intact and he becomes a grateful recurring ally (award XP as if defeated). His +1 striking mithral longsword is the only thing of value he still owns.</p>"),
@@ -1046,7 +1052,7 @@ ev("e10","Event 10. The Ambassador's Secret",
   +vbox(["'Devargo would never let someone he recognizes"],
      "<p>Devargo would never admit a known ally of the Guard — but the PCs are unknowns. Visit Eel's End, win an audience, learn what Devargo knows of Amprei, and bring back proof of any illicit dealings; Cressida will use it to spike any embargo push. Devargo won't part with information cheaply — she supplies bribe gold, and whatever is left over the PCs keep. He is dangerous; if things turn violent, she won't mourn him.</p>",
      label="Cressida — The Mission")
-  +B.s_treasure("<p>Cressida hands over a pouch of <strong>1,000 gp</strong> in bribe money ("+chk("type:diplomacy|dc:24")+" talks her up to 1,500 gp) — whatever isn't spent on Devargo, the PCs keep. As she gives the address, Vencarlo offers to escort the party as far as Old Korvosa — he was headed to his academy anyway.</p>")
+  +B.s_treasure("<p>Cressida hands over a pouch of <strong>1,000 gp</strong> in bribe money ("+chk("type:diplomacy|dc:23")+" talks her up to 1,500 gp) — whatever isn't spent on Devargo, the PCs keep. As she gives the address, Vencarlo offers to escort the party as far as Old Korvosa — he was headed to his academy anyway.</p>")
   +SEC("<p><strong>Development:</strong> when the PCs deliver the letters, Cressida blushes as she reads them — they are <em>quite</em> salacious love letters to Amprei from <strong>Verania Tvastiox</strong>, young wife of one of his superiors in Cheliax (see "+pg(P["C14"],"C14")+") — then passes them to a clerk: perfect leverage. She pays a further <strong>500 gp</strong>. If word reached her that the King of Spiders is dead, she is quietly pleased but can't legally pay for it — instead she awards each PC the <em>drake's mark</em>, a medal worth 400 gp granting a <strong>+2 circumstance bonus to Diplomacy</strong> with citizens of Korvosa when worn openly.</p>")
   +B.s_conv("<p>This is the hook into Part Three's "+pg(P["cend"],"Eel's End (area C)")+". The bribe money matters — it is the PCs' lever on Devargo — and the walk with Vencarlo is the campaign's first long look at the man who is secretly Blackjack.</p>"))
 
@@ -1077,10 +1083,10 @@ _obst_rows = "".join(f"<tr><td>{i}</td><td>{n}</td><td>{chk(f'type:{s1}|dc:{d1}'
                      for i,(n,s1,d1,s2,d2) in enumerate(_OBST,1))
 ev("e12","Event 12. Into the Shingles",
   SR("Event 12","41-43")
-  +"<p>The PCs slip into Midland and reach 42 Moon Street. Trinia's neighbors shelter her and send up an alarm when the party is spotted (each of 2d6 neighbors can be won over with Deception vs. their Perception +3). Her third-floor flat is barricaded: "+chk("type:athletics|dc:18")+" forces the door — every round of delay is a head start.</p>"
+  +"<p>The PCs slip into Midland and reach 42 Moon Street. Trinia's neighbors shelter her and send up an alarm when the party is spotted (each of 2d6 neighbors can be won over with Deception vs. their Perception +3). Her third-floor flat is barricaded: "+chk("type:athletics|dc:20")+" forces the door — every round of delay is a head start.</p>"
   +box("E12FLAT","<p>A one-room flat — bedroom, kitchen, and painter's studio in one. Bread and cheese sit by full waterskins; an easel holds a half-finished painting of an imp and a house drake fighting atop a church steeple. A single window looks out over the tangled rooftops, a low bed beneath it.</p>")
   +SEC("<p>Warned, "+act("trinia","Trinia")+" casts a <em>Figment</em> of herself asleep in bed and creeps out the window — "+chk("type:perception|dc:17")+" to notice her slipping away (+2 circumstance if looking out the window); 4 unnoticed rounds and she escapes outright. Caught unbarricaded but warned, "+chk("type:perception|dc:13")+" spots her grabbing her dagger and wand before she leaps. Surprised in her sleep, she flees empty-handed.</p>")
-  +"<p><strong>The Shingles Chase</strong> (PF2e Chase subsystem). Run 15 obstacles; each PC attempts the listed skill on their turn to advance a chase point. "+act("trinia","Trinia")+" starts with a 0/3/5-obstacle lead depending on how thoroughly she was warned. A PC who fails badly <strong>falls to the street</strong>: take @Damage[2d6[bludgeoning]] and either "+chk("type:athletics|dc:16")+" to climb back, or "+chk("type:athletics|dc:16")+" / "+chk("type:reflex|dc:16")+" through the alleys to advance one obstacle. Catch her on the same obstacle and Grapple to end the chase; she escapes if she clears obstacle 15.</p>"
+  +"<p><strong>The Shingles Chase</strong> (PF2e Chase subsystem). Run 15 obstacles; each PC attempts the listed skill on their turn to advance a chase point. "+act("trinia","Trinia")+" starts with a 0/3/5-obstacle lead depending on how thoroughly she was warned. A PC who fails badly <strong>falls to the street</strong>: take @Damage[2d6[bludgeoning]] and either "+chk("type:athletics|dc:19")+" to climb back into the chase, or "+chk("type:athletics|dc:16")+" / "+chk("type:reflex|dc:16")+" through the alleys to advance one obstacle. Catch her on the same obstacle and Grapple to end the chase; she escapes if she clears obstacle 15.</p>"
   +"<table><thead><tr><th>#</th><th>Obstacle</th><th>Overcome</th></tr></thead><tbody>"+_obst_rows+"</tbody></table>"
   +B.s_treasure("<p><strong>Rewards:</strong> catching Trinia earns XP as if defeated, however the PCs then choose to handle her. Turn her over to Cressida → <strong>1,000 gp</strong>; hide her or let her go (Cressida quietly approves) → <strong>2,000 gp</strong> paid later, folded into the "+pg(P["e13"],"Event 13")+" reward to hide the money trail; hand her to the queen → 200 pp and an invitation to her execution.</p>")
   +B.s_conv("<p>Trinia is innocent and a recurring ally. If she is hidden (Cressida calls in Vencarlo to spirit her to Old Korvosa), she is safe for the rest of the chapter, and the queen simply announces that another 'captured assassin' has been apprehended instead.</p>"))
@@ -1126,6 +1132,7 @@ ev("bmeat","B. All the World's Meat",
 area("B1","Shop Front", SR("B1","46")
   +box("B1","<p>A sign bearing the image of a fat, smiling cow hangs above the entrance. A long counter runs over half the room; beyond it a door stands ajar. A low bench sits against the east wall, and a marble-topped table to the north displays cuts of meat before a grimy window, flies circling above.</p>")
   +"<p>Two "+act("cowhammer","Cow Hammer Boys")+" — Baldrago and Malder — hand out meat by day. Unless the PCs pose as needy locals they are gruffly told to 'kick off'; 'the night's special cuts' ends the hostility and opens the mercenary pitch. They never let anyone up to Verik. Push past them and they raise longbows and shout to "+pg(P["B4"],"B4")+" for help.</p>"
+  +B.s_skill("<p>"+chk("type:perception|dc:22")+" or "+chk("type:butchery-lore|dc:16")+" (or a similar trade Lore) notices far more meat going out the door than the pens' livestock could ever supply.</p>")
   +B.enc("Cow Hammer Boys (front)",xpb([2,2],3),
      "<p>2 "+act("cowhammer","Cow Hammer Boys")+" open with longbows, closing to clubs only if forced. Reinforced by the two in "+pg(P["B4"],"B4")+" if the alarm goes up.</p>",
      B.aside_token(["2× "+act("cowhammer","Cow Hammer Boy (2)")], img=TOK("cow-hammer-boy"))))
@@ -1135,7 +1142,7 @@ area("B2","Hall", SR("B2","46")
 
 area("B3","Meat Locker", SR("B3","46")
   +box("B3","<p>The air is stale, stinking of day-old meat and blood. Straw litters the floor beneath meat hooks affixed to walls and ceiling. A blood-stained table and two salt barrels stand to the north; double doors to the south are barred by an iron bar that runs along the ceiling to a floor-to-ceiling pole.</p>")
-  +SEC("<p><strong>The horror.</strong> Salted meat hangs overnight here. Among the pork and beef, "+chk("type:medicine|dc:20")+" or "+chk("type:nature|dc:20")+" confirms at least a half-dozen cuts are not from animals at all — they are <strong>humanoid</strong>. Hard proof of the murders that breaks Verik (see "+pg(P["B8"],"B8")+").</p>"))
+  +SEC("<p><strong>The horror.</strong> Salted meat hangs overnight here. Among the pork and beef, "+chk("type:medicine|dc:19")+" or "+chk("type:nature|dc:19")+" confirms at least a half-dozen cuts are not from animals at all — they are <strong>humanoid</strong>. Hard proof of the murders that breaks Verik (see "+pg(P["B8"],"B8")+").</p>"))
 
 area("B4","Killing Floor", SR("B4","47")
   +box("B4","<p>The floor of this grim chamber is strewn with blood-stained straw, and the reek of slaughter is overpowering. Meat hooks ride a ceiling track; a great hammer rests on a permanent bloodstain in the northwest corner. A bloodstained grate covers a hole in the floor to the south, flanked by two vats of water — one boiling, one cold — with butcher blocks and a reeking cast-off vat beyond.</p>")
@@ -1146,11 +1153,11 @@ area("B4","Killing Floor", SR("B4","47")
   +B.enc("Reefclaws (sewer below)",xpb([B.mon_lvl("reefclaw")]*3,3),
      "<p>3 "+B.mon("reefclaw","reefclaws")+" scavenge the grisly leftovers in the tunnel. Well-fed, they attack only intruders who disturb the remains (e.g. searching for the finger). Beware a reefclaw's death-frenzy and venom.</p>",
      B.aside_token(["3× "+B.mon("reefclaw","Reefclaw (1)")]))
-  +B.s_treasure("<p>"+chk("type:perception|dc:20")+" in the sewer finds a severed human finger wedged above the waterline, still wearing a fine silver-and-obsidian ring (~25 gp re-scaled) — and damning evidence of the murders.</p>"))
+  +B.s_treasure("<p>"+chk("type:perception|dc:19")+" in the sewer finds a severed human finger wedged above the waterline, still wearing a fine silver-and-obsidian ring (~25 gp re-scaled) — and damning evidence of the murders.</p>"))
 
 area("B5","Holding Pens", SR("B5","47")
   +box("B5","<p>Two foul-smelling animal pens take up most of the room, each a fenced gate around a long water trough and heaps of filthy hay. The floor is hard-packed earth.</p>")
-  +B.s_treasure("<p>"+chk("type:perception|dc:20")+" finds the gang's buried mercenary stash under the southern trough: re-scaled to PF2e, about <strong>40 gp</strong> in mixed coin plus a small clutch of jewelry and gems (~30 gp). The stash itself is evidence that breaks Verik.</p>"))
+  +B.s_treasure("<p>"+chk("type:perception|dc:19")+" finds the gang's buried mercenary stash under the southern trough: re-scaled to PF2e, about <strong>40 gp</strong> in mixed coin plus a small clutch of jewelry and gems (~30 gp). The stash itself is evidence that breaks Verik.</p>"))
 
 area("B6","Cattle Pen", SR("B6","47")
   +box("B6","<p>This large open-air cattle pen reeks of manure and animal despite the breeze through the stockade fence. A roofed shed to the south holds a straw-filled wagon.</p>")
@@ -1163,7 +1170,7 @@ area("B7","Break Room", SR("B7","47")
 area("B8","Slaughterhouse Office", SR("B8","48")
   +box("B8","<p>A single large desk stands in the eastern part of this office, made over into a bed with a bedroll, blankets, and pillows; a chamber pot beneath it. A table and three chairs sit to the west, papers strewn across the table — one pinned down by an exquisite silver dagger.</p>")
   +"<p>Verik's quarters. He drinks and sleeps here, paranoid the Guard will come for him. He still wears his Korvosan Guard armor. If he hears fighting below he dithers for several rounds before joining — often arriving as it ends.</p>"
-  +SEC("<p><strong>Verik surrenders</strong> if dropped below ~1/4 HP, "+chk("type:intimidation|dc:18")+", or — instantly — if shown the "+pg(P["B3"],"humanoid cuts")+", "+pg(P["B4"],"severed finger")+", or "+pg(P["B5"],"stash")+". Broken, he lets himself be arrested and (if made helpful) admits 'Meliya' put him up to it, though he can't say why an Arkona would care.</p>"
+  +SEC("<p><strong>Verik surrenders</strong> if dropped below ~1/4 HP, "+chk("type:intimidation|dc:16")+" to Coerce, "+chk("type:diplomacy|dc:27")+" to Make an Impression, or — instantly — if shown the "+pg(P["B3"],"humanoid cuts")+", "+pg(P["B4"],"severed finger")+", or "+pg(P["B5"],"stash")+". Broken, he lets himself be arrested and (if made helpful) admits 'Meliya' put him up to it, though he can't say why an Arkona would care.</p>"
        "<p><strong>The silver dagger is alive.</strong> It is a "+B.mon("raktavarna","raktavarna rakshasa")+", Vimanda's shapeshifted spy. It plays dead as a normal (non-magical, non-silver) dagger, hoping a PC loots it so it can later report on them. Exposed for what it is, it reverts and fights for 1d3 rounds before Vimanda severs the link and abandons it to die.</p>")
   +B.enc("Verik Vancaskerkin + the dagger-spy",xpb([4,B.mon_lvl("raktavarna")],3),
      "<p>"+act("verik","Verik")+" fights from range with his longbow, switching to the spear only in melee. The "+B.mon("raktavarna","raktavarna")+" joins only if discovered. <strong>This fight is often skipped entirely</strong> — bring evidence and Verik folds.</p>",
@@ -1177,7 +1184,7 @@ area("B8","Slaughterhouse Office", SR("B8","48")
 # =====================================================================
 ev("cend","C. Eel's End",
   B.s_milestone("<p><strong>C. Eel's End</strong> — a warship and four moored barges of vice ruled by "+act("devargo","Devargo Barvasi")+", the self-styled King of Spiders. Cressida sends the PCs to recover blackmail letters proving the Chelish ambassador Amprei's misdeeds. <strong>The goal is the letters, not Devargo's head</strong> — the intended path is social (please him with bribes and entertainment), though stealth or force are possible (force is dangerous at this level).</p>")
-  +SEC("<p><strong>A Walk with Vencarlo.</strong> Vencarlo Orisini escorts the PCs to Old Korvosa — develop him as a likable mentor; he is secretly the folk-hero <strong>Blackjack</strong> and is quietly assessing the party as a potential heir. He recurs throughout the campaign.</p>")
+  +SEC("<p><strong>A Walk with Vencarlo.</strong> Vencarlo Orisini escorts the PCs to Old Korvosa — develop him as a likable mentor; he is secretly the folk-hero <strong>Blackjack</strong> and is quietly assessing the party as a potential heir. He recurs throughout the campaign. "+chk("type:society|dc:20")+" recalls hearing of the old scandal binding Grau, Vencarlo, and Sabina — both were his students before the falling-out.</p>")
   +SEC("<p><strong>Devargo's fate is open.</strong> He pays his vice taxes and polices Eel's End, so the Guard leaves him be — but if the PCs kill him, the Guard quietly thanks them (no charges). <strong>Burning the barges</strong>, however, destroys the evidence and brings arson/murder prosecution. The easiest win is Diplomacy in "+pg(P["C7"],"the throne room (C7)")+".</p>")
   +B.s_skill("<p>Eel's End welcomes nearly everyone; only obvious Korvosan Guard, Hellknights, or Sable Company are turned away. Claiming Guard business but professing interest in a <em>hideout</em> (not Devargo) grants a large circumstance bonus to talk past the guards.</p>"))
 
@@ -1190,7 +1197,7 @@ area("C1","Eel's End Pier", SR("C1","50")
 
 area("C2","Eel's End Deck", SR("C2","51")
   +box("C2","<p>The large ship tied off to the pier bears the name <em>Eel's End</em>; its figurehead is a coiling eel with a woman's head. Drunkards and revelers dance on the open main deck, while the aft deck is clear. A pair of double doors painted with a complex spider open into the stern.</p>")
-  +"<p>Four "+act("enforcer","enforcers")+" sleep in the rigging; two more guard the doors to "+pg(P["C7"],"C7")+", barring the unexpected. "+chk("type:deception|dc:20")+" (claim Devargo expects you), "+chk("type:diplomacy|dc:24")+", or "+chk("type:intimidation|dc:18")+" (the guards then nervously escort you in) gets past them.</p>"
+  +"<p>Four "+act("enforcer","enforcers")+" sleep in the rigging; two more guard the doors to "+pg(P["C7"],"C7")+", barring the unexpected. "+chk("type:deception|dc:20")+" (claim Devargo expects you), "+chk("type:diplomacy|dc:27")+" (only "+chk("type:diplomacy|dc:18")+" if the PCs say they're on Guard business hunting a hiding man), or "+chk("type:intimidation|dc:17")+" (the guards then nervously escort you in) gets past them.</p>"
   +B.enc("Eel's End Enforcers (deck)",xpb([3]*6,4),
      "<p>All 6 deck "+act("enforcer","enforcers")+" if a fight erupts — an <strong>Extreme</strong> brawl at this level. The whole point of Eel's End is to <em>avoid</em> this by talking or sneaking.</p>",
      B.aside_token(["6× "+act("enforcer","Enforcer (3)")], img=TOK("eels-end-enforcer"))))
@@ -1210,15 +1217,15 @@ area("C5","The House of Clouds", SR("C5","51")
 area("C6","Dragon's Breath Corridor", SR("C6","52")
   +box("C6","<p>This once-proud vessel, the <em>Dragon's Breath</em>, has been painted gaudy red. A sign at the aft entrance reads simply, 'Pass into the Dreams of the Dragon.'</p>")
   +"<p>A dream-spider-smoke den run by <strong>Bezzeraty</strong> (5 gp entry), and the home of <strong>knivesies</strong> — Devargo's favorite blood-sport.</p>"
-  +B.s_skill("<p><strong>The smoke:</strong> a minute in the haze forces a "+chk("type:fortitude|dc:18")+" or the fumes leave you "+B.cond("clumsy","Clumsy 1")+" and "+B.cond("stupefied","Stupefied 1")+" for 1 hour (no further effect for 24 hours). Bezzeraty robs anyone who passes out.</p>")
+  +B.s_skill("<p><strong>The smoke:</strong> a minute in the haze forces a "+chk("type:fortitude|dc:17")+" or the fumes leave you "+B.cond("clumsy","Clumsy 1")+" and "+B.cond("stupefied","Stupefied 1")+" for 1 hour (no further effect for 24 hours). Bezzeraty robs anyone who passes out.</p>")
   +B.s_skill("<p><strong>Knivesies</strong> — Riddleport's blood-sport, beloved of Devargo. Two contestants stand on opposite ends of a long table, <strong>right hands strapped to their sides</strong> with boiled leather, a belt pouch at each waist and a dagger stuck in the tabletop between them. During a count of ten, bettors toss gold onto the table — roll [[/r 3d6+20]]{3d6+20 gp} for the pot — and stand at the end held by their chosen fighter. Then both contestants roll initiative.</p>"
    "<p><strong>Playing it in PF2e.</strong> Each turn a contestant can (one free hand only!): <strong>Snatch coins</strong> — a single Interact action that grabs [[/r 1d10]]{1d10 coins} but lets the opponent make a Ready-style Strike or Trip against you; <strong>grab the dagger</strong> (Interact — the round-1 lunge); Strike; or Shove/Trip ("+chk("type:athletics")+") to force the opponent off the table. Falling, touching the ground, or going unconscious loses instantly; otherwise the game ends when no coins remain on the table (or one is knocked off), and whoever pouched more coins wins. <strong>Payout:</strong> the winner takes half the pot; the rest is split among the bettors at the winner's end.</p>"
    "<p>Winning games for Devargo's amusement raises your standing in "+pg(P["C7"],"C7")+" — each win is a big step toward the letters.</p>"))
 
 area("C7","Throne of Spiders", SR("C7","52-54")
   +box("C7","<p>This converted captain's cabin is a throne room, its walls thick with webs in which scuttle dozens of spiders that never leave their silk. Two oaken tables and chairs fill the floor; aft, a cobwebbed leather chair sits on a low stage. A narrow door to port hangs ajar over stairs leading below. An iron birdcage hangs from the ceiling like a chandelier.</p>")
-  +"<p>"+act("devargo","Devargo Barvasi")+" holds court here from noon to a few hours past dusk, evaluating six hopeful thugs over a feast — a tall, muscular man with shaggy black hair and a fierce glare, black leather accented by a steel spider-shaped baldric, blade-knuckled gauntlets glistening with poison, and live spiders wandering his skin unremarked. (After midnight he retires below to "+pg(P["C14"],"C14")+" — the best hours to infiltrate.) The caged "+B.mon("house-drake","house drake")+" <strong>Majenko</strong> is his tormented plaything (he will sell it for an absurd 5,000 gp; freed — cage "+chk("type:athletics|dc:22")+" or "+chk("type:thievery|dc:25")+" — it serves its rescuer for a year). A hidden trap door before the throne ("+chk("type:perception|dc:20")+" to spot, again to find the throne-arm switch) drops a petitioner into "+pg(P["C15"],"C15")+".</p>"
-  +SEC("<p><strong>Winning the letters (social).</strong> Have one PC plead the case (standing — note — on the trap door) and roll "+chk("type:diplomacy|dc:24")+"; others may Aid ("+chk("type:diplomacy|dc:18")+"). Devargo despises Intimidation (it starts a fight). Outcomes: <strong>fail badly</strong> → he springs the trap and attacks; <strong>partial</strong> → he wants gold/entertainment (bribes raise his attitude ~+1 per 10 gp; each knivesies win is worth a big step); <strong>success</strong> → he sells the last two letters for ~150 gp (a second "+chk("type:diplomacy|dc:24")+" knocks it to ~100 gp); <strong>critical</strong> → delighted, he hands them over and wishes the PCs well. <strong>Story award</strong> for getting the letters without combat.</p>")
+  +"<p>"+act("devargo","Devargo Barvasi")+" holds court here from noon to a few hours past dusk, evaluating six hopeful thugs over a feast — a tall, muscular man with shaggy black hair and a fierce glare, black leather accented by a steel spider-shaped baldric, blade-knuckled gauntlets glistening with poison, and live spiders wandering his skin unremarked. (After midnight he retires below to "+pg(P["C14"],"C14")+" — the best hours to infiltrate.) The caged "+B.mon("house-drake","house drake")+" <strong>Majenko</strong> is his tormented plaything (he will sell it for an absurd 5,000 gp; freed — cage "+chk("type:athletics|dc:25")+" to Force Open or "+chk("type:thievery|dc:23")+" to pick — it serves its rescuer for a year). A hidden trap door before the throne ("+chk("type:perception|dc:20")+" to spot, again to find the throne-arm switch) drops a petitioner into "+pg(P["C15"],"C15")+" — "+chk("type:reflex|dc:17")+" to cling to the sides if it springs.</p>"
+  +SEC("<p><strong>Winning the letters (social).</strong> Have one PC plead the case (standing — note — on the trap door) and roll "+chk("type:diplomacy|dc:24")+"; others may Aid ("+chk("type:diplomacy|dc:18")+"). Devargo despises Intimidation (it starts a fight). Outcomes: <strong>fail badly</strong> → he springs the trap and attacks; <strong>partial</strong> → he wants gold/entertainment (bribes raise his attitude ~+1 per 10 gp; each knivesies win is worth a big step); <strong>success</strong> → he sells the last two letters for ~150 gp (a second "+chk("type:diplomacy|dc:23")+" knocks it to ~100 gp); <strong>critical</strong> → delighted, he hands them over and wishes the PCs well. <strong>Story award</strong> for getting the letters without combat.</p>")
   +B.enc("Devargo + hopeful thugs (if it turns violent)",xpb([6]+[-1]*6,4),
      "<p>"+act("devargo","Devargo")+" springs the trap door, then fights with poisoned gauntlets and Sneak Attack; he flees (invisible) below ~10 HP. The 6 hopeful "+act("rioter","thugs")+" are cowards who flee at the first damage and trip over each other. Enforcers from "+pg(P["C2"],"C2")+" arrive one per round once the alarm sounds.</p>",
      B.aside_token([act("devargo","Devargo Barvasi (6)"), "6× "+act("rioter","Hopeful Thug (−1)"), B.mon("house-drake","Majenko — caged")], img=TOK("devargo-barvasi")))
@@ -1228,12 +1235,12 @@ area("C7","Throne of Spiders", SR("C7","52-54")
 pages.append(newpage("Cbelow","C8-C12 & C16. Below Decks", SR("C8-C12, C16","54")
   +"<p>The stairs behind the throne room ("+pg(P["C7"],"C7")+") drop into the old warship's working guts. Everything here is locked or guarded by habit rather than men — Devargo's people rarely come below except to brew ("+pg(P["C9"],"C9")+") or to dump a body to Chittersnap ("+pg(P["C15"],"C15")+").</p>"
   +'<p class="subhead"><strong>C8. Privies</strong></p>'
-  +"<p>Three narrow privies line the wall, their befouled chutes opening straight into the river below. The chutes are an entrance of last resort: nothing larger than <strong>Tiny</strong> fits, and even a Tiny creature must Squeeze through with a successful "+chk("type:acrobatics|dc:30")+".</p>"
+  +"<p>Three narrow privies line the wall, their befouled chutes opening straight into the river below. The chutes are an entrance of last resort: nothing larger than <strong>Tiny</strong> fits, and even a Tiny creature must Squeeze through with a successful "+chk("type:acrobatics|dc:28")+".</p>"
   +'<p class="subhead"><strong>C10. Brig</strong></p>'
   +box("C10","<p>The room is empty and foul-smelling save for a mound of filthy straw seething with vermin.</p>")
   +"<p>Most troublemakers go straight down the trap door to Chittersnap — but when Devargo needs someone kept <em>alive</em>, they're stashed in this brig. It is currently empty (a ready-made cell if the GM needs one, or a place for captured PCs to wake).</p>"
   +'<p class="subhead"><strong>C11. Bilge Access</strong></p>'
-  +"<p>A hatch-opening drops 7 feet into the flooded bilge ("+'C16'+" below). A slimy knotted rope dangles over the lip — clammy but climbable without a check at a careful pace ("+chk("type:athletics|dc:5")+" if rushing or encumbered).</p>"
+  +"<p>A hatch-opening drops 7 feet into the flooded bilge ("+'C16'+" below). A slimy knotted rope dangles over the lip ("+chk("type:athletics|dc:14")+" to Climb).</p>"
   +'<p class="subhead"><strong>C12. Hold</strong></p>'
   +box("C12","<p>Crates, barrels, and broken furniture awaiting repair crowd this cramped hold.</p>")
   +"<p>Food, water, and firewood — little of actual value, but plenty of cover for sneaking PCs.</p>"
@@ -1253,13 +1260,13 @@ area("C13","Meeting Room", SR("C13","54")
 area("C14","Devargo's Quarters", SR("C14","54")
   +box("C14","<p>A clean, dry wooden chamber: a four-poster bed with carved posts and gauzy drapes against the far wall, a dresser, a round table and chair — and a wooden sea chest at the foot of the bed.</p>")
   +"<p>Devargo retires here after midnight to read the day's slate reports and sleep — the <strong>best time to infiltrate</strong> Eel's End — and flees here if the throne room ("+pg(P["C7"],"C7")+") goes badly for him.</p>"
-  +B.s_treasure("<p><strong>The sea chest</strong> opens to the key Devargo carries or "+chk("type:thievery|dc:30")+". His favourite treasures, re-scaled to PF2e: a jasper-studded amulet and an emerald-set gold necklace (art objects, ~120 gp the pair), a <strong>ring of feather fall</strong> with a jade-dragonfly cameo, a <strong>scroll of <em>blur</em></strong>, an <strong>elixir of love</strong>, two pouches of <strong>dust of appearance</strong>, a mother-of-pearl horn (~10 gp), and ~60 gp in coin.</p>")
+  +B.s_treasure("<p><strong>The sea chest</strong> opens to the key Devargo carries or "+chk("type:thievery|dc:28")+". His favourite treasures, re-scaled to PF2e: a jasper-studded amulet and an emerald-set gold necklace (art objects, ~120 gp the pair), a <strong>ring of feather fall</strong> with a jade-dragonfly cameo, a <strong>scroll of <em>blur</em></strong>, an <strong>elixir of love</strong>, two pouches of <strong>dust of appearance</strong>, a mother-of-pearl horn (~10 gp), and ~60 gp in coin.</p>")
   +SEC("<p><strong>And the prize:</strong> the chest also holds <strong>the last two scandalous letters</strong> to Ambassador Amprei from <strong>Verania Tvastiox</strong> — the young wife of one of Amprei's superiors back in Cheliax. The details are salacious and <em>exacting</em>, leaving no room for misinterpretation; made public, they would end the ambassador. This is the entire object of the mission — a stealth route to this chest skips the throne-room confrontation completely.</p>")
   +B.s_conv("<p>However the PCs obtain them, the two letters go to Cressida Kroft for the Event 10 reward (and her leverage over Ambassador Amprei).</p>"))
 
 area("C15","The Spider's Web", SR("C15","54-55")
   +box("C15","<p>This dark chamber is riddled with dizzying tunnels of thick cobweb. The floor is a sticky mass of webbing and hundreds of bones — many of them humanoid. Some webs shimmer and dance, almost reflecting rainbows.</p>")
-  +"<p>The lair of "+act("chittersnap","Chittersnap")+", the ettercap who is the true source of Devargo's 'spider control,' beneath the throne's trap door. The shimmering strands are dream-spider webs: every square is difficult terrain and a "+chk("type:reflex|dc:10")+" each round avoids their contact poison.</p>"
+  +"<p>The lair of "+act("chittersnap","Chittersnap")+", the ettercap who is the true source of Devargo's 'spider control,' beneath the throne's trap door. The shimmering strands are dream-spider webs: every square is difficult terrain and a "+chk("type:reflex|dc:15")+" each round avoids their contact poison.</p>"
   +B.enc("Chittersnap's den",xpb([4,B.mon_lvl("hunting-spider"),B.mon_lvl("dream-spider"),B.mon_lvl("dream-spider")],4),
      "<p>"+act("chittersnap","Chittersnap")+" (ettercap), one "+B.mon("hunting-spider","giant spider")+", and two "+B.mon("dream-spider","dream spiders")+". Kill the ettercap and every spider on Eel's End turns feral — even on Devargo.</p>",
      B.aside_token([act("chittersnap","Chittersnap (4)"), B.mon("hunting-spider","Giant Spider (1)"), "2× "+B.mon("dream-spider","Dream Spider (0)")], img=TOK("chittersnap")))
@@ -1278,7 +1285,7 @@ area("C17","Sodden Hold", SR("C17","55")
 # Zombie Shambler L-1.
 # =====================================================================
 ev("dwarrens","D. The Dead Warrens",
-  B.s_milestone("<p><strong>D. The Dead Warrens</strong> — a derro-infested undercity laboratory beneath Potter's Ward, the last chapter site (the PCs recover the murdered Shoanti boy Gaekhen's body here for Event 13). <strong>The entrance</strong> matches Elkaris's testimony ("+pg(P["e13"],"Event 13")+"): a partially collapsed mausoleum near the ward's southern edge, a toppled, headless sword-wielding gargoyle statue in the dirt before it. Wheelbarrow tracks at the surface ("+chk("type:perception|dc:15")+", "+chk("type:nature|dc:20")+" to read the small bare footprints around them as derro) lead behind the gargoyle to a trap-door inside.</p>")
+  B.s_milestone("<p><strong>D. The Dead Warrens</strong> — a derro-infested undercity laboratory beneath Potter's Ward, the last chapter site (the PCs recover the murdered Shoanti boy Gaekhen's body here for Event 13). <strong>The entrance</strong> matches Elkaris's testimony ("+pg(P["e13"],"Event 13")+"): a partially collapsed mausoleum near the ward's southern edge, a toppled, headless sword-wielding gargoyle statue in the dirt before it. Wheelbarrow tracks at the surface ("+chk("type:perception|dc:15")+", "+chk("type:nature|dc:21")+" to read the small bare footprints around them as derro) lead behind the gargoyle to a poorly hidden trap-door inside ("+chk("type:perception|dc:15")+").</p>")
   +SEC("<p><strong>GM:</strong> This is one of several labs kept by the necromancer <strong>Rolth</strong> (Gaedren Lamm's estranged son, the 'Key-Lock Killer'). <strong>Rolth is absent</strong> — away securing a scroll — and is <em>not</em> scheduled to appear; he returns after the PCs leave to find his lair wrecked, and hunts them in Chapter 2. In his stead the warrens are run by his derro apprentice "+act("vreeg","Vreeg")+".</p>")
   +SEC("<p><strong>Gaekhen's body is in four parts</strong> (Rolth harvested only the head): the <strong>legs</strong> in the corpse dump ("+pg(P["D4"],"D4")+"), the <strong>left arm</strong> clutched by the carrion golem ("+pg(P["D8"],"D8")+"), the <strong>head</strong> stitched to the flesh golem in the stitchery ("+pg(P["D11"],"D11")+"), and the <strong>torso + right arm</strong> — crudely animated by Vreeg — twitching on the bench in his chamber ("+pg(P["D13"],"D13")+"). Thousand Bones needs all four parts, not a whole body.</p>")
   +B.s_conv("<p><strong>Running the difficulty.</strong> In PF2e a lone at-level creature reads as <em>Trivial–Low</em> for four PCs, so most warren rooms are individually easy — the dungeon is an <strong>attrition gauntlet</strong>, not a string of set-piece fights.</p>"
@@ -1290,14 +1297,14 @@ ev("dwarrens","D. The Dead Warrens",
 
 area("D1","Ossuary", SR("D1","56")
   +box("D1","<p>This large room is supported by four wide pillars of stone beneath a twenty-foot dome. The walls are caked with skeletons set in mud — mostly adult human bones, with smaller ones here and there. Fifteen-foot-square bone-pits sit east and west; a crude hole gouged in the south wall opens a tunnel.</p>")
-  +"<p>An abandoned ossuary. Rolth animated guardians in the bone pits — four "+B.mon("skeleton-guard","human skeletons")+" (west) and a "+act("skelowlbear","skeletal owlbear")+" (east), spotted before they rise with "+chk("type:perception|dc:15")+". The skeletons pursue throughout the warrens but never up into Potter's Ward.</p>"
+  +"<p>An abandoned ossuary. Rolth animated guardians in the bone pits — four "+B.mon("skeleton-guard","human skeletons")+" (west) and a "+act("skelowlbear","skeletal owlbear")+" (east), spotted before they rise with "+chk("type:perception|dc:19")+". The skeletons pursue throughout the warrens but never up into Potter's Ward.</p>"
   +B.enc("Animated guardians",xpb([3,-1,-1,-1,-1],4),
      "<p>The "+act("skelowlbear","skeletal owlbear")+" and 4 "+B.mon("skeleton-guard","human skeletons")+" clatter up to attack. (The owlbear squeezes between the pillars and treats the narrow stairs as difficult terrain; unlike the skeletons it never leaves this room.)</p>",
      B.aside_token([act("skelowlbear","Skeletal Owlbear (3)"), "4× "+B.mon("skeleton-guard","Human Skeleton (−1)")], img=TOK("skeletal-owlbear")))
   +SEC("<p><strong>Foreshadowing (campaign):</strong> the ossuary was abandoned when the church of Pharasma moved its primary ossuary beneath the new cathedral. <strong>Later in the campaign the Pharasmins secretly ally with the growing rebellion against Queen Ileosa</strong> and offer the Dead Warrens — this room in particular — as a safe place for the rebellion to meet and plan. Clearing it now literally clears the rebellion's future war room; remind the players of this place when it returns.</p>"))
 
 area("D2","Crawl Spaces", SR("D2","56")
-  +"<p>Cramped secret tunnels the derros use to flit between rooms. Each concealed door is found with "+chk("type:perception|dc:20")+". They let the derros flank, ambush, and flee to raise the alarm.</p>")
+  +"<p>Cramped secret tunnels the derros use to flit between rooms. Each concealed door is found with "+chk("type:perception|dc:21")+". They let the derros flank, ambush, and flee to raise the alarm.</p>")
 
 area("D3","Derro Cave", SR("D3","56")
   +box("D3","<p>Rank with sweat and mud, the cavern holds four filthy straw pallets and a low table littered with dice and a miniature maze of carved clay.</p>")
@@ -1312,7 +1319,7 @@ area("D4","Corpse Dump", SR("D4","56-57")
   +B.enc("Otyugh",xpb([B.mon_lvl("otyugh")],4),
      "<p>One "+B.mon("otyugh","otyugh")+" — grab-and-drag, plus its filth-borne disease.</p>",
      B.aside_token([B.mon("otyugh","Otyugh (4)")]))
-  +B.s_treasure("<p>Among the body parts: <strong>Gaekhen's tattooed legs and hips</strong> (one of four body parts). "+chk("type:perception|dc:25")+" sifting the mud also turns up trinkets — an amber necklace (~35 gp re-scaled), a silver dagger, a sealed <strong>elixir of vision</strong>, a <strong>wand of spiritual weapon</strong>, and a <strong>ring of swimming</strong>.</p>"))
+  +B.s_treasure("<p>Among the body parts: <strong>Gaekhen's tattooed legs and hips</strong> (one of four body parts). "+chk("type:perception|dc:23")+" sifting the mud also turns up trinkets — an amber necklace (~35 gp re-scaled), a silver dagger, a sealed <strong>elixir of vision</strong>, a <strong>wand of spiritual weapon</strong>, and a <strong>ring of swimming</strong>.</p>"))
 
 area("D5","Exsanguination Chamber", SR("D5","57")
   +box("D5","<p>Three wooden tables stand in the middle of this room, their surfaces stained red. To the east, a ten-foot-wide hutch with wicker doors opens onto a straw-lined cage.</p>")
@@ -1338,7 +1345,7 @@ area("D7","Alchemy Lab", SR("D7","58")
   +B.s_treasure("<p>"+chk("type:perception|dc:20")+" (10 minutes' search) recovers usable salvage: an alchemist's lab, 3 doses of <strong>vermin repellent</strong> (Rolth is Gaedren's source for it), 2 tanglefoot bags, 4 doses of black adder venom, a hybridization funnel, 2 doses of silversheen, and a <strong>handy haversack</strong> holding 3 potions of healing, a lesser restoration potion, a potion of invisibility, 2 scrolls of <em>false life</em>, and a scroll of <em>dispel magic</em>.</p>"))
 
 area("D8","Store Room", SR("D8","58")
-  +"<p><strong>The door is boarded over:</strong> break it down ("+chk("type:athletics|dc:22")+") or pry the boards off — easy, but a noisy few minutes of work that announces the party to anything listening.</p>"
+  +"<p><strong>The door is boarded over:</strong> break it down ("+chk("type:athletics|dc:23")+") or pry the boards off — easy, but a noisy few minutes of work that announces the party to anything listening.</p>"
   +box("D8","<p>The one-time pantry is in shambles — broken crates and shelves strewn about, foodstuffs, firewood, and other supplies scattered across the floor.</p>")
   +"<p>Early this morning Rolth's newest "+B.mon("carrion-golem","carrion golem")+" went berserk, tore from its table in "+pg(P["D11"],"D11")+", and rampaged through "+pg(P["D7"],"D7")+" before he trapped it in here to 'simmer' — the delay (and the shopping list of smashed glassware) is why Rolth is absent today, and why he doesn't return until the PCs are gone. Open the door and the golem attacks at once, still clutching a tattooed severed arm.</p>"
   +B.enc("Carrion Golem",xpb([B.mon_lvl("carrion-golem")],4),
@@ -1365,7 +1372,7 @@ area("D11","Stitchery", SR("D11","59")
 
 area("D12","Rolth's Room", SR("D12","59")
   +box("D12","<p>This chamber holds a large four-poster bed and a simple writing desk, with a full-length mirror propped against an earthen wall.</p>")
-  +SEC("<p>Rolth keeps little here. "+chk("type:perception|dc:20")+" (automatic if a PC looks behind the mirror) reveals a hidden niche: masterwork thieves' tools, a pearl-and-silver snuffbox (~25 gp re-scaled) holding a dose of <strong>dust of disappearance</strong>, and a <strong>sustaining spoon</strong>. His spellbooks are not here — he carries them.</p>"))
+  +SEC("<p>Rolth keeps little here. "+chk("type:perception|dc:21")+" (automatic if a PC looks behind the mirror) reveals a hidden niche: masterwork thieves' tools, a pearl-and-silver snuffbox (~25 gp re-scaled) holding a dose of <strong>dust of disappearance</strong>, and a <strong>sustaining spoon</strong>. His spellbooks are not here — he carries them.</p>"))
 
 area("D13","Vreeg's Chamber", SR("D13","59-61")
   +box("D13","<p>A dry, well-kept chamber: a narrow bed, a half-bare shelf of books, bones, and skulls, and a long bench — on which lies a man's tattooed torso, right arm still attached, periodically thrashing and clutching at the air as if alive.</p>")
@@ -1529,7 +1536,7 @@ cg_pages=[B.page(nid(),"The Harrowing",
    "<tr><td>10</td><td>Catastrophe</td><td><strong>Point of no return:</strong> the Everdawn Pool gains charges early — the Ch.6 ritual timer shortens — and/or a mass-death beat darkens the denouement.</td></tr>"
    "</tbody></table>"
   +B.s_skill("<p><strong>GM options menu</strong> (pick what hurts <em>this</em> table; telegraph one tier early): <strong>A</strong> PC infection (the disease below; Gritty/Heroic/Grim tones — always an out) · <strong>B</strong> lose an NPC (throwaway→named by tier) · <strong>C</strong> lose a place (safe house/shop/district, reversible) · <strong>D</strong> faction cost (Korvosan Guard / Abadar aid thins — ties to Reputation) · <strong>E</strong> accelerate the villain (shorter Ch.6 timer) · <strong>F</strong> moral pressure (plague vs. politics — no wrong answer).</p>")
-  +"<p><strong>Blood Veil (disease).</strong> "+chk("type:fortitude|dc:20")+" (scale the DC to the chapter's level; ~20 in Ch.2). <strong>Onset</strong> 1 day. <strong>Stage 1</strong> "+B.cond("enfeebled","Enfeebled 1")+" (1 day); <strong>Stage 2</strong> "+B.cond("enfeebled","Enfeebled 2")+" and "+B.cond("drained","Drained 1")+" (1 day); <strong>Stage 3</strong> "+B.cond("enfeebled","Enfeebled 2")+" and "+B.cond("drained","Drained 2")+" (1 day); <strong>Stage 4</strong> "+B.cond("drained","Drained 3")+" and "+B.cond("enfeebled","Enfeebled 3")+". The PF1e Con+Cha damage becomes drained/enfeebled; the suppressant halts progression and steps the stage down rather than curing outright.</p>"
+  +"<p><strong>Blood Veil (disease).</strong> "+chk("type:fortitude|dc:24")+" for ordinary exposure, rising to "+chk("type:fortitude|dc:30")+" for concentrated sources (the cult's brewing vats and raw fluids in Ch.2); on a critical failure the victim <strong>skips the onset</strong> and immediately suffers Stage 1. <strong>Onset</strong> 1 day. <strong>Stage 1</strong> "+B.cond("enfeebled","Enfeebled 1")+" (1 day); <strong>Stage 2</strong> "+B.cond("enfeebled","Enfeebled 2")+" and "+B.cond("drained","Drained 1")+" (1 day); <strong>Stage 3</strong> "+B.cond("enfeebled","Enfeebled 2")+" and "+B.cond("drained","Drained 2")+" (1 day); <strong>Stage 4</strong> "+B.cond("drained","Drained 3")+" and "+B.cond("enfeebled","Enfeebled 3")+". The PF1e Con+Cha damage becomes drained/enfeebled; the suppressant halts progression and steps the stage down rather than curing outright.</p>"
   +"<p><strong>Persistent in-city exposure</strong> (atmosphere, not attrition): while in Plagued-tier Korvosa, a character attempts a flat check each downtime week — "+chk("type:flat|dc:5")+" at a low clock, up to "+chk("type:flat|dc:11")+" at a high clock — on a failure, save against Blood Veil at a reduced DC. Keep it light; make the clock respond to player action.</p>"
   +B.s_conv("<p>Track the clock + city tier on this page across chapters. <strong>Removability hatch:</strong> at any chapter break the GM may rule the suppressant became a true cure (revert to faithful) with zero downstream breakage. Full design: <code>design/persistent_plague.md</code>.</p>"),level=1),
  B.page(nid(),"Source Text, Read-Alouds & Handouts (Policy)",
