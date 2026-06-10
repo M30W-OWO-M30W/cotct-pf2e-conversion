@@ -29,7 +29,7 @@ def chk(s): return f"@Check[{s}]"
 def SEC(html): return B.s_secret(html, sid())
 def box(anchor, fb):
     t = B.verbatim(anchor)
-    return B.s_read("<p>" + t + "</p>") if t else B.s_read(fb)
+    return B.s_read(B.parafy(t)) if t else B.s_read(fb)
 CHC = "#8a1a1a"
 
 for f in [B.folder(F6["a_ch6"], "6. Crown of Fangs", "Actor", ACTOR_ROOT, 600000, CHC),
@@ -255,7 +255,13 @@ PG("Part 2: The Assault on Castle Korvosa",
   + SEC("<p><strong>The truth the castle hides:</strong> Ileosa is <em>gone</em> — decamped to the <strong>Sunken Queen</strong> in the Mushfens with the Crown and the harvest, leaving simulacra, devils, and the garrison to bleed the rebellion. The castle assault's prize is the <em>path</em>: Togomor's notes, Venster's testimony, and the Hidden Way Below (A5).</p>"))
 
 area6("A1-A25", "The Dungeon & First Floor", SR("A1-A25", 348)
-  + "<p><strong>The dungeon:</strong> the emptied Vault of Fangs (A1 — where the Crown was born), the royal crypts (A3 — Eodred's dust), and <strong>A5, the Hidden Way Below</strong> ("+chk("type:perception|dc:36")+", or Venster/Togomor's notes): the ancient Thassilonian shaft beneath the pyramid. <strong>A8:</strong> two "+B.mon("shining-child", "shining children")+" (Elite — "+encx([13, 13], 15)+") ward the old stair. <strong>A11, Venster's End:</strong> the walled-up card room — the first whisper of the ghost upstairs. <strong>First floor:</strong> gate-stairs, chapel (desecrated), prisons (A19–A22 — the rebellion's missing, freeable: +1 RP), guardrooms ("+encx([8]*4, 15)+" each).</p>")
+  + "<ul>"
+    "<li><strong>The dungeon:</strong> the emptied Vault of Fangs (A1 — where the Crown was born) and the royal crypts (A3 — Eodred's dust).</li>"
+    "<li><strong>A5 — The Hidden Way Below:</strong> "+chk("type:perception|dc:36")+", or Venster/Togomor's notes — the Thassilonian shaft beneath the pyramid.</li>"
+    "<li><strong>A8:</strong> two "+B.mon("shining-child", "shining children")+" (Elite — "+encx([13, 13], 15)+") ward the old stair.</li>"
+    "<li><strong>A11 — Venster's End:</strong> the walled-up card room — first whisper of the ghost upstairs.</li>"
+    "<li><strong>First floor:</strong> gate-stairs, desecrated chapel, the prisons (A19–A22 — the rebellion's missing, freeable: +1 RP), guardrooms ("+encx([8]*4, 15)+" each).</li>"
+   "</ul>")
 
 area6("A26-A44", "Second Floor — the Seneschal's Wing", SR("A26-A44", 356)
   + "<p>Offices, archives, the scriptorium — and the garrison heart: <strong>A37/A38</strong> mess and barracks ("+encx([8]*6 + [11]*3, 15)+" with the three Yallop matron-sisters). <strong>A43:</strong> the scriptorium's records (the castle's ledgers = the rebellion's evidence, +1 RP).</p>"
@@ -264,12 +270,24 @@ area6("A26-A44", "Second Floor — the Seneschal's Wing", SR("A26-A44", 356)
      B.aside_token([act(A6["togomor"], "Togomor (15)")])))
 
 area6("A45-A66", "Third Floor — Throne & Court", SR("A45-A66", 362)
-  + "<p><strong>A45, the Main Entrance Landing:</strong> the castle's hardest set-piece if forced ("+encx([15, 8, 8, 8, 8, 8, 8], 15)+" — "+act(A6["kayltanya"], "Kayltanya")+" + the gate-garrison; CR-18-equivalent — <em>do not knock</em>). <strong>A52, the Throne Room:</strong> "+act(A6["sermignatto"], "Sermignatto")+" holds false court ("+encx([15], 15)+", or a contract negotiation worth more than the fight). <strong>A54/A65:</strong> gatehouse galleries; <strong>A56:</strong> the arbiters' last honest chambers; <strong>A59, the Royal Bedroom:</strong> a "+act(A6["falseileosa"], "False Ileosa")+" 'discovered' among traps ("+encx([9, 9], 16)+" with her twin — the queen's first decoy lesson). <strong>A60:</strong> Sabina's spartan room (her letters humanize her surrender).</p>")
+  + "<ul>"
+    "<li><strong>A45 — Main Entrance Landing:</strong> the castle's hardest set-piece if forced ("+encx([15, 8, 8, 8, 8, 8, 8], 15)+" — "+act(A6["kayltanya"], "Kayltanya")+" + the gate-garrison; <em>do not knock</em>).</li>"
+    "<li><strong>A52 — The Throne Room:</strong> "+act(A6["sermignatto"], "Sermignatto")+" holds false court ("+encx([15], 15)+" — or a contract negotiation worth more than the fight).</li>"
+    "<li><strong>A54/A65:</strong> gatehouse galleries. <strong>A56:</strong> the arbiters' last honest chambers.</li>"
+    "<li><strong>A59 — The Royal Bedroom:</strong> a "+act(A6["falseileosa"], "False Ileosa")+" 'discovered' among traps ("+encx([9, 9], 16)+" with her twin — the queen's first decoy lesson).</li>"
+    "<li><strong>A60 — Sabina's room:</strong> spartan; her letters humanize her surrender.</li>"
+   "</ul>")
 
 area6("A67-A95", "Fourth Floor, Attics & Towers", SR("A67-A95", 370)
   + box("This huge, lofty chamber is illuminated by braziers",
         "<p>The grand salon's mirrors are draped in mourning-cloth, and behind a walled-up door in the old apartments, something knocks politely.</p>")
-  + "<p><strong>A72, the Grand Salon:</strong> the social heart, now a "+act(A6["falseileosa"], "False-Ileosa")+" stage ("+encx([9]*3, 16)+" — three at once, performing grief). <strong>A88–A89:</strong> "+act(A6["venster"], "VENSTER'S GHOST")+" — the kindest reveal in the campaign: listen, learn everything, promise him rest. <strong>A90:</strong> Domina's study (the castle's oldest secrets). <strong>A91–A92:</strong> the Epochal Tower clockworks (a climbing route in). <strong>A94, Seawatch:</strong> "+act(A6["mavrokeras"], "Mavrokeras")+" ("+encx([16], 15)+" — or "+chk("type:diplomacy|dc:38")+" and an empty-treasury ledger sends him home). <strong>AFTERSHOCKS:</strong> the castle taken (+5 RP), the rebellion surfaces — and Venster's truth points the party south, to the swamp.</p>")
+  + "<ul>"
+    "<li><strong>A72 — The Grand Salon:</strong> a "+act(A6["falseileosa"], "False-Ileosa")+" stage ("+encx([9]*3, 16)+" — three at once, performing grief).</li>"
+    "<li><strong>A88–A89 — VENSTER'S GHOST:</strong> "+act(A6["venster"], "the kindest reveal")+" — listen, learn everything, promise him rest.</li>"
+    "<li><strong>A90 — Domina's study:</strong> the castle's oldest secrets. <strong>A91–A92:</strong> the Epochal Tower clockworks (a climbing route in).</li>"
+    "<li><strong>A94 — Seawatch:</strong> "+act(A6["mavrokeras"], "Mavrokeras")+" ("+encx([16], 15)+" — or "+chk("type:diplomacy|dc:38")+" and an empty-treasury ledger sends him home).</li>"
+    "<li><strong>AFTERSHOCKS:</strong> the castle taken (+5 RP), the rebellion surfaces — and Venster's truth points south, to the swamp.</li>"
+   "</ul>")
 
 PG("Part 3: Legacy of Blood — the Sunken Queen",
   B.s_milestone("<p><strong>The Sunken Queen</strong> — a drowned Thassilonian pyramid in the Mushfens, Sorshen's face carved a hundred feet tall in its flank. Inside: the harvest of Korvosa's blood, the <strong>Everdawn Pool</strong>, and the queen at her ablutions. <strong>The timer: ~10 days of ritual remain</strong> (each day below burns a charge toward her permanent apotheosis — give the party two attempts at her).</p>")

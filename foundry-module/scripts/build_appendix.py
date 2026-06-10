@@ -58,9 +58,35 @@ PG("Korvosa & Beyond (Gazetteer Reference)",
   + "<p><strong>The hinterlands:</strong> Harse (Blackbird Ranch, Trots), Kaer Maga (the cliff-city resupply), the Cinderlands (Appendix-2 environment rules: heat, ash storms, thirst — used in Ch.4), the Mushfens (Ch.6's swamp road), Belkzen and the World's Edge passes (Ch.5's road).</p>")
 
 PG("Dramatis Personae (Campaign Index)",
-  "<p><strong>Allies &amp; patrons:</strong> Cressida Kroft · "+act("vencarloOrisini1", "Vencarlo Orisini / Blackjack")+" · "+act("neolandusKalep01", "Neolandus Kalepopolis")+" · "+act("triniaSabor00001", "Trinia Sabor")+" · "+act("grauSoldado00001", "Grau Soldado")+" · "+act("ishaniDhatri0001", "Ishani Dhatri")+" · "+act("aminJalento00001", "Amin Jalento")+" · Thousand Bones · "+act("krojunEatsWhat01", "Krojun Eats-What-He-Kills")+" · "+act("akramTruthspeak1", "Truthspeaker Akram")+" · "+act("marcusEndrin0001", "Marcus Endrin")+" · "+act("laoriVaus0000001", "Laori Vaus")+" · "+act("shadowcountSial1", "Shadowcount Sial")+" · "+act("sabinaMerrin0001", "Sabina Merrin")+" · "+act("vensterArabast01", "Venster's ghost")+" · Zellara.</p>"
-  + "<p><strong>Villains, by chapter:</strong> Gaedren Lamm (1) · "+act("reinerDavaulus01", "Davaulus")+", "+act("andaisinUrgath01", "Andaisin")+" (2) · "+act("piltsSwastel0001", "Pilts")+", "+act("bahorArkona00001", "Bahor")+", "+act("vimandaArkona001", "Vimanda")+", "+act("sivitDarksphinx1", "Sivit")+" (3) · "+act("cinderlander0001", "the Cinderlander")+", "+act("cinnabarRedMant1", "Cinnabar")+", "+act("zenobiaZenderh01", "Zenobia")+", "+act("kordaitraDesta01", "Kordaitra")+" (4) · "+act("mithrodarChain01", "Mithrodar")+", "+act("zevRavenkaDemi01", "Zev Ravenka")+", "+act("kleestadPharma01", "Kleestad")+" (5) · "+act("togomorBloatmg01", "Togomor")+", "+act("sermignattoDvl01", "Sermignatto")+", "+act("kayltanyaRedM001", "Kayltanya")+", "+act("queenIleosa00001", "QUEEN ILEOSA")+" (6).</p>"
-  + B.s_conv("<p><strong>Module complete:</strong> Chapters 1–6, four subsystems (Harrowing · Reputation/City Tiers · Blood Veil/Epidemic Clock · Respect &amp; Rebellion Points), the campaign backgrounds, and this postgame arc. Verbatim read-aloud renders only on the GM's machine (local AP.md injection); all mechanics are original PF2e conversion work. Run well.</p>"))
+  '<p class="subhead"><strong>Allies & Patrons</strong></p>'
+  + "<ul>"
+    "<li><strong>Cressida Kroft</strong> — Field Marshal; patron from Ch.1, rebel leader by Ch.6</li>"
+    "<li>"+act("vencarloOrisini1", "Vencarlo Orisini")+" — swordmaster, mentor — and Blackjack (Ch.3+)</li>"
+    "<li>"+act("neolandusKalep01", "Neolandus Kalepopolis")+" — the missing seneschal; the lawful lever (Ch.3+)</li>"
+    "<li>"+act("triniaSabor00001", "Trinia Sabor")+" — the framed painter (Ch.1-2, returns Ch.4)</li>"
+    "<li>"+act("grauSoldado00001", "Grau Soldado")+" — redeemed watch sergeant (Ch.1-2)</li>"
+    "<li>"+act("ishaniDhatri0001", "Ishani Dhatri")+" — Abadaran healer of the plague (Ch.2+)</li>"
+    "<li>"+act("aminJalento00001", "Amin Jalento")+" — rescued young noble (Ch.1, 3, 6)</li>"
+    "<li><strong>Thousand Bones</strong> — Skoan-Quah shaman; the Shoanti door (Ch.1, 4)</li>"
+    "<li>"+act("krojunEatsWhat01", "Krojun Eats-What-He-Kills")+" — Sklar-Quah champion; rival, then nalharest (Ch.4)</li>"
+    "<li>"+act("akramTruthspeak1", "Truthspeaker Akram")+" — the last truthspeaker (Ch.4)</li>"
+    "<li>"+act("marcusEndrin0001", "Marcus Endrin")+" — Sable commandant; the great rescue (Ch.3, 4)</li>"
+    "<li>"+act("laoriVaus0000001", "Laori Vaus")+" — cheerful Kuthite; the long redemption (Ch.3, 5)</li>"
+    "<li>"+act("shadowcountSial1", "Shadowcount Sial")+" — Brotherhood of Bones; would-be curate (Ch.4-5)</li>"
+    "<li>"+act("sabinaMerrin0001", "Sabina Merrin")+" — the queen's general; the great defection (Ch.6)</li>"
+    "<li>"+act("vensterArabast01", "Venster's ghost")+" — the kindest informant (Ch.6)</li>"
+    "<li><strong>Zellara</strong> — the harrow-spirit guide (whole campaign; guard her from Scarwall)</li>"
+   "</ul>"
+  + '<p class="subhead"><strong>Villains, by Chapter</strong></p>'
+  + "<ul>"
+    "<li><strong>Ch.1</strong> — "+act("RKfT6vJ5guinSBjo", "Gaedren Lamm")+" · "+act("vreegDerroNec001", "Vreeg")+"</li>"
+    "<li><strong>Ch.2</strong> — "+act("reinerDavaulus01", "Dr. Davaulus")+" · "+act("andaisinUrgath01", "Lady Andaisin")+" · "+act("ramoskaArkminos1", "Ramoska Arkminos")+" · "+act("jolistinaSusp001", "Jolistina")+"</li>"
+    "<li><strong>Ch.3</strong> — "+act("piltsSwastel0001", "Pilts Swastel")+" · "+act("bahorArkona00001", "Bahor")+" · "+act("vimandaArkona001", "Vimanda")+" · "+act("sivitDarksphinx1", "Sivit")+"</li>"
+    "<li><strong>Ch.4</strong> — "+act("cinderlander0001", "the Cinderlander")+" · "+act("cinnabarRedMant1", "Cinnabar")+" · "+act("zenobiaZenderh01", "Zenobia Zenderholm")+" · "+act("kordaitraDesta01", "Kordaitra Destaid")+"</li>"
+    "<li><strong>Ch.5</strong> — "+act("mithrodarChain01", "Mithrodar")+" · "+act("zevRavenkaDemi01", "Zev Ravenka")+" · "+act("belshallamUmbr01", "Belshallam")+" · "+act("kleestadPharma01", "Kleestad")+"</li>"
+    "<li><strong>Ch.6</strong> — "+act("togomorBloatmg01", "Togomor")+" · "+act("sermignattoDvl01", "Sermignatto")+" · "+act("kayltanyaRedM001", "Mistress Kayltanya")+" · "+act("queenIleosa00001", "QUEEN ILEOSA")+"</li>"
+   "</ul>"
+  + B.s_conv("<p><strong>Module complete:</strong> Chapters 1–6, four subsystems (Harrowing · Reputation/City Tiers · Blood Veil/Epidemic Clock · Respect &amp; Rebellion Points), the campaign backgrounds, and the postgame arc. Verbatim read-aloud renders only on the GM's machine (local AP.md injection); all mechanics are original PF2e conversion work. Run well.</p>"))
 
 journal = B.journal_entry(JIDA, "7. Appendices & Beyond", pages, folder=ADV_FOLDER)
 B.write("journals", "07-appendices-and-beyond", copy.deepcopy(journal), embed_pages=True)

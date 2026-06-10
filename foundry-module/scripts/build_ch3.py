@@ -41,7 +41,7 @@ def chk(s): return f"@Check[{s}]"
 def SEC(html): return B.s_secret(html, sid())
 def box(anchor, fallback_html):
     t = B.verbatim(anchor)
-    return B.s_read("<p>" + t + "</p>") if t else B.s_read(fallback_html)
+    return B.s_read(B.parafy(t)) if t else B.s_read(fallback_html)
 CHC = "#8a1a1a"
 
 # =====================================================================

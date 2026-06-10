@@ -24,6 +24,23 @@ def _paras():
         except OSError: raw = ""
         _PARAS_CACHE = [" ".join(p.split()) for p in re.split(r"\n\s*\n", raw)]
     return _PARAS_CACHE
+def parafy(text, target=550):
+    """Split one long paragraph into several <p> blocks at sentence boundaries
+    (~target chars each) — long verbatim read-aloud renders as a wall otherwise."""
+    text = text.strip()
+    if len(text) <= target * 1.5:
+        return "<p>" + text + "</p>"
+    sents = re.split(r"(?<=[.!?\u2019\u201d]) +", text)
+    out, cur = [], ""
+    for sent in sents:
+        if cur and len(cur) + len(sent) > target:
+            out.append(cur); cur = sent
+        else:
+            cur = (cur + " " + sent).strip()
+    if cur:
+        out.append(cur)
+    return "".join("<p>" + x + "</p>" for x in out)
+
 def verbatim(anchor):
     """Return the AP paragraph that starts with (or contains) `anchor`, re-flowed
     across mid-sentence image/page markers, with leading OCR drop-caps repaired.

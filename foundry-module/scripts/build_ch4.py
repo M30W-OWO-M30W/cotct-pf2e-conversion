@@ -36,7 +36,7 @@ def chk(s): return f"@Check[{s}]"
 def SEC(html): return B.s_secret(html, sid())
 def box(anchor, fallback_html):
     t = B.verbatim(anchor)
-    return B.s_read("<p>" + t + "</p>") if t else B.s_read(fallback_html)
+    return B.s_read(B.parafy(t)) if t else B.s_read(fallback_html)
 CHC = "#8a1a1a"
 
 folders = [
@@ -500,7 +500,16 @@ area4("E7-E11", "Crypts, the Daemon & the Mother of Thorns", SR("E7-E11", 245)
 area4("E12-E21", "The Gray Maiden Dungeons", SR("E12-E21", 248)
   + box("This grim chamber is outfitted with",
         "<p>This grim chamber is outfitted with rack, cage, stockade, and screw — and, on the table, a young woman mid-'lesson,' her tutor's head floating free of its body on a fan of glistening entrails.</p>")
-  + "<p><strong>E12</strong> observation office (secret doors "+chk("type:perception|dc:30")+"). <strong>E13:</strong> 12 imprisoned <strong>recruits</strong> who refused the Maidens (cells: Boule's or Kordaitra's keys, or "+chk("type:thievery|dc:40")+") — <strong>story award per woman freed</strong> (15 total with E18's three). <strong>E14, the secret cell:</strong> "+act(A4["endrin"], "Marcus Endrin")+" — see his entry; the E20 records reveal the door. <strong>E15/E16:</strong> the "+act(A4["gmguard"], "guard")+" posts (4 + 4 resting — ~5 minutes to armor up). <strong>E17:</strong> "+act(A4["tisharue"], "Tisharue")+", her heirloom <strong>+2 resilient mithral chain</strong>, and her dossier concluding <strong>Sabina Merrin was barely conditioned</strong>. <strong>E19:</strong> Vavana Dhatri's empty room (reassigned to the castle — a Ch.6 thread). <strong>E20:</strong> the <strong>records</strong> — every woman taken, every 'traitor' executed, and Endrin's cell — <strong>story award</strong>. <strong>E21:</strong> "+act(A4["kordaitra"], "Kordaitra")+" at her ciphers, the 'Sinister Sister' painting (~450 gp), and the emergency cache: a <strong>bag of holding IV</strong> of potions, <em>dust of disappearance</em>, a <strong>wand of cure critical wounds</strong>, and scrolls of <em>break enchantment, heal, limited wish,</em> and <em>resurrection</em>.</p>"
+  + "<ul>"
+    "<li><strong>E12 — Observation office:</strong> secret doors "+chk("type:perception|dc:30")+".</li>"
+    "<li><strong>E13 — Cells:</strong> 12 imprisoned recruits who refused the Maidens (Boule's or Kordaitra's keys, or "+chk("type:thievery|dc:40")+") — <strong>story award per woman freed</strong> (15 total with E18).</li>"
+    "<li><strong>E14 — The secret cell:</strong> "+act(A4["endrin"], "Marcus Endrin")+" (see his entry; the E20 records reveal the door).</li>"
+    "<li><strong>E15/E16 — Guard posts:</strong> 4 + 4 resting "+act(A4["gmguard"], "Gray Maiden Guards")+" (~5 minutes to armor up).</li>"
+    "<li><strong>E17 — Tisharue:</strong> "+act(A4["tisharue"], "the warden")+", her heirloom <strong>+2 resilient mithral chain</strong>, and her dossier: <em>Sabina Merrin was barely conditioned</em>.</li>"
+    "<li><strong>E19 — Vavana's room:</strong> empty (reassigned to the castle — a Ch.6 thread).</li>"
+    "<li><strong>E20 — The records:</strong> every woman taken, every 'traitor' executed, Endrin's cell — <strong>story award</strong>.</li>"
+    "<li><strong>E21 — Kordaitra:</strong> "+act(A4["kordaitra"], "the conditioner")+" at her ciphers; the 'Sinister Sister' painting (~450 gp); the cache: a <strong>bag of holding IV</strong> of potions, <em>dust of disappearance</em>, a <strong>wand of cure critical wounds</strong>, scrolls of <em>break enchantment, heal, limited wish, resurrection</em>.</li>"
+   "</ul>"
   + B.enc("E18 — the Maiden's Nursery (climax)", encx([11, 6, 6, 6, 6, 6], 12),
      "<p>"+act(A4["zenobia"], "Zenobia")+" mid-indoctrination behind a 5-"+act(A4["gmguard"], "guard")+" watch post; <strong>on the alarm "+act(A4["kordaitra"], "Kordaitra")+" relocates here</strong> ("+encx([11, 10, 6, 6, 6, 6, 6], 12)+"), and the Mother of Thorns or Vyloth may fall back per their morale. The vault's true boss-pile — thin it before it stacks.</p>",
      B.aside_token([act(A4["zenobia"], "Zenobia (11)"), act(A4["kordaitra"], "Kordaitra (10)"), "5× "+act(A4["gmguard"], "Gray Maiden Guard (6)")])))

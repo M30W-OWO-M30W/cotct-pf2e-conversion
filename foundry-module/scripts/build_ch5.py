@@ -36,7 +36,7 @@ def chk(s): return f"@Check[{s}]"
 def SEC(html): return B.s_secret(html, sid())
 def box(anchor, fb):
     t = B.verbatim(anchor)
-    return B.s_read("<p>" + t + "</p>") if t else B.s_read(fb)
+    return B.s_read(B.parafy(t)) if t else B.s_read(fb)
 CHC = "#8a1a1a"
 
 for f in [B.folder(F5["a_ch5"], "5. Skeletons of Scarwall", "Actor", ACTOR_ROOT, 500000, CHC),
@@ -383,7 +383,14 @@ area5("B1-B6", "First Floor — the Gate & the Hero", SR("B1-B6", 270)
      B.aside_token([act(A5["mandraivus"], "Mandraivus (13)"), haz(A5["vortexmadness"], "Vortex of Madness (10)")])))
 
 area5("B7-B24", "First Floor — Barracks, Kitchens & the Dragon", SR("B7-B24", 276)
-  + "<p><strong>B7–B14:</strong> the garrison wing — quarters, offices, the magus's and captain's rooms; <strong>B10</strong> holds the graveknight <strong>Knurlott</strong> (link "+B.mon("graveknight-warmaster", "Graveknight Warmaster")+", renamed — "+encx([14], 13)+"). <strong>B15, the Kitchens:</strong> the "+haz(A5["crematoryblast"], "Crematory Blast")+" + 4 "+act(A5["cinderghoul"], "cinder ghouls")+" ("+encx([9]*4, 13)+"). <strong>B17:</strong> 5 "+act(A5["scarguard"], "guards")+". <strong>B18:</strong> the "+haz(A5["polongbottles"], "Polong Bottles")+". <strong>B19:</strong> Malatrothe, a hollow caretaker-wight (run as an Elite "+B.mon("war-wraith", "war-wraith")+"). <strong>B20–B21:</strong> wine cellar and courtyard — a <strong>corpse lotus</strong> ("+encx([13], 13)+"; a Huge carrion-plant: grasping vines reach 20 ft, "+chk("type:reflex|dc:33")+" or "+B.cond("grabbed", "Grabbed")+" and fed toward the maw, @Damage[3d10+11[bludgeoning]] per round).</p>"
+  + "<ul>"
+    "<li><strong>B7–B14 — The garrison wing:</strong> quarters, offices, the magus's and captain's rooms.</li>"
+    "<li><strong>B10 — Knurlott:</strong> the graveknight (link "+B.mon("graveknight-warmaster", "Graveknight Warmaster")+", renamed — "+encx([14], 13)+").</li>"
+    "<li><strong>B15 — The Kitchens:</strong> the "+haz(A5["crematoryblast"], "Crematory Blast")+" + 4 "+act(A5["cinderghoul"], "cinder ghouls")+" ("+encx([9]*4, 13)+").</li>"
+    "<li><strong>B17:</strong> 5 "+act(A5["scarguard"], "Scarwall guards")+". <strong>B18:</strong> the "+haz(A5["polongbottles"], "Polong Bottles")+". <strong>B20:</strong> the wine cellar.</li>"
+    "<li><strong>B19 — Malatrothe:</strong> a hollow caretaker-wight (run as an Elite "+B.mon("war-wraith", "war-wraith")+").</li>"
+    "<li><strong>B21 — The Courtyard:</strong> a <strong>corpse lotus</strong> ("+encx([13], 13)+") — Huge carrion-plant; vines reach 20 ft, "+chk("type:reflex|dc:33")+" or "+B.cond("grabbed", "Grabbed")+" and fed toward the maw (@Damage[3d10+11[bludgeoning]] per round).</li>"
+   "</ul>"
   + B.enc("B23 — Belshallam's Lair", encx([15], 13),
      "<p>The "+act(A5["belshallam"], "umbral dragon")+" — <strong>SPIRIT ANCHOR</strong> — among his worm-pets (B22: 4 tenebrous worms, L9 shadow-larvae: bristles "+chk("type:fortitude|dc:28")+" or "+B.cond("paralyzed", "Paralyzed")+" 1 round). His hoard (B24): the wing's treasury, re-scaled L13–14 parcel + a <em>shadow</em> rune and the castle's best mundane plunder.</p>",
      B.aside_token([act(A5["belshallam"], "Belshallam (15) — ANCHOR")])))
@@ -395,7 +402,13 @@ area5("B25-B37", "The Guest Wing & the Observatory", SR("B25-B37", 284)
      B.aside_token([haz(A5["dansemacabre"], "Danse Macabre (14)")])))
 
 area5("C", "Second Floor & the Great Hall (C1-C20)", SR("C", 292)
-  + "<p><strong>C1:</strong> the gate-winch (10 "+act(A5["scarguard"], "guards")+"). <strong>C4, the Armory:</strong> an "+B.mon("iron-golem", "iron golem")+" ("+encx([13], 13)+") before racks of five-century steel (the castle's best mundane arms + a <em>+2 striking</em> cache). <strong>C6/C7:</strong> the "+haz(A5["obsessionhaunt"], "Obsession Haunts")+". <strong>C8:</strong> 4 geists (Elite "+B.mon("wraith", "wraiths")+"). <strong>C9:</strong> a riderless "+B.mon("nightmare", "nightmare")+" stabled in shadow. <strong>C10:</strong> the torture room and its penitent dead. <strong>C19/C20:</strong> the hunt-commander Anizora, a debilitated "+B.mon("dybbuk", "dybbuk")+" (Weak adjustment; she possesses a PC and <em>walks them</em> toward the smithy's forge).</p>"
+  + "<ul>"
+    "<li><strong>C1 — Gate-winch:</strong> 10 "+act(A5["scarguard"], "Scarwall guards")+".</li>"
+    "<li><strong>C4 — The Armory:</strong> an "+B.mon("iron-golem", "iron golem")+" ("+encx([13], 13)+") before racks of five-century steel (the castle's best mundane arms + a <em>+2 striking</em> cache).</li>"
+    "<li><strong>C6/C7:</strong> the "+haz(A5["obsessionhaunt"], "Obsession Haunts")+" (servitude / battle).</li>"
+    "<li><strong>C8:</strong> 4 geists (Elite "+B.mon("wraith", "wraiths")+"). <strong>C9:</strong> a riderless "+B.mon("nightmare", "nightmare")+" stabled in shadow. <strong>C10:</strong> the torture room's penitent dead.</li>"
+    "<li><strong>C19/C20 — Anizora:</strong> the hunt-commander, a debilitated "+B.mon("dybbuk", "dybbuk")+" (Weak adjustment) — she possesses a PC and <em>walks them</em> toward the smithy's forge.</li>"
+   "</ul>"
   + B.enc("C14 — THE GREAT HALL: Mithrodar", encx([16], 14),
      "<p>"+act(A5["mithrodar"], "MITHRODAR")+" enthroned in chains. Before all four anchors fall he re-forms in 1d4 days — fighting him early is how the castle <em>teaches</em>. After the fourth: the true battle, every freed soul straining at his chains. (Coordinate the curse-ladder on his sheet.)</p>",
      B.aside_token([act(A5["mithrodar"], "Mithrodar (16) — the Chained Spirit")])))

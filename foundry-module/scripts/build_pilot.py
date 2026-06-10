@@ -143,7 +143,7 @@ RABOX = {
 def box(code, fallback_html):
     """Read-aloud section: exact AP text if the source file is present, else paraphrase."""
     t = verbatim(RABOX.get(code, ""))
-    return B.s_read(f"<p>{t}</p>") if t else B.s_read(fallback_html)
+    return B.s_read(B.parafy(t)) if t else B.s_read(fallback_html)
 
 def _tc(s):  # title-case that respects apostrophes ("ZELLARA'S HOME" -> "Zellara's Home")
     return re.sub(r"[A-Za-z][A-Za-z']*", lambda m: m.group(0)[0].upper()+m.group(0)[1:].lower(), s)
@@ -215,7 +215,7 @@ def apspan(start, stop):
             merged.append((kind, txt))
     out = []
     for kind, txt in merged:
-        out.append(f'<p class="subhead"><strong>{txt}</strong></p>' if kind == "sub" else f"<p>{dcfix(txt)}</p>")
+        out.append(f'<p class="subhead"><strong>{txt}</strong></p>' if kind == "sub" else B.parafy(dcfix(txt)))
     for h in handouts:                                    # handouts as read-aloud boxes
         out.append(B.s_read(f'<p class="subhead"><strong>Player Handout</strong></p><p>{dcfix(h)}</p>'))
     return "".join(out)
@@ -1066,7 +1066,12 @@ ev("dwarrens","D. The Dead Warrens",
   B.s_milestone("<p><strong>D. The Dead Warrens</strong> — a derro-infested undercity laboratory beneath Potter's Field, the last chapter site (the PCs recover the murdered Shoanti boy Gaekhen's body here for Event 13). Tracks at the surface ("+chk("type:perception|dc:15")+", "+chk("type:nature|dc:20")+" to read them as derro) lead to a trap-door in a mausoleum.</p>")
   +SEC("<p><strong>GM:</strong> This is one of several labs kept by the necromancer <strong>Rolth</strong> (Gaedren Lamm's estranged son, the 'Key-Lock Killer'). <strong>Rolth is absent</strong> — away securing a scroll — and is <em>not</em> scheduled to appear; he returns after the PCs leave to find his lair wrecked, and hunts them in Chapter 2. In his stead the warrens are run by his derro apprentice "+act("vreeg","Vreeg")+".</p>")
   +SEC("<p><strong>Gaekhen's body is in four parts</strong> (Rolth harvested only the head): the legs in the corpse dump ("+pg(P["D4"],"D4")+"), the torso + right arm animated in the stitchery ("+pg(P["D11"],"D11")+"), the left arm clutched by the carrion golem ("+pg(P["D8"],"D8")+"), and the head stitched to the flesh-golem in "+pg(P["D11"],"D11")+". Thousand Bones needs all four parts, not a whole body.</p>")
-  +B.s_conv("<p><strong>Running the difficulty.</strong> In PF2e a lone at-level creature reads as <em>Trivial–Low</em> for four PCs, so most warren rooms are individually easy — the dungeon is an <strong>attrition gauntlet</strong>, not a string of set-piece fights. Lean into the design's own reinforcement: a "+act("derro","derro")+" who spots the party flees the "+pg(P["D2"],"crawl-spaces")+" to pull its kin (combine "+pg(P["D3"],"D3")+"/"+pg(P["D5"],"D5")+"/"+pg(P["D7"],"D7")+" derros into one Low–Moderate fight), and the "+pg(P["D1"],"ossuary")+" skeletons <em>pursue</em> — add them to a later room. The climax — "+act("vreeg","Vreeg")+" in "+pg(P["D13"],"D13")+" — is a true <strong>Severe</strong> boss.</p>"))
+  +B.s_conv("<p><strong>Running the difficulty.</strong> In PF2e a lone at-level creature reads as <em>Trivial–Low</em> for four PCs, so most warren rooms are individually easy — the dungeon is an <strong>attrition gauntlet</strong>, not a string of set-piece fights.</p>"
+   "<ul>"
+   "<li>A "+act("derro","derro")+" who spots the party flees the "+pg(P["D2"],"crawl-spaces")+" to pull its kin — combine "+pg(P["D3"],"D3")+"/"+pg(P["D5"],"D5")+"/"+pg(P["D7"],"D7")+" into one Low–Moderate fight.</li>"
+   "<li>The "+pg(P["D1"],"ossuary")+" skeletons <em>pursue</em> — add them to a later room.</li>"
+   "<li>The climax — "+act("vreeg","Vreeg")+" in "+pg(P["D13"],"D13")+" — is a true <strong>Severe</strong> boss.</li>"
+   "</ul>"))
 
 area("D1","Ossuary", SR("D1","56")
   +box("D1","<p>This large room is supported by four wide pillars of stone beneath a twenty-foot dome. The walls are caked with skeletons set in mud — mostly adult human bones, with smaller ones here and there. Fifteen-foot-square bone-pits sit east and west; a crude hole gouged in the south wall opens a tunnel.</p>")
