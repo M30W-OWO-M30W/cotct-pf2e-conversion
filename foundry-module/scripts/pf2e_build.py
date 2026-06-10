@@ -293,6 +293,26 @@ def adventure(_id, name, img, caption, folders, journals, scenes_, actors, items
             "folders": folders, "journal": journals, "scenes": scenes_, "actors": actors,
             "items": items, "tables": tables or [], "macros": macros or [], "playlists": [], "cards": []}
 
+# ---------- rolltable + macro ----------
+def rolltable(_id, name, formula, results, desc="", folder=None, sort=0):
+    """results: list of dicts with _id, range:[lo,hi], text (+ optional weight/type/img)."""
+    out = []
+    for r in results:
+        out.append({"_id": r["_id"], "type": r.get("type", "text"), "text": r["text"],
+                    "img": r.get("img", "icons/svg/d20-black.svg"), "weight": r.get("weight", 1),
+                    "range": r["range"], "drawn": False,
+                    "documentCollection": r.get("documentCollection"), "documentId": r.get("documentId"),
+                    "flags": {}, "_key": f"!tables.results!{_id}.{r['_id']}"})
+    return {"_id": _id, "name": name, "description": desc, "formula": formula,
+            "replacement": True, "displayRoll": True, "img": "icons/svg/d20-grey.svg",
+            "results": out, "folder": folder, "sort": sort, "ownership": {"default": 0},
+            "flags": {}, "_stats": dict(STATS), "_key": f"!tables!{_id}"}
+
+def macro(_id, name, command, img="icons/svg/dice-target.svg", folder=None, sort=0):
+    return {"_id": _id, "name": name, "type": "script", "img": img, "scope": "global",
+            "command": command, "author": None, "ownership": {"default": 0}, "folder": folder,
+            "sort": sort, "flags": {}, "_stats": dict(STATS), "_key": f"!macros!{_id}"}
+
 # ---------- writers ----------
 def write(pack, slug, doc, embed_items=False, embed_pages=False):
     d = PACKS / pack / "_source"

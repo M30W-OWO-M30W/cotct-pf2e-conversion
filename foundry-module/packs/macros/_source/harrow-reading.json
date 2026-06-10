@@ -1,0 +1,27 @@
+{
+  "_id": "cotctHarrowMac01",
+  "name": "Harrow Reading",
+  "type": "script",
+  "img": "icons/sundries/gaming/playing-cards.webp",
+  "scope": "global",
+  "command": "const suits=[['Hammers','Strength'],['Keys','Dexterity'],['Shields','Constitution'],['Books','Intelligence'],['Stars','Wisdom'],['Crowns','Charisma']];\nconst sel=(canvas&&canvas.tokens&&canvas.tokens.controlled)?canvas.tokens.controlled:[];\nlet b=`<p><strong>The Harrowing.</strong> Deal each PC a card from Zellara's Harrow deck. Each card's suit grants that PC a <em>Harrow Point</em> — one reroll this chapter on a check or save using that suit's ability score. Foreshadow events; don't spoil.</p>`;\nb+=`<p><strong>Suit → ability:</strong> Hammers→Str · Keys→Dex · Shields→Con · Books→Int · Stars→Wis · Crowns→Cha.</p>`;\nif(sel.length){b+='<p><strong>Random draw:</strong></p><ul>';for(const t of sel){const s=suits[Math.floor(Math.random()*6)];b+=`<li>${t.name}: <strong>${s[0]}</strong> → reroll ${s[1]} checks</li>`;}b+='</ul>';}\nelse{b+=`<p><em>Select PC tokens and re-run to auto-draw a suit for each, or roll the “Harrow Reading — Suit Draw” table.</em></p>`;}\nChatMessage.create({content:b,speaker:{alias:'Zellara'}});",
+  "author": null,
+  "ownership": {
+    "default": 0
+  },
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "_key": "!macros!cotctHarrowMac01"
+}

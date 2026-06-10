@@ -582,6 +582,41 @@ sc = B.scene(SCN,"Old Fishery",W,H,GRID,"modules/cotct-pf2e-conversion/assets/ma
 B.write("scenes","01-old-fishery",copy.deepcopy(sc))
 
 # =====================================================================
+# HARROW SUBSYSTEM (CHG-0010) — mechanical overlay only; the 54 card meanings
+# come from the GM's own Harrow deck (we ship no card text).
+# =====================================================================
+CG_JID="cotctGuide000001"; HARROW_TBL_ID="cotctHarrowTbl01"; HARROW_MAC_ID="cotctHarrowMac01"
+HARROW_SUITS=[("Hammers","Strength"),("Keys","Dexterity"),("Shields","Constitution"),
+              ("Books","Intelligence"),("Stars","Wisdom"),("Crowns","Charisma")]
+harrow_rows=[{"_id":nid(),"range":[i+1,i+1],
+              "text":f"<strong>{s}</strong> → grants a Harrow Point: reroll one <strong>{ab}</strong> check or save this chapter."}
+             for i,(s,ab) in enumerate(HARROW_SUITS)]
+harrow_tbl=B.rolltable(HARROW_TBL_ID,"Harrow Reading — Suit Draw","1d6",harrow_rows,
+  desc="<p>Draw a suit for a PC when not dealing from a physical Harrow deck (each suit = one ability score).</p>")
+B.write("rolltables","harrow-suit-draw",copy.deepcopy(harrow_tbl))
+
+HARROW_CMD = """const suits=[['Hammers','Strength'],['Keys','Dexterity'],['Shields','Constitution'],['Books','Intelligence'],['Stars','Wisdom'],['Crowns','Charisma']];
+const sel=(canvas&&canvas.tokens&&canvas.tokens.controlled)?canvas.tokens.controlled:[];
+let b=`<p><strong>The Harrowing.</strong> Deal each PC a card from Zellara's Harrow deck. Each card's suit grants that PC a <em>Harrow Point</em> — one reroll this chapter on a check or save using that suit's ability score. Foreshadow events; don't spoil.</p>`;
+b+=`<p><strong>Suit → ability:</strong> Hammers→Str · Keys→Dex · Shields→Con · Books→Int · Stars→Wis · Crowns→Cha.</p>`;
+if(sel.length){b+='<p><strong>Random draw:</strong></p><ul>';for(const t of sel){const s=suits[Math.floor(Math.random()*6)];b+=`<li>${t.name}: <strong>${s[0]}</strong> → reroll ${s[1]} checks</li>`;}b+='</ul>';}
+else{b+=`<p><em>Select PC tokens and re-run to auto-draw a suit for each, or roll the “Harrow Reading — Suit Draw” table.</em></p>`;}
+ChatMessage.create({content:b,speaker:{alias:'Zellara'}});"""
+harrow_mac=B.macro(HARROW_MAC_ID,"Harrow Reading",HARROW_CMD,img="icons/sundries/gaming/playing-cards.webp")
+B.write("macros","harrow-reading",copy.deepcopy(harrow_mac))
+
+cg_pages=[B.page(nid(),"The Harrowing",
+  B.s_desc("<p>“The cards know more than they tell.” At the start of each chapter, Zellara — and, after the Old Fishery, her haunted deck — deals the party a Harrow reading.</p>")
+  +"<p><strong>What it is.</strong> A short narrative reading that <em>foreshadows</em> the chapter (a coming time of unrest; the PCs are fated heroes) and grants each PC a small luck boon. Read the omens; don't spoil concrete events.</p>"
+  +"<p><strong>How to run it.</strong> Deal each PC one card from a real Harrow deck (your own — we ship no card text), or use the <strong>Harrow Reading</strong> macro / the <em>Harrow Reading — Suit Draw</em> rolltable to assign a suit. Each card's <strong>suit</strong> maps to one ability score:</p>"
+  +"<ul><li><strong>Hammers</strong> → Strength · <strong>Keys</strong> → Dexterity · <strong>Shields</strong> → Constitution · <strong>Books</strong> → Intelligence · <strong>Stars</strong> → Wisdom · <strong>Crowns</strong> → Charisma</li></ul>"
+  +B.s_skill("<p><strong>The boon (CHG-0010 — hero-point-style).</strong> The reading grants each PC one <strong>Harrow Point</strong> for the chapter: spend it like a Hero Point to <strong>reroll a check or save that uses the card-suit's ability score</strong> (keep the new result). Unspent Harrow Points fade at the next reading.</p>")
+  +"<p><strong>Optional swap.</strong> Groups wanting a deeper subsystem can run the <em>Stolen Fate</em> Harrowing ritual instead; the suit-boon default above keeps it light.</p>"
+  +B.s_conv("<p>Anchor item: "+itm("harrowdeck","Zellara's Harrow Deck")+" (recovered in the Old Fishery, inhabited by her spirit). It becomes the <strong>Harrow Deck of Many Things</strong> in Chapter 6. We ship the <em>mechanics</em> only; the 54 card meanings come from your own Harrow deck.</p>"),level=1)]
+cg_journal=B.journal_entry(CG_JID,"Conversion Guide",cg_pages,folder=None)
+B.write("journals","00-conversion-guide",copy.deepcopy(cg_journal),embed_pages=True)
+
+# =====================================================================
 # ADVENTURE bundle (one-click import; embeds copies WITHOUT _key)
 # =====================================================================
 def strip(doc):
@@ -590,12 +625,14 @@ def strip(doc):
     for p in d.get("pages",[]): p.pop("_key",None)
     for n in d.get("notes",[]): n.pop("_key",None)
     for t in d.get("tokens",[]): t.pop("_key",None)
+    for r in d.get("results",[]): r.pop("_key",None)
     return d
 adv = B.adventure(ADV,"Curse of the Crimson Throne — Ch.1: Edge of Anarchy (pilot)",
   "modules/cotct-pf2e-conversion/assets/art/cover.webp",
   "<p>Phase-2 pilot: the Old Fishery (the hunt for Gaedren Lamm). Imports the chapter journal, the Old Fishery scene (map-note pins + staged tokens), the converted NPCs/hazards, and the treasure — organized into folders. Supply your own maps (Racooze's free CotCT battlemaps).</p>",
-  [strip(f) for f in folders], [strip(intro_journal), strip(journal)], [strip(sc)],
-  [strip(a) for a in actors]+[strip(h) for h in hazards], [strip(i) for i in items])
+  [strip(f) for f in folders], [strip(intro_journal), strip(cg_journal), strip(journal)], [strip(sc)],
+  [strip(a) for a in actors]+[strip(h) for h in hazards], [strip(i) for i in items],
+  tables=[strip(harrow_tbl)], macros=[strip(harrow_mac)])
 B.write("adventure","cotct-edge-of-anarchy",copy.deepcopy(adv))
 
 print(f"Pilot (Kingmaker-style) built: {len(folders)} folders, {len(actors)} actors, {len(hazards)} hazards, "

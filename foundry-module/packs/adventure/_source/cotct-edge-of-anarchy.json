@@ -342,6 +342,57 @@
       "categories": []
     },
     {
+      "_id": "cotctGuide000001",
+      "name": "Conversion Guide",
+      "pages": [
+        {
+          "_id": "HxOS4mCmjZUPOCYr",
+          "name": "The Harrowing",
+          "type": "text",
+          "title": {
+            "show": true,
+            "level": 1
+          },
+          "text": {
+            "format": 1,
+            "content": "<section class=\"description\"><p>“The cards know more than they tell.” At the start of each chapter, Zellara — and, after the Old Fishery, her haunted deck — deals the party a Harrow reading.</p></section><p><strong>What it is.</strong> A short narrative reading that <em>foreshadows</em> the chapter (a coming time of unrest; the PCs are fated heroes) and grants each PC a small luck boon. Read the omens; don't spoil concrete events.</p><p><strong>How to run it.</strong> Deal each PC one card from a real Harrow deck (your own — we ship no card text), or use the <strong>Harrow Reading</strong> macro / the <em>Harrow Reading — Suit Draw</em> rolltable to assign a suit. Each card's <strong>suit</strong> maps to one ability score:</p><ul><li><strong>Hammers</strong> → Strength · <strong>Keys</strong> → Dexterity · <strong>Shields</strong> → Constitution · <strong>Books</strong> → Intelligence · <strong>Stars</strong> → Wisdom · <strong>Crowns</strong> → Charisma</li></ul><section class=\"skill\"><p><strong>The boon (CHG-0010 — hero-point-style).</strong> The reading grants each PC one <strong>Harrow Point</strong> for the chapter: spend it like a Hero Point to <strong>reroll a check or save that uses the card-suit's ability score</strong> (keep the new result). Unspent Harrow Points fade at the next reading.</p></section><p><strong>Optional swap.</strong> Groups wanting a deeper subsystem can run the <em>Stolen Fate</em> Harrowing ritual instead; the suit-boon default above keeps it light.</p><section class=\"conversion\"><p>Anchor item: @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.DPDen8gco6rznX9Y]{Zellara's Harrow Deck} (recovered in the Old Fishery, inhabited by her spirit). It becomes the <strong>Harrow Deck of Many Things</strong> in Chapter 6. We ship the <em>mechanics</em> only; the 54 card meanings come from your own Harrow deck.</p></section>",
+            "markdown": ""
+          },
+          "image": {},
+          "video": {
+            "controls": true,
+            "volume": 0.5
+          },
+          "src": null,
+          "system": {},
+          "sort": 100000,
+          "ownership": {
+            "default": -1
+          },
+          "flags": {},
+          "category": null
+        }
+      ],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      },
+      "categories": []
+    },
+    {
       "_id": "aO3z6QTqmYZCZYkw",
       "name": "1. Edge of Anarchy",
       "pages": [
@@ -7566,8 +7617,154 @@
       }
     }
   ],
-  "tables": [],
-  "macros": [],
+  "tables": [
+    {
+      "_id": "cotctHarrowTbl01",
+      "name": "Harrow Reading — Suit Draw",
+      "description": "<p>Draw a suit for a PC when not dealing from a physical Harrow deck (each suit = one ability score).</p>",
+      "formula": "1d6",
+      "replacement": true,
+      "displayRoll": true,
+      "img": "icons/svg/d20-grey.svg",
+      "results": [
+        {
+          "_id": "FnEL8k26m4Gimpke",
+          "type": "text",
+          "text": "<strong>Hammers</strong> → grants a Harrow Point: reroll one <strong>Strength</strong> check or save this chapter.",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            1,
+            1
+          ],
+          "drawn": false,
+          "documentCollection": null,
+          "documentId": null,
+          "flags": {}
+        },
+        {
+          "_id": "053WIZag6yM53cV0",
+          "type": "text",
+          "text": "<strong>Keys</strong> → grants a Harrow Point: reroll one <strong>Dexterity</strong> check or save this chapter.",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            2,
+            2
+          ],
+          "drawn": false,
+          "documentCollection": null,
+          "documentId": null,
+          "flags": {}
+        },
+        {
+          "_id": "BqRe0eoaHbeLE3ik",
+          "type": "text",
+          "text": "<strong>Shields</strong> → grants a Harrow Point: reroll one <strong>Constitution</strong> check or save this chapter.",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            3,
+            3
+          ],
+          "drawn": false,
+          "documentCollection": null,
+          "documentId": null,
+          "flags": {}
+        },
+        {
+          "_id": "YhBvCagyIXDpWQsi",
+          "type": "text",
+          "text": "<strong>Books</strong> → grants a Harrow Point: reroll one <strong>Intelligence</strong> check or save this chapter.",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            4,
+            4
+          ],
+          "drawn": false,
+          "documentCollection": null,
+          "documentId": null,
+          "flags": {}
+        },
+        {
+          "_id": "Exka60CFzQauiqBX",
+          "type": "text",
+          "text": "<strong>Stars</strong> → grants a Harrow Point: reroll one <strong>Wisdom</strong> check or save this chapter.",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            5,
+            5
+          ],
+          "drawn": false,
+          "documentCollection": null,
+          "documentId": null,
+          "flags": {}
+        },
+        {
+          "_id": "xbXDyrBYXHkOpf19",
+          "type": "text",
+          "text": "<strong>Crowns</strong> → grants a Harrow Point: reroll one <strong>Charisma</strong> check or save this chapter.",
+          "img": "icons/svg/d20-black.svg",
+          "weight": 1,
+          "range": [
+            6,
+            6
+          ],
+          "drawn": false,
+          "documentCollection": null,
+          "documentId": null,
+          "flags": {}
+        }
+      ],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      }
+    }
+  ],
+  "macros": [
+    {
+      "_id": "cotctHarrowMac01",
+      "name": "Harrow Reading",
+      "type": "script",
+      "img": "icons/sundries/gaming/playing-cards.webp",
+      "scope": "global",
+      "command": "const suits=[['Hammers','Strength'],['Keys','Dexterity'],['Shields','Constitution'],['Books','Intelligence'],['Stars','Wisdom'],['Crowns','Charisma']];\nconst sel=(canvas&&canvas.tokens&&canvas.tokens.controlled)?canvas.tokens.controlled:[];\nlet b=`<p><strong>The Harrowing.</strong> Deal each PC a card from Zellara's Harrow deck. Each card's suit grants that PC a <em>Harrow Point</em> — one reroll this chapter on a check or save using that suit's ability score. Foreshadow events; don't spoil.</p>`;\nb+=`<p><strong>Suit → ability:</strong> Hammers→Str · Keys→Dex · Shields→Con · Books→Int · Stars→Wis · Crowns→Cha.</p>`;\nif(sel.length){b+='<p><strong>Random draw:</strong></p><ul>';for(const t of sel){const s=suits[Math.floor(Math.random()*6)];b+=`<li>${t.name}: <strong>${s[0]}</strong> → reroll ${s[1]} checks</li>`;}b+='</ul>';}\nelse{b+=`<p><em>Select PC tokens and re-run to auto-draw a suit for each, or roll the “Harrow Reading — Suit Draw” table.</em></p>`;}\nChatMessage.create({content:b,speaker:{alias:'Zellara'}});",
+      "author": null,
+      "ownership": {
+        "default": 0
+      },
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "coreVersion": "14.363",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": null
+      }
+    }
+  ],
   "playlists": [],
   "cards": []
 }

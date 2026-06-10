@@ -152,7 +152,7 @@ GM-review list. None block the Chapter 1 pilot.)*
 
 ### Resolved with GM (2026-06-09)
 - **G-Q1 (level cap):** Native **1→17 preserved** + an optional **post-finale arc** from Appendix 1 hooks (built after the main conversion). *(CHG-0003)*
-- **G-Q2 (which Olliebird artifact):** GM has **neither** — rely on our own conversion + these research notes; cross-reference optional.
+- **G-Q2 (which Olliebird artifact):** ✅ **resolved 2026-06-10** — GM has the **free per-chapter Google Docs**. Our builds stay **independent** (converted from source + method), but we now **cross-reference** Olliebird per creature/encounter. Ch.1 doc: <https://docs.google.com/document/d/170X0H7rZH7dkgtANKF3k6gs_bQKm6sgNFW2PrpelBP4/> — maps each creature to an official PF2e creature or a custom `monster.pf2.tools`/`template.pf2.tools` stat block (e.g. Old Fishery drain spider `monster.pf2.tools/v/l5LWMxWM`, which homebrews a Web Trap → adopted as CHG-0113). The Ch.1 cross-reference validated our builds (matching levels + key abilities) and surfaced the web + Yargin's acid-kit gaps.
 - **G-Q3 (telegraph vs mystery):** **Preserve the mystery** for Blackjack=Vencarlo & Glorio Arkona=rakshasa; journals add earnable GM hints, reveals stay player-discovered.
 - **G-Q4 (plague structure):** **Persistent background threat — APPROVED** with consequences framework. *(CHG-0011b; `design/persistent_plague.md`)*
 - **G-Q5 (maps):** **Reference Racooze's** free battlemaps. *(CHG-0009)*
