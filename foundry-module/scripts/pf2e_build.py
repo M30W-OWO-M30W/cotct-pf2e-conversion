@@ -26,6 +26,19 @@ MELEE_IMG = "systems/pf2e/icons/default-icons/melee.svg"
 COLL = {"actors": "actors", "hazards": "actors", "items": "items", "journals": "journal",
         "scenes": "scenes", "rolltables": "tables", "macros": "macros", "adventure": "adventures"}
 
+# pf2e condition compendium ids — reference conditions in descriptions via these
+# links (renders the condition badge), exactly like official stat blocks.
+CONDITIONS = {
+    "off-guard": "AJh5ex99aV6VTggg", "enfeebled": "MIRkyAjyBeXivMa7", "wounded": "Yl48xTdMh3aeQYL2",
+    "prone": "j91X7x0XSomq8d60", "sickened": "fesd1n5eVhpCSS18", "frightened": "TBSHQspnbcqxsmjL",
+    "clumsy": "i3OJZU2nk64Df3xm", "drained": "4D2KBtexWXa6oUMR", "stunned": "dfCMdR4wnpbYNTix",
+    "grabbed": "kWc1fhmv9LBiTuei", "immobilized": "eIcWbB5o3pP6OIMe", "slowed": "xYTAsEpcJE1Ccni3",
+    "fleeing": "sDPxOjQ9kx2RZE8D", "dying": "yZRUzMqrMmfLu0V1", "prone-fall": "j91X7x0XSomq8d60",
+    "persistent damage": "lDVqvLKA6eF3Df60",
+}
+def cond(key, label=None):
+    return f"@UUID[Compendium.pf2e.conditionitems.Item.{CONDITIONS[key]}]{{{label or key.title()}}}"
+
 # ---- deterministic ID pool (separate seed from the pilot registry) ----
 def _idgen(seed: int):
     import random
@@ -58,11 +71,11 @@ def action(eid, name, glyph, desc, traits=None, category="offensive", rules=None
                        "description": {"value": desc}, "publication": PUB, "rules": rules or [], "slug": None,
                        "traits": {"rarity": "common", "value": traits or []}}}
 
-def sneak_attack(eid, dice=1):
-    """Conditional precision damage as a SHEET TOGGLE (not baked into Strikes).
-    A RollOption adds an 'Off-Guard' toggle; a predicated DamageDice adds the
-    precision when it (or the off-guard condition on the target) is active.
-    This is the canonical pf2e pattern — reuse it for any conditional passive."""
+def sneak_attack(eid, dice=1, who="The creature"):
+    """Sneak Attack authored exactly like an official pf2e stat block: a clean
+    one-line description with the Off-Guard CONDITION LINK, plus the rules that
+    make the precision a predicated DamageDice + an Off-Guard sheet toggle (so it
+    is never baked into the Strikes). Reuse this shape for any conditional passive."""
     rules = [
         {"key": "DamageDice", "selector": "strike-damage", "category": "precision",
          "diceNumber": dice, "dieSize": "d6", "predicate": ["target:condition:off-guard"]},
@@ -70,9 +83,8 @@ def sneak_attack(eid, dice=1):
          "toggleable": "totm", "label": "PF2E.SpecificRule.TOTMToggle.OffGuard"},
     ]
     return action(eid, "Sneak Attack", "passive",
-        f"<p>Deals {dice}d6 extra precision damage to off-guard creatures. Toggle "
-        f"<em>Off-Guard</em> on the sheet (or apply the off-guard condition to the target) "
-        f"to fold it into a Strike's damage.</p>", traits=["rogue"], rules=rules)
+        f"<p>{who} deals {dice}d6 extra precision damage to {cond('off-guard','Off-Guard')} creatures.</p>",
+        traits=["rogue"], rules=rules)
 
 def lore(eid, name, mod):
     return {"_id": eid, "img": "systems/pf2e/icons/default-icons/lore.svg", "name": name, "sort": 0, "type": "lore",

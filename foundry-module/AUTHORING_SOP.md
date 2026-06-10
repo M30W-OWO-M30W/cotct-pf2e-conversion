@@ -46,6 +46,16 @@ Reuse this shape for any "extra X when <condition>" passive (precision, weakness
 exploit, etc.): a `RollOption` toggle + a predicated `DamageDice`/`FlatModifier`.
 `B.action(..., rules=[...])` carries arbitrary rules elements.
 
+**Descriptions read like official stat blocks and reference conditions via condition
+links** — never plain words, never "toggle X on the sheet". Use `cond("off-guard",
+"Off-Guard")` (→ `@UUID[Compendium.pf2e.conditionitems.Item.<id>]{Off-Guard}`, renders
+the condition badge); the `CONDITIONS` map in `pf2e_build.py` holds the ids
+(off-guard, enfeebled, wounded, prone, frightened, grabbed, sickened, …). Phrasing
+matches Paizo's: e.g. `sneak_attack(eid, dice, who="Gaedren")` →
+*"Gaedren deals 1d6 extra precision damage to {Off-Guard} creatures."* Every
+condition named in any action/hazard description (enfeebled 1, wounded 1, prone, …)
+gets its link.
+
 ## 5. Read-aloud & source text (verbatim, from the GM's own file)
 - The GM reads boxed text **verbatim**, so it's pulled from the GM's local AP markdown
   at build time (`SRC_MD`), never hardcoded into the repo.
