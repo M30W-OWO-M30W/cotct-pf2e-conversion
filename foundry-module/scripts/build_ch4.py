@@ -47,6 +47,11 @@ folders = [
 for f in folders:
     B.write("actors", "_folder_ch4-" + f["name"].lower().replace(" ", "-").replace(".", "") + "-act", copy.deepcopy(f))
 
+# mirror the folder chain into the hazards pack (per-pack folder docs)
+for hf in [B.folder(F4["a_ch4"], "4. A History of Ashes", "Actor", ACTOR_ROOT, 400000, CHC),
+           B.folder(F4["a_hazards"], "Hazards", "Actor", F4["a_ch4"], 200000, None, "a")]:
+    B.write("hazards", "_folder_hz4-" + hf["name"].lower().replace(" ", "-").replace(".", ""), copy.deepcopy(hf))
+
 actors = []
 def AW(slug, doc):
     actors.append(copy.deepcopy(doc)); B.write("actors", slug, doc, embed_items=True)

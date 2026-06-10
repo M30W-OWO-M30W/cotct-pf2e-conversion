@@ -249,7 +249,12 @@ for f in folders:
     pack = {"Actor":"actors","Item":"items","JournalEntry":"journals","Scene":"scenes"}[f["type"]]
     # hazards pack mirrors the actor hazard folder too
     B.write(pack, "_folder_"+f["name"].lower().replace(" ","-").replace(".","")+"-"+f["type"][:3].lower(), copy.deepcopy(f))
-# (hazards pack stays flat — the Actor folder tree organizes them in the Adventure import)
+# Mirror the folder chain into the hazards pack so the hazards COMPENDIUM shows
+# the same per-chapter tree (folders are per-pack documents in Foundry).
+for hf in [B.folder(F["a_root"],"Curse of the Crimson Throne","Actor",None,100000,ROOTC),
+           B.folder(F["a_ch1"],"1. Edge of Anarchy","Actor",F["a_root"],100000,CHC),
+           B.folder(F["a_hazards"],"Hazards","Actor",F["a_ch1"],200000,None,"a")]:
+    B.write("hazards", "_folder_hz1-"+hf["name"].lower().replace(" ","-").replace(".",""), copy.deepcopy(hf))
 
 # =====================================================================
 # ACTORS (ported stats + prototype tokens + folders)
