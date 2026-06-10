@@ -22,7 +22,7 @@ ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cot
 JID2 = "ch2SevenDaysJrn1"          # the fat Ch.2 journal
 A2 = {"graymaiden": "grayMaidenFoot01", "ishani": "ishaniDhatri0001",
       "physician": "queensPhysician1", "silteel": "siltEel000000001", "yvicca": "yviccaSeaHag0001",
-      "girrigz": "girrigzRipper001"}
+      "girrigz": "girrigzRipper001", "vendra": "vendraLoaggri001", "lavthug": "lavenderThug0001"}
 F2 = {"a_ch2": "ch2ActorFolder01", "a_creatures": "ch2CreaturesFld1"}
 
 ids = B._idgen(220002)             # Ch.2 folders/pages/notes (distinct seed)
@@ -133,6 +133,30 @@ AW("girrigz-ripperclaws", B.npc(A2["girrigz"], "Girrigz Ripperclaws", 6, 23, 105
         "<p><strong>Tactics:</strong> warned by fighting in B3 or the otyugh's release, he pre-buffs (his potions — bear's endurance, blur, shield of faith) and strikes from stealth with the rapier, Changing Shape to his hybrid form. <strong>Note:</strong> scattering his warband <em>without</em> killing the other (coerced) wererats earns full XP and saves 400 citizens (Survivor Count).</p>",
   folder=F2["a_creatures"], senses=[{"type": "low-light-vision"}, {"acuity": "imprecise", "type": "scent", "range": 30}],
   other_speeds=[{"type": "climb", "value": 20}], blurb="Wererat revolutionary; sewer warlord", token_src=None, actor_link=True))
+
+AW("vendra-loaggri", B.npc(A2["vendra"], "Vendra Loaggri", 5, 21, 60, 8, 13, 11, 13,
+  {"str": 0, "dex": 4, "con": -1, "int": 2, "wis": 1, "cha": 4}, 25,
+  {"deception": 15, "diplomacy": 15, "society": 11, "stealth": 12, "thievery": 11, "crafting": 9}, ["humanoid", "human"], ["common", "halfling", "shoanti", "varisian", "vudrani"],
+  [B.strike(nid(), "Poisoned Dagger", 12, "1d4", "piercing", ["agile", "finesse", "thrown-10", "versatile-s"]),
+   B.sneak_attack(nid(), 3, "Vendra"),
+   B.action(nid(), "Giant Wasp Poison", "passive", "<p>Vendra keeps her dagger envenomed: a creature she hits with it is exposed to giant wasp poison ("+chk("type:fortitude|dc:22")+"), inflicting @Damage[1d6[poison]] and "+B.cond("enfeebled", "Enfeebled 1")+" (stage 2 on a critical failure).</p>", category="offensive"),
+   B.action(nid(), "Wand of Charm Person", "1", "<p>Vendra Activates her wand: one creature within 30 feet must succeed at a "+chk("type:will|dc:18")+" or treat her as a trusted friend for 10 minutes (it won't fight her, though obviously harmful requests get a new save). Her favored escape from a fight.</p>", ["concentrate", "magical"]),
+   B.action(nid(), "Deceptive Patter", "1", "<p>A consummate fast-talker, Vendra Creates a Diversion or Feints with a Deception check (vs. Perception/Will DC), sobbing and flailing 'harmlessly' to set up a Sneak Attack.</p>", ["concentrate", "linguistic"]),
+   B.lore(nid(), "Perfumery Lore", 11),
+   B.gear("leather-armor", nid()), B.gear("dagger", nid())],
+  notes="<p><strong>Role:</strong> a Chelish con-artist perfumer hawking 'Lavender's Luxuriant Liniment' — a fake plague cure that is sugar, cheap scent, and <strong>river water</strong> ("+chk("type:crafting|dc:22")+" to analyze). The mission is to <strong>expose her</strong>, not necessarily to fight; bring proof to the Guard.</p>"
+        "<p><strong>Tactics:</strong> plays the harmless, shrieking merchant while angling for a poisoned Sneak Attack; charms foes at range; flees to her apartment (C2). <strong>Morale:</strong> surrenders at ≤10-ish HP and will say anything to escape the city alive. She burns her wand of <em>remove disease</em> keeping herself plague-free.</p>",
+  folder=F2["a_creatures"], blurb="Snake-oil perfumer; fake-cure grifter", token_src=None, actor_link=True))
+
+AW("lavender-thug", B.npc(A2["lavthug"], "Lavender Thug", 3, 20, 45, 9, 9, 5, 8,
+  {"str": 3, "dex": 2, "con": 3, "int": -1, "wis": 1, "cha": 0}, 25,
+  {"athletics": 9, "stealth": 8, "intimidation": 7}, ["humanoid", "human"], ["common"],
+  [B.strike(nid(), "Rapier", 11, "1d6+3", "piercing", ["deadly-d8", "disarm", "finesse"]),
+   B.strike(nid(), "Hand Crossbow", 10, "1d6", "piercing", ["range-increment-60", "reload-1"]),
+   B.sneak_attack(nid(), 1, "The thug"),
+   B.gear("studded-leather", nid()), B.gear("steel-shield", nid()), B.gear("rapier", nid()), B.gear("hand-crossbow", nid())],
+  notes="<p><strong>Role:</strong> Vendra's purple-cravat'd bodyguards (sap-carrying in the shop, lethal in a real fight). They crossbow foes already in melee, then close with the rapier, keeping themselves between the PCs and Vendra. <strong>Morale:</strong> a thug drops his weapon and flees at low HP and does not return.</p>",
+  folder=F2["a_creatures"], blurb="Vendra's rapier-armed bodyguard", token_src=None, actor_link=False))
 
 # =====================================================================
 # JOURNAL — "2. Seven Days to the Grave"
@@ -279,6 +303,30 @@ area2("B6", "Girrigz's Den", SR("B6", 94)
      "<p>"+act(A2["girrigz"], "Girrigz")+" — pre-buffed if warned, striking from stealth with his runed rapier and Vital Strike. He fights to the death.</p>",
      B.aside_token([act(A2["girrigz"], "Girrigz Ripperclaws (6)")]))
   + B.s_treasure("<p>"+chk("type:perception|dc:15")+": an arms cache (22 daggers, 12 short swords, 3 crossbows, 4 chain shirts, 12 alchemist's fire, a masterwork longsword + chainmail). "+chk("type:perception|dc:20")+" in the nest: 4 potions of healing, a bottle of air, and a <strong>pearl of power</strong> (1st-rank) — plus the squeeze-crack to B3.</p>"))
+
+PG("Mission 3: The Color of Death", SR("Mission 3 — The Color of Death", 96)
+  + "<p>The Lavender perfumery off Summoning Street, owned by the Chelish con-artist "+act(A2["vendra"], "Vendra Loaggri")+", is selling 'Lavender's Luxuriant Liniment' — a 2-gp 'plague cure' that is sugar, cheap scent, and river water. By day a queue stretches four blocks; the mission is to <strong>expose the fraud</strong>, not to fight.</p>"
+  + B.s_skill("<p><strong>Cracking the con:</strong> "+chk("type:crafting|dc:22")+" (an hour with an alchemist's lab) reveals the liniment is worthless; "+chk("type:perception|dc:18")+" spots her planted shill Solt Carmino (the only 'customer' browsing perfume), and "+chk("type:diplomacy|dc:25")+" or "+chk("type:intimidation|dc:25")+" makes him confess. The cleanest proof: administer a dose to a real plague victim before a Korvosan Guard (Grau or Kroft will witness), then actually cure them.</p>")
+  + SEC("<p>This 'cure' is a <strong>dead end</strong> for the plague (and a moral test) — it heals no one. Watching Vendra's thugs haul river-water barrels from the Jeggare by night (easy to tail) is the fastest evidence. Report to Cressida and the Guard arrests her.</p>")
+  + B.s_treasure("<p><strong>Story award:</strong> expose the scam and shut Lavender down → <strong>1,600 XP</strong>, plus full XP for everyone (Vendra included) the PCs <em>didn't</em> have to kill.</p>"))
+
+area2("C1", "The Perfumery (Lavender)", SR("C1", 96)
+  + "<p>A cramped, stylish shop of amethyst glass, its counter stacked with magenta-stoppered phials of the fake liniment. "+act(A2["vendra"], "Vendra")+" works the crowd while two shop-girls sell and two "+act(A2["lavthug"], "Lavender thugs")+" watch with saps. Confront her with proof and she screams for the PCs' ejection; cornered, she flees toward C2, knifing a PC on the way out.</p>"
+  + B.enc("Vendra + thugs (by day)", encx([5, 3, 3], 6),
+     "<p>"+act(A2["vendra"], "Vendra")+" and 2 "+act(A2["lavthug"], "Lavender thugs")+" amid scattering customers (CR7-equivalent by day; fewer guards and no crowd at night make it easier). Vendra fights dirty and runs.</p>",
+     B.aside_token([act(A2["vendra"], "Vendra Loaggri (5)"), "2× "+act(A2["lavthug"], "Lavender Thug (3)")]))
+  + B.s_treasure("<p>"+chk("type:society|dc:18")+" picks out genuine perfumes worth ~80 gp re-scaled; the counter box holds ~40 gp in recent sales, and the safe ("+chk("type:thievery|dc:28")+") a few hundred gp in coin + three lapis perfume bottles. Vendra carries a <strong>circlet of persuasion</strong>, a wand of <em>charm person</em>, and a wand of <em>remove disease</em>.</p>"))
+
+area2("C2", "Vendra's Apartment", SR("C2", 99)
+  + "<p>A locked ("+chk("type:thievery|dc:20")+"), prim parody of a Chelish noble's salon — no alchemy here. "+chk("type:perception|dc:20")+" finds a corner-hinged <strong>secret door</strong> into the boarded-up lab (C3). By night there's a 50% chance Vendra sleeps here; otherwise she's mixing brew in C3.</p>")
+
+area2("C3", "The Liniment Laboratory", SR("C3", 99)
+  + "<p>The 'condemned' apartment behind the shop, boarded shut inside and out (Hardness 5, 15 HP, "+chk("type:athletics|dc:24")+" to break), reachable by the C2 secret door. Here the fake cure is mixed from river water hauled in nightly. By day one "+act(A2["lavthug"], "thug")+" works; by night Vendra and two thugs brew.</p>"
+  + B.enc("Lab guards", encx([3], 6),
+     "<p>1 "+act(A2["lavthug"], "Lavender thug")+" by day (more at night with Vendra).</p>",
+     B.aside_token([act(A2["lavthug"], "Lavender Thug (3)")]))
+  + B.s_treasure("<p>The lab equipment functions as an alchemist's lab; the raw ingredients are ~800 gp (PF1e) of potion/alchemy reagents — re-scale to a useful crafting stock for the party.</p>")
+  + B.s_conv("<p>Mission complete: the perfumery con collapses. It cured nothing — the real source is still out there, pointing the PCs onward (Racker's Alley, Carowyn Manor, the Hospice).</p>"))
 
 journal = B.journal_entry(JID2, "2. Seven Days to the Grave", pages, folder=ADV_FOLDER)
 B.write("journals", "02-seven-days-to-the-grave", copy.deepcopy(journal), embed_pages=True)

@@ -207,6 +207,8 @@ Notes*. Foundry path: `cotct-journals` → "Old Fishery — …". No major
 
 - **CHG-0139 — Ch.2 Mission 2: Plague Rats.** 7 pages (overview + B1–B6 sewer dungeon): Eries Yelloweyes's plea, the shrieker-alarm guard den, the communal dens (Girrigz reinforces), the bribable trapped otyugh, the rat nest, and Girrigz's command den. New boss **Girrigz Ripperclaws** (L6 wererat firebrand — runed rapier, Curse of the Wererat, Change Shape, Vital Strike). Official links: Wererat, Giant Rat (Remaster's dire rat), Rat Swarm, Otyugh. Survivor-Count payoff for a non-lethal resolution. *Source:* faithful. *Severity:* n/a. *Journal:* yes. *Review:* none.
 
+- **CHG-0140 — Ch.2 Mission 3: The Color of Death.** 4 pages (overview + C1 perfumery / C2 apartment / C3 lab): exposing the Lavender fake-cure con (a moral-test dead end — river-water 'liniment'). New actors **Vendra Loaggri** (L5 rogue grifter — poisoned dagger, charm wand, Deceptive Patter, flees/surrenders) and **Lavender Thug** (L3 rapier bodyguard). Investigation-first (Crafting/Perception/Diplomacy to crack the con); combat optional. *Source:* faithful. *Severity:* n/a. *Journal:* yes. *Review:* none.
+
 <!-- CH3 — Escape from Old Korvosa -->
 <!-- CH4 — A History of Ashes -->
 <!-- CH5 — Skeletons of Scarwall -->
