@@ -1,0 +1,631 @@
+{
+  "_id": "andaisinUrgath01",
+  "name": "Lady Andaisin",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "mqLlCJ9utD1rtYpd",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+2 Vicious Scythe",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 19
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d4+9",
+            "damageType": "slashing"
+          },
+          "1": {
+            "damage": "1d6",
+            "damageType": "void"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d10",
+            "magical",
+            "trip"
+          ]
+        }
+      },
+      "_key": "!actors.items!andaisinUrgath01.mqLlCJ9utD1rtYpd"
+    },
+    {
+      "_id": "6ffnUgHRpeld11gP",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Divine Spellcasting",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Andaisin casts as a 10th-level Urgathoan cleric (DC 27, spell attack +19): see her combat actions below. Pre-buffed each morning with <em>status</em> on her lieutenants and, in battle, <em>divine power / air walk / magic vestment / shield of faith</em>.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!andaisinUrgath01.6ffnUgHRpeld11gP"
+    },
+    {
+      "_id": "9rYoi7R7tM7dCrMF",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Slay Living",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A killing curse of void: one creature within 30 feet takes @Damage[7d6+14[void]] (@Check[type:fortitude|dc:27|basic:true]; a critical failure can drop a frail target outright).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "void"
+          ]
+        }
+      },
+      "_key": "!actors.items!andaisinUrgath01.9rYoi7R7tM7dCrMF"
+    },
+    {
+      "_id": "dCvFLkydTgTeCB8i",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Greater Command",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>One creature within 30 feet must succeed at a @Check[type:will|dc:27] or be compelled to drop @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} and grovel (flee, on a critical failure) for 1 round.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "auditory",
+            "linguistic",
+            "mental",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!andaisinUrgath01.dCvFLkydTgTeCB8i"
+    },
+    {
+      "_id": "NwJwrzfe06pkEjRE",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "name": "Harm (Font)",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 3
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A 30-ft void burst: living creatures take @Damage[6d8[void]] (@Check[type:fortitude|dc:27|basic:true]) and her undead allies are healed. She channels several times a day.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "void"
+          ]
+        }
+      },
+      "_key": "!actors.items!andaisinUrgath01.NwJwrzfe06pkEjRE"
+    },
+    {
+      "_id": "o7rMFoakS2vEMFdM",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Air Walk & Mist",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Andaisin walks on air 10+ ft up to cast with impunity, dropping <em>obscuring mist</em> below to foil non-flyers when reduced to fewer than ~30 HP, then heals and returns.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!andaisinUrgath01.o7rMFoakS2vEMFdM"
+    },
+    {
+      "_id": "LIghrrw14dUYCDtc",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Urgathoa Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 19
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!andaisinUrgath01.LIghrrw14dUYCDtc"
+    },
+    {
+      "name": "Breastplate",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+      "system": {
+        "acBonus": 4,
+        "baseItem": "breastplate",
+        "bulk": {
+          "value": 2
+        },
+        "category": "medium",
+        "checkPenalty": -2,
+        "containerId": null,
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]</p>",
+          "gm": ""
+        },
+        "dexCap": 1,
+        "grade": null,
+        "group": "plate",
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 8
+          }
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "resilient": 0
+        },
+        "size": "med",
+        "speedPenalty": -5,
+        "strength": 3,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        },
+        "slug": "breastplate",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
+        }
+      },
+      "_id": "4uQJ9mcPEqmQ2Va8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!andaisinUrgath01.4uQJ9mcPEqmQ2Va8"
+    },
+    {
+      "name": "Scythe",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/scythe.webp",
+      "system": {
+        "ammo": null,
+        "baseItem": "scythe",
+        "bonus": {
+          "value": 0
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 2
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d10"
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.H74vYwHJ8XT4qOPI]</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "polearm",
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 2
+          }
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
+        },
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
+        },
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
+        },
+        "size": "med",
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d10",
+            "trip"
+          ]
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "slug": "scythe",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
+        }
+      },
+      "_id": "bMTbeW90OyPMoHIF",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!andaisinUrgath01.bMTbeW90OyPMoHIF"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": -1
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 5
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 28
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 150,
+        "temp": 0,
+        "value": 150
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 20
+          }
+        ],
+        "value": 20
+      }
+    },
+    "details": {
+      "blurb": "Urgathoan high priestess; plague architect",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "infernal"
+        ]
+      },
+      "level": {
+        "value": 9
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> high priestess of Urgathoa, fled from Nidal — the Temple's master and a co-architect of blood veil. The Inner Sanctum (G14) boss.</p><p><strong>Tactics:</strong> buffs (Divine Power), then air-walks aloft and rains Slay Living / Greater Command / Harm before dropping into scythe range; retreats into mist + heals at low HP. <strong>Morale:</strong> she fights to the death — and then <strong>transforms</strong> into a Daughter of Urgathoa (see her second form).</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 17,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 19
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 13
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 19
+      }
+    },
+    "skills": {
+      "religion": {
+        "base": 19
+      },
+      "intimidation": {
+        "base": 15
+      },
+      "deception": {
+        "base": 15
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch2CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Lady Andaisin",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!andaisinUrgath01"
+}

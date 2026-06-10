@@ -122,6 +122,72 @@
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK"
     }
   },
+  "breastplate": {
+    "name": "Breastplate",
+    "type": "armor",
+    "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+    "system": {
+      "acBonus": 4,
+      "baseItem": "breastplate",
+      "bulk": {
+        "value": 2
+      },
+      "category": "medium",
+      "checkPenalty": -2,
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.r0ifJfoz8aqf0mwk]</p>",
+        "gm": ""
+      },
+      "dexCap": 1,
+      "grade": null,
+      "group": "plate",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 8
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "resilient": 0
+      },
+      "size": "med",
+      "speedPenalty": -5,
+      "strength": 3,
+      "traits": {
+        "rarity": "common",
+        "value": []
+      },
+      "slug": "breastplate",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "buckler": {
     "name": "Buckler",
     "type": "shield",
@@ -1837,6 +1903,93 @@
         "value": "held-in-one-hand"
       },
       "slug": "sap",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "scythe": {
+    "name": "Scythe",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/scythe.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "scythe",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d10"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.H74vYwHJ8XT4qOPI]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "polearm",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 2
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "deadly-d10",
+          "trip"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "scythe",
       "_migration": {
         "version": 0.959,
         "previous": null

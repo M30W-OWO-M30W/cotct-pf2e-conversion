@@ -1,0 +1,600 @@
+{
+  "_id": "ramoskaArkminos1",
+  "name": "Ramoska Arkminos",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "QmIaDd4tEExp4JKQ",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 25
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d8+9",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "_key": "!actors.items!ramoskaArkminos1.QmIaDd4tEExp4JKQ"
+    },
+    {
+      "_id": "kNqJdv2xxC7k5fyG",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Drain Life",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Ramoska's touch (or a Claw hit) drains vitality for @Damage[4d6[void]] (@Check[type:fortitude|dc:33|basic:true]); he gains temporary Hit Points equal to half the damage and his fast healing redoubles for 1 round.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "void"
+          ]
+        }
+      },
+      "_key": "!actors.items!ramoskaArkminos1.kNqJdv2xxC7k5fyG"
+    },
+    {
+      "_id": "nLp7qHYqH1UccgSZ",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Contagion",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Ramoska inflicts a refined virulence on one creature within 30 feet: @Check[type:fortitude|dc:33] or contract a wasting disease (Fort each day; @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled} + @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} by stage). His specialty.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "disease",
+            "occult"
+          ]
+        }
+      },
+      "_key": "!actors.items!ramoskaArkminos1.nLp7qHYqH1UccgSZ"
+    },
+    {
+      "_id": "ZnY0wG5F0ExEQ5iH",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Caustic Bomb",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>An alchemical splash bomb (a thrown Strike +25, 30 ft): @Damage[3d6[acid]] plus @Damage[3[persistent,acid]], and @Damage[(3[splash])[acid]] splash.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "manipulate",
+            "acid"
+          ]
+        }
+      },
+      "_key": "!actors.items!ramoskaArkminos1.ZnY0wG5F0ExEQ5iH"
+    },
+    {
+      "_id": "1I196lvImfK79bwi",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Dimensional Step",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Ramoska teleports up to 120 feet — his preferred exit. He has <strong>no interest in dying on this hill</strong> and flees rather than risk destruction.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "occult",
+            "teleportation"
+          ]
+        }
+      },
+      "_key": "!actors.items!ramoskaArkminos1.1I196lvImfK79bwi"
+    },
+    {
+      "_id": "HSXvcOJnUhweIr79",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Fast Healing 5",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Ramoska regains 5 Hit Points at the start of each of his turns (unless damaged by his weaknesses that round).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ramoskaArkminos1.HSXvcOJnUhweIr79"
+    },
+    {
+      "_id": "nfXxi8OaQ0SjtW8c",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Nosferatu Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Undead; immune to disease, paralysis, poison, and mental effects that require a living mind. <strong>Resistance</strong> to physical 5 (except piercing or wood), cold 10, electricity 10. <strong>Weaknesses:</strong> he cannot cross running water unaided, casts no reflection, and recoils from his own forgotten faith's symbols; destroyed only if dealt with at his coffin.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ramoskaArkminos1.nfXxi8OaQ0SjtW8c"
+    },
+    {
+      "_id": "ry3mS96ciQHqyb40",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Disease Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 26
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!ramoskaArkminos1.ry3mS96ciQHqyb40"
+    },
+    {
+      "name": "Studded Leather Armor",
+      "type": "armor",
+      "img": "systems/pf2e/icons/equipment/armor/studded-leather-armor.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "studded-leather-armor",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "studded-leather-armor",
+        "bulk": {
+          "value": 1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 3
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "light",
+        "group": "leather",
+        "acBonus": 2,
+        "strength": 1,
+        "dexCap": 3,
+        "checkPenalty": -1,
+        "speedPenalty": 0,
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
+        },
+        "subitems": [],
+        "specific": null
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN"
+      },
+      "_id": "DHxUZMXVOTB54Fy2",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!ramoskaArkminos1.DHxUZMXVOTB54Fy2"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 7
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 33
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 230,
+        "temp": 0,
+        "value": 230
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Ancient nosferatu disease-scholar (negotiable)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "necril",
+          "varisian",
+          "draconic"
+        ]
+      },
+      "level": {
+        "value": 13
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> an ancient <strong>nosferatu</strong> scholar of disease — the deadliest foe in the chapter, and the one the PCs should almost never fight. Lent to the cult by his master Count Tiriac, he loathes his undeath and only wants to find a cure so he can finally die <em>as a man</em>. He has no love for the cult, the queen, or the Red Mantis.</p><p><strong>Negotiation, not battle:</strong> he holds the captive Varisian <strong>Ruan Mirukova</strong> (testing Varisian plague-immunity) and will simply <em>sell</em> him and leave — ~200 gp re-scaled, a magic item, a future favor, or the last <em>death's head coffer</em> from Andaisin's sanctum. If attacked he fights ferociously but flees via Dimensional Step rather than be destroyed. <strong>This is a CR-14-equivalent encounter far above the party — telegraph the danger.</strong></p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 24,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 21
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 21
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 25
+      }
+    },
+    "skills": {
+      "arcana": {
+        "base": 26
+      },
+      "crafting": {
+        "base": 26
+      },
+      "occultism": {
+        "base": 24
+      },
+      "medicine": {
+        "base": 24
+      },
+      "society": {
+        "base": 22
+      },
+      "stealth": {
+        "base": 23
+      },
+      "deception": {
+        "base": 20
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "undead",
+        "humanoid"
+      ]
+    }
+  },
+  "folder": "ch2CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Ramoska Arkminos",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!ramoskaArkminos1"
+}

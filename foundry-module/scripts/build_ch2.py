@@ -23,7 +23,8 @@ JID2 = "ch2SevenDaysJrn1"          # the fat Ch.2 journal
 A2 = {"graymaiden": "grayMaidenFoot01", "ishani": "ishaniDhatri0001",
       "physician": "queensPhysician1", "silteel": "siltEel000000001", "yvicca": "yviccaSeaHag0001",
       "girrigz": "girrigzRipper001", "vendra": "vendraLoaggri001", "lavthug": "lavenderThug0001",
-      "jolistina": "jolistinaSusp001"}
+      "jolistina": "jolistinaSusp001", "davaulus": "reinerDavaulus01", "cultist": "urgathoaCultist1",
+      "ramoska": "ramoskaArkminos1", "andaisin": "andaisinUrgath01", "andaisin_t": "andaisinDaughtr1"}
 F2 = {"a_ch2": "ch2ActorFolder01", "a_creatures": "ch2CreaturesFld1"}
 
 ids = B._idgen(220002)             # Ch.2 folders/pages/notes (distinct seed)
@@ -174,6 +175,76 @@ AW("jolistina-susperio", B.npc(A2["jolistina"], "Jolistina Susperio", 8, 26, 130
   notes="<p><strong>Role:</strong> a pesh-addicted, self-destructive forsaken elf and the necromancer <strong>Rolth Lamm's</strong> lover (Gaedren's son, from the Ch.1 Dead Warrens). Sent to murder Ileosa's noble hit-list at Carowyn Manor, she slaughtered the whole party and posed 21 zombies into a 'masquerade of the dead,' then disguised every corpse as a blood-veil death with her wand of <em>sculpt corpse</em>.</p>"
         "<p><strong>Tactics:</strong> a stealth-skirmisher who plays cat-and-mouse — sniping from hiding for bleeding Sneak Attacks, screaming-bolting clusters, then Vanishing room to room. She fights melee only from behind her zombies. Cornered alone, she flees to ambush again. <strong>The 'plague deaths' here are fakes</strong> ("+chk("type:medicine|dc:20")+" or "+chk("type:will|dc:11")+" to tell).</p>",
   folder=F2["a_creatures"], senses=[{"type": "low-light-vision"}], blurb="Forsaken elf killer; Rolth's lover", token_src=None, actor_link=True))
+
+# ---- Part 3 finale: the Hospice (Davaulus) & the Temple of Urgathoa ----
+AW("reiner-davaulus", B.npc(A2["davaulus"], "Reiner Davaulus", 9, 27, 145, 15, 19, 17, 17,
+  {"str": 0, "dex": 4, "con": 1, "int": 4, "wis": 2, "cha": 4}, 25,
+  {"deception": 19, "diplomacy": 19, "medicine": 17, "occultism": 15, "stealth": 19, "society": 17}, ["humanoid", "human"], ["common", "infernal", "varisian"],
+  [B.strike(nid(), "+1 Human-Bane Rapier", 19, "2d6+6", "piercing", ["deadly-d8", "disarm", "finesse", "magical"], slug="davaulus-rapier"),
+   B.sneak_attack(nid(), 3, "Davaulus"),
+   B.action(nid(), "Human's Bane", "passive", "<p>Davaulus's rapier is bane to humans: against a human target it gains a +2 status bonus to attack and deals an extra @Damage[2d6[piercing]].</p>", category="offensive"),
+   B.action(nid(), "Inspire Courage", "1", "<p>A subtle Red Mantis battle-hymn: allies within 60 feet gain a +1 status bonus to attack rolls, damage, and saves vs. fear for 1 round.</p>", ["concentrate", "auditory", "occult"]),
+   B.action(nid(), "Slip Away", "2", "<p>Davaulus turns invisible (as the spell) and Strides; he uses this to flee to the Temple of Urgathoa the instant a fight turns against him (below ~10% HP).</p>", ["concentrate", "manipulate", "occult"]),
+   B.lore(nid(), "Red Mantis Lore", 17),
+   B.gear("studded-leather", nid()), B.gear("rapier", nid())],
+  notes="<p><strong>Role:</strong> a Red Mantis assassin masquerading as the queen's chief physician — the public face of the plague effort and one of its three masterminds (with Andaisin and Ramoska). A poisoner and manipulator, not a front-line fighter; he'd rather misdirect (the fabricated 'Ghlaunder wererat cabal') than brawl.</p>"
+        "<p><strong>Tactics:</strong> opens with a bane-rapier Sneak Attack, supports with Inspire, and <strong>flees to the Temple</strong> via Slip Away when threatened — relocating the incriminating blood-veil notes to G14. Loyal to the Red Mantis, he never surrenders; cornered, he fights to the death.</p>",
+  folder=F2["a_creatures"], senses=[{"type": "low-light-vision"}], blurb="Red Mantis assassin; the 'queen's physician'", token_src=None, actor_link=True))
+
+AW("cultist-of-urgathoa", B.npc(A2["cultist"], "Cultist of Urgathoa", 3, 20, 50, 11, 6, 10, 9,
+  {"str": 2, "dex": 1, "con": 3, "int": 0, "wis": 4, "cha": 1}, 20,
+  {"religion": 11, "athletics": 8, "intimidation": 7}, ["humanoid", "human"], ["common"],
+  [B.strike(nid(), "+1 Scythe", 10, "2d4+5", "slashing", ["deadly-d10", "magical", "trip"]),
+   B.action(nid(), "Harm", "1", "<p>Divine void energy (DC 18). <strong>1 action</strong> (touch): @Damage[2d8[void]] to a living creature (basic "+chk("type:fortitude|dc:18")+"), or heal an undead ally that much. <strong>3 actions</strong>: a 30-ft void burst.</p>", ["concentrate", "manipulate", "void"]),
+   B.action(nid(), "Goad Thrall", "1", "<p>The cultist exhorts an undead ally to Stride and Strike — coordinating the temple's animated dead.</p>", ["auditory", "concentrate"]),
+   B.lore(nid(), "Urgathoa Lore", 11),
+   B.gear("breastplate", nid()), B.gear("scythe", nid())],
+  notes="<p><strong>Role:</strong> rank-and-file zealot of Urgathoa (goddess of disease, gluttony, undeath) staffing the hidden temple. Scythe-and-void; channels to harm the living and mend the undead. <strong>Morale:</strong> fights to the death.</p>",
+  folder=F2["a_creatures"], blurb="Scythe-wielding Urgathoan zealot", token_src=None, actor_link=False))
+
+AW("ramoska-arkminos", B.npc(A2["ramoska"], "Ramoska Arkminos", 13, 33, 230, 21, 21, 25, 24,
+  {"str": 3, "dex": 4, "con": 5, "int": 7, "wis": 4, "cha": 2}, 25,
+  {"arcana": 26, "crafting": 26, "occultism": 24, "medicine": 24, "society": 22, "stealth": 23, "deception": 20}, ["undead", "humanoid"], ["common", "necril", "varisian", "draconic"],
+  [B.strike(nid(), "Claw", 25, "3d8+9", "slashing", ["agile", "finesse"]),
+   B.action(nid(), "Drain Life", "2", "<p>Ramoska's touch (or a Claw hit) drains vitality for @Damage[4d6[void]] ("+chk("type:fortitude|dc:33|basic:true")+"); he gains temporary Hit Points equal to half the damage and his fast healing redoubles for 1 round.</p>", ["concentrate", "void"]),
+   B.action(nid(), "Contagion", "2", "<p>Ramoska inflicts a refined virulence on one creature within 30 feet: "+chk("type:fortitude|dc:33")+" or contract a wasting disease (Fort each day; "+B.cond("enfeebled", "Enfeebled")+" + "+B.cond("drained", "Drained")+" by stage). His specialty.</p>", ["concentrate", "manipulate", "disease", "occult"]),
+   B.action(nid(), "Caustic Bomb", "1", "<p>An alchemical splash bomb (a thrown Strike +25, 30 ft): @Damage[3d6[acid]] plus @Damage[3[persistent,acid]], and @Damage[(3[splash])[acid]] splash.</p>", ["manipulate", "acid"]),
+   B.action(nid(), "Dimensional Step", "2", "<p>Ramoska teleports up to 120 feet — his preferred exit. He has <strong>no interest in dying on this hill</strong> and flees rather than risk destruction.</p>", ["concentrate", "manipulate", "occult", "teleportation"]),
+   B.action(nid(), "Fast Healing 5", "passive", "<p>Ramoska regains 5 Hit Points at the start of each of his turns (unless damaged by his weaknesses that round).</p>", category="defensive"),
+   B.action(nid(), "Nosferatu Resilience", "passive", "<p>Undead; immune to disease, paralysis, poison, and mental effects that require a living mind. <strong>Resistance</strong> to physical 5 (except piercing or wood), cold 10, electricity 10. <strong>Weaknesses:</strong> he cannot cross running water unaided, casts no reflection, and recoils from his own forgotten faith's symbols; destroyed only if dealt with at his coffin.</p>", category="defensive"),
+   B.lore(nid(), "Disease Lore", 26),
+   B.gear("studded-leather", nid())],
+  notes="<p><strong>Role:</strong> an ancient <strong>nosferatu</strong> scholar of disease — the deadliest foe in the chapter, and the one the PCs should almost never fight. Lent to the cult by his master Count Tiriac, he loathes his undeath and only wants to find a cure so he can finally die <em>as a man</em>. He has no love for the cult, the queen, or the Red Mantis.</p>"
+        "<p><strong>Negotiation, not battle:</strong> he holds the captive Varisian <strong>Ruan Mirukova</strong> (testing Varisian plague-immunity) and will simply <em>sell</em> him and leave — ~200 gp re-scaled, a magic item, a future favor, or the last <em>death's head coffer</em> from Andaisin's sanctum. If attacked he fights ferociously but flees via Dimensional Step rather than be destroyed. <strong>This is a CR-14-equivalent encounter far above the party — telegraph the danger.</strong></p>",
+  folder=F2["a_creatures"], senses=[{"type": "darkvision"}], blurb="Ancient nosferatu disease-scholar (negotiable)", token_src=None, actor_link=True))
+
+AW("andaisin", B.npc(A2["andaisin"], "Lady Andaisin", 9, 28, 150, 19, 13, 19, 17,
+  {"str": 1, "dex": -1, "con": 4, "int": 0, "wis": 5, "cha": 2}, 20,
+  {"religion": 19, "intimidation": 15, "deception": 15}, ["humanoid", "human"], ["common", "infernal"],
+  [B.strike(nid(), "+2 Vicious Scythe", 19, "2d4+9", "slashing", ["deadly-d10", "magical", "trip"], [("1d6", "void")]),
+   B.action(nid(), "Divine Spellcasting", "passive", "<p>Andaisin casts as a 10th-level Urgathoan cleric (DC 27, spell attack +19): see her combat actions below. Pre-buffed each morning with <em>status</em> on her lieutenants and, in battle, <em>divine power / air walk / magic vestment / shield of faith</em>.</p>", category="offensive"),
+   B.action(nid(), "Slay Living", "2", "<p>A killing curse of void: one creature within 30 feet takes @Damage[7d6+14[void]] ("+chk("type:fortitude|dc:27|basic:true")+"; a critical failure can drop a frail target outright).</p>", ["concentrate", "manipulate", "void"]),
+   B.action(nid(), "Greater Command", "2", "<p>One creature within 30 feet must succeed at a "+chk("type:will|dc:27")+" or be compelled to drop "+B.cond("prone", "Prone")+" and grovel (flee, on a critical failure) for 1 round.</p>", ["concentrate", "auditory", "linguistic", "mental", "occult"]),
+   B.action(nid(), "Harm (Font)", "3", "<p>A 30-ft void burst: living creatures take @Damage[6d8[void]] ("+chk("type:fortitude|dc:27|basic:true")+") and her undead allies are healed. She channels several times a day.</p>", ["concentrate", "manipulate", "void"]),
+   B.action(nid(), "Air Walk & Mist", "1", "<p>Andaisin walks on air 10+ ft up to cast with impunity, dropping <em>obscuring mist</em> below to foil non-flyers when reduced to fewer than ~30 HP, then heals and returns.</p>", ["concentrate", "manipulate", "occult"]),
+   B.lore(nid(), "Urgathoa Lore", 19),
+   B.gear("breastplate", nid()), B.gear("scythe", nid())],
+  notes="<p><strong>Role:</strong> high priestess of Urgathoa, fled from Nidal — the Temple's master and a co-architect of blood veil. The Inner Sanctum (G14) boss.</p>"
+        "<p><strong>Tactics:</strong> buffs (Divine Power), then air-walks aloft and rains Slay Living / Greater Command / Harm before dropping into scythe range; retreats into mist + heals at low HP. <strong>Morale:</strong> she fights to the death — and then <strong>transforms</strong> into a Daughter of Urgathoa (see her second form).</p>",
+  folder=F2["a_creatures"], senses=[{"type": "darkvision"}], other_speeds=[{"type": "fly", "value": 20}], blurb="Urgathoan high priestess; plague architect", token_src=None, actor_link=True))
+
+AW("andaisin-transformed", B.npc(A2["andaisin_t"], "Andaisin, Daughter of Urgathoa", 11, 30, 200, 23, 18, 21, 20,
+  {"str": 7, "dex": 3, "con": 6, "int": 0, "wis": 4, "cha": 3}, 30,
+  {"athletics": 23, "intimidation": 21, "religion": 19}, ["undead"], ["common", "infernal"],
+  [B.strike(nid(), "Great Claw", 24, "2d10+11", "slashing", ["deadly-d10", "reach-10"], [("1d6", "void")]),
+   B.strike(nid(), "Claw", 24, "2d8+11", "slashing", ["agile"]),
+   B.action(nid(), "Daughter's Plague", "passive", "<p>A creature damaged by Andaisin's claws is exposed to a virulent wasting disease ("+chk("type:fortitude|dc:29")+"): @Damage[2d6[void]] and "+B.cond("drained", "Drained 1")+" on a failure, advancing daily — Urgathoa's gift made flesh.</p>", category="offensive"),
+   B.action(nid(), "Devouring Maw", "1", "<p>Against a "+B.cond("grabbed", "Grabbed")+" or "+B.cond("prone", "Prone")+" creature, Andaisin bites for @Damage[3d8+11[piercing]] plus @Damage[2d6[void]]; she regains that much vitality.</p>", ["attack"]),
+   B.action(nid(), "Pestilent Aura", "passive", "<p>Living creatures that end their turn within 15 feet of Andaisin take @Damage[2d6[void]] (basic "+chk("type:fortitude|dc:29")+") as disease and decay roll off her in waves.</p>", category="offensive"),
+   B.action(nid(), "Undead Resilience", "passive", "<p>Undead; immune to disease, death effects, paralysis, poison, and mental effects requiring a living mind; negative healing (harmed by vitality, healed by void).</p>", category="defensive")],
+  notes="<p><strong>Role:</strong> the horror Andaisin becomes the instant her mortal body dies — a Large undead <strong>Daughter of Urgathoa</strong>, Urgathoa's blessing on her most fervent. <strong>This is the true climax of Chapter 2.</strong> She fights to destruction, spreading plague with every claw.</p>"
+        "<p><strong>Tactics:</strong> wades in with reach claws + the pestilent aura, grabs and devours the wounded, and never relents. The fight begins fresh when she rises — give the party a beat of dread.</p>",
+  folder=F2["a_creatures"], senses=[{"type": "darkvision"}], size="lg", blurb="Andaisin's undead death-form", token_src=None, actor_link=True))
 
 # =====================================================================
 # JOURNAL — "2. Seven Days to the Grave"
@@ -394,6 +465,97 @@ area2("E2", "Carowyn Manor — Second Floor", SR("E2", 110)
      B.aside_token([act(A2["jolistina"], "Jolistina Susperio (8)"), "+ remaining "+B.mon("zombie-shambler", "zombies")]))
   + B.s_treasure("<p>Jolistina carries 2 potions of invisibility, a potion of <em>remove disease</em>, wands of <em>animate dead</em> / <em>sculpt corpse</em> / <em>cat's grace</em>, <strong>+1 glamered studded leather</strong>, a hand crossbow with 3 <strong>screaming bolts</strong>, and ~150 gp + stolen jewelry. The manor itself holds a noble household's worth of re-scaled valuables.</p>")
   + B.s_conv("<p><strong>The reveal:</strong> exposing the staged deaths proves the nobles were murdered, not plagued — and the wand of <em>sculpt corpse</em> + Jolistina's link to <strong>Rolth</strong> ties the plague to the necromancer and the cult of Urgathoa, pointing toward the Hospice. Save Ausio; recover Ruan's body for Deyanira.</p>"))
+
+# --- Part 3: EPIDEMIC — the Hospice of the Blessed Maiden (F) ---
+PG("Part 3 — Epidemic: The Hospice of the Blessed Maiden", SR("Hospice", 112)
+  + B.s_milestone("<p><strong>Part 3 — Epidemic.</strong> The trail converges on the <strong>Hospice of the Blessed Maiden</strong>, the Queen's Physicians' headquarters in a converted warehouse — and on the hidden <strong>Temple of Urgathoa</strong> beneath it. The PCs should be 7th level entering the temple, and just 8th by the chapter's end. This is the plague's heart: "+act(A2["davaulus"], "Davaulus")+", "+act(A2["andaisin"], "Andaisin")+", and the nosferatu "+act(A2["ramoska"], "Ramoska")+".</p>")
+  + B.s_skill("<p>The hospice masquerades as a legitimate plague-treatment center, patrolled by "+act(A2["graymaiden"], "Gray Maidens")+" and the masked "+act(A2["physician"], "Queen's Physicians")+". Bluffing or sneaking in beats fighting through; pushing too hard gets the PCs an audience with Davaulus, who tries to misdirect them onto a fictional wererat cult.</p>"))
+
+area2("F1", "Hospice Entry", SR("F1", 112)
+  + "<p>The warehouse front: a façade of cots, suffering patients, and brisk masked physicians. "+act(A2["graymaiden"], "Gray Maidens")+" control access; a "+chk("type:deception|dc:24")+" or genuine business gets the PCs past the entry without a fight.</p>"
+  + B.enc("Entry watch", encx([3, 2], 7),
+     "<p>A "+act(A2["graymaiden"], "Gray Maiden")+" and a "+act(A2["physician"], "Queen's Physician")+" on the door (more respond to an alarm).</p>",
+     B.aside_token([act(A2["graymaiden"], "Gray Maiden (3)"), act(A2["physician"], "Queen's Physician (2)")])))
+
+area2("F5", "The Catwalks", SR("F5", 113)
+  + "<p>Catwalks ring the warehouse's upper level over the treatment floor — the physicians' route between wards. Gray Maidens patrol here.</p>"
+  + B.enc("Catwalk patrol", encx([3, 3], 7),
+     "<p>2 "+act(A2["graymaiden"], "Gray Maidens")+" — sword-and-shield in the choke of the catwalk, longbows if the PCs hang back.</p>",
+     B.aside_token(["2× "+act(A2["graymaiden"], "Gray Maiden (3)")])))
+
+area2("F7", "Experimentation Ward", SR("F7", 114)
+  + "<p>Behind the public wards, the physicians 'treat' captured plague victims — in truth refining and spreading blood veil. The horror here is hard proof of the conspiracy.</p>"
+  + B.enc("Physicians at work", encx([2, 2, 2], 7),
+     "<p>3 "+act(A2["physician"], "Queen's Physicians")+", flanking in silence for Sneak Attacks.</p>",
+     B.aside_token(["3× "+act(A2["physician"], "Queen's Physician (2)")])))
+
+area2("F8", "The Doctor's Office", SR("F8", 116)
+  + "<p>"+act(A2["davaulus"], "Dr. Reiner Davaulus")+"'s office, and the concealed stair down to the Temple of Urgathoa. Confronted, he plays the gracious host and tries to talk the PCs away; the moment he senses an attack he turns invisible and flees below.</p>"
+  + B.enc("Reiner Davaulus", encx([9], 7),
+     "<p>"+act(A2["davaulus"], "Davaulus")+" (bane-rapier Sneak Attacks, Inspire) — usually backed by the F5/F7 staff if alarmed. He flees to the Temple rather than die in the open.</p>",
+     B.aside_token([act(A2["davaulus"], "Reiner Davaulus (9)")]))
+  + B.s_conv("<p>His notes (here, or relocated to G14 if the PCs were fooled) confirm the manufactured plague. The stair down begins the <strong>Temple of Urgathoa</strong>.</p>"))
+
+# --- Part 3: the Temple of Urgathoa (G) ---
+PG("The Temple of Urgathoa", SR("Temple of Urgathoa", 118)
+  + B.s_milestone("<p><strong>G. The Temple of Urgathoa</strong> — the cult's hidden warren beneath the hospice, where blood veil is brewed and the dying are 'harvested.' Andaisin pre-buffs her lieutenants (<em>status</em>) each morning and rallies the temple the moment the alarm sounds.</p>")
+  + B.s_skill("<p>Staffed by zealous "+act(A2["cultist"], "cultists of Urgathoa")+" (and the negotiable nosferatu "+act(A2["ramoska"], "Ramoska")+" in his lab). Stealth and speed matter — a roused temple converges on the Inner Sanctum.</p>"))
+
+area2("G2", "Guard Post", SR("G2", 118)
+  + "<p>The temple's first defended threshold. "+act(A2["cultist"], "Cultists")+" (and any Gray Maidens who followed Davaulus down) hold the entry and raise the alarm.</p>"
+  + B.enc("Temple guards", encx([3, 3, 3], 7),
+     "<p>3 "+act(A2["cultist"], "cultists of Urgathoa")+" — scythes and void-channeling; they fight to the death.</p>",
+     B.aside_token(["3× "+act(A2["cultist"], "Cultist of Urgathoa (3)")])))
+
+area2("G5", "Operating Room", SR("G5", 120)
+  + "<p>A blood-slick surgery where the cult vivisects victims to study the disease.</p>"
+  + B.enc("Cult surgeons", encx([3, 3], 7),
+     "<p>2 "+act(A2["cultist"], "cultists")+" mid-operation.</p>",
+     B.aside_token(["2× "+act(A2["cultist"], "Cultist of Urgathoa (3)")])))
+
+area2("G7", "Cult Quarters", SR("G7", 122)
+  + "<p>The cultists' barracks. If the alarm is up, expect the off-duty zealots here to reinforce elsewhere.</p>"
+  + B.enc("Off-duty cult", encx([3, 3, 3, 3], 7),
+     "<p>4 "+act(A2["cultist"], "cultists of Urgathoa")+".</p>",
+     B.aside_token(["4× "+act(A2["cultist"], "Cultist of Urgathoa (3)")])))
+
+area2("G8", "The Blood Vats", SR("G8", 122)
+  + "<p>Great vats where tainted blood is rendered into blood veil — the production heart of the plague. Destroying the vats (and the death's-head coffers' work) is a major blow.</p>"
+  + B.enc("Vat-tenders", encx([3, 3, 3, 3, 3, 3], 7),
+     "<p>6 "+act(A2["cultist"], "cultists")+" tending the vats — a <strong>Severe</strong> swarm if met all at once; thin them in the approach.</p>",
+     B.aside_token(["6× "+act(A2["cultist"], "Cultist of Urgathoa (3)")])))
+
+area2("G11", "Arkminos's Laboratory", SR("G11", 124)
+  + "<p>The nosferatu "+act(A2["ramoska"], "Ramoska Arkminos")+"'s imported laboratory, where he tests Varisian plague-immunity on the captive "+"<strong>Ruan Mirukova</strong> (Deyanira's brother, very much alive).</p>"
+  + SEC("<p><strong>Do not simply fight him.</strong> Ramoska is a CR-14-equivalent foe far above the party and wants no part of the cult's cause. He will <strong>sell Ruan and leave</strong> — for coin (~200 gp re-scaled), a magic item, a future favor, or the last <em>death's head coffer</em> from G14. Attacked, he fights savagely but Dimensional-Steps away rather than be destroyed.</p>")
+  + B.enc("Ramoska Arkminos (only if forced)", encx([13], 7),
+     "<p>"+act(A2["ramoska"], "Ramoska")+" — Drain Life, Contagion, caustic bombs, fast healing 5, nosferatu resilience. <strong>An almost-unwinnable straight fight at this level; the intended path is the bargain.</strong></p>",
+     B.aside_token([act(A2["ramoska"], "Ramoska Arkminos (13)")]))
+  + B.s_treasure("<p>Free Ruan (bargain or battle) to complete the Carowyn thread and earn the Mirukovas' lasting gratitude. Ramoska's lab is a trove of alchemical and disease lore (GM-scaled).</p>"))
+
+area2("G13", "Hall of Pestilence", SR("G13", 132)
+  + "<p>The defiled approach to the Inner Sanctum, lined with Urgathoan iconography of feast and rot. Andaisin's last guards make their stand.</p>"
+  + B.enc("Sanctum guards", encx([3, 3], 7),
+     "<p>2 "+act(A2["cultist"], "cultists")+" (one bearing Andaisin's <em>status</em> — her early warning).</p>",
+     B.aside_token(["2× "+act(A2["cultist"], "Cultist of Urgathoa (3)")])))
+
+area2("G14", "The Inner Sanctum", SR("G14", 132)
+  + box("Inner Sanctum of Urgathoa",
+        "<p>The Inner Sanctum reeks of incense and corruption — an altar to the Pallid Princess slick with old blood, the last death's-head coffer upon it. Here Lady Andaisin awaits, scythe in hand, serene with terrible faith.</p>")
+  + "<p>"+act(A2["andaisin"], "Lady Andaisin")+", high priestess of Urgathoa, is the chapter's villain made flesh — and she does not die easily.</p>"
+  + B.enc("BOSS — Lady Andaisin", encx([9], 7),
+     "<p>"+act(A2["andaisin"], "Andaisin")+" buffs, air-walks aloft, and rains Slay Living / Greater Command / Harm before dropping into scythe range; she mists-and-heals when low.</p>",
+     B.aside_token([act(A2["andaisin"], "Lady Andaisin (9)")]))
+  + B.enc("CLIMAX — Andaisin, Daughter of Urgathoa", encx([11], 7),
+     "<p>The instant Andaisin dies, Urgathoa's blessing erupts: she rises as "+act(A2["andaisin_t"], "a Daughter of Urgathoa")+" — a Large undead horror with reach claws, a devouring maw, a pestilent aura, and plague-bearing wounds. <strong>An Extreme-tier climax; the true end of Chapter 2.</strong></p>",
+     B.aside_token([act(A2["andaisin_t"], "Andaisin, Daughter of Urgathoa (11)")]))
+  + B.s_treasure("<p>On the altar: the final <strong>death's-head coffer</strong> (the plague-engine — Ramoska covets it; destroying it ends the seeding), Andaisin's +2 vicious scythe and +2 breastplate, a belt of mighty constitution, a cloak of resistance, a headband of wisdom, and the cult's hoard (re-scaled).</p>")
+  + B.s_conv("<p>With Andaisin destroyed and the vats and coffer ended, the manufactured plague's <strong>source</strong> is broken — but per the persistent-plague overlay (Conversion Guide → Blood Veil), the cult's re-seeding only <em>suppresses</em>, and the Epidemic Clock continues until Ileosa falls in Chapter 6.</p>"))
+
+PG("Chapter Conclusion", SR("Chapter Conclusion", 132)
+  + B.s_milestone("<p><strong>Chapter Conclusion.</strong> The Hospice and Temple fall, Davaulus and Andaisin are dead (or fled), and Korvosa's acute outbreak breaks. The PCs should be 8th level. But the victory is bittersweet — the city is scarred, the Gray Maidens entrenched, and Old Korvosa now sealed under quarantine.</p>")
+  + SEC("<p><strong>Into Chapter 3.</strong> The crafted cure <strong>suppresses</strong> rather than eradicates (persistent-plague overlay): set the Epidemic Clock from the Survivor Count tally across the missions. The quarantine of Old Korvosa and the captured seneschal <strong>Neolandus</strong> (held by the Arkonas) launch 'Escape from Old Korvosa.' If Davaulus was duped-and-fled, the Red Mantis now hunt the PCs there.</p>")
+  + B.s_conv("<p><strong>Threads forward:</strong> the persistent plague + Epidemic Clock · the Gray Maidens (now a standing enemy) · Rolth's vendetta and his immunity research · Ramoska loose with his bargain (or destroyed) · Trinia & Vencarlo · the Arkonas + Neolandus → Chapter 3.</p>"))
 
 journal = B.journal_entry(JID2, "2. Seven Days to the Grave", pages, folder=ADV_FOLDER)
 B.write("journals", "02-seven-days-to-the-grave", copy.deepcopy(journal), embed_pages=True)
