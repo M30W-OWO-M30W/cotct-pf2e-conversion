@@ -5,6 +5,7 @@ the rebellion, the assault on Castle Korvosa (A1-A95), and the Sunken Queen
 from __future__ import annotations
 import copy
 import pf2e_build as B
+B.SCOPE = (14400, 17221)   # AP.md line range for this chapter (anchor scoping)
 
 MODID = "cotct-pf2e-conversion"
 ACTOR_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctAdvFolder01"

@@ -11,6 +11,7 @@ Run: python3 scripts/build_pilot.py   (deterministic; safe to re-run)
 from __future__ import annotations
 import copy, json, os, re
 import pf2e_build as B
+B.SCOPE = (234, 2695)   # Ch.1 AP.md line range (anchor scoping)
 
 # ---- stable IDs (pilot registry; keep links stable) ----
 A = {"gaedren":"RKfT6vJ5guinSBjo","yargin":"7uhbgkK2IOZOlJb3","hookshanks":"qH96VshE6CZqfajv",

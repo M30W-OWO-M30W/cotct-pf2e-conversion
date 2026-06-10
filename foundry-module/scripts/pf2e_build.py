@@ -16,14 +16,23 @@ import json, pathlib, os, re
 # Each chapter script passes its own start-anchor; AP prose is NEVER committed.
 SRC_MD = os.environ.get("COTCT_AP_MD",
     "/mnt/c/Users/maman/Downloads/Curse of the Crimson Throne AP.md")
-_PARAS_CACHE = None
+_PARAS_CACHE = None      # list of (normalized_text, start_line_number)
+SCOPE = None             # (lo_line, hi_line) — set per chapter script so an anchor
+                         # can NEVER match another chapter's text (two-column OCR
+                         # plus generic anchors caused cross-chapter mis-injection)
 def _paras():
     global _PARAS_CACHE
     if _PARAS_CACHE is None:
         try: raw = open(SRC_MD, encoding="utf-8").read()
         except OSError: raw = ""
-        _PARAS_CACHE = [" ".join(p.split()) for p in re.split(r"\n\s*\n", raw)]
+        out, line = [], 1
+        for block in re.split(r"\n\s*\n", raw):
+            out.append((" ".join(block.split()), line))
+            line += block.count("\n") + 2
+        _PARAS_CACHE = out
     return _PARAS_CACHE
+def _in_scope(lineno):
+    return SCOPE is None or (SCOPE[0] <= lineno < SCOPE[1])
 def parafy(text, target=550):
     """Split one long paragraph into several <p> blocks at sentence boundaries
     (~target chars each) — long verbatim read-aloud renders as a wall otherwise."""
@@ -62,13 +71,16 @@ def verbatim(anchor):
     a = " ".join(anchor.split())
     if not a: return ""
     paras = _paras()
-    si = next((k for k, p in enumerate(paras) if p.startswith(a)), None)
+    si = next((k for k, (p, ln) in enumerate(paras) if p.startswith(a) and _in_scope(ln)), None)
     if si is None:
-        si = next((k for k, p in enumerate(paras) if a in p), None)
-    if si is None: return ""
-    text, k = paras[si], si + 1
+        si = next((k for k, (p, ln) in enumerate(paras) if a in p and _in_scope(ln)), None)
+    if si is None:
+        if SCOPE is not None and any(p.startswith(a) or a in p for p, ln in paras):
+            print(f"  [verbatim] anchor matches only OUTSIDE chapter scope {SCOPE}: {a[:50]!r} -> fallback used")
+        return ""
+    text, k = paras[si][0], si + 1
     while text and text[-1] not in '.!?:"”\'’)' and k < len(paras):
-        nxt = paras[k]
+        nxt = paras[k][0]
         if nxt.startswith("#") or nxt.startswith("HANDOUT"): break
         # two-column OCR junk INSIDE a sentence: skip it and keep merging so the
         # sentence completes from the paragraph beyond the interleave

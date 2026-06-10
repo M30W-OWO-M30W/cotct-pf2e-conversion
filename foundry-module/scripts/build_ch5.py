@@ -8,6 +8,7 @@ Serithtial beneath the Sacred Lake. ~137 keyed areas, clustered by wing.
 from __future__ import annotations
 import copy
 import pf2e_build as B
+B.SCOPE = (10823, 14400)   # AP.md line range for this chapter (anchor scoping)
 
 MODID = "cotct-pf2e-conversion"
 ACTOR_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctAdvFolder01"

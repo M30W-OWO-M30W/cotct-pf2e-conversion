@@ -9,6 +9,7 @@ Vivified Labyrinth, and the rescue of Neolandus Kalepopolis.
 from __future__ import annotations
 import copy
 import pf2e_build as B
+B.SCOPE = (5514, 8160)   # AP.md line range for this chapter (anchor scoping)
 
 MODID = "cotct-pf2e-conversion"
 ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cotctAdvFolder01"
