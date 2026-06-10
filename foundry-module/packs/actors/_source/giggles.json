@@ -36,7 +36,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "flail",
         "traits": {
           "rarity": "common",
           "value": [
@@ -150,7 +150,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>Deals nonlethal with his Flail at no penalty; +1 circumstance to attack on nonlethal Strikes vs foes above half HP.</p>"
+          "value": "<p>Giggles can deal nonlethal damage with his Flail without taking a penalty, and gains a +1 circumstance bonus to the attack roll when he does so.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -158,7 +158,35 @@
           "license": "OGL",
           "remaster": true
         },
-        "rules": [],
+        "rules": [
+          {
+            "key": "RollOption",
+            "domain": "all",
+            "option": "bludgeoner",
+            "toggleable": true
+          },
+          {
+            "key": "AdjustStrike",
+            "mode": "add",
+            "property": "weapon-traits",
+            "value": "nonlethal",
+            "definition": [
+              "item:slug:flail"
+            ],
+            "predicate": [
+              "bludgeoner"
+            ]
+          },
+          {
+            "key": "FlatModifier",
+            "selector": "flail-attack",
+            "type": "circumstance",
+            "value": 1,
+            "predicate": [
+              "bludgeoner"
+            ]
+          }
+        ],
         "slug": null,
         "traits": {
           "rarity": "common",
@@ -182,7 +210,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p><strong>Trigger</strong> Giggles is reduced to 0 HP.</p><hr /><p><strong>Effect</strong> He stays at 1 HP and becomes @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded} 1 (or increases his wounded value by 1). Once per day.</p>"
+          "value": "<p><strong>Trigger</strong> Giggles is reduced to 0 HP.</p><hr /><p><strong>Effect</strong> He stays at 1 HP and becomes @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded 1} (or increases his wounded value by 1). Once per day.</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",

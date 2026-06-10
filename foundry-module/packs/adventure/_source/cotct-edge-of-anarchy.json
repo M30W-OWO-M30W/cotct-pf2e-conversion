@@ -2269,7 +2269,7 @@
             },
             "category": "offensive",
             "description": {
-              "value": "<p>Gaedren makes a Hand Crossbow Strike against Gobblegut; on a hit the enraged crocodile gains a +2 status bonus to attack and damage rolls and must Strike the nearest creature other than Gaedren on its next turn.</p>"
+              "value": "<p>Gaedren makes a Hand Crossbow Strike against Gobblegut; on a hit, the enraged crocodile gains a +2 status bonus to attack and damage rolls until the end of its next turn and must use a single action to Strike the nearest creature other than Gaedren on its next turn.</p>"
             },
             "publication": {
               "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -2673,7 +2673,7 @@
             },
             "category": "offensive",
             "description": {
-              "value": "<p>Draw and throw an Acid Flask in one action (carries 3).</p>"
+              "value": "<p>Yargin Interacts to draw an Acid Flask, then Strikes with it.</p>"
             },
             "publication": {
               "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -2772,7 +2772,7 @@
             "value": 1
           },
           "privateNotes": "",
-          "publicNotes": "<p><strong>Role:</strong> Gaedren's fence; answers the front door, fights from A6. Opens with thrown Acid Flasks, falls back to crossbow. <strong>Flees down the hidden trapdoor to warn Gaedren if losing.</strong> Carries the brass key (all fishery doors).</p>",
+          "publicNotes": "<p><strong>Role:</strong> Gaedren's fence; answers the front door, fights from A6. Opens with thrown Acid Flasks, falls back to crossbow. <strong>Flees down the hidden trapdoor to warn Gaedren if losing.</strong> Carries three acid flasks and the brass key (all fishery doors).</p>",
           "publication": {
             "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
             "authors": "",
@@ -3369,7 +3369,7 @@
               "remaster": true
             },
             "rules": [],
-            "slug": null,
+            "slug": "flail",
             "traits": {
               "rarity": "common",
               "value": [
@@ -3480,7 +3480,7 @@
             },
             "category": "offensive",
             "description": {
-              "value": "<p>Deals nonlethal with his Flail at no penalty; +1 circumstance to attack on nonlethal Strikes vs foes above half HP.</p>"
+              "value": "<p>Giggles can deal nonlethal damage with his Flail without taking a penalty, and gains a +1 circumstance bonus to the attack roll when he does so.</p>"
             },
             "publication": {
               "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -3488,7 +3488,35 @@
               "license": "OGL",
               "remaster": true
             },
-            "rules": [],
+            "rules": [
+              {
+                "key": "RollOption",
+                "domain": "all",
+                "option": "bludgeoner",
+                "toggleable": true
+              },
+              {
+                "key": "AdjustStrike",
+                "mode": "add",
+                "property": "weapon-traits",
+                "value": "nonlethal",
+                "definition": [
+                  "item:slug:flail"
+                ],
+                "predicate": [
+                  "bludgeoner"
+                ]
+              },
+              {
+                "key": "FlatModifier",
+                "selector": "flail-attack",
+                "type": "circumstance",
+                "value": 1,
+                "predicate": [
+                  "bludgeoner"
+                ]
+              }
+            ],
             "slug": null,
             "traits": {
               "rarity": "common",
@@ -3511,7 +3539,7 @@
             },
             "category": "offensive",
             "description": {
-              "value": "<p><strong>Trigger</strong> Giggles is reduced to 0 HP.</p><hr /><p><strong>Effect</strong> He stays at 1 HP and becomes @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded} 1 (or increases his wounded value by 1). Once per day.</p>"
+              "value": "<p><strong>Trigger</strong> Giggles is reduced to 0 HP.</p><hr /><p><strong>Effect</strong> He stays at 1 HP and becomes @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded 1} (or increases his wounded value by 1). Once per day.</p>"
             },
             "publication": {
               "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -3814,7 +3842,7 @@
             },
             "category": "offensive",
             "description": {
-              "value": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15]; <strong>Maximum Duration</strong> 6 rounds; <strong>Stage 1</strong> 1d4 poison damage and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled} 1 (1 round).</p>"
+              "value": "<p><strong>Saving Throw</strong> @Check[type:fortitude|dc:15]; <strong>Maximum Duration</strong> 6 rounds; <strong>Stage 1</strong> 1d4 poison damage and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 round).</p>"
             },
             "publication": {
               "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -4576,7 +4604,7 @@
             "actions": {
               "value": null
             },
-            "category": "offensive",
+            "category": null,
             "description": {
               "value": "<p><strong>Trigger</strong> A creature Strides &gt;5 ft or fights on it.</p><hr /><p><strong>Effect</strong> @Check[type:reflex|dc:15|basic:true] or fall @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}; on a critical failure, slide off and fall 13 ft into the river (@Damage[1[bludgeoning]]) and the Jigsaw Shark's water (A12).</p>"
             },
@@ -4750,7 +4778,7 @@
             "actions": {
               "value": null
             },
-            "category": "offensive",
+            "category": null,
             "description": {
               "value": "<p><strong>Trigger</strong> A Medium+ creature moves onto the foredeck toward the bow.</p><hr /><p><strong>Effect</strong> @Check[type:reflex|dc:16|basic:true] or crash to the hold (A11) for @Damage[1d6[bludgeoning]] and land @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} among the drain spiders.</p>"
             },

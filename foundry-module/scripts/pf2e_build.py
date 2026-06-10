@@ -48,7 +48,7 @@ def _idgen(seed: int):
         yield "".join(r.choice(A) for _ in range(16))
 
 # ---------- low-level item builders (NPC/hazard embedded) ----------
-def strike(eid, name, bonus, dmg, dmgtype, traits, extra=None, img=MELEE_IMG):
+def strike(eid, name, bonus, dmg, dmgtype, traits, extra=None, img=MELEE_IMG, slug=None):
     rolls = {"0": {"damage": dmg, "damageType": dmgtype}}
     if extra:
         for i, (d, t) in enumerate(extra, 1):
@@ -57,7 +57,7 @@ def strike(eid, name, bonus, dmg, dmgtype, traits, extra=None, img=MELEE_IMG):
             "system": {"attack": {"value": ""}, "attackEffects": {"value": []},
                        "bonus": {"value": bonus}, "damageRolls": rolls,
                        "description": {"value": ""}, "publication": PUB, "rules": [],
-                       "slug": None, "traits": {"rarity": "common", "value": traits}}}
+                       "slug": slug, "traits": {"rarity": "common", "value": traits}}}
 
 _GLYPH = {None: "systems/pf2e/icons/default-icons/action.svg",
           "1": "systems/pf2e/icons/actions/OneAction.webp", "2": "systems/pf2e/icons/actions/TwoActions.webp",
@@ -141,6 +141,9 @@ def hazard(_id, name, level, stealth, stealth_note, disable, desc, items, folder
         attr["immunities"] = [{"type": "critical-hits"}, {"type": "precision"}]
     if ac is not None:
         attr["ac"] = {"value": ac}
+    for it in items:                       # hazard reactions/actions use a null category (official convention)
+        if it.get("type") == "action":
+            it["system"]["category"] = None
     return {"_id": _id, "name": name, "type": "hazard", "img": "systems/pf2e/icons/default-icons/hazard.svg",
             "items": items, "folder": folder, "sort": 0, "ownership": {"default": 0}, "flags": {}, "_stats": dict(STATS),
             "prototypeToken": prototoken(name, "med", disposition=-1, has_hp=bool(hp)),
