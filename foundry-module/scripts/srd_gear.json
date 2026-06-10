@@ -1,0 +1,359 @@
+{
+ "acid-flask-lesser": {
+  "name": "Acid Flask (Lesser)",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/acid-flask.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "acid-flask-lesser",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "acid",
+     "alchemical",
+     "bomb",
+     "consumable",
+     "splash"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 1
+   },
+   "quantity": 3,
+   "baseItem": "alchemical-bomb",
+   "bulk": {
+    "value": 0.1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 3
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "invested": null,
+    "handsHeld": 0
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "usage": {
+    "value": "held-in-one-hand"
+   },
+   "category": "martial",
+   "group": "bomb",
+   "bonus": {
+    "value": 0
+   },
+   "damage": {
+    "dice": 1,
+    "die": "",
+    "damageType": "acid",
+    "persistent": {
+     "faces": 6,
+     "number": 1,
+     "type": "acid"
+    }
+   },
+   "splashDamage": {
+    "value": 1
+   },
+   "range": 20,
+   "expend": 1,
+   "ammo": null,
+   "reload": {
+    "value": "-"
+   },
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "striking": 0,
+    "property": []
+   },
+   "specific": null,
+   "subitems": [],
+   "bonusDamage": {
+    "value": 0
+   }
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK"
+  }
+ },
+ "healing-potion-minor": {
+  "name": "Healing Potion (Minor)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]</p>",
+    "gm": ""
+   },
+   "rules": [],
+   "slug": "healing-potion-minor",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "consumable",
+     "healing",
+     "magical",
+     "potion",
+     "vitality"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder GM Core",
+    "authors": "",
+    "license": "ORC",
+    "remaster": true
+   },
+   "level": {
+    "value": 1
+   },
+   "quantity": 0,
+   "baseItem": null,
+   "bulk": {
+    "value": 0.1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 4
+    }
+   },
+   "equipped": {
+    "carryType": "worn"
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "",
+     "img": "",
+     "data": {
+      "description": {
+       "value": ""
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "category": "potion",
+   "uses": {
+    "value": 1,
+    "max": 1,
+    "autoDestroy": true
+   },
+   "damage": {
+    "formula": "1d8",
+    "kind": "healing",
+    "type": "vitality"
+   },
+   "usage": {
+    "value": "held-in-one-hand"
+   },
+   "spell": null
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao"
+  }
+ },
+ "thunderstone-lesser": {
+  "name": "Thunderstone (Lesser)",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-bombs/thunderstone.webp",
+  "system": {
+   "description": {
+    "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Xnqglykl3Cif8rN9]</p>",
+    "gm": ""
+   },
+   "rules": [
+    {
+     "key": "Note",
+     "selector": "{item|_id}-damage",
+     "text": "PF2E.BombNotes.Thunderstone.Lesser.success"
+    }
+   ],
+   "slug": "thunderstone-lesser",
+   "_migration": {
+    "version": 0.955,
+    "lastMigration": null,
+    "previous": {
+     "schema": 0.953,
+     "foundry": "13.351",
+     "system": "7.12.2"
+    }
+   },
+   "traits": {
+    "otherTags": [],
+    "value": [
+     "alchemical",
+     "bomb",
+     "consumable",
+     "sonic",
+     "splash"
+    ],
+    "rarity": "common"
+   },
+   "publication": {
+    "title": "Pathfinder Core Rulebook",
+    "authors": "",
+    "license": "OGL",
+    "remaster": false
+   },
+   "level": {
+    "value": 1
+   },
+   "quantity": 1,
+   "baseItem": "alchemical-bomb",
+   "bulk": {
+    "value": 0.1
+   },
+   "hp": {
+    "value": 0,
+    "max": 0
+   },
+   "hardness": 0,
+   "price": {
+    "value": {
+     "gp": 3
+    }
+   },
+   "equipped": {
+    "carryType": "worn",
+    "invested": null,
+    "handsHeld": 0,
+    "inSlot": false
+   },
+   "containerId": null,
+   "size": "med",
+   "material": {
+    "type": null,
+    "grade": null
+   },
+   "identification": {
+    "status": "identified",
+    "unidentified": {
+     "name": "Unusual Alchemical Bomb",
+     "img": "systems/pf2e/icons/unidentified_item_icons/alchemical_bomb.webp",
+     "data": {
+      "description": {
+       "value": "The nature of this alchemical bomb is unclear."
+      }
+     }
+    },
+    "misidentified": {}
+   },
+   "usage": {
+    "value": "held-in-one-hand"
+   },
+   "category": "martial",
+   "group": "bomb",
+   "bonus": {
+    "value": 0
+   },
+   "damage": {
+    "dice": 1,
+    "die": "d4",
+    "damageType": "sonic",
+    "persistent": null
+   },
+   "splashDamage": {
+    "value": 1
+   },
+   "range": 20,
+   "expend": 1,
+   "ammo": null,
+   "reload": {
+    "value": "-"
+   },
+   "grade": null,
+   "runes": {
+    "potency": 0,
+    "striking": 0,
+    "property": []
+   },
+   "specific": null,
+   "subitems": [],
+   "bonusDamage": {
+    "value": 0
+   },
+   "property1": {
+    "value": "",
+    "dice": 0,
+    "die": "",
+    "damageType": "",
+    "critDice": 0,
+    "critDie": "",
+    "critDamage": "",
+    "critDamageType": ""
+   }
+  },
+  "flags": {},
+  "_stats": {
+   "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Xnqglykl3Cif8rN9"
+  }
+ }
+}

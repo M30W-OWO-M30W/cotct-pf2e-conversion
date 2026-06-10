@@ -56,6 +56,21 @@ matches Paizo's: e.g. `sneak_attack(eid, dice, who="Gaedren")` →
 condition named in any action/hazard description (enfeebled 1, wounded 1, prone, …)
 gets its link.
 
+## 4b. Carried gear = real compendium items + inline badges
+Consumables/poisons/gear an NPC carries (acid flasks, thunderstones, healing
+potions, …) are **real pf2e equipment-srd items in the inventory**, not just prose.
+- Inline badge in the action that uses it: `isrd("acid-flask-lesser", "Acid Flask
+  (Lesser)")` → `@UUID[Compendium.pf2e.equipment-srd.Item.<id>]{…}` (renders the item
+  badge), e.g. Quick Acid → "draw an {Acid Flask (Lesser)}, then Strikes with it."
+- Inventory item: `gear("acid-flask-lesser", nid(), qty)` embeds the item with its
+  mechanical data + a `compendiumSource` link back to the SRD. Templates live in
+  `scripts/srd_gear.json` (mechanics only — the prose description is stubbed to the
+  compendium link so we don't ship Paizo flavor text). Add new gear by extracting
+  its template from real pf2e data (a carried instance in `.work/kingmaker_ref`, or
+  the installed `pf2e/packs/equipment` LevelDB) into `srd_gear.json` + an `EQUIP` id.
+- NPC manual Strikes and inventory items coexist (NPC weapons don't auto-generate
+  strikes), so keep the explicit Strike *and* add the item to inventory.
+
 ## 5. Read-aloud & source text (verbatim, from the GM's own file)
 - The GM reads boxed text **verbatim**, so it's pulled from the GM's local AP markdown
   at build time (`SRC_MD`), never hardcoded into the repo.

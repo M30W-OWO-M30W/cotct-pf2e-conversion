@@ -5,7 +5,7 @@
   "img": "systems/pf2e/icons/default-icons/npc.svg",
   "items": [
     {
-      "_id": "4uhpf6u6GbUF5Zrv",
+      "_id": "oDsYqTFKD2ejR0f5",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Flail",
       "sort": 0,
@@ -45,10 +45,10 @@
           ]
         }
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.4uhpf6u6GbUF5Zrv"
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.oDsYqTFKD2ejR0f5"
     },
     {
-      "_id": "xE1IgLu9Q5hnpwbV",
+      "_id": "MvkxPmWeQuyIvIqA",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Fist",
       "sort": 0,
@@ -89,10 +89,10 @@
           ]
         }
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.xE1IgLu9Q5hnpwbV"
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.MvkxPmWeQuyIvIqA"
     },
     {
-      "_id": "oDsYqTFKD2ejR0f5",
+      "_id": "8zxwiV5cOy360wdG",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Composite Longbow",
       "sort": 0,
@@ -133,10 +133,10 @@
           ]
         }
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.oDsYqTFKD2ejR0f5"
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.8zxwiV5cOy360wdG"
     },
     {
-      "_id": "MvkxPmWeQuyIvIqA",
+      "_id": "xSgFi4qYd74GPi1v",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "Bludgeoner",
       "sort": 0,
@@ -193,10 +193,10 @@
           "value": []
         }
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.MvkxPmWeQuyIvIqA"
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.xSgFi4qYd74GPi1v"
     },
     {
-      "_id": "8zxwiV5cOy360wdG",
+      "_id": "L6OPduPEemfHre3l",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "Orc Ferocity",
       "sort": 0,
@@ -225,10 +225,10 @@
           "value": []
         }
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.8zxwiV5cOy360wdG"
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.L6OPduPEemfHre3l"
     },
     {
-      "_id": "xSgFi4qYd74GPi1v",
+      "_id": "cQiZw5wvfHPASruD",
       "img": "systems/pf2e/icons/default-icons/lore.svg",
       "name": "Brawling Lore",
       "sort": 0,
@@ -252,7 +252,111 @@
         "rules": [],
         "slug": null
       },
-      "_key": "!actors.items!mHUhxeaalWkTU1h4.xSgFi4qYd74GPi1v"
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.cQiZw5wvfHPASruD"
+    },
+    {
+      "name": "Healing Potion (Minor)",
+      "type": "consumable",
+      "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "healing-potion-minor",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "consumable",
+            "healing",
+            "magical",
+            "potion",
+            "vitality"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder GM Core",
+          "authors": "",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 1
+        },
+        "quantity": 3,
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 4
+          }
+        },
+        "equipped": {
+          "carryType": "worn"
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "potion",
+        "uses": {
+          "value": 1,
+          "max": 1,
+          "autoDestroy": true
+        },
+        "damage": {
+          "formula": "1d8",
+          "kind": "healing",
+          "type": "vitality"
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "spell": null
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao"
+      },
+      "_id": "98Vhz3Uz3kzF0bWW",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!mHUhxeaalWkTU1h4.98Vhz3Uz3kzF0bWW"
     }
   ],
   "system": {
@@ -308,7 +412,7 @@
         "value": 1
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Role:</strong> muscle on the main floor (A8); tries to <strong>capture</strong> PCs nonlethally for Gaedren, then fights to the death. Carries 3 minor healing potions.</p>",
+      "publicNotes": "<p><strong>Role:</strong> muscle on the main floor (A8); tries to <strong>capture</strong> PCs nonlethally for Gaedren, then fights to the death. Carries 3 @UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]{Minor Healing Potions}.</p>",
       "publication": {
         "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
         "authors": "",

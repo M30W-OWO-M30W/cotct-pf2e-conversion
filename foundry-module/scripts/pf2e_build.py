@@ -39,6 +39,24 @@ CONDITIONS = {
 def cond(key, label=None):
     return f"@UUID[Compendium.pf2e.conditionitems.Item.{CONDITIONS[key]}]{{{label or key.title()}}}"
 
+# pf2e equipment-srd ids for the gear our NPCs carry — used for inline item badges
+# AND for embedding real inventory items (templates in scripts/srd_gear.json, which
+# hold the mechanical data + a compendiumSource link back to the SRD).
+EQUIP = {"acid-flask-lesser": "M1k5QQc1qQLxzyCK", "thunderstone-lesser": "Xnqglykl3Cif8rN9",
+         "healing-potion-minor": "2RuepCemJhrpKKao"}
+def isrd(key, label):
+    return f"@UUID[Compendium.pf2e.equipment-srd.Item.{EQUIP[key]}]{{{label}}}"
+
+import json as _json
+_GEAR_PATH = ROOT / "scripts" / "srd_gear.json"
+_GEAR = _json.loads(_GEAR_PATH.read_text(encoding="utf-8")) if _GEAR_PATH.exists() else {}
+def gear(key, _id, qty=1):
+    """Embed a real pf2e inventory item (copied SRD mechanics + compendiumSource link)."""
+    it = json.loads(json.dumps(_GEAR[key]))   # deep copy
+    it["_id"] = _id; it["sort"] = 0; it["ownership"] = {"default": 0}
+    it["system"]["quantity"] = qty
+    return it
+
 # ---- deterministic ID pool (separate seed from the pilot registry) ----
 def _idgen(seed: int):
     import random
