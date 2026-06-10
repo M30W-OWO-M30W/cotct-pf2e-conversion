@@ -208,7 +208,7 @@ def AW(slug, doc):
 AW("gaedren-lamm", B.npc(A["gaedren"],"Gaedren Lamm",2,17,30,3,9,8,8,
   {"str":-1,"dex":4,"con":0,"int":3,"wis":2,"cha":3},15,
   {"deception":10,"stealth":9,"thievery":9,"intimidation":8,"society":6,"acrobatics":9},
-  ["humanoid","human"],["Common","Varisian"],
+  ["humanoid","human"],["Common","Dwarven","Gnomish","Goblin","Halfling","Infernal","Orcish","Shoanti","Varisian"],
   [B.strike(nid(),"Fine Dagger",9,"1d4+1","piercing",["agile","finesse","versatile-s"]),
    B.strike(nid(),"Hand Crossbow",9,"1d6","piercing",["range-increment-60","reload-1"]),
    B.sneak_attack(nid(),1,"Gaedren"),
@@ -231,7 +231,7 @@ AW("yargin-balko", B.npc(A["yargin"],"Yargin Balko",1,16,20,5,5,7,6,
    B.strike(nid(),"Dagger",5,"1d4+1","piercing",["agile","finesse","versatile-s"]),
    B.action(nid(),"Quick Acid","1","<p>Yargin Interacts to draw an "+B.isrd("acid-flask-lesser","Acid Flask (Lesser)")+", then Strikes with it.</p>",["alchemical"]),
    B.lore(nid(),"Alchemy Lore",7),
-   B.gear("acid-flask-lesser",nid(),3), B.gear("thunderstone-lesser",nid(),1),
+   B.gear("acid-flask-lesser",nid(),2), B.gear("thunderstone-lesser",nid(),1),
    B.gear("crossbow",nid()), B.gear("dagger",nid()), B.gear("leather-armor",nid())],
   notes="<p><strong>Role:</strong> Gaedren's fence; answers the front door, fights from A6. Opens with thrown Acid Flasks, falls back to crossbow. <strong>Flees down the hidden trapdoor to warn Gaedren if losing.</strong> Carries the brass key (all fishery doors).</p>",
   folder=F["a_creatures"], blurb="Bitter alchemist-fence; Gaedren's right hand", token_src=TOK("yargin-balko")))
@@ -248,7 +248,7 @@ AW("hookshanks-gruller", B.npc(A["hookshanks"],"Hookshanks Gruller",1,16,18,4,7,
    B.gear("kukri",nid()), B.gear("dagger",nid()), B.gear("studded-leather",nid())],
   notes="<p><strong>Role:</strong> gnome taskmaster over the orphans in A7; dresses as one of them and hides in their midst.</p>"
         "<p><strong>Behavior:</strong> orders the orphans to attack and opens the A4 door to loose Bloo. At less than half HP he surrenders and tells the PCs everything he knows about the fishery and Gaedren's routine — except what lies in the den (A14).</p>",
-  folder=F["a_creatures"], size="sml", blurb="Gnome taskmaster who hides among the orphans", token_src=TOK("hookshanks-gruller")))
+  folder=F["a_creatures"], size="sml", senses=[{"type":"low-light-vision"}], blurb="Gnome taskmaster who hides among the orphans", token_src=TOK("hookshanks-gruller")))
 
 AW("giggles", B.npc(A["giggles"],"Giggles",1,16,24,7,5,3,5,
   {"str":3,"dex":1,"con":3,"int":0,"wis":1,"cha":0},25,
@@ -265,7 +265,7 @@ AW("giggles", B.npc(A["giggles"],"Giggles",1,16,24,7,5,3,5,
    B.gear("healing-potion-minor",nid(),3),
    B.gear("flail",nid()), B.gear("composite-longbow",nid()), B.gear("chain-mail",nid())],
   notes="<p><strong>Role:</strong> muscle on the main floor (A8); tries to <strong>capture</strong> PCs nonlethally for Gaedren, then fights to the death. Carries 3 "+B.isrd("healing-potion-minor","Minor Healing Potions")+".</p>",
-  folder=F["a_creatures"], blurb="Half-orc brute; the fishery's muscle", token_src=TOK("giggles")))
+  folder=F["a_creatures"], senses=[{"type":"low-light-vision"}], blurb="Half-orc brute; the fishery's muscle", token_src=TOK("giggles")))
 
 AW("drain-spider", B.npc(A["drainspider"],"Drain Spider",-1,15,8,3,6,2,5,
   {"str":-2,"dex":4,"con":1,"int":-5,"wis":1,"cha":-4},25,
@@ -274,7 +274,7 @@ AW("drain-spider", B.npc(A["drainspider"],"Drain Spider",-1,15,8,3,6,2,5,
    B.action(nid(),"Drain Spider Venom","passive","<p><strong>Saving Throw</strong> "+chk("type:fortitude|dc:15")+"; <strong>Maximum Duration</strong> 6 rounds; <strong>Stage 1</strong> 1d4 poison damage and "+B.cond("enfeebled","Enfeebled 1")+" (1 round).</p>",["poison"])],
   notes="<p>Cat-sized vermin nesting in the wreck — 1 in A10, 4 in A11. It lunges at the first creature to enter its lair (off-guard to the surprised target).</p>"
         "<p>A creature smelling of the vermin repellent looted in A13 auto-repels them, trivializing the A11 nest.</p>",
-  folder=F["a_creatures"], senses=[{"type":"darkvision"},{"acuity":"imprecise","type":"tremorsense","range":30}],
+  folder=F["a_creatures"], senses=[{"type":"darkvision"},{"acuity":"imprecise","type":"tremorsense","range":60}],
   other_speeds=[{"type":"climb","value":25}], size="tiny", blurb="Aggressive venomous spider", token_src=TOK("drain-spider")))
 
 AW("jigsaw-shark", B.npc(A["jigsawshark"],"Jigsaw Shark",1,16,20,7,6,3,7,
@@ -306,7 +306,7 @@ HW("slippery-boardwalk", B.hazard(A["boardwalk"],"Slippery Boardwalk",1,0,
   "<p>Obvious — no check needed to notice.</p>",
   "<p>"+chk("type:acrobatics|dc:15")+" to cross carefully, or brace a stretch ("+chk("type:crafting|dc:15")+").</p>",
   "<p>A barnacle-slick boardwalk (A3) 13 ft above shark water; the planks also groan under heavy loads.</p>",
-  [B.action(nid(),"Slip","reaction","<p><strong>Trigger</strong> A creature Strides &gt;5 ft or fights on it.</p><hr /><p><strong>Effect</strong> "+chk("type:reflex|dc:15|basic:true")+" or fall "+B.cond("prone","Prone")+"; on a critical failure, slide off and fall 13 ft into the river (@Damage[1[bludgeoning]]) and the Jigsaw Shark's water (A12).</p>")],
+  [B.action(nid(),"Slip","reaction","<p><strong>Trigger</strong> A creature Strides &gt;5 ft or fights on it.</p><hr /><p><strong>Effect</strong> "+chk("type:reflex|dc:15")+" or fall "+B.cond("prone","Prone")+"; on a critical failure, slide off and fall 13 ft into the river and the Jigsaw Shark's water (A12) — the water is deep enough and the fall short enough that the creature takes no falling damage.</p>")],
   folder=F["a_hazards"], traits=["environmental"], reset="<p>Persistent terrain.</p>"))
 
 HW("rotten-ship-deck", B.hazard(A["rottendeck"],"Rotten Ship Deck",1,16,
