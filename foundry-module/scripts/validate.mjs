@@ -163,6 +163,9 @@ for (const pack of packDirs) {
         if (/[a-z]/.test(txt[0]) || !/[.!?:"”'’)]$/.test(txt))
           warnings.push(`split? [${doc.name} › ${p.name}] "${txt.split(" ").slice(0, 5).join(" ")}…"`);
       }
+      // the Supplemental Rulings registry page legitimately DISCUSSES DCs in its
+      // notes/basis tags (its rollable bullets are enriched); exempt it from the scan
+      if (p.name === "Supplemental Rulings — Module-Authored Checks") continue;
       const text = html.replace(/@Check\[[^\]]*\]/g, "").replace(/<[^>]+>/g, "");
       const dc = text.match(/DC\s*\d+/);
       if (dc) warnings.push(`raw DC not @Check [${doc.name} › ${p.name}]: "${dc[0]}"`);
