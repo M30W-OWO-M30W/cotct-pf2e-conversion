@@ -21,7 +21,8 @@ ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cot
 # ---- stable literal ids (16 chars) ----
 JID2 = "ch2SevenDaysJrn1"          # the fat Ch.2 journal
 A2 = {"graymaiden": "grayMaidenFoot01", "ishani": "ishaniDhatri0001",
-      "physician": "queensPhysician1", "silteel": "siltEel000000001", "yvicca": "yviccaSeaHag0001"}
+      "physician": "queensPhysician1", "silteel": "siltEel000000001", "yvicca": "yviccaSeaHag0001",
+      "girrigz": "girrigzRipper001"}
 F2 = {"a_ch2": "ch2ActorFolder01", "a_creatures": "ch2CreaturesFld1"}
 
 ids = B._idgen(220002)             # Ch.2 folders/pages/notes (distinct seed)
@@ -117,6 +118,21 @@ AW("yvicca", B.npc(A2["yvicca"], "Yvicca", 6, 23, 105, 14, 12, 14, 14,
         "<p><strong>Tactics:</strong> opens at range with Horrific Appearance + Evil Eye, snares clusters with Tanglevine, and blasts with Brackish Bolt while Skinshear savages the snared. Underwater, the PCs fight at a disadvantage unless they prepared.</p>",
   folder=F2["a_creatures"], senses=[{"type": "darkvision"}], other_speeds=[{"type": "swim", "value": 30}],
   blurb="Sea-hag druid; the Direption's guardian", token_src=None, actor_link=True))
+
+AW("girrigz-ripperclaws", B.npc(A2["girrigz"], "Girrigz Ripperclaws", 6, 23, 105, 12, 16, 14, 13,
+  {"str": 2, "dex": 5, "con": 4, "int": 0, "wis": 2, "cha": -2}, 30,
+  {"acrobatics": 16, "athletics": 12, "stealth": 14, "intimidation": 12}, ["humanoid", "human", "beast"], ["common"],
+  [B.strike(nid(), "+1 Striking Mithral Rapier", 16, "2d6+6", "piercing", ["deadly-d8", "disarm", "finesse", "magical"], slug="girrigz-rapier"),
+   B.strike(nid(), "Jaws", 14, "1d8+6", "piercing", []),
+   B.action(nid(), "Curse of the Wererat", "passive", "<p>A creature bitten by Girrigz is exposed to wererat lycanthropy (a curse-disease): "+chk("type:fortitude|dc:23")+", and on a failure begins the affliction that ends with the victim becoming a wererat under the next full moon unless cured (<em>remove disease</em> before the third stage).</p>", category="offensive"),
+   B.action(nid(), "Change Shape", "1", "<p>Girrigz shifts between human, hybrid (his combat form), and dire-rat shapes. In hybrid or rat form he gains the Jaws Strike and a 20-foot climb Speed.</p>", ["concentrate", "polymorph", "primal"]),
+   B.action(nid(), "Vital Strike", "2", "<p>Girrigz makes a Rapier Strike that deals an extra @Damage[2d6[piercing]] on a hit — his signature lunge.</p>", ["flourish"]),
+   B.lore(nid(), "Underworld Lore", 12),
+   B.gear("leather-armor", nid())],
+  notes="<p><strong>Role:</strong> the wererat firebrand of Korvosa's sewers, whipping his kin into a doomed war on the plague-panicked city above — the boss of the Plague Rats mission. He <strong>cannot be reasoned with</strong>, hates all non-wererats, and fights to the death.</p>"
+        "<p><strong>Tactics:</strong> warned by fighting in B3 or the otyugh's release, he pre-buffs (his potions — bear's endurance, blur, shield of faith) and strikes from stealth with the rapier, Changing Shape to his hybrid form. <strong>Note:</strong> scattering his warband <em>without</em> killing the other (coerced) wererats earns full XP and saves 400 citizens (Survivor Count).</p>",
+  folder=F2["a_creatures"], senses=[{"type": "low-light-vision"}, {"acuity": "imprecise", "type": "scent", "range": 30}],
+  other_speeds=[{"type": "climb", "value": 20}], blurb="Wererat revolutionary; sewer warlord", token_src=None, actor_link=True))
 
 # =====================================================================
 # JOURNAL — "2. Seven Days to the Grave"
@@ -222,6 +238,47 @@ area2("A3", "Crew Quarters", SR("A3", 91)
      B.aside_token([act(A2["yvicca"], "Yvicca (6)"), act("lsdWSvGJ81hDy4it", "Skinshear (1)")]))
   + B.s_treasure("<p>Yvicca's hoard (re-scaled to PF2e ~L5–6): a few hundred gp in coin and pearls, a minor druidic trinket, and the cult's planted <em>clues</em> (forged manifests pointing nowhere) that confirm the wreck was bait. No plague source is here.</p>")
   + B.s_conv("<p>Clearing the wreck proves the plague's source lies elsewhere — pushing the PCs toward Carowyn Manor / Racker's Alley and, ultimately, the Hospice.</p>"))
+
+PG("Mission 2: Plague Rats", SR("Mission 2 — Plague Rats", 92)
+  + "<p>Plague-panicked mobs have begun lynching Korvosa's reclusive wererats, and the firebrand <strong>Girrigz Ripperclaws</strong> answers with a call to war on the city above. An elder wererat, <strong>Eries Yelloweyes</strong> (50 years hidden as a fishmonger), fears a purge and approaches the PCs in human form: stop Girrigz — ideally <em>without</em> a slaughter of her people — and she'll have her kin fight the plague from the shadows (disposing of infected bodies). She gives directions to his lair beneath Midland.</p>"
+  + B.s_skill("<p>The sewers are slick: moving faster than half Speed or attacking in the sewage flow forces "+chk("type:acrobatics|dc:12")+" or fall "+B.cond("prone", "Prone")+". A "+chk("type:nature|dc:15")+" recognizes the alarm-fungus shrieker in B2.</p>")
+  + SEC("<p><strong>Survivor Count:</strong> scattering Girrigz's warband without killing the other (coerced) wererats saves <strong>400 citizens</strong> and seeds an ongoing wererat ally network — a major win for the persistent-plague Epidemic Clock.</p>"))
+
+area2("B1", "Sewer Tunnel", SR("B1", 92)
+  + "<p>The approach to Girrigz's camp through Korvosa's sewers (pad it with wandering-monster encounters if the party needs XP). The main tunnel bends east to a rusty grate overlooking B4.</p>")
+
+area2("B2", "Guard Den", SR("B2", 92)
+  + "<p>A guard post around a sewage pool. A <strong>shrieker fungus</strong> by the south wall screeches if any creature enters and doesn't immediately move north past the central pillar — its noise summons the B3 wererats and the B5 swarm, and wakes the B4 "+B.mon("otyugh", "otyugh")+".</p>"
+  + B.enc("Wererat guards", encx([2, 2, -1, -1, -1], 5),
+     "<p>2 "+B.mon("wererat", "wererats")+" and 3 "+B.mon("giant-rat", "giant rats")+" (the rats avoid crossing the water lest they trip the shrieker; the wererats cross it deliberately to raise the alarm).</p>",
+     B.aside_token(["2× "+B.mon("wererat", "Wererat (2)"), "3× "+B.mon("giant-rat", "Giant Rat (−1)")])))
+
+area2("B3", "Communal Dens", SR("B3", 93)
+  + "<p>The wererats' fire-lit warren of nests. The floor is slippery in the sewage flow (as B2). "+chk("type:perception|dc:20")+" finds a squeeze-hole to B6; "+chk("type:crafting|dc:14")+" notes the subsiding south wall — chipping it (Hardness 8, 40 HP) lets the trapped "+B.mon("otyugh", "otyugh")+" rampage through.</p>"
+  + B.enc("Wererat den (Girrigz reinforces)", encx([2, 2, 2, 2], 5),
+     "<p>4 "+B.mon("wererat", "wererats")+". If fighting erupts here, "+act(A2["girrigz"], "Girrigz")+" comes through the east wall from B6 in his dire-rat form.</p>",
+     B.aside_token(["4× "+B.mon("wererat", "Wererat (2)"), act(A2["girrigz"], "Girrigz (6, reinforces)")]))
+  + B.s_treasure("<p>"+chk("type:perception|dc:18")+": 3 smokesticks, a tanglefoot bag, a thunderstone, 20 tindertwigs, a copper coat-of-arms trumpet (~15 gp re-scaled), and masterwork carpenter's tools.</p>"))
+
+area2("B4", "Trapped Otyugh", SR("B4", 93)
+  + "<p>The wererats have penned a lone "+B.mon("otyugh", "otyugh")+" between two grates (Hardness 10, 60 HP, lift "+chk("type:athletics|dc:26")+"; the jammed east-grate winch retracts it after a minute's cranking). Starving, it sleeps until noise wakes it.</p>"
+  + B.s_skill("<p>The otyugh ('so hungeries!') can be turned against the wererats: "+chk("type:diplomacy|dc:23")+" (+4 if fed) wins an hour's help, or "+chk("type:intimidation|dc:17")+" buys 10 minutes — after which it forgets and tries to eat the PCs.</p>")
+  + B.enc("Otyugh (if it attacks)", encx([4], 5),
+     "<p>One hungry "+B.mon("otyugh", "otyugh")+" — a potential ally or a third combatant in the wererat fight.</p>",
+     B.aside_token([B.mon("otyugh", "Otyugh (4)")])))
+
+area2("B5", "Rat Dens", SR("B5", 93)
+  + "<p>A bone-littered nest cave. It attacks anything that doesn't smell of rodent; the swarm investigates if the shrieker sounds, but the rats are too lazy to.</p>"
+  + B.enc("Rat nest", encx([1, -1, -1, -1, -1, -1, -1], 5),
+     "<p>A "+B.mon("rat-swarm", "rat swarm")+" and 6 "+B.mon("giant-rat", "giant rats")+".</p>",
+     B.aside_token([B.mon("rat-swarm", "Rat Swarm (1)"), "6× "+B.mon("giant-rat", "Giant Rat (−1)")])))
+
+area2("B6", "Girrigz's Den", SR("B6", 94)
+  + "<p>The warlord's command den — a crude map of Korvosa pinned to a crate, crates of scavenged arms and alchemist's fire. "+act(A2["girrigz"], "Girrigz")+" plots his war here, dreaming of burning Castle Korvosa.</p>"
+  + B.enc("BOSS — Girrigz Ripperclaws", encx([6], 5),
+     "<p>"+act(A2["girrigz"], "Girrigz")+" — pre-buffed if warned, striking from stealth with his runed rapier and Vital Strike. He fights to the death.</p>",
+     B.aside_token([act(A2["girrigz"], "Girrigz Ripperclaws (6)")]))
+  + B.s_treasure("<p>"+chk("type:perception|dc:15")+": an arms cache (22 daggers, 12 short swords, 3 crossbows, 4 chain shirts, 12 alchemist's fire, a masterwork longsword + chainmail). "+chk("type:perception|dc:20")+" in the nest: 4 potions of healing, a bottle of air, and a <strong>pearl of power</strong> (1st-rank) — plus the squeeze-crack to B3.</p>"))
 
 journal = B.journal_entry(JID2, "2. Seven Days to the Grave", pages, folder=ADV_FOLDER)
 B.write("journals", "02-seven-days-to-the-grave", copy.deepcopy(journal), embed_pages=True)

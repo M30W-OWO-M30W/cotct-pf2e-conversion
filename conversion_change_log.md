@@ -205,6 +205,8 @@ Notes*. Foundry path: `cotct-journals` → "Old Fishery — …". No major
 
 - **CHG-0138 — Ch.2 Part 2 + Mission 1.** Pages: First, Do No Harm & the Queen's Physicians (Davaulus intro, the royal-decree handout, the masked cultist-doctors, the GM-secret that Davaulus is Red Mantis); Combating the Plague (mission framework + the un-preventable Old Korvosa quarantine that sets up Ch.3); Mission 1 — the Wreck of the Direption (underwater red-herring dungeon, A1 silt-eel nest / A2 Skinshear / A3 boss). New actors: **Queen's Physician** (L2 masked Urgathoan rogue-cultist), **Silt Eel** (L-1 venom swarm), **Yvicca** (L6 sea-hag druid boss — Horrific Appearance, Evil Eye, Tanglevine, Brackish Bolt; commands the reused Jigsaw Shark 'Skinshear'). Difficulty @L4: A1/A2 Trivial, A3 Moderate. *Source:* faithful conversion. *Severity:* n/a (content). *Journal:* yes. *Review:* none.
 
+- **CHG-0139 — Ch.2 Mission 2: Plague Rats.** 7 pages (overview + B1–B6 sewer dungeon): Eries Yelloweyes's plea, the shrieker-alarm guard den, the communal dens (Girrigz reinforces), the bribable trapped otyugh, the rat nest, and Girrigz's command den. New boss **Girrigz Ripperclaws** (L6 wererat firebrand — runed rapier, Curse of the Wererat, Change Shape, Vital Strike). Official links: Wererat, Giant Rat (Remaster's dire rat), Rat Swarm, Otyugh. Survivor-Count payoff for a non-lethal resolution. *Source:* faithful. *Severity:* n/a. *Journal:* yes. *Review:* none.
+
 <!-- CH3 — Escape from Old Korvosa -->
 <!-- CH4 — A History of Ashes -->
 <!-- CH5 — Skeletons of Scarwall -->
