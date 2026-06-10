@@ -1,0 +1,363 @@
+{
+  "_id": "nihilDevil000001",
+  "name": "Nihil",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "YfbttsmGfnS0EMiR",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Shadow-Barbed Chain",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 29
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d8+13",
+            "damageType": "slashing"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "void"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "reach-15",
+            "trip",
+            "unholy"
+          ]
+        }
+      },
+      "_key": "!actors.items!nihilDevil000001.YfbttsmGfnS0EMiR"
+    },
+    {
+      "_id": "6LRAPzQOQxwqnoWG",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Assassin's Gift",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Against an @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} creature: a Chain Strike that deals +3d6 precision and forces @Check[type:fortitude|dc:34] or @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} (Zon-Kuthon's gift was a killer, not a soldier).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack"
+          ]
+        }
+      },
+      "_key": "!actors.items!nihilDevil000001.6LRAPzQOQxwqnoWG"
+    },
+    {
+      "_id": "qnLdNB7s1llv3wjV",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Chains of Night",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Shadow-chains erupt in a 15-ft burst within 60 feet: @Check[type:reflex|dc:34] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (Escape DC 34) and @Damage[4d6[void]].</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "divine",
+            "shadow"
+          ]
+        }
+      },
+      "_key": "!actors.items!nihilDevil000001.qnLdNB7s1llv3wjV"
+    },
+    {
+      "_id": "ZyJrNtkjhfjKXGxD",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "SPIRIT ANCHOR",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>One of Mithrodar's four anchors</strong> — bound by the chains, not loyalty. Devil immunities (fire; bleed; resistance physical 10 except silver). <em>He wants to be free:</em> clever PCs may bargain his cooperation against the others — though severing his anchor is the only freedom the chains allow.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!nihilDevil000001.ZyJrNtkjhfjKXGxD"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 7
+      },
+      "dex": {
+        "mod": 5
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 35
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 280,
+        "temp": 0,
+        "value": 280
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 35
+      }
+    },
+    "details": {
+      "blurb": "Chained devil-assassin; SPIRIT ANCHOR (D14)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "infernal",
+          "shadowtongue"
+        ]
+      },
+      "level": {
+        "value": 14
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> Zon-Kuthon's gift-assassin to Kazavon, imprisoned by Mithrodar's network in the Tower of Kazavon (D14). The anchor with an agenda — and the best conversation in the Heights.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 25,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 24
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 23
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 24
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 27
+      },
+      "stealth": {
+        "base": 27
+      },
+      "deception": {
+        "base": 25
+      },
+      "religion": {
+        "base": 23
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "fiend",
+        "devil"
+      ]
+    }
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Nihil",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!nihilDevil000001"
+}

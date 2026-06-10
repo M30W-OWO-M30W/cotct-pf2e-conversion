@@ -1,0 +1,366 @@
+{
+  "_id": "ildervokNight001",
+  "name": "Ildervok",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "0NKBlYXEr9eH4rPT",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Shadow Bite",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 30
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d12+14",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "void"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "reach-10"
+          ]
+        }
+      },
+      "_key": "!actors.items!ildervokNight001.0NKBlYXEr9eH4rPT"
+    },
+    {
+      "_id": "rnJVmxsalYjJhiiF",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Drain Magic",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Requirement</strong> Bite hit a creature bearing magic items.</p><hr /><p><strong>Effect</strong> One of the target's magic items: @Check[type:fortitude|dc:34] (item's owner) or the item is suppressed 1 round (drained of light and power).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "necromancy"
+          ]
+        }
+      },
+      "_key": "!actors.items!ildervokNight001.rnJVmxsalYjJhiiF"
+    },
+    {
+      "_id": "3tUSVjKAeuDdnAPW",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Umbral Dive",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>He folds through shadow up to 120 feet and Strikes from @UUID[Compendium.pf2e.conditionitems.Item.iU0fEDdBp3rXpTMC]{Hidden}.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack",
+            "shadow",
+            "teleportation"
+          ]
+        }
+      },
+      "_key": "!actors.items!ildervokNight001.3tUSVjKAeuDdnAPW"
+    },
+    {
+      "_id": "8uS2YDLlIQXhyUnr",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Nightshade Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Undead immunities; resistance all 12 (except vitality and silver); <em>light aversion</em>: @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} in bright light.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!ildervokNight001.8uS2YDLlIQXhyUnr"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 8
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 36
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 295,
+        "temp": 0,
+        "value": 295
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 60
+          }
+        ],
+        "value": 30
+      }
+    },
+    "details": {
+      "blurb": "Nightwing warden of the Star Tower (G7)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "necril",
+          "shadowtongue"
+        ]
+      },
+      "level": {
+        "value": 14
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the nightwing of the Star Tower (G7) — sent by <strong>Zon-Kuthon himself</strong> to ward the Chamber of the Well until a new curate takes the post; bound by the god's will, <em>not</em> the curse (he cannot become an anchor). He greets visitors telepathically, invisible above the well: his bargain is simple — <strong>give him a curate, and the way below opens.</strong> Shadowcount Sial wants the job; so, terribly, might Laori.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 26,
+      "senses": [
+        {
+          "type": "darkvision"
+        },
+        {
+          "type": "true-seeing"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 26
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 22
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 24
+      }
+    },
+    "skills": {
+      "stealth": {
+        "base": 26
+      },
+      "religion": {
+        "base": 24
+      },
+      "intimidation": {
+        "base": 26
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "grg"
+      },
+      "value": [
+        "undead",
+        "nightshade"
+      ]
+    }
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Ildervok",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!ildervokNight001"
+}

@@ -1,0 +1,349 @@
+{
+  "_id": "gorstavJuju00001",
+  "name": "Gorstav",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "5dgbSMCwmKLDDzuN",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+2 Striking Greatsword",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 28
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d12+13",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical",
+            "versatile-p"
+          ]
+        }
+      },
+      "_key": "!actors.items!gorstavJuju00001.5dgbSMCwmKLDDzuN"
+    },
+    {
+      "_id": "bKInZ3bMpQX9T9Ge",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "General's Order",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Every undead soldier within 60 feet Strides or Strikes — the War Tower obeys its general still.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "auditory"
+          ]
+        }
+      },
+      "_key": "!actors.items!gorstavJuju00001.bKInZ3bMpQX9T9Ge"
+    },
+    {
+      "_id": "wYvdefaztw8AxWkJ",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Executioner's Memory",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Kazavon beheaded him for failing to stop Mandraivus; the juju zombie remembers. Against anyone carrying <em>Serithtial</em> (or naming Mandraivus): +2 status to attack and damage, and he fights past destruction for 1 round.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!gorstavJuju00001.wYvdefaztw8AxWkJ"
+    },
+    {
+      "_id": "8DfM2G3Cgm4Fpiqh",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Juju Resilience",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Zombie immunities; resistance physical 10 (except slashing), cold 10, electricity 10; not slowed (juju).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!gorstavJuju00001.8DfM2G3Cgm4Fpiqh"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 7
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 33
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 260,
+        "temp": 0,
+        "value": 260
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Juju-zombie general (E11)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "infernal"
+        ]
+      },
+      "level": {
+        "value": 13
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> general of Kazavon's armies, executed minutes before the Star Tower fell — risen as a juju zombie in the War Room (E11) beside the @UUID[Compendium.cotct-pf2e-conversion.cotct-hazards.Actor.curseOfTheWorm01]{Curse of the Worm} haunt. The sayona <strong>Risibeth</strong> (E7 — his old war-commander, run as an Elite @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.aerilayaBanshe01]{Aerilaya}-style spirit) trades castle-intelligence for a disturbing taste of living blood: she names three anchors and points to the chapel for the fourth.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 22,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 24
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 19
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 21
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 27
+      },
+      "intimidation": {
+        "base": 23
+      },
+      "society": {
+        "base": 19
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "undead",
+        "zombie"
+      ]
+    }
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Gorstav",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!gorstavJuju00001"
+}

@@ -1,0 +1,397 @@
+{
+  "_id": "kleestadPharma01",
+  "name": "Kleestad",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "aY0H5Ipr9hdFnRNa",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Worm Maw",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 31
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d12+15",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "2d6",
+            "damageType": "acid"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "reach-15"
+          ]
+        }
+      },
+      "_key": "!actors.items!kleestadPharma01.aY0H5Ipr9hdFnRNa"
+    },
+    {
+      "_id": "DKXjeYQxgfq7FZcw",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Grasping Hands",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 31
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "3d8+15",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "reach-10"
+          ]
+        }
+      },
+      "_key": "!actors.items!kleestadPharma01.DKXjeYQxgfq7FZcw"
+    },
+    {
+      "_id": "QlTJxts3NpAXhuem",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Caustic Breath",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>Frequency</strong> once per 1d4 rounds. A 60-ft cone of grave-acid: @Damage[14d6[acid]] (@Check[type:reflex|dc:37|basic:true]) — opened on the largest knot of PCs.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "acid"
+          ]
+        }
+      },
+      "_key": "!actors.items!kleestadPharma01.QlTJxts3NpAXhuem"
+    },
+    {
+      "_id": "RoxjXRgu9W2DyrFk",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Traitor's Hunger",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Against any creature carrying <em>Serithtial</em>: +2 status to attack and damage, and he <strong>pursues to the world's end</strong> if they flee with it.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!kleestadPharma01.RoxjXRgu9W2DyrFk"
+    },
+    {
+      "_id": "LHJ7RH80uHacZhEa",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Pharmakos Bulk",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Undead immunities; resistance physical 12; <em>air walk</em> at will (he fights striding the lake's surface).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!kleestadPharma01.LHJ7RH80uHacZhEa"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 9
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 7
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 36
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 330,
+        "temp": 0,
+        "value": 330
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "swim",
+            "value": 40
+          }
+        ],
+        "value": 30
+      }
+    },
+    "details": {
+      "blurb": "Pharmakos traitor; keeper of Serithtial (H4)",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "necril"
+        ]
+      },
+      "level": {
+        "value": 15
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the chamberlain whose treason opened Scarwall to Mandraivus — and who, denied his promised reward, drowned the hero's sword in the Sacred Lake (H3–H4) and fed. Five centuries of guilt and hunger made him a <strong>pharmakos</strong>: an 80-foot worm of scapegoated sin coiled around <strong>Serithtial</strong> itself. The campaign's last gate before the sword.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 26,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 28
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 22
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 25
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 31
+      },
+      "intimidation": {
+        "base": 27
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "grg"
+      },
+      "value": [
+        "undead",
+        "aberration"
+      ]
+    }
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Kleestad",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!kleestadPharma01"
+}

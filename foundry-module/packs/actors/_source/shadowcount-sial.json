@@ -1,0 +1,389 @@
+{
+  "_id": "shadowcountSial1",
+  "name": "Shadowcount Sial",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "p4HyJqTsZjb72Txg",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+1 Striking Spiked Chain",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 22
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d8+7",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "disarm",
+            "finesse",
+            "magical",
+            "trip"
+          ]
+        }
+      },
+      "_key": "!actors.items!shadowcountSial1.p4HyJqTsZjb72Txg"
+    },
+    {
+      "_id": "6B1LxBvUBBnwAtTT",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Midnight Touch",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Zon-Kuthon's chill: touch, @Damage[6d8[void]] (@Check[type:fortitude|dc:31|basic:true]; @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} on a failure).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "void"
+          ]
+        }
+      },
+      "_key": "!actors.items!shadowcountSial1.6B1LxBvUBBnwAtTT"
+    },
+    {
+      "_id": "VodQV7tEG4lTjmsn",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Shadow Body",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Sial becomes living shadow for 1 minute: resistance all 10, Speed 50, may move through gaps.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "divine",
+            "polymorph",
+            "shadow"
+          ]
+        }
+      },
+      "_key": "!actors.items!shadowcountSial1.VodQV7tEG4lTjmsn"
+    },
+    {
+      "_id": "X1px7f8bHUvQXaMZ",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Summon Asyra",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>He unhooks his iron casket: the bound kyton-eidolon <strong>Asyra</strong> (run as an Elite @UUID[Compendium.cotct-pf2e-conversion.cotct-actors.Actor.nihilDevil000001]{chain-devil pattern} at L11) unfolds in chains and obeys for 10 minutes.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "conjuration",
+            "divine"
+          ]
+        }
+      },
+      "_key": "!actors.items!shadowcountSial1.X1px7f8bHUvQXaMZ"
+    },
+    {
+      "_id": "3VReGbo9K60rFTvU",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Zon-Kuthon Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 24
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!shadowcountSial1.3VReGbo9K60rFTvU"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 4
+      },
+      "wis": {
+        "mod": 5
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 31
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 200,
+        "temp": 0,
+        "value": 200
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "Brotherhood shadowcount; would-be curate",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "infernal",
+          "shadowtongue"
+        ]
+      },
+      "level": {
+        "value": 12
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> Brotherhood of Bones shadowcount — Laori's superior, polished where she is chipper, patient where she is gleeful. He and his casket-bound eidolon <strong>Asyra</strong> joined the PCs' orbit at Kaer Maga and have scryed them since Chapter 4 ('The Devil You Know'). The Brotherhood's goal is real: <em>prevent Kazavon's resurrection</em> — and for that, the PCs make excellent chain-breakers. <strong>His endgame:</strong> the Star Tower curacy (G7). Offering Ildervok a willing curate is the 'clean' path below — and the Brotherhood considers it an honor. Whether Sial volunteers, or maneuvers <em>Laori</em> into it, is the chapter's quietest knife-fight.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 22,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 18
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 19
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 24
+      }
+    },
+    "skills": {
+      "religion": {
+        "base": 24
+      },
+      "occultism": {
+        "base": 22
+      },
+      "deception": {
+        "base": 20
+      },
+      "diplomacy": {
+        "base": 20
+      },
+      "society": {
+        "base": 20
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch5CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Shadowcount Sial",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!shadowcountSial1"
+}
