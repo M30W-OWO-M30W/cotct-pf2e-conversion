@@ -25,6 +25,8 @@ echo "==> Building Chapter 5 (build_ch5.py)..."
 python3 scripts/build_ch5.py || { echo "!! build_ch5.py failed"; exit 1; }
 echo "==> Building Chapter 6 (build_ch6.py)..."
 python3 scripts/build_ch6.py || { echo "!! build_ch6.py failed"; exit 1; }
+echo "==> Building Appendices (build_appendix.py)..."
+python3 scripts/build_appendix.py || { echo "!! build_appendix.py failed"; exit 1; }
 
 echo "==> Validating links/ids + content..."
 vout=$(npm run --silent validate)
