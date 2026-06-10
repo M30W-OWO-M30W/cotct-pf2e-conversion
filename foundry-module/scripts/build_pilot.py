@@ -225,6 +225,10 @@ def apspan(start, stop):
 # =====================================================================
 F = {k: nid() for k in ["a_root","a_ch1","a_creatures","a_hazards","i_root","i_ch1","i_treasure","i_bg",
                         "j_root","j_adventure","s_root","s_ch1"]}
+# Cross-chapter container folders get STABLE literal ids so later per-chapter
+# scripts (build_ch2.py …) can nest their chapter folders under the same roots.
+F["a_root"]="cotctActorRoot01"; F["i_root"]="cotctItemRoot001"; F["j_root"]="cotctJrnlRoot001"
+F["j_adventure"]="cotctAdvFolder01"; F["s_root"]="cotctSceneRoot01"
 ROOTC, CHC, SUPC = "#5a0b0b", "#8a1a1a", "#b3541e"   # crimson theme: root / chapter / supplemental
 folders = [
  B.folder(F["a_root"],"Curse of the Crimson Throne","Actor",None,100000,ROOTC),

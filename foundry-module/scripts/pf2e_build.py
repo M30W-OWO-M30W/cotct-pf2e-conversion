@@ -10,7 +10,39 @@ Schema verified against the decoded pf2e-kingmaker world export (.work/kingmaker
 and real pf2e v8 sources (.work/schema_ref). See research/kingmaker_schema_notes.md.
 """
 from __future__ import annotations
-import json, pathlib
+import json, pathlib, os, re
+
+# ---- shared verbatim read-aloud (pulled from the GM's local AP.md at build) ----
+# Each chapter script passes its own start-anchor; AP prose is NEVER committed.
+SRC_MD = os.environ.get("COTCT_AP_MD",
+    "/mnt/c/Users/maman/Downloads/Curse of the Crimson Throne AP.md")
+_PARAS_CACHE = None
+def _paras():
+    global _PARAS_CACHE
+    if _PARAS_CACHE is None:
+        try: raw = open(SRC_MD, encoding="utf-8").read()
+        except OSError: raw = ""
+        _PARAS_CACHE = [" ".join(p.split()) for p in re.split(r"\n\s*\n", raw)]
+    return _PARAS_CACHE
+def verbatim(anchor):
+    """Return the AP paragraph that starts with (or contains) `anchor`, re-flowed
+    across mid-sentence image/page markers, with leading OCR drop-caps repaired.
+    Returns '' if the source file is absent — callers must supply a fallback."""
+    a = " ".join(anchor.split())
+    if not a: return ""
+    paras = _paras()
+    si = next((k for k, p in enumerate(paras) if p.startswith(a)), None)
+    if si is None:
+        si = next((k for k, p in enumerate(paras) if a in p), None)
+    if si is None: return ""
+    text, k = paras[si], si + 1
+    while text and text[-1] not in '.!?:"”\'’)' and k < len(paras):
+        nxt = paras[k]
+        if nxt.startswith("#"): break
+        if (not nxt) or nxt.startswith("<!--"):
+            k += 1; continue
+        text, k = text + " " + nxt, k + 1
+    return re.sub(r'^([B-HJ-Z]) ([a-z])', r'\1\2', text)
 
 MOD = "cotct-pf2e-conversion"
 ROOT = pathlib.Path(__file__).resolve().parents[1]            # foundry-module/

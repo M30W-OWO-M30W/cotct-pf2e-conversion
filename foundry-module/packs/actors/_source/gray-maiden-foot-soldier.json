@@ -1,0 +1,689 @@
+{
+  "_id": "grayMaidenFoot01",
+  "name": "Gray Maiden Foot Soldier",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "WiQSIHJxnYifBDP5",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Longsword",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 12
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d8+6",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "versatile-p"
+          ]
+        }
+      },
+      "_key": "!actors.items!grayMaidenFoot01.WiQSIHJxnYifBDP5"
+    },
+    {
+      "_id": "BI1v18y3d1cShvKN",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Composite Longbow",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 10
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d10",
+            "propulsive",
+            "range-increment-100",
+            "volley-30"
+          ]
+        }
+      },
+      "_key": "!actors.items!grayMaidenFoot01.BI1v18y3d1cShvKN"
+    },
+    {
+      "_id": "ZbYzRxEbKc658zMk",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Shield Block",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>Trigger</strong> The Gray Maiden takes damage while her shield is raised.</p><hr /><p><strong>Effect</strong> She reduces the damage by the shield's Hardness (5); she and the shield then split any remaining damage.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!grayMaidenFoot01.ZbYzRxEbKc658zMk"
+    },
+    {
+      "name": "Full Plate",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-layered-steel-green.webp",
+      "system": {
+        "acBonus": 6,
+        "baseItem": "full-plate",
+        "bulk": {
+          "value": 4
+        },
+        "category": "heavy",
+        "checkPenalty": -3,
+        "containerId": null,
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Gq1cZWSKOtJhKd2p]</p>",
+          "gm": ""
+        },
+        "dexCap": 0,
+        "grade": null,
+        "group": "plate",
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 2
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 30
+          }
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "resilient": 0
+        },
+        "size": "med",
+        "speedPenalty": -10,
+        "strength": 4,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "bulwark"
+          ]
+        },
+        "slug": "full-plate",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
+        }
+      },
+      "_id": "kEnVEebQ4LL3sWY4",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!grayMaidenFoot01.kEnVEebQ4LL3sWY4"
+    },
+    {
+      "name": "Steel Shield",
+      "type": "shield",
+      "img": "systems/pf2e/icons/equipment/shields/steel-shield.webp",
+      "system": {
+        "acBonus": 2,
+        "baseItem": "steel-shield",
+        "bulk": {
+          "value": 1
+        },
+        "containerId": null,
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Yr9yCuJiAlFh3QEB]</p>",
+          "gm": ""
+        },
+        "grade": null,
+        "hardness": 5,
+        "hp": {
+          "max": 20,
+          "value": 20
+        },
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 2
+          }
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "reinforcing": 0
+        },
+        "size": "med",
+        "speedPenalty": 0,
+        "traits": {
+          "integrated": null,
+          "rarity": "common",
+          "value": []
+        },
+        "slug": "steel-shield",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
+        }
+      },
+      "_id": "plTi5MGmxQENRdCV",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!grayMaidenFoot01.plTi5MGmxQENRdCV"
+    },
+    {
+      "name": "Longsword",
+      "type": "weapon",
+      "img": "icons/weapons/swords/sword-guard-blue.webp",
+      "system": {
+        "ammo": null,
+        "baseItem": "longsword",
+        "bonus": {
+          "value": 0
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.LJdbVTOZog39EEbi]</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {
+            "gp": 1
+          }
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
+        },
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": "-"
+        },
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
+        },
+        "size": "med",
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "versatile-p"
+          ]
+        },
+        "usage": {
+          "canBeAmmo": false,
+          "value": "held-in-one-hand"
+        },
+        "slug": "longsword",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
+        }
+      },
+      "_id": "3B6CHX9Z6BVPGKwA",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!grayMaidenFoot01.3B6CHX9Z6BVPGKwA"
+    },
+    {
+      "name": "Composite Longbow",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
+      "system": {
+        "description": {
+          "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.dUC8Fsa6FZtVikS3]</p>",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": "composite-longbow",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "deadly-d10",
+            "propulsive",
+            "volley-30"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
+        },
+        "quantity": 1,
+        "baseItem": "composite-longbow",
+        "bulk": {
+          "value": 2
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 20
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "held-in-one-plus-hands"
+        },
+        "category": "martial",
+        "group": "bow",
+        "bonus": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 100,
+        "expend": 1,
+        "ammo": {
+          "capacity": null,
+          "baseType": "arrows",
+          "builtIn": false
+        },
+        "reload": {
+          "value": "0"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
+        },
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
+        }
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.equipment-srd.Item.dUC8Fsa6FZtVikS3"
+      },
+      "_id": "HsEGnAYjcpEuALMe",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!grayMaidenFoot01.HsEGnAYjcpEuALMe"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": -1
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 21
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 50,
+        "temp": 0,
+        "value": 50
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 20
+      }
+    },
+    "details": {
+      "blurb": "Ileosa's elite enforcer",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 3
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> rank-and-file of the <strong>Gray Maidens</strong>, Queen Ileosa's new all-women elite loyal only to her — the recurring antagonist force from here through Chapter 6. Sword-and-shield in melee, but excellent shots; in numbers a few hang back with longbows.</p><p><strong>Presentation:</strong> early in this chapter present them as a welcome restoration of order (the face of martial law), not yet obvious villains — the brutal truth of their conscription and conditioning surfaces over the chapter. <strong>Morale:</strong> Gray Maidens fight to the death.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 7,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 8
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 9
+      },
+      "intimidation": {
+        "base": 9
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "human"
+      ]
+    }
+  },
+  "folder": "ch2CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Gray Maiden Foot Soldier",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!grayMaidenFoot01"
+}

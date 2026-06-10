@@ -196,6 +196,11 @@ Notes*. Foundry path: `cotct-journals` → "Old Fishery — …". No major
 - **CHG-0133 — ✅ CHAPTER 1 "EDGE OF ANARCHY" COMPLETE** end-to-end: Old Fishery (pilot) + A City Gone Mad (14 events) + Blood and Bones (B/C/D) + Conclusion. One fat journal (80 pages), 22 actors, 3 hazards. All DCs `@Check`, every encounter difficulty build-computed, treasure on actors / documented, validate 0 problems + 0 content warnings.
 
 <!-- CH2 — Seven Days to the Grave -->
+#### Chapter 2 — Seven Days to the Grave (front matter — chapter started)
+
+- **CHG-0134 — Per-chapter build architecture.** `verbatim()`/`_paras()`/`SRC_MD` (shared read-aloud) promoted into `pf2e_build.py`; cross-chapter container folders (`a_root`/`i_root`/`j_root`/`Adventure`/`s_root`) given **stable literal ids** so each chapter script nests under the same roots. New `scripts/build_ch2.py` (own journal "2. Seven Days to the Grave", distinct id seed `_idgen(220002)`, appends to the shared packs); added to `sync_to_foundry.sh`. *Source:* multi-chapter scaling. *Severity:* Minor. *Review:* none. (SOP §6–8.)
+- **CHG-0135 — Ch.2 front matter built** (5 journal pages): Chapter Background (the full conspiracy — Kayltanya/Vorel's phage → Davaulus + Andaisin/Urgathoa + the vampire Ramoska → weaponized blood veil; tainted silver via a death's-head coffer; the *Direption* red-herring), Advancement & Running the Chapter (L4→8; the 7-day plague; the Second Harrowing tied to shields/Constitution), NPC Developments (Amin, Devargo/Chittersnap, Neolandus captured), Cressida's Concern (PCs cut loose from the Guard), Rise of the Gray Maidens. Explicitly wires the **Blood Veil Epidemic Clock** to start here. *Source:* faithful conversion. *Severity:* n/a (content). *Journal:* yes. *Review:* none.
+- **CHG-0136 — Gray Maiden Foot Soldier** (L3) built — Ileosa's recurring elite enforcer (full plate + heavy shield + longsword/longbow, Shield Block, fights to the death), reused Ch.2–6. New gear template: full-plate. *Source:* faithful + PF2e creature math. *Severity:* n/a. *Review:* none.
 <!-- CH3 — Escape from Old Korvosa -->
 <!-- CH4 — A History of Ashes -->
 <!-- CH5 — Skeletons of Scarwall -->
