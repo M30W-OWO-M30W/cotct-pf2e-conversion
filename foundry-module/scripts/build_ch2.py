@@ -328,6 +328,29 @@ area2("C3", "The Liniment Laboratory", SR("C3", 99)
   + B.s_treasure("<p>The lab equipment functions as an alchemist's lab; the raw ingredients are ~800 gp (PF1e) of potion/alchemy reagents — re-scale to a useful crafting stock for the party.</p>")
   + B.s_conv("<p>Mission complete: the perfumery con collapses. It cured nothing — the real source is still out there, pointing the PCs onward (Racker's Alley, Carowyn Manor, the Hospice).</p>"))
 
+PG("Mission 4: The Hungry Dead", SR("Mission 4 — The Hungry Dead", 100)
+  + "<p>As bodies pile up, lazy plague-carters have been dumping corpses in <strong>Racker's Alley</strong> (western Old Korvosa) instead of the Gray District. Kroft (or the temple, or rumor) sends the PCs to confirm it and clear any scavengers or undead before guards haul the dead away.</p>"
+  + SEC("<p><strong>GM:</strong> four "+B.mon("vampire-servitor", "vampire spawn")+" — minions of the Ustalavic vampire-count Tiriac, sent to 'assist' (and watch) the nosferatu <strong>Ramoska Arkminos</strong> — have lairred under Giotorri's Toys and feed on the dumped (and the living). They long ago forgot their charge to watch Ramoska. <em>Ramoska is the Temple-of-Urgathoa villain (Part 3).</em></p>")
+  + SEC("<p><strong>Survivor Count:</strong> clearing the spawn and confirming the dumping ground (so the Guard can stop it) saves <strong>200 citizens</strong> — feed it into the Epidemic Clock.</p>"))
+
+area2("D1", "Racker's Alley", SR("D1", 100)
+  + "<p>A shadowed, sunless dead-end alley with 40+ corpses heaped against the east wall. "+chk("type:perception|dc:16")+" notes that many bodies are blood-drained with neck/wrist punctures — and bear <em>no</em> blood-veil sores. <strong>Contact with the plague-dead exposes a creature to Blood Veil</strong> ("+chk("type:fortitude|dc:18")+"). A 10-ft hole in the east wall opens into the workshop (D2).</p>"
+  + B.enc("Vampire spawn sentry", encx([4], 6),
+     "<p>By night one "+B.mon("vampire-servitor", "vampire spawn")+" watches from the 20-ft roof (−2 to spot it from the alley floor). Seeing anyone touch the bodies, it shrieks and attacks; its 3 companions arrive from D2 in 1d3 rounds.</p>",
+     B.aside_token([B.mon("vampire-servitor", "Vampire Spawn (4)")])))
+
+area2("D2", "The Workshop", SR("D2", 101)
+  + "<p>Beneath the toy-shop: the lair where the four "+B.mon("vampire-servitor", "vampire spawn")+" keep their coffins, watched over by the desiccated corpse of the toymaker Rodolfo Giotorri (eight neck-punctures; "+chk("type:perception|dc:15")+" finds his key ring). Fight all four here if the alley alarm was raised.</p>"
+  + B.enc("BOSS — the four vampire spawn", encx([4, 4, 4, 4], 6),
+     "<p>All 4 "+B.mon("vampire-servitor", "vampire spawn")+" — blood drain, dominate gaze, drain, fast healing, and their vampire weaknesses (running water, sunlight). A genuine Severe-leaning fight; bait them toward sunlight or a threshold.</p>",
+     B.aside_token(["4× "+B.mon("vampire-servitor", "Vampire Spawn (4)")]))
+  + B.s_treasure("<p>"+chk("type:perception|dc:20")+" in the coffin soil: ~15 pp + 300 gp of Ustalavic coin (re-scale to ~90 gp), a <strong>ring of jumping</strong> (brass spider-legs), and <strong>pipes of haunting</strong> (bone).</p>"))
+
+area2("D3", "Giotorri's Toys", SR("D3", 101)
+  + "<p>The dusty, locked showroom above ("+chk("type:thievery|dc:30")+", or Giotorri's key from D2). The spawn left the cheap, defective toys alone.</p>"
+  + B.s_treasure("<p>"+chk("type:perception|dc:14")+": a jingling lockbox ("+chk("type:thievery|dc:20")+") with a few coins and an <strong>Abadaran deposit-box key</strong> (No. 261; "+chk("type:society|dc:16")+" or "+chk("type:religion|dc:16")+" to place it). Redeemed at the Grand Vault, it yields Giotorri's savings (~68 gp), masterwork thieves' tools, and <strong>boots of striding and springing</strong>.</p>")
+  + B.s_conv("<p>Clearing Racker's Alley removes one of Ramoska's loose ends — and quietly establishes the vampire's presence ahead of the Temple finale.</p>"))
+
 journal = B.journal_entry(JID2, "2. Seven Days to the Grave", pages, folder=ADV_FOLDER)
 B.write("journals", "02-seven-days-to-the-grave", copy.deepcopy(journal), embed_pages=True)
 

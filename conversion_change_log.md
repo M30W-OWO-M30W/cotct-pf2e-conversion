@@ -209,6 +209,8 @@ Notes*. Foundry path: `cotct-journals` → "Old Fishery — …". No major
 
 - **CHG-0140 — Ch.2 Mission 3: The Color of Death.** 4 pages (overview + C1 perfumery / C2 apartment / C3 lab): exposing the Lavender fake-cure con (a moral-test dead end — river-water 'liniment'). New actors **Vendra Loaggri** (L5 rogue grifter — poisoned dagger, charm wand, Deceptive Patter, flees/surrenders) and **Lavender Thug** (L3 rapier bodyguard). Investigation-first (Crafting/Perception/Diplomacy to crack the con); combat optional. *Source:* faithful. *Severity:* n/a. *Journal:* yes. *Review:* none.
 
+- **CHG-0141 — Ch.2 Mission 4: The Hungry Dead.** 4 pages (overview + D1 Racker's Alley / D2 workshop / D3 Giotorri's Toys): the corpse-dump lair of four vampire spawn (Tiriac's, sent to watch the nosferatu Ramoska — seeding the Temple villain). Official link: **Vampire Servitor** (L4, Remaster's vampire-spawn). Blood Veil exposure from the plague-dead; Survivor-Count payoff; treasure (ring of jumping, pipes of haunting, boots of striding and springing via an Abadar deposit-box key). Difficulty @L6: D1 Moderate-solo, D2 (4 spawn) Moderate→Severe. *Source:* faithful. *Severity:* n/a. *Journal:* yes. *Review:* none.
+
 <!-- CH3 — Escape from Old Korvosa -->
 <!-- CH4 — A History of Ashes -->
 <!-- CH5 — Skeletons of Scarwall -->
