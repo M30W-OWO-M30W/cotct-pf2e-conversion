@@ -20,7 +20,8 @@ ACTOR_ROOT, ITEM_ROOT, ADV_FOLDER = "cotctActorRoot01", "cotctItemRoot001", "cot
 
 # ---- stable literal ids (16 chars) ----
 JID2 = "ch2SevenDaysJrn1"          # the fat Ch.2 journal
-A2 = {"graymaiden": "grayMaidenFoot01", "ishani": "ishaniDhatri0001"}
+A2 = {"graymaiden": "grayMaidenFoot01", "ishani": "ishaniDhatri0001",
+      "physician": "queensPhysician1", "silteel": "siltEel000000001", "yvicca": "yviccaSeaHag0001"}
 F2 = {"a_ch2": "ch2ActorFolder01", "a_creatures": "ch2CreaturesFld1"}
 
 ids = B._idgen(220002)             # Ch.2 folders/pages/notes (distinct seed)
@@ -81,6 +82,42 @@ AW("ishani-dhatri", B.npc(A2["ishani"], "Ishani Dhatri", 5, 21, 68, 11, 9, 14, 1
         "<p><strong>Tactics &amp; morale:</strong> opens with Shield of Faith, falls back on Sanctuary, and heals/supports allies. Alone, he flees; cornered, he fights to the death. Befriended (a "+chk("type:diplomacy|dc:12")+" gets him to heal Brienna free; a PC cleric of a charitable god may even start him converting to Sarenrae), he stops charging the party — they serve Abadar by saving the city.</p>",
   folder=F2["a_creatures"], blurb="Abadaran healer; plague-chapter ally", token_src=None, actor_link=True))
 
+AW("queens-physician", B.npc(A2["physician"], "Queen's Physician", 2, 18, 30, 6, 9, 6, 8,
+  {"str": 2, "dex": 4, "con": 1, "int": 1, "wis": 0, "cha": -1}, 25,
+  {"stealth": 8, "deception": 6, "medicine": 6, "religion": 6}, ["humanoid", "human"], ["common"],
+  [B.strike(nid(), "Club", 9, "1d6+2", "bludgeoning", ["agile"]),
+   B.sneak_attack(nid(), 1, "The physician"),
+   B.action(nid(), "Beaked Mask", "passive", "<p>The physician's magic plague-mask hides its evil and Urgathoan faith and filters the air — it gains a +2 status bonus to saves vs. disease and inhaled threats. Lifting the mask to 'prove' a human face does not remove it or end its effect.</p>", category="defensive"),
+   B.gear("leather-armor", nid()), B.gear("club", nid())],
+  notes="<p><strong>Role:</strong> one of Dr. Davaulus's masked 'Queen's Physicians' — secretly Urgathoa cultists who <em>spread</em> blood veil under cover of treating it. Recurring Ch.2 antagonist.</p>"
+        "<p><strong>Tactics:</strong> they fight in eerie silence, coordinating by hand-signal to flank for Sneak Attacks. <strong>Morale:</strong> as zealots, they rarely flee.</p>",
+  folder=F2["a_creatures"], blurb="Masked Urgathoan plague-spreader", token_src=None, actor_link=False))
+
+AW("silt-eel", B.npc(A2["silteel"], "Silt Eel", -1, 16, 8, 5, 7, 3, 5,
+  {"str": -2, "dex": 4, "con": 2, "int": -4, "wis": 1, "cha": -1}, 5,
+  {"acrobatics": 7, "stealth": 7}, ["animal", "aquatic"], [],
+  [B.strike(nid(), "Jaws", 9, "1d4", "piercing", ["finesse"], [("1d4", "poison", "persistent")]),
+   B.action(nid(), "Silt Eel Venom", "passive", "<p>A creature bitten is exposed to silt-eel venom: "+chk("type:fortitude|dc:16")+", inflicting @Damage[1d4[persistent,poison]] and "+B.cond("clumsy", "Clumsy 1")+" for 1 round on a failure (Clumsy 2 on a critical failure).</p>", category="offensive")],
+  notes="<p><strong>Role:</strong> a finger-long ambush biter that buries in the river silt and swarms in numbers (six lurk in the Direption's bow). Fragile — one hit usually kills it — but a swarm's venom adds up.</p>",
+  folder=F2["a_creatures"], senses=[{"type": "low-light-vision"}, {"acuity": "imprecise", "type": "scent", "range": 30}],
+  other_speeds=[{"type": "swim", "value": 30}], size="tiny", blurb="Venomous ambush eel", token_src=None))
+
+AW("yvicca", B.npc(A2["yvicca"], "Yvicca", 6, 23, 105, 14, 12, 14, 14,
+  {"str": 3, "dex": 4, "con": 4, "int": 1, "wis": 4, "cha": 2}, 25,
+  {"nature": 16, "intimidation": 12, "stealth": 12, "athletics": 14}, ["aberration", "amphibious"], ["common", "aquatic-sign-language", "aklo"],
+  [B.strike(nid(), "Claw", 16, "2d6+5", "slashing", ["agile"]),
+   B.action(nid(), "Horrific Appearance", "passive", "<p>A creature that first sees Yvicca's true hideousness must attempt a "+chk("type:will|dc:23")+": on a failure it is "+B.cond("sickened", "Sickened 1")+" and "+B.cond("frightened", "Frightened 1")+" (Sickened 2, Frightened 2 on a critical failure). A creature that succeeds is temporarily immune for 1 minute.</p>", category="offensive"),
+   B.action(nid(), "Evil Eye", "1", "<p>Yvicca curses a creature within 30 feet (no save to resist the curse's onset): it takes a −2 status penalty to AC, attacks, and saves while it remains within 30 feet and in line of sight. "+chk("type:will|dc:23")+" at the end of each of its turns ends the curse.</p>", ["concentrate", "curse", "occult"]),
+   B.action(nid(), "Tanglevine", "2", "<p>Strangling weeds erupt in a 20-foot burst within 60 feet; each creature there attempts a "+chk("type:reflex|dc:23")+" or is "+B.cond("immobilized", "Immobilized")+" (Escape or "+chk("type:athletics|dc:23")+" to break free). Difficult terrain for 1 minute.</p>", ["concentrate", "manipulate", "primal"]),
+   B.action(nid(), "Brackish Bolt", "2", "<p>Yvicca hurls a lash of caustic brine, a spell attack (+15) against one creature within 60 feet for @Damage[3d6[acid]] (double on a critical hit).</p>", ["concentrate", "manipulate", "primal", "acid"]),
+   B.action(nid(), "Command Skinshear", "1", "<p>Yvicca directs her jigsaw-shark companion Skinshear to Stride and Strike, or to guard a chokepoint.</p>", ["auditory", "concentrate"]),
+   B.lore(nid(), "Disease Lore", 14),
+   B.gear("leather-armor", nid())],
+  notes="<p><strong>Role:</strong> a sea-hag druid, Lady Andaisin's aquatic ally, ensconced in the Direption's stern as the red-herring's lethal surprise. She lairs in the crew quarters (A3) and sets her shark Skinshear to guard the hold (A2), joining the fight once she has buffed.</p>"
+        "<p><strong>Tactics:</strong> opens at range with Horrific Appearance + Evil Eye, snares clusters with Tanglevine, and blasts with Brackish Bolt while Skinshear savages the snared. Underwater, the PCs fight at a disadvantage unless they prepared.</p>",
+  folder=F2["a_creatures"], senses=[{"type": "darkvision"}], other_speeds=[{"type": "swim", "value": 30}],
+  blurb="Sea-hag druid; the Direption's guardian", token_src=None, actor_link=True))
+
 # =====================================================================
 # JOURNAL — "2. Seven Days to the Grave"
 # =====================================================================
@@ -88,6 +125,9 @@ SR = lambda area, p: f'<p class="source"><em>Source: CotCT (2016 HC), Ch.2, {are
 def page(_id, name, html, level=2): return B.page(_id, name, html, level=level)
 pages = []
 def PG(name, html, level=2): pages.append(B.page(nid(), name, html, level=level))
+def area2(code, name, html): PG(f"{code}. {name}", html, level=3)
+def encx(levels, pl):
+    e = B.encounter(levels, party_level=pl); return f"{e['band']} · {e['xp']} XP @ L{pl}"
 
 pages.append(page(nid(), "Chapter Background",
   B.s_milestone("<p><strong>Chapter 2 — Seven Days to the Grave.</strong> Korvosa quiets after the riots — and then Queen Ileosa's true horror begins: a manufactured plague, <strong>Blood Veil</strong>, loosed to cull the citizens she despises. The PCs (now ~L4) race to find a cure as the city dies around them.</p>")
@@ -143,6 +183,45 @@ PG("The Unwashed Masses & the Missing Arbiter", SR("Outbreak / Grand Vault", 82)
   + "<p><strong>The Missing Arbiter.</strong> Inside, the plague's spread is undeniable and the trail of the missing investigating arbiter opens the cure-hunt. Field Marshal Kroft soon calls the PCs to a meeting (<em>First, Do No Harm</em>) to formally task them with finding the source.</p>"
   + B.s_treasure("<p><strong>Story award:</strong> navigate the crowd without harming anyone → <strong>1,600 XP</strong>.</p>")
   + B.s_conv("<p>From here the chapter opens into the cure missions (the <em>Direption</em> wreck, Carowyn Manor, Racker's Alley) and finally the Hospice of the Blessed Maiden / Temple of Urgathoa — built in the next increments. Advance the Epidemic Clock as in-city days pass.</p>"))
+
+# --- Part 2: Outbreak — the Queen's Physicians & the cure missions ---
+PG("First, Do No Harm & the Queen's Physicians", SR("First, Do No Harm", 85)
+  + "<p>Field Marshal Kroft summons the PCs to Citadel Volshyenek. Royal orders have just arrived: the Guard must escort and obey Queen Ileosa's new <strong>Queen's Physicians</strong> and treat any Gray Maiden's command as a superior officer's.</p>"
+  + box("The echoes of forcefully spoken but unintelligible words",
+        "<p>In the citadel's mustering ground, red-and-silver guards stand uneasy as Field Marshal Kroft paces a wooden platform. Behind her loom cowled figures in oily leather, gloves, and wide black hats, each masked with a dark-goggled, beak-like visor — some gripping canes, others dark satchels. Among them: a soft-spoken, white-streaked gentleman clutching a doctor's case, and an imposing Gray Maiden in crimson-plumed plate.</p>")
+  + "<p>Kroft introduces <strong>Dr. Reiner Davaulus</strong>, leader of the Queen's Physicians — calm, fatherly, analytical — and hands out the royal decree (Handout #2-2). The Gray Maiden is Kordaitra Destaid, the Maidens' quartermaster, who will confront the PCs later. "+act(A2["ishani"], "Ishani")+" cautiously offers to coordinate the Abadaran effort.</p>"
+  + box("By Decree of Her Royal Majesty, the Radiant Queen Ileosa",
+        "<p><strong>Attention!</strong> By decree of Queen Ileosa, all citizens and the Korvosan Guard must aid and admit the Queen's Physicians, who may enter any home or building in their duties; the sick must submit to treatment. The Gray Maidens will provide military support and answer only to the Crimson Throne. Impeding the Physicians or Maidens means imprisonment; impersonating one, death; harboring the infected, death; spreading blood veil, torture then death.</p>")
+  + SEC("<p><strong>The truth.</strong> Davaulus is a <strong>Red Mantis</strong> assassin — a poisoner who masterminded blood veil with Andaisin and Ramoska; his masked 'physicians' are "+act(A2["physician"], "Urgathoa cultists")+" who <em>spread</em> the plague while feigning to treat it. His one tell: he praises the queen too warmly. He is the Hospice finale boss (Part 3).</p>"))
+
+PG("Combating the Plague (the missions)", SR("Combating the Plague", 88)
+  + "<p>Kroft (and Davaulus, for show) sets the PCs to investigate the plague's source and stem it. The chapter offers several missions, run in any order over the days the city sickens — each advances the Epidemic Clock as time passes. The headline lead is the <strong>plague-ship</strong> sunk in the Jeggare (Mission 1), with Carowyn Manor and Racker's Alley to follow.</p>"
+  + SEC("<p><strong>The Quarantine of Old Korvosa.</strong> After the PCs complete two or three missions (and before the Hospice in Part 3), Ileosa quarantines all of Old Korvosa: the Gray Maidens burn every wooden bridge and barricade the one stone bridge. This <strong>cannot be prevented</strong> — it sets up Chapter 3. (How to come and go appears in Chapter 3.)</p>"))
+
+PG("Mission 1: The Wreck of the Direption", SR("Mission 1 — the Direption", 89)
+  + "<p>Cressida gives the wreck's location. Diving the muddy Jeggare, "+chk("type:perception|dc:15")+" locates the ship ("+chk("type:perception|dc:25")+" without a light source); "+chk("type:athletics|dc:10")+" swims the placid deep. Every 10 minutes searching carries a cumulative chance of drawing the silt eels. "+chk("type:society|dc:20")+" identifies a Nidalese merchantman; "+chk("type:society|dc:30")+" (Guard records) traces it to the long-'lost' <em>Direption</em> of Garagori Whenston — a dead-end that is precisely the point.</p>"
+  + SEC("<p><strong>It is a red herring.</strong> The ship carries no plague source — only clues that waste days. Lady Andaisin left a lethal surprise: the sea-hag druid "+act(A2["yvicca"], "Yvicca")+" and her jigsaw-shark companion <strong>Skinshear</strong>, moved into the wreck to kill investigators. The hull lies split in two over a rock; the stern's main hatch ("+chk("type:athletics|dc:26")+") and hold trap door ("+chk("type:athletics|dc:23")+") are swollen shut, but a 10-ft trebuchet hole opens easy access to A2.</p>")
+  + B.s_conv("<p>This is an <strong>underwater</strong> dungeon — without water-breathing/freedom of movement the PCs fight at a real disadvantage; flag that to the GM. Re-judge attack/movement penalties per the PF2e aquatic-combat rules.</p>"))
+
+area2("A1", "The Direption's Bow", SR("A1", 90)
+  + "<p>The shattered bow lies open to the river. Six "+act(A2["silteel"], "silt eels")+" nest in the silt among the splinters, lunging at anything that disturbs them.</p>"
+  + B.enc("Silt eel nest", encx([-1]*6, 4),
+     "<p>6 "+act(A2["silteel"], "silt eels")+" swarm — individually trivial, but their stacking venom and the underwater footing make them a real nuisance.</p>",
+     B.aside_token(["6× "+act(A2["silteel"], "Silt Eel (−1)")])))
+
+area2("A2", "The Shattered Hold", SR("A2", 90)
+  + "<p>The trebuchet hole opens into the flooded hold. "+act(A2["yvicca"], "Yvicca")+" has set her jigsaw-shark companion <strong>Skinshear</strong> here to guard the way down. It circles, butts the door to A3 to warn its mistress, then attacks.</p>"
+  + B.enc("Skinshear (Yvicca's shark)", encx([1], 4),
+     "<p><strong>Skinshear</strong> — an unusually large "+act("lsdWSvGJ81hDy4it", "jigsaw shark")+" (the GM may apply the Elite adjustment for the named companion). It fights to the death and alerts Yvicca.</p>",
+     B.aside_token([act("lsdWSvGJ81hDy4it", "Skinshear — Jigsaw Shark (1, elite)")])))
+
+area2("A3", "Crew Quarters", SR("A3", 91)
+  + "<p>The cleaved stern holds the captain's cabin — "+act(A2["yvicca"], "Yvicca's")+" lair. She prepares (Evil Eye, then joins from A2 once Skinshear raises the alarm) and fights as the wreck's boss.</p>"
+  + B.enc("BOSS — Yvicca", encx([6], 4),
+     "<p>"+act(A2["yvicca"], "Yvicca")+", a sea-hag druid (with Skinshear if it still lives). Underwater, at range, with Horrific Appearance and Tanglevine, she is a genuine Severe-leaning threat for a party that came unprepared.</p>",
+     B.aside_token([act(A2["yvicca"], "Yvicca (6)"), act("lsdWSvGJ81hDy4it", "Skinshear (1)")]))
+  + B.s_treasure("<p>Yvicca's hoard (re-scaled to PF2e ~L5–6): a few hundred gp in coin and pearls, a minor druidic trinket, and the cult's planted <em>clues</em> (forged manifests pointing nowhere) that confirm the wreck was bait. No plague source is here.</p>")
+  + B.s_conv("<p>Clearing the wreck proves the plague's source lies elsewhere — pushing the PCs toward Carowyn Manor / Racker's Alley and, ultimately, the Hospice.</p>"))
 
 journal = B.journal_entry(JID2, "2. Seven Days to the Grave", pages, folder=ADV_FOLDER)
 B.write("journals", "02-seven-days-to-the-grave", copy.deepcopy(journal), embed_pages=True)

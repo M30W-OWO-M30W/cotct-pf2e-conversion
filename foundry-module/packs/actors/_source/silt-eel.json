@@ -1,0 +1,291 @@
+{
+  "_id": "siltEel000000001",
+  "name": "Silt Eel",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "d2PW86qnk0TY7Ifp",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Jaws",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 9
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "1d4",
+            "damageType": "piercing"
+          },
+          "1": {
+            "damage": "1d4",
+            "damageType": "poison",
+            "category": "persistent"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "finesse"
+          ]
+        }
+      },
+      "_key": "!actors.items!siltEel000000001.d2PW86qnk0TY7Ifp"
+    },
+    {
+      "_id": "ZlM1hcHvzrSqcNVl",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Silt Eel Venom",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A creature bitten is exposed to silt-eel venom: @Check[type:fortitude|dc:16], inflicting @Damage[1d4[persistent,poison]] and @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} for 1 round on a failure (Clumsy 2 on a critical failure).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!siltEel000000001.ZlM1hcHvzrSqcNVl"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": -2
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 16
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 8,
+        "temp": 0,
+        "value": 8
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "swim",
+            "value": 30
+          }
+        ],
+        "value": 5
+      }
+    },
+    "details": {
+      "blurb": "Venomous ambush eel",
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": -1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> a finger-long ambush biter that buries in the river silt and swarms in numbers (six lurk in the Direption's bow). Fragile — one hit usually kills it — but a swarm's venom adds up.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 5,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        },
+        {
+          "acuity": "imprecise",
+          "type": "scent",
+          "range": 30
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 7
+      },
+      "stealth": {
+        "base": 7
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "tiny"
+      },
+      "value": [
+        "animal",
+        "aquatic"
+      ]
+    }
+  },
+  "folder": "ch2CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Silt Eel",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!siltEel000000001"
+}
