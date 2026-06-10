@@ -1,0 +1,513 @@
+{
+  "_id": "sivitDarksphinx1",
+  "name": "Sivit, Lady of the Labyrinth",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "buh5UhcjZ3ofdrPr",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "+1 Striking Kukri",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 24
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d6+9",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "deadly-d8",
+            "finesse",
+            "magical",
+            "trip"
+          ]
+        }
+      },
+      "_key": "!actors.items!sivitDarksphinx1.buh5UhcjZ3ofdrPr"
+    },
+    {
+      "_id": "oP0vvc2b2u5CZPTr",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "Claw",
+      "sort": 0,
+      "type": "melee",
+      "system": {
+        "attack": {
+          "value": ""
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 24
+        },
+        "damageRolls": {
+          "0": {
+            "damage": "2d10+9",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile"
+          ]
+        }
+      },
+      "_key": "!actors.items!sivitDarksphinx1.oP0vvc2b2u5CZPTr"
+    },
+    {
+      "_id": "3w574hlSVFrHPfe9",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Pounce",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Sivit Strides (or Flies) and makes a Claw Strike; if she started the turn hidden or her target was unaware, she follows with a second Claw against the same target.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "attack"
+          ]
+        }
+      },
+      "_key": "!actors.items!sivitDarksphinx1.3w574hlSVFrHPfe9"
+    },
+    {
+      "_id": "0nAEi5eN3FFWloED",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Twin Kukri Dance",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Two Kukri Strikes against one target (combine damage); on a critical hit her blades also leave the target @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the start of her next turn.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "flourish"
+          ]
+        }
+      },
+      "_key": "!actors.items!sivitDarksphinx1.0nAEi5eN3FFWloED"
+    },
+    {
+      "_id": "vp9tI0Gia3rgkdiN",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Unholy Blight",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>A 10-ft burst of profane rot within 60 feet: @Damage[7d6[void]] (@Check[type:fortitude|dc:30|basic:true]); on a failure the creature is also @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "concentrate",
+            "manipulate",
+            "occult",
+            "void"
+          ]
+        }
+      },
+      "_key": "!actors.items!sivitDarksphinx1.vp9tI0Gia3rgkdiN"
+    },
+    {
+      "_id": "V0sIXCBJ6myiIKMF",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Mistress of Symbols",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Sivit placed the Labyrinth's four <em>symbol</em> traps (E5/E6/E18/E19 — fear, pain, sleep, stunning; refreshed weekly) and times her ambushes to herd prey across them. Constant: <em>see invisibility</em>, <em>comprehend languages</em>. She scries the lever-rooms (<em>clairvoyance</em>) and tracks odd PC gear (<em>locate object</em>); her <strong>wand of dimension door</strong> (19 charges) returns her to her throne (E20).</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!sivitDarksphinx1.V0sIXCBJ6myiIKMF"
+    },
+    {
+      "_id": "GOxFk2E8n3etWld8",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "Bound to the Labyrinth",
+      "sort": 0,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>An old <em>binding</em> (cast by Bahor's slain predecessor, with no release clause) chains her to the dungeon — she cannot pass E2. The same geas compels her to <strong>attack any betrayer of Bahor</strong> she discovers… including Vimanda.</p>"
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "_key": "!actors.items!sivitDarksphinx1.GOxFk2E8n3etWld8"
+    },
+    {
+      "_id": "W36kthSbqxpT5Arw",
+      "img": "systems/pf2e/icons/default-icons/lore.svg",
+      "name": "Labyrinth Lore",
+      "sort": 0,
+      "type": "lore",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "mod": {
+          "value": 23
+        },
+        "proficient": {
+          "value": 0
+        },
+        "publication": {
+          "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null
+      },
+      "_key": "!actors.items!sivitDarksphinx1.W36kthSbqxpT5Arw"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 6
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 5
+      },
+      "int": {
+        "mod": 6
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 5
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 31
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 200,
+        "temp": 0,
+        "value": 200
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 60
+          }
+        ],
+        "value": 40
+      }
+    },
+    "details": {
+      "blurb": "Darksphinx warden of the Labyrinth",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "draconic",
+          "infernal",
+          "sphinx",
+          "vudrani",
+          "celestial"
+        ]
+      },
+      "level": {
+        "value": 11
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Role:</strong> the darksphinx warden of the Vivified Labyrinth — brilliant, bitter, and bound. She knows all four rotations, pulls levers to split parties, and lairs at her throne (E20) with her surviving plaything: <strong>Vencarlo Orisini</strong>, chained at 0 HP.</p><p><strong>Tactics:</strong> scry, rotate, herd onto symbols, then pounce from darkness; she retreats by wand when bloodied and <strong>fights to the death</strong> within her prison. <strong>The lever she cannot pull:</strong> reveal Vimanda's treachery to her and the binding does the PCs' work.</p>",
+      "publication": {
+        "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 22,
+      "senses": [
+        {
+          "type": "darkvision"
+        },
+        {
+          "type": "see-invisibility"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 21
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 19
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 21
+      }
+    },
+    "skills": {
+      "deception": {
+        "base": 22
+      },
+      "diplomacy": {
+        "base": 22
+      },
+      "occultism": {
+        "base": 23
+      },
+      "religion": {
+        "base": 21
+      },
+      "crafting": {
+        "base": 21
+      },
+      "stealth": {
+        "base": 18
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "lg"
+      },
+      "value": [
+        "fiend",
+        "beast"
+      ]
+    }
+  },
+  "folder": "ch3CreaturesFld1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "prototypeToken": {
+    "name": "Sivit, Lady of the Labyrinth",
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": -1,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "alphaThreshold": 0.75
+    },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "dim": 0,
+      "color": null,
+      "coloration": 1,
+      "luminosity": 0.5,
+      "attenuation": 0.5,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    }
+  },
+  "_key": "!actors!sivitDarksphinx1"
+}

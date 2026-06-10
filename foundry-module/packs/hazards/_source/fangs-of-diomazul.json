@@ -1,25 +1,25 @@
 {
-  "_id": "tallKnifeGuillo1",
-  "name": "The Tall Knife (Guillotine)",
+  "_id": "fangsDiomazul001",
+  "name": "The Fangs of Diomazul (E10)",
   "type": "hazard",
   "img": "systems/pf2e/icons/default-icons/hazard.svg",
   "items": [
     {
-      "_id": "RAD471r1qhDeWX9r",
-      "img": "systems/pf2e/icons/actions/Reaction.webp",
-      "name": "Falling Blade",
+      "_id": "Pn8S1ylRxlD43hun",
+      "img": "systems/pf2e/icons/actions/FreeAction.webp",
+      "name": "Whirling Blades",
       "sort": 0,
       "type": "action",
       "system": {
         "actionType": {
-          "value": "reaction"
+          "value": "free"
         },
         "actions": {
           "value": null
         },
         "category": null,
         "description": {
-          "value": "<p><strong>Trigger</strong> The release is pulled with a victim strapped in.</p><hr /><p><strong>Effect</strong> The blade falls: @Damage[6d12+20[slashing]] to the strapped victim, who must then succeed at a @Check[type:fortitude|dc:30] or <strong>die</strong> (decapitated). A merely held (not strapped) victim takes the damage but not the death save.</p>"
+          "value": "<p><strong>Routine</strong> (5 rounds): every creature on the ground within 5 feet of the well takes @Damage[6d6[slashing]] (@Check[type:reflex|dc:29] negates that round).</p>"
         },
         "publication": {
           "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
@@ -34,7 +34,7 @@
           "value": []
         }
       },
-      "_key": "!actors.items!tallKnifeGuillo1.RAD471r1qhDeWX9r"
+      "_key": "!actors.items!fangsDiomazul001.Pn8S1ylRxlD43hun"
     }
   ],
   "folder": "ch3HazardsFld001",
@@ -55,7 +55,7 @@
     "lastModifiedBy": null
   },
   "prototypeToken": {
-    "name": "The Tall Knife (Guillotine)",
+    "name": "The Fangs of Diomazul (E10)",
     "displayName": 20,
     "displayBars": 20,
     "disposition": -1,
@@ -126,15 +126,15 @@
       "emitsSound": "encounter",
       "hardness": 0,
       "stealth": {
-        "details": "<p>Entirely obvious — that is the point.</p>",
-        "value": 0
+        "details": "<p>@Check[type:perception|dc:25] to glimpse the blade-track beneath the well's four inches of dark water. @Check[type:religion|dc:30]: the statue is <strong>Diomazul</strong>, the Serpent of Eighty Blades, an obscure Vudrani god of battle-fury.</p>",
+        "value": 25
       }
     },
     "creatureType": "",
     "details": {
-      "description": "<p>Pilts's ornately carved guillotine — 'the Tall Knife,' 'Jabbyr's Tongue,' 'the Demon's Maw' — stands beside the throne (C3). Strapping a willing or helpless victim in takes 3 rounds; Jabbyr triggers it with a single Interact action. No one has survived it yet.</p>",
-      "disable": "<p>@Check[type:thievery|dc:30] to jam the release; Hardness 12, HP 50 to wreck the frame. A strapped victim Escapes with @Check[type:athletics|dc:30] (or 3 rounds of being unstrapped by allies).</p>",
-      "isComplex": false,
+      "description": "<p>A serpent-fountain ringed by a hidden blade carousel: two rounds after entry the blades spring out and spin for 5 rounds (difficult terrain near the well), then retract and re-arm.</p>",
+      "disable": "<p>@Check[type:thievery|dc:25] at the mechanism, or the hidden bypass switch.</p>",
+      "isComplex": true,
       "level": {
         "value": 10
       },
@@ -144,7 +144,7 @@
         "license": "OGL",
         "remaster": true
       },
-      "reset": "<p>Rewinding the blade takes 1 minute.</p>",
+      "reset": "<p>Automatic; re-triggers 2 rounds after re-entry.</p>",
       "routine": ""
     },
     "saves": {
@@ -169,10 +169,9 @@
       },
       "value": [
         "mechanical",
-        "trap",
-        "death"
+        "trap"
       ]
     }
   },
-  "_key": "!actors!tallKnifeGuillo1"
+  "_key": "!actors!fangsDiomazul001"
 }
