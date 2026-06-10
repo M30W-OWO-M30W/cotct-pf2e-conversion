@@ -33,7 +33,7 @@ CONDITIONS = {
     "prone": "j91X7x0XSomq8d60", "sickened": "fesd1n5eVhpCSS18", "frightened": "TBSHQspnbcqxsmjL",
     "clumsy": "i3OJZU2nk64Df3xm", "drained": "4D2KBtexWXa6oUMR", "stunned": "dfCMdR4wnpbYNTix",
     "grabbed": "kWc1fhmv9LBiTuei", "immobilized": "eIcWbB5o3pP6OIMe", "slowed": "xYTAsEpcJE1Ccni3",
-    "fleeing": "sDPxOjQ9kx2RZE8D", "dying": "yZRUzMqrMmfLu0V1", "prone-fall": "j91X7x0XSomq8d60",
+    "fleeing": "sDPxOjQ9kx2RZE8D", "dying": "yZRUzMqrMmfLu0V1", "deafened": "9PR9y0bi4JPKnHPR",
     "persistent damage": "lDVqvLKA6eF3Df60",
 }
 def cond(key, label=None):
@@ -67,10 +67,15 @@ def _idgen(seed: int):
 
 # ---------- low-level item builders (NPC/hazard embedded) ----------
 def strike(eid, name, bonus, dmg, dmgtype, traits, extra=None, img=MELEE_IMG, slug=None):
+    # extra partials may be (dice, type) or (dice, type, category) where category is
+    # "persistent" / "splash" / "precision" (e.g. bombs: base + persistent + splash).
     rolls = {"0": {"damage": dmg, "damageType": dmgtype}}
     if extra:
-        for i, (d, t) in enumerate(extra, 1):
-            rolls[str(i)] = {"damage": d, "damageType": t}
+        for i, e in enumerate(extra, 1):
+            roll = {"damage": e[0], "damageType": e[1]}
+            if len(e) > 2 and e[2]:
+                roll["category"] = e[2]
+            rolls[str(i)] = roll
     return {"_id": eid, "img": img, "name": name, "sort": 0, "type": "melee",
             "system": {"attack": {"value": ""}, "attackEffects": {"value": []},
                        "bonus": {"value": bonus}, "damageRolls": rolls,
