@@ -1,6 +1,8 @@
 # CotCT PF2e Conversion — Remaining Work Roadmap
 
-*Updated 2026-06-11 (v0.5.2). The conversion itself is complete (Ch.1–6 + appendices/postgame,
+*Updated 2026-06-11 (v0.6.0). **TIER 1 IS COMPLETE** — all 38 prepared scenes (466 pins, 554 staged tokens, walls/thumbs/backgrounds, per-chapter Prepared Scenes pages, Complete-Campaign Adventure) and the affliction/effect automation (Blood Veil staged effect + suppressant + war paints + artifact markers, boss rule elements) shipped, fleet-QA'd, and triple-audited.*
+
+*Original framing: The conversion itself is complete (Ch.1–6 + appendices/postgame,
 community DC + statblock authority, full token-art coverage). Everything below is
 "make it play better at the table," ordered by value-per-effort.*
 
