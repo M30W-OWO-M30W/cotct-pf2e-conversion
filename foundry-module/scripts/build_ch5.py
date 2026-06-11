@@ -765,6 +765,39 @@ _SC_DEFS = {  # racoozeName -> (write slug, navName, sidebar sort)
     "Scarwall - Caverns":    ("05-scarwall-caverns",    "Sacred Lake", 800000),
 }
 
+# VISUAL-QA PLACEMENT FIXES (overlay-review fleet) — map-local square corrections
+# applied over research/scene_keys.json at build time (the shared keying data stays
+# untouched). Keyed (scene, kind, ident, from-gx, from-gy) -> (to-gx, to-gy); idents
+# are note codes / token names, FROM coords must match the keying data exactly.
+_SC_QA_FIX = {
+    # 1st floor: each watchpost's "1" guard (3x3 minotaur skeleton) sat on the
+    # water/cliff/wall band outside its B3 room — moved fully onto interior floor
+    # (B3a beside the stair foot clear of the Trench Mist; B3b west of the stair
+    # recess), clear of the partner guards at (21,80)/(31,81).
+    ("Scarwall - 1st Floor", "token", "Scarwall Guard (B3a) 1", 18, 74): (20, 77),
+    ("Scarwall - 1st Floor", "token", "Scarwall Guard (B3b) 1", 31, 74): (30, 77),
+    # 2nd floor: the C12 pin floated in void SW of the gate approach (no parapet
+    # drawn there) -> the drawn gate-approach gallery (x22.8-30, y72-76); one
+    # Baykok hung ~70% over courtyard void / the C19 west arrow-slit wall.
+    ("Scarwall - 2nd Floor", "pin", "C12", 18.5, 73.5): (25, 73),
+    ("Scarwall - 2nd Floor", "token", "Baykok Hunter", 44, 35): (45, 35),
+    # 3rd floor: the keying pass's turret-center estimates ran ~2 squares off the
+    # drawn map (SW turret ~22-25 x 85-88, SE ~29-32 x 85-88). One 3x3 huge guard
+    # fills an entire turret, so the staged pairs could never share one: the four
+    # guards re-centered ONE PER TURRET (SW/NW/SE/NE — journal mans all four).
+    ("Scarwall - 3rd Floor", "pin", "D2", 21.5, 86.5): (23.5, 86.5),
+    ("Scarwall - 3rd Floor", "token", "Turret Guard (D2)", 21, 85): (22, 85),
+    ("Scarwall - 3rd Floor", "token", "Turret Guard (D2)", 22, 87): (22, 72),
+    ("Scarwall - 3rd Floor", "token", "Turret Guard (D2)", 33, 85): (29, 85),
+    # (QA proposed (30,72) for the NE guard, but a per-square brightness probe of
+    #  the art shows the NE turret floor spans x~29-32.2 — at (30,72) the 3x3's
+    #  east column hung in void. (29,72) is the placement that satisfies the fix's
+    #  own "every huge token sits on a floor" requirement; render re-verified.)
+    ("Scarwall - 3rd Floor", "token", "Turret Guard (D2)", 34, 87): (29, 72),
+}
+def _scqa(rn, kind, ident, gx, gy):
+    return _SC_QA_FIX.get((rn, kind, ident, gx, gy), (gx, gy))
+
 _KEYS_PATH = B.ROOT.parent / "research" / "scene_keys.json"
 _SCN_N = {}
 if _KEYS_PATH.exists():
@@ -772,9 +805,11 @@ if _KEYS_PATH.exists():
                if e.get("chapter") == "ch5"):
         _rn = _e["scene"]; _slug, _nav, _sort = _SC_DEFS[_rn]
         _ox, _oy = B.scene_origin(_rn)                       # map-local sq -> scene px
-        _notes = [B.note(snid(), JID5, _scpid(n["pageName"], n["code"]), n["label"],
-                         _ox + int(n["gx"] * 100), _oy + int(n["gy"] * 100))
-                  for n in _e["notes"]]
+        _notes = []
+        for _n in _e["notes"]:
+            _gx, _gy = _scqa(_rn, "pin", _n["code"], _n["gx"], _n["gy"])
+            _notes.append(B.note(snid(), JID5, _scpid(_n["pageName"], _n["code"]), _n["label"],
+                                 _ox + int(_gx * 100), _oy + int(_gy * 100)))
         _toks = []
         for _t in _e["tokens"]:
             _aid = _scaid(_t["actor"])
@@ -782,8 +817,9 @@ if _KEYS_PATH.exists():
                 print(f"  [scene] UNRESOLVED token actor {_t['actor']!r} on {_rn} — skipped")
                 continue
             _w = _SC_W.get(_t["actor"], 1)
+            _gx, _gy = _scqa(_rn, "token", _t["name"], _t["gx"], _t["gy"])
             _toks.append(B.token(snid(), _aid, _t["name"],
-                                 _ox + int(_t["gx"]) * 100, _oy + int(_t["gy"]) * 100,
+                                 _ox + int(_gx) * 100, _oy + int(_gy) * 100,
                                  B.token_art(_t["actor"]) or MM5,
                                  disposition=_t.get("disp", -1), width=_w, height=_w))
         if _rn == "Scarwall - 3rd Floor":
@@ -835,7 +871,7 @@ if _KEYS_PATH.exists():
        "</ul>"
       + _shead("Scarwall - 3rd Floor", "Scarwall — 3rd Floor")
       + "<ul>"
-        "<li><strong>Overlay:</strong> stacks the 2nd + 3rd images at the same origin — the composite reads as the third storey with lower floors showing through. Content: D1 gatehouse loft (Castothrane never leaves this floor; his two greater shadows hide in the box shadows — and his D14 circlet ends him without a fight), D2 turrets (the two SOUTH turrets staged 2 guards each; the journal mans all four — duplicate the pairs to run it full), the keep's south wing (D3–D6, D9–D11), D7 ledges, D15 belfry (<strong>the Warning Bells hazard token is on THIS scene</strong>, not the 4th), E9–E12 (Gorstav at his sand table), and the Star Tower roof entrance (G1).</li>"
+        "<li><strong>Overlay:</strong> stacks the 2nd + 3rd images at the same origin — the composite reads as the third storey with lower floors showing through. Content: D1 gatehouse loft (Castothrane never leaves this floor; his two greater shadows hide in the box shadows — and his D14 circlet ends him without a fight), D2 turrets (all four turrets staged 1 guard each — a huge minotaur skeleton fills a whole turret; the journal posts 2 per turret, so duplicate the tokens to run it full), the keep's south wing (D3–D6, D9–D11), D7 ledges, D15 belfry (<strong>the Warning Bells hazard token is on THIS scene</strong>, not the 4th), E9–E12 (Gorstav at his sand table), and the Star Tower roof entrance (G1).</li>"
         "<li><strong>Added at build (cross-sheet fix):</strong> the D14 pin and Nihil's token (2×2, opens invisible above the throne) in the Kazavon-tower drum — the 3rd- and 4th-floor keying passes each assigned them to the other's sheet, so the third spirit anchor would otherwise be staged nowhere. The tower door opens off the south wing (~28.5, 48 map-local); treat the round chamber as the locked tower interior (superior lock per the D page).</li>"
         "<li><strong>The D8 flock</strong> is staged here on four high points (conical turret, donjon roof perch, south-wing roof, NE flat-roof corner — the last doubling as the D7 watchers) <em>and again</em> as minaret-top pairs on the 4th-floor scene: <strong>same eight gargoyles — use ONE set</strong>, whichever canvas the fight lands on. Fliers at day roosts; reposition freely, keep pairs together.</li>"
         "<li><strong>Not staged anywhere (no keyed geometry):</strong> the D12 barbed devils and the E13 spectres — neither room could be located on any sheet; run them from the D/E pages as the party crosses those levels. The dead D5 conjurer is a corpse with lore checks, not a creature. <strong>Flags:</strong> D3 is LOW confidence (the journal's stair down to C9 has no match — the wing's grand stair lands at the C6/C7 corridor); D4's secret west vault is not drawn (improvise the adjacent room); D9/D11 best-effort; several wing rooms remain unkeyed; D13 does not exist in the journal text (no pin). High confidence: D1/D2, D5, D10, D15, E11.</li>"

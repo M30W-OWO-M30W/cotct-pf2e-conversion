@@ -689,6 +689,45 @@ _KEYS = ({e["scene"]: e for e in _json.loads(_KEYS_PATH.read_text(encoding="utf-
 if not _KEYS:
     print("  [scene] research/scene_keys.json absent -> ch6 scenes ship without pins/tokens")
 
+# VISUAL-QA PLACEMENT FIXES (reviewer fleet, research/scene_qa_results.json).
+# scene_keys.json is shared by every chapter build, so it stays pristine;
+# ch6's corrections land here as load-time overrides matched by ident + the
+# exact coordinates the reviewer read off the built doc. Rationale per fix:
+#   Dungeon: two Shining Children sat on the octagonal tomb's south wall band /
+#     SE void -> rubble band (7,28) and antechamber floor (10,27) ·
+#   Towers: A90 pin hung in the donut tower's open central shaft -> annulus
+#     floor by the north treasure sparkle; A94 pin floated in void north of
+#     Seawatch -> floor just inside the north battlement ·
+#   Attic: the A83b assassin stood in open air past the bridge's east rail ->
+#     onto the planks at the Seawatch end ·
+#   Sunken Queen: Ichor + Gem sat on blank floor west of the B19 basin -> into
+#     the basin / onto the gold gem-pedestal (100px label units as throughout).
+_QA_FIXES = {  # scene -> [(kind, ident, (from gx, gy), (to gx, gy))]
+    "Dungeon": [("token", "Shining Child", (8, 29), (7, 28)),
+                ("token", "Shining Child", (11, 29), (10, 27))],
+    "Towers": [("pin", "A90", (21, 4.5), (20.5, 3)),
+               ("pin", "A94", (12.5, 22.5), (12.5, 23.8))],
+    "Attic": [("token", "Red Mantis Assassin (A83b)", (31, 26), (29, 26))],
+    "The Sunken Queen": [("token", "Immortal Ichor", (55, 4), (57, 4)),
+                         ("token", "Soultrapping Gem", (55, 5), (57, 5))],
+}
+for _scn, _fixes in _QA_FIXES.items():
+    _entry = _KEYS.get(_scn)
+    if not _entry:
+        continue
+    for _kind, _ident, (_fx, _fy), (_tx, _ty) in _fixes:
+        _rows, _idk = ((_entry["notes"], "code") if _kind == "pin"
+                       else (_entry["tokens"], "name"))
+        _hit = [r for r in _rows
+                if r[_idk] == _ident and (r["gx"], r["gy"]) == (_fx, _fy)]
+        if not _hit:   # upstream keys already corrected -> no-op, else fail loud
+            if any(r[_idk] == _ident and (r["gx"], r["gy"]) == (_tx, _ty)
+                   for r in _rows):
+                print(f"  [scene] QA fix {_scn}/{_ident}: already at ({_tx},{_ty}) upstream")
+                continue
+            raise KeyError(f"QA fix {_scn}/{_ident}: no {_kind} found at ({_fx},{_fy})")
+        _hit[0]["gx"], _hit[0]["gy"] = _tx, _ty
+
 built6 = []
 for _rac, _slug, _nav, _sort in SCENE_PLAN:
     _key = _KEYS.get(_rac, {"displayName": _rac, "notes": [], "tokens": []})

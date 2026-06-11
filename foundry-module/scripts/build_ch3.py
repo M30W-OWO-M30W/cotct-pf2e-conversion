@@ -863,6 +863,15 @@ def scn3(racname, label):
 _KEYS_PATH = B.ROOT.parent / "research" / "scene_keys.json"
 _SCENE_KEYS = {e["scene"]: e for e in _json.loads(_KEYS_PATH.read_text(encoding="utf-8"))
                if e.get("chapter") == "ch3"}
+# VISUAL-QA FIX (overlay review): the E22 pin was keyed ~1.5 squares into the black
+# void west of the torturer's-room west wall (panel-5 room interior spans map-local
+# x 90.2-92.9, y 21.8-24.0). Re-anchored onto the room floor between the barrel and
+# the desk. Patched here — not in research/scene_keys.json — so the keying-fleet
+# output stays a verbatim record (same convention as ch5's cross-sheet fix).
+for _n in _SCENE_KEYS["The Vivified Labyrinth"]["notes"]:
+    if _n["code"] == "E22":
+        assert (_n["gx"], _n["gy"]) == (88.7, 21.7), "E22 keying changed upstream — re-check this patch"
+        _n["gx"], _n["gy"] = 91.5, 22.8
 # pageName -> pageId from THIS journal's in-memory pages (strict: a keying typo = build error)
 PAGE_ID = {_html.unescape(p["name"]): p["_id"] for p in pages}
 

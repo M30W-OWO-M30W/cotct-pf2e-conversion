@@ -1054,6 +1054,26 @@ _SCN_KEYS = ([e for e in _json.loads(_SK_PATH.read_text(encoding="utf-8"))
 if not _SCN_KEYS:
     print("  [scene] research/scene_keys.json absent -> Ch.2 prepared scenes skipped")
 
+# Visual-QA placement corrections (QA fleet, research/scene_qa_results.json),
+# applied as a post-load patch so the shared keying file stays untouched:
+#  - Wererat 1 at (10,6) stood in a rocky burrow hole west of the B3 bonfire ->
+#    (10,5), clean cave floor still flanking the fire's west side.
+#  - Lion-/Lioness-Masked Zombies at y=2 stood on the exterior hedge north of
+#    the E1b den wall (interior starts y~3.1) -> one row south, onto interior
+#    floor beside the Peacock Servant (10,3) before the north-wall hearth.
+_QA_FIX = {  # (scene, token name, from gx, from gy) -> (to gx, to gy)
+    ("Wererat Sewer Den", "Wererat 1", 10, 6): (10, 5),
+    ("Carowyn Manor", "Lion-Masked Zombie", 9, 2): (9, 3),
+    ("Carowyn Manor", "Lioness-Masked Zombie", 11, 2): (11, 3),
+}
+for _e in _SCN_KEYS:
+    for _t in _e.get("tokens", []):
+        _to = _QA_FIX.pop((_e["scene"], _t["name"], _t["gx"], _t["gy"]), None)
+        if _to:
+            _t["gx"], _t["gy"] = _to
+if _QA_FIX:
+    print(f"  [scene] WARNING: {len(_QA_FIX)} QA placement fix(es) matched no token: {sorted(_QA_FIX)}")
+
 scenes2 = []
 for _e in _SCN_KEYS:
     _rn, _dn = _e["scene"], _e["displayName"]

@@ -718,6 +718,20 @@ _SZ = {"tiny": 1, "sml": 1, "med": 1, "lg": 2, "huge": 3, "grg": 4}
 # her actor above is size "lg" — and linkToActorSize re-scales the token 2x2 at
 # render regardless, so ship the honest 2x2 footprint.
 _W_OVERRIDE = {"Mother of Thorns": 2}
+# Visual-QA placement fixes (post-keying review pass), keyed by
+# (scene, token name, keyed gx, keyed gy) -> corrected (gx, gy).
+# House of the Moon: the keyer read the pale south approach at ~(9-11, 12-14),
+# but at full resolution those squares are interior hall floor / the south wall
+# band (the wall runs at y~15). The maidens are staged FRIENDLY to brief the
+# party OUTSIDE the south approach, so shift the whole formation +3 squares
+# south onto the dirt path — exactly the adjustment the keyer's design note
+# authorizes once the facade/approach is verified.
+_POS_FIX = {
+  ("House of the Moon", "Lyrune-Quah Moon Maiden", 8, 13): (8, 16),
+  ("House of the Moon", "Lyrune-Quah Moon Maiden", 10, 13): (10, 16),
+  ("House of the Moon", "Tekrakai (Moon Maiden)", 9, 14): (9, 17),
+  ("House of the Moon", "Lyrune-Quah Moon Maiden", 11, 14): (11, 17),
+}
 
 _KEYS = [s for s in _json.loads((B.ROOT.parent / "research" / "scene_keys.json")
                                 .read_text(encoding="utf-8")) if s.get("chapter") == "ch4"]
@@ -748,8 +762,10 @@ for _i, _sk in enumerate(_KEYS, 1):
     for _t in _sk["tokens"]:
         _a = _AMAP[_t["actor"]]
         _w = _W_OVERRIDE.get(_t["actor"], _SZ.get(_a.get("size", "med"), 1))
+        _gx, _gy = _POS_FIX.get((_rn, _t["name"], int(_t["gx"]), int(_t["gy"])),
+                                (int(_t["gx"]), int(_t["gy"])))
         _toks.append(B.token(scid(), _a["id"], _t["name"],
-                             _ox + int(_t["gx"]) * 100, _oy + int(_t["gy"]) * 100,
+                             _ox + _gx * 100, _oy + _gy * 100,
                              B.token_art(_t["name"]) or B.token_art(_t["actor"]) or MM,
                              disposition=_t.get("disp", -1), width=_w, height=_w))
     _sc = B.racooze_scene(_rn, _sk["displayName"], SC_FOLDER, _notes, _toks,
@@ -781,7 +797,7 @@ PG("Prepared Scenes",
   + "<li><strong>Canvas:</strong> 40×20 two-floor composite — ground-floor hall on the left (x 0–20), sky-well level on the right (x 20–40, with a duplicate ground-floor tile stacked beneath so the lower floor shows through gaps; add 20 to a floor-2 local x). B1's pin = the white starknife calendar emblem (the flanking wheel circles are the facade's side towers); B2's pin = the central sky-well chamber.</li>"
   + "<li>The <strong>Red Reaver</strong> (2×2, at ~85% HP from old wounds) lairs in B1's southwest corner among the carcasses and seven dead maidens. It targets the heaviest armor, pursues half a mile, and fights to the death — but a performance buys calm rounds (it is distracted by artistic beauty). Walls are self-repairing blessed masonry (Hardness 16).</li>"
   + "<li><strong>Tekrakai's four Moon Maidens</strong> stand friendly outside the south approach (one token renamed Tekrakai — she has no bespoke actor). They brief the party on the reaver's tricks and want in on the kill; benching them costs −2d4 RP. Loot among the dead maidens: 3 +1 hide armor, 5 +1 starknives.</li>"
-  + "<li><strong>Ambiguity flag:</strong> the 30-ft facade opening could not be verified at keying resolution — the pale path at ~(9–11, 12–14) was read as the south entrance; shift the maiden tokens if the full-res map reads otherwise.</li>"
+  + "<li><strong>Ambiguity flag (resolved):</strong> the 30-ft facade opening could not be verified at keying resolution — the keyers first read the pale path at ~(9–11, 12–14) as the south entrance, but full-resolution review showed those squares are interior hall floor (the south wall runs at y≈15). The maiden tokens were shifted to ~(8–11, 16–17), on the dirt approach path outside the south wall.</li>"
   + "<li><strong>Not staged:</strong> Truthspeaker Akram — he arrives with the Lyrune-Quah only days <em>after</em> the reaver business.</li>"
   + "</ul>"
 

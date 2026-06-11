@@ -1523,6 +1523,19 @@ def _ps_pid(page_name, code):
     else:    print(f"  [scene] no page for pin {code} ({page_name!r}) -> pin dropped")
     return _pid
 
+# Visual-QA placement corrections (2026-06-11 overlay re-review): keyed squares
+# re-judged against the rendered canvases. Keyed by (racoozeName, token name,
+# keyed gx, gy) so an upstream re-key in research/scene_keys.json retires each
+# override automatically; values are corrected MAP-LOCAL squares.
+_PS_TOKEN_FIX = {
+    # Eel's End C7: rows y0-2 are black void above the cabin's north wall —
+    # rehome both thugs onto interior floor at the feast tables.
+    ("Eel's End", "Hopeful Thug", 4, 1): (6, 4),
+    ("Eel's End", "Hopeful Thug", 9, 1): (9, 2),
+    # Dead Warrens D9: the 2x2 jailer sat on the dark NW prisoner-pit floor;
+    # (37,25) centers him on the rock floor ringed by the three pits.
+    ("The Dead Warrens", "Cabbagehead", 36, 23): (37, 25),
+}
 PS_SCENES = [   # (racoozeName, displayName, pack slug, sort) — after Old Fishery (sort 0);
     # slug prefix = CHAPTER number (matches 01-old-fishery / the other chapters' packs)
     ("All The World's Meat", "All the World's Meat", "01-all-the-worlds-meat", 200000),
@@ -1543,8 +1556,9 @@ for _rn, _dn, _slug, _sort in PS_SCENES:
         _aid, _sq = PS_ACTORS[_t["actor"]]    # unknown actor = build error by design
         if not _aid:
             print(f"  [scene] {_dn}: no actor doc for {_t['actor']!r} -> token dropped"); continue
+        _gx, _gy = _PS_TOKEN_FIX.get((_rn, _t["name"], _t["gx"], _t["gy"]), (_t["gx"], _t["gy"]))
         _pt.append(B.token(psid(), _aid, _t["name"],
-                           _ox + int(_t["gx"]) * 100, _oy + int(_t["gy"]) * 100,
+                           _ox + int(_gx) * 100, _oy + int(_gy) * 100,
                            B.token_art(_t["actor"]) or _PS_MM,
                            disposition=_t.get("disp", -1), hidden=True, width=_sq, height=_sq))
     _psc = B.racooze_scene(_rn, _dn, F["s_ch1"], _pn, _pt, sort=_sort)
@@ -1617,11 +1631,14 @@ if _FISH:
     lfpx = lambda gx, gy: (int(2700 + gx * 100), int(600 + gy * 100))
     # Pin positions verified against the area texts (A10 = the ship's AFT CABIN on
     # the first floor — its stair drops to the hold A11 on the waterline map).
+    # Visual-QA overlay pass (2026-06-11): A9/A10 moved off open river water onto
+    # the ship (bow deck / webbed aft cabin); A11 into the hold interior; A12 onto
+    # the escape-skiff walkway; A14 into the den room proper.
     NOTE_POS = {
         "A1": ffpx(6.5, 19.4), "A2": ffpx(15, 13), "A3": ffpx(2, 14.5), "A4": ffpx(9, 16.5),
         "A5": ffpx(13, 15), "A6": ffpx(11, 12.8), "A7": ffpx(6.5, 5), "A8": ffpx(5.5, 10),
-        "A9": ffpx(7, 2.2), "A10": ffpx(11.5, 2), "A11": lfpx(9, 2.5), "A12": lfpx(5, 7),
-        "A13": lfpx(8.5, 14), "A14": lfpx(3.2, 12.5),
+        "A9": ffpx(9.5, 4.5), "A10": ffpx(13.5, 5), "A11": lfpx(12, 5), "A12": lfpx(8, 8),
+        "A13": lfpx(8.5, 14), "A14": lfpx(5.5, 15),
     }
     NOTE_NAMES = {  # full page names so the pin TOOLTIP names the location
         "A1": "A1. Front Door", "A2": "A2. Loading Dock", "A3": "A3. Back Alley",
@@ -1643,21 +1660,21 @@ if _FISH:
     # (A10) + 4 in the hold (A11), the shark under the A8 floor-hole.
     place(A["yargin"],"Yargin Balko",ffpx(11,13))
     place(A["hookshanks"],"Hookshanks Gruller",ffpx(14.5,13))
-    place(A["giggles"],"Giggles",ffpx(6,9))
-    for gx,gy in [(5,5),(6,6),(7,5),(8,6)]:                  # A7 trough crew
+    place(A["giggles"],"Giggles",ffpx(10,10))                # open floor east of the chum vat
+    for gx,gy in [(8,4),(6,6),(7,5),(8,6)]:                  # A7 trough crew (on the bow deck)
         place(A["orphan"],"Lamm's Lamb",ffpx(gx,gy),disp=0)
-    for gx,gy in [(4,9),(6,10),(4,12),(6,12),(7,11)]:        # A8 floor crew
+    for gx,gy in [(4,9),(5,11),(4,12),(5,14),(10,11)]:       # A8 floor crew (catwalks/work floor, off the vat)
         place(A["orphan"],"Lamm's Lamb",ffpx(gx,gy),disp=0)
-    place(A["drainspider"],"Drain Spider",ffpx(11,2))        # A10 cabin lurker
-    for gx,gy in [(8,2),(9,2),(10,2),(9,3)]:                 # A11 hold infestation
+    place(A["drainspider"],"Drain Spider",ffpx(13,4))        # A10 cabin lurker (webbed deck by the stairs down)
+    for gx,gy in [(7,5),(8,4),(10,4),(8,6)]:                 # A11 hold infestation (inside the hold)
         place(A["drainspider"],"Drain Spider",lfpx(gx,gy))
     place(A["jigsawshark"],"Jigsaw Shark",lfpx(6,6))
-    place(A["gaedren"],"Gaedren Lamm",lfpx(10.5,13))         # at his tables across the pool
+    place(A["gaedren"],"Gaedren Lamm",lfpx(7,16))            # west-side floor by his cluttered tables, across the pool
     _blo=B._cmeta("npc","Bloo"); _gob=B._cmeta("npc","Gobblegut")
     if _blo: place(_blo["id"],"Bloo",ffpx(8.5,16))           # asleep under the A4 desk
-    if _gob: place(_gob["id"],"Gobblegut",lfpx(8,13),w=2,h=2)
+    if _gob: place(_gob["id"],"Gobblegut",lfpx(10,15),w=2,h=2)   # centered in the gator pool
     place(A["boardwalk"],"Slippery Boardwalk",ffpx(2,15))
-    place(A["rottendeck"],"Rotten Ship Deck",ffpx(7,2))
+    place(A["rottendeck"],"Rotten Ship Deck",ffpx(8,5))      # the bow deck's rotten planking
     sc = B.scene(SCN,"Old Fishery",_FISH["width"],_FISH["height"],GRID,None,
                  notes,tok,folder=F["s_ch1"],navName="Old Fishery")
     sc["thumb"]=_FISH.get("thumb")     # Racooze's pre-rendered sidebar thumbnail
