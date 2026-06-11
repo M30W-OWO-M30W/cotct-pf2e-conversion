@@ -1545,6 +1545,7 @@ if _FISH:
     place(A["rottendeck"],"Rotten Ship Deck",ffpx(7,2))
     sc = B.scene(SCN,"Old Fishery",_FISH["width"],_FISH["height"],GRID,None,
                  notes,tok,folder=F["s_ch1"],navName="Old Fishery")
+    sc["thumb"]=_FISH.get("thumb")     # Racooze's pre-rendered sidebar thumbnail
     for w in _FISH["walls"]:                      # Racooze walls/doors, re-keyed
         w=dict(w); w.pop("levels",None); w["_key"]=f"!scenes.walls!{SCN}.{w['_id']}"
         sc["walls"].append(w)
