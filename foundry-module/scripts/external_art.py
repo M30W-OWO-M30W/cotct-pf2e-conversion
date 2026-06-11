@@ -28,7 +28,7 @@ RING = (62, 45, 24)
 RING_W = 14
 
 sys.path.insert(0, HERE)
-from token_art import bake_token, slugify   # reuse the AP-art bake
+from token_art import bake_token, bake_portrait, slugify   # reuse the AP-art bakes
 
 
 def fetch(url, path):
@@ -99,9 +99,9 @@ def main():
             cpath = os.path.join(CACHE, e["aonImage"].split("/")[-1])
             if not fetch(AON + e["aonImage"], cpath):
                 skipped += 1; continue
-            im = Image.open(cpath).convert("RGB")
-            bake_token(im, e.get("cx", 0.5), e.get("cy", 0.3)).save(tpath, "WEBP", quality=92)
-            p = im.copy(); p.thumbnail((800, 800)); p.save(ppath, "WEBP", quality=88)
+            im = Image.open(cpath)
+            bake_token(im, e.get("cx", 0.5), e.get("cy", 0.3), e.get("zoom", 1.0)).save(tpath, "WEBP", quality=92)
+            bake_portrait(im).save(ppath, "WEBP", quality=88)
             made += 1
         elif e["source"] == "gameicons" and e.get("icon") and gi:
             member = f"icons/000000/transparent/1x1/{e['icon']}.png"
