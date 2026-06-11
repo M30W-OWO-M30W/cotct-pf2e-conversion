@@ -444,9 +444,11 @@ def scene(_id, name, width, height, grid_px, bg_src, notes, tokens, folder=None,
             # Foundry v14: backgrounds live in the core `levels` embedded collection
             # (the legacy top-level `background` field above is kept for tooling but is
             # stripped by v14 import validation — without a Level, bg scenes render void)
-            "initialLevel": "lvl" + _id[:13],
+            # the level uses Foundry's defaultLevelId so every placeable's default
+            # `level` binding (tokens/walls/lights/tiles all default to it) resolves
+            "initialLevel": "defaultLevel0000",
             "levels": [{
-                "_id": "lvl" + _id[:13], "name": "Ground",
+                "_id": "defaultLevel0000", "name": "Ground",
                 "elevation": {"bottom": 0, "top": 20},
                 "background": {"color": "#000000", "src": bg_src, "tint": "#ffffff",
                                "alphaThreshold": 0.75},
@@ -456,7 +458,7 @@ def scene(_id, name, width, height, grid_px, bg_src, notes, tokens, folder=None,
                              "fit": "fill", "scaleX": 1, "scaleY": 1, "rotation": 0},
                 "visibility": {"levels": []},
                 "sort": 0, "flags": {},
-                "_key": f"!scenes.levels!{_id}.lvl{_id[:13]}",
+                "_key": f"!scenes.levels!{_id}.defaultLevel0000",
             }]}
 
 # ---------- Racooze prepared scenes (shared machinery; pilot pattern generalized) ----------
