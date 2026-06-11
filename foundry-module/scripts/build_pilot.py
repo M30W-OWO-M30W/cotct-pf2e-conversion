@@ -823,7 +823,8 @@ pages.append(newpage("hook","Haunted Fortunes",
 pages.append(newpage("scene","Scene Setup",
   "<p>Open the "+scn(SCN,"Old Fishery scene")+" — it is built on <strong>Racooze's battlemap geometry</strong>: his walls, doors, and floor art come from your locally installed <em>Racooze's CotCT Battlemaps</em> module (install it free; nothing of his is redistributed).</p>"
   +"<p><strong>Layout:</strong> the left half of the canvas is the first floor (A1–A9, the ship docked at top); the right half is the waterline level (A10–A14 — the hold, the underpier, and Gaedren's den around Gobblegut's pool). Map-note pins link every area page below; all hostile tokens are pre-placed and <strong>hidden</strong> — reveal them as the raid unfolds. "+B.cmon("Gobblegut")+" (2×2, in the pool) and "+B.cmon("Bloo")+" (roaming "+pg(P["A8"],"A8")+") are staged from the community statblocks.</p>"
-  +SEC("<p>If the Racooze module is not installed at build time, this scene falls back to a placeholder grid (pins + staged tokens, no map). Day-shift staging is assumed: nine orphans on the fishery floor, Yargin in his office, Giggles on the ship. At night, move Yargin to "+pg(P["A5"],"A5")+" and start Hookshanks and Giggles on patrol routes.</p>"),level=2))
+  +SEC("<p><strong>Import via the Adventure, not the scene compendium.</strong> The staged tokens reference actors by id; importing the <em>CotCT: Edge of Anarchy</em> Adventure creates those actors in the world alongside the scene, so every token resolves. Dragging the scene alone from the compendium — or using an Adventure import from an older module version — leaves tokens showing <em>'references an actor which no longer exists'</em>; fix by re-importing the Adventure (accept the overwrite prompt).</p>"
+  +"<p>If the Racooze module is not installed at build time, this scene falls back to a placeholder grid (pins + staged tokens, no map). Day-shift staging is assumed per the area texts: Yargin in his office, Hookshanks at the loading dock, Giggles + 5 orphans on the fishery floor, 4 orphans at the trough, Bloo under the front-room desk. At night, move Yargin to "+pg(P["A5"],"A5")+" and start Hookshanks and Giggles on patrol routes.</p>"),level=2))
 
 # 4. Fishery Features ----------------------------------------------------------
 pages.append(newpage("features","Fishery Features",
@@ -1688,6 +1689,13 @@ adv = B.adventure(ADV,"Curse of the Crimson Throne — Ch.1: Edge of Anarchy (pi
   [strip(f) for f in folders], [strip(intro_journal), strip(cg_journal), strip(journal)], [strip(sc)],
   [strip(a) for a in actors]+[strip(h) for h in hazards]+[strip(x) for x in comm_adv], [strip(i) for i in items]+[strip(b) for b in bgs],
   tables=[strip(harrow_tbl)], macros=[strip(harrow_mac)])
+# GUARD: every scene token must reference an actor that the Adventure import
+# creates — otherwise Foundry shows "token references an actor which no longer
+# exists in this world" when the scene is used.
+_adv_actor_ids={a["_id"] for a in adv["actors"]}
+_orphan_tokens=[t["name"] for t in sc.get("tokens",[]) if t.get("actorId") not in _adv_actor_ids]
+if _orphan_tokens:
+    print(f"  [WARN] scene tokens NOT in adventure bundle (will orphan on import): {_orphan_tokens}")
 B.write("adventure","cotct-edge-of-anarchy",copy.deepcopy(adv))
 
 print(f"Pilot (Kingmaker-style) built: {len(folders)} folders, {len(actors)} actors, {len(hazards)} hazards, "
