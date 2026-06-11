@@ -13,6 +13,8 @@ DEST="/mnt/c/Users/maman/AppData/Local/FoundryVTT/Data/modules/cotct-pf2e-conver
 cd "$REPO" || { echo "!! repo not found: $REPO"; exit 1; }
 [ -d "$DEST" ] || { echo "!! Foundry module folder not found: $DEST"; exit 1; }
 
+echo "==> Extracting Racooze scene geometry (extract_racooze.mjs)..."
+node scripts/extract_racooze.mjs || echo "  (racooze extraction failed — scenes fall back to placeholders)"
 echo "==> Building pilot (build_pilot.py)..."
 python3 scripts/build_pilot.py || { echo "!! build_pilot.py failed"; exit 1; }
 echo "==> Building Chapter 2 (build_ch2.py)..."
@@ -64,6 +66,8 @@ if command -v tasklist.exe >/dev/null 2>&1 \
 fi
 
 echo "==> Syncing into Foundry: $DEST"
+echo "==> Grading battlemap copies (grade_maps.py)..."
+/usr/bin/python3.12 scripts/grade_maps.py 2>/dev/null || python3 scripts/grade_maps.py || echo "  (map grading skipped)"
 err=$(cp -rf packs/. "$DEST/packs/" 2>&1 >/dev/null)
 # Fallback lock detection (in case the process check missed it): abort BEFORE
 # bumping module.json, so the version never lies about what's actually installed.

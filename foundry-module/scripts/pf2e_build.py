@@ -391,9 +391,9 @@ def note(_id, entry_id, page_id, text, x, y, icon="icons/svg/book.svg"):
             "texture": {"src": icon, "tint": "#ffffff", "anchorX": 0.5, "anchorY": 0.5, "fit": "contain",
                         "scaleX": 1, "scaleY": 1, "offsetX": 0, "offsetY": 0, "rotation": 0, "alphaThreshold": 0.75}}
 
-def token(_id, actor_id, name, x, y, token_src, disposition=-1, hidden=True):
+def token(_id, actor_id, name, x, y, token_src, disposition=-1, hidden=True, width=1, height=1):
     return {"_id": _id, "name": name, "actorId": actor_id, "actorLink": False, "x": x, "y": y,
-            "width": 1, "height": 1, "disposition": disposition, "hidden": hidden,
+            "width": width, "height": height, "disposition": disposition, "hidden": hidden,
             "displayName": 20, "displayBars": 20, "lockRotation": False, "rotation": 0, "alpha": 1,
             "texture": {"src": token_src, "scaleX": 1, "scaleY": 1, "tint": "#ffffff", "anchorX": 0.5,
                         "anchorY": 0.5, "fit": "contain", "offsetX": 0, "offsetY": 0, "rotation": 0, "alphaThreshold": 0.75},
@@ -402,6 +402,19 @@ def token(_id, actor_id, name, x, y, token_src, disposition=-1, hidden=True):
                       "saturation": 0, "contrast": 0, "attenuation": 0.1, "color": None},
             "detectionModes": [], "flags": {"pf2e": {"linkToActorSize": True, "autoscale": True}},
             "delta": None, "elevation": 0, "sort": 0}
+
+def light(_id, x, y, bright, dim, color=None, alpha=0.2, animation=None,
+          luminosity=0.5, angle=360, walls=True):
+    """AmbientLight document (field set mirrors Racooze's v12 exports)."""
+    anim = {"type": animation, "speed": 4, "intensity": 4, "reverse": False} if animation \
+        else {"type": None, "speed": 5, "intensity": 5, "reverse": False}
+    return {"_id": _id, "x": x, "y": y, "rotation": 0, "elevation": 0, "walls": walls,
+            "vision": False, "hidden": False, "locked": False, "flags": {},
+            "config": {"alpha": alpha, "angle": angle, "bright": bright, "dim": dim,
+                       "coloration": 1, "attenuation": 0.5, "luminosity": luminosity,
+                       "saturation": 0, "contrast": 0, "shadows": 0, "animation": anim,
+                       "darkness": {"min": 0, "max": 1}, "color": color,
+                       "negative": False, "priority": 0}}
 
 def scene(_id, name, width, height, grid_px, bg_src, notes, tokens, folder=None,
           foreground=None, navName=None, sort=0):
