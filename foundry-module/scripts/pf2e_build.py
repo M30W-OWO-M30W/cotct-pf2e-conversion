@@ -574,11 +574,37 @@ def _community_swap(pack, doc):
     print(f"  [community] {pack}: {doc['name']}")
     return out
 
+# ---------- per-actor token art (baked from the GM's own AP PDF by token_art.py) ----------
+# token_art_index.json (committed) maps actor name -> source art + face center; the
+# baked webp files live ONLY in the deployed module (never the repo). Missing files
+# render as Foundry defaults, so builds stay portable.
+_TART_PATH = ROOT / "scripts" / "token_art_index.json"
+TOKEN_ART = _json.loads(_TART_PATH.read_text(encoding="utf-8")) if _TART_PATH.exists() else {}
+
+def _tart_slug(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+def token_art(name):
+    """Deployed token texture path for an actor with baked art, else None."""
+    return f"modules/{MOD}/assets/tokens/{_tart_slug(name)}.webp" if name in TOKEN_ART else None
+
+def _apply_token_art(pack, doc):
+    if pack not in ("actors", "hazards") or doc.get("type") not in ("npc", "hazard"):
+        return doc
+    if doc["name"] not in TOKEN_ART:
+        return doc
+    doc["img"] = f"modules/{MOD}/assets/art/portraits/{_tart_slug(doc['name'])}.webp"
+    tex = (doc.get("prototypeToken") or {}).get("texture")
+    if tex is not None:
+        tex["src"] = token_art(doc["name"])
+    return doc
+
 # ---------- writers ----------
 def write(pack, slug, doc, embed_items=False, embed_pages=False):
     d = PACKS / pack / "_source"
     d.mkdir(parents=True, exist_ok=True)
     doc = _community_swap(pack, doc)
+    doc = _apply_token_art(pack, doc)
     doc["_key"] = f"!{COLL[pack]}!{doc['_id']}"
     if embed_items:
         for it in doc.get("items", []):

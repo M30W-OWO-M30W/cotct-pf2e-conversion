@@ -66,8 +66,8 @@ if command -v tasklist.exe >/dev/null 2>&1 \
 fi
 
 echo "==> Syncing into Foundry: $DEST"
-echo "==> Grading battlemap copies (grade_maps.py)..."
-/usr/bin/python3.12 scripts/grade_maps.py 2>/dev/null || python3 scripts/grade_maps.py || echo "  (map grading skipped)"
+echo "==> Baking token art (token_art.py)..."
+/usr/bin/python3.12 scripts/token_art.py 2>/dev/null || python3 scripts/token_art.py || echo "  (token art skipped)"
 err=$(cp -rf packs/. "$DEST/packs/" 2>&1 >/dev/null)
 # Fallback lock detection (in case the process check missed it): abort BEFORE
 # bumping module.json, so the version never lies about what's actually installed.
