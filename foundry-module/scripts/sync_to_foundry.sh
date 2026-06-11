@@ -31,6 +31,10 @@ echo "==> Building Appendices (build_appendix.py)..."
 python3 scripts/build_appendix.py || { echo "!! build_appendix.py failed"; exit 1; }
 echo "==> Emitting community-only Olliebird docs (build_community.py)..."
 python3 scripts/build_community.py || { echo "!! build_community.py failed"; exit 1; }
+echo "==> Building automation effect items (build_effects.py)..."
+python3 scripts/build_effects.py || { echo "!! build_effects.py failed"; exit 1; }
+echo "==> Bundling the complete-campaign Adventure (build_adventure.py)..."
+python3 scripts/build_adventure.py || { echo "!! build_adventure.py failed"; exit 1; }
 
 echo "==> Checking read-aloud for OCR interleave..."
 python3 scripts/check_readaloud.py || { echo "!! read-aloud OCR symptoms found"; exit 1; }

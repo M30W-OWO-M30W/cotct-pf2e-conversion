@@ -683,6 +683,191 @@ PG("Chapter Conclusion",
   + SEC("<p><strong>A SWIFTER SCARWALL (optional, the AP's own advice):</strong> (1) <em>Simplify the chained spirit</em> — fewer anchors, or none: lifting the curse may need only the C14 fight, and most guardians vanish with it. (2) <em>Cut the phantasms</em> — gloss those rooms. (3) <em>Throttle random encounters</em> — or drop them. (4) <em>Allow side trips home</em> — teleport/wind walk/Laori's shadow walk between Korvosa and Scarwall; interleave the Deathhead Vault (Ch.4) or early Ch.6 Part 1 beats (the Epidemic Clock has been climbing unattended — let the city's decay pull them home). (5) <em>Move the goal</em> — relocate Serithtial to an aboveground foe's hoard, and optionally let her powers work despite the curse. Whatever the cut: the party must hold the sword, near L16, before Castle Korvosa.</p>")
   + SEC("<p><strong>Redemption threads:</strong> after G7, <strong>Sial</strong> is unlikely to remain alive or on this plane (the curacy, or the Enemy-fight); <strong>Laori</strong> refuses the post, survives more often than not — and befriended, may treat the Star Tower as the turning point of a long walk away from Zon-Kuthon (a redemption arc that can run to campaign's end; converted, she counts the PCs friends forever). <strong>Mithrodar's fall frees Zellara</strong> if the castle took her. "+act(A5["kleestad"], "Kleestad")+", if he somehow lived, is already swimming. Next: <strong>Chapter 6 — Crown of Fangs.</strong></p>"))
 
+# =====================================================================
+# PREPARED SCENES — Racooze battlemap geometry + journal pins & staged tokens
+# (keying fleet data: research/scene_keys.json, "chapter":"ch5". Geometry —
+#  walls/doors/tiles/lights/thumb — injects from the GM's installed Racooze
+#  module via B.racooze_scene exactly like the Old Fishery pilot; absent
+#  geometry degrades to a placeholder grid. ALL tokens stage hidden.)
+# =====================================================================
+import json as _scjson, html as _schtml
+_sgen = B._idgen(885501)            # scene-doc id stream — never perturbs nid()/sid()
+def snid(): return next(_sgen)
+MM5 = "icons/svg/mystery-man.svg"
+SCENE_FOLDER5 = "ch5SceneFolder01"  # "5. Skeletons of Scarwall" scene folder (pilot-owned)
+
+# pageName -> pageId from THIS journal's in-memory pages (html-unescape both sides)
+_PAGE_IDS = {}
+for _p in pages:
+    _PAGE_IDS.setdefault(_schtml.unescape(_p["name"]), _p["_id"])
+def _scpid(page_name, code):
+    n = _schtml.unescape(page_name)
+    if n in _PAGE_IDS:
+        return _PAGE_IDS[n]
+    letters = code.rstrip("0123456789").rstrip(".")          # "A11" -> "A", "B25" -> "B"
+    for cand, pid in _PAGE_IDS.items():
+        if cand.startswith(letters):
+            print(f"  [scene] page {page_name!r} missing -> nearest {cand!r}")
+            return pid
+    print(f"  [scene] page {page_name!r} missing -> Chapter Background fallback")
+    return pages[0]["_id"]
+
+# actorId resolution: our authored doc ids first (A5 constants + the ch3-owned
+# Insanity Mist Chest), then the community index (replacedBy = a community doc
+# swapped over ours in place, keeping our id; bare id = community-only doc).
+_SC_OURS = {
+    "Deadwatcher Orc": A5["deadwatcher"], "Ury Sevenskulls": A5["ury"],
+    "Gargoyle Brute": A5["gargbrute"], "Scarwall Guard": A5["scarguard"],
+    "Lashton": A5["lashton"], "Skeletal Nightmare": A5["skelnightmare"],
+    "Corpse Orgy": A5["corpseorgy"], "Mandraivus the Lost": A5["mandraivus"],
+    "Cinder Ghoul": A5["cinderghoul"], "Belshallam": A5["belshallam"],
+    "Ukwar": A5["ukwar"], "Castothrane": A5["castothrane"],
+    "Nihil the Ashbringer": A5["nihil"], "Aerilaya": A5["aerilaya"],
+    "Gorstav": A5["gorstav"], "Mingorc": A5["mingorc"],
+    "Prelate Aruth": A5["aruth"], "Zev Ravenka": A5["zev"],
+    "Ildervok": A5["ildervok"], "Kleestad": A5["kleestad"],
+    "Mithrodar": A5["mithrodar"], "Malatrothe": A5["malatrothe"],
+    "Glimkarus": A5["glimkarus"], "Risibeth": A5["risibeth"],
+    "Pegg & Loute": A5["peggloute"], "Trench Mist": A5["trenchmist"],
+    "Tarnworm": A5["tarnworm"],
+    "Vortex of Madness (B5)": A5["vortexmadness"],
+    "Crematory Blast (B15)": A5["crematoryblast"],
+    "The Polong Bottles (B18)": A5["polongbottles"],
+    "Warning Bells (D15)": A5["warningbells"],
+    "Insanity Mist Chest (E7, right)": "insanityChest001",   # built by build_ch3.py
+}
+def _scaid(name):
+    if name in _SC_OURS:
+        return _SC_OURS[name]
+    for kind in ("npc", "hazard"):
+        m = B._cmeta(kind, name)
+        if m:
+            return m.get("replacedBy") or m["id"]
+    return None
+
+# final pack-doc token footprints (community swaps included — e.g. Scarwall Guard
+# minotaur skeletons are Huge, Corpse Orgy community doc is Large); rest are 1x1.
+_SC_W = {"Trench Mist": 4, "Skeleton Infantry": 4, "Tarnworm": 4, "Kleestad": 4,
+         "Scarwall Guard": 3, "Belshallam": 3, "Corpse Lotus": 3,
+         "Fiendish Water Elemental": 3, "Ildervok": 3,
+         "Corpse Orgy": 2, "Skeletal Nightmare": 2, "Nessian Hell Hound": 2,
+         "Iron Golem": 2, "Nightmare": 2, "Mingorc": 2, "Gug": 2,
+         "Animated Taxidermic Wyvern": 2, "Nihil the Ashbringer": 2}
+
+_SC_DEFS = {  # racoozeName -> (write slug, navName, sidebar sort)
+    "Scarwall Barbican":     ("05-scarwall-barbican",   "Barbican",    100000),
+    "Scarwall - 1st Floor":  ("05-scarwall-1st-floor",  "Scarwall 1F", 200000),
+    "Scarwall - 2nd Floor":  ("05-scarwall-2nd-floor",  "Scarwall 2F", 300000),
+    "Scarwall - 3rd Floor":  ("05-scarwall-3rd-floor",  "Scarwall 3F", 400000),
+    "Scarwall - 4th Floor":  ("05-scarwall-4th-floor",  "Scarwall 4F", 500000),
+    "Scarwall - 5th Floor":  ("05-scarwall-5th-floor",  "Scarwall 5F", 600000),
+    "Scarwall - Guest Wing": ("05-scarwall-guest-wing", "Guest Wing",  700000),
+    "Scarwall - Caverns":    ("05-scarwall-caverns",    "Sacred Lake", 800000),
+}
+
+_KEYS_PATH = B.ROOT.parent / "research" / "scene_keys.json"
+_SCN_N = {}
+if _KEYS_PATH.exists():
+    for _e in (e for e in _scjson.loads(_KEYS_PATH.read_text(encoding="utf-8"))
+               if e.get("chapter") == "ch5"):
+        _rn = _e["scene"]; _slug, _nav, _sort = _SC_DEFS[_rn]
+        _ox, _oy = B.scene_origin(_rn)                       # map-local sq -> scene px
+        _notes = [B.note(snid(), JID5, _scpid(n["pageName"], n["code"]), n["label"],
+                         _ox + int(n["gx"] * 100), _oy + int(n["gy"] * 100))
+                  for n in _e["notes"]]
+        _toks = []
+        for _t in _e["tokens"]:
+            _aid = _scaid(_t["actor"])
+            if not _aid:
+                print(f"  [scene] UNRESOLVED token actor {_t['actor']!r} on {_rn} — skipped")
+                continue
+            _w = _SC_W.get(_t["actor"], 1)
+            _toks.append(B.token(snid(), _aid, _t["name"],
+                                 _ox + int(_t["gx"]) * 100, _oy + int(_t["gy"]) * 100,
+                                 B.token_art(_t["actor"]) or MM5,
+                                 disposition=_t.get("disp", -1), width=_w, height=_w))
+        if _rn == "Scarwall - 3rd Floor":
+            # CROSS-SHEET FIX: the 3rd- and 4th-floor keying passes each assigned
+            # D14 (and Nihil — a spirit anchor) to the OTHER sheet; net effect, staged
+            # nowhere. The 4th-floor pass determined the drum interior is painted on
+            # the 2nd/3rd images and directed D14 here, so here it lands (the drum at
+            # map-local 22.5-31 x 39-49; the rain pool under the D17 skylight).
+            _notes.append(B.note(snid(), JID5, _scpid("D. Scarwall Heights (D1-D18)", "D14"),
+                                 "D14. The Tower of Kazavon (Nihil)",
+                                 _ox + int(26.5 * 100), _oy + int(45 * 100)))
+            _toks.append(B.token(snid(), A5["nihil"], "Nihil the Ashbringer (D14)",
+                                 _ox + 26 * 100, _oy + 46 * 100,
+                                 B.token_art("Nihil the Ashbringer") or MM5,
+                                 disposition=-1, width=2, height=2))
+        _sc = B.racooze_scene(_rn, _e["displayName"], SCENE_FOLDER5, _notes, _toks,
+                              navName=_nav, sort=_sort)
+        B.write("scenes", _slug, copy.deepcopy(_sc))
+        _SCN_N[_rn] = (len(_notes), len(_toks))
+
+    # ---- "Prepared Scenes" journal page (GM staging digest of the keying notes) ----
+    def _sl(rn, label):
+        return f"@UUID[Compendium.{MODID}.cotct-scenes.Scene.{B.scene_id(rn)}]{{{label}}}"
+    def _shead(rn, label):
+        _np, _nt = _SCN_N.get(rn, (0, 0))
+        return f"<h4>{_sl(rn, label)} <em>({_np} pins · {_nt} tokens)</em></h4>"
+
+    PG("Prepared Scenes",
+      "<p><strong>Eight prepared scenes</strong> cover the chapter on Racooze's Scarwall recreations — a journal pin for every keyed area (click a pin to open its section) and the occupants pre-staged as <strong>hidden</strong> tokens at their day posts; reveal as encounters trigger. Several canvases draw more than one AP map level — each block below says which region is which, plus alarm moves, hidden-finale spawns, and the keying fleet's honest ambiguity flags. Walls, doors and lights are Racooze's own (present when his free battlemaps module was installed at build time).</p>"
+      + _shead("Scarwall Barbican", "Scarwall Barbican")
+      + "<ul>"
+        "<li><strong>Composite canvas — three 50×50 frames side by side:</strong> map x 0–50 = ground floor, 50–100 = second storey, 100–150 = third (each upper frame re-draws the lower art beneath it). A1–A7 identifications are render-verified; <strong>A8–A12 are interpretive</strong> (derived from journal elevations) — revisit those pins first if your read differs. The A5 gargoyle statues are the dark circles on the posts flanking the bridge end; the causeway exits north toward the 1st-floor scene (B1).</li>"
+        "<li><strong>Day posts staged:</strong> sentry at A2, four orcs in the A6 pen (its roof hides it on the upper frames), one at A11, Ury behind his barred A10 door. <strong>On alarm the tribe redeploys:</strong> 2→A7, 3→A8 (Ury joins, then leaps down — "+chk("type:acrobatics|dc:15")+"), 1→A12; the A11 sentry withdraws to A12 rather than risk the cracked floor. Staged headcount (6 + Ury) is the journal's full roster.</li>"
+        "<li><strong>Not staged:</strong> the Tarnworm (lives in the open tarn — lake approach), the four high-air gargoyles and Aerilaya (air-approach encounters, not on this map), and the A11/A12 collapsing floor (no hazard actor — run the A page's inline checks).</li>"
+       "</ul>"
+      + _shead("Scarwall - 1st Floor", "Castle Scarwall — 1st Floor")
+      + "<ul>"
+        "<li><strong>One 72×93 sheet, three AP maps:</strong> the first floor proper (causeway entering from the south), the donjon MAIN level at the north end (F1–F2, F11–F13), and the War Tower LOWER level in the NE octagon (E5–E8). F3–F10/F14 and E1–E4 are on the 2nd-floor scene; the guest-wing connection (B25–B37) leaves the west edge toward the Guest Wing scene.</li>"
+        "<li><strong>The welcome:</strong> Lashton, his skeletal nightmare (2×2) and the Skeleton Infantry troop (4×4 — the twelve champions in column) wait at B2's north end and sally onto the causeway at its midpoint. The Trench Mist (4×4) sits over the west defense corridor with its six gassed archers overlapping it — <em>the B6a/B6b identification is interpretive</em> (the black corridors are undrawn), and the archers use our Juju Zombie actor where the journal links the official zombie brute (swap freely).</li>"
+        "<li><strong>Hidden finales:</strong> the cinder ghouls wait ON the B15 oven wall and peel off only after the Crematory Blast fires; Mandraivus's token lies on the armored skeleton at B5's north end and rises only after the Vortex collapses; the F2 elemental (3×3) sleeps in the pool and erupts 3 rounds after a living entry unless the cleansing ritual is performed; Zev's remains (F11, tiny — on the altar-like fixture) stay inert until disturbed; the three polongs stay bottled — only the B18 trap token is staged.</li>"
+        "<li><strong>Behavior keys:</strong> Belshallam (3×3) sleeps center-west of his gutted lair — "+chk("type:perception|dc:10")+" to wake at nearby noise; read his entry before running (compulsion muzzle, stillness signal, craven turn). Risibeth is staged <strong>neutral</strong> (social first — blood for history) beside the Insanity Mist Chest token on the right-hand chest. The two Elite hell hounds (2×2) wander the lower War Tower; their howls call the E3 guards (2nd-floor scene) and warn Gorstav. One round after any loud B21 courtyard fight ends, the C19 baykoks (2nd-floor scene) fire through the west arrow slits.</li>"
+        "<li><strong>Honest flags:</strong> the Corpse Orgy sits on the art's only corpse mound (B4's south end; the journal says northwest corner — relocate freely); the four tenebrous worms are in the B22 livery (an alternative read puts them in the webbed strip north of B23 — move them if you prefer); B16/B20 interiors are undrawn (weakest pins on the sheet); the fifth B17 guard (3×3) overlaps and needs a nudge; B24's hoard pin is approximate (no walled vault drawn). B2's freezing-oil trough and B20's glass caltrops have no hazard actors — inline checks on the B pages.</li>"
+       "</ul>"
+      + _shead("Scarwall - 2nd Floor", "Scarwall — 2nd Floor")
+      + "<ul>"
+        "<li><strong>Region guide:</strong> the star-shaped tower NW = the G2–G6 curate level of the Star Tower; donjon north-center = its UPPER level (F3–F14 — Aruth behind the F10 idol, Zev's gem-studded skull on F11's north altar); the NE octagon = War Tower entry level (E1–E4; E5–E8 sit below on the 1st-floor scene, E9 and up above on the 3rd); the south cross = gatehouse C1/C2; the dark mid-south void is open air over the B21 courtyard; the black strip behind the Great Hall dais is the unlit servants' passage — the five spectre thralls stand in it.</li>"
+        "<li><strong>Behavior keys:</strong> Mithrodar is bound to C14, cannot pursue, and re-forms 1 minute after destruction until all four anchors fall; his thralls answer in 1 round. The C4 iron golem (2×2) never leaves the armory. The C9 nightmare flees to its mistress Malatrothe — staged at B19 on the 1st-floor scene — or smashes the C15 sealed door if she is dead. Anizora is staged beside the C20 wyvern: hide her token and run the wyvern until she is evicted. F3 spectres and E3 guards are 'advanced' — apply the Elite adjustment. C13's alarm responders come from the wanderer table (rolled, not staged).</li>"
+        "<li><strong>Honest flags:</strong> high confidence — C1/C2, C14, C18, C19, F1/F2/F4/F9–F12, G5; best-effort — C3, C5, C9, C11, C13, the E2–E4 quadrant split, F3/F5/F6/F8/F13/F14, G3/G4/G6. C16 is not described in the module journal (no pin) and the map has more rooms than the AP key. Scarwall Guards stage 3×3 — the community statblock sizes the minotaur skeletons Huge. The eastern bridge links F7, C19's stairs and the C17/C13 route into the War Tower.</li>"
+       "</ul>"
+      + _shead("Scarwall - 3rd Floor", "Scarwall — 3rd Floor")
+      + "<ul>"
+        "<li><strong>Overlay:</strong> stacks the 2nd + 3rd images at the same origin — the composite reads as the third storey with lower floors showing through. Content: D1 gatehouse loft (Castothrane never leaves this floor; his two greater shadows hide in the box shadows — and his D14 circlet ends him without a fight), D2 turrets (the two SOUTH turrets staged 2 guards each; the journal mans all four — duplicate the pairs to run it full), the keep's south wing (D3–D6, D9–D11), D7 ledges, D15 belfry (<strong>the Warning Bells hazard token is on THIS scene</strong>, not the 4th), E9–E12 (Gorstav at his sand table), and the Star Tower roof entrance (G1).</li>"
+        "<li><strong>Added at build (cross-sheet fix):</strong> the D14 pin and Nihil's token (2×2, opens invisible above the throne) in the Kazavon-tower drum — the 3rd- and 4th-floor keying passes each assigned them to the other's sheet, so the third spirit anchor would otherwise be staged nowhere. The tower door opens off the south wing (~28.5, 48 map-local); treat the round chamber as the locked tower interior (superior lock per the D page).</li>"
+        "<li><strong>The D8 flock</strong> is staged here on four high points (conical turret, donjon roof perch, south-wing roof, NE flat-roof corner — the last doubling as the D7 watchers) <em>and again</em> as minaret-top pairs on the 4th-floor scene: <strong>same eight gargoyles — use ONE set</strong>, whichever canvas the fight lands on. Fliers at day roosts; reposition freely, keep pairs together.</li>"
+        "<li><strong>Not staged anywhere (no keyed geometry):</strong> the D12 barbed devils and the E13 spectres — neither room could be located on any sheet; run them from the D/E pages as the party crosses those levels. The dead D5 conjurer is a corpse with lore checks, not a creature. <strong>Flags:</strong> D3 is LOW confidence (the journal's stair down to C9 has no match — the wing's grand stair lands at the C6/C7 corridor); D4's secret west vault is not drawn (improvise the adjacent room); D9/D11 best-effort; several wing rooms remain unkeyed; D13 does not exist in the journal text (no pin). High confidence: D1/D2, D5, D10, D15, E11.</li>"
+       "</ul>"
+      + _shead("Scarwall - 4th Floor", "Scarwall — 4th Floor")
+      + "<ul>"
+        "<li><strong>Overlay:</strong> 2nd/3rd/4th images stacked at one origin — whole-castle repaints, mostly rooftop at this storey. E14 = the War Tower's octagonal battlement (the journal's three wrecked siege engines; the inner diamond room is just the stairhead from below). G1 pin = the skull-and-chains phase-door carving (sealed while the curse holds). D16 = the cupola atop the keep: Aerilaya pacing it — <strong>no stair or hatch connects it to the keep</strong> (air access only).</li>"
+        "<li><strong>D8 roost view:</strong> eight gargoyles in pairs on the four identified minaret tops (the W and E open ring shafts plus the twin drums NE of the cupola, doubling as the D7 watchers) — the same flock as the 3rd-floor staging; use one set. The minaret identification is a best reading of top-down art; if you re-judge it, keep pairs together.</li>"
+        "<li><strong>Lives elsewhere:</strong> the Kazavon drum's interior (D14, Nihil) and the D1/D2 gatehouse interiors show through from lower images — all staged on the 3rd-floor scene, as is the D15 Warning Bells hazard (the 4th image shows only the belfry roof). Racooze's logo tile sits at the canvas bottom — ignore it.</li>"
+       "</ul>"
+      + _shead("Scarwall - 5th Floor", "Scarwall — 5th Floor")
+      + "<ul>"
+        "<li><strong>Overlay:</strong> adds the 5th image (tower caps, minaret caps, the cupola's conical roof). Only the Kazavon tower top is keyable at this storey: D17 = the open skylight shaft (D14's floor and rain pool 40 ft below show through the hole); D18 = the annular Lord's Overlook walkway — pin at the upper tower door where the south parapet walk meets the drum.</li>"
+        "<li><strong>No tokens:</strong> D18's two invisible bone devil guards are official-compendium creatures (Pathfinder Bestiary 2) — drag them in yourself; their wall-of-ice ambush (seal a flier inside, alone with Nihil) is on the D page. Run E14 from the 4th-floor scene even though it stays visible here; logo tile as above.</li>"
+       "</ul>"
+      + _shead("Scarwall - Guest Wing", "Scarwall — Guest Wing & Observatory")
+      + "<ul>"
+        "<li><strong>One 66×33 image:</strong> tarn shore north and west; the wing connects to the castle off the truncated EAST edge (the 1st-floor scene's west-edge corridor). Identifications keyed from read-aloud details: B36 clover-plan ballroom, B34 statue hazard on its oval plinth, B35 = the round ladder room (the Prison-of-Woe cell above its ceiling is not drawn — the pin marks the ladder), B28 banquet hall, B27 minotaur-bunk room (its NW door triggers the phantasm and that corridor hides B28's secret door), B25 entry hall (Orcish blood-warning on its west wall), B26/B29 the north annex.</li>"
+        "<li><strong>Staging:</strong> the Danse Macabre floats camouflaged against the rose-glass ceiling over the ballroom center — it waits for the whole party to be inside. Ukwar stands at her B29 arrow slits, silent until addressed. All six festering spirits are IN the big B30 pool (they rise at first touch — or when the party turns to leave); B32's smaller pool carries the Green Slime hazard token as its 'algae'. The Tarnworm (4×4) floats in open water off the B37 quay and surges at anything within 20 ft of shore. Pegg &amp; Loute are ONE token — the community conversion stats the duo as a single actor (XP budgets the pair; duplicate cosmetically if you like).</li>"
+        "<li><strong>Not staged:</strong> the ten B33 wraiths (official-compendium link, not in the module's actor set) — AP spread: two in each northern chamber, one in each southern; <strong>all ten swarm at once</strong> when any is confronted or B28 gets loud. <strong>Flags:</strong> B25/B27 could conceivably swap with neighboring bare rooms; the furnished SE corner room is unkeyed (likely another B33-style guest room); the single B33 pin marks one of the seven chambers. Racooze logo over the NW water — ignore.</li>"
+       "</ul>"
+      + _shead("Scarwall - Caverns", "Scarwall — Caverns of the Sacred Lake")
+      + "<ul>"
+        "<li><strong>Double-duty star chamber:</strong> the NW star room hosts BOTH G7 and G8 — the AP stacks them vertically (G7 sits 50 ft above with the same footprint) and only one is drawn. Run it FIRST as G7 (Chamber of the Well: Ildervok 3×3 invisible above the mist shaft; the curacy confrontation and the Devil-You-Know turn), then the party drops the shaft and the same room doubles as G8, the foundation. Its SE stone door opens on H1's winding lightless tunnels to the southern shelf.</li>"
+        "<li><strong>The lake:</strong> one gug (2×2) per domed hovel on the shelf — they drop everything, rush intruders, fight to the death, and hurl javelins / howl for Kleestad against fliers; the plank dock is the launch point. The point of light on the island is <em>Serithtial</em> herself — an item, no token (suppressed as a masterwork blade until Mithrodar falls); Kleestad (4×4) is staged submerged just west of the island and surfaces the moment anyone takes to the water, touches the sword-rock, or grabs the blade — and pursues to the world's end if he survives.</li>"
+        "<li><strong>Flags / not staged:</strong> the H2 pin marks the only pit-like feature along the tunnels (moderate confidence) — the 500-ft shaft to Sekamina; the wandering lone gug (20% per trek) and the greater-gug warren below are rolled/off-map (slain gugs are replaced within hours if the party retreats without the sword); the lake-bed treasure ~200 ft down has no map feature — see the G–H page.</li>"
+       "</ul>")
+    print(f"Chapter 5 scenes: {len(_SCN_N)} prepared "
+          f"({sum(n for n, _ in _SCN_N.values())} pins, {sum(t for _, t in _SCN_N.values())} tokens).")
+else:
+    print("  [scene] research/scene_keys.json absent -> ch5 prepared scenes skipped")
+
 journal = B.journal_entry(JID5, "5. Skeletons of Scarwall", pages, folder=ADV_FOLDER)
 B.write("journals", "05-skeletons-of-scarwall", copy.deepcopy(journal), embed_pages=True)
 print(f"Chapter 5 built: {len(actors)} actors, {len(hazards)} hazards, 1 item, 1 journal ({len(pages)} pages).")

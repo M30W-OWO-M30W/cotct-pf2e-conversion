@@ -1,0 +1,72 @@
+{
+  "_id": "fxWarPaintWhite1",
+  "img": "systems/pf2e/icons/equipment/adventuring-gear/disguisekit-cosmetics.webp",
+  "name": "Effect: Shoanti War Paint (White)",
+  "type": "effect",
+  "effects": [],
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "system": {
+    "description": {
+      "value": "<p>Granted by @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.5qytyTu9CGh01fCN]{Shoanti War Paint (White)} — one application, lasting 1 hour. You can benefit from only one color of Shoanti war paint at a time; applying a different color replaces this effect.</p><hr /><p>You gain a +2 item bonus to all saving throws against spells with the negative (void) trait. In addition, anytime you gain the @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained} condition, reduce its value by 1; the white war paint absorbs the energy and fades away, ending this effect immediately (remove it by hand — the absorption is once, then gone).</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "hours",
+      "value": 1
+    },
+    "level": {
+      "value": 12
+    },
+    "publication": {
+      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+      "authors": "",
+      "license": "OGL",
+      "remaster": true
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "type": "item",
+        "value": 2,
+        "predicate": [
+          {
+            "or": [
+              "item:trait:void",
+              "item:trait:negative"
+            ]
+          }
+        ]
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-war-paint-white"
+  },
+  "_key": "!items!fxWarPaintWhite1"
+}

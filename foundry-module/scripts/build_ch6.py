@@ -609,6 +609,131 @@ PG("Chapter Conclusion — Long Live the Queen", SR("Immediate Repercussions", 3
   + SEC("<p><strong>The accounting:</strong> Neolandus and the rebels hold Castle Korvosa on the PCs' return; Cressida rebuilds the Guard; the Gray Maidens are disbanded and hiding; the Sable Company's restoration is tabled; cheering crowds meet the party at the gates. The rebellion's RP decides how bright the dawn is (under 5, the streets burned behind them — feed the Epidemic Clock its catastrophe tier). <strong>Epidemic Clock:</strong> with the harvest dead, blood veil's re-seeding ends — the clock empties over the denouement (the CHG-0011b payoff). Sabina's trial and pardon; Trinia's homecoming; Vencarlo passes the Blackjack mantle; Zellara and Venster are already home (A89). The Shoanti send riders — not for war.</p>")
   + B.s_conv("<p><strong>Campaign complete.</strong> Epilogue and the optional post-finale arc: see the <strong>Appendices &amp; Beyond</strong> journal (Continuing the Campaign — Kazavon Rises · Sorshen's Legacy · Rulers of Korvosa).</p>"))
 
+# =====================================================================
+# PREPARED SCENES — Racooze castle & pyramid geometry + keyed map pins and
+# staged tokens (keying fleet output: research/scene_keys.json, chapter ch6).
+# B.racooze_scene injects the GM's locally installed Racooze walls/tiles/
+# lights/thumb at build time (gitignored, same firewall as AP.md). Keys give
+# MAP-LOCAL 100px grid squares: scene px = B.scene_origin + g*100 — pins keep
+# float precision, tokens snap to whole squares. ALL tokens ship hidden; the
+# GM reveals them as encounters fire.
+# =====================================================================
+import json as _json
+import html as _h
+_sg = B._idgen(886606)        # separate id stream — scene docs never shift journal/actor ids
+def scid(): return next(_sg)
+MM = "icons/svg/mystery-man.svg"
+SCF6 = "ch6SceneFolder01"     # "6. Crown of Fangs" Scene folder (created in build_pilot.py)
+
+_PAGEID = {_h.unescape(p["name"]): p["_id"] for p in pages}
+def _pgid(page_name, code):
+    """Journal page id for a keyed pin; falls back to the page sharing the
+    same area-range prefix (e.g. 'A1-A11') so a renamed page degrades loudly."""
+    n = _h.unescape(page_name)
+    if n in _PAGEID:
+        return _PAGEID[n]
+    pre = n.split(".")[0].split(":")[0]
+    for cand, pid in _PAGEID.items():
+        if cand.split(".")[0].split(":")[0] == pre:
+            print(f"  [scene] pin {code}: page {page_name!r} missing -> nearest {cand!r}")
+            return pid
+    raise KeyError(f"scene pin {code}: no ch6 journal page matches {page_name!r}")
+
+# staged-actor registry: scene_keys actor name -> (actor _id, token grid squares).
+# ids mirror the cross-chapter actor map (community imports keep their original
+# ids); sizes med=1 / lg=2 / huge=3 / grg=4 per the actors and keying designNotes.
+SCENE_ACTORS = {
+    "Paralytic Pulse (A8)":        (A6["pulse"], 1),          # hazards pack
+    "Shining Child":               ("GxMQ4GpCnVKmEt3S", 1),   # community import
+    "Akaruzug":                    (A6["akaruzug"], 2),
+    "Elite Erinys":                ("icBeeRpUChjgmAxr", 1),   # community import
+    "Ileosa's Fury":               (A6["fury"], 1),
+    "Vavana Dhatri":               (A6["vavana"], 1),
+    "Gray Maiden Palace Guard":    (A6["palaceguard"], 1),
+    "The Yallops":                 ("bPjOT14sTRa2981R", 1),   # community import
+    "Togomor":                     (A6["togomor"], 1),
+    "False Ileosa":                (A6["falseileosa"], 1),
+    "Green Slime":                 ("YSexqBzTpYJVUOIQ", 1),   # community hazard
+    "Imp":                         ("TuzQkjV2pPIDOtcU", 1),   # community import
+    "Nessian Hell Hound":          ("YGc6RaaFHfxSGXfu", 2),   # community import
+    "Pudgyknuckles":               ("GxGdmv9ynq54Qwis", 1),   # community import
+    "Sermignatto":                 (A6["sermignatto"], 2),
+    "Mistress Kayltanya":          (A6["kayltanya"], 1),
+    "Red Mantis Assassin":         (A6["redmantis"], 1),
+    "Venster Arabasti":            (A6["venster"], 1),
+    "Mavrokeras":                  (A6["mavrokeras"], 2),
+    "Beirawash":                   (A6["beirawash"], 4),      # gargantuan per designNotes
+    "Boggard Champion":            (A6["boggardchamp"], 1),
+    "Immortal Ichor":              (A6["ichor"], 1),
+    "Ithier":                      (A6["ithier"], 3),         # huge per designNotes
+    "Queen Ileosa Arabasti":       (A6["ileosa"], 1),
+    "Soultrapping Gem (B19)":      (A6["soulgem"], 1),        # hazards pack
+    "Taniniver (Kazavon's Shade)": (A6["taniniver"], 3),      # huge per designNotes
+}
+
+# (racoozeName, pack slug, navName, folder sort) in assault order
+SCENE_PLAN = [
+    ("Dungeon",          "60-castle-korvosa-dungeon",   "Castle: Dungeon", 100000),
+    ("1st Floor",        "61-castle-korvosa-1st-floor", "Castle: 1st",     200000),
+    ("2nd Floor",        "62-castle-korvosa-2nd-floor", "Castle: 2nd",     300000),
+    ("3rd Floor",        "63-castle-korvosa-3rd-floor", "Castle: 3rd",     400000),
+    ("4th Floor",        "64-castle-korvosa-4th-floor", "Castle: 4th",     500000),
+    ("Attic",            "65-castle-korvosa-attic",     "Castle: Attic",   600000),
+    ("Towers",           "66-castle-korvosa-towers",    "Castle: Towers",  700000),
+    ("The Sunken Queen", "67-the-sunken-queen",         "Sunken Queen",    800000),
+]
+
+_KEYS_PATH = B.ROOT.parent / "research" / "scene_keys.json"
+_KEYS = ({e["scene"]: e for e in _json.loads(_KEYS_PATH.read_text(encoding="utf-8"))
+          if e.get("chapter") == "ch6"} if _KEYS_PATH.exists() else {})
+if not _KEYS:
+    print("  [scene] research/scene_keys.json absent -> ch6 scenes ship without pins/tokens")
+
+built6 = []
+for _rac, _slug, _nav, _sort in SCENE_PLAN:
+    _key = _KEYS.get(_rac, {"displayName": _rac, "notes": [], "tokens": []})
+    _ox, _oy = B.scene_origin(_rac)
+    _notes = [B.note(scid(), JID6, _pgid(n["pageName"], n["code"]), n["label"],
+                     _ox + int(n["gx"] * 100), _oy + int(n["gy"] * 100))
+              for n in _key["notes"]]
+    _toks = []
+    for t in _key["tokens"]:
+        _aid, _sq = SCENE_ACTORS[t["actor"]]
+        _toks.append(B.token(scid(), _aid, t["name"], _ox + int(t["gx"]) * 100,
+                             _oy + int(t["gy"]) * 100, B.token_art(t["actor"]) or MM,
+                             disposition=t["disp"], width=_sq, height=_sq))
+        if t["actor"] == "Queen Ileosa Arabasti":
+            _toks[-1]["elevation"] = 10    # she floats in semi-trance inside the Pool
+    _sc = B.racooze_scene(_rac, _key["displayName"], SCF6, _notes, _toks,
+                          navName=_nav, sort=_sort)
+    B.write("scenes", _slug, copy.deepcopy(_sc))
+    built6.append((_key["displayName"], len(_notes), len(_toks)))
+
+def SCN(rac, label):
+    return f"@UUID[Compendium.{MODID}.cotct-scenes.Scene.{B.scene_id(rac)}]{{{label}}}"
+
+# GM staging digest — compresses the keying fleet's designNotes + skipped-creature
+# rulings; nothing dropped, only condensed. Lives at the END of the chapter journal.
+PG("Prepared Scenes",
+  "<p><strong>Eight prepared scenes</strong> (folder <em>6. Crown of Fangs</em>) cover the castle assault and the finale on Racooze's battlemaps: every keyed area has a map pin opening its journal page, and every default occupant is pre-staged as a <strong>hidden</strong> token — reveal as encounters fire. Summon-spawns, wandering patrols, and ambient flavor are deliberately <em>not</em> staged (each scene's note below says what was left off and why). Togomor is staged twice (A44 and the A45 set-piece) — use one, delete the other.</p>"
+
+  + "<p>" + SCN("Dungeon", "Castle Korvosa — Dungeon Level") + " (11 pins, 5 tokens) — single image, content ~33×31 of the 35×35 canvas; no living occupants except the A8 trap. <strong>Staging:</strong> the Paralytic Pulse hazard sits in the crumbled-statue band south of the octagonal tomb (A9 = the white dais beyond), with the 4 Shining Children pre-staged hidden — they coalesce only when the trap fires, so keep them unrevealed until then (or delete them if you prefer trap-spawns unstaged). <strong>Reading the map:</strong> eight identical coffer-vaults exist (2 N, 2 W, 4 E) — A1's pin marks the one opening off A2's north side (inferred), A4's pin the east-cluster representative; the other six are all 'A4.' The west pillared hall (gutted chests and urns) is A2; the orange-stained east pillared hall is unkeyed — treat it as a treasury annex. A10's pin sits on the NE collapse; the twin collapses E and SE are also A10. A7 is the west corridor dead-end (the text says southwest; the map drew it west — best match). A3 is confirmed by the five sarcophagus niches (the offset fifth suits Cardraith), A5 by the circular plug-pillar chamber. <strong>Caveats:</strong> Venster's purple-clad corpse is drawn <em>visible</em> in A11 though the text bricks it away — improvise the wall/door at the room's west side; the water-bottomed ring at (14,22) is the bottom of the same shaft as the 1st-floor A22 oubliette; the A6 spiral stacks exactly under 1st-floor A24 and 2nd-floor A36 — the secret route aligns across all three scenes.</p>"
+
+  + "<p>" + SCN("1st Floor", "Castle Korvosa — 1st Floor") + " (14 pins, 9 tokens) — A12's outdoor stair climbs into the NW arch tower; the portcullis kill-box directly above it (A26) is on the 2nd-Floor scene. A13 (pews, Aroden statue), A14 (dry fountain — its locked stair verifiably lands at 2nd-floor A40), A15 (grand spiral), and A24 (firewood + secret spiral) are confirmed by furnishings; the A23 refuse room sits under the 2nd floor's privy tower — the gaseous soil-pipe route. <strong>Staging:</strong> A17 holds 6 Elite Erinyes, but roll 1d6 for how many are physically home (the rest are teleport-spot-checking the floor); <strong>Ileosa's Fury stands among them on the party's first assault only</strong> and never fights — she teleports to the Sunken Queen to report; remove her token on later assaults. In A18 the Akaruzug (2×2) starts <em>inert</em> against the southwest wall with Ishani's corpse on its frame; Vavana Dhatri is staged there per its encounter. <strong>Caveats:</strong> the A19/A20/A21 split across the two cage rooms is positional inference (the journal lumps the prisons in one line); the A22 pit ring repeats on the floors above and below and could be read as a castle well — kept as the oubliette, the floor's only pit-cell. Unkeyed: the SW tower void, two dark closets north of the chapel, and the wide south stair down.</p>"
+
+  + "<p>" + SCN("2nd Floor", "Castle Korvosa — 2nd Floor") + " (19 pins, 12 tokens) — the A26 tower chamber tops the A12 approach (A54's murder holes are directly above, on the 3rd-Floor scene); its portcullis is the studded line on the east side. <strong>Staging:</strong> 4 Palace Guards in each barracks — A30 NW, A38 south, assigned by numbering flow (the white critter by the A38 bed is a painted cat, not Pudgyknuckles); the three named Yallops (Frentes, Jhaun, Peveer) in the A37 mess — their illusory hellscape is not on the art, and at ≤20 HP or one touch of Serithtial all three teleport to A59; Togomor gorging in A44 (wall cache above the bed) — <strong>if the A12 stair alarm rang first he pre-buffs and meets the party at A45 instead</strong> (his set-piece token is on the 3rd-Floor scene: use one). <strong>Alarm:</strong> opening A28's outer armory door (15 ft up; ladder under the table) trips his silent alarm — the Yallops arrive in 1d3 rounds. <strong>Caveats:</strong> A27's pin marks the inner guardroom (the exact bolted door is not drawn); A29 sits on the SE tower spiral by numbering (the SW tower has a matching unkeyed spiral); the eight A32-A35/A39-A42 pins are best-effort function-matching off a single journal sentence. The NE scalloped privy tower (three holes) overhangs 1st-floor A23, and the well ring beside the kitchen is the A22 shaft again. <strong>Deliberately unstaged:</strong> the Yallops' 1d3 summoned hamatulas (round-1 summons, official-compendium link), Pudgyknuckles (only a 30% kitchen visitor — he lairs above), the wandering 4-Maiden patrols (10% per 5 minutes, floors 2-3 — alarm-raisers, not set dressing), the two dozen invisible imp housekeepers, and the A26 slime urns / A28 silent alarm (no hazard actors built for those).</p>"
+
+  + "<p>" + SCN("3rd Floor", "Castle Korvosa — 3rd Floor") + " (20 pins, 21 tokens) — the NW apse is the gatehouse: A54's long gallery shows missile racks, four urns (= the green-slime urns; hazard token on one), dark murder-hole squares over A26, and west arrow-slit alcoves — <strong>5 Maidens posted at the embrasures</strong>, 2 more at A46's south doors, 2 cleaning imps near A51. <strong>The court (theater, not threat):</strong> False Ileosa on the throne with Vavana, 3 Nessian Hell Hounds (2×2), and 3 Maidens at the dais — between alarms she actually idles in the royal suite (A57-A59), and she melts to blood at 0 HP. <strong>Togomor</strong> is staged here per the A45 layered defense (real body in A54, projected image at the stair-head; below ~30 HP he goes to A59). <strong>Sermignatto</strong> (2×2) sits at his A59 manifestation point — he is ethereal until Togomor dies, the PCs reach that room, or they entered ethereally. <strong>Confidence:</strong> A51/A52/A55/A56/A58/A59/A63 confirmed by furnishings (lances, throne dais, stage, spellbooks, tub, canopied bed sharing the peephole wall, cistern pool); A47/A49/A50/A53/A57/A60/A64 are best-fit — if A50/A53 feel swapped in play, swap the pins. The Gray Tower's cell walls are not clearly drawn: treat its south chamber (A62 pin) as the dimensionally-locked oubliette. <strong>Deliberately unstaged:</strong> Mavrokeras (he fights the A45 set-piece from the A67 balcony overhead; his token lives at A94 on the Towers scene), his 3 round-1 hamatula summons, Zarmangarof (his A65 nest is pinned on the 4th-Floor scene but stands empty — his keyed fight is Event 2 over the city), and the erinyes alarm patrols (keyed to A17, 1st Floor).</p>"
+
+  + "<p>" + SCN("4th Floor", "Castle Korvosa — 4th Floor") + " (13 pins, 7 tokens) — the scene stacks the 3rd-floor tile beneath the transparent 4th-floor tile, so the grand stairwell, stage-hall dome, and open terraces correctly show the floor below (true two-story spaces); map coords work identically on both. Two pins here belong to the <em>third-floor</em> journal page because the rooms are drawn on this mezzanine map: A65 (the dragon's nest of rags above A54 — its torn ceiling leads up to the A79 gap) and A66 (trophy gallery); A64 is conversely pinned on the 3rd-Floor scene. <strong>Staging:</strong> one assassin clings to the roof above the A72 salon door at the A71 catwalk's west end (moderate confidence which door — the AP only says 'above the A72 door'); the five A72 assassins actually lair in ceiling hammocks 25 ft up behind hanging silks — <strong>tokens sit on the floor beneath their hammock positions</strong> (no alarm: 1d4 asleep aloft, the rest hidden at the walls; alarmed: all five waiting at ceiling height); Kayltanya sleeps in the A73 bar hammock and joins the instant A72 erupts (met alone there only if every alarm was beaten). Balconies A67/A70/A76 carry working catapults, and each transit risks the 20% chance invisible Mavrokeras spots non-stealthy PCs — A67 is his A45 ambush perch, but he is <strong>deliberately unstaged here</strong> (token at his A94 roost, Towers scene). A74/A75 could conceivably be swapped (the bench layout favors this reading). A77's ceiling phase door (any Arabasti symbol, 20 ft up) is the only way to A90.</p>"
+
+  + "<p>" + SCN("Attic", "Castle Korvosa — Attic") + " (13 pins, 3 tokens) — stacks the 3rd- and 4th-floor tiles beneath the attic tile; the lower floors show through the open air around the shrunken footprint. <strong>The NE chain is verified exactly:</strong> A86 junk room → hidden NE door → A87 5-ft crawl → A88 (its part-melted stone trapdoor drops to A69) → A89, where Venster's token (disposition <em>neutral</em> — a redemption NPC, not a foe) marks his manifestation point: a weak mist until his bones come home from A11. <strong>Bridge posts:</strong> one assassin hides near the tower end of each suspended bridge (A83a southwest to the Gray Tower; A83b south from the Epochal Tower to Seawatch) — stalkers who let PCs pass, shadow them for a straggler, and flee to A72 if spotted. A79's torn floor gap at its north end is the flying entrance (and Zarmangarof's access to A65 below). <strong>Caveats:</strong> the A78/A81 divider in the long west strip is faint — those two pins are approximate within the strip; A85 (stacked cage-crates) is moderate confidence. A84's narrow SE hallway leads to the Epochal stair up to A91/A92 (Towers scene); the boxed center structure is the lantern dome over the salon/stage shaft, and the bottom-center block is Domina's Tower passing through — sealed, no attic entrance.</p>"
+
+  + "<p>" + SCN("Towers", "Castle Korvosa — Towers") + " (6 pins, 1 token) — five tower-top circles carry six keys: the gear-shaped scaffolded shell = A92 (the unfinished grander clock); the bookshelf circle with three treasure sparkles = A90 (the sparkles match its three caches — invisible contract tube, planar scrolls, potion rack); the great gear ring with central winding capstan = A91 (Mavrokeras's monthly chore); the bare circle with a small spiral = A95; and the four-bastioned circle = Seawatch, drawn once but holding <strong>both</strong> A93 (guard-post level — pin at the spiral descending toward A83b) and A94 (the lookout above, reached by ladder — pin at the north battlement): treat the circle as whichever level the party has climbed to. <strong>Staging:</strong> Mavrokeras (2×2) at his A94 roost — he patrols the castle air ring-invisible, fronts the A45 set-piece from A67, and returns here below 30 HP to regenerate before circling again (his Flesh Shredder and ring ride on the actor). <strong>Locks:</strong> the A92 roof trapdoor and the A94 catwalk door both carry arcane locks ("+chk("type:thievery|dc:39")+" to pick); A95 and the Epochal stair are viable climbing routes through the castle. <strong>Flag:</strong> the A90-vs-A91 identification rests on the treasure sparkles plus A90's phase-door-only access — re-check at the table if it reads wrongly.</p>"
+
+  + "<p>" + SCN("The Sunken Queen", "The Sunken Queen") + " (20 pins, 22 tokens) — one canvas, three regions: <strong>flooded level 1</strong> spans map x0-18 / y2-25, <strong>part-flooded level 2</strong> x18-41 / y1-26, and the <strong>dry levels 3-4 composite</strong> x41-64 / y0-27 (the level-3 suite is the top structure, B20 the bottom square room). Room IDs were cross-checked against the AP's level diagrams, not just the art. <strong>Scale note:</strong> this map is drawn at the AP's 10-ft squares, but the build ships the standard 100px/5-ft grid — so each drawn map square reads as two grid squares of distance; double on-canvas distances when in doubt (no rotation tiles here, unlike the Labyrinth). <strong>No stairs between levels — shafts only:</strong> the angled glyphs mark B6↔B10 and B14 up to B15's SW corner; the glyph north of the rose-marble hall is the B15→B20 shaft, whose floor opening is B20's dark rectangle; the buried stairway south of B1 is read-aloud dressing, <em>not</em> a route. <strong>Staging:</strong> Beirawash (gargantuan 4×4) west-center of B1's hall; the B7 sentry champion mid-corridor — he <em>runs to rouse B8</em> rather than fight — with the other 5 champions on B8's level wooden platform (no tilt penalty there); Ithier (3×3) in B15, who fights to the death and pursues anywhere except the flooded levels; the four named furies (Decabbara, Eveanie, Suishani, Verasia) at their B16 day posts — they <strong>teleport to Ileosa the instant she is attacked</strong> and double as her response team against B2 looters (withdrawing at half HP); the Immortal Ichor in B19's basin with the Soultrapping Gem hazard on the gold pedestal south of the rim. <strong>Finale staging (keep hidden until the Last Battle):</strong> Ileosa's token sits at the Pool's center at elevation 10 — she floats in semi-trance <em>inside</em> the 30-ft blood mass, and very stealthy parties earn a surprise round there; the 6 False Ileosa simulacra and the taniniver (3×3) are her round-1 release — reveal them when combat starts, then pull in surviving furies (teleport) and Ithier (climbs up, if alive). <strong>Kazavon Reborn is deliberately unstaged:</strong> only if the 10-round Rise of the Dragon completes does the GM drop a gargantuan 4×4 token at the Pool (map ~50,21). <strong>Caveats:</strong> B6's keying (the pillared silt chamber north of B2) follows the AP diagram, with the rubble dead-end east of it left unkeyed as part of its cracked approach; B11/B13 share one open water level — their boundary is approximate; the teal bands on B20's south wall are the blue-crystal 'eyes' windows.</p>")
+
 journal = B.journal_entry(JID6, "6. Crown of Fangs", pages, folder=ADV_FOLDER)
 B.write("journals", "06-crown-of-fangs", copy.deepcopy(journal), embed_pages=True)
 print(f"Chapter 6 built: {len(actors)} actors, {len(hazards)} hazards, 1 journal ({len(pages)} pages).")
+print("  scenes: " + " · ".join(f"{n} ({p} pins, {t} tokens)" for n, p, t in built6))

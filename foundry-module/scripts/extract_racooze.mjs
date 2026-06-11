@@ -36,6 +36,7 @@ for (const doc of Object.values(parents)) {
   scenes[doc.name] = {
     name: doc.name, width: doc.width, height: doc.height, padding: doc.padding,
     grid: doc.grid, walls: e.walls, tiles: e.tiles, lights: e.lights,
+    background: doc.background?.src ?? null,
     thumb: doc.thumb ?? null,    // his pre-rendered sidebar thumbnail
   };
   n++;

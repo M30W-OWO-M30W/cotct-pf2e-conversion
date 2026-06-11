@@ -1,0 +1,57 @@
+{
+  "_id": "fxUkwarDrain0001",
+  "img": "systems/pf2e/icons/equipment/weapons/battle-axe.webp",
+  "name": "Effect: Ukwar's Drain",
+  "type": "effect",
+  "effects": [],
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "system": {
+    "description": {
+      "value": "<p>Once per day, the intelligent battleaxe @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.appUkwarAxe00001]{Ukwar} drinks from her wielder: the first time each day she draws blood in anger, her wielder attempts @Check[type:fortitude|dc:30] or becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p><p>Apply this effect to the wielder when the bite lands; it expires after a day, signalling that her thirst has returned. The drained condition itself recovers as normal (it is not tied to this marker).</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "days",
+      "value": 1
+    },
+    "level": {
+      "value": 12
+    },
+    "publication": {
+      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+      "authors": "",
+      "license": "OGL",
+      "remaster": true
+    },
+    "rules": [],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-ukwars-drain"
+  },
+  "_key": "!items!fxUkwarDrain0001"
+}

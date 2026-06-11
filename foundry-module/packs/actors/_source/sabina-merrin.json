@@ -1278,7 +1278,18 @@
           "rarity": "common",
           "custom": ""
         },
-        "rules": [],
+        "rules": [
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "target:condition:frightened"
+            ],
+            "selector": "strike-damage",
+            "slug": "fearsome-brute",
+            "type": "circumstance",
+            "value": "3 * @target.conditions.frightened.badge.value"
+          }
+        ],
         "slug": null,
         "schema": {
           "version": 0.8,

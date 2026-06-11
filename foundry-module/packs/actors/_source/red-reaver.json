@@ -581,7 +581,31 @@
           "rarity": "common",
           "custom": ""
         },
-        "rules": [],
+        "rules": [
+          {
+            "key": "RollOption",
+            "option": "territorial",
+            "toggleable": true
+          },
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "territorial"
+            ],
+            "selector": "perception",
+            "type": "status",
+            "value": 4
+          },
+          {
+            "key": "FlatModifier",
+            "predicate": [
+              "territorial"
+            ],
+            "selector": "survival",
+            "type": "status",
+            "value": 4
+          }
+        ],
         "slug": null,
         "schema": {
           "version": 0.8,

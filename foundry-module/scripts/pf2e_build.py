@@ -442,6 +442,68 @@ def scene(_id, name, width, height, grid_px, bg_src, notes, tokens, folder=None,
             "drawings": [], "tokens": tokens, "lights": [], "sounds": [], "templates": [],
             "notes": notes, "tiles": [], "walls": [], "regions": []}
 
+# ---------- Racooze prepared scenes (shared machinery; pilot pattern generalized) ----------
+# Geometry (walls/doors/tiles/lights/thumb) injects at build from the GM's locally
+# installed battlemaps module via scripts/racooze_scenes.json (gitignored). Scene
+# ids are stable md5-derived constants so links and adventure bundles never drift.
+import hashlib as _hl2
+_RAC_PATH = ROOT / "scripts" / "racooze_scenes.json"
+RACOOZE = _json.loads(_RAC_PATH.read_text(encoding="utf-8")) if _RAC_PATH.exists() else {}
+# 20 of Racooze's single-image scenes shipped with background:null (export bug) —
+# committed fix map points each at its obvious map image in his module
+_BGFIX_PATH = ROOT / "scripts" / "racooze_bg_fixes.json"
+RACOOZE_BG = _json.loads(_BGFIX_PATH.read_text(encoding="utf-8")) if _BGFIX_PATH.exists() else {}
+
+def scene_id(racooze_name):
+    """Stable 16-char scene id derived from the Racooze scene name."""
+    if racooze_name == "Old Fishery":
+        return "PuUGEVunRqjIWFOj"          # pilot id, grandfathered (links exist)
+    return _hl2.md5(f"cotct-scene:{racooze_name}".encode()).hexdigest()[:16]
+
+def racooze_scene(racooze_name, name, folder, notes, tokens, navName=None, sort=0):
+    """Prepared scene on Racooze geometry: his walls/doors/tiles/lights/thumb plus
+    our pins and staged tokens. Falls back to a wall-less placeholder grid when
+    the geometry JSON is absent (Racooze module not installed at build time)."""
+    _id = scene_id(racooze_name)
+    geo = RACOOZE.get(racooze_name)
+    if not geo:
+        print(f"  [scene] no Racooze geometry for {racooze_name!r} -> placeholder")
+        sc = scene(_id, name, 2400, 1800, 100, None, notes, tokens,
+                   folder=folder, navName=navName or name, sort=sort)
+        return sc
+    bg = geo.get("background") or RACOOZE_BG.get(racooze_name)
+    gpx = ((geo.get("grid") or {}).get("size")) or 100   # Sunken Queen is 50px/5ft
+    sc = scene(_id, name, geo["width"], geo["height"], gpx, bg,
+               notes, tokens, folder=folder, navName=navName or name, sort=sort)
+    if geo.get("padding") is not None:
+        sc["padding"] = geo["padding"]
+    sc["thumb"] = geo.get("thumb")
+    for w in geo["walls"]:
+        w = dict(w); w.pop("levels", None)
+        w["_key"] = f"!scenes.walls!{_id}.{w['_id']}"
+        sc["walls"].append(w)
+    for t in geo["tiles"]:
+        t = _json.loads(_json.dumps(t)); t.pop("levels", None)
+        t["_key"] = f"!scenes.tiles!{_id}.{t['_id']}"
+        sc["tiles"].append(t)
+    for L in geo.get("lights", []):
+        L = _json.loads(_json.dumps(L)); L.pop("levels", None)
+        L["_key"] = f"!scenes.lights!{_id}.{L['_id']}"
+        sc["lights"].append(L)
+    return sc
+
+def scene_origin(racooze_name):
+    """Top-left of the map content in scene coords: Foundry offsets the scene rect
+    by ceil(padding*dim/grid)*grid. Map-local grid coords (used for keying) add
+    onto this origin."""
+    import math as _m
+    geo = RACOOZE.get(racooze_name)
+    if not geo:
+        return (0, 0)
+    pad = geo.get("padding") or 0.25
+    return (int(_m.ceil(geo["width"] * pad / 100)) * 100,
+            int(_m.ceil(geo["height"] * pad / 100)) * 100)
+
 # ---------- adventure bundle ----------
 def adventure(_id, name, img, caption, folders, journals, scenes_, actors, items, tables=None, macros=None):
     return {"_id": _id, "name": name, "img": img, "caption": caption,

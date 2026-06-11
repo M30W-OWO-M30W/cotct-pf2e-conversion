@@ -1,0 +1,73 @@
+{
+  "_id": "fxBloodVeil00001",
+  "img": "systems/pf2e/icons/spells/abyssal-plague.webp",
+  "name": "Blood Veil (Affliction)",
+  "type": "effect",
+  "effects": [],
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "cotct-pf2e-conversion": {
+      "afflictionFallback": true,
+      "note": "pf2e 8.2.0 ships zero affliction-type compendium docs and deletes the 'affliction' Item subtype at init (pf2e.mjs); shipped as a structured effect per scripts/extract_afflictions.mjs findings."
+    }
+  },
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease (manufactured)</strong> — Vorel's phage, weaponized by the cult of Urgathoa at Queen Ileosa's order (Ch.2). <strong>Saving Throw</strong> @Check[type:fortitude|dc:24] for ordinary exposure, rising to @Check[type:fortitude|dc:30] against concentrated sources (the cult's brewing vats and raw fluids); on a critical failure the victim <strong>skips the onset</strong> and immediately suffers Stage 1. <strong>Onset</strong> 1 day.</p><p><strong>Stage 1</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1} (1 day); <strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1} (1 day); <strong>Stage 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2} and @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} (1 day); <strong>Stage 4</strong> @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 3} and @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 3}.</p><p><strong>Using this doc:</strong> apply the effect to an infected creature, set its badge to the current stage, and apply the linked conditions by hand (the PF1e Con+Cha damage becomes drained/enfeebled). The @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.fxBVSuppressant1]{suppressant} halts progression and steps the stage down one per day rather than curing outright; the epidemic itself runs on the @UUID[Compendium.cotct-pf2e-conversion.cotct-journals.JournalEntry.cotctGuide000001.JournalEntryPage.R96jUmyAvMxCISST]{Epidemic Clock}.</p><p><em>Why not an affliction-type item: pf2e 8.2.0 ships no affliction-type compendium docs and disables the subtype at init, so this is a structured effect instead (see this doc's flags).</em></p>"
+    },
+    "duration": {
+      "expiry": null,
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 7
+    },
+    "publication": {
+      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+      "authors": "",
+      "license": "OGL",
+      "remaster": true
+    },
+    "rules": [],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "blood-veil-affliction",
+    "badge": {
+      "labels": [
+        "Stage 1",
+        "Stage 2",
+        "Stage 3",
+        "Stage 4"
+      ],
+      "loop": false,
+      "type": "counter",
+      "value": 1
+    }
+  },
+  "_key": "!items!fxBloodVeil00001"
+}

@@ -848,7 +848,135 @@ PG("Chapter Conclusion", SR("Chapter Conclusion", 188)
   + SEC("<p><strong>Ileosa's escalation</strong> (while the PCs are away): crushing taxes, slavery, martial law, ever-stranger edicts; the Gray Maidens grow openly brutal; Cressida walks the rebel/loyalist knife-edge and quietly protects the PCs' people. Opposing the queen head-on now means a deathless bard backed by devils, blades — and soon a dragon.</p>")
   + B.s_conv("<p><strong>Arkona ramifications:</strong> the AP assumes the family exits play, but <strong>Bahor likely survives</strong>. Secret safe → damage control: he abandons the prisoners and offers non-interference. Secret exposed → assassins follow the PCs, and Bahor weighs fleeing to Vudra for reinforcements. <strong>Vimanda</strong>, if allied, is a gloriously untrustworthy asset. The D16 papers can destroy the family politically — after the queen falls. Epidemic Clock: the city sickens unattended while the PCs ride north (+1 per away-stretch, per the Blood Veil overlay).</p>"))
 
+# =====================================================================
+# PREPARED SCENES — Racooze battlemap geometry + map-note pins + staged tokens
+# (keying: research/scene_keys.json ch3 entries; shared machinery: B.racooze_scene)
+# =====================================================================
+import html as _html, json as _json
+SCENE_FLD = "ch3SceneFolder01"      # scene folder tree is written by build_pilot.py
+MM = "icons/svg/mystery-man.svg"
+_scn_ids = B._idgen(883301)         # OWN deterministic stream — nid()/sid() must not shift
+def scnid(): return next(_scn_ids)
+def scn3(racname, label):
+    return f"@UUID[Compendium.{MODID}.cotct-scenes.Scene.{B.scene_id(racname)}]{{{label}}}"
+
+_KEYS_PATH = B.ROOT.parent / "research" / "scene_keys.json"
+_SCENE_KEYS = {e["scene"]: e for e in _json.loads(_KEYS_PATH.read_text(encoding="utf-8"))
+               if e.get("chapter") == "ch3"}
+# pageName -> pageId from THIS journal's in-memory pages (strict: a keying typo = build error)
+PAGE_ID = {_html.unescape(p["name"]): p["_id"] for p in pages}
+
+# actor name (as keyed) -> (actor _id, token squares). Ids verified against the built
+# packs + /tmp/actor_id_map.json; sizes follow the keying designNotes (lg=2, huge=3) —
+# notably Rajambari staged 3x3 per the keying even though our literal statblock says grg
+# (linkToActorSize trues it up against whichever statblock the community swap lands).
+_TOK = {
+  # Pilts's Palace
+  "Emperor's Thug": (A3["empthug"], 1),         "Pilts Swastel": (A3["pilts"], 1),
+  "Jabbyr": (A3["jabbyr"], 1),                  "Choker Brute": (A3["chokerbrute"], 1),
+  "Salvator Scream": (A3["salvator"], 1),       "The Tall Knife (Guillotine)": (A3["tallknife"], 1),
+  "Wolverine": ("yCAu9B8qRHYFh2sy", 1),         "Piglet": ("oSyedoY1WYNMvc9N", 1),
+  # Vencarlo's Home / Artist's Lair
+  "Red Mantis Assassin": (A3["redmantis"], 1),  "Spreading House Fire": (A3["housefire"], 1),
+  "Laori Vaus": (A3["laori"], 1),               "Yellow Mold": ("pUjLoKxxCXNCWlG2", 1),
+  "Otyugh": ("W1srRPmlZZnVFfYH", 2),
+  # Arkona Palace
+  "Marai Rakshasa": (A3["marai"], 1),           "Bahor (Glorio Arkona)": (A3["bahor"], 1),
+  "Marble Elephant": ("a9uBDQ1dTgXJxvxq", 3),   "Hungry Smoke": (A3["hungrysmoke"], 1),
+  "Warning Bells (D15)": ("ch5WarningBell01", 1), "Garden Guardian": (A3["gardenguard"], 1),
+  "Avidexu": ("aAmiqWHLWom4WWGX", 1),
+  # Vivified Labyrinth
+  "Sivit, Lady of the Labyrinth": (A3["sivit"], 2),
+  "Vencarlo Orisini": (A3["vencarlo"], 1),      "Vimanda (Meliya Arkona)": (A3["vimanda"], 1),
+  "Blood Cobra": ("HHQ8x4SZ0e6xkhQL", 1),       "Corrupted Pool": ("X1YpXOKlcStXhI5j", 1),
+  "Symbol of Fear (E5)": (A3["symfear"], 1),    "Symbol of Pain (E6)": (A3["sympain"], 1),
+  "Symbol of Sleep (E18)": (A3["symsleep"], 1), "Symbol of Stunning (E19)": (A3["symstun"], 1),
+  "Terinav-Treated Chest (E7, left)": (A3["terinavchest"], 1),
+  "Insanity Mist Chest (E7, right)": (A3["insanitychest"], 1),
+  "The Biting Tigers (E9)": (A3["bitingtigers"], 1),
+  "The Fangs of Diomazul (E10)": (A3["fangsdiom"], 1),
+  "The Wailing Maidens (E11)": (A3["wailingmaidens"], 1),
+  "The Stinging Wasps (E12)": (A3["stingingwasps"], 1),
+  "Senshiir": (A3["senshiir"], 1),              "Neolandus Kalepopolis": (A3["neolandus"], 1),
+  "Rajambari": (A3["rajambari"], 3),
+}
+
+scenes3, _npins, _ntoks = [], 0, 0
+def prepared_scene(slug, racname, sort, navName=None):
+    """One prepared scene: Racooze walls/tiles/lights + our pins (-> this journal's
+    area pages) + staged hidden tokens. Pins may sit on half-squares; tokens snap."""
+    global _npins, _ntoks
+    key = _SCENE_KEYS[racname]
+    ox, oy = B.scene_origin(racname)
+    notes = [B.note(scnid(), JID3, PAGE_ID[_html.unescape(n["pageName"])], n["label"],
+                    int(ox + n["gx"] * 100), int(oy + n["gy"] * 100))
+             for n in key["notes"]]
+    toks = []
+    for t in key["tokens"]:
+        aid, w = _TOK[t["actor"]]
+        toks.append(B.token(scnid(), aid, t["name"],
+                            ox + int(t["gx"]) * 100, oy + int(t["gy"]) * 100,
+                            B.token_art(t["name"]) or B.token_art(t["actor"]) or MM,
+                            disposition=t.get("disp", -1), hidden=True, width=w, height=w))
+    sc = B.racooze_scene(racname, key["displayName"], SCENE_FLD, notes, toks,
+                         navName=navName or key["displayName"], sort=sort)
+    B.write("scenes", slug, copy.deepcopy(sc))
+    scenes3.append(sc); _npins += len(notes); _ntoks += len(toks)
+    return sc
+
+prepared_scene("03-vencarlos-home", "Venarlo's Home", 100000, navName="Vencarlo's Home")
+prepared_scene("03-artists-lair", "The Artist's Lair", 200000, navName="The Artist's Lair")
+prepared_scene("03-piltss-palace", "Pilts's Palace", 300000, navName="Pilts's Palace")
+prepared_scene("03-arkona-palace", "Arkona Palace", 400000, navName="Arkona Palace")
+prepared_scene("03-vivified-labyrinth", "The Vivified Labyrinth", 500000, navName="Vivified Labyrinth")
+
+# ---- "Prepared Scenes" journal page (GM staging digest of the keying notes) ----
+PG("Prepared Scenes",
+  "<p>Five prepared scenes ship with this chapter on Racooze's battlemap geometry (his walls, doors, tiles, and lights), with area pins linked to the pages above and pre-staged tokens. <strong>Every token starts hidden</strong> — reveal as play demands. Map art and token art resolve from the locally deployed module assets; absent those, Foundry defaults render.</p>"
+
+  + "<p>" + scn3("Venarlo's Home", "Vencarlo's Home") + " — 9 pins, 4 tokens (area A)</p><ul>"
+    "<li><strong>Canvas:</strong> top half (rows 0-8) = ground floor; bottom half = the upper floor composited over a second ground-floor copy (wooden upstairs rooms over the west half; the bare brick roof covers the single-story east half). Racooze's '1st floor' = the ground floor. Front door mid-south wall (~9.5, 6.4).</li>"
+    "<li><strong>Pins</strong> keyed from furnishings: A6 = sofas + west hearth + the stair cluster; A3 = the oval tub; A2 = grindstone and smith bench; A4 = the ransacked armchair-and-papers study; A5 = barrels; A8 = the entire upper floor — best spot for the Blackjack-cache closet is the upstairs SE desk room (~5.5, 12.5).</li>"
+    "<li><strong>A1/A7 swap risk (honest flag):</strong> the Vudrani-rug street-door room is keyed A1 and the central open room A7; if you read the rug as a fencing mat instead, swap those two pins — the rafter ambusher belongs over whichever room you call A7.</li>"
+    "<li><strong>Ambush staging:</strong> one Red Mantis Assassin in the nook under the A6 stairs, one in the A7 rafters (physically <em>above</em> the room — give it elevation or reveal only when it springs). Both pre-buff the moment anyone enters and open by igniting both fireplaces.</li>"
+    "<li><strong>Spreading House Fire</strong> is staged twice — A6 stone hearth and A7 brazier — hidden until the ambush triggers. Unfought, the house burns down (the lockbox survives).</li>"
+    "<li><strong>A½</strong> is a street pin outside the front door: Amin Jalento (or Gerran) approaches, drawn by flames or the fight — a social scene; no actor exists or is needed.</li></ul>"
+
+  + "<p>" + scn3("The Artist's Lair", "The Artist's Lair (140 Wave Street)") + " — 5 pins, 5 tokens (area B)</p><ul>"
+    "<li><strong>Canvas:</strong> single image; the house sits top-right — B1 NW (muddy boot prints, emptied shelf), B2 NE (bed with the bloodied pillow), B3 SW (the six-skull arc on the desk), B4 SE (fungal ex-kitchen, thickest growth at its SW corner). B5 = the flooded 20-ft sinkhole bottom-left, collapsed boardwalk on its south bank; mud bottom is difficult terrain, the slick slope wants Athletics under pressure.</li>"
+    "<li><strong>Staging:</strong> Laori Vaus FRIENDLY in B3 amid her seance (if first contact happens at B5 instead, she bursts from the studio a round into the fight); 3 otyughs (2×2) wallowing in the sinkhole water — the journal blesses the Elite adjustment for a meaner fight; Yellow Mold at B4's sunless NE corner. Salvator is NOT here (taken to Pilts days ago) — nobody else to stage.</li>"
+    "<li><strong>Substitutions, not skips:</strong> the area pages link the official Otyugh and Yellow Mold; the staged tokens use this module's pack equivalents so they import with the adventure.</li></ul>"
+
+  + "<p>" + scn3("Pilts's Palace", "Pilts's Palace") + " — 12 pins, 25 tokens (areas C1-C12)</p><ul>"
+    "<li><strong>Canvas:</strong> one 40×32 image, ROTATED relative to the book's compass (book-west reads as map-south): the guillotine stands south of the throne, the C7 collapse is at that room's SW corner, and C12's barred door faces west into C11.</li>"
+    "<li><strong>C1/C2</strong> are two levels of the same gutted tenement drawn side by side (the stair graphic between them is the climb); the wooden ramp off C2's south corner is the 'rope stairway' up 10 ft to the C3 throne balcony. The 4 guardroom thugs take −2 Perception (arguing about choker skeletons) and stand post only while the alarm is down.</li>"
+    "<li><strong>C3 daily-court default:</strong> Pilts at the dais throne, Jabbyr adjacent in executioner's costume beside the Tall Knife hazard token, 4 court thugs. Fighting the full court is the Extreme 'DON'T'; downing Pilts cows the whole mob.</li>"
+    "<li><strong>C4 blood pig field:</strong> the two wolverines sit IN the 10-ft pits at either end (drop their elevation or keep hidden until relevant); the caged Piglet exists only once a game starts (craned in fresh) — keep it hidden otherwise; the team squares are the blood-outlined mid-field boxes.</li>"
+    "<li><strong>C5</strong> = BOTH eastern slate roofs (bench seating on the west slopes, plank bridge between); one lookout pair staged per roof — the default no-game patrol. The pin sits on the north roof; its page covers both.</li>"
+    "<li><strong>Hidden-match spawn (not staged):</strong> the Shinglesnipes (8× Emperor's Thug, plus Jabbyr in the sore-loser rematch) assemble only when a game runs — duplicate the thug token 8× onto the north team square for the match. The spectator mob and the 'hundreds of replacement thugs' from Old Dock are narrative; spare pigs stay off-map until craned in.</li>"
+    "<li><strong>C6-C12</strong> fill the SW tenement floor: C7's six chokers (small) strike from rafter-shadow and fight to the death — squares within 5 ft of the collapse crumble (Reflex or fall); C12 holds Salvator, friendly, behind the bar-and-lock door.</li>"
+    "<li><strong>Honest ambiguity:</strong> the westernmost strip room (two beds, dresser, spinning wheel) matches no journal area — Racooze set dressing; the C9/C12 furnishing match is looser than the rest, but every pin sits safely inside its walls regardless.</li></ul>"
+
+  + "<p>" + scn3("Arkona Palace", "Arkona Palace") + " — 25 pins, 14 tokens (areas D1-D25)</p><ul>"
+    "<li><strong>Canvas quadrants (map squares):</strong> GROUND floor (0,0)-(30,40); UPPER floor (30,0)-(60,40) — the same footprint shifted +30 x (the D12 ring-walkway looks down on the ground-floor garden art, jade elephant included, through the open core); UPPER sea caverns (0,40)-(25,70); LOWER sea caverns (35,40)-(60,70).</li>"
+    "<li><strong>Day staging (as placed):</strong> all four marai — Avishandu, Carnochan, Nudhaali, Vennashti — lounge in true form in D14 at −2 Perception, bickering. Receiving visitors: move Carnochan to D1/D2 as the one-eyed majordomo and Bahor to D2 as 'Glorio'. <strong>ON ALERT:</strong> Avishandu + Nudhaali go invisible in the jade elephant's howdah (~13,18 ground floor) and run the D4 ambush (elephant + fountain + scorching rays); Carnochan + Vennashti sweep the rooms in order; human staff flee; the marai fight human-shaped until one dies.</li>"
+    "<li><strong>Marble Elephant</strong> (3×3, neutral) is the inert D4 statue on its rotating platform — it animates only if the secret trapdoor beneath it is opened without the passphrase 'Chamidu is blind.' The spiral stair below emerges at the iron stair on the upper-cavern ledge (~6,44).</li>"
+    "<li><strong>Bahor</strong> waits in D18 in human form, offering his deal one last time before the claws come out; the D16 treasury door pings him with a silent mental alarm. The <strong>Warning Bells</strong> hazard token sits on the bath pool's west rim — D15 has no dedicated page (the chapter's pages jump D14 to D16), so its pin links the palace overview, which covers the baths.</li>"
+    "<li><strong>Sea caves:</strong> 4 Garden Guardians invisible on the D19 fungal ledges (overlapping spore-cloud opener; they pursue through the cavern but never into D24/D25 or the palace). <strong>Avidexu</strong> in the D24 pool: 50% out hunting on a first visit, ALWAYS home for the escape finale at the D23 pier — run that as the chapter's last battle, Vencarlo and Neolandus aboard the barge. The 25-ft waterway exit snakes NE from the pool; an illusory 'stone wall' masks the sea exit ~120 ft on.</li>"
+    "<li><strong>Room-ID notes:</strong> D7 library = the E-W wooden chamber under the curved sweeping stair; D9 trophy hall = the N-S marble hallway with the weapon cases — they adjoin, so the pins stay near-correct if you read them swapped. The D5/D6 split of the north storeroom strip is approximate (casks west = D5, crates east = D6). <strong>INFERRED — flag for review:</strong> D22/D24/D25 placements (the cluster page's tail text never names them): D22 on the lower beach ledges, D24 on the 15-ft pool itself, D25 on the pillared ceremonial hall whose ornate south gate leads to the Vivified Labyrinth scene.</li>"
+    "<li><strong>Not staged:</strong> the D4 fountain plume (an officially-statted compendium link, no module actor); <strong>Vimanda</strong> — she defaults to the Labyrinth scene (per D17 she lately lives in the dungeons, and Bahor sends her down to die at E20-era depths), so she is staged there, not here; the marai 'entertainment' captives and household servants (narrative only); and the D10 magic-mouth alarm statues plus D16 vault wards (book wards with no hazard actors — the staged hazards here are the Warning Bells and the two Hungry Smoke markers by the D8 stairs).</li></ul>"
+
+  + "<p>" + scn3("The Vivified Labyrinth", "The Vivified Labyrinth") + " — 23 pins, 21 tokens (areas E1-E23)</p><ul>"
+    "<li><strong>Canvas:</strong> five 21×28 panels side by side. Panels 1-4 are the four rotation orientations of level one — panel 1 is the printed start state (the ONLY one allowing entry from E2); each lever pull turns the hub 90° = move to the next panel; a fourth pull wraps back to panel 1. Panel 5 (far east) is the lower level: E21 torture chamber, E22 torturer's room, E23 Gizzard. <strong>Every pin and token is staged on panels 1 and 5.</strong></li>"
+    "<li><strong>Running a rotation:</strong> any lever (E3, E8, the hidden E14, E16's east lever, E17) turns all four hub sections 90° and locks 1 minute. Move party tokens to the SAME relative square one panel right (+21 squares x; from panel 4 wrap back −63); a token standing ON a rotating section additionally turns 90° about that section's gray pivot orb. <strong>Journal-blessed static fallback:</strong> ignore panels 2-4 entirely and connect E3-E4, E14-E15, E17-E18.</li>"
+    "<li><strong>Build note:</strong> the 12 rotated hub tiles on panels 2-4 use center-anchored textures (anchor 0.5), exactly as Racooze exported them. If a future re-extraction ever renders those hub sections 4 squares right+down, the anchor fields were dropped — restore them or shift those 12 tiles −400 px in both x and y. Panel 1's four tiles are plain top-left and always correct.</li>"
+    "<li><strong>Staging:</strong> Sivit (2×2) beside her E20 throne — she scries the lever rooms, rotates to split parties, herds prey across her glyphs, and wand-doors back here when bloodied; <strong>Vencarlo</strong> (friendly, 0 HP, in rags) is chained to the WESTERN throne statue. <strong>Vimanda</strong> starts at E13, her patrol head, disguised as a starved 'Vencarlo' (she tracks Bahor's gifted ring, is immune to the symbol glyphs, and is terrified of Sivit) — if the PCs reach E21 with no alarms and no deal with Bahor, MOVE her there to fight beside Senshiir.</li>"
+    "<li><strong>Panel 5 finale:</strong> Senshiir at the rack with Neolandus ('Velak', friendly) strapped to it; the four <strong>Rajambari</strong> (3×3, NEUTRAL) stand at the Gizzard's four wheel pillars — passive unless they or the machine are harmed, then all four fight to destruction; wrecking two or more locks the Labyrinth's configuration permanently.</li>"
+    "<li><strong>Hazard tokens (all 1×1):</strong> the E4 Corrupted Pool, the four symbols (E5 fear, E6 pain, E18 sleep, E19 stunning), the E7 chest pair with the Blood Cobra in the middle chest ('left/right' read facing the chests, looking north), and the four obstacle rooms (E9-E12). The E9 invisible arcane eye is a sensor, not a token. <strong>E16 spheres:</strong> the west lever starts DOWN — every mist-sphere dumps into a random locked E21 cell on panel 5; lever up restores white→E2, black→E13, green→E20, gold→E5.</li>"
+    "<li><strong>ID confidence (honest flags):</strong> high for E1/E2 (bronze doors + tiger statues), E7, E10-E13, E16, E20-E23. Could swap: <strong>E4 vs E5</strong> — the green glowing pool nearest the entrance is keyed as the poisoned 'crystal' pool and the dark-blue pool as the healing pool (swap the pins if you read 'crystal' as the blue one); <strong>E14 vs E17</strong> (large-skeleton room vs skull-pile-and-cage room); E15 and E8 are placed by elimination; E18/E19 are the TL section's main hall and crooked west arm.</li></ul>")
+
 journal = B.journal_entry(JID3, "3. Escape from Old Korvosa", pages, folder=ADV_FOLDER)
 B.write("journals", "03-escape-from-old-korvosa", copy.deepcopy(journal), embed_pages=True)
 
-print(f"Chapter 3 built: {len(folders)} folders, {len(actors)} actors, 1 journal ({len(pages)} pages).")
+print(f"Chapter 3 built: {len(folders)} folders, {len(actors)} actors, 1 journal ({len(pages)} pages), "
+      f"{len(scenes3)} scenes ({_npins} pins / {_ntoks} tokens).")

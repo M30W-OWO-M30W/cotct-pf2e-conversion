@@ -1,0 +1,63 @@
+{
+  "_id": "fxWarPaintRed001",
+  "img": "systems/pf2e/icons/equipment/adventuring-gear/disguisekit-cosmetics.webp",
+  "name": "Effect: Shoanti War Paint (Red)",
+  "type": "effect",
+  "effects": [],
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "system": {
+    "description": {
+      "value": "<p>Granted by @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.wVVVvv10DiQo2CHc]{Shoanti War Paint (Red)} — one application, lasting 1 hour. You can benefit from only one color of Shoanti war paint at a time; applying a different color replaces this effect.</p><hr /><p>You gain resistance 10 to fire damage.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "hours",
+      "value": 1
+    },
+    "level": {
+      "value": 10
+    },
+    "publication": {
+      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+      "authors": "",
+      "license": "OGL",
+      "remaster": true
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "fire",
+        "value": 10
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-war-paint-red"
+  },
+  "_key": "!items!fxWarPaintRed001"
+}

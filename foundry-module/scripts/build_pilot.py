@@ -331,6 +331,11 @@ folders = [
  B.folder(F["j_adventure"],"Adventure","JournalEntry",F["j_root"],100000,SUPC),
  B.folder(F["s_root"],"Curse of the Crimson Throne","Scene",None,100000,ROOTC),
  B.folder(F["s_ch1"],"1. Edge of Anarchy","Scene",F["s_root"],100000,CHC),
+ B.folder("ch2SceneFolder01","2. Seven Days to the Grave","Scene",F["s_root"],200000,CHC),
+ B.folder("ch3SceneFolder01","3. Escape from Old Korvosa","Scene",F["s_root"],300000,CHC),
+ B.folder("ch4SceneFolder01","4. A History of Ashes","Scene",F["s_root"],400000,CHC),
+ B.folder("ch5SceneFolder01","5. Skeletons of Scarwall","Scene",F["s_root"],500000,CHC),
+ B.folder("ch6SceneFolder01","6. Crown of Fangs","Scene",F["s_root"],600000,CHC),
 ]
 # folders live in each relevant per-type pack
 for f in folders:
@@ -1463,6 +1468,115 @@ ev("dconc","Chapter Conclusion",
      label="Closing — Read Aloud")
   +SEC("<p><strong>Into Chapter 2 — and the Blood Veil.</strong> That plague ship is the <em>Direption</em>, Chapter 2's opening. This is where the persistent-plague overlay begins: start the <strong>Epidemic Clock</strong> (Conversion Guide journal → <em>Blood Veil &amp; the Epidemic Clock</em>) seeded by how the city fared here. Rolth, returning to his ruined lair, becomes a recurring hunter (Chapter 2).</p>")
   +B.s_conv("<p><strong>Threads carried forward:</strong> Rolth's vendetta · the Arkona/Vimanda watch (from "+pg(P["B8"],"Verik")+") · Trinia &amp; Vencarlo/Blackjack · Grau and the Korvosan Guard · the Shoanti debt · and the queen, who now has the PCs' measure.</p>"))
+
+# =====================================================================
+# PREPARED SCENES — Part Three battlemaps (B/C/D areas) on Racooze geometry
+# via B.racooze_scene (same firewall as the Old Fishery below: his walls/tiles
+# inject from the GM's locally installed module, nothing redistributed). Keyed
+# pins + staged tokens come from research/scene_keys.json (keying-fleet output,
+# committed). Every id here draws on a SEPARATE deterministic stream so the
+# main nid()/sid() pools — and every doc id above and below — stay untouched.
+# =====================================================================
+import html as _hx
+_psg = B._idgen(881001); psid = lambda: next(_psg)
+PS_PAGE_ID = psid()        # reserved FIRST so the page id survives keying edits
+_PS_MM = "icons/svg/mystery-man.svg"
+def _cid(name):
+    """Community-copy actor id (the official-monster module copies are community
+    docs); None if the community index is absent -> that token is dropped loudly."""
+    _m = B._cmeta("npc", name)
+    return _m["id"] if _m else None
+# actor name -> (pack doc id, token squares). Ids resolve from the pilot registry
+# (A) or the community index; squares follow the keying notes (Jigsaw Shark,
+# Skeletal Owlbear, Otyugh, and Cabbagehead are Large 2x2 with gx/gy naming the
+# top-left square; Small/Tiny creatures stage as 1x1 like Medium).
+PS_ACTORS = {
+    # Part Three B — All the World's Meat
+    "Cow Hammer Boy": (A["cowhammer"], 1), "Verik Vancaskerkin": (A["verik"], 1),
+    "Reefclaw": (_cid("Reefclaw"), 1), "Raktavarna Rakshasa": (_cid("Raktavarna Rakshasa"), 1),
+    # Part Three C — Eel's End
+    "Eel's End Enforcer": (A["enforcer"], 1), "Devargo Barvasi": (A["devargo"], 1),
+    "Korvosan Rioter": (A["rioter"], 1), "Chittersnap": (A["chittersnap"], 1),
+    "Giant Spider": (_cid("Giant Spider"), 1), "Dream Spider": (_cid("Dream Spider"), 1),
+    "Jigsaw Shark": (A["jigsawshark"], 2),
+    # Part Three D — The Dead Warrens
+    "Human Skeleton": (_cid("Human Skeleton"), 1), "Skeletal Owlbear": (A["skelowlbear"], 2),
+    "Derro": (A["derro"], 1), "Otyugh": (_cid("Otyugh"), 2), "Stirge": (A["stirge"], 1),
+    "Necrophidius": (_cid("Necrophidius"), 1), "Acid-Spraying Skulls": (A["acidskulls"], 1),
+    "Carrion Golem": (_cid("Carrion Golem"), 1), "Cabbagehead": (A["cabbagehead"], 2),
+    "Vreeg": (A["vreeg"], 1), "Human Zombie": (_cid("Human Zombie"), 1),
+}
+_PS_KEYS_PATH = B.ROOT.parent / "research" / "scene_keys.json"
+_PS_KEYS = ({e["scene"]: e for e in json.loads(_PS_KEYS_PATH.read_text(encoding="utf-8"))
+             if e.get("chapter") == "ch1"} if _PS_KEYS_PATH.exists() else {})
+if not _PS_KEYS:
+    print("[scene] research/scene_keys.json absent -> Part Three scenes build without pins/tokens")
+_PS_PAGE_BY_NAME = {_hx.unescape(p["name"]): p["_id"] for p in pages}
+def _ps_pid(page_name, code):
+    """Keyed pageName -> page id; falls back to the page whose name leads with
+    the area code (e.g. C8 -> 'C8-C12 & C16. Below Decks'); None drops the pin."""
+    _pid = _PS_PAGE_BY_NAME.get(_hx.unescape(page_name))
+    if _pid: return _pid
+    _pid = next((i for n, i in _PS_PAGE_BY_NAME.items()
+                 if n.startswith(f"{code}.") or n.startswith(f"{code}-")), None)
+    if _pid: print(f"  [scene] keyed page {page_name!r} missing -> matched by area code {code}")
+    else:    print(f"  [scene] no page for pin {code} ({page_name!r}) -> pin dropped")
+    return _pid
+
+PS_SCENES = [   # (racoozeName, displayName, pack slug, sort) — after Old Fishery (sort 0);
+    # slug prefix = CHAPTER number (matches 01-old-fishery / the other chapters' packs)
+    ("All The World's Meat", "All the World's Meat", "01-all-the-worlds-meat", 200000),
+    ("Eel's End", "Eel's End", "01-eels-end", 300000),
+    ("The Dead Warrens", "The Dead Warrens", "01-the-dead-warrens", 400000),
+]
+ps_counts = {}
+for _rn, _dn, _slug, _sort in PS_SCENES:
+    _k = _PS_KEYS.get(_rn, {})
+    _ox, _oy = B.scene_origin(_rn)            # map-local squares -> scene px
+    _pn, _pt = [], []
+    for _n in _k.get("notes", []):
+        _pid = _ps_pid(_n["pageName"], _n["code"])
+        if _pid:
+            _pn.append(B.note(psid(), JID, _pid, _n["label"],
+                              _ox + int(round(_n["gx"] * 100)), _oy + int(round(_n["gy"] * 100))))
+    for _t in _k.get("tokens", []):
+        _aid, _sq = PS_ACTORS[_t["actor"]]    # unknown actor = build error by design
+        if not _aid:
+            print(f"  [scene] {_dn}: no actor doc for {_t['actor']!r} -> token dropped"); continue
+        _pt.append(B.token(psid(), _aid, _t["name"],
+                           _ox + int(_t["gx"]) * 100, _oy + int(_t["gy"]) * 100,
+                           B.token_art(_t["actor"]) or _PS_MM,
+                           disposition=_t.get("disp", -1), hidden=True, width=_sq, height=_sq))
+    _psc = B.racooze_scene(_rn, _dn, F["s_ch1"], _pn, _pt, sort=_sort)
+    B.write("scenes", _slug, copy.deepcopy(_psc))
+    ps_counts[_dn] = (len(_pn), len(_pt))
+print("[scene] prepared Part Three scenes: "
+      + ", ".join(f"{k} ({v[0]} pins/{v[1]} tokens)" for k, v in ps_counts.items()))
+
+# GM staging page at the END of the chapter journal: links each prepared scene
+# and digests the keying fleet's design notes (region guides, day/night moves,
+# review flags, who is deliberately NOT staged) into compact run-time notes.
+_ps_scn = lambda rn, label: scn(B.scene_id(rn), label)
+pages.append(B.page(PS_PAGE_ID, "Prepared Scenes",
+  "<p>Beyond the "+scn(SCN,"Old Fishery")+" (see "+pg(P["scene"],"Scene Setup")+"), Part Three ships three prepared scenes on <strong>Racooze's battlemap geometry</strong> — his walls, doors, and floor art inject at build time from your locally installed free battlemaps module (nothing of his is redistributed; without it they build as placeholder grids). Map-note pins link every area page; <strong>all staged tokens start hidden</strong> — reveal them as encounters break. Import via the Adventure (not the scene compendium alone) so the token actors exist in your world.</p>"
+
+  +_sub(_ps_scn("All The World's Meat","All the World's Meat")+" — areas B1–B8")
+  +"<p><strong>Canvas:</strong> two copies of one building footprint, side by side. The LEFT half is the ground floor (pins "+pg(P["B1"],"B1")+"–"+pg(P["B6"],"B6")+"); the RIGHT half repeats it under the upper-storey overlay tile, so only "+pg(P["B7"],"B7")+"/"+pg(P["B8"],"B8")+" show as rooms (the rest reads as roof). The "+pg(P["B2"],"B2")+" stair descending south is the climb to B7/B8; B4's bloodstained grate sits at its south edge; B8's desk-bed and paper table are east–west flipped versus the text — trust the canvas.</p>"
+  +"<p><strong>Staging:</strong> the "+pg(P["B1"],"B1")+" pair (Baldrago, Malder) are neutral — the free-meat storefront; pushed past, they raise longbows and shout for B4. The "+pg(P["B4"],"B4")+" pair (Parns, Karralo) are the 75%-by-day post; on a miss they're tending B5/B6 livestock instead. The three Reefclaws sit on B4's grate squares but are actually BELOW the grate, in the half-flooded sewer tunnel running east to the river (the severed-finger evidence is down there too) — keep them hidden or note the elevation; they attack only if the remains are disturbed. "+act("verik","Verik")+" ("+pg(P["B8"],"B8")+", beside the desk-bed) dithers several rounds before joining any fight below and surrenders readily when shown the evidence — staged hostile, but skippable by design. The 'Silver Dagger' token IS the Raktavarna, disguised as the dagger pinning a paper to the east table (Tiny) — keep it hidden until exposed.</p>"
+  +"<p><strong>Not staged:</strong> "+pg(P["B6"],"B6")+"'s livestock (a random handful of cows and pigs arrives each morning, sometimes none) — no actors; skittish, harmless flavor.</p>"
+
+  +_sub(_ps_scn("Eel's End","Eel's End")+" — areas C1–C17")
+  +"<p><strong>Canvas (composite, 42×27):</strong> bottom-left is the harbor overview — the "+pg(P["C1"],"C1")+" pier plus all five vessels' weather decks ("+pg(P["C3"],"Goldenhawk")+" = NW tilted barge; "+pg(P["C4"],"Twin Tigers")+" = NE, two shingled huts; "+pg(P["C5"],"House of Clouds")+" = west, one long roof; "+pg(P["C6"],"Dragon's Breath")+" = SE; the big unsigned center-south warship is Eel's End itself, the "+pg(P["C2"],"C2")+" deck). The top-left inset is the warship's stern-cabin interior = "+pg(P["C7"],"C7")+"'s throne room (stairs down at its NW corner). The middle hull is the warship's LOWER DECK, bow north ("+pg(P["Cbelow"],"C8–C12 & C16")+", "+pg(P["C9"],"C9")+", "+pg(P["C13"],"C13")+"–"+pg(P["C15"],"C15")+" — rooms verified by furniture; C13 is the chair-less desk room, its chairs moved up to C7; the unlabeled starboard room with a round table is the crew mess, no area code). The right hull is the BILGE level (C16/"+pg(P["C17"],"C17")+").</p>"
+  +"<p><strong>Review flags:</strong> C13's spider-painted door to "+pg(P["C14"],"C14")+" sits in its NORTH wall here where the text says south — treat the map as authoritative. The bilge draws no C16/C17 division: the dry webbed platform at the pointed end is keyed as C17 and the open 2-ft murky water (pier pilings) as C16, but the platform's web wisps also evoke C15's den — swap C17's pin to the far end if you read it the other way.</p>"
+  +"<p><strong>Staging:</strong> Devargo's people are <em>neutral</em> — a social encounter by design; only the "+pg(P["C15"],"C15")+" den and the "+pg(P["C17"],"C17")+" shark (Large 2×2) are hostile. By day "+act("devargo","Devargo")+" holds court in C7 (noon until a few hours past dusk) with six hopeful thugs at the feast tables — staged with the "+act("rioter","Korvosan Rioter")+" actor, as the C7 page links them; after midnight he is in C14, so <strong>move his token for night infiltrations</strong>. C7's hidden trap door in front of the throne (not drawn) drops straight to C15; on an alarm, C2 enforcers reinforce C7 one per round. The C4 enforcer counts among the four pier enforcers posted inside — while that token is active, remove one pier token if you want strictly four. C15's 'giant dream spider' is staged with the module Giant Spider actor (the page links the official equivalent).</p>"
+  +"<p><strong>Not staged:</strong> Majenko, the caged pseudodragon in C7 (the page links the official house drake instead); the flavor NPCs Tuggins (C3 flophouse keeper, hides under a bunk), Anpugit &amp; Rajeek (C4 gambling-masters), Halvara (C5 madam), and Bezzeraty (C6 smoke-den keeper) — no actors, none fight; likewise the unnamed C2 revelers and C4 gambler crowds.</p>"
+
+  +_sub(_ps_scn("The Dead Warrens","The Dead Warrens")+" — areas D1–D13")
+  +"<p><strong>Canvas (single level, 50×33):</strong> the Potter's Ward mausoleum stairs enter "+pg(P["D1"],"D1")+" from the north. Region guide: D1 ossuary NW — the WEST bone pit holds the four skeletons, the EAST pit the owlbear; "+pg(P["D12"],"D12")+" and "+pg(P["D13"],"D13")+" along the north edge; "+pg(P["D11"],"D11")+" stitchery NE (patchwork body on the big table); "+pg(P["D10"],"D10")+" library center (the map draws three book racks where the text says two); "+pg(P["D9"],"D9")+" prisoner pits SE (the rock floor is ringed on three sides by dark 10-ft pits); "+pg(P["D8"],"D8")+" store room (boarded door on its NORTH side); "+pg(P["D7"],"D7")+" alchemy lab beside the skull-studded "+pg(P["D6"],"D6")+" corridor; "+pg(P["D5"],"D5")+" blood tables + black wicker stirge hutch; "+pg(P["D4"],"D4")+" corpse dump south (Gaekhen's legs are in the body-part pile at the mud island's south edge); "+pg(P["D3"],"D3")+" derro cave SW. The "+pg(P["D2"],"D2")+" pin marks the most prominent timber-braced crawl tunnel — more concealed crawl segments riddle the complex as the derros' flank-and-alarm network (each found per the D2 page).</p>"
+  +"<p><strong>Staging:</strong> Large 2×2 tokens: Skeletal Owlbear, Otyugh, Cabbagehead. The D1 skeletons pursue intruders anywhere in the warrens but never to the surface; the owlbear never leaves D1 (pillar gaps and stairs are squeeze/difficult terrain for it). In D5 the four 'gorged' stirges on the fresh corpse ignore the PCs — only the two 'hungry' ones by the hutch attack — and the derro's first move is to flee through D2 to warn Vreeg; if the alarm spreads, fold the D5/D3/D7 derros into one Low–Moderate fight (headcount matches the journal: 2 in D3, 1 in D5, 1 in D7). In D6 both necrophidiuses start motionless inside the skull walls at the corridor's far ends; the mid-corridor "+haz("acidskulls","Acid-Spraying Skulls")+" token is the hazard actor — it fires two rounds after entry and rakes the whole hall. The "+pg(P["D8"],"D8")+" carrion golem still clutches Gaekhen's tattooed left arm and triggers the moment the boarded door opens.</p>"
+  +"<p><strong>Finale ("+pg(P["D13"],"D13")+"):</strong> "+act("vreeg","Vreeg")+" kites flying with rays — bright light dazzles him (derro sunlight vulnerability). His bodyguard uses the Human Zombie actor: per the journal, if the PCs left Gaedren's body at the fishery, this zombie IS Gaedren, reanimated by Rolth.</p>"
+  +"<p><strong>Not staged:</strong> the six malnourished D9 captives (incl. the cutpurse Tiora) — noncombatants in the pits; Gaekhen's twitching torso and right arm on the D13 bench (a 2-HP flavor hazard, described on the page); the unfinished flesh golem on the D11 table (inert — Gaekhen's head is stitched to it); and <em>Rolth himself</em> — his actor exists, but he is absent from the Warrens by design (away securing a scroll; he returns after the PCs leave and hunts them in Chapter 2).</p>",
+  level=2))
 
 journal = B.journal_entry(JID,"1. Edge of Anarchy",pages,folder=F["j_adventure"])
 B.write("journals","01-edge-of-anarchy",copy.deepcopy(journal),embed_pages=True)

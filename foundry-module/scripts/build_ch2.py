@@ -986,8 +986,169 @@ PG("Final Survivor Count", SR("Final Survivor Count", 134)
     "<li><strong>2,801 or more — City Saviors:</strong> the whole city knows them: +1 circumstance bonus to Deception, Diplomacy, and Intimidation against Korvosan citizens. Ileosa is <strong>forced to publicly honor them</strong> — a short, grudging speech ("+chk("type:perception|dc:20")+" reads how much it costs her) and a <strong>writ worth ~500 gp re-scaled</strong> per PC, good for any purchase within the walls. (If they've been loud about her involvement, Sabina presents the award instead, the queen pleading exhaustion.) <strong>6,400 XP.</strong></li></ul>"
   + B.s_conv("<p>Feed the final tally into the persistent-plague overlay: the Survivor Count sets the Epidemic Clock's starting state for Chapter 3 (Conversion Guide → <em>Blood Veil &amp; the Epidemic Clock</em>).</p>"))
 
+# =====================================================================
+# PREPARED SCENES — Racooze battlemap geometry + keyed pins & staged tokens.
+# Coordinates come from the keying pass (research/scene_keys.json; map-local
+# grid squares — scene px = origin + g*100, tokens snapped to whole squares).
+# Geometry (walls/doors/tiles/lights/thumb) injects from the GM's locally
+# installed Racooze module via B.racooze_scene; tokens all ship hidden=True.
+# =====================================================================
+import html as _html, json as _json, re as _rx
+
+_sg = B._idgen(882001)            # scene-embedded ids: a SEPARATE deterministic
+def snid(): return next(_sg)      # stream so nid()/sid() and every doc id downstream stay put
+
+def scn(_id, label): return f"@UUID[Compendium.{MODID}.cotct-scenes.Scene.{_id}]{{{label}}}"
+
+SCENE_FOLDER2 = "ch2SceneFolder01"   # created by build_pilot.py under the shared scene root
+MM = "icons/svg/mystery-man.svg"
+
+# keyed actor name -> (actorId, token grid width). Literal ids are the stable
+# community-original actors materialized into the packs by build_community.py /
+# import_community.py; the rest are this chapter's own A2/H2 docs.
+_TOK = {
+    "Silt Eel": (A2["silteel"], 1),            "Skinshear": ("RiqACmnzGmuRaDxP", 1),
+    "Yvicca": (A2["yvicca"], 1),               "Wererat": ("q2eM3ScJs09UunF7", 1),
+    "Dire Rat": ("lFwjg3rcczCkWeMD", 1),       "Shrieker": ("GoOuyKBGBocKnq7D", 1),
+    "Otyugh": ("W1srRPmlZZnVFfYH", 2),         "Rat Swarm": ("1VNsOGy3bdFp0YB5", 2),
+    "Girrigz Ripperclaws": (A2["girrigz"], 1), "Vampire Spawn": ("peaN29LKkR2MU7JL", 1),
+    "Vendra Loaggri": (A2["vendra"], 1),       "Lavender Thug": (A2["lavthug"], 1),
+    "Human Zombie": ("SoLzM2IW3fXcISl0", 1),   "Jolistina Susperio": (A2["jolistina"], 1),
+    "Ausio Carowyn": (A2["ausio"], 1),         "Bhrunlida Torthus": (A2["bhrunlida"], 1),
+    "Gray Maiden Foot Soldier": (A2["graymaiden"], 1),
+    "Queen's Physician": (A2["physician"], 1), "Reiner Davaulus": (A2["davaulus"], 1),
+    "Death's Breath Doors (G1)": (H2["breathdoors"], 1),
+    "Rolth Lamm": (A2["rolth"], 1),            "Cultist of Urgathoa": (A2["cultist"], 1),
+    "Blood Veil Plague Zombie": (A2["pzombie"], 1),
+    "Human Skeleton": ("4DchLWBlDGaiQe3P", 1), "Ramoska Arkminos": (A2["ramoska"], 1),
+    "Ruan Mirukova": ("u0KhFUBJOePZTfIy", 1),  "Leukodaemon": ("gdS28JkSPpkX5gBa", 2),
+    "Lady Andaisin": (A2["andaisin"], 1),      "Juju Zombie": ("2rCxh8CXwO9X7co5", 1),
+    "Andaisin, Daughter of Urgathoa": (A2["andaisin_t"], 2),  # hidden-finale add (lg 2x2)
+}
+
+_NAV = {"The Direption": "Direption", "Wererat Sewer Den": "Sewer Den",
+        "Lavender and Vendra's Apartment": "Lavender",
+        "Racker's Alley and Giotorri's Toys": "Racker's Alley",
+        "Carowyn Manor": "Carowyn Manor",
+        "Hospice of the Blessed Maiden": "Hospice",
+        "Temple of Urgathoa": "Temple of Urgathoa"}
+_SORT = {"The Direption": 100000, "Wererat Sewer Den": 200000,        # mission order
+         "Lavender and Vendra's Apartment": 300000,
+         "Racker's Alley and Giotorri's Toys": 400000, "Carowyn Manor": 500000,
+         "Hospice of the Blessed Maiden": 600000, "Temple of Urgathoa": 700000}
+
+_PAGE_BY_NAME = {_html.unescape(p["name"]): p["_id"] for p in pages}
+def _page_for(page_name, code):
+    n = _html.unescape(page_name)
+    if n in _PAGE_BY_NAME:
+        return _PAGE_BY_NAME[n]
+    hit = next((pid for nm, pid in _PAGE_BY_NAME.items()
+                if nm.startswith(code + ".") or nm.startswith(code + " ")), None)
+    print(f"  [scene] pageName {page_name!r} not found -> "
+          + (f"area-code fallback used for pin {code}" if hit else f"pin {code} DROPPED"))
+    return hit
+
+_SK_PATH = B.ROOT.parent / "research" / "scene_keys.json"
+_SCN_KEYS = ([e for e in _json.loads(_SK_PATH.read_text(encoding="utf-8"))
+              if e.get("chapter") == "ch2"] if _SK_PATH.exists() else [])
+if not _SCN_KEYS:
+    print("  [scene] research/scene_keys.json absent -> Ch.2 prepared scenes skipped")
+
+scenes2 = []
+for _e in _SCN_KEYS:
+    _rn, _dn = _e["scene"], _e["displayName"]
+    _ox, _oy = B.scene_origin(_rn)
+    _notes = []
+    for _n in _e["notes"]:
+        _pid = _page_for(_n["pageName"], _n["code"])
+        if _pid:
+            _notes.append(B.note(snid(), JID2, _pid, _n["label"],
+                                 int(_ox + _n["gx"] * 100), int(_oy + _n["gy"] * 100)))
+    _toks = []
+    def _stage(actor, name, gx, gy, disp):
+        _aid, _w = _TOK[actor]
+        _toks.append(B.token(snid(), _aid, name, _ox + int(gx) * 100, _oy + int(gy) * 100,
+                             B.token_art(actor) or MM, disposition=disp, hidden=True,
+                             width=_w, height=_w))
+    for _t in _e["tokens"]:
+        _stage(_t["actor"], _t["name"], _t["gx"], _t["gy"], _t.get("disp", -1))
+    if _rn == "Temple of Urgathoa":
+        # hidden finale (keying note's option taken): the risen saint pre-placed
+        # at the G14 statue pool, revealed the round after Lady Andaisin falls
+        _stage("Andaisin, Daughter of Urgathoa", "Andaisin, Daughter of Urgathoa", 45, 8, -1)
+    _sc = B.racooze_scene(_rn, _dn, SCENE_FOLDER2, _notes, _toks,
+                          navName=_NAV.get(_rn), sort=_SORT.get(_rn, 0))
+    B.write("scenes", "02-" + _rx.sub(r"[^a-z0-9]+", "-", _dn.lower()).strip("-"),
+            copy.deepcopy(_sc))
+    scenes2.append((_dn, len(_notes), len(_toks)))
+
+# ---- "Prepared Scenes" journal page: links + compact GM staging digests ----
+_SID = {k: B.scene_id(k) for k in _NAV}
+def _sl(rn, label): return scn(_SID[rn], label)
+
+PG("Prepared Scenes",
+  B.s_conv("<p>Seven prepared scenes ship with this chapter, built on <strong>Racooze's CotCT Battlemaps</strong> geometry — his walls, doors, floor art, and lighting inject at build time from your locally installed copy of his free module (without it the scenes build as wall-less placeholder grids; nothing of his is redistributed). Every map pin opens this journal's matching area page, and <strong>every staged token starts hidden</strong> — reveal each group as its area is entered. Dispositions follow the keying pass: hostile by default, neutral/friendly where the text stages a social encounter.</p>")
+
+  + "<p>"+_sl("The Direption", "The Wreck of the Direption")+" <em>(Mission 1)</em></p>"
+  + "<ul>"
+    "<li><strong>Layout (one 43×18 underwater map):</strong> the bow (A1) lies map-west of the big rock the hull split over; the stern sits east of it — A2 shattered hold, A3 crew quarters, A4 captain's cabin in the far northeast.</li>"
+    "<li><strong>Staging:</strong> 6 silt eels nest in A1 (wounded eels flee deeper into the bow and there fight to the death); <strong>Skinshear</strong> circles A2 and butts the A3 door to warn Yvicca before attacking; <strong>Yvicca</strong> lairs in A3 among the chummed hammocks and joins the A2 fight pre-buffed. A4 holds only the Vindmel corpse and the sealed footlocker — props, no tokens; its door is swollen shut.</li>"
+    "<li><strong>GM flags:</strong> the whole site is underwater — apply the PF2e aquatic-combat penalties; a party without water breathing / freedom of movement fights at a real disadvantage. Skinshear is staged 1×1 (his actor is Medium despite the 'unusually large shark' flavor).</li>"
+    "</ul>"
+
+  + "<p>"+_sl("Wererat Sewer Den", "Wererat Sewer Den")+" <em>(Mission 2)</em></p>"
+  + "<ul>"
+    "<li><strong>Region guide (20×14):</strong> B5 bone cave across the top · B2 west fungus cave (the <strong>shrieker</strong> hazard token sits at its south mushroom pool) · B3 central bonfire cave · B6 northeast crate den · B1 the channel fork at the southwest · B4 the channel stretch penned between the two rusty grates, where the <strong>otyugh</strong> (2×2) sleeps beside its filth clot.</li>"
+    "<li><strong>Alarm web:</strong> the shrieker screeches unless intruders immediately move north past the central pillar — summoning the B3 wererats and the B5 rat swarm (the dire rats are too lazy) and waking the otyugh. Fighting in B3, or the otyugh's release, brings <strong>Girrigz</strong> (staged unwarned in B6 over his map) pre-buffed in dire-rat form through the B3 northeast squeeze-crack.</li>"
+    "<li><strong>GM flags:</strong> the otyugh can be bargained into helping — flip its disposition if so. Every wererat but Girrigz is coerced kin: scattering the band without killing them saves 400 citizens. Sewage-flow squares are slick (B2/B3 west edges and all channel floors). Not staged: Eries Yelloweyes (mission-giver, met in the city).</li>"
+    "</ul>"
+
+  + "<p>"+_sl("Lavender and Vendra's Apartment", "Lavender &amp; Vendra's Apartment")+" <em>(Mission 3)</em></p>"
+  + "<ul>"
+    "<li><strong>Layout (17×20):</strong> top building = the C1 shop; bottom = two mirrored apartments — C2 (west, Vendra's) and C3 (east, the boarded-up liniment lab with the oar-in-tub mixer); the corner-hinged secret door sits in their shared wall.</li>"
+    "<li><strong>Day staging (default):</strong> Vendra works the crowd mid-shop with two sap-armed thugs by the window and the counter; one more thug works the C3 tub. C2 is locked and empty by day.</li>"
+    "<li><strong>Night variant (not staged):</strong> no crowd and fewer guards in C1; Vendra and two thugs brew in C3 (50% she is instead asleep in C2); the thugs haul river-water barrels in by night — the easiest evidence to tail.</li>"
+    "<li><strong>GM flags:</strong> the mission resolves by exposure, not combat (full XP for foes not fought) — treat the tokens as neutral until Vendra is cornered; she knifes a PC and bolts toward C2. Not staged (props/social): the two shop-girls, the planted shill Solt Carmino, the customer queue.</li>"
+    "</ul>"
+
+  + "<p>"+_sl("Racker's Alley and Giotorri's Toys", "Racker's Alley &amp; Giotorri's Toys")+" <em>(Mission 4)</em></p>"
+  + "<ul>"
+    "<li><strong>Layout (17×20):</strong> D3 = the toy showroom (north room); D2 = the workshop (south room — the toymaker's punctured corpse at the workbench is a prop; the trap door hugs the <strong>east</strong> wall); D1 = the bent, shadowed alley along the west side, its corpse pile heaped against D2's wooden wall around the 10-ft hole.</li>"
+    "<li><strong>Day staging (default):</strong> all four vampire spawn cluster beside the D2 trap door — stand-ins for their soil coffins in the undrawn crawl space below. Keep them hidden until the trap door opens or noise wakes them (asleep: −10 Perception; killing one wakes the rest; the crawl space is difficult terrain for Medium creatures).</li>"
+    "<li><strong>Night variant:</strong> move one spawn to the D1 rooftop (20 ft up, −2 to spot from the alley floor); it shrieks when anyone touches the bodies and its three companions arrive from D2 in 1d3 rounds.</li>"
+    "<li><strong>GM flags:</strong> contact with the plague-dead exposes to Blood Veil. The tile shows alley mouths both north and south, but play D1 as the journal's shadowed dead-end — constant shadow keeps the spawns' sunlight weakness a tactical prize, not a default.</li>"
+    "</ul>"
+
+  + "<p>"+_sl("Carowyn Manor", "Carowyn Manor")+" <em>(Mission 5)</em></p>"
+  + "<ul>"
+    "<li><strong>Canvas regions:</strong> LEFT copy = ground floor (E1a–E1e) · RIGHT copy (map-local x &gt; 24) = second floor (E2a/E2b and the gallery stairs) · the small bottom-left tile (y &gt; 26) = the wine cellar ('E2c' is a coined code — the AP gives the cellar no sub-letter, so its pin opens the E2 page).</li>"
+    "<li><strong>Zombie math is exact (21 staged):</strong> 6 dancers (E1a) + 3 den (E1b) + 4 diners (E1c — deliberately ON the chair squares; each spends an action extricating) + 1 harpist (E1d) + 2 carvers (E1e) + 3 critics (E2a) + 2 bedroom (E2b). The <strong>7 uncontrolled</strong> (attack everyone; Jolistina avoids their rooms) are the E1b trio, E1e pair, and E2b pair — same actor, a GM-side distinction.</li>"
+    "<li><strong>Staging:</strong> Jolistina starts at her gallery / stair-head final-stand spot but fights a manor-spanning cat-and-mouse — move her freely between ambushes. Ausio (friendly) sits at the cellar's southeast corner, standing in for his undrawn locked studio. The 'E' getting-in pin marks the west approach — the book never says which door is the mahogany front door.</li>"
+    "<li><strong>Not staged:</strong> Ruan Mirukova (<em>deliberately</em> — his absence from the gallery dead is the clue; he is staged at Temple G11), the dozens of posed masquerade corpses (props), and Deyanira (quest-giver, off-site).</li>"
+    "</ul>"
+
+  + "<p>"+_sl("Hospice of the Blessed Maiden", "Hospice of the Blessed Maiden")+" <em>(Part 3)</em></p>"
+  + "<ul>"
+    "<li><strong>Canvas regions:</strong> LEFT copy = ground floor (F1–F4) · MIDDLE copy = the same floor under the F5 <strong>catwalk overlay</strong> (the black rectangle is open air over the loading dock) · RIGHT strip = the second-floor offices (F6–F8; playable rooms ≈ x 50–59). Ground occupants stage on the left copy, the catwalk pair on the middle, the F6–F8 staff on the right.</li>"
+    "<li><strong>Staging:</strong> Bhrunlida is NEUTRAL behind the F1 desk (a hired charlatan — story award for not attacking her). Six Gray Maidens in all: 2 in the ward (F4 door + stairs), 2 on the catwalks, 2 at the F6 hall — matching the disguise-ruse shift limits. Davaulus stands by his F8 desk; <strong>on alarm he turns invisible and runs for the F4 lift</strong>.</li>"
+    "<li><strong>Honest calls:</strong> F4's rope-winch capstan = the concealed cargo lift (moderate confidence — no other candidate room exists). The F7/F8 dividing wall reads faint on the tile; trust the pins.</li>"
+    "<li><strong>GM flags:</strong> the default posture is non-hostile cover — physicians fight only if attacked, if the cult is named, or if anyone enters F4; dispositions are hostile for staging convenience, so run the social layer first. Not staged: the 60+ cot patients, F1's six waiting sick, and the 15 strapped Varisians (the drawn cots and beds are them).</li>"
+    "</ul>"
+
+  + "<p>"+_sl("Temple of Urgathoa", "Temple of Urgathoa")+" <em>(Part 3 finale)</em></p>"
+  + "<ul>"
+    "<li><strong>Layout (one 54×23 map):</strong> the F4 lift arrives in G1's west alcove; G13's stone doors open onto the 100-ft sloping hall east to the G14 rotunda. <strong>G1 and G9–G12 are dark</strong>; the rest is lit.</li>"
+    "<li><strong>Honest caveat:</strong> the fan map flips some of the book's directions — the G5/G7 assignment here (G5 = south strap-cot hall, G7 = north satin-cot room) is a judgment call, and G3 was identified by elimination. If you prefer the book's literal reading, swap the G5/G7 pins and their token groups wholesale.</li>"
+    "<li><strong>Staging:</strong> ONE Death's Breath Doors hazard actor wards TWO doors — a token on G1's north door and one on its east double doors. Headcounts match the alert text: 14 cultists (4 G7 + 2 G5 + 6 G8 vat-tenders + 2 G13) and 9 physicians staged per room text (4 G2 + 2 G5 + 3 G7; the alert page's '5 active' is a redeployment count, not a contradiction). Ramoska is NEUTRAL (a level-15 foe; the intended path is the bargain for Ruan) and Ruan FRIENDLY — unconscious at 0 HP <em>on</em> the operating table, crushing levers at slot 10 of 20. A few G5/G7 tokens sit on cot edges by necessity — nudge freely.</li>"
+    "<li><strong>Hidden finales:</strong> the caged <strong>leukodaemon</strong> (2×2) sits on the northwest glass tube — hostile to <em>everyone</em> once the tube (Hardness 1, HP 2) breaks; which of the four tubes holds the live daemon is your choice. <strong>Andaisin, Daughter of Urgathoa</strong> is pre-placed hidden at the G14 statue pool: reveal her the round after Lady Andaisin falls.</li>"
+    "<li><strong>Not staged:</strong> alert-posture redeployments (cultists massing at G8/G13, the G7 skeletons + G9 zombies posting to G4, Gray Maidens covering G1) — move the standing tokens instead; Davaulus (his default station is hospice F8 — not duplicated here); the wolf skeleton (item-summoned from the G7 robe); G5's named prisoners and G6's five Varisian captives (innocents — the drawn beds and cells are them).</li>"
+    "</ul>", level=2)
+
 journal = B.journal_entry(JID2, "2. Seven Days to the Grave", pages, folder=ADV_FOLDER)
 B.write("journals", "02-seven-days-to-the-grave", copy.deepcopy(journal), embed_pages=True)
 
 print(f"Chapter 2 built: {len(folders)} folders, {len(actors)} actors, {len(hazards)} hazards, "
-      f"1 journal ({len(pages)} pages).")
+      f"1 journal ({len(pages)} pages), {len(scenes2)} scenes "
+      f"({sum(n for _, n, _ in scenes2)} pins / {sum(t for _, _, t in scenes2)} tokens).")
+for _dn, _np, _nt in scenes2:
+    print(f"  [scene] {_dn}: {_np} pins, {_nt} tokens")

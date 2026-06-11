@@ -1,0 +1,71 @@
+{
+  "_id": "fxWarPaintYello1",
+  "img": "systems/pf2e/icons/equipment/adventuring-gear/disguisekit-cosmetics.webp",
+  "name": "Effect: Shoanti War Paint (Yellow)",
+  "type": "effect",
+  "effects": [],
+  "folder": "appItemFolder001",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "coreVersion": "14.363",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": null
+  },
+  "system": {
+    "description": {
+      "value": "<p>Granted by @UUID[Compendium.cotct-pf2e-conversion.cotct-items.Item.XAtDzNi2lNcvEXa7]{Shoanti War Paint (Yellow)} — one application, lasting 1 hour. You can benefit from only one color of Shoanti war paint at a time; applying a different color replaces this effect.</p><hr /><p>You gain a +2 item bonus to your Perception checks. When you roll a success on a Perception check, you get a critical success instead.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "hours",
+      "value": 1
+    },
+    "level": {
+      "value": 12
+    },
+    "publication": {
+      "title": "Pathfinder: Curse of the Crimson Throne (PF2e conversion, private)",
+      "authors": "",
+      "license": "OGL",
+      "remaster": true
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "perception",
+        "type": "item",
+        "value": 2
+      },
+      {
+        "key": "AdjustDegreeOfSuccess",
+        "selector": "perception",
+        "adjustment": {
+          "success": "criticalSuccess"
+        }
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-war-paint-yellow"
+  },
+  "_key": "!items!fxWarPaintYello1"
+}

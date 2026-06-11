@@ -2216,7 +2216,15 @@
           "rarity": "common",
           "custom": ""
         },
-        "rules": [],
+        "rules": [
+          {
+            "key": "Note",
+            "selector": "jaws-damage",
+            "text": "{item|description}",
+            "title": "{item|name}",
+            "visibility": "owner"
+          }
+        ],
         "slug": "werecreature-curse-of-the-werecreature",
         "schema": {
           "version": 0.8,
