@@ -17,7 +17,7 @@ ADV_ID = "cotctCampaign001"
 def strip(doc):
     d = copy.deepcopy(doc)
     d.pop("_key", None)
-    for coll in ("items", "pages", "notes", "tokens", "walls", "tiles", "lights", "results"):
+    for coll in ("items", "pages", "notes", "tokens", "walls", "tiles", "lights", "levels", "results"):
         for x in d.get(coll, []) or []:
             if isinstance(x, dict):
                 x.pop("_key", None)

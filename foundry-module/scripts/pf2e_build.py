@@ -440,7 +440,24 @@ def scene(_id, name, width, height, grid_px, bg_src, notes, tokens, folder=None,
             "journal": None, "journalEntryPage": None, "playlist": None, "playlistSound": None,
             "weather": "", "navigation": True,
             "drawings": [], "tokens": tokens, "lights": [], "sounds": [], "templates": [],
-            "notes": notes, "tiles": [], "walls": [], "regions": []}
+            "notes": notes, "tiles": [], "walls": [], "regions": [],
+            # Foundry v14: backgrounds live in the core `levels` embedded collection
+            # (the legacy top-level `background` field above is kept for tooling but is
+            # stripped by v14 import validation — without a Level, bg scenes render void)
+            "initialLevel": "lvl" + _id[:13],
+            "levels": [{
+                "_id": "lvl" + _id[:13], "name": "Ground",
+                "elevation": {"bottom": 0, "top": 20},
+                "background": {"color": "#000000", "src": bg_src, "tint": "#ffffff",
+                               "alphaThreshold": 0.75},
+                "foreground": {"src": foreground, "tint": "#ffffff", "alphaThreshold": 0.75},
+                "fog": {"src": None, "tint": "#ffffff"},
+                "textures": {"anchorX": 0.5, "anchorY": 0.5, "offsetX": 0, "offsetY": 0,
+                             "fit": "fill", "scaleX": 1, "scaleY": 1, "rotation": 0},
+                "visibility": {"levels": []},
+                "sort": 0, "flags": {},
+                "_key": f"!scenes.levels!{_id}.lvl{_id[:13]}",
+            }]}
 
 # ---------- Racooze prepared scenes (shared machinery; pilot pattern generalized) ----------
 # Geometry (walls/doors/tiles/lights/thumb) injects at build from the GM's locally
