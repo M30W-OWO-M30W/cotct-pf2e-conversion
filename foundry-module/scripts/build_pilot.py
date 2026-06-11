@@ -1500,30 +1500,47 @@ if _FISH:
     # RIGHT half = waterline level (tile @2700,600); both floors 18x22 squares
     ffpx = lambda gx, gy: (int(900 + gx * 100), int(600 + gy * 100))
     lfpx = lambda gx, gy: (int(2700 + gx * 100), int(600 + gy * 100))
-    NOTE_POS = {  # room centers, read off the gridded images
-        "A1": ffpx(6.5, 19.5), "A2": ffpx(15, 13), "A3": ffpx(2, 14.5), "A4": ffpx(9, 17.5),
-        "A5": ffpx(13.5, 15), "A6": ffpx(11, 12.5), "A7": ffpx(6.5, 4.5), "A8": ffpx(6, 11),
-        "A9": ffpx(8.5, 2), "A10": lfpx(4.2, 1.2), "A11": lfpx(6.5, 2.2), "A12": lfpx(5, 4.5),
-        "A13": lfpx(7.5, 15), "A14": lfpx(3, 13),
+    # Pin positions verified against the area texts (A10 = the ship's AFT CABIN on
+    # the first floor — its stair drops to the hold A11 on the waterline map).
+    NOTE_POS = {
+        "A1": ffpx(6.5, 19.4), "A2": ffpx(15, 13), "A3": ffpx(2, 14.5), "A4": ffpx(9, 16.5),
+        "A5": ffpx(13, 15), "A6": ffpx(11, 12.8), "A7": ffpx(6.5, 5), "A8": ffpx(5.5, 10),
+        "A9": ffpx(7, 2.2), "A10": ffpx(11.5, 2), "A11": lfpx(9, 2.5), "A12": lfpx(5, 7),
+        "A13": lfpx(8.5, 14), "A14": lfpx(3.2, 12.5),
     }
-    notes=[B.note(snid(),JID,P[c],c,*NOTE_POS[c]) for c in area_codes]
+    NOTE_NAMES = {  # full page names so the pin TOOLTIP names the location
+        "A1": "A1. Front Door", "A2": "A2. Loading Dock", "A3": "A3. Back Alley",
+        "A4": "A4. Front Room", "A5": "A5. Barracks", "A6": "A6. Yargin's Office",
+        "A7": "A7. Upper Workroom", "A8": "A8. Fishery Floor", "A9": "A9. Kraken's Folly",
+        "A10": "A10. Spider Nest", "A11": "A11. Kraken's Hold", "A12": "A12. Underpier",
+        "A13": "A13. Gaedren's Playground", "A14": "A14. Gaedren's Den",
+    }
+    notes=[B.note(snid(),JID,P[c],NOTE_NAMES[c],*NOTE_POS[c]) for c in area_codes]
     MM="icons/svg/mystery-man.svg"
     tok=[]
     def place(actor_id,name,xy,disp=-1,w=1,h=1):
         x,y=(xy[0]//100)*100,(xy[1]//100)*100
         tok.append(B.token(snid(),actor_id,name,x,y,B.token_art(name) or MM,disposition=disp,width=w,height=h))
-    # day-shift staging (all hidden — GM reveals as the raid unfolds)
+    # day-shift staging per the area texts (all hidden — GM reveals as the raid
+    # unfolds): Yargin in his office (A6), Hookshanks at the loading dock (A2),
+    # Giggles overseeing 5 orphans on the fishery floor (A8), 4 orphans at the
+    # A7 trough, Bloo asleep under the A4 desk, 1 drain spider in the aft cabin
+    # (A10) + 4 in the hold (A11), the shark under the A8 floor-hole.
     place(A["yargin"],"Yargin Balko",ffpx(11,13))
-    place(A["hookshanks"],"Hookshanks Gruller",ffpx(7,14))
-    place(A["giggles"],"Giggles",ffpx(9,3))
-    for gx,gy in [(5,13),(6,13),(7,13),(5,15),(6,15),(8,15),(5,16),(7,16),(14,15)]:
+    place(A["hookshanks"],"Hookshanks Gruller",ffpx(14.5,13))
+    place(A["giggles"],"Giggles",ffpx(6,9))
+    for gx,gy in [(5,5),(6,6),(7,5),(8,6)]:                  # A7 trough crew
         place(A["orphan"],"Lamm's Lamb",ffpx(gx,gy),disp=0)
-    place(A["drainspider"],"Drain Spider",lfpx(4,1)); place(A["drainspider"],"Drain Spider",lfpx(5,2))
-    place(A["jigsawshark"],"Jigsaw Shark",lfpx(6,5))
-    place(A["gaedren"],"Gaedren Lamm",lfpx(3,13))
+    for gx,gy in [(4,9),(6,10),(4,12),(6,12),(7,11)]:        # A8 floor crew
+        place(A["orphan"],"Lamm's Lamb",ffpx(gx,gy),disp=0)
+    place(A["drainspider"],"Drain Spider",ffpx(11,2))        # A10 cabin lurker
+    for gx,gy in [(8,2),(9,2),(10,2),(9,3)]:                 # A11 hold infestation
+        place(A["drainspider"],"Drain Spider",lfpx(gx,gy))
+    place(A["jigsawshark"],"Jigsaw Shark",lfpx(6,6))
+    place(A["gaedren"],"Gaedren Lamm",lfpx(10.5,13))         # at his tables across the pool
     _blo=B._cmeta("npc","Bloo"); _gob=B._cmeta("npc","Gobblegut")
-    if _blo: place(_blo["id"],"Bloo",ffpx(8,11))
-    if _gob: place(_gob["id"],"Gobblegut",lfpx(7,14),w=2,h=2)
+    if _blo: place(_blo["id"],"Bloo",ffpx(8.5,16))           # asleep under the A4 desk
+    if _gob: place(_gob["id"],"Gobblegut",lfpx(8,13),w=2,h=2)
     place(A["boardwalk"],"Slippery Boardwalk",ffpx(2,15))
     place(A["rottendeck"],"Rotten Ship Deck",ffpx(7,2))
     sc = B.scene(SCN,"Old Fishery",_FISH["width"],_FISH["height"],GRID,None,
