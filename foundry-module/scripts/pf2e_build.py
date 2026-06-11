@@ -580,6 +580,11 @@ def _community_swap(pack, doc):
 # render as Foundry defaults, so builds stay portable.
 _TART_PATH = ROOT / "scripts" / "token_art_index.json"
 TOKEN_ART = _json.loads(_TART_PATH.read_text(encoding="utf-8")) if _TART_PATH.exists() else {}
+# external (AoN / game-icons) art shares the same slug-addressed output files
+_XART_PATH = ROOT / "scripts" / "external_art_index.json"
+if _XART_PATH.exists():
+    for _k, _v in _json.loads(_XART_PATH.read_text(encoding="utf-8")).items():
+        TOKEN_ART.setdefault(_k, _v)
 
 def _tart_slug(name):
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")

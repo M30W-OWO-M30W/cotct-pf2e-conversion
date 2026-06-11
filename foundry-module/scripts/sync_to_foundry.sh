@@ -68,6 +68,7 @@ fi
 echo "==> Syncing into Foundry: $DEST"
 echo "==> Baking token art (token_art.py)..."
 /usr/bin/python3.12 scripts/token_art.py 2>/dev/null || python3 scripts/token_art.py || echo "  (token art skipped)"
+/usr/bin/python3.12 scripts/external_art.py 2>/dev/null || python3 scripts/external_art.py || echo "  (external art skipped)"
 err=$(cp -rf packs/. "$DEST/packs/" 2>&1 >/dev/null)
 # Fallback lock detection (in case the process check missed it): abort BEFORE
 # bumping module.json, so the version never lies about what's actually installed.

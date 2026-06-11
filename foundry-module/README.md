@@ -71,3 +71,11 @@ Cross-document context lives in the project root (one level up):
 - `conversion_change_log.md` — every change, with severity & GM-approval flags
 - `research/research_index.md` — sources & adoption decisions
 - `reports/` — encounter balance, NPC/monster, treasure, DC/skill, Foundry validation
+
+## Art credits
+
+- Character/creature portraits and tokens are generated locally from the GM's own
+  AP PDF and from [Archives of Nethys](https://2e.aonprd.com) official art (Paizo
+  Community Use Policy — personal, non-commercial use; not redistributed in this repo).
+- Symbolic hazard/creature glyph tokens use icons from [game-icons.net](https://game-icons.net)
+  by Lorc, Delapouite, and contributors, licensed [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
