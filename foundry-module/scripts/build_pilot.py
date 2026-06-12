@@ -356,11 +356,13 @@ actors = []
 def AW(slug, doc):
     actors.append(copy.deepcopy(doc)); B.write("actors", slug, doc, embed_items=True)
 
-def runed(key, _id, name, desc, potency=1, striking=0, price_gp=0, level=0):
+def runed(key, _id, name, desc, potency=1, striking=0, price_gp=0, level=0, material=None):
     """Clone an SRD gear template and etch runes onto it — for the named magic
     arms the page text promises (+1 dagger, +1 striking mithral longsword, …)."""
     it = B.gear(key, _id)
     it["name"] = name
+    if material:
+        it["system"]["material"] = {"type": material, "grade": "standard"}
     it["system"]["description"] = {"value": desc}
     rs = it["system"]["runes"]; rs["potency"] = potency
     if "striking" in rs: rs["striking"] = striking
@@ -515,7 +517,7 @@ AW("grau-soldado", B.npc(A["grau"],"Grau Soldado",4,21,62,11,11,5,9,
    B.lore(nid(),"Korvosa Lore",6),
    runed("longsword","ch1GrauSword0001","+1 Striking Mithral Longsword",
      "<p>Grau's Orisini-school dueling blade, mithral (dawnsilver)-light and etched with +1 potency and striking runes — the last thing of value he owns, and the Event 6 page's named loot. Light for its kind (Bulk reduced by the mithral).</p>",
-     potency=1, striking=1, price_gp=160, level=4),
+     potency=1, striking=1, price_gp=160, level=4, material="mithral"),
    # community Grau wears Full Plate — same name here so the write()-merge dedups his armor
    B.gear("full-plate",nid()), B.gear("steel-shield",nid())],
   notes="<p><strong>Role:</strong> a recurring NPC — a well-liked Korvosan Guard watch sergeant (Vencarlo Orisini's expelled student) drowning his despair in drink. This 'fight' is meant to be survived and <strong>defused</strong>, not a kill.</p>"
