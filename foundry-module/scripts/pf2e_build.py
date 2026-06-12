@@ -615,10 +615,27 @@ def _community_swap(pack, doc):
     out["ownership"] = {"default": 0}
     out["_stats"] = dict(STATS)
     if pack == "actors":
-        # merge our authored treasure/gear where the community actor lacks it
+        # merge our authored treasure/gear where the community actor lacks it.
+        # Dedup by BASE name too (rune prefixes stripped): a mundane copy of ours
+        # must not ride alongside the community's runed version of the same arm
+        # (their gear was renamed from its rune fields — CHG-0169) — but our
+        # RUNED/precious rewards always merge (e.g. Grau's mithral longsword).
+        def _base(n):
+            return _cnorm(re.sub(r"^\+\d\s*(major |greater )?(striking|resilient)?\s*", "", n, flags=re.I))
+        def _mundane(i):
+            sy = i.get("system", {})
+            r = sy.get("runes") or {}
+            return not (r.get("potency") or (sy.get("potencyRune", {}) or {}).get("value")
+                        or (sy.get("material", {}) or {}).get("type")
+                        or (sy.get("preciousMaterial", {}) or {}).get("value")
+                        or "+" in i.get("name", ""))
         have = {_cnorm(i["name"]) for i in out.get("items", []) if i.get("type") in _PHYS_TYPES}
+        have_base = {_base(i["name"]) for i in out.get("items", []) if i.get("type") in _PHYS_TYPES}
         used_ids = {i["_id"] for i in out.get("items", [])}
         for it in doc.get("items", []):
+            if it.get("type") in _PHYS_TYPES and _mundane(it) and _base(it["name"]) in have_base \
+                    and _cnorm(it["name"]) not in have:
+                continue   # community ships a runed version of this same arm
             if it.get("type") in _PHYS_TYPES and _cnorm(it["name"]) not in have:
                 if it["_id"] in used_ids:
                     it = _json.loads(_json.dumps(it))
