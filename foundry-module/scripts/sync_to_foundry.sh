@@ -73,6 +73,13 @@ echo "==> Syncing into Foundry: $DEST"
 echo "==> Baking token art (token_art.py)..."
 /usr/bin/python3.12 scripts/token_art.py 2>/dev/null || python3 scripts/token_art.py || echo "  (token art skipped)"
 /usr/bin/python3.12 scripts/external_art.py 2>/dev/null || python3 scripts/external_art.py || echo "  (external art skipped)"
+# HARD GATE: never start copying while Foundry holds the LevelDB locks — a
+# partial cp leaves a mixed-version pack ("corruption: bad block type").
+if tasklist.exe 2>/dev/null | grep -qi "Foundry Virtual Tabletop"; then
+  running_msg
+fi
+rm -rf "$DEST/packs"
+mkdir -p "$DEST/packs"
 err=$(cp -rf packs/. "$DEST/packs/" 2>&1 >/dev/null)
 # Fallback lock detection (in case the process check missed it): abort BEFORE
 # bumping module.json, so the version never lies about what's actually installed.
