@@ -354,7 +354,7 @@ for hf in [B.folder(F["a_root"],"Curse of the Crimson Throne","Actor",None,10000
 # =====================================================================
 actors = []
 def AW(slug, doc):
-    actors.append(copy.deepcopy(doc)); B.write("actors", slug, doc, embed_items=True)
+    actors.append(copy.deepcopy(B.write("actors", slug, doc, embed_items=True)))   # post-swap/art snapshot
 
 def runed(key, _id, name, desc, potency=1, striking=0, price_gp=0, level=0, material=None):
     """Clone an SRD gear template and etch runes onto it — for the named magic
@@ -702,7 +702,7 @@ AW("vreeg", B.npc(A["vreeg"],"Vreeg",7,24,105,13,16,17,14,
 # =====================================================================
 hazards = []
 def HW(slug, doc):
-    hazards.append(copy.deepcopy(doc)); B.write("hazards", slug, doc, embed_items=True)
+    hazards.append(copy.deepcopy(B.write("hazards", slug, doc, embed_items=True)))  # post-swap snapshot
 
 HW("slippery-boardwalk", B.hazard(A["boardwalk"],"Slippery Boardwalk",1,0,
   "<p>Obvious — no check needed to notice.</p>",
@@ -730,7 +730,7 @@ HW("acid-spraying-skulls", B.hazard(A["acidskulls"],"Acid-Spraying Skulls",3,25,
 # =====================================================================
 items = []
 def IW(slug, doc):
-    items.append(copy.deepcopy(doc)); B.write("items", slug, doc)
+    items.append(copy.deepcopy(B.write("items", slug, doc)))   # post-swap snapshot
 
 IW("queen-ileosas-brooch", B.equipment(A["brooch"],"Queen Ileosa's Brooch",0,25,
   "<p><strong>Story item.</strong> A gold filigree house-drake brooch (broken clasp) from Gaedren's strongbox (A14); Queen Ileosa's. Returning it earns an audience with the queen and launches the rest of Chapter 1. <em>Loot value trivial; narrative value high — don't let players sell it for level-breaking gold.</em></p>",
@@ -1745,7 +1745,7 @@ BG=[
 bgs=[]
 for key,bname,boosts,skill,lore,bdesc in BG:
     _bg=B.background(A[key],bname,bdesc,boosts,skill,lore,folder=F["i_bg"])
-    bgs.append(copy.deepcopy(_bg)); B.write("items",key.replace("bg_","background-"),_bg)
+    bgs.append(copy.deepcopy(B.write("items",key.replace("bg_","background-"),_bg)))
 
 cg_pages=[B.page(nid(),"The Harrowing",
   B.s_desc("<p>“The cards know more than they tell.” At the start of each chapter, Zellara — and, after the Old Fishery, her haunted deck — deals the party a Harrow reading.</p>")
