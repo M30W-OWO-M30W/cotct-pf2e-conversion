@@ -3,160 +3,96 @@
   "items": [
     {
       "_id": "UZlHtMydIq06OfJW",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.ynnBwzkzsR6B73iO"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/sickle.webp",
       "name": "Sickle",
+      "type": "weapon",
+      "img": "icons/tools/hand/sickle-steel-grey.webp",
       "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Originally a farming tool used for reaping grain, this one‑handed weapon has a short wooden handle ending in a curved blade, sometimes sharpened on both sides.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "finesse",
-            "trip"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "sickle",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.478+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "sickle",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "simple",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d4"
+        },
+        "description": {
+          "value": "<p>Originally a farming tool used for reaping grain, this one‑handed weapon has a short wooden handle ending in a curved blade, sometimes sharpened on both sides.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "knife",
         "hardness": 0,
-        "weight": {
-          "value": "L"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "sp": 2
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 1
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
-        "preciousMaterial": {
-          "value": ""
-        },
-        "preciousMaterialGrade": {
-          "value": ""
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
         },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse",
+            "trip"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 0
+        "slug": "sickle",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "simple",
-        "group": "knife",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d4",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "potencyRune": {
-          "value": null
-        },
-        "strikingRune": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "propertyRune1": {
-          "value": ""
-        },
-        "propertyRune2": {
-          "value": ""
-        },
-        "propertyRune3": {
-          "value": ""
-        },
-        "propertyRune4": {
-          "value": ""
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,

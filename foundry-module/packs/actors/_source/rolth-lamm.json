@@ -418,116 +418,77 @@
     },
     {
       "_id": "5sT1PMDsEBAoIbs1",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.dDIPA1WE9ESF67EB"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/cloak-of-the-bat.webp",
       "name": "Hooded Robe",
+      "type": "armor",
+      "img": "icons/equipment/chest/shirt-collared-pink.webp",
       "sort": 2200000,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Explorer's clothing is sturdy enough that it can be reinforced to protect you, even though it isn't a suit of armor. It comes in many forms, though the most common sorts look like clerical vestments, monk's garments, or wizard's robes, as members of all three classes are likely to avoid wearing armor.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "comfort"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "clothing-explorers",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.477+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "acBonus": 0,
         "baseItem": "explorers-clothing",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 0.1
         },
+        "category": "unarmored",
+        "checkPenalty": 0,
+        "containerId": null,
+        "description": {
+          "value": "<p>Explorer's clothing is sturdy enough that it can be reinforced to protect you, even though it isn't a suit of armor. It comes in many forms, though the most common sorts look like clerical vestments, monk's garments, or wizard's robes, as members of all three classes are likely to avoid wearing armor.</p>",
+          "gm": ""
+        },
+        "dexCap": 5,
+        "grade": null,
+        "group": "cloth",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "L"
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "sp": 1
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "resilient": 0
         },
-        "containerId": null,
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "speedPenalty": 0,
+        "strength": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "comfort"
+          ]
         },
-        "usage": {
-          "value": "wornarmor"
+        "slug": "explorers-clothing",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "level": {
-          "value": 0
-        },
-        "armor": {
-          "value": 0
-        },
-        "category": "unarmored",
-        "group": "cloth",
-        "strength": {
-          "value": 0
-        },
-        "dex": {
-          "value": 5
-        },
-        "check": {
-          "value": 0
-        },
-        "speed": {
-          "value": 0
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -918,55 +879,61 @@
     },
     {
       "_id": "7PeleMZdptzEb18F",
-      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
       "name": "+1 Key-Bladed Dagger",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "evocation",
-            "finesse",
-            "magical",
-            "thrown-10",
-            "versatile-s"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "dagger",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.477+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
           }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "agile",
+            "finesse",
+            "thrown-10",
+            "versatile-s",
+            "magical"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 2
         },
         "quantity": 1,
         "baseItem": "dagger",
+        "bulk": {
+          "value": 0.1
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "L"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "gp": 35
@@ -974,20 +941,20 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
-            "name": "Unusual Dagger",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "name": "",
+            "img": "",
             "data": {
               "description": {
                 "value": ""
@@ -999,35 +966,36 @@
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 2
-        },
         "category": "simple",
         "group": "knife",
         "bonus": {
           "value": 0
         },
         "damage": {
-          "value": "",
           "dice": 1,
           "die": "d4",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
+          "damageType": "piercing",
+          "persistent": null
         },
         "splashDamage": {
           "value": 0
         },
         "range": null,
+        "expend": null,
+        "ammo": null,
         "reload": {
           "value": "-"
         },
-        "MAP": {
-          "value": ""
+        "grade": null,
+        "runes": {
+          "potency": 1,
+          "striking": 0,
+          "property": []
         },
-        "specific": {
-          "value": false
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
         },
         "property1": {
           "value": "",
@@ -1037,30 +1005,8 @@
           "critDice": 0,
           "critDie": "",
           "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 0,
-          "property": []
+          "critDamageType": ""
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.rQWaJhI5Bko5x14Z"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

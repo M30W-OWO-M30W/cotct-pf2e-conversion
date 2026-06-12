@@ -321,146 +321,100 @@
     },
     {
       "_id": "w7PBQJLvTbNrqqwS",
-      "img": "systems/pf2e/icons/equipment/weapons/repeating-heavy-crossbow.webp",
       "name": "+2 Striking Vindicator",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/repeating-heavy-crossbow.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>This large crossbow has an internal chamber that can be loaded with up to five bolts. While it uses the same automated catch mechanism as other repeating crossbows, a repeating heavy crossbow's design has significant trade-offs. It has increased range and damage and is easier to learn how to use, but requires a small amount of effort to reload.</p>"
+        "ammo": {
+          "baseType": "magazine-repeating-heavy-crossbow",
+          "builtIn": false,
+          "capacity": 1
         },
-        "source": {
-          "value": "Pathfinder Guns & Gears"
-        },
-        "traits": {
-          "value": [
-            "evocation",
-            "magical",
-            "repeating"
-          ],
-          "rarity": "uncommon",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "repeating-heavy-crossbow",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.462+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
         "baseItem": "repeating-heavy-crossbow",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 2
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "piercing",
+          "dice": 1,
+          "die": "d10"
+        },
+        "description": {
+          "value": "<p>This large crossbow has an internal chamber that can be loaded with up to five bolts. While it uses the same automated catch mechanism as other repeating crossbows, a repeating heavy crossbow's design has significant trade-offs. It has increased range and damage and is easier to learn how to use, but requires a small amount of effort to reload.</p>",
+          "gm": ""
+        },
+        "expend": 1,
+        "grade": null,
+        "group": "crossbow",
         "hardness": 0,
-        "weight": {
-          "value": "2"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 10
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 1020
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": "Pathfinder Guns & Gears"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": "null",
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Repeating Heavy Crossbow",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-two-hands"
-        },
-        "level": {
-          "value": 10
-        },
-        "category": "martial",
-        "group": "bow",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d10",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
+        "quantity": 1,
         "range": 180,
         "reload": {
           "value": "1"
         },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
+        "rules": [],
         "runes": {
           "potency": 2,
-          "striking": 1,
-          "property": []
+          "property": [],
+          "striking": 1
+        },
+        "size": "med",
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "uncommon",
+          "value": [
+            "repeating",
+            "magical"
+          ]
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "slug": "repeating-heavy-crossbow",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.bP608Wb1l9ZY1zwb"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -627,148 +581,99 @@
     },
     {
       "_id": "bTabYqaO06aswc3z",
-      "img": "systems/pf2e/icons/equipment/weapons/hatchet.webp",
       "name": "+2 Striking Hatchet",
+      "type": "weapon",
+      "img": "icons/weapons/axes/axe-broad-black.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>This small axe can be used in close combat or thrown.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "evocation",
-            "magical",
-            "sweep",
-            "thrown-10"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "hatchet",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.462+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "hatchet",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d6"
+        },
+        "description": {
+          "value": "<p>This small axe can be used in close combat or thrown.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "axe",
         "hardness": 0,
-        "weight": {
-          "value": "L"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 10
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 1000
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Hatchet",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "level": {
-          "value": 10
-        },
-        "category": "martial",
-        "group": "axe",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d6",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
+        "quantity": 1,
         "range": null,
         "reload": {
           "value": "-"
         },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
+        "rules": [],
         "runes": {
           "potency": 2,
-          "striking": 1,
-          "property": []
+          "property": [],
+          "striking": 1
+        },
+        "size": "med",
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "sweep",
+            "thrown-10",
+            "magical"
+          ]
+        },
+        "usage": {
+          "canBeAmmo": false,
+          "value": "held-in-one-hand"
+        },
+        "slug": "hatchet",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.LGgvev6AV0So8tP9"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -781,54 +686,59 @@
     },
     {
       "_id": "a0jQbylHzGRFVeMe",
-      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
       "name": "+1 Resilient Mithral Chain Mail",
+      "type": "armor",
+      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh. It typically includes a chain shirt, leggings, a pair of arms, and a coif, collectively protecting most of the body.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "abjuration",
-            "flexible",
-            "invested",
-            "magical",
-            "noisy"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh. It typically includes a chain shirt, leggings, a pair of arms, and a coif, collectively protecting most of the body.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "chain-mail",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.462+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
           }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "flexible",
+            "noisy",
+            "magical"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 12
         },
         "quantity": 1,
         "baseItem": "chain-mail",
+        "bulk": {
+          "value": 2
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "2"
-        },
-        "equippedBulk": {
-          "value": "1"
-        },
         "price": {
           "value": {
             "gp": 2420
@@ -836,21 +746,20 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
+        "material": {
+          "type": "mithral",
+          "grade": "standard"
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
-            "name": "Unusual Chain Mail",
-            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
+            "name": "",
+            "img": "",
             "data": {
               "description": {
                 "value": ""
@@ -859,52 +768,20 @@
           },
           "misidentified": {}
         },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 12
-        },
-        "armor": {
-          "value": 4
-        },
         "category": "medium",
         "group": "chain",
-        "strength": {
-          "value": 14
-        },
-        "dex": {
-          "value": 1
-        },
-        "check": {
-          "value": -2
-        },
-        "speed": {
-          "value": 0
-        },
-        "potency": {},
+        "acBonus": 4,
+        "strength": 3,
+        "dexCap": 1,
+        "checkPenalty": -2,
+        "speedPenalty": -5,
+        "grade": null,
         "runes": {
           "potency": 1,
           "resilient": 1,
           "property": []
         },
-        "material": {
-          "type": "mithral",
-          "grade": "standard"
-        }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Kf4eJEXnFPuAsseP"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
+        "subitems": []
       },
       "_stats": {
         "systemId": "pf2e",

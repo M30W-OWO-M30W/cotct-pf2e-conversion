@@ -3,161 +3,97 @@
   "items": [
     {
       "_id": "Z6BNfng94z1xdzn3",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.nOFcCidD5AwVZWTv"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/war-razor.webp",
       "name": "Scalpel",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/war-razor.webp",
       "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>A war razor is an exaggerated version of the barbers' tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.</p>"
-        },
-        "source": {
-          "value": ""
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "backstabber",
-            "deadly-d8",
-            "finesse"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "war-razor",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.487+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 3,
+        "ammo": null,
         "baseItem": "war-razor",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d4"
+        },
+        "description": {
+          "value": "<p>A war razor is an exaggerated version of the barbers' tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "knife",
         "hardness": 0,
-        "weight": {
-          "value": "L"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "sp": 3
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 1
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Treasure Vault (Remastered)"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 3,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
-        "preciousMaterial": {
-          "value": ""
-        },
-        "preciousMaterialGrade": {
-          "value": ""
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
         },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "backstabber",
+            "deadly-d8",
+            "finesse"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 0
+        "slug": "war-razor",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "knife",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d4",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": null
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "potencyRune": {
-          "value": null
-        },
-        "strikingRune": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "propertyRune1": {
-          "value": ""
-        },
-        "propertyRune2": {
-          "value": ""
-        },
-        "propertyRune3": {
-          "value": ""
-        },
-        "propertyRune4": {
-          "value": ""
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,

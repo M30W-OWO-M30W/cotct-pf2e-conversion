@@ -576,48 +576,55 @@
     },
     {
       "_id": "UjBY48NSVKtvVQ90",
-      "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
       "name": "Hand Crossbow",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "hand-crossbow",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:39.083+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
           }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
         },
         "quantity": 1,
         "baseItem": "hand-crossbow",
+        "bulk": {
+          "value": 0.1
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "L"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "gp": 3
@@ -625,15 +632,15 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
@@ -650,35 +657,40 @@
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 0
-        },
         "category": "simple",
-        "group": "bow",
+        "group": "crossbow",
         "bonus": {
           "value": 0
         },
         "damage": {
-          "value": "",
           "dice": 1,
           "die": "d6",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
+          "damageType": "piercing",
+          "persistent": null
         },
         "splashDamage": {
           "value": 0
         },
         "range": 60,
+        "expend": 1,
+        "ammo": {
+          "capacity": 1,
+          "baseType": "bolts",
+          "builtIn": false
+        },
         "reload": {
           "value": "1"
         },
-        "MAP": {
-          "value": ""
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
         },
-        "specific": {
-          "value": false
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
         },
         "property1": {
           "value": "",
@@ -690,19 +702,6 @@
           "critDamage": "",
           "critDamageType": ""
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.XyA6PKV46aNlLXOd"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -871,48 +870,55 @@
     },
     {
       "_id": "h6VOHyJfRXwDTA0c",
-      "img": "systems/pf2e/icons/equipment/armor/leather-armor.webp",
       "name": "Leather Armor",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-banded-simple-leather-brown.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "leather-armor",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:39.083+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
           }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
         },
         "quantity": 1,
         "baseItem": "leather-armor",
+        "bulk": {
+          "value": 1
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "2"
-        },
-        "equippedBulk": {
-          "value": "1"
-        },
         "price": {
           "value": {
             "gp": 2
@@ -920,15 +926,15 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "inSlot": false
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
@@ -942,43 +948,20 @@
           },
           "misidentified": {}
         },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 0
-        },
-        "armor": {
-          "value": 1
-        },
         "category": "light",
         "group": "leather",
-        "strength": {
-          "value": 10
+        "acBonus": 1,
+        "strength": 0,
+        "dexCap": 4,
+        "checkPenalty": -1,
+        "speedPenalty": 0,
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
         },
-        "dex": {
-          "value": 4
-        },
-        "check": {
-          "value": -1
-        },
-        "speed": {
-          "value": 0
-        },
-        "potency": {}
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.4tIVTg9wj56RrveA"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
+        "subitems": []
       },
       "_stats": {
         "systemId": "pf2e",
@@ -992,147 +975,97 @@
     },
     {
       "_id": "1onJ3jEmPpx4VbHp",
-      "img": "systems/pf2e/icons/equipment/weapons/spiked-gauntlet.webp",
       "name": "+1 Spiked Gauntlet",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/spiked-gauntlet.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Providing the same defensive function as a standard gauntlet, this version has a group of spikes protruding from the knuckles to deliver piercing damage with a punch.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "evocation",
-            "free-hand",
-            "magical"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "spiked-gauntlet",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:39.083+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "spiked-gauntlet",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "simple",
+        "containerId": null,
+        "damage": {
+          "damageType": "piercing",
+          "dice": 1,
+          "die": "d4"
+        },
+        "description": {
+          "value": "<p>Providing the same defensive function as a standard gauntlet, this version has a group of spikes protruding from the knuckles to deliver piercing damage with a punch.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "brawling",
         "hardness": 0,
-        "weight": {
-          "value": "L"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 2
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 35
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 1,
+          "property": [],
+          "striking": 0
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Spiked Gauntlet",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "free-hand",
+            "magical"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 2
+        "slug": "spiked-gauntlet",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "simple",
-        "group": "brawling",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d4",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 0,
-          "property": []
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.YFfG2fMyaIAXkmtr"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

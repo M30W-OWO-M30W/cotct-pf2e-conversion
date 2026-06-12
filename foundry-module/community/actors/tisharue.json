@@ -352,118 +352,78 @@
     },
     {
       "_id": "EQ0yRtDtNQysBqjP",
-      "img": "systems/pf2e/icons/equipment//armor/fullplate.webp",
       "name": "+1 Resilient Full Plate",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-layered-steel-green.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "abjuration",
-            "bulwark",
-            "invested",
-            "magical"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "full-plate",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "acBonus": 6,
         "baseItem": "full-plate",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 4
         },
+        "category": "heavy",
+        "checkPenalty": -3,
+        "containerId": null,
+        "description": {
+          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>",
+          "gm": ""
+        },
+        "dexCap": 0,
+        "grade": null,
+        "group": "plate",
         "hardness": 0,
-        "weight": {
-          "value": "5"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "4"
+        "level": {
+          "value": 8
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 500
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Full Plate",
-            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 8
-        },
-        "armor": {
-          "value": 6
-        },
-        "category": "heavy",
-        "group": "plate",
-        "strength": {
-          "value": 18
-        },
-        "dex": {
-          "value": 0
-        },
-        "check": {
-          "value": -3
-        },
-        "speed": {
-          "value": -10
-        },
-        "potency": {},
+        "quantity": 1,
+        "rules": [],
         "runes": {
           "potency": 1,
-          "resilient": 1,
-          "property": []
+          "property": [],
+          "resilient": 1
+        },
+        "size": "med",
+        "speedPenalty": -10,
+        "strength": 4,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "bulwark",
+            "magical"
+          ]
+        },
+        "slug": "full-plate",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Gq1cZWSKOtJhKd2p"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -476,141 +436,99 @@
     },
     {
       "_id": "IR0Xy8KPFoSMAg48",
-      "img": "systems/pf2e/icons/equipment/weapons/longsword.webp",
       "name": "+2 Striking Longsword",
+      "type": "weapon",
+      "img": "icons/weapons/swords/sword-guard-blue.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "evocation",
-            "magical",
-            "versatile-p"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "longsword",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "longsword",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 10
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 1001
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": "-"
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 2,
+          "property": [
+            "flaming"
+          ],
+          "striking": 1
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Longsword",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "level": {
-          "value": 10
-        },
-        "category": "martial",
-        "group": "sword",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
         "splashDamage": {
           "value": 0
         },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 2,
-          "striking": 1,
-          "property": [
-            "flaming"
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "versatile-p",
+            "magical"
           ]
+        },
+        "usage": {
+          "canBeAmmo": false,
+          "value": "held-in-one-hand"
+        },
+        "slug": "longsword",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.LJdbVTOZog39EEbi"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -623,47 +541,60 @@
     },
     {
       "_id": "Bcalzl6KLze6eVUk",
-      "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
       "name": "+2 Striking Composite Longbow",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "deadly-d10",
-            "evocation",
-            "magical",
-            "propulsive",
-            "volley-30"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "composite-longbow",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "deadly-d10",
+            "propulsive",
+            "volley-30",
+            "magical"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 10
         },
         "quantity": 1,
         "baseItem": "composite-longbow",
+        "bulk": {
+          "value": 2
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "2"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "gp": 1020
@@ -671,156 +602,15 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Composite Longbow",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "material": {
+          "type": null,
+          "grade": null
         },
-        "usage": {
-          "value": "held-in-one-plus-hands"
-        },
-        "level": {
-          "value": 10
-        },
-        "category": "martial",
-        "group": "bow",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": 100,
-        "reload": {
-          "value": "0"
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 2,
-          "striking": 1,
-          "property": []
-        }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.dUC8Fsa6FZtVikS3"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
-      },
-      "_stats": {
-        "systemId": "pf2e",
-        "systemVersion": "4.4.0",
-        "coreVersion": "10.290",
-        "createdTime": 1668900661054,
-        "modifiedTime": 1668900765607,
-        "lastModifiedBy": "hBFuMGrVgeghbDDz"
-      }
-    },
-    {
-      "_id": "sDe8ebIcY3sYWW4I",
-      "img": "systems/pf2e/icons/equipment/shields/precious-material-shields/adamantite-shield.webp",
-      "name": "Adamantine Shield (Standard-Grade)",
-      "system": {
-        "description": {
-          "value": "<p>Adamantine shields are particularly sturdy, and when used for a shield bash, they are adamantine weapons.</p>\n<p>The shield has Hardness 10, HP 40, and BT 20.</p>\n<hr />\n<p><strong>Craft Requirements</strong> adamantine worth at least 55 gp</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [],
-          "rarity": "uncommon",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "adamantine-shield-standard-grade",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
-        "baseItem": null,
-        "hp": {
-          "brokenThreshold": 20,
-          "value": 40,
-          "max": 40
-        },
-        "hardness": 10,
-        "weight": {
-          "value": "1"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
-        "price": {
-          "value": {
-            "gp": 440
-          }
-        },
-        "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
         "identification": {
           "status": "identified",
           "unidentified": {
@@ -835,45 +625,128 @@
           "misidentified": {}
         },
         "usage": {
-          "value": "held-in-one-hand"
+          "value": "held-in-one-plus-hands"
         },
-        "level": {
-          "value": 8
-        },
-        "armor": {
-          "value": 2
-        },
-        "category": "shield",
-        "group": null,
-        "strength": {
+        "category": "martial",
+        "group": "bow",
+        "bonus": {
           "value": 0
         },
-        "dex": {
+        "damage": {
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
           "value": 0
         },
-        "check": {
+        "range": 100,
+        "expend": 1,
+        "ammo": {
+          "capacity": null,
+          "baseType": "arrows",
+          "builtIn": false
+        },
+        "reload": {
+          "value": "0"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 2,
+          "striking": 1,
+          "property": []
+        },
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
           "value": 0
         },
-        "speed": {
-          "value": 0
-        },
-        "material": {
-          "type": "adamantine",
-          "grade": "standard"
+        "property1": {
+          "value": "",
+          "dice": 0,
+          "die": "",
+          "damageType": "",
+          "critDice": 0,
+          "critDie": "",
+          "critDamage": "",
+          "critDamageType": ""
         }
       },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.2gMlhHlkQp3DuWw5"
-        }
-      },
-      "effects": [],
-      "folder": null,
+      "_stats": {
+        "systemId": "pf2e",
+        "systemVersion": "4.4.0",
+        "coreVersion": "10.290",
+        "createdTime": 1668900661054,
+        "modifiedTime": 1668900765607,
+        "lastModifiedBy": "hBFuMGrVgeghbDDz"
+      }
+    },
+    {
+      "_id": "sDe8ebIcY3sYWW4I",
+      "name": "Adamantine Shield (Standard-Grade)",
+      "type": "shield",
+      "img": "systems/pf2e/icons/equipment/shields/steel-shield.webp",
       "sort": 0,
       "ownership": {
         "default": 0,
         "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
+      "system": {
+        "acBonus": 2,
+        "baseItem": "steel-shield",
+        "bulk": {
+          "value": 1
+        },
+        "containerId": null,
+        "description": {
+          "value": "<p>Adamantine shields are particularly sturdy, and when used for a shield bash, they are adamantine weapons.</p>\n<p>The shield has Hardness 10, HP 40, and BT 20.</p>\n<hr />\n<p><strong>Craft Requirements</strong> adamantine worth at least 55 gp</p>",
+          "gm": ""
+        },
+        "grade": null,
+        "hardness": 5,
+        "hp": {
+          "max": 20,
+          "value": 20
+        },
+        "level": {
+          "value": 8
+        },
+        "material": {
+          "type": "adamantine",
+          "grade": "standard"
+        },
+        "price": {
+          "value": {
+            "gp": 440
+          }
+        },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "reinforcing": 0
+        },
+        "size": "med",
+        "speedPenalty": 0,
+        "traits": {
+          "integrated": null,
+          "rarity": "common",
+          "value": []
+        },
+        "slug": "steel-shield",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
+        }
       },
       "_stats": {
         "systemId": "pf2e",

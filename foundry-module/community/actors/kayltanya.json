@@ -534,46 +534,61 @@
     },
     {
       "_id": "Cq8YsSBP8aj00RAv",
-      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
       "name": "+2 Greater Striking Returning Dagger (coated with purple worm venom)",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
+          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>",
+          "gm": ""
         },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
+        "rules": [],
+        "slug": "dagger",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
         },
         "traits": {
+          "otherTags": [],
           "value": [
             "agile",
             "finesse",
             "thrown-10",
-            "versatile-s"
+            "versatile-s",
+            "magical"
           ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "rarity": "common"
         },
-        "rules": [],
-        "slug": "dagger",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 12
         },
         "quantity": 1,
         "baseItem": "dagger",
+        "bulk": {
+          "value": 0.1
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "L"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "gp": 2000
@@ -581,20 +596,20 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
-            "name": "Unusual Dagger",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "name": "",
+            "img": "",
             "data": {
               "description": {
                 "value": ""
@@ -606,35 +621,38 @@
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 12
-        },
         "category": "simple",
         "group": "knife",
         "bonus": {
           "value": 0
         },
         "damage": {
-          "value": "",
           "dice": 1,
           "die": "d4",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
+          "damageType": "piercing",
+          "persistent": null
         },
         "splashDamage": {
           "value": 0
         },
         "range": null,
+        "expend": null,
+        "ammo": null,
         "reload": {
           "value": "-"
         },
-        "MAP": {
-          "value": ""
+        "grade": null,
+        "runes": {
+          "potency": 2,
+          "striking": 2,
+          "property": [
+            "returning"
+          ]
         },
-        "specific": {
-          "value": false
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
         },
         "property1": {
           "value": "",
@@ -644,32 +662,8 @@
           "critDice": 0,
           "critDie": "",
           "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 2,
-          "striking": 2,
-          "property": [
-            "returning"
-          ]
+          "critDamageType": ""
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.rQWaJhI5Bko5x14Z"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -682,141 +676,100 @@
     },
     {
       "_id": "deXLFGXCETslFOYB",
-      "img": "systems/pf2e/icons/equipment/weapons/sawtooth-saber.webp",
       "name": "+3 Greater Striking Sawtooth Saber",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/sawtooth-saber.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>The signature weapon of the Red Mantis assassins, this curved blade is serrated like a saw, hence the name.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "finesse",
-            "twin"
-          ],
-          "rarity": "uncommon",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "sawtooth-saber",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 2,
+        "ammo": null,
         "baseItem": "sawtooth-saber",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "advanced",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d6"
+        },
+        "description": {
+          "value": "<p>The signature weapon of the Red Mantis assassins, this curved blade is serrated like a saw, hence the name.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
         "hardness": 0,
-        "weight": {
-          "value": "-"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 16
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 10005
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 2,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 3,
+          "property": [
+            "greaterShock"
+          ],
+          "striking": 2
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Sawtooth Saber",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "uncommon",
+          "value": [
+            "agile",
+            "finesse",
+            "twin",
+            "magical"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 16
+        "slug": "sawtooth-saber",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "advanced",
-        "group": "sword",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d6",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 3,
-          "striking": 2,
-          "property": [
-            "greaterShock"
-          ]
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.wkzxLpSe7LN6c5Ld"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -829,44 +782,59 @@
     },
     {
       "_id": "3E962ajfLnkYXqEF",
-      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
       "name": "+2 Greater Resilient Chain Mail",
+      "type": "armor",
+      "img": "systems/pf2e/icons/equipment/armor/chainmail.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh. It typically includes a chain shirt, leggings, a pair of arms, and a coif, collectively protecting most of the body.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "flexible",
-            "noisy"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh. It typically includes a chain shirt, leggings, a pair of arms, and a coif, collectively protecting most of the body.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "chain-mail",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "flexible",
+            "noisy",
+            "magical"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 14
         },
         "quantity": 1,
         "baseItem": "chain-mail",
+        "bulk": {
+          "value": 2
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "3"
-        },
-        "equippedBulk": {
-          "value": "2"
-        },
         "price": {
           "value": {
             "gp": 4500
@@ -874,21 +842,20 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
-            "name": "Unusual Chain Mail",
-            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
+            "name": "",
+            "img": "",
             "data": {
               "description": {
                 "value": ""
@@ -897,48 +864,20 @@
           },
           "misidentified": {}
         },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 14
-        },
-        "armor": {
-          "value": 4
-        },
         "category": "medium",
         "group": "chain",
-        "strength": {
-          "value": 16
-        },
-        "dex": {
-          "value": 1
-        },
-        "check": {
-          "value": -2
-        },
-        "speed": {
-          "value": -5
-        },
-        "potency": {},
+        "acBonus": 4,
+        "strength": 3,
+        "dexCap": 1,
+        "checkPenalty": -2,
+        "speedPenalty": -5,
+        "grade": null,
         "runes": {
           "potency": 2,
           "resilient": 2,
           "property": []
-        }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Kf4eJEXnFPuAsseP"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
+        },
+        "subitems": []
       },
       "_stats": {
         "systemId": "pf2e",

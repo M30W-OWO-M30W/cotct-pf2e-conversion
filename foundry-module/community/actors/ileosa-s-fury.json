@@ -694,113 +694,77 @@
     },
     {
       "_id": "OSnx6OEHdHRV5hH5",
-      "img": "systems/pf2e/icons/equipment/armor/breastplate.webp",
       "name": "+2 Resilient Breastplate",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half‑plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "breastplate",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "acBonus": 4,
         "baseItem": "breastplate",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 2
         },
+        "category": "medium",
+        "checkPenalty": -2,
+        "containerId": null,
+        "description": {
+          "value": "<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half‑plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>",
+          "gm": ""
+        },
+        "dexCap": 1,
+        "grade": null,
+        "group": "plate",
         "hardness": 0,
-        "weight": {
-          "value": "3"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "2"
+        "level": {
+          "value": 11
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 1400
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Breastplate",
-            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 11
-        },
-        "armor": {
-          "value": 4
-        },
-        "category": "medium",
-        "group": "plate",
-        "strength": {
-          "value": 16
-        },
-        "dex": {
-          "value": 1
-        },
-        "check": {
-          "value": -2
-        },
-        "speed": {
-          "value": -5
-        },
-        "potency": {},
+        "quantity": 1,
+        "rules": [],
         "runes": {
           "potency": 2,
-          "resilient": 1,
-          "property": []
+          "property": [],
+          "resilient": 1
+        },
+        "size": "med",
+        "speedPenalty": -5,
+        "strength": 3,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "magical"
+          ]
+        },
+        "slug": "breastplate",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.r0ifJfoz8aqf0mwk"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -813,139 +777,99 @@
     },
     {
       "_id": "Am3XWLH3e0JNWwR0",
-      "img": "systems/pf2e/icons/equipment/weapons/trident.webp",
       "name": "+2 Striking Trident",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/trident.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>This three‑pronged, spear‑like weapon typically has a 4‑foot shaft. Like a spear, it can be wielded with one hand or thrown.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "thrown-20"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "trident",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "trident",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "piercing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>This three‑pronged, spear‑like weapon typically has a 4‑foot shaft. Like a spear, it can be wielded with one hand or thrown.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "spear",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 10
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 1001
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Trident",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "level": {
-          "value": 10
-        },
-        "category": "martial",
-        "group": "spear",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
+        "quantity": 1,
         "range": null,
         "reload": {
           "value": "-"
         },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
+        "rules": [],
         "runes": {
           "potency": 2,
-          "striking": 1,
           "property": [
             "returning"
+          ],
+          "striking": 1
+        },
+        "size": "med",
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "thrown-20",
+            "magical"
           ]
+        },
+        "usage": {
+          "canBeAmmo": false,
+          "value": "held-in-one-hand"
+        },
+        "slug": "trident",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.FJrsDoaIXksVjld9"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

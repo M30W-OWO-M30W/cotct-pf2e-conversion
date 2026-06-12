@@ -640,149 +640,99 @@
     },
     {
       "_id": "dyhkenkyuZP2f72R",
-      "img": "systems/pf2e/icons/equipment/weapons/war-razor.webp",
       "name": "+1 Striking War Razor",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/war-razor.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>A war razor is an exaggerated version of the barbers' tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Lost Omens: Gods & Magic"
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "backstabber",
-            "deadly-d8",
-            "evocation",
-            "finesse",
-            "magical"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "war-razor",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.488+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "war-razor",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d4"
+        },
+        "description": {
+          "value": "<p>A war razor is an exaggerated version of the barbers' tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "knife",
         "hardness": 0,
-        "weight": {
-          "value": "L"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 4
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 100
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Treasure Vault (Remastered)"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 1,
+          "property": [],
+          "striking": 1
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual War Razor",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "backstabber",
+            "deadly-d8",
+            "finesse",
+            "magical"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 4
+        "slug": "war-razor",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "knife",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d4",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 1,
-          "property": []
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.nOFcCidD5AwVZWTv"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -796,51 +746,57 @@
     },
     {
       "_id": "EOxrjah9KH41tHC0",
-      "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
       "name": "+1 Striking Hand Crossbow",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "evocation",
-            "magical"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "hand-crossbow",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.488+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
           }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "magical"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 4
         },
         "quantity": 1,
         "baseItem": "hand-crossbow",
+        "bulk": {
+          "value": 0.1
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "L"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "gp": 103
@@ -848,20 +804,20 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
-            "name": "Unusual Hand Crossbow",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
+            "name": "",
+            "img": "",
             "data": {
               "description": {
                 "value": ""
@@ -873,35 +829,40 @@
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 4
-        },
         "category": "simple",
-        "group": "bow",
+        "group": "crossbow",
         "bonus": {
           "value": 0
         },
         "damage": {
-          "value": "",
           "dice": 1,
           "die": "d6",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
+          "damageType": "piercing",
+          "persistent": null
         },
         "splashDamage": {
           "value": 0
         },
         "range": 60,
+        "expend": 1,
+        "ammo": {
+          "capacity": 1,
+          "baseType": "bolts",
+          "builtIn": false
+        },
         "reload": {
           "value": "1"
         },
-        "MAP": {
-          "value": ""
+        "grade": null,
+        "runes": {
+          "potency": 1,
+          "striking": 1,
+          "property": []
         },
-        "specific": {
-          "value": false
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
         },
         "property1": {
           "value": "",
@@ -911,30 +872,8 @@
           "critDice": 0,
           "critDie": "",
           "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 1,
-          "property": []
+          "critDamageType": ""
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.XyA6PKV46aNlLXOd"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -948,128 +887,81 @@
     },
     {
       "_id": "D5eRHPcif4sbdxD1",
-      "img": "systems/pf2e/icons/equipment/armor/chainshirt.webp",
       "name": "+1 Glamered Chain Shirt",
+      "type": "armor",
+      "img": "systems/pf2e/icons/equipment/armor/chainshirt.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Sometimes called a hauberk, this is a long shirt constructed of the same metal rings as chainmail. However, it is much lighter than chainmail and protects only the torso, upper arms, and upper legs of its wearer.</p>\n<hr>\n<p><span id=\"ctl00_RadDrawer1_Content_MainContent_DetailedOutput\">This armor can be disguised with a mere thought.</span></p>\n<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> envision</p>\n<p><strong>Effect</strong> You change the shape and appearance of this armor to appear as ordinary or fine clothes of your imagining. The armor's statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "abjuration",
-            "flexible",
-            "invested",
-            "magical",
-            "noisy"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "chain-shirt",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.488+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "acBonus": 2,
         "baseItem": "chain-shirt",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 1
         },
+        "category": "light",
+        "checkPenalty": -1,
+        "containerId": null,
+        "description": {
+          "value": "<p>Sometimes called a hauberk, this is a long shirt constructed of the same metal rings as chainmail. However, it is much lighter than chainmail and protects only the torso, upper arms, and upper legs of its wearer.</p>\n<hr>\n<p><span id=\"ctl00_RadDrawer1_Content_MainContent_DetailedOutput\">This armor can be disguised with a mere thought.</span></p>\n<p><strong>Activate</strong> <span class=\"pf2-icon\">A</span> envision</p>\n<p><strong>Effect</strong> You change the shape and appearance of this armor to appear as ordinary or fine clothes of your imagining. The armor's statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.</p>",
+          "gm": ""
+        },
+        "dexCap": 3,
+        "grade": null,
+        "group": "chain",
         "hardness": 0,
-        "weight": {
-          "value": "2"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "1"
+        "level": {
+          "value": 5
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 300
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Chain Shirt",
-            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 5
-        },
-        "armor": {
-          "value": 2
-        },
-        "category": "light",
-        "group": "chain",
-        "strength": {
-          "value": 12
-        },
-        "dex": {
-          "value": 3
-        },
-        "check": {
-          "value": -1
-        },
-        "speed": {
-          "value": 0
-        },
-        "potency": {},
+        "quantity": 1,
+        "rules": [],
         "runes": {
           "potency": 1,
-          "resilient": 0,
           "property": [
             "glamered"
+          ],
+          "resilient": 0
+        },
+        "size": "med",
+        "speedPenalty": 0,
+        "strength": 1,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "flexible",
+            "noisy",
+            "magical"
           ]
+        },
+        "slug": "chain-shirt",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.MPcM4Wt6KmWE2kGL"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

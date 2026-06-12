@@ -3,133 +3,96 @@
   "items": [
     {
       "_id": "xWxtACkZ1XENgLax",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.kdGqnqbrwPzQfTsm"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/greatclub.webp",
       "name": "+1 Striking Greatclub",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/greatclub.webp",
       "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>While many greatclubs are intricately carved, others are little more than a sturdy tree branch. These massive clubs are too heavy to wield with only one hand.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "backswing",
-            "shove"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "greatclub",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "greatclub",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 2
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "bludgeoning",
+          "dice": 1,
+          "die": "d10"
+        },
+        "description": {
+          "value": "<p>While many greatclubs are intricately carved, others are little more than a sturdy tree branch. These massive clubs are too heavy to wield with only one hand.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "club",
         "hardness": 0,
-        "weight": {
-          "value": "2"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 4
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 101
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 1,
+          "property": [],
+          "striking": 1
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "backswing",
+            "shove",
+            "magical"
+          ]
         },
         "usage": {
           "value": "held-in-two-hands"
         },
-        "level": {
-          "value": 4
+        "slug": "greatclub",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "club",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d10",
-          "damageType": "bludgeoning"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 1,
-          "property": []
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,
@@ -143,133 +106,100 @@
     },
     {
       "_id": "QC1IrArhxNW6ef3t",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.MVAWttmT0QDa7LsV"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/longbow.webp",
       "name": "+1 Longbow",
+      "type": "weapon",
+      "img": "icons/weapons/bows/longbow-recurve-leather-brown.webp",
       "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>This 5‑foot‑tall bow, usually made of a single piece of elm, hickory, or yew, has a powerful draw and is excellent at propelling arrows with great force and at an extreme distance. You must use two hands to fire a longbow, and it can't be used while mounted.</p>"
+        "ammo": {
+          "baseType": "arrows",
+          "builtIn": false,
+          "capacity": null
         },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "deadly-d10",
-            "volley-30"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "longbow",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
         "baseItem": "longbow",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 2
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "piercing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>This 5‑foot‑tall bow, usually made of a single piece of elm, hickory, or yew, has a powerful draw and is excellent at propelling arrows with great force and at an extreme distance. You must use two hands to fire a longbow, and it can't be used while mounted.</p>",
+          "gm": ""
+        },
+        "expend": 1,
+        "grade": null,
+        "group": "bow",
         "hardness": 0,
-        "weight": {
-          "value": "2"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 2
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 41
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-plus-hands"
-        },
-        "level": {
-          "value": 2
-        },
-        "category": "martial",
-        "group": "bow",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
+        "quantity": 1,
         "range": 100,
         "reload": {
           "value": "0"
         },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
-        },
+        "rules": [],
         "runes": {
           "potency": 1,
-          "striking": 0,
-          "property": []
+          "property": [],
+          "striking": 0
+        },
+        "size": "med",
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d10",
+            "volley-30",
+            "magical"
+          ]
+        },
+        "usage": {
+          "value": "held-in-one-plus-hands"
+        },
+        "slug": "longbow",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,

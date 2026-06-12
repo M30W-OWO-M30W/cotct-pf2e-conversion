@@ -489,139 +489,98 @@
     },
     {
       "_id": "xq4g75ojpJRHhlqZ",
-      "img": "systems/pf2e/icons/equipment/weapons/warhammer.webp",
       "name": "+2 Striking Warhammer",
+      "type": "weapon",
+      "img": "icons/weapons/hammers/hammer-war-rounding.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>This weapon has a wooden shaft ending in a large, heavy metal head. Thehead of the hammer might be single‑sided or double‑sided, but it's always capable of delivering powerful bludgeoning blows.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "shove"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "warhammer",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "warhammer",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "bludgeoning",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>This weapon has a wooden shaft ending in a large, heavy metal head. Thehead of the hammer might be single‑sided or double‑sided, but it's always capable of delivering powerful bludgeoning blows.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "hammer",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 10
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 1001
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 2,
+          "property": [
+            "thundering"
+          ],
+          "striking": 1
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Warhammer",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "shove",
+            "magical"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 10
+        "slug": "warhammer",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "hammer",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "bludgeoning"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 2,
-          "striking": 1,
-          "property": [
-            "thundering"
-          ]
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.rXt4629QSg7KDTgJ"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -635,115 +594,78 @@
     },
     {
       "_id": "VGdmUsC8WiN8bmdp",
-      "img": "systems/pf2e/icons/equipment//armor/fullplate.webp",
       "name": "+1 Resilient Full Plate",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-layered-steel-green.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "bulwark"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "full-plate",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "acBonus": 6,
         "baseItem": "full-plate",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 4
         },
+        "category": "heavy",
+        "checkPenalty": -3,
+        "containerId": null,
+        "description": {
+          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>",
+          "gm": ""
+        },
+        "dexCap": 0,
+        "grade": null,
+        "group": "plate",
         "hardness": 0,
-        "weight": {
-          "value": "5"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "4"
+        "level": {
+          "value": 8
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 500
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Full Plate",
-            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 8
-        },
-        "armor": {
-          "value": 6
-        },
-        "category": "heavy",
-        "group": "plate",
-        "strength": {
-          "value": 18
-        },
-        "dex": {
-          "value": 0
-        },
-        "check": {
-          "value": -3
-        },
-        "speed": {
-          "value": -10
-        },
-        "potency": {},
+        "quantity": 1,
+        "rules": [],
         "runes": {
           "potency": 1,
-          "resilient": 1,
-          "property": []
+          "property": [],
+          "resilient": 1
+        },
+        "size": "med",
+        "speedPenalty": -10,
+        "strength": 4,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "bulwark",
+            "magical"
+          ]
+        },
+        "slug": "full-plate",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Gq1cZWSKOtJhKd2p"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

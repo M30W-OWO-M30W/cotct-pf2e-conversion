@@ -553,138 +553,97 @@
     },
     {
       "_id": "I2WqAAwWNL7kQJZY",
-      "img": "systems/pf2e/icons/equipment/weapons/scimitar.webp",
       "name": "+2 Striking Scimitar",
+      "type": "weapon",
+      "img": "icons/weapons/swords/scimitar-worn-blue.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>This one-handed curved blade is sharp on one side.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "forceful",
-            "sweep"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "scimitar",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "scimitar",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d6"
+        },
+        "description": {
+          "value": "<p>This one-handed curved blade is sharp on one side.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 10
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 1001
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
-        "size": "lg",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Scimitar",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "rules": [],
+        "runes": {
+          "potency": 2,
+          "property": [],
+          "striking": 1
+        },
+        "size": "med",
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "forceful",
+            "sweep",
+            "magical"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 10
+        "slug": "scimitar",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "sword",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d6",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 2,
-          "striking": 1,
-          "property": []
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.grmaV4GdoGD7sKbn"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -697,107 +656,75 @@
     },
     {
       "_id": "gsAYVNeApzzR9Zfx",
-      "img": "systems/pf2e/icons/equipment/armor/breastplate.webp",
       "name": "Breastplate",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half‑plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "breastplate",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "acBonus": 4,
         "baseItem": "breastplate",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 2
         },
+        "category": "medium",
+        "checkPenalty": -2,
+        "containerId": null,
+        "description": {
+          "value": "<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half‑plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>",
+          "gm": ""
+        },
+        "dexCap": 1,
+        "grade": null,
+        "group": "plate",
         "hardness": 0,
-        "weight": {
-          "value": "3"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "2"
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 8
           }
         },
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "resilient": 0
+        },
+        "size": "med",
+        "speedPenalty": -5,
+        "strength": 3,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        },
+        "slug": "breastplate",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
         "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": false
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "lg",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 0
-        },
-        "armor": {
-          "value": 4
-        },
-        "category": "medium",
-        "group": "plate",
-        "strength": {
-          "value": 16
-        },
-        "dex": {
-          "value": 1
-        },
-        "check": {
-          "value": -2
-        },
-        "speed": {
-          "value": -5
-        },
-        "potency": {}
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.r0ifJfoz8aqf0mwk"
+          "carryType": "worn"
         }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

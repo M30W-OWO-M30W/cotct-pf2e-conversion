@@ -1426,67 +1426,75 @@
     },
     {
       "_id": "OjH9zugdZf9plsD2",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.dUC8Fsa6FZtVikS3"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
       "name": "+1 Striking Composite Longbow",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
       "sort": 1200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "deadly-d10",
-            "propulsive",
-            "volley-30"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "composite-longbow",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "deadly-d10",
+            "propulsive",
+            "volley-30",
+            "magical"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 4
         },
         "quantity": 1,
         "baseItem": "composite-longbow",
+        "bulk": {
+          "value": 2
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "2"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "gp": 120
           }
         },
         "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
@@ -1503,35 +1511,40 @@
         "usage": {
           "value": "held-in-one-plus-hands"
         },
-        "level": {
-          "value": 4
-        },
         "category": "martial",
         "group": "bow",
         "bonus": {
           "value": 0
         },
         "damage": {
-          "value": "",
           "dice": 1,
           "die": "d8",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
+          "damageType": "piercing",
+          "persistent": null
         },
         "splashDamage": {
           "value": 0
         },
         "range": 100,
+        "expend": 1,
+        "ammo": {
+          "capacity": null,
+          "baseType": "arrows",
+          "builtIn": false
+        },
         "reload": {
           "value": "0"
         },
-        "MAP": {
-          "value": ""
+        "grade": null,
+        "runes": {
+          "potency": 1,
+          "striking": 1,
+          "property": []
         },
-        "specific": {
-          "value": false
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
         },
         "property1": {
           "value": "",
@@ -1542,18 +1555,7 @@
           "critDie": "",
           "critDamage": "",
           "critDamageType": ""
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 1,
-          "property": []
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,
@@ -1567,127 +1569,95 @@
     },
     {
       "_id": "qQyKvk6u3S9vDGzo",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.LJdbVTOZog39EEbi"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/longsword.webp",
       "name": "Longsword",
+      "type": "weapon",
+      "img": "icons/weapons/swords/sword-guard-blue.webp",
       "sort": 1300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "versatile-p"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "longsword",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "longsword",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 1
           }
         },
-        "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": "-"
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "level": {
-          "value": 0
-        },
-        "category": "martial",
-        "group": "sword",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
         "splashDamage": {
           "value": 0
         },
-        "range": null,
-        "reload": {
-          "value": ""
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "versatile-p"
+          ]
         },
-        "MAP": {
-          "value": ""
+        "usage": {
+          "canBeAmmo": false,
+          "value": "held-in-one-hand"
         },
-        "specific": {
-          "value": false
+        "slug": "longsword",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,
@@ -1701,106 +1671,74 @@
     },
     {
       "_id": "d1NLDUJL2CAqdBvW",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.r0ifJfoz8aqf0mwk"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/armor/breastplate.webp",
       "name": "Breastplate",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-collared-steel.webp",
       "sort": 1400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half‑plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "breastplate",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "acBonus": 4,
         "baseItem": "breastplate",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 2
         },
+        "category": "medium",
+        "checkPenalty": -2,
+        "containerId": null,
+        "description": {
+          "value": "<p>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half‑plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</p>",
+          "gm": ""
+        },
+        "dexCap": 1,
+        "grade": null,
+        "group": "plate",
         "hardness": 0,
-        "weight": {
-          "value": "3"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "2"
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 8
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": true
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "resilient": 0
         },
-        "containerId": null,
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "speedPenalty": -5,
+        "strength": 3,
+        "traits": {
+          "rarity": "common",
+          "value": []
         },
-        "usage": {
-          "value": "wornarmor"
+        "slug": "breastplate",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "level": {
-          "value": 0
-        },
-        "armor": {
-          "value": 4
-        },
-        "category": "medium",
-        "group": "plate",
-        "strength": {
-          "value": 16
-        },
-        "dex": {
-          "value": 1
-        },
-        "check": {
-          "value": -2
-        },
-        "speed": {
-          "value": -5
-        },
-        "potency": {}
-      },
-      "type": "armor",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
+        "equipped": {
+          "carryType": "worn"
+        }
       },
       "_stats": {
         "systemId": null,

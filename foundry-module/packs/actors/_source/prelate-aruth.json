@@ -934,154 +934,97 @@
     },
     {
       "_id": "nRRtzUFb0yrTFZr3",
-      "img": "systems/pf2e/icons/equipment/weapons/spiked-chain.webp",
       "name": "Spiked Chain",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/spiked-chain.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>This 4‑foot‑long length of chain is covered with barbs and has spikes on one or both ends. Some feature metal hoops used as handgrips.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "disarm",
-            "finesse",
-            "trip"
-          ],
-          "rarity": "uncommon",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "spiked-chain",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "spiked-chain",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>This 4‑foot‑long length of chain is covered with barbs and has spikes on one or both ends. Some feature metal hoops used as handgrips.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "flail",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 3
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
-        "preciousMaterial": {
-          "value": ""
-        },
-        "preciousMaterialGrade": {
-          "value": ""
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
         },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "uncommon",
+          "value": [
+            "disarm",
+            "finesse",
+            "trip"
+          ]
         },
         "usage": {
           "value": "held-in-two-hands"
         },
-        "level": {
-          "value": 0
+        "slug": "spiked-chain",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "flail",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": null
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "potencyRune": {
-          "value": null
-        },
-        "strikingRune": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "propertyRune1": {
-          "value": ""
-        },
-        "propertyRune2": {
-          "value": ""
-        },
-        "propertyRune3": {
-          "value": ""
-        },
-        "propertyRune4": {
-          "value": ""
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.zi9ovfoRp2fMhfpO"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -1092,166 +1035,6 @@
         "lastModifiedBy": "hBFuMGrVgeghbDDz"
       },
       "_key": "!actors.items!prelateAruth0001.nRRtzUFb0yrTFZr3"
-    },
-    {
-      "_id": "BwSpjl4DpqbwjtoT",
-      "img": "systems/pf2e/icons/equipment/weapons/fist.webp",
-      "name": "Fist",
-      "system": {
-        "description": {
-          "value": ""
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "finesse",
-            "nonlethal",
-            "unarmed"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "fist",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
-        "baseItem": "fist",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
-        },
-        "hardness": 0,
-        "weight": {
-          "value": "-"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
-        "price": {
-          "value": {}
-        },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "preciousMaterial": {
-          "value": ""
-        },
-        "preciousMaterialGrade": {
-          "value": ""
-        },
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "level": {
-          "value": 0
-        },
-        "category": "unarmed",
-        "group": "brawling",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d4",
-          "damageType": "bludgeoning"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "potencyRune": {
-          "value": null
-        },
-        "strikingRune": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "propertyRune1": {
-          "value": ""
-        },
-        "propertyRune2": {
-          "value": ""
-        },
-        "propertyRune3": {
-          "value": ""
-        },
-        "propertyRune4": {
-          "value": ""
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
-        }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.UcLqR32mNaGdNkUk"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
-      },
-      "_stats": {
-        "systemId": "pf2e",
-        "systemVersion": "4.4.2",
-        "coreVersion": "10.290",
-        "createdTime": 1669401893217,
-        "modifiedTime": 1669401893217,
-        "lastModifiedBy": "hBFuMGrVgeghbDDz"
-      },
-      "_key": "!actors.items!prelateAruth0001.BwSpjl4DpqbwjtoT"
     },
     {
       "name": "Spiked Chain",

@@ -485,141 +485,98 @@
     },
     {
       "_id": "NYof1E2DWLm60vdb",
-      "img": "systems/pf2e/icons/equipment/weapons/lance.webp",
       "name": "+1 Striking Lance",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/lance.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>This spear‑like weapon is used by a mounted creature to deal a great deal of damage.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "deadly-d8",
-            "evocation",
-            "jousting-d6",
-            "magical",
-            "reach"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "lance",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "lance",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 2
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "piercing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>This spear‑like weapon is used by a mounted creature to deal a great deal of damage.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "spear",
         "hardness": 0,
-        "weight": {
-          "value": "2"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 4
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 101
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 1,
+          "property": [],
+          "striking": 1
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Lance",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d8",
+            "jousting-d6",
+            "reach",
+            "magical"
+          ]
         },
         "usage": {
           "value": "held-in-two-hands"
         },
-        "level": {
-          "value": 4
+        "slug": "lance",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "spear",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 1,
-          "property": []
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.OPMzQdM9rZznMGhW"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -633,139 +590,97 @@
     },
     {
       "_id": "ibMCklwatVzw9wTD",
-      "img": "systems/pf2e/icons/equipment/weapons/longsword.webp",
       "name": "+1 Striking Longsword",
+      "type": "weapon",
+      "img": "icons/weapons/swords/sword-guard-blue.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "evocation",
-            "magical",
-            "versatile-p"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "longsword",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "longsword",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>Longswords can be one‑edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 4
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 101
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": "-"
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 1,
+          "property": [],
+          "striking": 1
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Longsword",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "held-in-one-hand"
-        },
-        "level": {
-          "value": 4
-        },
-        "category": "martial",
-        "group": "sword",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
         "splashDamage": {
           "value": 0
         },
-        "range": null,
-        "reload": {
-          "value": ""
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "versatile-p",
+            "magical"
+          ]
         },
-        "MAP": {
-          "value": ""
+        "usage": {
+          "canBeAmmo": false,
+          "value": "held-in-one-hand"
         },
-        "specific": {
-          "value": false
+        "slug": "longsword",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 1,
-          "property": []
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.LJdbVTOZog39EEbi"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -779,118 +694,78 @@
     },
     {
       "_id": "yyHPk9a8LWVgfFCw",
-      "img": "systems/pf2e/icons/equipment//armor/fullplate.webp",
       "name": "+1 Full Plate",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-layered-steel-green.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "abjuration",
-            "bulwark",
-            "invested",
-            "magical"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "full-plate",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "acBonus": 6,
         "baseItem": "full-plate",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 4
         },
+        "category": "heavy",
+        "checkPenalty": -3,
+        "containerId": null,
+        "description": {
+          "value": "<p>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</p>",
+          "gm": ""
+        },
+        "dexCap": 0,
+        "grade": null,
+        "group": "plate",
         "hardness": 0,
-        "weight": {
-          "value": "5"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "4"
+        "level": {
+          "value": 5
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 160
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Full Plate",
-            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
-        },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 5
-        },
-        "armor": {
-          "value": 6
-        },
-        "category": "heavy",
-        "group": "plate",
-        "strength": {
-          "value": 18
-        },
-        "dex": {
-          "value": 0
-        },
-        "check": {
-          "value": -3
-        },
-        "speed": {
-          "value": -10
-        },
-        "potency": {},
+        "quantity": 1,
+        "rules": [],
         "runes": {
           "potency": 1,
-          "resilient": 0,
-          "property": []
+          "property": [],
+          "resilient": 0
+        },
+        "size": "med",
+        "speedPenalty": -10,
+        "strength": 4,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "bulwark",
+            "magical"
+          ]
+        },
+        "slug": "full-plate",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
+        },
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.Gq1cZWSKOtJhKd2p"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -904,109 +779,81 @@
     },
     {
       "_id": "ZneW6qVBvup5b9KI",
-      "img": "systems/pf2e/icons/equipment/shields/specific-shields/sturdy-shield.webp",
       "name": "Sturdy Shield (Lesser)",
+      "type": "shield",
+      "img": "systems/pf2e/icons/equipment/shields/specific-shields/sturdy-shield.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
+        "acBonus": 2,
+        "baseItem": "steel-shield",
+        "bulk": {
+          "value": 1
+        },
+        "containerId": null,
         "description": {
-          "value": "<p>With a superior design and excellent craftsmanship, this steel shield has higher Hardness than its non-magical counterparts, making it harder to break and destroy.</p>\n<p>The shield has Hardness 10, HP 80, and BT 40.</p>"
+          "value": "<p>With a superior design and excellent craftsmanship, this steel shield has higher Hardness than its non-magical counterparts, making it harder to break and destroy.</p>\n<p>The shield has Hardness 10, HP 80, and BT 40.</p>",
+          "gm": ""
         },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "abjuration",
-            "magical"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "sturdy-shield-lesser",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
-        "baseItem": null,
-        "hp": {
-          "brokenThreshold": 40,
-          "value": 80,
-          "max": 80
-        },
+        "grade": null,
         "hardness": 10,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 80,
+          "value": 80
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 7
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 360
           }
         },
-        "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder GM Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "reinforcing": 0
         },
-        "containerId": null,
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
+        "specific": {
+          "integrated": null,
+          "material": {
+            "grade": null,
+            "type": null
           },
-          "misidentified": {}
+          "runes": {
+            "reinforcing": 0
+          }
         },
-        "usage": {
-          "value": "held-in-one-hand"
+        "speedPenalty": 0,
+        "traits": {
+          "integrated": null,
+          "rarity": "common",
+          "value": [
+            "magical"
+          ]
         },
-        "level": {
-          "value": 7
+        "slug": "sturdy-shield-lesser",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "armor": {
-          "value": 2
-        },
-        "category": "shield",
-        "group": null,
-        "strength": {
-          "value": 0
-        },
-        "dex": {
-          "value": 0
-        },
-        "check": {
-          "value": 0
-        },
-        "speed": {
-          "value": 0
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.nDZX25OwoN0Imrq6"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

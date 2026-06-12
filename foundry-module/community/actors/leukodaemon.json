@@ -679,74 +679,75 @@
     },
     {
       "_id": "Ga6GRFsOzY8ecxgf",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.dUC8Fsa6FZtVikS3"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
       "name": "+1 Striking Composite Longbow",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/composite-longbow.webp",
       "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</p>"
-        },
-        "source": {
-          "value": ""
-        },
-        "traits": {
-          "value": [
-            "deadly-d10",
-            "propulsive",
-            "volley-30"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "composite-longbow",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:38.563+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
           }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "deadly-d10",
+            "propulsive",
+            "volley-30",
+            "magical"
+          ],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 4
         },
         "quantity": 1,
         "baseItem": "composite-longbow",
+        "bulk": {
+          "value": 2
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "2"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "gp": 120
           }
         },
         "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
-        "size": "lg",
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
@@ -763,35 +764,40 @@
         "usage": {
           "value": "held-in-one-plus-hands"
         },
-        "level": {
-          "value": 4
-        },
         "category": "martial",
         "group": "bow",
         "bonus": {
           "value": 0
         },
         "damage": {
-          "value": "",
           "dice": 1,
           "die": "d8",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
+          "damageType": "piercing",
+          "persistent": null
         },
         "splashDamage": {
           "value": 0
         },
         "range": 100,
+        "expend": 1,
+        "ammo": {
+          "capacity": null,
+          "baseType": "arrows",
+          "builtIn": false
+        },
         "reload": {
           "value": "0"
         },
-        "MAP": {
-          "value": ""
+        "grade": null,
+        "runes": {
+          "potency": 1,
+          "striking": 1,
+          "property": []
         },
-        "specific": {
-          "value": false
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
         },
         "property1": {
           "value": "",
@@ -802,18 +808,7 @@
           "critDie": "",
           "critDamage": "",
           "critDamageType": ""
-        },
-        "runes": {
-          "potency": 1,
-          "striking": 1,
-          "property": []
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,

@@ -384,139 +384,98 @@
     },
     {
       "_id": "zOwitHTv05CQVCKC",
-      "img": "systems/pf2e/icons/equipment/weapons/battle-axe.webp",
       "name": "+2 Greater Striking Battle Axe",
+      "type": "weapon",
+      "img": "icons/weapons/axes/axe-battle-black.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade, making them ideal for chopping limbs rather than wood.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "sweep"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "battle-axe",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "battle-axe",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d8"
+        },
+        "description": {
+          "value": "<p>These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade, making them ideal for chopping limbs rather than wood.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "axe",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 12
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 2001
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
+        "rules": [],
+        "runes": {
+          "potency": 2,
+          "property": [
+            "flaming"
+          ],
+          "striking": 2
+        },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Battle Axe",
-            "img": "systems/pf2e/icons/unidentified_item_icons/weapon.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "sweep",
+            "magical"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 12
+        "slug": "battle-axe",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "axe",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d8",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": "",
-          "strikeConditionType": "",
-          "strikeConditionValue": null,
-          "criticalConditionType": "",
-          "criticalConditionValue": null
-        },
-        "runes": {
-          "potency": 2,
-          "striking": 2,
-          "property": [
-            "flaming"
-          ]
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.War0uyLBx1jA0Ge7"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -529,109 +488,81 @@
     },
     {
       "_id": "6591l59f8t5eL9md",
-      "img": "systems/pf2e/icons/equipment/shields/specific-shields/sturdy-shield.webp",
       "name": "Sturdy Shield (Greater)",
+      "type": "shield",
+      "img": "systems/pf2e/icons/equipment/shields/specific-shields/sturdy-shield.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
+        "acBonus": 2,
+        "baseItem": "steel-shield",
+        "bulk": {
+          "value": 1
+        },
+        "containerId": null,
         "description": {
-          "value": "<p>With a superior design and excellent craftsmanship, this steel shield has higher Hardness than its non-magical counterparts, making it harder to break and destroy.</p>\n<p>The shield has Hardness 15, HP 120, and BT 60.</p>"
+          "value": "<p>With a superior design and excellent craftsmanship, this steel shield has higher Hardness than its non-magical counterparts, making it harder to break and destroy.</p>\n<p>The shield has Hardness 15, HP 120, and BT 60.</p>",
+          "gm": ""
         },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "abjuration",
-            "magical"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "sturdy-shield-greater",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": null
-        },
-        "quantity": 1,
-        "baseItem": null,
-        "hp": {
-          "brokenThreshold": 60,
-          "value": 120,
-          "max": 120
-        },
+        "grade": null,
         "hardness": 15,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 120,
+          "value": 120
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 13
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 3000
           }
         },
-        "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder GM Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "reinforcing": 0
         },
-        "containerId": null,
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
+        "specific": {
+          "integrated": null,
+          "material": {
+            "grade": null,
+            "type": null
           },
-          "misidentified": {}
+          "runes": {
+            "reinforcing": 0
+          }
         },
-        "usage": {
-          "value": "held-in-one-hand"
+        "speedPenalty": 0,
+        "traits": {
+          "integrated": null,
+          "rarity": "common",
+          "value": [
+            "magical"
+          ]
         },
-        "level": {
-          "value": 13
+        "slug": "sturdy-shield-greater",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "armor": {
-          "value": 2
-        },
-        "category": "shield",
-        "group": null,
-        "strength": {
-          "value": 0
-        },
-        "dex": {
-          "value": 0
-        },
-        "check": {
-          "value": 0
-        },
-        "speed": {
-          "value": 0
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.rrnWORxT2Ch4pUFb"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

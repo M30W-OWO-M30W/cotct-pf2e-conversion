@@ -122,6 +122,182 @@
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.M1k5QQc1qQLxzyCK"
     }
   },
+  "aklys": {
+    "name": "Aklys",
+    "type": "weapon",
+    "img": "icons/weapons/maces/mace-studded-steel.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "aklys",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "advanced",
+      "containerId": null,
+      "damage": {
+        "damageType": "bludgeoning",
+        "dice": 1,
+        "die": "d6"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.YnPYSKCQBLIOtm0J]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "club",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 5
+        }
+      },
+      "publication": {
+        "license": "OGL",
+        "remaster": false,
+        "title": "Pathfinder Bestiary"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": "-"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "uncommon",
+        "value": [
+          "ranged-trip",
+          "tethered",
+          "thrown-20",
+          "trip"
+        ]
+      },
+      "usage": {
+        "canBeAmmo": false,
+        "value": "held-in-one-hand"
+      },
+      "slug": "aklys",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "battle-axe": {
+    "name": "Battle Axe",
+    "type": "weapon",
+    "img": "icons/weapons/axes/axe-battle-black.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "battle-axe",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d8"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.War0uyLBx1jA0Ge7]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "axe",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "sweep"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "battle-axe",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "breastplate": {
     "name": "Breastplate",
     "type": "armor",
@@ -344,6 +520,75 @@
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Kf4eJEXnFPuAsseP"
     }
   },
+  "chain-shirt": {
+    "name": "Chain Shirt",
+    "type": "armor",
+    "img": "systems/pf2e/icons/equipment/armor/chainshirt.webp",
+    "system": {
+      "acBonus": 2,
+      "baseItem": "chain-shirt",
+      "bulk": {
+        "value": 1
+      },
+      "category": "light",
+      "checkPenalty": -1,
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.MPcM4Wt6KmWE2kGL]</p>",
+        "gm": ""
+      },
+      "dexCap": 3,
+      "grade": null,
+      "group": "chain",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 5
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "resilient": 0
+      },
+      "size": "med",
+      "speedPenalty": 0,
+      "strength": 1,
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "flexible",
+          "noisy"
+        ]
+      },
+      "slug": "chain-shirt",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "club": {
     "name": "Club",
     "type": "weapon",
@@ -558,6 +803,97 @@
     "flags": {},
     "_stats": {
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.dUC8Fsa6FZtVikS3"
+    }
+  },
+  "composite-shortbow": {
+    "name": "Composite Shortbow",
+    "type": "weapon",
+    "img": "icons/weapons/bows/shortbow-recurve-bone.webp",
+    "system": {
+      "ammo": {
+        "baseType": "arrows",
+        "builtIn": false,
+        "capacity": null
+      },
+      "baseItem": "composite-shortbow",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d6"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.e4NwsnPnpQKbDZ9F]</p>",
+        "gm": ""
+      },
+      "expend": 1,
+      "grade": null,
+      "group": "bow",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 1
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 14
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": 60,
+      "reload": {
+        "value": "0"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "deadly-d10",
+          "propulsive"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-plus-hands"
+      },
+      "slug": "composite-shortbow",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
     }
   },
   "crossbow": {
@@ -816,6 +1152,161 @@
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
     }
   },
+  "explorers-clothing": {
+    "name": "Explorer's Clothing",
+    "type": "armor",
+    "img": "icons/equipment/chest/shirt-collared-pink.webp",
+    "system": {
+      "acBonus": 0,
+      "baseItem": "explorers-clothing",
+      "bulk": {
+        "value": 0.1
+      },
+      "category": "unarmored",
+      "checkPenalty": 0,
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.dDIPA1WE9ESF67EB]</p>",
+        "gm": ""
+      },
+      "dexCap": 5,
+      "grade": null,
+      "group": "cloth",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "sp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "resilient": 0
+      },
+      "size": "med",
+      "speedPenalty": 0,
+      "strength": null,
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "comfort"
+        ]
+      },
+      "slug": "explorers-clothing",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "falchion": {
+    "name": "Falchion",
+    "type": "weapon",
+    "img": "icons/weapons/swords/scimitar-guard-wood.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "falchion",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d10"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.XGtIUZ4ZNKuFx1uL]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "sword",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 3
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "forceful",
+          "sweep"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "falchion",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "flail": {
     "name": "Flail",
     "type": "weapon",
@@ -1006,6 +1497,265 @@
         ]
       },
       "slug": "full-plate",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "greataxe": {
+    "name": "Greataxe",
+    "type": "weapon",
+    "img": "icons/weapons/axes/axe-double-engraved.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "greataxe",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d12"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.8COlYvHe6hKCXY8x]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "axe",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 2
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "sweep"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "greataxe",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "greatclub": {
+    "name": "Greatclub",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/greatclub.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "greatclub",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "bludgeoning",
+        "dice": 1,
+        "die": "d10"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.kdGqnqbrwPzQfTsm]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "club",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "backswing",
+          "shove"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "greatclub",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "greatsword": {
+    "name": "Greatsword",
+    "type": "weapon",
+    "img": "icons/weapons/swords/greatsword-crossguard-silver.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "greatsword",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d12"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.UX71GkWBL9g41VwM]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "sword",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 2
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "versatile-p"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "greatsword",
       "_migration": {
         "version": 0.959,
         "previous": null
@@ -1331,6 +2081,228 @@
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao"
     }
   },
+  "hide-armor": {
+    "name": "Hide Armor",
+    "type": "armor",
+    "img": "icons/equipment/chest/vest-leather-tattered-white.webp",
+    "system": {
+      "acBonus": 3,
+      "baseItem": "hide-armor",
+      "bulk": {
+        "value": 2
+      },
+      "category": "medium",
+      "checkPenalty": -2,
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.AnwzlOs0njF9Jqnr]</p>",
+        "gm": ""
+      },
+      "dexCap": 2,
+      "grade": null,
+      "group": "leather",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 2
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "resilient": 0
+      },
+      "size": "med",
+      "speedPenalty": -5,
+      "strength": 2,
+      "traits": {
+        "rarity": "common",
+        "value": []
+      },
+      "slug": "hide-armor",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "javelin": {
+    "name": "Javelin",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/javelin.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "javelin",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 0.1
+      },
+      "category": "simple",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d6"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.JNt7GmLCCVz5BiEI]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "dart",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "sp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": 30,
+      "reload": {
+        "value": "-"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "thrown"
+        ]
+      },
+      "usage": {
+        "canBeAmmo": false,
+        "value": "held-in-one-hand"
+      },
+      "slug": "javelin",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "klar": {
+    "name": "Klar",
+    "type": "shield",
+    "img": "icons/equipment/shield/kite-wooden-sigil-purple.webp",
+    "system": {
+      "acBonus": 1,
+      "baseItem": "klar",
+      "bulk": {
+        "value": 1
+      },
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Li0kDAfCuw7DAiSM]</p>",
+        "gm": ""
+      },
+      "grade": null,
+      "hardness": 3,
+      "hp": {
+        "max": 10,
+        "value": 10
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 3
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Treasure Vault (Remastered)"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "reinforcing": 0
+      },
+      "size": "med",
+      "speedPenalty": 0,
+      "traits": {
+        "integrated": {
+          "runes": {
+            "potency": 0,
+            "property": [],
+            "striking": 0
+          },
+          "versatile": null
+        },
+        "rarity": "common",
+        "value": [
+          "integrated-1d6-s-versatile-p"
+        ]
+      },
+      "slug": "klar",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "kukri": {
     "name": "Kukri",
     "type": "weapon",
@@ -1462,6 +2434,94 @@
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.TDrO7Xdyn7juFy3c"
     }
   },
+  "lance": {
+    "name": "Lance",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/lance.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "lance",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d8"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.OPMzQdM9rZznMGhW]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "spear",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "deadly-d8",
+          "jousting-d6",
+          "reach"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "lance",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "leather-armor": {
     "name": "Leather Armor",
     "type": "armor",
@@ -1555,6 +2615,183 @@
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.4tIVTg9wj56RrveA"
     }
   },
+  "longbow": {
+    "name": "Longbow",
+    "type": "weapon",
+    "img": "icons/weapons/bows/longbow-recurve-leather-brown.webp",
+    "system": {
+      "ammo": {
+        "baseType": "arrows",
+        "builtIn": false,
+        "capacity": null
+      },
+      "baseItem": "longbow",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d8"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.MVAWttmT0QDa7LsV]</p>",
+        "gm": ""
+      },
+      "expend": 1,
+      "grade": null,
+      "group": "bow",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 6
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": 100,
+      "reload": {
+        "value": "0"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "deadly-d10",
+          "volley-30"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-plus-hands"
+      },
+      "slug": "longbow",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "longspear": {
+    "name": "Longspear",
+    "type": "weapon",
+    "img": "icons/weapons/polearms/spear-simple-engraved.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "longspear",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "simple",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d8"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.aXuJh4i8HqSu6NYV]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "spear",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "sp": 5
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "reach"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "longspear",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "longsword": {
     "name": "Longsword",
     "type": "weapon",
@@ -1633,6 +2870,92 @@
         "value": "held-in-one-hand"
       },
       "slug": "longsword",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "maul": {
+    "name": "Maul",
+    "type": "weapon",
+    "img": "icons/weapons/hammers/hammer-double-steel-embossed.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "maul",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "bludgeoning",
+        "dice": 1,
+        "die": "d12"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.mlrmkpOlwpnGkw4I]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "hammer",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 3
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "shove"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "maul",
       "_migration": {
         "version": 0.959,
         "previous": null
@@ -1825,6 +3148,96 @@
       }
     }
   },
+  "repeating-heavy-crossbow": {
+    "name": "Repeating Heavy Crossbow",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/repeating-heavy-crossbow.webp",
+    "system": {
+      "ammo": {
+        "baseType": "magazine-repeating-heavy-crossbow",
+        "builtIn": false,
+        "capacity": 1
+      },
+      "baseItem": "repeating-heavy-crossbow",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 2
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d10"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.bP608Wb1l9ZY1zwb]</p>",
+        "gm": ""
+      },
+      "expend": 1,
+      "grade": null,
+      "group": "crossbow",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 1
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 20
+        }
+      },
+      "publication": {
+        "license": "OGL",
+        "remaster": false,
+        "title": "Pathfinder Guns & Gears"
+      },
+      "quantity": 1,
+      "range": 180,
+      "reload": {
+        "value": "1"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "uncommon",
+        "value": [
+          "repeating"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "repeating-heavy-crossbow",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "sap": {
     "name": "Sap",
     "type": "weapon",
@@ -2000,6 +3413,159 @@
       }
     }
   },
+  "scale-mail": {
+    "name": "Scale Mail",
+    "type": "armor",
+    "img": "icons/equipment/chest/breastplate-metal-scaled-grey.webp",
+    "system": {
+      "acBonus": 3,
+      "baseItem": "scale-mail",
+      "bulk": {
+        "value": 2
+      },
+      "category": "medium",
+      "checkPenalty": -2,
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.YMQr577asquZIP65]</p>",
+        "gm": ""
+      },
+      "dexCap": 2,
+      "grade": null,
+      "group": "composite",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 4
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "resilient": 0
+      },
+      "size": "med",
+      "speedPenalty": -5,
+      "strength": 2,
+      "traits": {
+        "rarity": "common",
+        "value": []
+      },
+      "slug": "scale-mail",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "scimitar": {
+    "name": "Scimitar",
+    "type": "weapon",
+    "img": "icons/weapons/swords/scimitar-worn-blue.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "scimitar",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d6"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.grmaV4GdoGD7sKbn]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "sword",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "forceful",
+          "sweep"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "scimitar",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "scythe": {
     "name": "Scythe",
     "type": "weapon",
@@ -2078,6 +3644,360 @@
         "value": "held-in-two-hands"
       },
       "slug": "scythe",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "shortbow": {
+    "name": "Shortbow",
+    "type": "weapon",
+    "img": "icons/weapons/bows/shortbow-leather.webp",
+    "system": {
+      "ammo": {
+        "baseType": "arrows",
+        "builtIn": false,
+        "capacity": null
+      },
+      "baseItem": "shortbow",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d6"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.hIgqLgH3YcLZBeoT]</p>",
+        "gm": ""
+      },
+      "expend": 1,
+      "grade": null,
+      "group": "bow",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 3
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": 60,
+      "reload": {
+        "value": "0"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "deadly-d10"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-plus-hands"
+      },
+      "slug": "shortbow",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "shortsword": {
+    "name": "Shortsword",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-guard-purple.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "shortsword",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 0.1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d6"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.7tKkkF8eZ4iCLJtp]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "sword",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "sp": 9
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "agile",
+          "finesse",
+          "versatile-s"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "shortsword",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "sickle": {
+    "name": "Sickle",
+    "type": "weapon",
+    "img": "icons/tools/hand/sickle-steel-grey.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "sickle",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 0.1
+      },
+      "category": "simple",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d4"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.ynnBwzkzsR6B73iO]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "knife",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "sp": 2
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "agile",
+          "finesse",
+          "trip"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "sickle",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "sling": {
+    "name": "Sling",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/sling.webp",
+    "system": {
+      "ammo": {
+        "baseType": "sling-bullets",
+        "builtIn": false,
+        "capacity": 1
+      },
+      "baseItem": "sling",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 0.1
+      },
+      "category": "simple",
+      "containerId": null,
+      "damage": {
+        "damageType": "bludgeoning",
+        "dice": 1,
+        "die": "d6"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.UCH4myuFnokGv0vF]</p>",
+        "gm": ""
+      },
+      "expend": 1,
+      "grade": null,
+      "group": "sling",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {}
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": 50,
+      "reload": {
+        "value": "1"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "propulsive"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "sling",
       "_migration": {
         "version": 0.959,
         "previous": null
@@ -2175,6 +4095,94 @@
       }
     }
   },
+  "spiked-chain": {
+    "name": "Spiked Chain",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/spiked-chain.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "spiked-chain",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d8"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.zi9ovfoRp2fMhfpO]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "flail",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 3
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "uncommon",
+        "value": [
+          "disarm",
+          "finesse",
+          "trip"
+        ]
+      },
+      "usage": {
+        "value": "held-in-two-hands"
+      },
+      "slug": "spiked-chain",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "spiked-gauntlet": {
     "name": "Spiked Gauntlet",
     "type": "weapon",
@@ -2253,6 +4261,182 @@
         "value": "held-in-one-hand"
       },
       "slug": "spiked-gauntlet",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "staff": {
+    "name": "Staff",
+    "type": "weapon",
+    "img": "icons/weapons/staves/staff-simple.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "staff",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "simple",
+      "containerId": null,
+      "damage": {
+        "damageType": "bludgeoning",
+        "dice": 1,
+        "die": "d4"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "club",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {}
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "monk",
+          "two-hand-d8"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "staff",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "starknife": {
+    "name": "Starknife",
+    "type": "weapon",
+    "img": "icons/weapons/thrown/shuriken-triple-purple.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "starknife",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 0.1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d4"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.Mv2I6M70bagbaBPn]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "knife",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 2
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": "-"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "agile",
+          "deadly-d6",
+          "finesse",
+          "thrown-20",
+          "versatile-s"
+        ]
+      },
+      "usage": {
+        "canBeAmmo": false,
+        "value": "held-in-one-hand"
+      },
+      "slug": "starknife",
       "_migration": {
         "version": 0.959,
         "previous": null
@@ -2416,6 +4600,288 @@
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN"
     }
   },
+  "studded-leather-armor": {
+    "name": "Studded Leather Armor",
+    "type": "armor",
+    "img": "icons/equipment/chest/breastplate-layered-leather-studded-brown.webp",
+    "system": {
+      "acBonus": 2,
+      "baseItem": "studded-leather-armor",
+      "bulk": {
+        "value": 1
+      },
+      "category": "light",
+      "checkPenalty": -1,
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.ewQZ0VeL38v3qFnN]</p>",
+        "gm": ""
+      },
+      "dexCap": 3,
+      "grade": null,
+      "group": "leather",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 3
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "resilient": 0
+      },
+      "size": "med",
+      "speedPenalty": 0,
+      "strength": 1,
+      "traits": {
+        "rarity": "common",
+        "value": []
+      },
+      "slug": "studded-leather-armor",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "sturdy-shield-greater": {
+    "name": "Sturdy Shield (Greater)",
+    "type": "shield",
+    "img": "systems/pf2e/icons/equipment/shields/specific-shields/sturdy-shield.webp",
+    "system": {
+      "acBonus": 2,
+      "baseItem": "steel-shield",
+      "bulk": {
+        "value": 1
+      },
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rrnWORxT2Ch4pUFb]</p>",
+        "gm": ""
+      },
+      "grade": null,
+      "hardness": 15,
+      "hp": {
+        "max": 120,
+        "value": 120
+      },
+      "level": {
+        "value": 13
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 3000
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder GM Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "reinforcing": 0
+      },
+      "size": "med",
+      "specific": {
+        "integrated": null,
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "runes": {
+          "reinforcing": 0
+        }
+      },
+      "speedPenalty": 0,
+      "traits": {
+        "integrated": null,
+        "rarity": "common",
+        "value": [
+          "magical"
+        ]
+      },
+      "slug": "sturdy-shield-greater",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "sturdy-shield-lesser": {
+    "name": "Sturdy Shield (Lesser)",
+    "type": "shield",
+    "img": "systems/pf2e/icons/equipment/shields/specific-shields/sturdy-shield.webp",
+    "system": {
+      "acBonus": 2,
+      "baseItem": "steel-shield",
+      "bulk": {
+        "value": 1
+      },
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.nDZX25OwoN0Imrq6]</p>",
+        "gm": ""
+      },
+      "grade": null,
+      "hardness": 10,
+      "hp": {
+        "max": 80,
+        "value": 80
+      },
+      "level": {
+        "value": 7
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 360
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder GM Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "reinforcing": 0
+      },
+      "size": "med",
+      "specific": {
+        "integrated": null,
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "runes": {
+          "reinforcing": 0
+        }
+      },
+      "speedPenalty": 0,
+      "traits": {
+        "integrated": null,
+        "rarity": "common",
+        "value": [
+          "magical"
+        ]
+      },
+      "slug": "sturdy-shield-lesser",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "sturdy-shield-moderate": {
+    "name": "Sturdy Shield (Moderate)",
+    "type": "shield",
+    "img": "systems/pf2e/icons/equipment/shields/specific-shields/sturdy-shield.webp",
+    "system": {
+      "acBonus": 2,
+      "baseItem": "steel-shield",
+      "bulk": {
+        "value": 1
+      },
+      "containerId": null,
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.pNQJ9PTOEHxEZCgp]</p>",
+        "gm": ""
+      },
+      "grade": null,
+      "hardness": 13,
+      "hp": {
+        "max": 104,
+        "value": 104
+      },
+      "level": {
+        "value": 10
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 1000
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder GM Core"
+      },
+      "quantity": 1,
+      "rules": [],
+      "runes": {
+        "reinforcing": 0
+      },
+      "size": "med",
+      "specific": {
+        "integrated": null,
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "runes": {
+          "reinforcing": 0
+        }
+      },
+      "speedPenalty": 0,
+      "traits": {
+        "integrated": null,
+        "rarity": "common",
+        "value": [
+          "magical"
+        ]
+      },
+      "slug": "sturdy-shield-moderate",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
   "thunderstone-lesser": {
     "name": "Thunderstone (Lesser)",
     "type": "weapon",
@@ -2549,6 +5015,358 @@
     "flags": {},
     "_stats": {
       "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Xnqglykl3Cif8rN9"
+    }
+  },
+  "trident": {
+    "name": "Trident",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/trident.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "trident",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "piercing",
+        "dice": 1,
+        "die": "d8"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.FJrsDoaIXksVjld9]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "spear",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": "-"
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "thrown-20"
+        ]
+      },
+      "usage": {
+        "canBeAmmo": false,
+        "value": "held-in-one-hand"
+      },
+      "slug": "trident",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "war-razor": {
+    "name": "War Razor",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/war-razor.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "war-razor",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 0.1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d4"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.nOFcCidD5AwVZWTv]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "knife",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "sp": 3
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Treasure Vault (Remastered)"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "agile",
+          "backstabber",
+          "deadly-d8",
+          "finesse"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "war-razor",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "warhammer": {
+    "name": "Warhammer",
+    "type": "weapon",
+    "img": "icons/weapons/hammers/hammer-war-rounding.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "warhammer",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "bludgeoning",
+        "dice": 1,
+        "die": "d8"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.rXt4629QSg7KDTgJ]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "hammer",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "gp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "shove"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "warhammer",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
+    }
+  },
+  "whip": {
+    "name": "Whip",
+    "type": "weapon",
+    "img": "systems/pf2e/icons/equipment/weapons/whip.webp",
+    "system": {
+      "ammo": null,
+      "baseItem": "whip",
+      "bonus": {
+        "value": 0
+      },
+      "bonusDamage": {
+        "value": 0
+      },
+      "bulk": {
+        "value": 1
+      },
+      "category": "martial",
+      "containerId": null,
+      "damage": {
+        "damageType": "slashing",
+        "dice": 1,
+        "die": "d4"
+      },
+      "description": {
+        "value": "<p>@UUID[Compendium.pf2e.equipment-srd.Item.f1gwoTkf3Nn0v3PN]</p>",
+        "gm": ""
+      },
+      "expend": null,
+      "grade": null,
+      "group": "flail",
+      "hardness": 0,
+      "hp": {
+        "max": 0,
+        "value": 0
+      },
+      "level": {
+        "value": 0
+      },
+      "material": {
+        "grade": null,
+        "type": null
+      },
+      "price": {
+        "value": {
+          "sp": 1
+        }
+      },
+      "publication": {
+        "license": "ORC",
+        "remaster": true,
+        "title": "Pathfinder Player Core"
+      },
+      "quantity": 1,
+      "range": null,
+      "reload": {
+        "value": null
+      },
+      "rules": [],
+      "runes": {
+        "potency": 0,
+        "property": [],
+        "striking": 0
+      },
+      "size": "med",
+      "splashDamage": {
+        "value": 0
+      },
+      "traits": {
+        "rarity": "common",
+        "value": [
+          "disarm",
+          "finesse",
+          "nonlethal",
+          "reach",
+          "trip"
+        ]
+      },
+      "usage": {
+        "value": "held-in-one-hand"
+      },
+      "slug": "whip",
+      "_migration": {
+        "version": 0.959,
+        "previous": null
+      },
+      "equipped": {
+        "carryType": "worn"
+      }
     }
   }
 }

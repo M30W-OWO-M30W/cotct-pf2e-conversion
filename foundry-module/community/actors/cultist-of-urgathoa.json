@@ -430,160 +430,96 @@
     },
     {
       "_id": "kyvw19wKHuULaZhM",
-      "img": "systems/pf2e/icons/equipment/weapons/scythe.webp",
       "name": "Scythe",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/scythe.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Derived from a farming tool used to mow down long grains and cereals, this weapon has a long wooden shaft with protruding handles, capped with a curved blade set at a right angle.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "deadly-d10",
-            "trip"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "scythe",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:39.087+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "scythe",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 2
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "slashing",
+          "dice": 1,
+          "die": "d10"
+        },
+        "description": {
+          "value": "<p>Derived from a farming tool used to mow down long grains and cereals, this weapon has a long wooden shaft with protruding handles, capped with a curved blade set at a right angle.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "polearm",
         "hardness": 0,
-        "weight": {
-          "value": "2"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "gp": 2
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "preciousMaterial": {
+        "quantity": 1,
+        "range": null,
+        "reload": {
           "value": null
         },
-        "preciousMaterialGrade": {
-          "value": null
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
         },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "deadly-d10",
+            "trip"
+          ]
         },
         "usage": {
           "value": "held-in-two-hands"
         },
-        "level": {
-          "value": 0
+        "slug": "scythe",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "polearm",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d10",
-          "damageType": "slashing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "potencyRune": {
-          "value": 0
-        },
-        "strikingRune": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "propertyRune1": {
-          "value": null
-        },
-        "propertyRune2": {
-          "value": null
-        },
-        "propertyRune3": {
-          "value": null
-        },
-        "propertyRune4": {
-          "value": null
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.H74vYwHJ8XT4qOPI"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",
@@ -704,140 +640,77 @@
     },
     {
       "_id": "sK3vR0O8YwA83EhE",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.dDIPA1WE9ESF67EB"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/cloak-of-the-bat.webp",
       "name": "Robe",
+      "type": "armor",
+      "img": "icons/equipment/chest/shirt-collared-pink.webp",
       "sort": 2200000,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>Explorer's clothing is sturdy enough that it can be reinforced to protect you, even though it isn't a suit of armor. It comes in many forms, though the most common sorts look like clerical vestments, monk's garments, or wizard's robes, as members of all three classes are likely to avoid wearing armor.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "comfort"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "clothing-explorers",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:39.087+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "acBonus": 0,
         "baseItem": "explorers-clothing",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bulk": {
+          "value": 0.1
         },
+        "category": "unarmored",
+        "checkPenalty": 0,
+        "containerId": null,
+        "description": {
+          "value": "<p>Explorer's clothing is sturdy enough that it can be reinforced to protect you, even though it isn't a suit of armor. It comes in many forms, though the most common sorts look like clerical vestments, monk's garments, or wizard's robes, as members of all three classes are likely to avoid wearing armor.</p>",
+          "gm": ""
+        },
+        "dexCap": 5,
+        "grade": null,
+        "group": "cloth",
         "hardness": 0,
-        "weight": {
-          "value": "1"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": "L"
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "sp": 1
           }
         },
-        "equipped": {
-          "carryType": "worn",
-          "invested": null,
-          "inSlot": false,
-          "handsHeld": 0
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
-        },
-        "containerId": null,
-        "preciousMaterial": {
-          "value": null
-        },
-        "preciousMaterialGrade": {
-          "value": null
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "resilient": 0
         },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "Unusual Explorer's Clothing",
-            "img": "systems/pf2e/icons/unidentified_item_icons/armor.webp",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "speedPenalty": 0,
+        "strength": null,
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "comfort"
+          ]
         },
-        "usage": {
-          "value": "wornarmor"
+        "slug": "explorers-clothing",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "level": {
-          "value": 0
-        },
-        "armor": {
-          "value": 0
-        },
-        "category": "unarmored",
-        "group": "cloth",
-        "strength": {
-          "value": 0
-        },
-        "dex": {
-          "value": 5
-        },
-        "check": {
-          "value": 0
-        },
-        "speed": {
-          "value": 0
-        },
-        "potencyRune": {
-          "value": null
-        },
-        "resiliencyRune": {
-          "value": null
-        },
-        "propertyRune1": {
-          "value": null
-        },
-        "propertyRune2": {
-          "value": null
-        },
-        "propertyRune3": {
-          "value": null
-        },
-        "propertyRune4": {
-          "value": null
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "armor",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

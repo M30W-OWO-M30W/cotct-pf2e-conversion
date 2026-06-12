@@ -215,53 +215,60 @@
   "items": [
     {
       "_id": "KHpebNvpWWS4760P",
-      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
       "name": "Dagger",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "hBFuMGrVgeghbDDz": 3
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>"
+          "value": "<p>This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.</p>",
+          "gm": ""
         },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
+        "rules": [],
+        "slug": "dagger",
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
+          }
         },
         "traits": {
+          "otherTags": [],
           "value": [
             "agile",
             "finesse",
             "thrown-10",
             "versatile-s"
           ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "rarity": "common"
         },
-        "rules": [],
-        "slug": "dagger",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:38.576+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
         },
         "quantity": 1,
         "baseItem": "dagger",
+        "bulk": {
+          "value": 0.1
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "L"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "sp": 2
@@ -269,21 +276,15 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "handsHeld": 0
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
-        "preciousMaterial": {
-          "value": null
-        },
-        "preciousMaterialGrade": {
-          "value": null
-        },
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
@@ -300,53 +301,36 @@
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 0
-        },
         "category": "simple",
         "group": "knife",
         "bonus": {
           "value": 0
         },
         "damage": {
-          "value": "",
           "dice": 1,
           "die": "d4",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
+          "damageType": "piercing",
+          "persistent": null
         },
         "splashDamage": {
           "value": 0
         },
         "range": null,
+        "expend": null,
+        "ammo": null,
         "reload": {
           "value": "-"
         },
-        "MAP": {
-          "value": ""
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
         },
-        "potencyRune": {
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
           "value": 0
-        },
-        "strikingRune": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "propertyRune1": {
-          "value": null
-        },
-        "propertyRune2": {
-          "value": null
-        },
-        "propertyRune3": {
-          "value": null
-        },
-        "propertyRune4": {
-          "value": null
         },
         "property1": {
           "value": "",
@@ -358,19 +342,6 @@
           "critDamage": "",
           "critDamageType": ""
         }
-      },
-      "type": "weapon",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.rQWaJhI5Bko5x14Z"
-        }
-      },
-      "effects": [],
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0,
-        "hBFuMGrVgeghbDDz": 3
       },
       "_stats": {
         "systemId": "pf2e",

@@ -3,76 +3,70 @@
   "items": [
     {
       "_id": "QjEyKTWMow56zMo9",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.XyA6PKV46aNlLXOd"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
       "name": "Hand Crossbow",
+      "type": "weapon",
+      "img": "systems/pf2e/icons/equipment/weapons/hand-crossbow.webp",
       "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "hand-crossbow",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.448+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
           }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
         },
         "quantity": 1,
         "baseItem": "hand-crossbow",
+        "bulk": {
+          "value": 0.1
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "L"
-        },
-        "equippedBulk": {
-          "value": ""
-        },
         "price": {
           "value": {
             "gp": 3
           }
         },
         "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "carryType": "worn",
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
-        "preciousMaterial": {
-          "value": ""
-        },
-        "preciousMaterialGrade": {
-          "value": ""
-        },
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
@@ -89,53 +83,40 @@
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 0
-        },
         "category": "simple",
-        "group": "bow",
+        "group": "crossbow",
         "bonus": {
           "value": 0
         },
         "damage": {
-          "value": "",
           "dice": 1,
           "die": "d6",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
+          "damageType": "piercing",
+          "persistent": null
         },
         "splashDamage": {
           "value": 0
         },
         "range": 60,
+        "expend": 1,
+        "ammo": {
+          "capacity": 1,
+          "baseType": "bolts",
+          "builtIn": false
+        },
         "reload": {
           "value": "1"
         },
-        "MAP": {
-          "value": ""
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
         },
-        "potencyRune": {
-          "value": null
-        },
-        "strikingRune": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "propertyRune1": {
-          "value": ""
-        },
-        "propertyRune2": {
-          "value": ""
-        },
-        "propertyRune3": {
-          "value": ""
-        },
-        "propertyRune4": {
-          "value": ""
+        "specific": null,
+        "subitems": [],
+        "bonusDamage": {
+          "value": 0
         },
         "property1": {
           "value": "",
@@ -147,12 +128,6 @@
           "critDamage": "",
           "critDamageType": ""
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,
@@ -166,160 +141,96 @@
     },
     {
       "_id": "AjXsoPJm95iu25i9",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.7tKkkF8eZ4iCLJtp"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/weapons/shortsword.webp",
       "name": "Shortsword",
+      "type": "weapon",
+      "img": "icons/weapons/swords/sword-guard-purple.webp",
       "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
-        "description": {
-          "value": "<p>These blades come in a variety of shapes and styles, but they are typically 2 feet long.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [
-            "agile",
-            "finesse",
-            "versatile-s"
-          ],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
-        },
-        "rules": [],
-        "slug": "shortsword",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.448+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
-          }
-        },
-        "quantity": 1,
+        "ammo": null,
         "baseItem": "shortsword",
-        "hp": {
-          "brokenThreshold": 0,
-          "value": 0,
-          "max": 0
+        "bonus": {
+          "value": 0
         },
+        "bonusDamage": {
+          "value": 0
+        },
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+          "damageType": "piercing",
+          "dice": 1,
+          "die": "d6"
+        },
+        "description": {
+          "value": "<p>These blades come in a variety of shapes and styles, but they are typically 2 feet long.</p>",
+          "gm": ""
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
         "hardness": 0,
-        "weight": {
-          "value": "L"
+        "hp": {
+          "max": 0,
+          "value": 0
         },
-        "equippedBulk": {
-          "value": ""
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
         },
         "price": {
           "value": {
             "sp": 9
           }
         },
-        "equipped": {
-          "carryType": "held",
-          "invested": null,
-          "handsHeld": 1
+        "publication": {
+          "license": "ORC",
+          "remaster": true,
+          "title": "Pathfinder Player Core"
         },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+        "quantity": 1,
+        "range": null,
+        "reload": {
+          "value": null
         },
-        "containerId": null,
-        "preciousMaterial": {
-          "value": ""
-        },
-        "preciousMaterialGrade": {
-          "value": ""
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "striking": 0
         },
         "size": "med",
-        "identification": {
-          "status": "identified",
-          "unidentified": {
-            "name": "",
-            "img": "",
-            "data": {
-              "description": {
-                "value": ""
-              }
-            }
-          },
-          "misidentified": {}
+        "splashDamage": {
+          "value": 0
+        },
+        "traits": {
+          "rarity": "common",
+          "value": [
+            "agile",
+            "finesse",
+            "versatile-s"
+          ]
         },
         "usage": {
           "value": "held-in-one-hand"
         },
-        "level": {
-          "value": 0
+        "slug": "shortsword",
+        "_migration": {
+          "version": 0.959,
+          "previous": null
         },
-        "category": "martial",
-        "group": "sword",
-        "bonus": {
-          "value": 0
-        },
-        "damage": {
-          "value": "",
-          "dice": 1,
-          "die": "d6",
-          "damageType": "piercing"
-        },
-        "bonusDamage": {
-          "value": 0
-        },
-        "splashDamage": {
-          "value": 0
-        },
-        "range": null,
-        "reload": {
-          "value": ""
-        },
-        "MAP": {
-          "value": ""
-        },
-        "potencyRune": {
-          "value": null
-        },
-        "strikingRune": {
-          "value": ""
-        },
-        "specific": {
-          "value": false
-        },
-        "propertyRune1": {
-          "value": ""
-        },
-        "propertyRune2": {
-          "value": ""
-        },
-        "propertyRune3": {
-          "value": ""
-        },
-        "propertyRune4": {
-          "value": ""
-        },
-        "property1": {
-          "value": "",
-          "dice": 0,
-          "die": "",
-          "damageType": "",
-          "critDice": 0,
-          "critDie": "",
-          "critDamage": "",
-          "critDamageType": ""
+        "equipped": {
+          "carryType": "worn"
         }
-      },
-      "type": "weapon",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
       },
       "_stats": {
         "systemId": null,
@@ -333,54 +244,54 @@
     },
     {
       "_id": "JyHF48ASZzJvqlUS",
-      "flags": {
-        "core": {
-          "sourceId": "Compendium.pf2e.equipment-srd.4tIVTg9wj56RrveA"
-        }
-      },
-      "img": "systems/pf2e/icons/equipment/armor/leather-armor.webp",
       "name": "Leather Armor",
+      "type": "armor",
+      "img": "icons/equipment/chest/breastplate-banded-simple-leather-brown.webp",
       "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
       "system": {
         "description": {
-          "value": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>"
-        },
-        "source": {
-          "value": "Pathfinder Core Rulebook"
-        },
-        "traits": {
-          "value": [],
-          "rarity": "common",
-          "custom": "",
-          "otherTags": []
+          "value": "<p>A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.</p>",
+          "gm": ""
         },
         "rules": [],
         "slug": "leather-armor",
-        "schema": {
-          "version": 0.8,
-          "lastMigration": {
-            "datetime": "2022-11-19T02:28:37.448+00:00",
-            "version": {
-              "schema": 0.796,
-              "foundry": "10.290",
-              "system": "4.4.0"
-            }
+        "_migration": {
+          "version": 0.955,
+          "lastMigration": null,
+          "previous": {
+            "schema": 0.953,
+            "foundry": "13.351",
+            "system": "7.12.2"
           }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "rarity": "common"
+        },
+        "publication": {
+          "title": "Pathfinder Core Rulebook",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 0
         },
         "quantity": 1,
         "baseItem": "leather-armor",
+        "bulk": {
+          "value": 1
+        },
         "hp": {
-          "brokenThreshold": 0,
           "value": 0,
           "max": 0
         },
         "hardness": 0,
-        "weight": {
-          "value": "2"
-        },
-        "equippedBulk": {
-          "value": "1"
-        },
         "price": {
           "value": {
             "gp": 2
@@ -388,21 +299,15 @@
         },
         "equipped": {
           "carryType": "worn",
-          "invested": null,
-          "inSlot": true
-        },
-        "stackGroup": null,
-        "negateBulk": {
-          "value": "0"
+          "handsHeld": 0,
+          "invested": null
         },
         "containerId": null,
-        "preciousMaterial": {
-          "value": ""
-        },
-        "preciousMaterialGrade": {
-          "value": ""
-        },
         "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
         "identification": {
           "status": "identified",
           "unidentified": {
@@ -416,54 +321,20 @@
           },
           "misidentified": {}
         },
-        "usage": {
-          "value": "wornarmor"
-        },
-        "level": {
-          "value": 0
-        },
-        "armor": {
-          "value": 1
-        },
         "category": "light",
         "group": "leather",
-        "strength": {
-          "value": 10
+        "acBonus": 1,
+        "strength": 0,
+        "dexCap": 4,
+        "checkPenalty": -1,
+        "speedPenalty": 0,
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "resilient": 0,
+          "property": []
         },
-        "dex": {
-          "value": 4
-        },
-        "check": {
-          "value": -1
-        },
-        "speed": {
-          "value": 0
-        },
-        "potencyRune": {
-          "value": 0
-        },
-        "resiliencyRune": {
-          "value": ""
-        },
-        "propertyRune1": {
-          "value": ""
-        },
-        "propertyRune2": {
-          "value": ""
-        },
-        "propertyRune3": {
-          "value": ""
-        },
-        "propertyRune4": {
-          "value": ""
-        },
-        "potency": {}
-      },
-      "type": "armor",
-      "effects": [],
-      "folder": null,
-      "ownership": {
-        "default": 0
+        "subitems": []
       },
       "_stats": {
         "systemId": null,
